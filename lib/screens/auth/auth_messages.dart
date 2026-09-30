@@ -22,8 +22,8 @@ String? validateRepeat(AppLocalizations l10n, String? value, String original) {
   return value == original ? null : l10n.authPasswordsDontMatch;
 }
 
-// El código del correo hoy tiene 8 dígitos, pero el largo se configura en
-// Supabase: se acepta de 6 a 10.
+// El código del correo tiene 6 dígitos, pero el largo se configura en
+// Supabase ("Email OTP length"): por margen se acepta de 6 a 10.
 String? validateResetCode(AppLocalizations l10n, String? value) {
   return RegExp(r'^\d{6,10}$').hasMatch((value ?? '').trim())
       ? null
