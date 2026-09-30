@@ -1,0 +1,9 @@
+// Datos fijos de conexión. Son públicos por diseño: la seguridad de Supabase
+// la dan las reglas RLS del servidor, no esta clave.
+class AppConfig {
+  AppConfig._();
+
+  static const supabaseUrl = 'https://wtkohxujhvaxoablfevz.supabase.co';
+  static const supabaseAnonKey =
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind0a29oeHVqaHZheG9hYmxmZXZ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIzOTg0NjQsImV4cCI6MjA4Nzk3NDQ2NH0.Ga3SgxGPxGk5Y5FWbYSRJ_MkKy5P3XO-dW5N-MIl8T0';
+}
