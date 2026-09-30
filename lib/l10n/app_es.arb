@@ -3,10 +3,49 @@
   "appTitle": "Anunnaki Tales",
   "homeTitle": "ANUNNAKI TALES",
   "homeSubtitle": "Mitos Interactivos",
-  "authTitle": "Ingresar",
   "catalogTitle": "Elige tu aventura",
   "heroSelectTitle": "Elige tu héroe",
   "gameplayTitle": "Aventura",
   "paywallTitle": "Premium",
-  "profileTitle": "Perfil"
+  "profileTitle": "Perfil",
+  "authTabSignIn": "Ingresar",
+  "authTabSignUp": "Crear cuenta",
+  "authEmail": "Correo",
+  "authPassword": "Contraseña",
+  "authRepeatPassword": "Repetir contraseña",
+  "authForgotPassword": "¿Olvidaste tu contraseña?",
+  "authEmailInvalid": "Escribe un correo válido",
+  "authPasswordTooShort": "La contraseña debe tener al menos {min} caracteres",
+  "@authPasswordTooShort": {
+    "placeholders": {
+      "min": {
+        "type": "int"
+      }
+    }
+  },
+  "authPasswordsDontMatch": "Las contraseñas no coinciden",
+  "authErrorInvalidCredentials": "Correo o contraseña incorrectos",
+  "authErrorEmailTaken": "Ese correo ya tiene cuenta",
+  "authErrorWeakPassword": "Esa contraseña es muy débil. Prueba con otra más larga.",
+  "authErrorSamePassword": "La contraseña nueva debe ser distinta de la anterior",
+  "authErrorInvalidCode": "El código no es correcto o ya venció",
+  "authErrorTooManyRequests": "Demasiados intentos. Espera un rato y vuelve a intentarlo.",
+  "authErrorNoConnection": "Sin conexión",
+  "authErrorUnknown": "Algo salió mal. Inténtalo de nuevo.",
+  "resetTitle": "Cambiar contraseña",
+  "resetEmailIntro": "Escribe tu correo y te enviaremos un código para cambiar la contraseña.",
+  "resetSendCode": "Enviar código",
+  "resetCodeIntro": "Te enviamos un código a {email}. Puede tardar unos minutos; revisa también la carpeta de correo no deseado.",
+  "@resetCodeIntro": {
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "resetCode": "Código",
+  "resetCodeInvalid": "El código tiene entre 6 y 10 números",
+  "resetNewPassword": "Contraseña nueva",
+  "resetConfirm": "Cambiar contraseña",
+  "resetDone": "Contraseña cambiada"
 }

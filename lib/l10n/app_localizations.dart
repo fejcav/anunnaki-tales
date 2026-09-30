@@ -116,12 +116,6 @@ abstract class AppLocalizations {
   /// **'Mitos Interactivos'**
   String get homeSubtitle;
 
-  /// No description provided for @authTitle.
-  ///
-  /// In es, this message translates to:
-  /// **'Ingresar'**
-  String get authTitle;
-
   /// No description provided for @catalogTitle.
   ///
   /// In es, this message translates to:
@@ -151,6 +145,162 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Perfil'**
   String get profileTitle;
+
+  /// No description provided for @authTabSignIn.
+  ///
+  /// In es, this message translates to:
+  /// **'Ingresar'**
+  String get authTabSignIn;
+
+  /// No description provided for @authTabSignUp.
+  ///
+  /// In es, this message translates to:
+  /// **'Crear cuenta'**
+  String get authTabSignUp;
+
+  /// No description provided for @authEmail.
+  ///
+  /// In es, this message translates to:
+  /// **'Correo'**
+  String get authEmail;
+
+  /// No description provided for @authPassword.
+  ///
+  /// In es, this message translates to:
+  /// **'Contraseña'**
+  String get authPassword;
+
+  /// No description provided for @authRepeatPassword.
+  ///
+  /// In es, this message translates to:
+  /// **'Repetir contraseña'**
+  String get authRepeatPassword;
+
+  /// No description provided for @authForgotPassword.
+  ///
+  /// In es, this message translates to:
+  /// **'¿Olvidaste tu contraseña?'**
+  String get authForgotPassword;
+
+  /// No description provided for @authEmailInvalid.
+  ///
+  /// In es, this message translates to:
+  /// **'Escribe un correo válido'**
+  String get authEmailInvalid;
+
+  /// No description provided for @authPasswordTooShort.
+  ///
+  /// In es, this message translates to:
+  /// **'La contraseña debe tener al menos {min} caracteres'**
+  String authPasswordTooShort(int min);
+
+  /// No description provided for @authPasswordsDontMatch.
+  ///
+  /// In es, this message translates to:
+  /// **'Las contraseñas no coinciden'**
+  String get authPasswordsDontMatch;
+
+  /// No description provided for @authErrorInvalidCredentials.
+  ///
+  /// In es, this message translates to:
+  /// **'Correo o contraseña incorrectos'**
+  String get authErrorInvalidCredentials;
+
+  /// No description provided for @authErrorEmailTaken.
+  ///
+  /// In es, this message translates to:
+  /// **'Ese correo ya tiene cuenta'**
+  String get authErrorEmailTaken;
+
+  /// No description provided for @authErrorWeakPassword.
+  ///
+  /// In es, this message translates to:
+  /// **'Esa contraseña es muy débil. Prueba con otra más larga.'**
+  String get authErrorWeakPassword;
+
+  /// No description provided for @authErrorSamePassword.
+  ///
+  /// In es, this message translates to:
+  /// **'La contraseña nueva debe ser distinta de la anterior'**
+  String get authErrorSamePassword;
+
+  /// No description provided for @authErrorInvalidCode.
+  ///
+  /// In es, this message translates to:
+  /// **'El código no es correcto o ya venció'**
+  String get authErrorInvalidCode;
+
+  /// No description provided for @authErrorTooManyRequests.
+  ///
+  /// In es, this message translates to:
+  /// **'Demasiados intentos. Espera un rato y vuelve a intentarlo.'**
+  String get authErrorTooManyRequests;
+
+  /// No description provided for @authErrorNoConnection.
+  ///
+  /// In es, this message translates to:
+  /// **'Sin conexión'**
+  String get authErrorNoConnection;
+
+  /// No description provided for @authErrorUnknown.
+  ///
+  /// In es, this message translates to:
+  /// **'Algo salió mal. Inténtalo de nuevo.'**
+  String get authErrorUnknown;
+
+  /// No description provided for @resetTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Cambiar contraseña'**
+  String get resetTitle;
+
+  /// No description provided for @resetEmailIntro.
+  ///
+  /// In es, this message translates to:
+  /// **'Escribe tu correo y te enviaremos un código para cambiar la contraseña.'**
+  String get resetEmailIntro;
+
+  /// No description provided for @resetSendCode.
+  ///
+  /// In es, this message translates to:
+  /// **'Enviar código'**
+  String get resetSendCode;
+
+  /// No description provided for @resetCodeIntro.
+  ///
+  /// In es, this message translates to:
+  /// **'Te enviamos un código a {email}. Puede tardar unos minutos; revisa también la carpeta de correo no deseado.'**
+  String resetCodeIntro(String email);
+
+  /// No description provided for @resetCode.
+  ///
+  /// In es, this message translates to:
+  /// **'Código'**
+  String get resetCode;
+
+  /// No description provided for @resetCodeInvalid.
+  ///
+  /// In es, this message translates to:
+  /// **'El código tiene entre 6 y 10 números'**
+  String get resetCodeInvalid;
+
+  /// No description provided for @resetNewPassword.
+  ///
+  /// In es, this message translates to:
+  /// **'Contraseña nueva'**
+  String get resetNewPassword;
+
+  /// No description provided for @resetConfirm.
+  ///
+  /// In es, this message translates to:
+  /// **'Cambiar contraseña'**
+  String get resetConfirm;
+
+  /// No description provided for @resetDone.
+  ///
+  /// In es, this message translates to:
+  /// **'Contraseña cambiada'**
+  String get resetDone;
 }
 
 class _AppLocalizationsDelegate

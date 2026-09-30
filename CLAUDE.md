@@ -98,7 +98,7 @@ Principio: la lógica vive en funciones puras (`lib/logic/`) que reciben datos y
   - **No devuelve** `historical_fact`, `character_state` ni ninguna señal de final (el prompt actual no los pide): hoy las aventuras no terminan. Ver "Abiertos".
   - Errores: 400 (falta `action` o `session_id`, acción desconocida) y 404 (partida inexistente) responden solo `{ "error": "..." }`; 502 (falló la IA) y 500 (error inesperado) agregan `narrative` con un mensaje en español. Con cualquier código que no sea 2xx, `functions.invoke` **lanza `FunctionException`**: el código se lee de `e.status` (así se distingue el 404 de `load`). La app muestra su propio aviso traducido con "Reintentar"; nunca se cuelga ni muestra el texto técnico.
 - **Edge Function `delete-account`**: `supabase.functions.invoke('delete-account')` sin body. Borra al usuario de Auth usando su propio JWT (todo lo demás cae en cascada). Responde `{ "deleted": true }` (200), 401 sin sesión, 500 si falla. No cancela suscripciones de las tiendas.
-- Auth: email + contraseña con "Confirm email" **desactivado** en Supabase (el correo integrado de Supabase manda 2 mails por hora; no sirve para confirmar cuentas). Recuperar contraseña usa ese mismo correo con un **código de 6 dígitos** (plantilla "Reset Password" de Supabase con `{{ .Token }}`, se cambia en la iteración 2), porque un enlace necesitaría deep links y una página web.
+- Auth: email + contraseña con "Confirm email" **desactivado** en Supabase (el correo integrado de Supabase manda 2 mails por hora; no sirve para confirmar cuentas). Recuperar contraseña usa ese mismo correo con un **código numérico** (plantilla "Reset Password" de Supabase con `{{ .Token }}`, ya cambiada el 30/09; hoy el código tiene 8 dígitos porque así está "Email OTP length" en Supabase, y como ese largo se puede cambiar, la app acepta de 6 a 10 dígitos), porque un enlace necesitaría deep links y una página web.
 
 ## Aspecto
 
@@ -126,7 +126,7 @@ La app publicada es oscura con dorado; se mantiene para que coincida con las cap
 ## Cuentas
 
 - La cuenta es obligatoria (la función de narrativa necesita el usuario). Pantalla de ingreso con dos pestañas, "Ingresar" y "Crear cuenta": correo, contraseña (y repetir contraseña al crear), "¿Olvidaste tu contraseña?" (manda el correo de Supabase). Errores traducidos a mensajes simples ("Correo o contraseña incorrectos", "Ese correo ya tiene cuenta", "Sin conexión").
-- "¿Olvidaste tu contraseña?": pide el correo, Supabase manda un código de 6 dígitos, la app pide código y contraseña nueva (`verifyOTP` con tipo recovery y después `updateUser`).
+- "¿Olvidaste tu contraseña?": pide el correo, Supabase manda un código numérico (hoy de 8 dígitos; la app acepta de 6 a 10), la app pide código y contraseña nueva (`verifyOTP` con tipo recovery y después `updateUser`).
 - Con sesión guardada, la app abre directo en Inicio.
 - Google (Android e iOS) llega en la iteración 11; Apple (solo iOS, obligatorio si hay Google) en la 13. Una cuenta de Google y una de Apple con el mismo correo pueden quedar unidas o separadas según Supabase; se acepta lo que haga Supabase por defecto.
 - **Apple exige revocar el token de "Sign in with Apple" al eliminar la cuenta.** Con Supabase eso lo hace el backend: al eliminar una cuenta que entró con Apple, la app vuelve a pedir la credencial de Apple (como Ovun) y manda el `authorizationCode` a `delete-account`, que lo canjea y lo revoca con la clave de Apple antes de borrar al usuario (iteración 13). Sin esto no se manda la app a revisión de Apple.

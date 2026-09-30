@@ -52,10 +52,10 @@ Al terminar: flutter analyze sin warnings, commit "Base del proyecto: tema, fuen
 
 ## Iteración 2 — Ingreso con email
 
-**Antes (vos, o yo con tu navegador):** Supabase → Authentication → Emails → plantilla "Reset Password": agregar el código con `{{ .Token }}` (por ejemplo "Tu código para cambiar la contraseña de Anunnaki Tales es: {{ .Token }}").
+**Antes:** ~~Supabase → Authentication → Emails → plantilla "Reset Password": agregar el código con `{{ .Token }}`.~~ Hecho el 30/09 (asunto y texto en español con el código grande, el enlace de siempre y el código en inglés al pie). El código tiene 8 dígitos ("Email OTP length" en Supabase).
 
 ```
-Iteración 2 — Ingreso con email (ver "Cuentas" en CLAUDE.md). Creá services/auth_service.dart (única clase que toca Supabase Auth) y la pantalla de ingreso con pestañas "Ingresar" y "Crear cuenta": correo, contraseña, repetir contraseña al crear. "¿Olvidaste tu contraseña?" con código de 6 dígitos: resetPasswordForEmail, pantalla para el código y la contraseña nueva, verifyOTP con tipo recovery y después updateUser. Mensajes de error simples y traducidos. Con sesión guardada la app abre en Inicio; sin sesión, en ingreso. Commit al terminar.
+Iteración 2 — Ingreso con email (ver "Cuentas" en CLAUDE.md). Creá services/auth_service.dart (única clase que toca Supabase Auth) y la pantalla de ingreso con pestañas "Ingresar" y "Crear cuenta": correo, contraseña (Supabase pide mínimo 6 caracteres), repetir contraseña al crear. "¿Olvidaste tu contraseña?" con el código numérico que llega por mail (hoy de 8 dígitos; el campo acepta de 6 a 10): resetPasswordForEmail, pantalla para el código y la contraseña nueva, verifyOTP con tipo recovery y después updateUser. Mensajes de error simples y traducidos. Con sesión guardada la app abre en Inicio; sin sesión, en ingreso. Commit al terminar.
 ```
 
 **Probá:** crear una cuenta nueva con un correo tuyo, cerrar la app, volver a abrirla (tiene que entrar directo), el mensaje de error con una contraseña mal puesta, y el cambio de contraseña con el código que llega por mail (el correo de Supabase manda como máximo 2 por hora). Tu cuenta vieja de la app de FlutterFlow también tiene que funcionar (es el mismo Supabase).

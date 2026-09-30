@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:provider/provider.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 import 'app_theme.dart';
@@ -13,6 +14,7 @@ import 'screens/hero_select/hero_select_screen.dart';
 import 'screens/home/home_screen.dart';
 import 'screens/paywall/paywall_screen.dart';
 import 'screens/profile/profile_screen.dart';
+import 'services/auth_service.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,7 +24,9 @@ Future<void> main() async {
     url: AppConfig.supabaseUrl,
     publishableKey: AppConfig.supabaseAnonKey,
   );
-  runApp(const AnunnakiApp());
+  runApp(
+    Provider(create: (_) => AuthService(), child: const AnunnakiApp()),
+  );
 }
 
 // Nombres de las rutas, para navegar con Navigator.pushNamed(context, Routes.x).
@@ -41,6 +45,16 @@ class Routes {
 class AnunnakiApp extends StatelessWidget {
   const AnunnakiApp({super.key});
 
+  static final Map<String, WidgetBuilder> _routes = {
+    Routes.home: (_) => const HomeScreen(),
+    Routes.auth: (_) => const AuthScreen(),
+    Routes.catalog: (_) => const CatalogScreen(),
+    Routes.heroSelect: (_) => const HeroSelectScreen(),
+    Routes.gameplay: (_) => const GameplayScreen(),
+    Routes.paywall: (_) => const PaywallScreen(),
+    Routes.profile: (_) => const ProfileScreen(),
+  };
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -54,18 +68,20 @@ class AnunnakiApp extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: AppLocalizations.supportedLocales,
-      // Por ahora abre en Inicio; en la iteración 2 decide entre ingreso e Inicio
-      // según haya sesión guardada.
-      initialRoute: Routes.home,
-      routes: {
-        Routes.home: (_) => const HomeScreen(),
-        Routes.auth: (_) => const AuthScreen(),
-        Routes.catalog: (_) => const CatalogScreen(),
-        Routes.heroSelect: (_) => const HeroSelectScreen(),
-        Routes.gameplay: (_) => const GameplayScreen(),
-        Routes.paywall: (_) => const PaywallScreen(),
-        Routes.profile: (_) => const ProfileScreen(),
+      // Con sesión guardada abre en Inicio; sin sesión, en el ingreso. Se arma
+      // una sola ruta inicial para que el ingreso no quede con Inicio debajo.
+      onGenerateInitialRoutes: (_) {
+        final start = context.read<AuthService>().isSignedIn
+            ? Routes.home
+            : Routes.auth;
+        return [
+          MaterialPageRoute(
+            settings: RouteSettings(name: start),
+            builder: _routes[start]!,
+          ),
+        ];
       },
+      routes: _routes,
     );
   }
 }

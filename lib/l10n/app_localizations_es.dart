@@ -19,9 +19,6 @@ class AppLocalizationsEs extends AppLocalizations {
   String get homeSubtitle => 'Mitos Interactivos';
 
   @override
-  String get authTitle => 'Ingresar';
-
-  @override
   String get catalogTitle => 'Elige tu aventura';
 
   @override
@@ -35,4 +32,90 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get profileTitle => 'Perfil';
+
+  @override
+  String get authTabSignIn => 'Ingresar';
+
+  @override
+  String get authTabSignUp => 'Crear cuenta';
+
+  @override
+  String get authEmail => 'Correo';
+
+  @override
+  String get authPassword => 'Contraseña';
+
+  @override
+  String get authRepeatPassword => 'Repetir contraseña';
+
+  @override
+  String get authForgotPassword => '¿Olvidaste tu contraseña?';
+
+  @override
+  String get authEmailInvalid => 'Escribe un correo válido';
+
+  @override
+  String authPasswordTooShort(int min) {
+    return 'La contraseña debe tener al menos $min caracteres';
+  }
+
+  @override
+  String get authPasswordsDontMatch => 'Las contraseñas no coinciden';
+
+  @override
+  String get authErrorInvalidCredentials => 'Correo o contraseña incorrectos';
+
+  @override
+  String get authErrorEmailTaken => 'Ese correo ya tiene cuenta';
+
+  @override
+  String get authErrorWeakPassword =>
+      'Esa contraseña es muy débil. Prueba con otra más larga.';
+
+  @override
+  String get authErrorSamePassword =>
+      'La contraseña nueva debe ser distinta de la anterior';
+
+  @override
+  String get authErrorInvalidCode => 'El código no es correcto o ya venció';
+
+  @override
+  String get authErrorTooManyRequests =>
+      'Demasiados intentos. Espera un rato y vuelve a intentarlo.';
+
+  @override
+  String get authErrorNoConnection => 'Sin conexión';
+
+  @override
+  String get authErrorUnknown => 'Algo salió mal. Inténtalo de nuevo.';
+
+  @override
+  String get resetTitle => 'Cambiar contraseña';
+
+  @override
+  String get resetEmailIntro =>
+      'Escribe tu correo y te enviaremos un código para cambiar la contraseña.';
+
+  @override
+  String get resetSendCode => 'Enviar código';
+
+  @override
+  String resetCodeIntro(String email) {
+    return 'Te enviamos un código a $email. Puede tardar unos minutos; revisa también la carpeta de correo no deseado.';
+  }
+
+  @override
+  String get resetCode => 'Código';
+
+  @override
+  String get resetCodeInvalid => 'El código tiene entre 6 y 10 números';
+
+  @override
+  String get resetNewPassword => 'Contraseña nueva';
+
+  @override
+  String get resetConfirm => 'Cambiar contraseña';
+
+  @override
+  String get resetDone => 'Contraseña cambiada';
 }
