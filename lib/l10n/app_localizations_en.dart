@@ -215,5 +215,42 @@ class AppLocalizationsEn extends AppLocalizations {
   String get paywallComingSoon => 'Premium is coming soon';
 
   @override
+  String get profileEmail => 'Email';
+
+  @override
+  String get profilePrivacyPolicy => 'Privacy policy';
+
+  @override
+  String get profileLinkError => 'We couldn\'t open the link.';
+
+  @override
+  String profileVersion(String version, String build) {
+    return 'Version $version ($build)';
+  }
+
+  @override
+  String get profileSignOut => 'Sign out';
+
+  @override
+  String get profileDeleteAccount => 'Delete account';
+
+  @override
+  String get profileDeleteTitle => 'Delete your account?';
+
+  @override
+  String get profileDeleteBody =>
+      'Your profile, your games and your progress will be deleted forever. This can\'t be undone. If you have Premium, cancel the subscription in Google Play or the App Store: deleting your account doesn\'t cancel it.';
+
+  @override
+  String get profileDeleteCancel => 'Cancel';
+
+  @override
+  String get profileDeleteConfirm => 'Delete';
+
+  @override
+  String get profileDeleteError =>
+      'We couldn\'t delete your account. Try again or write to us at fejcavallo@gmail.com';
+
+  @override
   String get back => 'Back';
 }

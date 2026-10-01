@@ -32,6 +32,9 @@ class AuthService {
   // Id del usuario con sesión abierta (null si no hay sesión).
   String? get currentUserId => _auth.currentUser?.id;
 
+  // Correo del usuario con sesión abierta (null si no hay sesión).
+  String? get currentEmail => _auth.currentUser?.email;
+
   Future<void> signIn(String email, String password) =>
       _run(() => _auth.signInWithPassword(email: email, password: password));
 
@@ -51,6 +54,30 @@ class AuthService {
   // Cambia la contraseña del usuario con sesión abierta.
   Future<void> updatePassword(String newPassword) =>
       _run(() => _auth.updateUser(UserAttributes(password: newPassword)));
+
+  // Cierra la sesión. Supabase la borra del teléfono antes de avisar al
+  // servidor; si ese aviso falla (sin conexión), la sesión igual queda cerrada.
+  Future<void> signOut() async {
+    try {
+      await _auth.signOut();
+    } catch (_) {}
+  }
+
+  // Elimina la cuenta con la Edge Function delete-account (todo lo del usuario
+  // cae en cascada) y cierra la sesión. Devuelve false si no se pudo borrar.
+  Future<bool> deleteAccount() async {
+    try {
+      final response = await Supabase.instance.client.functions
+          .invoke('delete-account')
+          .timeout(const Duration(seconds: 20));
+      final data = response.data;
+      if (data is! Map || data['deleted'] != true) return false;
+    } catch (_) {
+      return false;
+    }
+    await signOut();
+    return true;
+  }
 
   Future<void> _run(Future<Object?> Function() action) async {
     try {

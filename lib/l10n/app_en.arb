@@ -61,5 +61,16 @@
   "gameplayChoiceError": "The narrator couldn't answer. Check your connection and try again.",
   "historicalFactTitle": "Historical fact",
   "paywallComingSoon": "Premium is coming soon",
+  "profileEmail": "Email",
+  "profilePrivacyPolicy": "Privacy policy",
+  "profileLinkError": "We couldn't open the link.",
+  "profileVersion": "Version {version} ({build})",
+  "profileSignOut": "Sign out",
+  "profileDeleteAccount": "Delete account",
+  "profileDeleteTitle": "Delete your account?",
+  "profileDeleteBody": "Your profile, your games and your progress will be deleted forever. This can't be undone. If you have Premium, cancel the subscription in Google Play or the App Store: deleting your account doesn't cancel it.",
+  "profileDeleteCancel": "Cancel",
+  "profileDeleteConfirm": "Delete",
+  "profileDeleteError": "We couldn't delete your account. Try again or write to us at fejcavallo@gmail.com",
   "back": "Back"
 }

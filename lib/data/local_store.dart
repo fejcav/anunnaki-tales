@@ -36,4 +36,10 @@ class LocalStore {
     final data = await load();
     await save(data.withSavedGame(null));
   }
+
+  // Borra todo lo guardado en el teléfono (al eliminar la cuenta).
+  Future<void> clearAll() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.remove(_key);
+  }
 }

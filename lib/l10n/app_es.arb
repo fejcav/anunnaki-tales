@@ -109,5 +109,26 @@
   "gameplayChoiceError": "El narrador no pudo responder. Revisa tu conexión e inténtalo de nuevo.",
   "historicalFactTitle": "Dato histórico",
   "paywallComingSoon": "Premium llega pronto",
+  "profileEmail": "Correo",
+  "profilePrivacyPolicy": "Política de privacidad",
+  "profileLinkError": "No pudimos abrir el enlace.",
+  "profileVersion": "Versión {version} ({build})",
+  "@profileVersion": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      },
+      "build": {
+        "type": "String"
+      }
+    }
+  },
+  "profileSignOut": "Cerrar sesión",
+  "profileDeleteAccount": "Eliminar cuenta",
+  "profileDeleteTitle": "¿Eliminar tu cuenta?",
+  "profileDeleteBody": "Se borrarán para siempre tu perfil, tus partidas y tu progreso. Esta acción no se puede deshacer. Si tienes Premium, cancela la suscripción desde Google Play o App Store: eliminar la cuenta no la cancela.",
+  "profileDeleteCancel": "Cancelar",
+  "profileDeleteConfirm": "Eliminar",
+  "profileDeleteError": "No pudimos eliminar tu cuenta. Inténtalo de nuevo o escríbenos a fejcavallo@gmail.com",
   "back": "Volver"
 }

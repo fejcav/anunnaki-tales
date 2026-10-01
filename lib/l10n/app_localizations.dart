@@ -464,6 +464,72 @@ abstract class AppLocalizations {
   /// **'Premium llega pronto'**
   String get paywallComingSoon;
 
+  /// No description provided for @profileEmail.
+  ///
+  /// In es, this message translates to:
+  /// **'Correo'**
+  String get profileEmail;
+
+  /// No description provided for @profilePrivacyPolicy.
+  ///
+  /// In es, this message translates to:
+  /// **'Política de privacidad'**
+  String get profilePrivacyPolicy;
+
+  /// No description provided for @profileLinkError.
+  ///
+  /// In es, this message translates to:
+  /// **'No pudimos abrir el enlace.'**
+  String get profileLinkError;
+
+  /// No description provided for @profileVersion.
+  ///
+  /// In es, this message translates to:
+  /// **'Versión {version} ({build})'**
+  String profileVersion(String version, String build);
+
+  /// No description provided for @profileSignOut.
+  ///
+  /// In es, this message translates to:
+  /// **'Cerrar sesión'**
+  String get profileSignOut;
+
+  /// No description provided for @profileDeleteAccount.
+  ///
+  /// In es, this message translates to:
+  /// **'Eliminar cuenta'**
+  String get profileDeleteAccount;
+
+  /// No description provided for @profileDeleteTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'¿Eliminar tu cuenta?'**
+  String get profileDeleteTitle;
+
+  /// No description provided for @profileDeleteBody.
+  ///
+  /// In es, this message translates to:
+  /// **'Se borrarán para siempre tu perfil, tus partidas y tu progreso. Esta acción no se puede deshacer. Si tienes Premium, cancela la suscripción desde Google Play o App Store: eliminar la cuenta no la cancela.'**
+  String get profileDeleteBody;
+
+  /// No description provided for @profileDeleteCancel.
+  ///
+  /// In es, this message translates to:
+  /// **'Cancelar'**
+  String get profileDeleteCancel;
+
+  /// No description provided for @profileDeleteConfirm.
+  ///
+  /// In es, this message translates to:
+  /// **'Eliminar'**
+  String get profileDeleteConfirm;
+
+  /// No description provided for @profileDeleteError.
+  ///
+  /// In es, this message translates to:
+  /// **'No pudimos eliminar tu cuenta. Inténtalo de nuevo o escríbenos a fejcavallo@gmail.com'**
+  String get profileDeleteError;
+
   /// No description provided for @back.
   ///
   /// In es, this message translates to:

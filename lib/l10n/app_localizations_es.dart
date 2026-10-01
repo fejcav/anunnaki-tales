@@ -214,5 +214,42 @@ class AppLocalizationsEs extends AppLocalizations {
   String get paywallComingSoon => 'Premium llega pronto';
 
   @override
+  String get profileEmail => 'Correo';
+
+  @override
+  String get profilePrivacyPolicy => 'Política de privacidad';
+
+  @override
+  String get profileLinkError => 'No pudimos abrir el enlace.';
+
+  @override
+  String profileVersion(String version, String build) {
+    return 'Versión $version ($build)';
+  }
+
+  @override
+  String get profileSignOut => 'Cerrar sesión';
+
+  @override
+  String get profileDeleteAccount => 'Eliminar cuenta';
+
+  @override
+  String get profileDeleteTitle => '¿Eliminar tu cuenta?';
+
+  @override
+  String get profileDeleteBody =>
+      'Se borrarán para siempre tu perfil, tus partidas y tu progreso. Esta acción no se puede deshacer. Si tienes Premium, cancela la suscripción desde Google Play o App Store: eliminar la cuenta no la cancela.';
+
+  @override
+  String get profileDeleteCancel => 'Cancelar';
+
+  @override
+  String get profileDeleteConfirm => 'Eliminar';
+
+  @override
+  String get profileDeleteError =>
+      'No pudimos eliminar tu cuenta. Inténtalo de nuevo o escríbenos a fejcavallo@gmail.com';
+
+  @override
   String get back => 'Volver';
 }
