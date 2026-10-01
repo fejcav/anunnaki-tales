@@ -21,7 +21,7 @@ El dueño del proyecto (Federico) tiene nivel básico de Dart/Flutter: puede cor
 - Windows 11, Flutter estable en `C:\dev\flutter` (el mismo de Ovun), Android SDK en `C:\Users\fedec\AppData\Local\Android\Sdk`, Git.
 - Proyecto en `C:\dev\anunnaki-tales`.
 - **Dispositivo de prueba: emulador `Anunnaki_Pixel_8`**, propio de este proyecto (creado el 01/10/2026 como copia del `Pixel_8` de Ovun: mismo dispositivo, misma imagen Android 37.2 con Play Store), para no compartir datos ni emulador con otros proyectos. Se arranca siempre en el puerto 5560, así su nombre es fijo aunque el de Ovun esté abierto:
-  `C:\Users\fedec\AppData\Local\Android\Sdk\emulator\emulator.exe -avd Anunnaki_Pixel_8 -port 5560`
+  `C:\Users\fedec\AppData\Local\Android\Sdk\emulator\emulator.exe -avd Anunnaki_Pixel_8 -port 5560 -no-snapshot`
   En `flutter devices` y `adb devices` aparece como `emulator-5560`. Cuando pidas `flutter run`, usá `-d emulator-5560`; con `adb`, `-s emulator-5560`. (También arranca con `flutter emulators --launch Anunnaki_Pixel_8`, pero entonces el número cambia según qué otros emuladores estén abiertos.)
 - Sin Mac: iOS se compila en Codemagic (misma cuenta que Ovun; los 500 minutos gratis de macOS por mes se comparten entre las dos apps).
 
