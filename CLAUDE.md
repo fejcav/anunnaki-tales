@@ -23,12 +23,16 @@ El dueño del proyecto (Federico) tiene nivel básico de Dart/Flutter: puede cor
 - **Dispositivo de prueba: emulador `Anunnaki_Pixel_8`**, propio de este proyecto (creado el 01/10/2026 como copia del `Pixel_8` de Ovun: mismo dispositivo, misma imagen Android 37.2 con Play Store), para no compartir datos ni emulador con otros proyectos. Se arranca siempre en el puerto 5560, así su nombre es fijo aunque el de Ovun esté abierto:
   `C:\Users\fedec\AppData\Local\Android\Sdk\emulator\emulator.exe -avd Anunnaki_Pixel_8 -port 5560`
   En `flutter devices` y `adb devices` aparece como `emulator-5560`. Cuando pidas `flutter run`, usá `-d emulator-5560`; con `adb`, `-s emulator-5560`. (También arranca con `flutter emulators --launch Anunnaki_Pixel_8`, pero entonces el número cambia según qué otros emuladores estén abiertos.)
-- **Convivencia con Ovun** (el emulador y el disco se comparten):
-  - Usar solo `Anunnaki_Pixel_8`; **nunca** el `Pixel_8` (es de Ovun).
-  - Con dos emuladores abiertos, los ids (`emulator-5554`, `5556`, …) cambian según el orden de arranque. Antes de cualquier comando de `adb` o de `flutter run`, confirmar el nombre con `adb -s <id> emu avd name` y usar siempre ese id con `-s` o `-d`.
-  - Antes de compilar o abrir el emulador, revisar que no haya un build de Gradle ni un emulador de Ovun corriendo. Si lo hay, parar y avisar a Federico.
-  - Al terminar, cerrar el emulador propio (`adb -s <id> emu kill`) y Gradle (`android\gradlew --stop`).
 - Sin Mac: iOS se compila en Codemagic (misma cuenta que Ovun; los 500 minutos gratis de macOS por mes se comparten entre las dos apps).
+
+## Emuladores y disco compartidos con Ovun
+- En esta PC también está el proyecto Ovun (C:\dev\ovun). Los dos comparten el disco C: y la system image de Android.
+- Usá solo el emulador Anunnaki_Pixel_8. Nunca uses ni instales nada en el Pixel_8: es de Ovun.
+- Con dos emuladores abiertos, los ids (emulator-5554, emulator-5556, emulator-5560…) dependen del orden de arranque: antes de cualquier comando de adb o de flutter run, confirmá el nombre con `adb -s <id> emu avd name` y usá siempre ese id con -s o -d.
+- Antes de compilar o abrir el emulador, fijate que no haya un build de Gradle, un flutter run ni un emulador de Ovun corriendo; si lo hay, pará y avisá.
+- Antes de compilar, mirá el espacio libre en C:. Si hay menos de 15 GB, pará y avisá.
+- El emulador arranca en frío, sin snapshot, para ahorrar ~4 GB de disco: tarda un par de minutos en arrancar. No vuelvas a activar el arranque rápido.
+- Al terminar, cerrá tu emulador, Gradle (gradlew --stop desde android/) y cualquier flutter run o adb logcat que hayas abierto.
 
 ## Stack (cerrado, no cambiar sin preguntar)
 
