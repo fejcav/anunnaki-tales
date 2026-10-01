@@ -4,6 +4,9 @@ import '../models/adventure.dart';
 import '../models/character.dart';
 import '../models/story_scene.dart';
 
+// La partida guardada ya no existe en Supabase (`load` respondió 404).
+class SavedGameNotFound implements Exception {}
+
 // ÚNICA clase que lee tablas de Supabase y llama a la Edge Function narrative.
 // Si algo falla deja pasar el error: la pantalla muestra su aviso con
 // "Reintentar".
@@ -88,5 +91,22 @@ class StoryApi {
         )
         .timeout(_narrativeTimeout);
     return StoryScene.fromMap(Map<String, dynamic>.from(response.data as Map));
+  }
+
+  // Trae la escena actual de una partida guardada, sin llamar a la IA. Si la
+  // partida ya no existe lanza SavedGameNotFound.
+  Future<StoryScene> loadAdventure(String sessionId) async {
+    try {
+      final response = await _db.functions
+          .invoke(
+            'narrative',
+            body: {'action': 'load', 'session_id': sessionId},
+          )
+          .timeout(_timeout);
+      return StoryScene.fromMap(Map<String, dynamic>.from(response.data as Map));
+    } on FunctionException catch (e) {
+      if (e.status == 404) throw SavedGameNotFound();
+      rethrow;
+    }
   }
 }

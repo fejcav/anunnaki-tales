@@ -49,6 +49,20 @@
   "resetConfirm": "Cambiar contraseña",
   "resetDone": "Contraseña cambiada",
   "homeStart": "Comenzar aventura",
+  "homeContinue": "Continuar partida",
+  "homeContinueDetail": "{adventure} · {hero}",
+  "@homeContinueDetail": {
+    "placeholders": {
+      "adventure": {
+        "type": "String"
+      },
+      "hero": {
+        "type": "String"
+      }
+    }
+  },
+  "homeGameNotFound": "Esta partida ya no está disponible",
+  "homeContinueError": "No pudimos cargar la partida. Revisa tu conexión.",
   "difficultyEasy": "Fácil",
   "difficultyMedium": "Media",
   "difficultyHard": "Difícil",

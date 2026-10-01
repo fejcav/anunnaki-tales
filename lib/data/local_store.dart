@@ -30,4 +30,10 @@ class LocalStore {
     final data = await load();
     await save(data.withSavedGame(game));
   }
+
+  // Borra la partida guardada (por ejemplo, si ya no existe en Supabase).
+  Future<void> clearGame() async {
+    final data = await load();
+    await save(data.withSavedGame(null));
+  }
 }

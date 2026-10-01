@@ -38,6 +38,10 @@ Future<void> main() async {
   );
 }
 
+// Avisa a Inicio cuando vuelve a quedar arriba (por ejemplo, al salir de
+// Gameplay), para que relea la partida guardada.
+final routeObserver = RouteObserver<ModalRoute<void>>();
+
 // Nombres de las rutas, para navegar con Navigator.pushNamed(context, Routes.x).
 class Routes {
   Routes._();
@@ -77,6 +81,7 @@ class AnunnakiApp extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: AppLocalizations.supportedLocales,
+      navigatorObservers: [routeObserver],
       // Con sesión guardada abre en Inicio; sin sesión, en el ingreso. Se arma
       // una sola ruta inicial para que el ingreso no quede con Inicio debajo.
       onGenerateInitialRoutes: (_) {

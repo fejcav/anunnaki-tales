@@ -308,6 +308,30 @@ abstract class AppLocalizations {
   /// **'Comenzar aventura'**
   String get homeStart;
 
+  /// No description provided for @homeContinue.
+  ///
+  /// In es, this message translates to:
+  /// **'Continuar partida'**
+  String get homeContinue;
+
+  /// No description provided for @homeContinueDetail.
+  ///
+  /// In es, this message translates to:
+  /// **'{adventure} · {hero}'**
+  String homeContinueDetail(String adventure, String hero);
+
+  /// No description provided for @homeGameNotFound.
+  ///
+  /// In es, this message translates to:
+  /// **'Esta partida ya no está disponible'**
+  String get homeGameNotFound;
+
+  /// No description provided for @homeContinueError.
+  ///
+  /// In es, this message translates to:
+  /// **'No pudimos cargar la partida. Revisa tu conexión.'**
+  String get homeContinueError;
+
   /// No description provided for @difficultyEasy.
   ///
   /// In es, this message translates to:

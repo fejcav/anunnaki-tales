@@ -123,6 +123,21 @@ class AppLocalizationsEs extends AppLocalizations {
   String get homeStart => 'Comenzar aventura';
 
   @override
+  String get homeContinue => 'Continuar partida';
+
+  @override
+  String homeContinueDetail(String adventure, String hero) {
+    return '$adventure · $hero';
+  }
+
+  @override
+  String get homeGameNotFound => 'Esta partida ya no está disponible';
+
+  @override
+  String get homeContinueError =>
+      'No pudimos cargar la partida. Revisa tu conexión.';
+
+  @override
   String get difficultyEasy => 'Fácil';
 
   @override
