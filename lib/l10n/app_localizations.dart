@@ -349,6 +349,42 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Reintentar'**
   String get retry;
+
+  /// No description provided for @heroStart.
+  ///
+  /// In es, this message translates to:
+  /// **'Empezar'**
+  String get heroStart;
+
+  /// No description provided for @heroTraveler.
+  ///
+  /// In es, this message translates to:
+  /// **'Viajero'**
+  String get heroTraveler;
+
+  /// No description provided for @heroTravelerDescription.
+  ///
+  /// In es, this message translates to:
+  /// **'Un viajero sin nombre que sigue su propio camino.'**
+  String get heroTravelerDescription;
+
+  /// No description provided for @heroPreparing.
+  ///
+  /// In es, this message translates to:
+  /// **'El narrador está preparando tu aventura…'**
+  String get heroPreparing;
+
+  /// No description provided for @heroError.
+  ///
+  /// In es, this message translates to:
+  /// **'No pudimos cargar los héroes. Revisa tu conexión.'**
+  String get heroError;
+
+  /// No description provided for @heroStartError.
+  ///
+  /// In es, this message translates to:
+  /// **'No pudimos empezar la aventura. Inténtalo de nuevo.'**
+  String get heroStartError;
 }
 
 class _AppLocalizationsDelegate

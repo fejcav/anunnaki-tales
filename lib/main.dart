@@ -6,6 +6,7 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 
 import 'app_theme.dart';
 import 'config.dart';
+import 'data/local_store.dart';
 import 'l10n/app_localizations.dart';
 import 'screens/auth/auth_screen.dart';
 import 'screens/catalog/catalog_screen.dart';
@@ -30,6 +31,7 @@ Future<void> main() async {
       providers: [
         Provider(create: (_) => AuthService()),
         Provider(create: (_) => StoryApi()),
+        Provider(create: (_) => LocalStore()),
       ],
       child: const AnunnakiApp(),
     ),

@@ -145,4 +145,24 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get retry => 'Reintentar';
+
+  @override
+  String get heroStart => 'Empezar';
+
+  @override
+  String get heroTraveler => 'Viajero';
+
+  @override
+  String get heroTravelerDescription =>
+      'Un viajero sin nombre que sigue su propio camino.';
+
+  @override
+  String get heroPreparing => 'El narrador está preparando tu aventura…';
+
+  @override
+  String get heroError => 'No pudimos cargar los héroes. Revisa tu conexión.';
+
+  @override
+  String get heroStartError =>
+      'No pudimos empezar la aventura. Inténtalo de nuevo.';
 }

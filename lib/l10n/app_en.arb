@@ -41,5 +41,11 @@
   "catalogTurns": "~{count} turns",
   "catalogError": "We couldn't load the adventures. Check your connection.",
   "catalogEmpty": "No adventures available yet.",
-  "retry": "Retry"
+  "retry": "Retry",
+  "heroStart": "Start",
+  "heroTraveler": "Traveler",
+  "heroTravelerDescription": "A nameless traveler on a road of their own.",
+  "heroPreparing": "The narrator is preparing your adventure…",
+  "heroError": "We couldn't load the heroes. Check your connection.",
+  "heroStartError": "We couldn't start the adventure. Please try again."
 }

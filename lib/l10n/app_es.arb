@@ -62,5 +62,11 @@
   },
   "catalogError": "No pudimos cargar las aventuras. Revisa tu conexión.",
   "catalogEmpty": "Todavía no hay aventuras disponibles.",
-  "retry": "Reintentar"
+  "retry": "Reintentar",
+  "heroStart": "Empezar",
+  "heroTraveler": "Viajero",
+  "heroTravelerDescription": "Un viajero sin nombre que sigue su propio camino.",
+  "heroPreparing": "El narrador está preparando tu aventura…",
+  "heroError": "No pudimos cargar los héroes. Revisa tu conexión.",
+  "heroStartError": "No pudimos empezar la aventura. Inténtalo de nuevo."
 }

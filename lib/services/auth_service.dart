@@ -29,6 +29,9 @@ class AuthService {
   // Hay sesión guardada en el teléfono (Supabase la recupera al arrancar).
   bool get isSignedIn => _auth.currentSession != null;
 
+  // Id del usuario con sesión abierta (null si no hay sesión).
+  String? get currentUserId => _auth.currentUser?.id;
+
   Future<void> signIn(String email, String password) =>
       _run(() => _auth.signInWithPassword(email: email, password: password));
 
