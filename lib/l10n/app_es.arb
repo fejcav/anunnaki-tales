@@ -68,5 +68,32 @@
   "heroTravelerDescription": "Un viajero sin nombre que sigue su propio camino.",
   "heroPreparing": "El narrador está preparando tu aventura…",
   "heroError": "No pudimos cargar los héroes. Revisa tu conexión.",
-  "heroStartError": "No pudimos empezar la aventura. Inténtalo de nuevo."
+  "heroStartError": "No pudimos empezar la aventura. Inténtalo de nuevo.",
+  "riskLow": "Riesgo bajo",
+  "riskMedium": "Riesgo medio",
+  "riskHigh": "Riesgo alto",
+  "gameplayTurn": "Turno {turn}",
+  "@gameplayTurn": {
+    "placeholders": {
+      "turn": {
+        "type": "int"
+      }
+    }
+  },
+  "gameplayThinking": "El narrador está pensando…",
+  "gameplayFreeChoices": "Elecciones gratis hoy: {left} de {total}",
+  "@gameplayFreeChoices": {
+    "placeholders": {
+      "left": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "gameplayChoiceError": "El narrador no pudo responder. Revisa tu conexión e inténtalo de nuevo.",
+  "historicalFactTitle": "Dato histórico",
+  "paywallComingSoon": "Premium llega pronto",
+  "back": "Volver"
 }

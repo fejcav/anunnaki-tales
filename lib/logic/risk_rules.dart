@@ -21,3 +21,22 @@ String difficultyLabel(AppLocalizations l10n, String difficulty) {
     _ => l10n.difficultyMedium,
   };
 }
+
+// Color y etiqueta del riesgo de una opción (Gameplay). Un valor desconocido
+// se trata como riesgo medio.
+
+Color riskColor(String riskLevel) {
+  return switch (riskLevel) {
+    'low' => AppColors.riskLow,
+    'high' => AppColors.riskHigh,
+    _ => AppColors.riskMedium,
+  };
+}
+
+String riskLabel(AppLocalizations l10n, String riskLevel) {
+  return switch (riskLevel) {
+    'low' => l10n.riskLow,
+    'high' => l10n.riskHigh,
+    _ => l10n.riskMedium,
+  };
+}

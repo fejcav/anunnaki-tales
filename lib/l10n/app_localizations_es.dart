@@ -165,4 +165,39 @@ class AppLocalizationsEs extends AppLocalizations {
   @override
   String get heroStartError =>
       'No pudimos empezar la aventura. Inténtalo de nuevo.';
+
+  @override
+  String get riskLow => 'Riesgo bajo';
+
+  @override
+  String get riskMedium => 'Riesgo medio';
+
+  @override
+  String get riskHigh => 'Riesgo alto';
+
+  @override
+  String gameplayTurn(int turn) {
+    return 'Turno $turn';
+  }
+
+  @override
+  String get gameplayThinking => 'El narrador está pensando…';
+
+  @override
+  String gameplayFreeChoices(int left, int total) {
+    return 'Elecciones gratis hoy: $left de $total';
+  }
+
+  @override
+  String get gameplayChoiceError =>
+      'El narrador no pudo responder. Revisa tu conexión e inténtalo de nuevo.';
+
+  @override
+  String get historicalFactTitle => 'Dato histórico';
+
+  @override
+  String get paywallComingSoon => 'Premium llega pronto';
+
+  @override
+  String get back => 'Volver';
 }

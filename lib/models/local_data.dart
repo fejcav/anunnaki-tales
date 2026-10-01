@@ -25,6 +25,16 @@ class LocalData {
     );
   }
 
+  // Copia con otro contador de elecciones del día.
+  LocalData withDailyChoices({required int used, required String day}) {
+    return LocalData(
+      dailyChoicesUsed: used,
+      lastChoiceDay: day,
+      language: language,
+      savedGame: savedGame,
+    );
+  }
+
   Map<String, dynamic> toJson() => {
     'schemaVersion': schemaVersion,
     'dailyChoicesUsed': dailyChoicesUsed,

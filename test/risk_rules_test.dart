@@ -38,4 +38,37 @@ void main() {
       expect(difficultyLabel(es, 'otra'), 'Media');
     });
   });
+
+  group('riskColor', () {
+    test('bajo verde, medio naranja, alto rojo', () {
+      expect(riskColor('low'), AppColors.riskLow);
+      expect(riskColor('medium'), AppColors.riskMedium);
+      expect(riskColor('high'), AppColors.riskHigh);
+    });
+
+    test('un valor desconocido se trata como medio', () {
+      expect(riskColor(''), AppColors.riskMedium);
+    });
+  });
+
+  group('riskLabel', () {
+    final es = lookupAppLocalizations(const Locale('es'));
+    final en = lookupAppLocalizations(const Locale('en'));
+
+    test('en español', () {
+      expect(riskLabel(es, 'low'), 'Riesgo bajo');
+      expect(riskLabel(es, 'medium'), 'Riesgo medio');
+      expect(riskLabel(es, 'high'), 'Riesgo alto');
+    });
+
+    test('en inglés', () {
+      expect(riskLabel(en, 'low'), 'Low risk');
+      expect(riskLabel(en, 'medium'), 'Medium risk');
+      expect(riskLabel(en, 'high'), 'High risk');
+    });
+
+    test('un valor desconocido se trata como medio', () {
+      expect(riskLabel(es, 'x'), 'Riesgo medio');
+    });
+  });
 }

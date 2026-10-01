@@ -70,4 +70,23 @@ class StoryApi {
     }
     return scene;
   }
+
+  // Manda la opción elegida y devuelve la escena siguiente. El idioma y la
+  // dificultad los saca la función de la partida guardada.
+  Future<StoryScene> continueAdventure({
+    required String sessionId,
+    required int choiceId,
+  }) async {
+    final response = await _db.functions
+        .invoke(
+          'narrative',
+          body: {
+            'action': 'continue',
+            'session_id': sessionId,
+            'choice_id': choiceId,
+          },
+        )
+        .timeout(_narrativeTimeout);
+    return StoryScene.fromMap(Map<String, dynamic>.from(response.data as Map));
+  }
 }

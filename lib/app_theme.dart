@@ -130,6 +130,20 @@ class AppTheme {
       textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(foregroundColor: AppColors.gold),
       ),
+      // Avisos (SnackBar): superficie oscura con borde dorado tenue, texto
+      // blanco y la acción ("Reintentar") en dorado. Sin esto, Material 3 los
+      // pinta claros sobre el fondo oscuro.
+      snackBarTheme: SnackBarThemeData(
+        backgroundColor: AppColors.surface,
+        contentTextStyle: AppText.body,
+        actionTextColor: AppColors.gold,
+        behavior: SnackBarBehavior.floating,
+        elevation: 0,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12),
+          side: BorderSide(color: AppColors.gold.withValues(alpha: 0.4)),
+        ),
+      ),
       progressIndicatorTheme: const ProgressIndicatorThemeData(
         color: AppColors.gold,
         linearTrackColor: AppColors.lapis,

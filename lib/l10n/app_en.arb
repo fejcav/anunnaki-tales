@@ -47,5 +47,15 @@
   "heroTravelerDescription": "A nameless traveler on a road of their own.",
   "heroPreparing": "The narrator is preparing your adventure…",
   "heroError": "We couldn't load the heroes. Check your connection.",
-  "heroStartError": "We couldn't start the adventure. Please try again."
+  "heroStartError": "We couldn't start the adventure. Please try again.",
+  "riskLow": "Low risk",
+  "riskMedium": "Medium risk",
+  "riskHigh": "High risk",
+  "gameplayTurn": "Turn {turn}",
+  "gameplayThinking": "The narrator is thinking…",
+  "gameplayFreeChoices": "Free choices today: {left} of {total}",
+  "gameplayChoiceError": "The narrator couldn't answer. Check your connection and try again.",
+  "historicalFactTitle": "Historical fact",
+  "paywallComingSoon": "Premium is coming soon",
+  "back": "Back"
 }

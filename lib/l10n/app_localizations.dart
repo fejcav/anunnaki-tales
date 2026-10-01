@@ -385,6 +385,66 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'No pudimos empezar la aventura. Inténtalo de nuevo.'**
   String get heroStartError;
+
+  /// No description provided for @riskLow.
+  ///
+  /// In es, this message translates to:
+  /// **'Riesgo bajo'**
+  String get riskLow;
+
+  /// No description provided for @riskMedium.
+  ///
+  /// In es, this message translates to:
+  /// **'Riesgo medio'**
+  String get riskMedium;
+
+  /// No description provided for @riskHigh.
+  ///
+  /// In es, this message translates to:
+  /// **'Riesgo alto'**
+  String get riskHigh;
+
+  /// No description provided for @gameplayTurn.
+  ///
+  /// In es, this message translates to:
+  /// **'Turno {turn}'**
+  String gameplayTurn(int turn);
+
+  /// No description provided for @gameplayThinking.
+  ///
+  /// In es, this message translates to:
+  /// **'El narrador está pensando…'**
+  String get gameplayThinking;
+
+  /// No description provided for @gameplayFreeChoices.
+  ///
+  /// In es, this message translates to:
+  /// **'Elecciones gratis hoy: {left} de {total}'**
+  String gameplayFreeChoices(int left, int total);
+
+  /// No description provided for @gameplayChoiceError.
+  ///
+  /// In es, this message translates to:
+  /// **'El narrador no pudo responder. Revisa tu conexión e inténtalo de nuevo.'**
+  String get gameplayChoiceError;
+
+  /// No description provided for @historicalFactTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Dato histórico'**
+  String get historicalFactTitle;
+
+  /// No description provided for @paywallComingSoon.
+  ///
+  /// In es, this message translates to:
+  /// **'Premium llega pronto'**
+  String get paywallComingSoon;
+
+  /// No description provided for @back.
+  ///
+  /// In es, this message translates to:
+  /// **'Volver'**
+  String get back;
 }
 
 class _AppLocalizationsDelegate
