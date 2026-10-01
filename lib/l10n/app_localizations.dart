@@ -301,6 +301,54 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Contraseña cambiada'**
   String get resetDone;
+
+  /// No description provided for @homeStart.
+  ///
+  /// In es, this message translates to:
+  /// **'Comenzar aventura'**
+  String get homeStart;
+
+  /// No description provided for @difficultyEasy.
+  ///
+  /// In es, this message translates to:
+  /// **'Fácil'**
+  String get difficultyEasy;
+
+  /// No description provided for @difficultyMedium.
+  ///
+  /// In es, this message translates to:
+  /// **'Media'**
+  String get difficultyMedium;
+
+  /// No description provided for @difficultyHard.
+  ///
+  /// In es, this message translates to:
+  /// **'Difícil'**
+  String get difficultyHard;
+
+  /// No description provided for @catalogTurns.
+  ///
+  /// In es, this message translates to:
+  /// **'~{count} turnos'**
+  String catalogTurns(int count);
+
+  /// No description provided for @catalogError.
+  ///
+  /// In es, this message translates to:
+  /// **'No pudimos cargar las aventuras. Revisa tu conexión.'**
+  String get catalogError;
+
+  /// No description provided for @catalogEmpty.
+  ///
+  /// In es, this message translates to:
+  /// **'Todavía no hay aventuras disponibles.'**
+  String get catalogEmpty;
+
+  /// No description provided for @retry.
+  ///
+  /// In es, this message translates to:
+  /// **'Reintentar'**
+  String get retry;
 }
 
 class _AppLocalizationsDelegate

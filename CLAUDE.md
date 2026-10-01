@@ -167,7 +167,8 @@ Una sola clave, `localData`: JSON con `schemaVersion` (1), `dailyChoicesUsed`, `
 
 ## Cómo trabajar
 
-- Una tarea por pedido. Antes de dar algo por terminado: `flutter analyze` sin warnings y `flutter test` en verde. Si tocaste una pantalla, pedile a Federico que la mire en el emulador y esperá su feedback antes de seguir.
+- Una tarea por pedido. Antes de dar algo por terminado: `flutter analyze` sin warnings y `flutter test` en verde. Si tocaste una pantalla, probala vos en el emulador (ver abajo) y pasale a Federico un resumen de lo que viste.
+- **Pruebas en el emulador: las hace Claude Code** con `adb` (toques, texto, capturas de pantalla) y con cuentas de prueba inventadas, que al terminar se eliminan con `delete-account`. Federico interviene solo si hace falta un correo real (por ejemplo, recibir el código de cambiar contraseña).
 - Commits chicos y descriptivos en español. Hacé el commit al cerrar cada tarea.
 - Código en inglés (nombres de clases, variables, archivos). Comentarios y mensajes de commit en español. Textos de interfaz en los ARB.
 - Los textos de interfaz en español van en **español neutro (tú)**, igual que la app publicada ("Elige tu aventura", "Hazte Premium"): nada de voseo. Los comentarios y commits siguen en el español de Federico.

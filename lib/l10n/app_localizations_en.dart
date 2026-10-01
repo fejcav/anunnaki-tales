@@ -118,4 +118,31 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get resetDone => 'Password changed';
+
+  @override
+  String get homeStart => 'Start adventure';
+
+  @override
+  String get difficultyEasy => 'Easy';
+
+  @override
+  String get difficultyMedium => 'Medium';
+
+  @override
+  String get difficultyHard => 'Hard';
+
+  @override
+  String catalogTurns(int count) {
+    return '~$count turns';
+  }
+
+  @override
+  String get catalogError =>
+      'We couldn\'t load the adventures. Check your connection.';
+
+  @override
+  String get catalogEmpty => 'No adventures available yet.';
+
+  @override
+  String get retry => 'Retry';
 }

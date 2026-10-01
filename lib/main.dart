@@ -15,6 +15,7 @@ import 'screens/home/home_screen.dart';
 import 'screens/paywall/paywall_screen.dart';
 import 'screens/profile/profile_screen.dart';
 import 'services/auth_service.dart';
+import 'services/story_api.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,7 +26,13 @@ Future<void> main() async {
     publishableKey: AppConfig.supabaseAnonKey,
   );
   runApp(
-    Provider(create: (_) => AuthService(), child: const AnunnakiApp()),
+    MultiProvider(
+      providers: [
+        Provider(create: (_) => AuthService()),
+        Provider(create: (_) => StoryApi()),
+      ],
+      child: const AnunnakiApp(),
+    ),
   );
 }
 

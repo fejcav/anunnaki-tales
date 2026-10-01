@@ -100,6 +100,8 @@ class AppTheme {
         backgroundColor: AppColors.background,
         foregroundColor: AppColors.gold,
         elevation: 0,
+        // Sin esto, la barra se pone gris al desplazar una lista debajo.
+        scrolledUnderElevation: 0,
         centerTitle: true,
         titleTextStyle: AppText.title,
       ),

@@ -118,4 +118,31 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get resetDone => 'Contraseña cambiada';
+
+  @override
+  String get homeStart => 'Comenzar aventura';
+
+  @override
+  String get difficultyEasy => 'Fácil';
+
+  @override
+  String get difficultyMedium => 'Media';
+
+  @override
+  String get difficultyHard => 'Difícil';
+
+  @override
+  String catalogTurns(int count) {
+    return '~$count turnos';
+  }
+
+  @override
+  String get catalogError =>
+      'No pudimos cargar las aventuras. Revisa tu conexión.';
+
+  @override
+  String get catalogEmpty => 'Todavía no hay aventuras disponibles.';
+
+  @override
+  String get retry => 'Reintentar';
 }

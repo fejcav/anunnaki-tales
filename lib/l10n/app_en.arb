@@ -33,5 +33,13 @@
   "resetCodeInvalid": "The code has 6 to 10 digits",
   "resetNewPassword": "New password",
   "resetConfirm": "Change password",
-  "resetDone": "Password changed"
+  "resetDone": "Password changed",
+  "homeStart": "Start adventure",
+  "difficultyEasy": "Easy",
+  "difficultyMedium": "Medium",
+  "difficultyHard": "Hard",
+  "catalogTurns": "~{count} turns",
+  "catalogError": "We couldn't load the adventures. Check your connection.",
+  "catalogEmpty": "No adventures available yet.",
+  "retry": "Retry"
 }

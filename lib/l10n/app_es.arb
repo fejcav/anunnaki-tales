@@ -47,5 +47,20 @@
   "resetCodeInvalid": "El código tiene entre 6 y 10 números",
   "resetNewPassword": "Contraseña nueva",
   "resetConfirm": "Cambiar contraseña",
-  "resetDone": "Contraseña cambiada"
+  "resetDone": "Contraseña cambiada",
+  "homeStart": "Comenzar aventura",
+  "difficultyEasy": "Fácil",
+  "difficultyMedium": "Media",
+  "difficultyHard": "Difícil",
+  "catalogTurns": "~{count} turnos",
+  "@catalogTurns": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "catalogError": "No pudimos cargar las aventuras. Revisa tu conexión.",
+  "catalogEmpty": "Todavía no hay aventuras disponibles.",
+  "retry": "Reintentar"
 }
