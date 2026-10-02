@@ -31,6 +31,11 @@ migrate_working_dir/
 .pub-cache/
 .pub/
 /build/
+# Carpetas de build de Gradle (aparecen al compilar o al analizar Android)
+/android/build/
+/android/app/build/
+/android/.gradle/
+/android/.kotlin/
 /coverage/
 
 # Symbolication related
