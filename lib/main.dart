@@ -16,7 +16,9 @@ import 'screens/home/home_screen.dart';
 import 'screens/paywall/paywall_screen.dart';
 import 'screens/profile/profile_screen.dart';
 import 'services/auth_service.dart';
+import 'services/purchases.dart';
 import 'services/story_api.dart';
+import 'state/app_state.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,12 +28,18 @@ Future<void> main() async {
     url: AppConfig.supabaseUrl,
     publishableKey: AppConfig.supabaseAnonKey,
   );
+  final auth = AuthService();
+  final purchases = PurchasesService();
+  await purchases.configure();
+  final appState = AppState(auth: auth, purchases: purchases)..start();
   runApp(
     MultiProvider(
       providers: [
-        Provider(create: (_) => AuthService()),
+        Provider.value(value: auth),
+        Provider.value(value: purchases),
         Provider(create: (_) => StoryApi()),
         Provider(create: (_) => LocalStore()),
+        ChangeNotifierProvider.value(value: appState),
       ],
       child: const AnunnakiApp(),
     ),

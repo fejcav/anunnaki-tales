@@ -212,7 +212,72 @@ class AppLocalizationsEn extends AppLocalizations {
   String get historicalFactTitle => 'Historical fact';
 
   @override
-  String get paywallComingSoon => 'Premium is coming soon';
+  String get paywallHeadline => 'Unlock the power of the gods';
+
+  @override
+  String get paywallBenefitUnlimited => 'Unlimited choices every day';
+
+  @override
+  String get paywallBenefitNoAds => 'No ads';
+
+  @override
+  String get paywallMonthly => 'Monthly';
+
+  @override
+  String get paywallAnnual => 'Yearly';
+
+  @override
+  String paywallPerMonth(String price) {
+    return '$price / month';
+  }
+
+  @override
+  String paywallPerYear(String price) {
+    return '$price / year';
+  }
+
+  @override
+  String get paywallPopular => 'Most popular';
+
+  @override
+  String get paywallRestore => 'Restore purchase';
+
+  @override
+  String get paywallContinueFree => 'Continue for free';
+
+  @override
+  String get paywallLegal =>
+      'The subscription renews automatically at the end of each period, at the same price, unless you cancel it at least 24 hours before in Google Play or the App Store. Payment is charged to your store account when you confirm the purchase.';
+
+  @override
+  String get paywallLoadError =>
+      'We couldn\'t load the plans. Check your connection.';
+
+  @override
+  String get paywallBuyError =>
+      'We couldn\'t complete the purchase. Try again.';
+
+  @override
+  String get restoreDone => 'Done: Premium active';
+
+  @override
+  String get restoreNotFound => 'We didn\'t find any purchases to restore.';
+
+  @override
+  String get restoreError =>
+      'We couldn\'t restore your purchases. Check your connection.';
+
+  @override
+  String get profilePremium => 'Subscription';
+
+  @override
+  String get profilePremiumActive => 'Premium active';
+
+  @override
+  String get profileGetPremium => 'Go Premium';
+
+  @override
+  String get profileRestore => 'Restore purchases';
 
   @override
   String get profileEmail => 'Email';

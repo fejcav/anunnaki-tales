@@ -458,11 +458,125 @@ abstract class AppLocalizations {
   /// **'Dato histórico'**
   String get historicalFactTitle;
 
-  /// No description provided for @paywallComingSoon.
+  /// No description provided for @paywallHeadline.
   ///
   /// In es, this message translates to:
-  /// **'Premium llega pronto'**
-  String get paywallComingSoon;
+  /// **'Desbloquea el poder de los dioses'**
+  String get paywallHeadline;
+
+  /// No description provided for @paywallBenefitUnlimited.
+  ///
+  /// In es, this message translates to:
+  /// **'Elecciones ilimitadas cada día'**
+  String get paywallBenefitUnlimited;
+
+  /// No description provided for @paywallBenefitNoAds.
+  ///
+  /// In es, this message translates to:
+  /// **'Sin anuncios'**
+  String get paywallBenefitNoAds;
+
+  /// No description provided for @paywallMonthly.
+  ///
+  /// In es, this message translates to:
+  /// **'Mensual'**
+  String get paywallMonthly;
+
+  /// No description provided for @paywallAnnual.
+  ///
+  /// In es, this message translates to:
+  /// **'Anual'**
+  String get paywallAnnual;
+
+  /// No description provided for @paywallPerMonth.
+  ///
+  /// In es, this message translates to:
+  /// **'{price} / mes'**
+  String paywallPerMonth(String price);
+
+  /// No description provided for @paywallPerYear.
+  ///
+  /// In es, this message translates to:
+  /// **'{price} / año'**
+  String paywallPerYear(String price);
+
+  /// No description provided for @paywallPopular.
+  ///
+  /// In es, this message translates to:
+  /// **'Más popular'**
+  String get paywallPopular;
+
+  /// No description provided for @paywallRestore.
+  ///
+  /// In es, this message translates to:
+  /// **'Restaurar compra'**
+  String get paywallRestore;
+
+  /// No description provided for @paywallContinueFree.
+  ///
+  /// In es, this message translates to:
+  /// **'Continuar gratis'**
+  String get paywallContinueFree;
+
+  /// No description provided for @paywallLegal.
+  ///
+  /// In es, this message translates to:
+  /// **'La suscripción se renueva automáticamente al final de cada período, al mismo precio, salvo que la canceles al menos 24 horas antes desde Google Play o App Store. El cobro se hace en tu cuenta de la tienda al confirmar la compra.'**
+  String get paywallLegal;
+
+  /// No description provided for @paywallLoadError.
+  ///
+  /// In es, this message translates to:
+  /// **'No pudimos cargar los planes. Revisa tu conexión.'**
+  String get paywallLoadError;
+
+  /// No description provided for @paywallBuyError.
+  ///
+  /// In es, this message translates to:
+  /// **'No pudimos completar la compra. Inténtalo de nuevo.'**
+  String get paywallBuyError;
+
+  /// No description provided for @restoreDone.
+  ///
+  /// In es, this message translates to:
+  /// **'Listo: Premium activo'**
+  String get restoreDone;
+
+  /// No description provided for @restoreNotFound.
+  ///
+  /// In es, this message translates to:
+  /// **'No encontramos compras para restaurar.'**
+  String get restoreNotFound;
+
+  /// No description provided for @restoreError.
+  ///
+  /// In es, this message translates to:
+  /// **'No pudimos restaurar las compras. Revisa tu conexión.'**
+  String get restoreError;
+
+  /// No description provided for @profilePremium.
+  ///
+  /// In es, this message translates to:
+  /// **'Suscripción'**
+  String get profilePremium;
+
+  /// No description provided for @profilePremiumActive.
+  ///
+  /// In es, this message translates to:
+  /// **'Premium activo'**
+  String get profilePremiumActive;
+
+  /// No description provided for @profileGetPremium.
+  ///
+  /// In es, this message translates to:
+  /// **'Hazte Premium'**
+  String get profileGetPremium;
+
+  /// No description provided for @profileRestore.
+  ///
+  /// In es, this message translates to:
+  /// **'Restaurar compras'**
+  String get profileRestore;
 
   /// No description provided for @profileEmail.
   ///

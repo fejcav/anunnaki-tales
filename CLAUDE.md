@@ -48,7 +48,7 @@ El dueño del proyecto (Federico) tiene nivel básico de Dart/Flutter: puede cor
 - Fuentes: archivos TTF **estáticos** en `assets/fonts/` (Cinzel para títulos, Lora para la narrativa, Inter para la interfaz; las tres con licencia OFL). Se bajan de fonts.google.com ("Download family", carpeta `static/` del ZIP); el repo google/fonts de GitHub hoy solo tiene las variables. **Sin el paquete `google_fonts`** (baja las fuentes de internet al arrancar).
 - Imágenes: PNG en `assets/` con `Image.asset`. Sin `flutter_svg`.
 - Idiomas: `flutter_localizations` + `intl` con ARB (`flutter gen-l10n`), español e inglés. Ningún texto de interfaz hardcodeado en los widgets. El idioma de la narrativa es el mismo que el de la interfaz.
-- Tests: `flutter_test` solo para la lógica en `lib/logic/`.
+- Tests: `flutter_test` solo para la lógica en `lib/logic/` y para `LocalStore` (con `SharedPreferences.setMockInitialValues`).
 - Login con Google (iteración 11) e iOS con Apple (iteración 13): `google_sign_in` y `sign_in_with_apple` + `crypto` (hash del nonce), siempre entregando el token a Supabase con `signInWithIdToken`. Hasta esas iteraciones, solo email y contraseña.
 - Herramientas de desarrollo (no van en la app): `flutter_launcher_icons`, `flutter_native_splash`.
 
@@ -84,7 +84,7 @@ supabase/
   functions/narrative/index.ts        copia de la función desplegada (referencia; se despliega desde el dashboard)
   functions/delete-account/index.ts   copia de la función desplegada
 test/
-  choice_limit_rules_test.dart, ads_rules_test.dart, risk_rules_test.dart
+  choice_limit_rules_test.dart, ads_rules_test.dart, risk_rules_test.dart, local_store_test.dart
 docs/
   plan-migracion.md         iteraciones con los pedidos para Claude Code
   release.md                receta del release de Android y de iOS (se escribe en la iteración 10)
@@ -132,7 +132,7 @@ La app publicada es oscura con dorado; se mantiene para que coincida con las cap
 - **Continuar partida**: la app guarda en el teléfono el `session_id` de la última partida con el título de la aventura, el nombre del héroe y el id del usuario. "Continuar partida" (visible solo si hay una guardada **del usuario que tiene la sesión abierta**) llama a `load` y abre Gameplay con esa escena, sin gastar IA ni elecciones. Si `load` responde 404, se borra lo guardado y se avisa "Esta partida ya no está disponible". Empezar una aventura nueva reemplaza la guardada. Recuperar partidas desde otro teléfono queda para después (hoy no hay forma de listar las partidas del usuario sin tocar el backend).
 - **Fin de la aventura**: la función actual no termina las historias (ver "Abiertos"). Hasta que se agregue, el jugador sale cuando quiere con la flecha atrás y la partida queda para continuar.
 - **Perfil**: correo del usuario, estado Premium ("Premium activo" o botón "Hazte Premium"), "Restaurar compras", "Privacidad de anuncios" (solo si UMP lo exige), "Política de privacidad" (abre el navegador), versión, "Cerrar sesión" y "Eliminar cuenta". Cerrar sesión borra la partida guardada del teléfono (el contador de elecciones del día se mantiene: es del teléfono, no de la cuenta).
-- **Eliminar cuenta** (requisito de Apple y de Google): diálogo "¿Eliminar tu cuenta?" / "Se borrarán para siempre tu perfil, tus partidas y tu progreso. Esta acción no se puede deshacer. Si tienes Premium, cancela la suscripción desde Google Play o App Store: eliminar la cuenta no la cancela." / "Cancelar" / "Eliminar". Al confirmar: `delete-account`; si responde `deleted: true`, se cierra la sesión de RevenueCat y de Supabase, se borran los datos locales y se vuelve al ingreso; si falla: "No pudimos eliminar tu cuenta. Inténtalo de nuevo o escríbenos a fejcavallo@gmail.com".
+- **Eliminar cuenta** (requisito de Apple y de Google): diálogo "¿Eliminar tu cuenta?" / "Se borrarán para siempre tu perfil, tus partidas y tu progreso. Esta acción no se puede deshacer. Si tienes Premium, cancela la suscripción desde Google Play o App Store: eliminar la cuenta no la cancela." / "Cancelar" / "Eliminar". Al confirmar: `delete-account`; si responde `deleted: true`, se cierra la sesión de RevenueCat y de Supabase, se borran los datos locales **salvo el contador de elecciones del día** (es del teléfono: si se borrara, crear y eliminar cuentas reiniciaría el límite) y se vuelve al ingreso; si falla: "No pudimos eliminar tu cuenta. Inténtalo de nuevo o escríbenos a fejcavallo@gmail.com".
 
 ## Cuentas
 
@@ -144,7 +144,7 @@ La app publicada es oscura con dorado; se mantiene para que coincida con las cap
 
 ## Premium (RevenueCat)
 
-- Proyecto RevenueCat `72d974c7`. Clave pública de Android `goog_wuNZVNSPtgKsYMSKIlYjfnXuyQz`; la de iOS (`appl_...`) llega en la iteración 13. Entitlement **`premium`**. Offering `default` con los paquetes `$rc_monthly` (`anunnaki_premium_monthly`, base plan `monthly-plan`, USD 4,99) y `$rc_annual` (`anunnaki_premium_yearly`, base plan `yearly-plan`, USD 29,99).
+- Proyecto RevenueCat `72d974c7`. Clave pública de Android `goog_wuNZVNSPtgKsYMSKIlYjfnXuyQz` (**el 02/10/2026 RevenueCat la rechazó con "Invalid API Key"**: hay que volver a copiarla del dashboard, Project settings → API keys; la app de FlutterFlow usaba una clave de Test Store `test_...`, no esta); la de iOS (`appl_...`) llega en la iteración 13. Entitlement **`premium`**. Offering `default` con los paquetes `$rc_monthly` (`anunnaki_premium_monthly`, base plan `monthly-plan`, USD 4,99) y `$rc_annual` (`anunnaki_premium_yearly`, base plan `yearly-plan`, USD 29,99).
 - `Purchases.logIn(userId de Supabase)` al iniciar sesión y `Purchases.logOut()` al cerrarla o eliminar la cuenta: así el Premium sigue al usuario entre teléfonos.
 - `purchases_flutter` cambió de forma entre versiones (`purchasePackage()` hoy devuelve un `PurchaseResult`; la app de FlutterFlow se rompió con eso). Para no depender de esa forma: después de comprar o restaurar, siempre `Purchases.getCustomerInfo()` y mirar `entitlements.all['premium']?.isActive`.
 - **Paywall** ("Desbloquea el poder de los dioses"): beneficios **solo los que existen**: elecciones ilimitadas y sin anuncios (nada de "personajes exclusivos" ni "acceso anticipado" mientras no estén hechos: las tiendas rechazan promesas falsas); tarjeta mensual y anual (la anual destacada "Más popular"), **precios que devuelve la tienda** (no escritos a mano), "Restaurar compra", "Continuar gratis" y el texto legal de renovación automática. Al comprar o restaurar con éxito se cierra devolviendo `true`.

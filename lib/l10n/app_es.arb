@@ -108,7 +108,40 @@
   },
   "gameplayChoiceError": "El narrador no pudo responder. Revisa tu conexión e inténtalo de nuevo.",
   "historicalFactTitle": "Dato histórico",
-  "paywallComingSoon": "Premium llega pronto",
+  "paywallHeadline": "Desbloquea el poder de los dioses",
+  "paywallBenefitUnlimited": "Elecciones ilimitadas cada día",
+  "paywallBenefitNoAds": "Sin anuncios",
+  "paywallMonthly": "Mensual",
+  "paywallAnnual": "Anual",
+  "paywallPerMonth": "{price} / mes",
+  "@paywallPerMonth": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "paywallPerYear": "{price} / año",
+  "@paywallPerYear": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "paywallPopular": "Más popular",
+  "paywallRestore": "Restaurar compra",
+  "paywallContinueFree": "Continuar gratis",
+  "paywallLegal": "La suscripción se renueva automáticamente al final de cada período, al mismo precio, salvo que la canceles al menos 24 horas antes desde Google Play o App Store. El cobro se hace en tu cuenta de la tienda al confirmar la compra.",
+  "paywallLoadError": "No pudimos cargar los planes. Revisa tu conexión.",
+  "paywallBuyError": "No pudimos completar la compra. Inténtalo de nuevo.",
+  "restoreDone": "Listo: Premium activo",
+  "restoreNotFound": "No encontramos compras para restaurar.",
+  "restoreError": "No pudimos restaurar las compras. Revisa tu conexión.",
+  "profilePremium": "Suscripción",
+  "profilePremiumActive": "Premium activo",
+  "profileGetPremium": "Hazte Premium",
+  "profileRestore": "Restaurar compras",
   "profileEmail": "Correo",
   "profilePrivacyPolicy": "Política de privacidad",
   "profileLinkError": "No pudimos abrir el enlace.",

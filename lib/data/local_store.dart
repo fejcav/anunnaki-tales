@@ -37,9 +37,16 @@ class LocalStore {
     await save(data.withSavedGame(null));
   }
 
-  // Borra todo lo guardado en el teléfono (al eliminar la cuenta).
+  // Borra lo guardado en el teléfono al eliminar la cuenta, salvo el contador
+  // de elecciones del día: es del teléfono, no de la cuenta (si se borrara,
+  // crear y eliminar cuentas reiniciaría el límite).
   Future<void> clearAll() async {
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.remove(_key);
+    final data = await load();
+    await save(
+      LocalData(
+        dailyChoicesUsed: data.dailyChoicesUsed,
+        lastChoiceDay: data.lastChoiceDay,
+      ),
+    );
   }
 }

@@ -35,6 +35,11 @@ class AuthService {
   // Correo del usuario con sesión abierta (null si no hay sesión).
   String? get currentEmail => _auth.currentUser?.email;
 
+  // Avisa el id del usuario cada vez que cambia la sesión (al arrancar, al
+  // ingresar, al crear la cuenta, al cerrar sesión). null = sin sesión.
+  Stream<String?> get userIdChanges =>
+      _auth.onAuthStateChange.map((state) => state.session?.user.id).distinct();
+
   Future<void> signIn(String email, String password) =>
       _run(() => _auth.signInWithPassword(email: email, password: password));
 

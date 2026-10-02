@@ -211,7 +211,72 @@ class AppLocalizationsEs extends AppLocalizations {
   String get historicalFactTitle => 'Dato histórico';
 
   @override
-  String get paywallComingSoon => 'Premium llega pronto';
+  String get paywallHeadline => 'Desbloquea el poder de los dioses';
+
+  @override
+  String get paywallBenefitUnlimited => 'Elecciones ilimitadas cada día';
+
+  @override
+  String get paywallBenefitNoAds => 'Sin anuncios';
+
+  @override
+  String get paywallMonthly => 'Mensual';
+
+  @override
+  String get paywallAnnual => 'Anual';
+
+  @override
+  String paywallPerMonth(String price) {
+    return '$price / mes';
+  }
+
+  @override
+  String paywallPerYear(String price) {
+    return '$price / año';
+  }
+
+  @override
+  String get paywallPopular => 'Más popular';
+
+  @override
+  String get paywallRestore => 'Restaurar compra';
+
+  @override
+  String get paywallContinueFree => 'Continuar gratis';
+
+  @override
+  String get paywallLegal =>
+      'La suscripción se renueva automáticamente al final de cada período, al mismo precio, salvo que la canceles al menos 24 horas antes desde Google Play o App Store. El cobro se hace en tu cuenta de la tienda al confirmar la compra.';
+
+  @override
+  String get paywallLoadError =>
+      'No pudimos cargar los planes. Revisa tu conexión.';
+
+  @override
+  String get paywallBuyError =>
+      'No pudimos completar la compra. Inténtalo de nuevo.';
+
+  @override
+  String get restoreDone => 'Listo: Premium activo';
+
+  @override
+  String get restoreNotFound => 'No encontramos compras para restaurar.';
+
+  @override
+  String get restoreError =>
+      'No pudimos restaurar las compras. Revisa tu conexión.';
+
+  @override
+  String get profilePremium => 'Suscripción';
+
+  @override
+  String get profilePremiumActive => 'Premium activo';
+
+  @override
+  String get profileGetPremium => 'Hazte Premium';
+
+  @override
+  String get profileRestore => 'Restaurar compras';
 
   @override
   String get profileEmail => 'Correo';

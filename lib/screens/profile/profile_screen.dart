@@ -9,9 +9,13 @@ import '../../data/local_store.dart';
 import '../../l10n/app_localizations.dart';
 import '../../main.dart';
 import '../../services/auth_service.dart';
+import '../../services/purchases.dart';
+import '../../state/app_state.dart';
 
-// Perfil: correo, política de privacidad, versión, cerrar sesión y eliminar
-// cuenta. Premium y "Privacidad de anuncios" llegan en las iteraciones 8 y 9.
+// Perfil: correo, Premium ("Premium activo" o "Hazte Premium"), restaurar
+// compras, política de privacidad, versión, cerrar sesión y eliminar cuenta.
+// Al cerrar sesión o eliminar la cuenta, AppState hace el logOut de RevenueCat.
+// "Privacidad de anuncios" llega en la iteración 9.
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
 
@@ -22,6 +26,7 @@ class ProfileScreen extends StatefulWidget {
 class _ProfileScreenState extends State<ProfileScreen> {
   PackageInfo? _info; // versión de la app; null mientras se lee
   bool _busy = false; // cerrando sesión o eliminando la cuenta
+  bool _restoring = false;
 
   @override
   void initState() {
@@ -45,6 +50,29 @@ class _ProfileScreenState extends State<ProfileScreen> {
     if (!opened) {
       messenger.showSnackBar(SnackBar(content: Text(l10n.profileLinkError)));
     }
+  }
+
+  Future<void> _restore() async {
+    final l10n = AppLocalizations.of(context);
+    final purchases = context.read<PurchasesService>();
+    final appState = context.read<AppState>();
+    final messenger = ScaffoldMessenger.of(context);
+    setState(() => _restoring = true);
+    final premium = await purchases.restore();
+    if (!mounted) return;
+    setState(() => _restoring = false);
+    if (premium == true) appState.setPremium(true);
+    messenger.showSnackBar(
+      SnackBar(
+        content: Text(
+          premium == null
+              ? l10n.restoreError
+              : premium
+              ? l10n.restoreDone
+              : l10n.restoreNotFound,
+        ),
+      ),
+    );
   }
 
   // Cierra la sesión y borra la partida guardada (el contador de elecciones
@@ -113,6 +141,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     final l10n = AppLocalizations.of(context);
     final email = context.read<AuthService>().currentEmail ?? '';
     final info = _info;
+    final isPremium = context.watch<AppState>().isPremium;
     return Scaffold(
       appBar: AppBar(title: Text(l10n.profileTitle)),
       body: SafeArea(
@@ -122,7 +151,37 @@ class _ProfileScreenState extends State<ProfileScreen> {
             Text(l10n.profileEmail, style: AppText.bodySecondary),
             const SizedBox(height: 4),
             Text(email, style: AppText.body.copyWith(fontSize: 16)),
-            const SizedBox(height: 32),
+            const SizedBox(height: 24),
+            Text(l10n.profilePremium, style: AppText.bodySecondary),
+            const SizedBox(height: 8),
+            if (isPremium)
+              Row(
+                children: [
+                  const Icon(Icons.auto_awesome, color: AppColors.gold, size: 20),
+                  const SizedBox(width: 8),
+                  Text(
+                    l10n.profilePremiumActive,
+                    style: AppText.button.copyWith(color: AppColors.gold),
+                  ),
+                ],
+              )
+            else
+              ElevatedButton(
+                onPressed: () => Navigator.of(context).pushNamed(Routes.paywall),
+                child: Text(l10n.profileGetPremium),
+              ),
+            const SizedBox(height: 8),
+            TextButton(
+              onPressed: _restoring ? null : _restore,
+              child: _restoring
+                  ? const SizedBox(
+                      width: 20,
+                      height: 20,
+                      child: CircularProgressIndicator(strokeWidth: 2),
+                    )
+                  : Text(l10n.profileRestore),
+            ),
+            const SizedBox(height: 24),
             OutlinedButton(
               onPressed: _openPrivacyPolicy,
               child: Text(l10n.profilePrivacyPolicy),

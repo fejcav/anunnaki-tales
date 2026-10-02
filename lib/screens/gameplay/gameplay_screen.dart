@@ -11,6 +11,7 @@ import '../../models/choice.dart';
 import '../../models/local_data.dart';
 import '../../models/story_scene.dart';
 import '../../services/story_api.dart';
+import '../../state/app_state.dart';
 import '../../widgets/choice_button.dart';
 import '../../widgets/historical_fact_card.dart';
 import '../../widgets/narrator_loading.dart';
@@ -27,7 +28,8 @@ class GameplayArgs {
 // Gameplay: turno, texto de la escena, dato histórico (si viene) y las tres
 // opciones. Elegir una pide la escena siguiente; cada respuesta buena gasta
 // una elección gratis del día. Sin elecciones, tocar una opción abre el
-// Paywall. La flecha atrás vuelve a Inicio y la partida queda guardada.
+// Paywall. Premium no tiene límite ni ve el contador. La flecha atrás vuelve
+// a Inicio y la partida queda guardada.
 class GameplayScreen extends StatefulWidget {
   const GameplayScreen({super.key});
 
@@ -36,9 +38,6 @@ class GameplayScreen extends StatefulWidget {
 }
 
 class _GameplayScreenState extends State<GameplayScreen> {
-  // Premium llega en la iteración 8: hasta entonces todos son gratis.
-  static const _isPremium = false;
-
   final _scroll = ScrollController();
   GameplayArgs? _args; // llega como argumento de la ruta
   late StoryScene _scene;
@@ -76,6 +75,7 @@ class _GameplayScreenState extends State<GameplayScreen> {
     final store = context.read<LocalStore>();
     final messenger = ScaffoldMessenger.of(context);
     final navigator = Navigator.of(context);
+    final isPremium = context.read<AppState>().isPremium;
     // Un aviso de error anterior (queda fijo porque tiene "Reintentar") se
     // cierra al volver a elegir.
     messenger.hideCurrentSnackBar();
@@ -84,7 +84,7 @@ class _GameplayScreenState extends State<GameplayScreen> {
     final local = await store.load();
     final now = DateTime.now();
     if (!canChoose(
-      isPremium: _isPremium,
+      isPremium: isPremium,
       used: local.dailyChoicesUsed,
       lastDay: local.lastChoiceDay,
       now: now,
@@ -98,14 +98,18 @@ class _GameplayScreenState extends State<GameplayScreen> {
     setState(() => _thinking = true);
     try {
       final next = await api.continueAdventure(sessionId: _sessionId, choiceId: choice.id);
-      // La IA respondió bien: recién ahora se descuenta la elección.
-      final counted = recordChoice(
-        used: local.dailyChoicesUsed,
-        lastDay: local.lastChoiceDay,
-        now: DateTime.now(),
-      );
-      final updated = local.withDailyChoices(used: counted.used, day: counted.day);
-      await store.save(updated);
+      // La IA respondió bien: recién ahora se descuenta la elección (a
+      // Premium no se le descuenta nada).
+      var updated = local;
+      if (!isPremium) {
+        final counted = recordChoice(
+          used: local.dailyChoicesUsed,
+          lastDay: local.lastChoiceDay,
+          now: DateTime.now(),
+        );
+        updated = local.withDailyChoices(used: counted.used, day: counted.day);
+        await store.save(updated);
+      }
       if (!mounted) return;
       setState(() {
         _scene = next;
@@ -130,6 +134,7 @@ class _GameplayScreenState extends State<GameplayScreen> {
     final l10n = AppLocalizations.of(context);
     final fact = _scene.historicalFact;
     final local = _local;
+    final isPremium = context.watch<AppState>().isPremium;
     return Scaffold(
       appBar: AppBar(title: Text(_args!.adventureTitle)),
       body: StarsBackground(
@@ -169,7 +174,7 @@ class _GameplayScreenState extends State<GameplayScreen> {
                     ),
                     const SizedBox(height: 12),
                   ],
-                if (!_isPremium && local != null) ...[
+                if (!isPremium && local != null) ...[
                   const SizedBox(height: 8),
                   Text(
                     l10n.gameplayFreeChoices(
