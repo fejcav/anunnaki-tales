@@ -9,7 +9,7 @@ class AppConfig {
 
   // Clave pública de RevenueCat para Android (proyecto 72d974c7). La de iOS
   // (appl_...) llega en la iteración 13.
-  static const revenueCatAndroidKey = 'goog_wuNZVNSPtgKsYMSKIlYjfnXuyQz';
+  static const revenueCatAndroidKey = 'goog_wuNZVNSPtgKsYMSKilYjfnXuyQz';
 
   // Política de privacidad (GitHub Pages, repo fejcav/anunnaki-tales-legal).
   static const privacyPolicyUrl =
