@@ -1,0 +1,182 @@
+[
+  {
+    "id": "gilgamesh_enkidu",
+    "sortOrder": 1,
+    "difficulty": "easy",
+    "isFree": true,
+    "title": {
+      "es": "El Hombre Salvaje de Uruk",
+      "en": "The Wild Man of Uruk"
+    },
+    "subtitle": {
+      "es": "Un rey encuentra a su igual",
+      "en": "A king finds his equal"
+    },
+    "description": {
+      "es": "Juega como Gilgamesh, el rey tirano de Uruk, cuando los dioses envían a Enkidu — un hombre salvaje criado por bestias — para desafiar tu reinado. ¿Lucharás, harás amistad o temerás a esta criatura de la estepa?",
+      "en": "Play as Gilgamesh, the tyrant king of Uruk, when the gods send Enkidu — a wild man raised by beasts — to challenge your reign. Will you fight, befriend, or fear this creature of the steppe?"
+    }
+  },
+  {
+    "id": "descent_inanna",
+    "sortOrder": 2,
+    "difficulty": "medium",
+    "isFree": true,
+    "title": {
+      "es": "Descenso a la Oscuridad",
+      "en": "Descent into Darkness"
+    },
+    "subtitle": {
+      "es": "Siete puertas. Siete sacrificios.",
+      "en": "Seven gates. Seven sacrifices."
+    },
+    "description": {
+      "es": "Eres Inanna, Reina del Cielo, y desciendes al inframundo para enfrentar a tu hermana Ereshkigal. En cada una de las siete puertas debes entregar algo precioso. ¿Llegarás al trono de los muertos... y regresarás?",
+      "en": "You are Inanna, Queen of Heaven, descending to the underworld to confront your sister Ereshkigal. At each of the seven gates, you must surrender something precious. Will you reach the throne of the dead... and return?"
+    }
+  },
+  {
+    "id": "marduk_tiamat",
+    "sortOrder": 3,
+    "difficulty": "hard",
+    "isFree": false,
+    "title": {
+      "es": "El Nacimiento del Mundo",
+      "en": "The Birth of the World"
+    },
+    "subtitle": {
+      "es": "Mata al caos. Créalo todo.",
+      "en": "Slay chaos. Create everything."
+    },
+    "description": {
+      "es": "El dragón primordial Tiamat levanta un ejército de monstruos para destruir a los dioses jóvenes. Tú eres Marduk, el campeón elegido. Derrota a Tiamat y, de su cuerpo, crea los cielos y la tierra.",
+      "en": "The primordial dragon Tiamat raises an army of monsters to destroy the younger gods. You are Marduk, chosen champion. Defeat Tiamat and from her body, create the heavens and the earth."
+    }
+  },
+  {
+    "id": "atrahasis_flood",
+    "sortOrder": 4,
+    "difficulty": "medium",
+    "isFree": false,
+    "title": {
+      "es": "Antes del Diluvio",
+      "en": "Before the Flood"
+    },
+    "subtitle": {
+      "es": "Los dioses quieren borrar a la humanidad.",
+      "en": "The gods want humanity erased."
+    },
+    "description": {
+      "es": "Los dioses están cansados del ruido humano y votan destruir a la humanidad con un gran diluvio. Enki te advierte en secreto a ti, Atrahasis, el más sabio de los mortales. Construye un arca, salva a quienes puedas y enfrenta la ira de Enlil.",
+      "en": "The gods are tired of human noise and vote to destroy mankind with a great flood. Enki secretly warns you — Atrahasis, the wisest of mortals. Build an ark, save who you can, and face the wrath of Enlil."
+    }
+  },
+  {
+    "id": "etana_eagle",
+    "sortOrder": 5,
+    "difficulty": "medium",
+    "isFree": false,
+    "title": {
+      "es": "El Rey Que Voló",
+      "en": "The King Who Flew"
+    },
+    "subtitle": {
+      "es": "Monta un águila hasta el cielo.",
+      "en": "Ride an eagle to heaven."
+    },
+    "description": {
+      "es": "Eres Etana, un rey sin heredero. La única cura es la Planta del Nacimiento, que crece en el cielo mismo. Un águila te debe un favor. Juntos intentarán lo que ningún mortal ha sobrevivido: ascender al reino de los dioses.",
+      "en": "You are Etana, a king without an heir. The only cure is the Plant of Birth, which grows in heaven itself. An eagle owes you a debt. Together, you will attempt what no mortal has survived — ascending to the realm of the gods."
+    }
+  },
+  {
+    "id": "nergal_ereshkigal",
+    "sortOrder": 6,
+    "difficulty": "medium",
+    "isFree": false,
+    "title": {
+      "es": "Amor en la Tierra de los Muertos",
+      "en": "Love in the Land of the Dead"
+    },
+    "subtitle": {
+      "es": "Un amor prohibido entre dos mundos.",
+      "en": "A forbidden love between two worlds."
+    },
+    "description": {
+      "es": "Eres Nergal, feroz dios de la guerra y la peste. Tras insultar al enviado de Ereshkigal, los dioses te ordenan descender al inframundo y enfrentar su ira. Pero cuando te paras ante la Reina de los Muertos, algo inesperado sucede: la pasión se enciende entre la muerte y la destrucción. ¿Podrá el amor conquistar las leyes del universo?",
+      "en": "You are Nergal, fierce god of war and plague. After insulting Ereshkigal's envoy, the gods order you to descend to the underworld and face her wrath. But when you stand before the Queen of the Dead, something unexpected happens — passion ignites between death and destruction. Will love conquer the laws of the universe?"
+    }
+  },
+  {
+    "id": "adapa_immortality",
+    "sortOrder": 7,
+    "difficulty": "hard",
+    "isFree": false,
+    "title": {
+      "es": "El Mortal Que Rechazó la Eternidad",
+      "en": "The Mortal Who Refused Eternity"
+    },
+    "subtitle": {
+      "es": "Sabiduría o inmortalidad. Elige una.",
+      "en": "Wisdom or immortality. Choose one."
+    },
+    "description": {
+      "es": "Eres Adapa, el mortal más sabio jamás creado por Enki. Cuando accidentalmente quiebras las alas del Viento Sur, el dios supremo Anu te convoca al cielo. Enki te advierte: no aceptes nada de los dioses. Pero ¿qué pasa si Anu te ofrece el Pan y el Agua de la Vida Eterna? ¿Confiarás en la advertencia de tu creador... o tomarás la inmortalidad?",
+      "en": "You are Adapa, the wisest mortal ever created by Enki. When you accidentally break the wings of the South Wind, the supreme god Anu summons you to heaven. Enki warns you: accept nothing from the gods. But what if Anu offers you the Bread and Water of Eternal Life? Will you trust your creator's warning... or seize immortality?"
+    }
+  },
+  {
+    "id": "anzu_tablets",
+    "sortOrder": 8,
+    "difficulty": "hard",
+    "isFree": false,
+    "title": {
+      "es": "El Destino Robado del Mundo",
+      "en": "The Stolen Fate of the World"
+    },
+    "subtitle": {
+      "es": "Un ladrón robó el poder de los dioses.",
+      "en": "A thief stole the power of the gods."
+    },
+    "description": {
+      "es": "El pájaro-demonio Anzu ha robado las Tablillas del Destino del trono de Enlil. Sin ellas, la realidad misma comienza a deshacerse. Los dioses están paralizados de miedo. Debes rastrear a Anzu hasta su guarida y recuperar las Tablillas antes de que el mundo caiga en el caos primordial.",
+      "en": "The demon-bird Anzu has stolen the Tablets of Destiny from Enlil's throne. Without them, reality itself begins to unravel. The gods are paralyzed with fear. You must track Anzu to his mountain lair and reclaim the Tablets before the world descends into primordial chaos."
+    }
+  },
+  {
+    "id": "lugalbanda_anzu",
+    "sortOrder": 9,
+    "difficulty": "easy",
+    "isFree": true,
+    "title": {
+      "es": "El Rey Pastor",
+      "en": "The Shepherd King"
+    },
+    "subtitle": {
+      "es": "Perdido, enfermo y solo en montañas enemigas.",
+      "en": "Lost, sick, and alone in enemy mountains."
+    },
+    "description": {
+      "es": "Eres Lugalbanda, el príncipe más joven y débil de Uruk, y marchas con el ejército para conquistar Aratta. Cuando la enfermedad te golpea en los Montes Zagros, tus hermanos te dejan en una cueva para morir. Solo y febril, debes sobrevivir, encontrar el nido del legendario pájaro Anzu y ganarte un don sobrenatural que cambiará el destino de Uruk para siempre.",
+      "en": "You are Lugalbanda, the youngest and weakest prince of Uruk, marching with the army to conquer Aratta. When illness strikes you in the Zagros Mountains, your brothers leave you in a cave to die. Alone and feverish, you must survive, find the nest of the legendary Anzu bird, and earn a supernatural gift that will change the fate of Uruk forever."
+    }
+  },
+  {
+    "id": "sargon_akkad",
+    "sortOrder": 10,
+    "difficulty": "medium",
+    "isFree": false,
+    "title": {
+      "es": "El Conquistador Que Surgió de la Nada",
+      "en": "The Conqueror From Nothing"
+    },
+    "subtitle": {
+      "es": "De bebé abandonado a gobernante del mundo.",
+      "en": "From abandoned baby to ruler of the world."
+    },
+    "description": {
+      "es": "Eres Sargon, nacido en secreto y arrojado al Éufrates en una cesta de juncos. Rescatado por un jardinero, asciendes desde la nada hasta convertirte en copero del rey de Kish. Pero la diosa Ishtar te favorece para cosas mayores. Derroca el viejo orden, une Sumer y Akkad, y construye el primer imperio de la historia humana.",
+      "en": "You are Sargon, born in secret and set adrift on the Euphrates in a basket of reeds. Rescued by a gardener, you rise from nothing to become cup-bearer to the king of Kish. But the goddess Ishtar favors you for greater things. Overthrow the old order, unite Sumer and Akkad, and build the first empire in human history."
+    }
+  }
+]
