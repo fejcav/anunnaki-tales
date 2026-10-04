@@ -1,213 +1,111 @@
-# Anunnaki Tales — plan de migración a Flutter puro
+# Anunnaki Tales — plan de migración, versión 2
 
-Versión 1 · 30 de septiembre de 2026. Acompaña a `CLAUDE.md` (las reglas están allá; acá está el orden de trabajo).
-
-## Qué cambia y qué no
-
-- **Sigue igual (no se toca):** Supabase entero (base, login, `narrative`, `delete-account`), RevenueCat (productos, entitlement `premium`), IDs de AdMob, ficha y prueba cerrada de Play Console, package `com.mycompany.anunnakitales`, clave de subida `upload-keystore-new.jks`, páginas legales, cuenta de Apple Developer (la misma de Ovun).
-- **Se rehace:** la app, como proyecto Flutter normal en `C:\dev\anunnaki-tales`, trabajado con Claude Code igual que Ovun.
-- **Costo:** cero nuevo. Flutter y Claude Code en tu PC; Android se compila en tu PC; iOS en Codemagic con los 500 minutos gratis por mes de macOS (compartidos con Ovun). FlutterFlow deja de usarse.
-- **El primer build del proyecto nuevo es el 12** (versión 1.1.0+12) y reemplaza al 11 en la prueba cerrada.
+Versión 2 · 2 de octubre de 2026. Reemplaza a la versión 1 desde la iteración 9 (la decisión está en `docs/cambio-de-rumbo.md`). Las iteraciones 0 a 7 ya están hechas; la 8 (Premium con RevenueCat) queda reemplazada por la 11.
 
 ## Cómo usar este plan
 
-Una iteración por vez. Para cada una: si tiene "Antes (vos)", hacé esos pasos; después pegá el pedido en Claude Code dentro de `C:\dev\anunnaki-tales`; al final probá lo de "Probá" en el emulador y recién ahí pasá a la siguiente. Si algo no anda, se lo contás a Claude Code en el mismo chat antes de seguir.
+Una iteración por vez. Para cada una: si tiene "Antes", hacé esos pasos; después abrí Claude Code (PowerShell → `cd C:\dev\anunnaki-tales` → `claude` → `/clear`) y pegá el pedido. Al final, Claude Code prueba en el emulador y te pasa un resumen; si algo no anda, se lo contás en el mismo chat antes de seguir.
+
+Todos los pedidos incluyen la línea de **Entorno**, que remite a las reglas de `CLAUDE.md`: emulador propio `Anunnaki_Pixel_8` en el puerto 5560 (arranque en frío con `-no-snapshot`, a propósito, para ahorrar disco), nunca `Pixel_8`; no compilar ni abrir el emulador mientras Ovun trabaja; al menos 15 GB libres; al terminar, cerrar emulador, Gradle, `flutter run` y logcat.
+
+## Contenido (en paralelo, Cowork + Federico)
+
+Cada historia se escribe en el proyecto de claude.ai, una por vez: Cowork la escribe en español con su demo jugable, Federico la lee y aprueba, Cowork hace el inglés y la entrega validada. Para sumarla a la app alcanza con este pedido corto:
+
+```
+Contenido — agregar la historia <id>. Entorno: reglas de CLAUDE.md. Copiá el archivo <id>.json que te paso a assets/data/stories/, corré flutter test (la validación tiene que pasar) y abrí la aventura en el emulador hasta un final. No cambies el texto: si la validación falla, decime qué regla y en qué escena. Commit "Historia: <título>" y push.
+```
+
+Orden sugerido: las 3 gratis primero (Gilgamesh y Enkidu ✍️ piloto listo en español, Inanna, Lugalbanda), después las 7 de la compra.
 
 ---
 
-## Iteración 0 — Preparación (vos, ~30 min, sin código)
+## Iteración 9 — Historias locales
 
-1. En una terminal, dentro de `C:\dev`:
-   `flutter create --org com.mycompany --project-name anunnakitales --platforms android,ios anunnaki-tales`
-2. Copiá a `C:\dev\anunnaki-tales` lo que viene en el paquete de esta sesión, respetando las carpetas:
-   - `CLAUDE.md` (en la raíz)
-   - `docs\plan-migracion.md` (este archivo)
-   - `supabase\functions\narrative\index.ts` y `supabase\functions\delete-account\index.ts`
-   - `assets\icon\icon.png` (el ícono de la tienda, 1024×1024)
-3. Buscá `upload-keystore-new.jks` (está en la carpeta del proyecto "Anunnaki Tales" de tu PC) y copialo a `C:\dev\keys\anunnaki-upload.jks`. Guardá una copia fuera de la PC (Drive, pendrive). La contraseña **no** va en ningún archivo del repo.
-4. Fuentes: en fonts.google.com bajá las familias **Cinzel**, **Lora** e **Inter** ("Download family"). De cada ZIP copiá a `C:\dev\anunnaki-tales\assets\fonts\` los archivos de la carpeta `static` (Cinzel-Regular/SemiBold/Bold, Lora-Regular/Italic/SemiBold, Inter-Regular/Medium/SemiBold/Bold; en Inter, los que no dicen "18pt" o "24pt" en el nombre, o los de "18pt" si solo hay esos) y el `OFL.txt` de cada una con otro nombre (`OFL-Cinzel.txt`, etc.).
-5. Corré `flutter doctor -v` y confirmá que el Android SDK que usa es `C:\Users\fedec\AppData\Local\Android\Sdk` (el de Ovun). El emulador de la app vieja (`TestDevice` en `C:\android-sdk`) ya no se usa.
-6. Arrancá el emulador Pixel 8 (`flutter emulators --launch Pixel_8`) para tenerlo listo.
+**Antes (Federico o Cowork):** que estén en el repo `docs/cambio-de-rumbo.md`, `docs/formato-historias.md`, `docs/plan-migracion-v2.md` y `assets/data/stories/gilgamesh_enkidu.json` (Cowork los deja en la carpeta si está conectada; si no, se bajan del chat).
+
+```
+Iteración 9 — Historias locales. Entorno: reglas de CLAUDE.md (Anunnaki_Pixel_8 en emulator-5560 con -no-snapshot; nada si Ovun está compilando; mínimo 15 GB libres; al terminar, cerrar emulador, Gradle, flutter run y logcat).
+Leé primero docs/cambio-de-rumbo.md y docs/formato-historias.md: la app deja la IA en vivo y pasa a historias escritas de antemano, sin servidor ni cuenta y con compra única. En esta iteración el juego pasa a funcionar con historias locales; la cuenta y RevenueCat se quitan en la 10.
+1. Documentos: reemplazá docs/plan-migracion.md por el contenido de docs/plan-migracion-v2.md (y borrá el -v2) y actualizá CLAUDE.md con la sección "Reglas nuevas para CLAUDE.md" de docs/cambio-de-rumbo.md, conservando lo que esa sección no toca (Entorno, Aspecto, Cómo trabajar, emulador y Ovun).
+2. Catálogo local: generá una sola vez assets/data/catalog.json leyendo la tabla adventures de Supabase con la anon key (lectura pública, GET a /rest/v1/adventures?is_active=eq.true&order=sort_order): id, sortOrder, difficulty, isFree, title/subtitle/description {es, en}. Desde ahora la app no lee el catálogo de Supabase.
+3. Modelos (LocalizedText con fallback al español si falta el inglés, Adventure, Story, StoryScene, StoryChoice, StoryEnding), services/story_repository.dart (ÚNICA clase que lee assets/data: catálogo e historias; una aventura sin archivo devuelve null) y lib/logic/story_rules.dart con funciones puras: validar una historia con todas las reglas de docs/formato-historias.md (modo normal y estricto), escena siguiente, si es final, finales de una historia y camino más corto hasta el final del mito.
+4. Tests: test/story_validation_test.dart valida todos los archivos de assets/data/stories/ (modo normal; el estricto queda listo para el release) y test/story_rules_test.dart cubre las funciones, incluido un caso que falla primero (historia con un ciclo, una opción que apunta a una escena inexistente, una escena inalcanzable, voseo).
+5. Pantallas: Catálogo desde el catálogo local, con "~N escenas" calculado de la historia, "Finales: N de M" si hay descubiertos y "Próximamente" (no se abre) si no hay historia; por ahora todas las aventuras con historia están abiertas. "Elige tu héroe" pasa a "Tu héroe" (screens/hero_intro): nombre y descripción del protagonista, descripción de la aventura y "Empezar". Gameplay: "Capítulo N · Título", "Turno N", párrafos separados por línea en blanco, "Dato histórico" si hay, opciones con ChoiceButton (sin punto ni etiqueta si la opción no tiene risk). Pantalla de Final (screens/ending) como dice CLAUDE.md, con "Volver a la última decisión" solo en finales trágicos.
+6. Guardado: localData schemaVersion 2 (savedGame con adventureId, sceneId y path; endingsFound por aventura). Al leer la versión 1 se descarta la partida vieja y el contador de elecciones. "Continuar partida" en Inicio solo si la historia y la escena guardadas existen. Al llegar a un final se guarda como descubierto y se borra la partida.
+7. Sacá el límite diario (choice_limit_rules.dart, sus tests, el contador "Elecciones gratis hoy") y story_api.dart (ya no se llama a la función narrative). La cuenta y RevenueCat siguen hasta la iteración 10: no los toques todavía.
+Probá en el emulador (con una cuenta de prueba, que después eliminás): jugar el piloto hasta el final del mito y hasta un final trágico (probando "Volver a la última decisión"); cerrar la app a mitad de camino y "Continuar partida"; "Finales: N de M" en el catálogo; las otras aventuras en "Próximamente". Revisá los textos en español.
+Al terminar: flutter analyze sin warnings, tests en verde, commits chicos y push. Resumime qué archivos creaste o borraste y qué hace cada uno.
+```
+
+**Probá vos:** jugá el piloto en el emulador como lo vas a ver en el teléfono.
 
 ---
 
-## Iteración 1 — Base del proyecto
-
-**Pedido para Claude Code:**
+## Iteración 10 — Sin cuenta ni servidor
 
 ```
-Iteración 1 — Base del proyecto. Leé CLAUDE.md completo antes de empezar.
-1. Git: el remoto https://github.com/fejcav/anunnaki-tales tiene en main solo un commit con un README, y flutter create hizo otro README. Hacé: git init -b main, commit inicial de todo, git remote add origin <url>, git fetch origin, git merge origin/main --allow-unrelated-histories -X ours (queda nuestro README) y git push -u origin main. Nada de force push. La rama flutterflow es el código viejo: no la toques, pero podés leerla con git show origin/flutterflow:lib/backend/supabase/supabase.dart para copiar la URL y la anon key de Supabase.
-2. pubspec: agregá solo provider, supabase_flutter, shared_preferences, flutter_localizations, intl, flutter_animate, url_launcher, package_info_plus. version: 1.1.0+12.
-3. Fuentes: ya están en assets/fonts/ (TTF estáticos de Cinzel, Lora e Inter con sus licencias). Declaralas en el pubspec con sus pesos. Si falta alguna, frená y decime cuál.
-4. lib/config.dart con la URL y anon key de Supabase. lib/app_theme.dart con los colores y estilos de "Aspecto". l10n en español e inglés (ARB) con los textos que uses.
-5. main.dart: Supabase.initialize, solo vertical, tema oscuro, rutas con pantallas vacías para auth, home, catalog, hero_select, gameplay, paywall y profile (cada una con su título y flecha atrás). Widget StarsBackground.
-6. AndroidManifest: android:label="Anunnaki Tales", screenOrientation portrait, permiso INTERNET.
-Al terminar: flutter analyze sin warnings, commit "Base del proyecto: tema, fuentes, l10n y rutas" y push.
+Iteración 10 — Sin cuenta ni servidor. Entorno: reglas de CLAUDE.md.
+Según docs/cambio-de-rumbo.md, la app ya no tiene cuenta ni usa Supabase ni RevenueCat:
+1. Sacá la pantalla de ingreso, auth_service.dart, la eliminación de cuenta, purchases.dart (RevenueCat) y los paquetes supabase_flutter y purchases_flutter; la URL, la anon key y las claves de RevenueCat salen de config.dart. Borrá la carpeta supabase/ del repo (las funciones quedan en el historial de git y en el respaldo del proyecto de claude.ai).
+2. La app abre directo en Inicio. Perfil pasa a Ajustes (screens/settings): "Política de privacidad", "Borrar progreso" (confirmación dentro de la pantalla, sin diálogos del sistema: borra partida guardada y finales descubiertos) y la versión. El Paywall de la iteración 8 se quita; vuelve en la 11.
+3. Revisá que no quede ninguna referencia a Supabase, RevenueCat, user_id, sesión ni eliminar cuenta (código, ARB, CLAUDE.md, README) y que el AndroidManifest no pida permisos que ya no se usan.
+Probá en el emulador: instalar limpio (desinstalá la versión anterior), abrir, jugar, "Borrar progreso". Al terminar: analyze, tests, commit y push. Resumen corto.
 ```
-
-**Probá:** `flutter run -d emulator-5554` abre una pantalla oscura con título dorado en Cinzel; el teléfono en horizontal no rota.
 
 ---
 
-## Iteración 2 — Ingreso con email
+## Iteración 11 — Compra única
 
-**Antes:** ~~Supabase → Authentication → Emails → plantilla "Reset Password": agregar el código con `{{ .Token }}`.~~ Hecho el 30/09 (asunto y texto en español con el código grande, el enlace de siempre y el código en inglés al pie). El código tiene 6 dígitos ("Email OTP length" = 6 en Supabase).
+**Antes (Federico, o Cowork con tu Chrome y tu OK):** en Play Console → Anunnaki Tales → Monetizar → Productos → Productos únicos (in-app): crear `anunnaki_completo`, nombre "Anunnaki Tales completo", descripción "Desbloquea todos los mitos y quita los anuncios. Pago único.", precio (sugerido USD 3,99) y activarlo. Para probar, `fejcavallo@gmail.com` ya es license tester y está logueado en Play Store en el emulador.
 
 ```
-Iteración 2 — Ingreso con email (ver "Cuentas" en CLAUDE.md). Creá services/auth_service.dart (única clase que toca Supabase Auth) y la pantalla de ingreso con pestañas "Ingresar" y "Crear cuenta": correo, contraseña (Supabase pide mínimo 6 caracteres), repetir contraseña al crear. "¿Olvidaste tu contraseña?" con el código de 6 dígitos que llega por mail (el campo acepta de 6 a 10): resetPasswordForEmail, pantalla para el código y la contraseña nueva, verifyOTP con tipo recovery y después updateUser. Mensajes de error simples y traducidos. Con sesión guardada la app abre en Inicio; sin sesión, en ingreso. Commit al terminar.
+Iteración 11 — Compra única. Entorno: reglas de CLAUDE.md.
+Agregá in_app_purchase e in_app_purchase_android. Tomá como referencia, SOLO DE LECTURA, cómo lo resolvió Ovun en C:\dev\ovun\lib\services\purchases.dart y lib\logic\purchase_rules.dart (con sus tests); no modifiques nada de Ovun.
+1. services/purchases.dart (ÚNICA clase que toca in_app_purchase): disponibilidad, precio de anunnaki_completo, comprar, escuchar purchaseStream, completar y reconocer compras, restaurar. lib/logic/purchase_rules.dart con funciones puras y tests: qué hacer con cada evento (comprado, restaurado, pendiente, error, cancelado) y qué aventuras están abiertas (isFree o compra hecha). El estado se guarda en localData.purchased para arrancar sin esperar a la tienda.
+2. Catálogo: las aventuras no gratis y con historia muestran candado si no hay compra; tocarlas abre el Paywall ("Desbloquea todos los mitos"): beneficios reales (cuántas aventuras ya escritas desbloquea, sin anuncios, pago único sin suscripción), precio de la tienda, "Comprar", "Restaurar compra", "Ahora no". Al comprar o restaurar, se cierra y se abre la aventura.
+3. Ajustes: "Desbloquear todo" o "Todo desbloqueado" y "Restaurar compra".
+Probá en el emulador con fejcavallo@gmail.com: comprar con la tarjeta de prueba, ver todo abierto, borrar los datos de la app (adb shell pm clear) y "Restaurar compra". Al terminar, reembolsá o cancelá la compra de prueba desde Play Console si hace falta repetirla. Analyze, tests, commit y push.
 ```
-
-**Probá:** crear una cuenta nueva con un correo tuyo, cerrar la app, volver a abrirla (tiene que entrar directo), el mensaje de error con una contraseña mal puesta, y el cambio de contraseña con el código que llega por mail (el correo de Supabase manda como máximo 2 por hora). Tu cuenta vieja de la app de FlutterFlow también tiene que funcionar (es el mismo Supabase).
 
 ---
 
-## Iteración 3 — Inicio y Catálogo
+## Iteración 12 — Anuncios con consentimiento
+
+El mensaje RGPD "Anunnaki Tales consentimiento UE" ya está publicado en AdMob.
 
 ```
-Iteración 3 — Inicio y Catálogo (ver "Reglas de juego"). Inicio: título, "Mitos Interactivos", "Comenzar aventura" y el ícono de perfil (lleva a la pantalla vacía de Perfil); "Continuar partida" todavía no. services/story_api.dart (única clase que lee tablas de Supabase y llama a narrative) con fetchAdventures(). Catálogo con AdventureCard: título y subtítulo en el idioma activo, dificultad con color y "~N turnos". Estados de carga, error con "Reintentar" y vacío. El color y la etiqueta de dificultad van en lib/logic/risk_rules.dart con test. Commit al terminar.
+Iteración 12 — AdMob con consentimiento. Entorno: reglas de CLAUDE.md.
+Agregá google_mobile_ads (podés mirar, SOLO DE LECTURA, C:\dev\ovun\lib\services\ads.dart y ads_rules.dart). meta-data del ID de app de Android en el manifest y permiso com.google.android.gms.permission.AD_ID. services/ads.dart (ÚNICA clase que toca el SDK): consentimiento UMP al abrir el Catálogo por primera vez, initialize una sola vez cuando canRequestAds, banner al pie de Catálogo y Tu héroe, intersticial al tocar "Empezar" (precargado al entrar a Tu héroe; si no está listo, se sigue sin anuncio). Nada de eso con la compra hecha. Unidades de prueba de Google en debug. lib/logic/ads_rules.dart con tests. En Ajustes, "Privacidad de anuncios" solo si privacyOptionsRequirementStatus es required.
+Probá: formulario de consentimiento (geografía EEE forzada en debug), banner y intersticial de prueba; con la compra hecha, ninguno. Analyze, tests, commit y push.
 ```
-
-**Probá:** el Catálogo muestra los 10 mitos en orden; con el emulador en modo avión aparece el error con "Reintentar".
 
 ---
 
-## Iteración 4 — Elegir héroe y empezar la aventura
+## Iteración 13 — Release de Android (Build 12)
+
+**Antes (Federico):** `android\key.properties` con `storeFile=C:\\dev\\keys\\anunnaki-upload.jks`, `keyAlias=upload` y la contraseña (si no existe todavía). **Cowork:** política de privacidad nueva (sin cuenta, sin IA en vivo, sin servidor: solo AdMob y la compra de la tienda) y los cambios de "Seguridad de los datos" en Play Console, para publicarlos con tu OK.
 
 ```
-Iteración 4 — Elegir héroe y empezar (ver "Reglas de juego" y "Backend"). fetchHeroes(adventureId) con select('*, characters(*)'), solo los is_playable; si no queda ninguno, una tarjeta "Viajero". Grilla de 2 columnas con HeroCard: avatar con la inicial, nombre y descripción corta (2 líneas), sin barras (characters no tiene stats). Tocar marca, "Empezar" llama a narrative con action start y user_id del usuario logueado (sin user_id la partida no se guarda). Mientras espera: "El narrador está preparando tu aventura…". Si la respuesta trae session_id: guardá savedGame (con el userId) en data/local_store.dart y abrí Gameplay con la escena (por ahora Gameplay solo muestra el texto). Si no trae session_id o falla: aviso con Reintentar y no se guarda nada. Commit al terminar.
+Iteración 13 — Release de Android (ver Release en CLAUDE.md). Entorno: reglas de CLAUDE.md.
+Firma de release leyendo android/key.properties (ignorado por git) con plantilla key.properties.example; si falta, que el build falle con un mensaje claro. Ícono adaptativo y splash con flutter_launcher_icons y flutter_native_splash desde assets/icon/icon.png, fondo #0A0E1A (revisá después el manifest: portrait y label). R8 con las reglas que pida AdMob. Versión 1.1.0+12. Corré la validación de historias en modo estricto para las aventuras con historia: si a alguna le falta el inglés, avisame antes de seguir. Generá el appbundle y un APK de release para probar en el emulador. Escribí docs/release.md con la receta paso a paso. Commit y push.
 ```
 
-**Probá:** elegir Gilgamesh en "El Hombre Salvaje de Uruk" y ver la primera escena. En Supabase → Table Editor → game_sessions tiene que aparecer una fila nueva con tu user_id.
+**Después (Federico):** Play Console → Prueba cerrada (Alpha) → Crear versión → subir `build\app\outputs\bundle\release\app-release.aab` → notas "Nueva versión: historias con varios finales, sin cuenta, compra única" → revisar y lanzar. Con este build conviene invitar a los 11 testers que faltan: los 14 días pueden correr mientras se terminan las historias. **Producción**, solo con las 10 historias escritas y traducidas.
 
 ---
 
-## Iteración 5 — Gameplay y límite diario
+## Iteraciones 14 y 15 — iOS
 
-```
-Iteración 5 — Gameplay y límite diario (ver "Reglas de juego"). Pantalla completa de Gameplay: título, "Turno N", texto de la escena en Lora, tarjeta "Dato histórico" solo si viene historical_fact, y las tres opciones con ChoiceButton (punto de color, texto, descripción, etiqueta de riesgo; colores en lib/logic/risk_rules.dart con test). Elegir llama a narrative con action continue, session_id y choice_id numérico; mientras tanto "El narrador está pensando…" con barra dorada. lib/logic/choice_limit_rules.dart con funciones puras y tests: 3 por día local, se descuenta solo si la respuesta fue buena, reinicio a medianoche. "Elecciones gratis hoy: N de 3". Sin elecciones, tocar una opción abre la pantalla de Paywall (todavía vacía, con un texto "Premium llega pronto" y "Volver"). Premium todavía no existe: todos son gratis. Commit al terminar.
-```
-
-**Probá:** jugar 3 elecciones seguidas (cada una cambia la historia y sube el turno); la cuarta abre el Paywall. Con modo avión en medio de una elección: aviso y la elección no se descuenta.
+- **14, iOS base:** Info.plist (`GADApplicationIdentifier` con el ID de iOS, `SKAdNetworkItems`, `NSUserTrackingUsageDescription`, `UIRequiresFullScreen`, solo vertical), IDs de AdMob por plataforma y `codemagic.yaml` con `ios-check` copiando la estructura del de Ovun (de lectura). Se prueba en Codemagic (unos 15–20 de los 500 minutos del mes). No necesita la membresía de Apple.
+- **15, TestFlight:** con la membresía de Apple activa: Bundle ID con In-App Purchase, app en App Store Connect, producto `anunnaki_completo` (no consumible), mensaje IDFA en AdMob, integración de Codemagic con App Store Connect y workflow de release que sube a TestFlight. **Ya no hace falta** Sign in with Apple ni la revocación del token: no hay cuenta.
 
 ---
 
-## Iteración 6 — Continuar partida
+## Limpieza de servicios viejos (con OK de Federico, después del Build 12 en la prueba cerrada)
 
-```
-Iteración 6 — Continuar partida (ver "Reglas de juego"). En Inicio, "Continuar partida" visible solo si hay savedGame del usuario con sesión abierta (mismo userId), con el título de la aventura y el nombre del héroe. Llama a narrative con action load y abre Gameplay con esa escena sin descontar elecciones. 404: borrá savedGame y avisá "Esta partida ya no está disponible". Empezar otra aventura reemplaza la guardada. Commit al terminar.
-```
-
-**Probá:** jugar dos turnos, cerrar la app del todo, abrirla y tocar "Continuar partida": tiene que aparecer la misma escena y el mismo turno.
-
----
-
-## Iteración 7 — Perfil y eliminar cuenta
-
-```
-Iteración 7 — Perfil (ver "Reglas de juego" → Perfil y Eliminar cuenta). Correo, "Política de privacidad" (abre el navegador), versión con package_info_plus, "Cerrar sesión" (borra la partida guardada del teléfono) y "Eliminar cuenta" con el diálogo y los textos exactos de CLAUDE.md; al confirmar, functions.invoke('delete-account') en auth_service; si responde deleted: true, cerrar sesión, borrar localData y volver al ingreso; si no, el aviso de error. Premium, Restaurar compras y Privacidad de anuncios llegan en las iteraciones 8 y 9. Commit al terminar.
-```
-
-**Probá:** crear una cuenta de prueba, jugar un turno, eliminarla. En Supabase → Authentication → Users ya no tiene que estar, y su fila de game_sessions tampoco. Con tu cuenta real, "Cerrar sesión" y volver a entrar.
-
-**Punto de control:** acá la app ya es jugable de punta a punta. Recorrela entera antes de seguir.
-
----
-
-## Iteración 8 — Premium con RevenueCat
-
-**Antes (vos):** nada; la configuración de RevenueCat y de Play ya existe.
-
-```
-Iteración 8 — Premium con RevenueCat (ver "Premium"). Agregá purchases_flutter. services/purchases.dart (única clase que lo toca): configurar con la clave de Android de CLAUDE.md, logIn con el id de Supabase al iniciar sesión y logOut al cerrar o eliminar la cuenta, leer y escuchar el entitlement premium. Después de comprar o restaurar, siempre getCustomerInfo() y mirar el entitlement (no dependas de lo que devuelve purchasePackage: cambió entre versiones). Paywall completo con los precios que devuelve la tienda para $rc_monthly y $rc_annual, y solo los beneficios que existen (elecciones ilimitadas, sin anuncios). En Perfil: "Premium activo" o "Hazte Premium", y "Restaurar compras". Premium no tiene límite de elecciones y no ve el contador. Commit al terminar.
-```
-
-**Probá** (como en Ovun, con el emulador logueado con fejcavallo@gmail.com, que es license tester): comprar el mensual de prueba, ver "Premium activo" y elegir más de 3 veces; cerrar sesión y volver a entrar sigue Premium. Cancelá la suscripción de prueba desde Play Store al terminar.
-
----
-
-## Iteración 9 — Anuncios con consentimiento
-
-**Antes (vos o yo en una sesión con tu navegador):** en AdMob → Privacidad y mensajería → Reglamentos europeos, publicar el mensaje "Anunnaki Tales consentimiento UE" (hoy está en borrador).
-
-```
-Iteración 9 — AdMob con consentimiento (ver "Anuncios"). Agregá google_mobile_ads. meta-data del ID de app de Android en el manifest y permiso com.google.android.gms.permission.AD_ID. services/ads.dart (única clase que toca el SDK): consentimiento UMP al abrir el Catálogo por primera vez, initialize una sola vez cuando canRequestAds, banner al pie de Catálogo y Elegir héroe, intersticial al empezar una aventura (precargado al entrar a Elegir héroe; si no está listo, se sigue sin anuncio). Nada de eso para Premium. Unidades de prueba de Google en debug. lib/logic/ads_rules.dart con tests. En Perfil, "Privacidad de anuncios" solo si privacyOptionsRequirementStatus es required. Commit al terminar.
-```
-
-**Probá:** en debug aparece el formulario de consentimiento (con geografía EEE forzada), el banner de prueba en Catálogo y el intersticial de prueba al tocar "Empezar". Con la cuenta Premium no aparece ninguno.
-
----
-
-## Iteración 10 — Release de Android (Build 12)
-
-**Antes (vos):** crear `android\key.properties` a partir de la plantilla que deja Claude Code, con `storeFile=C:\\dev\\keys\\anunnaki-upload.jks`, `keyAlias=upload` y la contraseña.
-
-```
-Iteración 10 — Release de Android (ver "Release"). Firma de release leyendo android/key.properties (ignorado por git) con plantilla key.properties.example; si falta, que el build falle con un mensaje claro. Ícono adaptativo y splash con flutter_launcher_icons y flutter_native_splash desde assets/icon/icon.png, fondo #0A0E1A (revisá el manifest después: portrait y label). R8 con las reglas que pidan RevenueCat y AdMob. Permisos INTERNET y AD_ID explícitos. Verificá version 1.1.0+12. Generá el appbundle y un APK de release para probar en el emulador. Escribí docs/release.md con la receta paso a paso para las próximas subidas. Commit al terminar.
-```
-
-**Probá:** instalar el APK de release en el emulador: ícono, splash, ingreso, una aventura, compra y anuncios (el emulador es dispositivo de prueba de AdMob).
-
-**Después (vos):** Play Console → Anunnaki Tales → Prueba cerrada (Alpha) → Crear versión → subir `build\app\outputs\bundle\release\app-release.aab` → notas "Nueva versión: eliminar cuenta, consentimiento de anuncios, mejoras" → revisar y lanzar. Los 14 días de prueba cerrada empiezan a contar cuando hay 12 testers que aceptaron la invitación (hoy hay 1): conviene invitarlos con este build.
-
----
-
-## Iteración 11 — Ingreso con Google
-
-**Antes (vos, o yo con tu navegador):**
-1. Google Cloud, proyecto `anunnaki-tales` → APIs y servicios → Credenciales: crear un cliente OAuth **Web**, **tres Android** (cada uno lleva una sola SHA-1: la de la clave de subida, la de firma de apps de Play Console → Integridad de la app y la de debug del emulador; package `com.mycompany.anunnakitales`) y uno **iOS** (bundle `com.mycompany.anunnakitales`).
-2. Supabase → Authentication → Providers → Google: activarlo y cargar los Client IDs (el Web primero, después el de iOS).
-
-```
-Iteración 11 — Ingreso con Google (ver "Cuentas"). Agregá google_sign_in. Botón "Continuar con Google" en la pantalla de ingreso (Android e iOS); con el idToken de Google llamá a signInWithIdToken(provider: OAuthProvider.google) en auth_service. Client ID Web e iOS en config.dart; en ios/Runner/Info.plist, GIDClientID y el esquema de URL con el client ID de iOS invertido. Seguí la documentación actual de google_sign_in y de Supabase para login nativo. Commit al terminar.
-```
-
-**Probá:** entrar con Google en el emulador; en Supabase aparece el usuario con proveedor Google.
-
----
-
-## Iteración 12 — iOS base y Codemagic
-
-**Antes (vos):** en Codemagic (la misma cuenta de Ovun) agregar la app desde el repo `fejcav/anunnaki-tales`.
-
-```
-Iteración 12 — iOS base (ver "Release" → iOS). Info.plist: GADApplicationIdentifier con el ID de iOS, SKAdNetworkItems de Google, NSUserTrackingUsageDescription, UIRequiresFullScreen y solo vertical; versión mínima de iOS la que pidan los paquetes. IDs de AdMob y clave de RevenueCat por plataforma en config.dart (la de iOS queda vacía hasta la 13, y sin clave no se configura RevenueCat en iOS). codemagic.yaml con el workflow ios-check (sin firma), copiando la estructura y los nombres del codemagic.yaml de Ovun (pedime que te lo pase si no lo tenés a mano). Commit al terminar.
-```
-
-**Probá:** correr `ios-check` en Codemagic y que termine en verde (gasta unos 15–20 de los 500 minutos del mes).
-
----
-
-## Iteración 13 — Apple, App Store y TestFlight
-
-**Antes (vos, o yo con tu navegador):**
-1. Apple Developer → Identifiers: registrar `com.mycompany.anunnakitales` con **Sign in with Apple** e **In-App Purchase**.
-2. App Store Connect: crear la app "Anunnaki Tales" con ese bundle; crear el grupo de suscripciones "Anunnaki Premium" con `anunnaki_premium_monthly` (1 mes, USD 4,99) y `anunnaki_premium_yearly` (1 año, USD 29,99).
-3. RevenueCat: agregar la app de App Store, subir la clave P8 de App Store Connect, importar los productos al entitlement `premium` y al offering `default`; copiar la clave pública `appl_...`.
-4. Supabase → Authentication → Providers → Apple: activarlo con el bundle ID como Client ID.
-5. Codemagic: integración con App Store Connect (la misma de Ovun sirve).
-6. AdMob → Privacidad y mensajería → IDFA: crear el mensaje explicativo de seguimiento para iOS (así UMP pide el permiso ATT sin paquete extra).
-7. Para revocar el token al eliminar la cuenta: Apple Developer → Keys → crear una clave con **Sign in with Apple** (se baja un `.p8` una sola vez; guardalo con la clave de subida). En Supabase → Edge Functions → Secrets cargar `APPLE_TEAM_ID` (`Y7TN232MXN`), `APPLE_KEY_ID`, `APPLE_CLIENT_ID` (`com.mycompany.anunnakitales`) y `APPLE_PRIVATE_KEY` (el contenido del `.p8`).
-
-```
-Iteración 13 — Sign in with Apple, revocación y TestFlight (ver "Cuentas" y "Release"). Agregá sign_in_with_apple y crypto. Botón "Continuar con Apple" solo en iOS y arriba del de Google; nonce aleatorio, hash SHA-256 para Apple y el nonce crudo a signInWithIdToken(provider: OAuthProvider.apple). Eliminar cuenta con proveedor Apple: la app pide de nuevo la credencial de Apple y manda el authorizationCode a delete-account; actualizá supabase/functions/delete-account/index.ts para que, si llega ese código, arme el client secret (JWT ES256 con los secrets de Apple), lo canjee en https://appleid.apple.com/auth/token y revoque el token en https://appleid.apple.com/auth/revoke antes de borrar al usuario; si la revocación falla, no borra nada. Sin código, sigue funcionando igual que hoy. Pasame el archivo para desplegarlo desde el dashboard. Clave appl_ de RevenueCat en config.dart. Workflow de release en codemagic.yaml que firma y sube a TestFlight, como en Ovun. Commit al terminar.
-```
-
-**Probá:** instalar desde TestFlight en un iPhone: ingreso con Apple, una aventura, compra de prueba (sandbox) y eliminar cuenta (después, en Ajustes del iPhone → Apple ID → Iniciar sesión con Apple, Anunnaki Tales ya no tiene que figurar). Recién con esto se manda a revisión de Apple.
-
----
-
-## Iteración 14 — Narrador: dato histórico y final (backend, con tu OK)
-
-Se hace **después** de que el Build 12 reemplace al 11. Cambia el prompt de `narrative` para que:
-- vuelva a devolver `historical_fact` (1–2 oraciones reales por escena);
-- reciba los turnos estimados de la aventura y, al llegar, escriba un cierre con `is_final: true` y sin opciones.
-
-En la app: tarjeta "Dato histórico" (ya preparada) y pantalla "Fin de la aventura" con "Otra aventura" e "Inicio". El código se edita en `supabase/functions/narrative/index.ts` y se despliega pegándolo en el editor del dashboard de Supabase.
-
----
-
-## Iteración 15 — Seguridad del backend (con tu OK)
-
-- `narrative` toma el usuario del JWT (como `delete-account`), ignora el `user_id` del body y rechaza partidas de otro usuario. La app ya manda el JWT, así que no hace falta cambiarla.
-- Opcional: llevar el límite de 3 elecciones diarias al servidor (hoy vive solo en el teléfono).
+- Supabase: borrar las funciones `narrative` y `delete-account`, y después pausar o borrar el proyecto. Antes, si se quiere, exportar la tabla `adventures` (ya copiada en `catalog.json`).
+- Anthropic: revocar la clave de API que usaba `narrative`.
+- Play Console: desactivar las suscripciones `anunnaki_premium_monthly` y `anunnaki_premium_yearly` (nadie las compró); actualizar la ficha (sin "IA en vivo") y "Seguridad de los datos" (sin cuenta); la URL de eliminación de cuenta deja de ser obligatoria.
+- RevenueCat y los clientes OAuth de Google: sin uso; se pueden dejar o borrar.
+- Páginas legales: reemplazar `delete_account.html` por una nota de que no hay cuenta, o quitarla de la ficha.
