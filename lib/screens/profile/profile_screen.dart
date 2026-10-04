@@ -75,8 +75,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 
-  // Cierra la sesión y borra la partida guardada (el contador de elecciones
-  // del día se mantiene: es del teléfono, no de la cuenta).
+  // Cierra la sesión y borra la partida guardada (los finales descubiertos
+  // quedan: son del teléfono).
   Future<void> _signOut() async {
     final auth = context.read<AuthService>();
     final store = context.read<LocalStore>();

@@ -22,9 +22,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get catalogTitle => 'Choose your adventure';
 
   @override
-  String get heroSelectTitle => 'Choose your hero';
-
-  @override
   String get gameplayTitle => 'Adventure';
 
   @override
@@ -126,18 +123,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get homeContinue => 'Continue game';
 
   @override
-  String homeContinueDetail(String adventure, String hero) {
-    return '$adventure · $hero';
-  }
-
-  @override
-  String get homeGameNotFound => 'This game is no longer available';
-
-  @override
-  String get homeContinueError =>
-      'We couldn\'t load the game. Check your connection.';
-
-  @override
   String get difficultyEasy => 'Easy';
 
   @override
@@ -147,15 +132,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get difficultyHard => 'Hard';
 
   @override
-  String catalogTurns(int count) {
-    return '~$count turns';
-  }
-
-  @override
-  String get catalogError =>
-      'We couldn\'t load the adventures. Check your connection.';
-
-  @override
   String get catalogEmpty => 'No adventures available yet.';
 
   @override
@@ -163,24 +139,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get heroStart => 'Start';
-
-  @override
-  String get heroTraveler => 'Traveler';
-
-  @override
-  String get heroTravelerDescription =>
-      'A nameless traveler on a road of their own.';
-
-  @override
-  String get heroPreparing => 'The narrator is preparing your adventure…';
-
-  @override
-  String get heroError =>
-      'We couldn\'t load the heroes. Check your connection.';
-
-  @override
-  String get heroStartError =>
-      'We couldn\'t start the adventure. Please try again.';
 
   @override
   String get riskLow => 'Low risk';
@@ -197,19 +155,65 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-  String get gameplayThinking => 'The narrator is thinking…';
+  String get historicalFactTitle => 'Historical fact';
 
   @override
-  String gameplayFreeChoices(int left, int total) {
-    return 'Free choices today: $left of $total';
+  String get heroIntroTitle => 'Your hero';
+
+  @override
+  String get heroIntroAdventure => 'The adventure';
+
+  @override
+  String get storyLoadError => 'We couldn\'t open this story.';
+
+  @override
+  String catalogScenes(int count) {
+    return '~$count scenes';
   }
 
   @override
-  String get gameplayChoiceError =>
-      'The narrator couldn\'t answer. Check your connection and try again.';
+  String catalogEndings(int found, int total) {
+    return 'Endings: $found of $total';
+  }
 
   @override
-  String get historicalFactTitle => 'Historical fact';
+  String get catalogComingSoon => 'Coming soon';
+
+  @override
+  String get catalogError => 'We couldn\'t load the adventures.';
+
+  @override
+  String gameplayChapter(int number, String title) {
+    return 'Chapter $number · $title';
+  }
+
+  @override
+  String gameplayChapterNumber(int number) {
+    return 'Chapter $number';
+  }
+
+  @override
+  String get endingTypeMyth => 'Ending of the myth';
+
+  @override
+  String get endingTypeAlternative => 'Alternative ending';
+
+  @override
+  String get endingTypeTragic => 'Tragic ending';
+
+  @override
+  String endingFound(int found, int total) {
+    return 'Endings discovered: $found of $total';
+  }
+
+  @override
+  String get endingPlayAgain => 'Play again';
+
+  @override
+  String get endingOtherAdventure => 'Another adventure';
+
+  @override
+  String get endingLastDecision => 'Back to the last decision';
 
   @override
   String get paywallHeadline => 'Unlock the power of the gods';

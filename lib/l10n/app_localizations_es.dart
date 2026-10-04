@@ -22,9 +22,6 @@ class AppLocalizationsEs extends AppLocalizations {
   String get catalogTitle => 'Elige tu aventura';
 
   @override
-  String get heroSelectTitle => 'Elige tu héroe';
-
-  @override
   String get gameplayTitle => 'Aventura';
 
   @override
@@ -126,18 +123,6 @@ class AppLocalizationsEs extends AppLocalizations {
   String get homeContinue => 'Continuar partida';
 
   @override
-  String homeContinueDetail(String adventure, String hero) {
-    return '$adventure · $hero';
-  }
-
-  @override
-  String get homeGameNotFound => 'Esta partida ya no está disponible';
-
-  @override
-  String get homeContinueError =>
-      'No pudimos cargar la partida. Revisa tu conexión.';
-
-  @override
   String get difficultyEasy => 'Fácil';
 
   @override
@@ -147,15 +132,6 @@ class AppLocalizationsEs extends AppLocalizations {
   String get difficultyHard => 'Difícil';
 
   @override
-  String catalogTurns(int count) {
-    return '~$count turnos';
-  }
-
-  @override
-  String get catalogError =>
-      'No pudimos cargar las aventuras. Revisa tu conexión.';
-
-  @override
   String get catalogEmpty => 'Todavía no hay aventuras disponibles.';
 
   @override
@@ -163,23 +139,6 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get heroStart => 'Empezar';
-
-  @override
-  String get heroTraveler => 'Viajero';
-
-  @override
-  String get heroTravelerDescription =>
-      'Un viajero sin nombre que sigue su propio camino.';
-
-  @override
-  String get heroPreparing => 'El narrador está preparando tu aventura…';
-
-  @override
-  String get heroError => 'No pudimos cargar los héroes. Revisa tu conexión.';
-
-  @override
-  String get heroStartError =>
-      'No pudimos empezar la aventura. Inténtalo de nuevo.';
 
   @override
   String get riskLow => 'Riesgo bajo';
@@ -196,19 +155,65 @@ class AppLocalizationsEs extends AppLocalizations {
   }
 
   @override
-  String get gameplayThinking => 'El narrador está pensando…';
+  String get historicalFactTitle => 'Dato histórico';
 
   @override
-  String gameplayFreeChoices(int left, int total) {
-    return 'Elecciones gratis hoy: $left de $total';
+  String get heroIntroTitle => 'Tu héroe';
+
+  @override
+  String get heroIntroAdventure => 'La aventura';
+
+  @override
+  String get storyLoadError => 'No pudimos abrir esta historia.';
+
+  @override
+  String catalogScenes(int count) {
+    return '~$count escenas';
   }
 
   @override
-  String get gameplayChoiceError =>
-      'El narrador no pudo responder. Revisa tu conexión e inténtalo de nuevo.';
+  String catalogEndings(int found, int total) {
+    return 'Finales: $found de $total';
+  }
 
   @override
-  String get historicalFactTitle => 'Dato histórico';
+  String get catalogComingSoon => 'Próximamente';
+
+  @override
+  String get catalogError => 'No pudimos cargar las aventuras.';
+
+  @override
+  String gameplayChapter(int number, String title) {
+    return 'Capítulo $number · $title';
+  }
+
+  @override
+  String gameplayChapterNumber(int number) {
+    return 'Capítulo $number';
+  }
+
+  @override
+  String get endingTypeMyth => 'Final del mito';
+
+  @override
+  String get endingTypeAlternative => 'Final alternativo';
+
+  @override
+  String get endingTypeTragic => 'Final trágico';
+
+  @override
+  String endingFound(int found, int total) {
+    return 'Finales descubiertos: $found de $total';
+  }
+
+  @override
+  String get endingPlayAgain => 'Volver a jugar';
+
+  @override
+  String get endingOtherAdventure => 'Otra aventura';
+
+  @override
+  String get endingLastDecision => 'Volver a la última decisión';
 
   @override
   String get paywallHeadline => 'Desbloquea el poder de los dioses';

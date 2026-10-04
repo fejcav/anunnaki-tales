@@ -4,15 +4,15 @@ import 'package:provider/provider.dart';
 import '../../app_theme.dart';
 import '../../data/local_store.dart';
 import '../../l10n/app_localizations.dart';
+import '../../logic/story_rules.dart';
 import '../../main.dart';
-import '../../models/local_data.dart';
-import '../../services/auth_service.dart';
-import '../../services/story_api.dart';
+import '../../services/story_repository.dart';
 import '../../widgets/stars_background.dart';
 import '../gameplay/gameplay_screen.dart';
 
 // Inicio: título, "Comenzar aventura", "Continuar partida" (solo si hay una
-// partida guardada del usuario con sesión abierta) y el ícono de perfil.
+// partida guardada cuya historia y escena existen, con el título de la
+// aventura debajo) y el ícono de perfil.
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -21,8 +21,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> with RouteAware {
-  SavedGame? _savedGame;
-  bool _loadingGame = false; // esperando la respuesta de `load`
+  GameplayArgs? _resume; // la partida guardada lista para abrir, o null
 
   @override
   void initState() {
@@ -42,61 +41,31 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
     super.dispose();
   }
 
-  // Se cerró la pantalla de arriba (Gameplay, Catálogo…): puede haber una
-  // partida nueva guardada.
+  // Se cerró la pantalla de arriba (Gameplay, Final, Catálogo…): la partida
+  // guardada puede haber cambiado.
   @override
   void didPopNext() => _readSavedGame();
 
   Future<void> _readSavedGame() async {
-    final userId = context.read<AuthService>().currentUserId;
-    final data = await context.read<LocalStore>().load();
-    final game = data.savedGame;
-    if (!mounted) return;
-    // Una partida de otro usuario no se muestra.
-    setState(() => _savedGame = game != null && game.userId == userId ? game : null);
-  }
-
-  Future<void> _continue(SavedGame game) async {
-    final l10n = AppLocalizations.of(context);
-    final api = context.read<StoryApi>();
-    final store = context.read<LocalStore>();
-    final messenger = ScaffoldMessenger.of(context);
-    final navigator = Navigator.of(context);
-    messenger.hideCurrentSnackBar();
-
-    setState(() => _loadingGame = true);
-    try {
-      final scene = await api.loadAdventure(game.sessionId);
-      if (!mounted) return;
-      setState(() => _loadingGame = false);
-      navigator.pushNamed(
-        Routes.gameplay,
-        arguments: GameplayArgs(adventureTitle: game.adventureTitle, scene: scene),
-      );
-    } on SavedGameNotFound {
-      await store.clearGame();
-      if (!mounted) return;
-      setState(() {
-        _loadingGame = false;
-        _savedGame = null;
-      });
-      messenger.showSnackBar(SnackBar(content: Text(l10n.homeGameNotFound)));
-    } catch (_) {
-      if (!mounted) return;
-      setState(() => _loadingGame = false);
-      messenger.showSnackBar(
-        SnackBar(
-          content: Text(l10n.homeContinueError),
-          action: SnackBarAction(label: l10n.retry, onPressed: () => _continue(game)),
-        ),
-      );
+    final repo = context.read<StoryRepository>();
+    final game = (await context.read<LocalStore>().load()).savedGame;
+    GameplayArgs? resume;
+    if (game != null) {
+      final story = await repo.loadStory(game.adventureId);
+      final adventures = await repo.loadCatalog();
+      final matches = adventures.where((a) => a.id == game.adventureId);
+      if (story != null && matches.isNotEmpty && canResume(story, game.sceneId, game.path)) {
+        resume = GameplayArgs(adventure: matches.first, story: story, path: game.path);
+      }
     }
+    if (mounted) setState(() => _resume = resume);
   }
 
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
-    final game = _savedGame;
+    final lang = Localizations.localeOf(context).languageCode;
+    final resume = _resume;
     return Scaffold(
       body: StarsBackground(
         child: SafeArea(
@@ -129,21 +98,16 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
                         onPressed: () => Navigator.of(context).pushNamed(Routes.catalog),
                         child: Text(l10n.homeStart),
                       ),
-                      if (game != null) ...[
+                      if (resume != null) ...[
                         const SizedBox(height: 16),
                         OutlinedButton(
-                          onPressed: _loadingGame ? null : () => _continue(game),
-                          child: _loadingGame
-                              ? const SizedBox(
-                                  width: 20,
-                                  height: 20,
-                                  child: CircularProgressIndicator(strokeWidth: 2),
-                                )
-                              : Text(l10n.homeContinue),
+                          onPressed: () =>
+                              Navigator.of(context).pushNamed(Routes.gameplay, arguments: resume),
+                          child: Text(l10n.homeContinue),
                         ),
                         const SizedBox(height: 8),
                         Text(
-                          l10n.homeContinueDetail(game.adventureTitle, game.heroName),
+                          resume.adventure.title.of(lang),
                           style: AppText.bodySecondary.copyWith(fontSize: 13),
                           textAlign: TextAlign.center,
                         ),

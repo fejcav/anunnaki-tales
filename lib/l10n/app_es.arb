@@ -4,7 +4,6 @@
   "homeTitle": "ANUNNAKI TALES",
   "homeSubtitle": "Mitos Interactivos",
   "catalogTitle": "Elige tu aventura",
-  "heroSelectTitle": "Elige tu héroe",
   "gameplayTitle": "Aventura",
   "paywallTitle": "Premium",
   "profileTitle": "Perfil",
@@ -50,39 +49,12 @@
   "resetDone": "Contraseña cambiada",
   "homeStart": "Comenzar aventura",
   "homeContinue": "Continuar partida",
-  "homeContinueDetail": "{adventure} · {hero}",
-  "@homeContinueDetail": {
-    "placeholders": {
-      "adventure": {
-        "type": "String"
-      },
-      "hero": {
-        "type": "String"
-      }
-    }
-  },
-  "homeGameNotFound": "Esta partida ya no está disponible",
-  "homeContinueError": "No pudimos cargar la partida. Revisa tu conexión.",
   "difficultyEasy": "Fácil",
   "difficultyMedium": "Media",
   "difficultyHard": "Difícil",
-  "catalogTurns": "~{count} turnos",
-  "@catalogTurns": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "catalogError": "No pudimos cargar las aventuras. Revisa tu conexión.",
   "catalogEmpty": "Todavía no hay aventuras disponibles.",
   "retry": "Reintentar",
   "heroStart": "Empezar",
-  "heroTraveler": "Viajero",
-  "heroTravelerDescription": "Un viajero sin nombre que sigue su propio camino.",
-  "heroPreparing": "El narrador está preparando tu aventura…",
-  "heroError": "No pudimos cargar los héroes. Revisa tu conexión.",
-  "heroStartError": "No pudimos empezar la aventura. Inténtalo de nuevo.",
   "riskLow": "Riesgo bajo",
   "riskMedium": "Riesgo medio",
   "riskHigh": "Riesgo alto",
@@ -94,11 +66,22 @@
       }
     }
   },
-  "gameplayThinking": "El narrador está pensando…",
-  "gameplayFreeChoices": "Elecciones gratis hoy: {left} de {total}",
-  "@gameplayFreeChoices": {
+  "historicalFactTitle": "Dato histórico",
+  "heroIntroTitle": "Tu héroe",
+  "heroIntroAdventure": "La aventura",
+  "storyLoadError": "No pudimos abrir esta historia.",
+  "catalogScenes": "~{count} escenas",
+  "@catalogScenes": {
     "placeholders": {
-      "left": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "catalogEndings": "Finales: {found} de {total}",
+  "@catalogEndings": {
+    "placeholders": {
+      "found": {
         "type": "int"
       },
       "total": {
@@ -106,8 +89,44 @@
       }
     }
   },
-  "gameplayChoiceError": "El narrador no pudo responder. Revisa tu conexión e inténtalo de nuevo.",
-  "historicalFactTitle": "Dato histórico",
+  "catalogComingSoon": "Próximamente",
+  "catalogError": "No pudimos cargar las aventuras.",
+  "gameplayChapter": "Capítulo {number} · {title}",
+  "@gameplayChapter": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "gameplayChapterNumber": "Capítulo {number}",
+  "@gameplayChapterNumber": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "endingTypeMyth": "Final del mito",
+  "endingTypeAlternative": "Final alternativo",
+  "endingTypeTragic": "Final trágico",
+  "endingFound": "Finales descubiertos: {found} de {total}",
+  "@endingFound": {
+    "placeholders": {
+      "found": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "endingPlayAgain": "Volver a jugar",
+  "endingOtherAdventure": "Otra aventura",
+  "endingLastDecision": "Volver a la última decisión",
   "paywallHeadline": "Desbloquea el poder de los dioses",
   "paywallBenefitUnlimited": "Elecciones ilimitadas cada día",
   "paywallBenefitNoAds": "Sin anuncios",

@@ -4,32 +4,33 @@ import 'package:provider/provider.dart';
 import '../../app_theme.dart';
 import '../../data/local_store.dart';
 import '../../l10n/app_localizations.dart';
-import '../../logic/choice_limit_rules.dart';
 import '../../logic/risk_rules.dart';
+import '../../logic/story_rules.dart';
 import '../../main.dart';
-import '../../models/choice.dart';
+import '../../models/adventure.dart';
 import '../../models/local_data.dart';
+import '../../models/story.dart';
 import '../../models/story_scene.dart';
-import '../../services/story_api.dart';
-import '../../state/app_state.dart';
 import '../../widgets/choice_button.dart';
 import '../../widgets/historical_fact_card.dart';
-import '../../widgets/narrator_loading.dart';
 import '../../widgets/stars_background.dart';
+import '../ending/ending_screen.dart';
 
-// Lo que recibe Gameplay al abrirse: el título de la aventura y la escena.
+// Lo que recibe Gameplay al abrirse: la aventura, su historia y el camino de
+// la partida (ids de las escenas vistas; la última es la actual).
 class GameplayArgs {
-  const GameplayArgs({required this.adventureTitle, required this.scene});
+  const GameplayArgs({required this.adventure, required this.story, required this.path});
 
-  final String adventureTitle;
-  final StoryScene scene;
+  final Adventure adventure;
+  final Story story;
+  final List<String> path;
 }
 
-// Gameplay: turno, texto de la escena, dato histórico (si viene) y las tres
-// opciones. Elegir una pide la escena siguiente; cada respuesta buena gasta
-// una elección gratis del día. Sin elecciones, tocar una opción abre el
-// Paywall. Premium no tiene límite ni ve el contador. La flecha atrás vuelve
-// a Inicio y la partida queda guardada.
+// Gameplay: "Capítulo N · Título", "Turno N", el texto de la escena en
+// párrafos, el dato histórico (si tiene) y las opciones. Elegir es
+// instantáneo y la partida se guarda en cada escena. Al llegar a un final se
+// guarda como descubierto y se abre la pantalla de Final. La flecha atrás
+// vuelve a Inicio.
 class GameplayScreen extends StatefulWidget {
   const GameplayScreen({super.key});
 
@@ -40,10 +41,8 @@ class GameplayScreen extends StatefulWidget {
 class _GameplayScreenState extends State<GameplayScreen> {
   final _scroll = ScrollController();
   GameplayArgs? _args; // llega como argumento de la ruta
-  late StoryScene _scene;
-  late String _sessionId;
-  LocalData? _local; // contador de elecciones del día
-  bool _thinking = false;
+  late List<String> _path;
+  bool _busy = false; // guardando la elección (evita un doble toque)
 
   @override
   void didChangeDependencies() {
@@ -51,9 +50,7 @@ class _GameplayScreenState extends State<GameplayScreen> {
     // Los argumentos de la ruta no se pueden leer en initState.
     if (_args == null) {
       _args = ModalRoute.of(context)!.settings.arguments as GameplayArgs;
-      _scene = _args!.scene;
-      _sessionId = _scene.sessionId!;
-      _loadLocal();
+      _path = List.of(_args!.path);
     }
   }
 
@@ -63,80 +60,43 @@ class _GameplayScreenState extends State<GameplayScreen> {
     super.dispose();
   }
 
-  Future<void> _loadLocal() async {
-    final data = await context.read<LocalStore>().load();
-    if (mounted) setState(() => _local = data);
-  }
-
-  Future<void> _choose(Choice choice) async {
-    if (_thinking) return; // ya hay una elección en camino
-    final l10n = AppLocalizations.of(context);
-    final api = context.read<StoryApi>();
+  Future<void> _choose(StoryChoice choice) async {
+    final args = _args!;
+    final next = nextScene(args.story, choice);
+    if (next == null || _busy) return; // null no pasa: la validación lo impide
+    _busy = true;
     final store = context.read<LocalStore>();
-    final messenger = ScaffoldMessenger.of(context);
     final navigator = Navigator.of(context);
-    final isPremium = context.read<AppState>().isPremium;
-    // Un aviso de error anterior (queda fijo porque tiene "Reintentar") se
-    // cierra al volver a elegir.
-    messenger.hideCurrentSnackBar();
+    final path = [..._path, next.id];
 
-    // Se relee del teléfono por si cambió el día o el contador.
-    final local = await store.load();
-    final now = DateTime.now();
-    if (!canChoose(
-      isPremium: isPremium,
-      used: local.dailyChoicesUsed,
-      lastDay: local.lastChoiceDay,
-      now: now,
-    )) {
-      // Si no compra, vuelve a la misma escena.
-      await navigator.pushNamed(Routes.paywall);
+    if (isEnding(next)) {
+      await store.finishGame(args.adventure.id, next.id);
+      navigator.pushReplacementNamed(
+        Routes.ending,
+        arguments: EndingArgs(adventure: args.adventure, story: args.story, path: path),
+      );
       return;
     }
 
+    await store.saveGame(
+      SavedGame(adventureId: args.adventure.id, sceneId: next.id, path: path),
+    );
+    _busy = false;
     if (!mounted) return;
-    setState(() => _thinking = true);
-    try {
-      final next = await api.continueAdventure(sessionId: _sessionId, choiceId: choice.id);
-      // La IA respondió bien: recién ahora se descuenta la elección (a
-      // Premium no se le descuenta nada).
-      var updated = local;
-      if (!isPremium) {
-        final counted = recordChoice(
-          used: local.dailyChoicesUsed,
-          lastDay: local.lastChoiceDay,
-          now: DateTime.now(),
-        );
-        updated = local.withDailyChoices(used: counted.used, day: counted.day);
-        await store.save(updated);
-      }
-      if (!mounted) return;
-      setState(() {
-        _scene = next;
-        _local = updated;
-        _thinking = false;
-      });
-      if (_scroll.hasClients) _scroll.jumpTo(0);
-    } catch (_) {
-      if (!mounted) return;
-      setState(() => _thinking = false);
-      messenger.showSnackBar(
-        SnackBar(
-          content: Text(l10n.gameplayChoiceError),
-          action: SnackBarAction(label: l10n.retry, onPressed: () => _choose(choice)),
-        ),
-      );
-    }
+    setState(() => _path = path);
+    if (_scroll.hasClients) _scroll.jumpTo(0);
   }
 
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
-    final fact = _scene.historicalFact;
-    final local = _local;
-    final isPremium = context.watch<AppState>().isPremium;
+    final lang = Localizations.localeOf(context).languageCode;
+    final args = _args!;
+    final scene = args.story.scene(_path.last)!;
+    final chapterTitle = args.story.chapters[scene.chapter]?.of(lang) ?? '';
+    final fact = scene.fact?.of(lang) ?? '';
     return Scaffold(
-      appBar: AppBar(title: Text(_args!.adventureTitle)),
+      appBar: AppBar(title: Text(args.adventure.title.of(lang))),
       body: StarsBackground(
         child: SafeArea(
           top: false,
@@ -147,53 +107,66 @@ class _GameplayScreenState extends State<GameplayScreen> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Text(
-                  l10n.gameplayTurn(_scene.turn),
+                  chapterTitle.isEmpty
+                      ? l10n.gameplayChapterNumber(scene.chapter)
+                      : l10n.gameplayChapter(scene.chapter, chapterTitle),
                   style: AppText.subtitle.copyWith(color: AppColors.gold),
                   textAlign: TextAlign.center,
                 ),
+                const SizedBox(height: 4),
+                Text(
+                  l10n.gameplayTurn(_path.length),
+                  style: AppText.bodySecondary.copyWith(fontSize: 13),
+                  textAlign: TextAlign.center,
+                ),
                 const SizedBox(height: 16),
-                Text(_scene.narrative, style: AppText.narrative),
-                if (fact != null && fact.isNotEmpty) ...[
+                StoryText(text: scene.text.of(lang)),
+                if (fact.isNotEmpty) ...[
                   const SizedBox(height: 20),
                   HistoricalFactCard(title: l10n.historicalFactTitle, fact: fact),
                 ],
                 const SizedBox(height: 24),
-                if (_thinking)
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 24),
-                    child: NarratorLoading(text: l10n.gameplayThinking),
-                  )
-                else
-                  for (final choice in _scene.choices) ...[
-                    ChoiceButton(
-                      text: choice.text,
-                      description: choice.description,
-                      riskColor: riskColor(choice.riskLevel),
-                      riskLabel: riskLabel(l10n, choice.riskLevel),
-                      onTap: () => _choose(choice),
-                    ),
-                    const SizedBox(height: 12),
-                  ],
-                if (!isPremium && local != null) ...[
-                  const SizedBox(height: 8),
-                  Text(
-                    l10n.gameplayFreeChoices(
-                      choicesLeftToday(
-                        used: local.dailyChoicesUsed,
-                        lastDay: local.lastChoiceDay,
-                        now: DateTime.now(),
-                      ),
-                      dailyFreeChoices,
-                    ),
-                    style: AppText.bodySecondary.copyWith(fontSize: 13),
-                    textAlign: TextAlign.center,
+                for (final choice in scene.choices) ...[
+                  ChoiceButton(
+                    text: choice.text.of(lang),
+                    description: choice.description.of(lang),
+                    riskColor: choice.risk == null ? null : riskColor(choice.risk!),
+                    riskLabel: choice.risk == null ? null : riskLabel(l10n, choice.risk!),
+                    onTap: () => _choose(choice),
                   ),
+                  const SizedBox(height: 12),
                 ],
               ],
             ),
           ),
         ),
       ),
+    );
+  }
+}
+
+// El texto de una escena en Lora, un párrafo por cada bloque separado por una
+// línea en blanco. También lo usa la pantalla de Final.
+class StoryText extends StatelessWidget {
+  const StoryText({super.key, required this.text});
+
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    final paragraphs = text
+        .split(RegExp(r'\n\s*\n'))
+        .map((p) => p.trim())
+        .where((p) => p.isNotEmpty)
+        .toList();
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        for (final (i, p) in paragraphs.indexed) ...[
+          if (i > 0) const SizedBox(height: 14),
+          Text(p, style: AppText.narrative),
+        ],
+      ],
     );
   }
 }

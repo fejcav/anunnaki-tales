@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../app_theme.dart';
 
-// Tarjeta "Dato histórico" debajo de la escena. Solo se muestra si la función
-// narrative lo manda (hoy no lo manda).
+// Tarjeta "Dato histórico" debajo de la escena (y en el final). Solo se
+// muestra si la escena tiene `fact`.
 class HistoricalFactCard extends StatelessWidget {
   const HistoricalFactCard({super.key, required this.title, required this.fact});
 

@@ -122,12 +122,6 @@ abstract class AppLocalizations {
   /// **'Elige tu aventura'**
   String get catalogTitle;
 
-  /// No description provided for @heroSelectTitle.
-  ///
-  /// In es, this message translates to:
-  /// **'Elige tu héroe'**
-  String get heroSelectTitle;
-
   /// No description provided for @gameplayTitle.
   ///
   /// In es, this message translates to:
@@ -314,24 +308,6 @@ abstract class AppLocalizations {
   /// **'Continuar partida'**
   String get homeContinue;
 
-  /// No description provided for @homeContinueDetail.
-  ///
-  /// In es, this message translates to:
-  /// **'{adventure} · {hero}'**
-  String homeContinueDetail(String adventure, String hero);
-
-  /// No description provided for @homeGameNotFound.
-  ///
-  /// In es, this message translates to:
-  /// **'Esta partida ya no está disponible'**
-  String get homeGameNotFound;
-
-  /// No description provided for @homeContinueError.
-  ///
-  /// In es, this message translates to:
-  /// **'No pudimos cargar la partida. Revisa tu conexión.'**
-  String get homeContinueError;
-
   /// No description provided for @difficultyEasy.
   ///
   /// In es, this message translates to:
@@ -350,18 +326,6 @@ abstract class AppLocalizations {
   /// **'Difícil'**
   String get difficultyHard;
 
-  /// No description provided for @catalogTurns.
-  ///
-  /// In es, this message translates to:
-  /// **'~{count} turnos'**
-  String catalogTurns(int count);
-
-  /// No description provided for @catalogError.
-  ///
-  /// In es, this message translates to:
-  /// **'No pudimos cargar las aventuras. Revisa tu conexión.'**
-  String get catalogError;
-
   /// No description provided for @catalogEmpty.
   ///
   /// In es, this message translates to:
@@ -379,36 +343,6 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Empezar'**
   String get heroStart;
-
-  /// No description provided for @heroTraveler.
-  ///
-  /// In es, this message translates to:
-  /// **'Viajero'**
-  String get heroTraveler;
-
-  /// No description provided for @heroTravelerDescription.
-  ///
-  /// In es, this message translates to:
-  /// **'Un viajero sin nombre que sigue su propio camino.'**
-  String get heroTravelerDescription;
-
-  /// No description provided for @heroPreparing.
-  ///
-  /// In es, this message translates to:
-  /// **'El narrador está preparando tu aventura…'**
-  String get heroPreparing;
-
-  /// No description provided for @heroError.
-  ///
-  /// In es, this message translates to:
-  /// **'No pudimos cargar los héroes. Revisa tu conexión.'**
-  String get heroError;
-
-  /// No description provided for @heroStartError.
-  ///
-  /// In es, this message translates to:
-  /// **'No pudimos empezar la aventura. Inténtalo de nuevo.'**
-  String get heroStartError;
 
   /// No description provided for @riskLow.
   ///
@@ -434,29 +368,107 @@ abstract class AppLocalizations {
   /// **'Turno {turn}'**
   String gameplayTurn(int turn);
 
-  /// No description provided for @gameplayThinking.
-  ///
-  /// In es, this message translates to:
-  /// **'El narrador está pensando…'**
-  String get gameplayThinking;
-
-  /// No description provided for @gameplayFreeChoices.
-  ///
-  /// In es, this message translates to:
-  /// **'Elecciones gratis hoy: {left} de {total}'**
-  String gameplayFreeChoices(int left, int total);
-
-  /// No description provided for @gameplayChoiceError.
-  ///
-  /// In es, this message translates to:
-  /// **'El narrador no pudo responder. Revisa tu conexión e inténtalo de nuevo.'**
-  String get gameplayChoiceError;
-
   /// No description provided for @historicalFactTitle.
   ///
   /// In es, this message translates to:
   /// **'Dato histórico'**
   String get historicalFactTitle;
+
+  /// No description provided for @heroIntroTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Tu héroe'**
+  String get heroIntroTitle;
+
+  /// No description provided for @heroIntroAdventure.
+  ///
+  /// In es, this message translates to:
+  /// **'La aventura'**
+  String get heroIntroAdventure;
+
+  /// No description provided for @storyLoadError.
+  ///
+  /// In es, this message translates to:
+  /// **'No pudimos abrir esta historia.'**
+  String get storyLoadError;
+
+  /// No description provided for @catalogScenes.
+  ///
+  /// In es, this message translates to:
+  /// **'~{count} escenas'**
+  String catalogScenes(int count);
+
+  /// No description provided for @catalogEndings.
+  ///
+  /// In es, this message translates to:
+  /// **'Finales: {found} de {total}'**
+  String catalogEndings(int found, int total);
+
+  /// No description provided for @catalogComingSoon.
+  ///
+  /// In es, this message translates to:
+  /// **'Próximamente'**
+  String get catalogComingSoon;
+
+  /// No description provided for @catalogError.
+  ///
+  /// In es, this message translates to:
+  /// **'No pudimos cargar las aventuras.'**
+  String get catalogError;
+
+  /// No description provided for @gameplayChapter.
+  ///
+  /// In es, this message translates to:
+  /// **'Capítulo {number} · {title}'**
+  String gameplayChapter(int number, String title);
+
+  /// No description provided for @gameplayChapterNumber.
+  ///
+  /// In es, this message translates to:
+  /// **'Capítulo {number}'**
+  String gameplayChapterNumber(int number);
+
+  /// No description provided for @endingTypeMyth.
+  ///
+  /// In es, this message translates to:
+  /// **'Final del mito'**
+  String get endingTypeMyth;
+
+  /// No description provided for @endingTypeAlternative.
+  ///
+  /// In es, this message translates to:
+  /// **'Final alternativo'**
+  String get endingTypeAlternative;
+
+  /// No description provided for @endingTypeTragic.
+  ///
+  /// In es, this message translates to:
+  /// **'Final trágico'**
+  String get endingTypeTragic;
+
+  /// No description provided for @endingFound.
+  ///
+  /// In es, this message translates to:
+  /// **'Finales descubiertos: {found} de {total}'**
+  String endingFound(int found, int total);
+
+  /// No description provided for @endingPlayAgain.
+  ///
+  /// In es, this message translates to:
+  /// **'Volver a jugar'**
+  String get endingPlayAgain;
+
+  /// No description provided for @endingOtherAdventure.
+  ///
+  /// In es, this message translates to:
+  /// **'Otra aventura'**
+  String get endingOtherAdventure;
+
+  /// No description provided for @endingLastDecision.
+  ///
+  /// In es, this message translates to:
+  /// **'Volver a la última decisión'**
+  String get endingLastDecision;
 
   /// No description provided for @paywallHeadline.
   ///

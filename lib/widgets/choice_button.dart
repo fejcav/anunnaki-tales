@@ -3,21 +3,22 @@ import 'package:flutter/material.dart';
 import '../app_theme.dart';
 
 // Una opción de la escena: punto de color del riesgo, texto, descripción y
-// etiqueta ("Riesgo bajo / medio / alto") en el mismo color.
+// etiqueta ("Riesgo bajo / medio / alto") en el mismo color. Sin riesgo (una
+// escena con una sola opción), va sin punto ni etiqueta.
 class ChoiceButton extends StatelessWidget {
   const ChoiceButton({
     super.key,
     required this.text,
     required this.description,
-    required this.riskColor,
-    required this.riskLabel,
+    this.riskColor,
+    this.riskLabel,
     required this.onTap,
   });
 
   final String text;
   final String description;
-  final Color riskColor;
-  final String riskLabel;
+  final Color? riskColor;
+  final String? riskLabel;
   final VoidCallback onTap;
 
   @override
@@ -36,15 +37,17 @@ class ChoiceButton extends StatelessWidget {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 5),
-                child: Container(
-                  width: 10,
-                  height: 10,
-                  decoration: BoxDecoration(color: riskColor, shape: BoxShape.circle),
+              if (riskColor != null) ...[
+                Padding(
+                  padding: const EdgeInsets.only(top: 5),
+                  child: Container(
+                    width: 10,
+                    height: 10,
+                    decoration: BoxDecoration(color: riskColor, shape: BoxShape.circle),
+                  ),
                 ),
-              ),
-              const SizedBox(width: 12),
+                const SizedBox(width: 12),
+              ],
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -54,15 +57,17 @@ class ChoiceButton extends StatelessWidget {
                       const SizedBox(height: 4),
                       Text(description, style: AppText.bodySecondary.copyWith(fontSize: 13)),
                     ],
-                    const SizedBox(height: 6),
-                    Text(
-                      riskLabel,
-                      style: AppText.body.copyWith(
-                        fontSize: 12,
-                        fontWeight: FontWeight.w600,
-                        color: riskColor,
+                    if (riskLabel != null) ...[
+                      const SizedBox(height: 6),
+                      Text(
+                        riskLabel!,
+                        style: AppText.body.copyWith(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w600,
+                          color: riskColor,
+                        ),
                       ),
-                    ),
+                    ],
                   ],
                 ),
               ),

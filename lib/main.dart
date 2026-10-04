@@ -10,14 +10,15 @@ import 'data/local_store.dart';
 import 'l10n/app_localizations.dart';
 import 'screens/auth/auth_screen.dart';
 import 'screens/catalog/catalog_screen.dart';
+import 'screens/ending/ending_screen.dart';
 import 'screens/gameplay/gameplay_screen.dart';
-import 'screens/hero_select/hero_select_screen.dart';
+import 'screens/hero_intro/hero_intro_screen.dart';
 import 'screens/home/home_screen.dart';
 import 'screens/paywall/paywall_screen.dart';
 import 'screens/profile/profile_screen.dart';
 import 'services/auth_service.dart';
 import 'services/purchases.dart';
-import 'services/story_api.dart';
+import 'services/story_repository.dart';
 import 'state/app_state.dart';
 
 Future<void> main() async {
@@ -37,7 +38,7 @@ Future<void> main() async {
       providers: [
         Provider.value(value: auth),
         Provider.value(value: purchases),
-        Provider(create: (_) => StoryApi()),
+        Provider(create: (_) => StoryRepository()),
         Provider(create: (_) => LocalStore()),
         ChangeNotifierProvider.value(value: appState),
       ],
@@ -57,8 +58,9 @@ class Routes {
   static const home = '/';
   static const auth = '/auth';
   static const catalog = '/catalog';
-  static const heroSelect = '/hero-select';
+  static const heroIntro = '/hero-intro';
   static const gameplay = '/gameplay';
+  static const ending = '/ending';
   static const paywall = '/paywall';
   static const profile = '/profile';
 }
@@ -70,8 +72,9 @@ class AnunnakiApp extends StatelessWidget {
     Routes.home: (_) => const HomeScreen(),
     Routes.auth: (_) => const AuthScreen(),
     Routes.catalog: (_) => const CatalogScreen(),
-    Routes.heroSelect: (_) => const HeroSelectScreen(),
+    Routes.heroIntro: (_) => const HeroIntroScreen(),
     Routes.gameplay: (_) => const GameplayScreen(),
+    Routes.ending: (_) => const EndingScreen(),
     Routes.paywall: (_) => const PaywallScreen(),
     Routes.profile: (_) => const ProfileScreen(),
   };
