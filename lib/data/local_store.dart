@@ -25,28 +25,26 @@ class LocalStore {
     await prefs.setString(_key, jsonEncode(data.toJson()));
   }
 
-  // Reemplaza la partida guardada (empezar una aventura nueva pisa la anterior).
+  // Guarda la partida en curso (empezar una aventura nueva pisa la anterior).
   Future<void> saveGame(SavedGame game) async {
     final data = await load();
     await save(data.withSavedGame(game));
   }
 
-  // Borra la partida guardada (por ejemplo, si ya no existe en Supabase).
+  // Borra la partida guardada.
   Future<void> clearGame() async {
     final data = await load();
     await save(data.withSavedGame(null));
   }
 
-  // Borra lo guardado en el teléfono al eliminar la cuenta, salvo el contador
-  // de elecciones del día: es del teléfono, no de la cuenta (si se borrara,
-  // crear y eliminar cuentas reiniciaría el límite).
-  Future<void> clearAll() async {
+  // Llegó a un final: lo guarda como descubierto y borra la partida.
+  Future<void> finishGame(String adventureId, String endingId) async {
     final data = await load();
-    await save(
-      LocalData(
-        dailyChoicesUsed: data.dailyChoicesUsed,
-        lastChoiceDay: data.lastChoiceDay,
-      ),
-    );
+    await save(data.withEndingFound(adventureId, endingId).withSavedGame(null));
+  }
+
+  // Borra todo lo guardado en el teléfono (al eliminar la cuenta).
+  Future<void> clearAll() async {
+    await save(const LocalData());
   }
 }

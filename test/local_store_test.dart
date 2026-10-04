@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:anunnakitales/data/local_store.dart';
 import 'package:anunnakitales/models/local_data.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -5,54 +7,123 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
   const game = SavedGame(
-    userId: 'u1',
-    sessionId: 's1',
-    adventureId: 'a1',
-    mythId: 'gilgamesh',
-    adventureTitle: 'La epopeya',
-    heroName: 'Gilgamesh',
+    adventureId: 'gilgamesh_enkidu',
+    sceneId: 'c1_shamhat',
+    path: ['c1_uruk', 'c1_shamhat'],
   );
 
   setUp(() => SharedPreferences.setMockInitialValues({}));
 
-  test('clearAll borra la partida y el idioma pero conserva el contador del día', () async {
+  test('guarda y lee la partida y los finales descubiertos', () async {
     final store = LocalStore();
     await store.save(
       const LocalData(
-        dailyChoicesUsed: 3,
-        lastChoiceDay: '2026-10-02',
         language: 'en',
         savedGame: game,
+        endingsFound: {
+          'gilgamesh_enkidu': ['fin_polvo'],
+        },
+      ),
+    );
+
+    final data = await store.load();
+
+    expect(data.language, 'en');
+    expect(data.savedGame!.adventureId, 'gilgamesh_enkidu');
+    expect(data.savedGame!.sceneId, 'c1_shamhat');
+    expect(data.savedGame!.path, ['c1_uruk', 'c1_shamhat']);
+    expect(data.endingsOf('gilgamesh_enkidu'), ['fin_polvo']);
+    expect(data.endingsOf('descent_inanna'), isEmpty);
+  });
+
+  test('finishGame guarda el final una sola vez y borra la partida', () async {
+    final store = LocalStore();
+    await store.saveGame(game);
+
+    await store.finishGame('gilgamesh_enkidu', 'fin_tirano');
+    await store.finishGame('gilgamesh_enkidu', 'fin_tirano');
+    await store.finishGame('gilgamesh_enkidu', 'fin_polvo');
+    final data = await store.load();
+
+    expect(data.savedGame, isNull);
+    expect(data.endingsOf('gilgamesh_enkidu'), ['fin_tirano', 'fin_polvo']);
+  });
+
+  test('clearGame borra solo la partida', () async {
+    final store = LocalStore();
+    await store.save(
+      const LocalData(
+        savedGame: game,
+        endingsFound: {
+          'gilgamesh_enkidu': ['fin_paz'],
+        },
+      ),
+    );
+
+    await store.clearGame();
+    final data = await store.load();
+
+    expect(data.savedGame, isNull);
+    expect(data.endingsOf('gilgamesh_enkidu'), ['fin_paz']);
+  });
+
+  test('clearAll borra todo', () async {
+    final store = LocalStore();
+    await store.save(
+      const LocalData(
+        language: 'en',
+        savedGame: game,
+        endingsFound: {
+          'gilgamesh_enkidu': ['fin_paz'],
+        },
       ),
     );
 
     await store.clearAll();
     final data = await store.load();
 
-    expect(data.dailyChoicesUsed, 3);
-    expect(data.lastChoiceDay, '2026-10-02');
-    expect(data.savedGame, isNull);
     expect(data.language, isNull);
+    expect(data.savedGame, isNull);
+    expect(data.endingsFound, isEmpty);
   });
 
-  test('clearGame borra solo la partida', () async {
+  test('la versión 1 descarta la partida vieja y el contador, y conserva el idioma', () async {
+    SharedPreferences.setMockInitialValues({
+      'localData': jsonEncode({
+        'schemaVersion': 1,
+        'dailyChoicesUsed': 3,
+        'lastChoiceDay': '2026-10-02',
+        'language': 'en',
+        'savedGame': {
+          'userId': 'u1',
+          'sessionId': 's1',
+          'adventureId': 'gilgamesh_enkidu',
+          'mythId': 'gilgamesh_enkidu',
+          'adventureTitle': 'El Hombre Salvaje de Uruk',
+          'heroName': 'Gilgamesh',
+        },
+      }),
+    });
     final store = LocalStore();
-    await store.save(
-      const LocalData(dailyChoicesUsed: 2, lastChoiceDay: '2026-10-02', savedGame: game),
-    );
-
-    await store.clearGame();
     final data = await store.load();
 
-    expect(data.dailyChoicesUsed, 2);
     expect(data.savedGame, isNull);
+    expect(data.endingsFound, isEmpty);
+    expect(data.language, 'en');
+
+    // Al volver a guardar queda en la versión 2, sin el contador.
+    await store.save(data);
+    final prefs = await SharedPreferences.getInstance();
+    final raw = jsonDecode(prefs.getString('localData')!) as Map<String, dynamic>;
+    expect(raw['schemaVersion'], 2);
+    expect(raw.containsKey('dailyChoicesUsed'), isFalse);
   });
 
   test('un JSON roto se descarta y se empieza de cero', () async {
     SharedPreferences.setMockInitialValues({'localData': '{no es json'});
     final data = await LocalStore().load();
 
-    expect(data.dailyChoicesUsed, 0);
     expect(data.savedGame, isNull);
+    expect(data.endingsFound, isEmpty);
   });
 }
