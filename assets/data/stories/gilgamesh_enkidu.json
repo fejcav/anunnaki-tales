@@ -1,0 +1,1281 @@
+{
+  "formatVersion": 1,
+  "adventureId": "gilgamesh_enkidu",
+  "contentVersion": "1.0 (español e inglés revisados; datos históricos verificados)",
+  "hero": {
+    "name": {
+      "es": "Gilgamesh",
+      "en": "Gilgamesh"
+    },
+    "description": {
+      "es": "Rey de Uruk: dos tercios dios y un tercio hombre. El más fuerte de su tiempo, y el más temido por su propio pueblo.",
+      "en": "King of Uruk: two-thirds god and one-third man. The strongest of his age, and the one his own people fear most."
+    }
+  },
+  "chapters": [
+    {
+      "number": 1,
+      "title": {
+        "es": "El rey sin rival",
+        "en": "The King Without a Rival"
+      }
+    },
+    {
+      "number": 2,
+      "title": {
+        "es": "Los sueños del rey",
+        "en": "The King's Dreams"
+      }
+    },
+    {
+      "number": 3,
+      "title": {
+        "es": "La puerta de la boda",
+        "en": "The Wedding Door"
+      }
+    },
+    {
+      "number": 4,
+      "title": {
+        "es": "El amigo",
+        "en": "The Friend"
+      }
+    },
+    {
+      "number": 5,
+      "title": {
+        "es": "El Bosque de los Cedros",
+        "en": "The Cedar Forest"
+      }
+    },
+    {
+      "number": 6,
+      "title": {
+        "es": "Humbaba",
+        "en": "Humbaba"
+      }
+    },
+    {
+      "number": 7,
+      "title": {
+        "es": "La diosa y el Toro",
+        "en": "The Goddess and the Bull"
+      }
+    },
+    {
+      "number": 8,
+      "title": {
+        "es": "La casa del polvo",
+        "en": "The House of Dust"
+      }
+    }
+  ],
+  "start": "c1_uruk",
+  "scenes": [
+    {
+      "id": "c1_uruk",
+      "chapter": 1,
+      "mood": "epic",
+      "text": {
+        "es": "Amanece sobre Uruk, y las murallas que mandaste levantar brillan como bronce al sol. Eres Gilgamesh: dos tercios dios y un tercio hombre. Nadie en la tierra puede igualarte, y lo sabes.\n\nTu pueblo también lo sabe. Agotas a los jóvenes en juegos y trabajos que nunca terminan, y ni siquiera las bodas son de los novios: el rey se presenta primero. En los templos, las madres rezan en voz baja.\n\nEsta mañana, un cazador te espera en la sala del trono. Tiembla.\n\n—Rey mío, en la estepa vive un hombre salvaje. Corre con las gacelas y bebe con las fieras. Llena mis fosos, rompe mis trampas y libera a los animales. Es fuerte como una piedra caída del cielo.\n\nAlgo se enciende en tu pecho.",
+        "en": "Dawn breaks over Uruk, and the walls you ordered raised shine like bronze in the sun. You are Gilgamesh: two-thirds god and one-third man. No one on earth can match you, and you know it.\n\nYour people know it too. You wear the young men out in games and labors that never end, and not even weddings belong to the couple: the king comes first. In the temples, mothers pray under their breath.\n\nThis morning a hunter waits for you in the throne room. He is trembling.\n\n\"My king, a wild man lives on the steppe. He runs with the gazelles and drinks with the beasts. He fills in my pits, tears up my traps and sets the animals free. He is as strong as a stone fallen from the sky.\"\n\nSomething kindles in your chest."
+      },
+      "fact": {
+        "es": "Hacia el 3000 a. C., Uruk era quizás la ciudad más grande del mundo, con decenas de miles de habitantes. Sus murallas, de unos 9 km, se atribuían a Gilgamesh.",
+        "en": "Around 3000 BC, Uruk was perhaps the largest city in the world, with tens of thousands of inhabitants. Its walls, some 9 km long, were credited to Gilgamesh."
+      },
+      "choices": [
+        {
+          "to": "c1_shamhat",
+          "risk": "low",
+          "text": {
+            "es": "Enviar a Shamhat a la estepa",
+            "en": "Send Shamhat to the steppe"
+          },
+          "description": {
+            "es": "Que la mujer del templo de Ishtar lo atraiga a la ciudad.",
+            "en": "Let the woman of Ishtar's temple lure him to the city."
+          }
+        },
+        {
+          "to": "c1_soldados",
+          "risk": "high",
+          "text": {
+            "es": "Mandar soldados a capturarlo",
+            "en": "Send soldiers to capture him"
+          },
+          "description": {
+            "es": "Diez hombres armados, con lanzas y redes de cazador.",
+            "en": "Ten armed men, with spears and hunters' nets."
+          }
+        },
+        {
+          "to": "c1_caza",
+          "risk": "medium",
+          "text": {
+            "es": "Salir tú mismo a buscarlo",
+            "en": "Go out and find him yourself"
+          },
+          "description": {
+            "es": "Nadie en Uruk caza mejor que su rey.",
+            "en": "No one in Uruk hunts better than its king."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c1_shamhat",
+      "chapter": 1,
+      "mood": "mysterious",
+      "text": {
+        "es": "—Ve con el cazador —le ordenas a Shamhat, la mujer del templo de Ishtar—. Que ese salvaje aprenda lo que es una ciudad.\n\nShamhat sonríe como quien guarda un secreto y parte hacia la estepa. Pasan los días, y llegan noticias: la mujer esperó junto al abrevadero, y el salvaje se le acercó. Ahora las gacelas huyen de él. Shamhat le enseñó palabras, y en un campamento de pastores le dio pan y cerveza. Dicen que se bañó, que se ungió con aceite, que se vistió como un hombre.\n\nDicen que se llama Enkidu.\n\nEsa noche tardas en dormirte. Cuando por fin cierras los ojos, llegan los sueños.",
+        "en": "\"Go with the hunter,\" you order Shamhat, the woman of Ishtar's temple. \"Let that savage learn what a city is.\"\n\nShamhat smiles like someone keeping a secret and sets out for the steppe. Days pass, and news arrives: the woman waited by the watering hole, and the wild man came to her. Now the gazelles run from him. Shamhat taught him words, and at a shepherds' camp she gave him bread and beer. They say he bathed, that he anointed himself with oil, that he dressed like a man.\n\nThey say his name is Enkidu.\n\nThat night sleep is slow to come. When at last you close your eyes, the dreams come."
+      },
+      "fact": {
+        "es": "En el poema, Enkidu se humaniza de a poco: tras su encuentro con Shamhat, come pan, bebe cerveza, se asea, se unge con aceite y se viste. Para los mesopotámicos, eso separaba a una persona de una bestia.",
+        "en": "In the poem, Enkidu becomes human little by little: after meeting Shamhat he eats bread, drinks beer, washes, anoints himself with oil and puts on clothes. For the Mesopotamians, that was what set a person apart from a beast."
+      },
+      "choices": [
+        {
+          "to": "c2_suenos",
+          "text": {
+            "es": "Dejar que lleguen los sueños",
+            "en": "Let the dreams come"
+          },
+          "description": {
+            "es": "Algo quiere decirte la noche.",
+            "en": "The night has something to tell you."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c1_soldados",
+      "chapter": 1,
+      "mood": "dangerous",
+      "text": {
+        "es": "Diez soldados salen al alba con lanzas y redes. Vuelven al anochecer sin redes, sin lanzas y sin orgullo.\n\n—Rey mío —jadea el capitán—, rompió las redes como si fueran juncos. Nos miró como un toro mira a los perros, y ninguno pudo sostenerle la mirada.\n\nLos cortesanos bajan la vista. Junto a la puerta, el cazador insiste con su consejo: no la fuerza, sino Shamhat, la mujer del templo de Ishtar. Que ella lo atraiga con palabras y lo traiga a la ciudad.\n\nTu orgullo arde. Hasta hoy, nada te había vencido.",
+        "en": "Ten soldiers set out at dawn with spears and nets. They come back at dusk without nets, without spears and without pride.\n\n\"My king,\" the captain gasps, \"he broke the nets as if they were reeds. He looked at us the way a bull looks at dogs, and none of us could hold his gaze.\"\n\nThe courtiers lower their eyes. By the door, the hunter repeats his advice: not force, but Shamhat, the woman of Ishtar's temple. Let her draw him in with words and bring him to the city.\n\nYour pride burns. Until today, nothing had ever beaten you."
+      },
+      "choices": [
+        {
+          "to": "c1_shamhat",
+          "risk": "low",
+          "text": {
+            "es": "Seguir el consejo del cazador",
+            "en": "Follow the hunter's advice"
+          },
+          "description": {
+            "es": "Enviar a Shamhat a la estepa para que lo atraiga a Uruk.",
+            "en": "Send Shamhat to the steppe to lure him to Uruk."
+          }
+        },
+        {
+          "to": "fin_tirano",
+          "risk": "high",
+          "text": {
+            "es": "Mandar al ejército con lanzas",
+            "en": "Send the army with spears"
+          },
+          "description": {
+            "es": "Si diez hombres no bastan, que vayan cien.",
+            "en": "If ten men are not enough, let a hundred go."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c1_caza",
+      "chapter": 1,
+      "mood": "mysterious",
+      "text": {
+        "es": "Sales solo, antes del amanecer, con tu arco y tu lanza. La estepa huele a polvo y a hierba seca. Junto al abrevadero lo ves: un hombre enorme, cubierto de pelo, con el cabello largo como el de una mujer, bebiendo entre las gacelas. Ellas no huyen de él.\n\nÉl levanta la cabeza y te mira. No como una presa mira al cazador, sino como un igual mira a otro. Por un instante, ninguno de los dos se mueve. Después desaparece entre los juncos, tan rápido que dudas de haberlo visto.\n\nTienes una flecha en la cuerda.",
+        "en": "You go out alone, before sunrise, with your bow and your spear. The steppe smells of dust and dry grass. By the watering hole you see him: a huge man, covered in hair, his locks long as a woman's, drinking among the gazelles. They do not run from him.\n\nHe lifts his head and looks at you. Not the way prey looks at a hunter, but the way an equal looks at another. For an instant neither of you moves. Then he vanishes into the reeds, so fast that you doubt you ever saw him.\n\nYou have an arrow on the string."
+      },
+      "fact": {
+        "es": "La Estela de la Caza del León, hallada en Uruk y tallada hacia el 3000 a. C., muestra a un gobernante con barba que mata leones con lanza y arco.",
+        "en": "The Lion Hunt Stele, found at Uruk and carved around 3000 BC, shows a bearded ruler killing lions with a spear and a bow."
+      },
+      "choices": [
+        {
+          "to": "c1_shamhat",
+          "risk": "low",
+          "text": {
+            "es": "Volver y enviar a Shamhat",
+            "en": "Turn back and send Shamhat"
+          },
+          "description": {
+            "es": "Que la mujer del templo lo atraiga a la ciudad, como pidió el cazador.",
+            "en": "Let the temple woman lure him to the city, as the hunter asked."
+          }
+        },
+        {
+          "to": "fin_tirano",
+          "risk": "high",
+          "text": {
+            "es": "Disparar hacia los juncos",
+            "en": "Shoot into the reeds"
+          },
+          "description": {
+            "es": "Nadie desafía con la mirada al rey de Uruk.",
+            "en": "No one stares down the king of Uruk."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_tirano",
+      "chapter": 3,
+      "mood": "tragic",
+      "ending": {
+        "type": "tragic",
+        "title": {
+          "es": "El rey sin igual",
+          "en": "The King Without Equal"
+        }
+      },
+      "text": {
+        "es": "Todo termina antes de que caiga la noche: el hombre salvaje está muerto, y nadie se atreve a pronunciar su nombre delante de ti.\n\nSigues siendo el más fuerte, el más hermoso, el rey sin igual. Y el pueblo de Uruk sigue llorando en los templos, porque lo que los dioses enviaron como respuesta a sus ruegos, tú lo destruiste.\n\nLos años pasan iguales. Construyes, cazas, ordenas. Cuando envejeces, descubres que nadie te quiere lo suficiente como para llorarte. Tu nombre queda en una lista de reyes, pero ningún poema lo canta.",
+        "en": "It is all over before nightfall: the wild man is dead, and no one dares speak his name in front of you.\n\nYou are still the strongest, the most beautiful, the king without equal. And the people of Uruk go on weeping in the temples, because what the gods sent in answer to their prayers, you destroyed.\n\nThe years pass, all alike. You build, you hunt, you command. When you grow old, you discover that no one loves you enough to mourn you. Your name survives on a list of kings, but no poem sings it."
+      },
+      "fact": {
+        "es": "Tras el prólogo, el poema cuenta que el pueblo de Uruk se queja ante los dioses por los abusos de su rey. Para responder, la diosa Aruru crea a Enkidu con un pellizco de arcilla que arroja a la estepa.",
+        "en": "After the prologue, the poem tells how the people of Uruk complain to the gods about their king's abuses. In answer, the goddess Aruru creates Enkidu from a pinch of clay that she throws onto the steppe."
+      },
+      "choices": []
+    },
+    {
+      "id": "c2_suenos",
+      "chapter": 2,
+      "mood": "mysterious",
+      "text": {
+        "es": "Sueñas que caminas por Uruk bajo un cielo lleno de estrellas. De pronto, una de ellas cae a tus pies, pesada como una roca del dios Anu. Intentas levantarla y no puedes; intentas empujarla y no se mueve. La gente de la ciudad se reúne a su alrededor y le besa los pies como a un recién nacido. Y tú, sin saber por qué, la abrazas como se abraza a una esposa.\n\nLuego el sueño cambia: en una calle de Uruk aparece un hacha extraña, y todos se agolpan para verla. También a ella la amas.\n\nDespiertas con el corazón desbocado. Nunca un sueño te había dejado así.",
+        "en": "You dream that you walk through Uruk under a sky full of stars. Suddenly one of them falls at your feet, heavy as a rock from the god Anu. You try to lift it and cannot; you try to push it and it does not move. The people of the city gather around it and kiss its feet as they would a newborn. And you, without knowing why, embrace it the way one embraces a wife.\n\nThen the dream changes: in a street of Uruk a strange axe appears, and everyone crowds in to see it. That too you love.\n\nYou wake with your heart racing. No dream has ever left you like this."
+      },
+      "fact": {
+        "es": "En Mesopotamia los sueños se tomaban como mensajes de los dioses. Había libros de sueños: listas de lo que alguien soñaba y de lo que eso anunciaba.",
+        "en": "In Mesopotamia, dreams were taken as messages from the gods. There were dream books: lists of what a person dreamed and of what it foretold."
+      },
+      "choices": [
+        {
+          "to": "c2_ninsun",
+          "risk": "low",
+          "text": {
+            "es": "Pedirle a tu madre que lo explique",
+            "en": "Ask your mother to explain it"
+          },
+          "description": {
+            "es": "Ninsun es sabia y conoce el lenguaje de los sueños.",
+            "en": "Ninsun is wise and knows the language of dreams."
+          }
+        },
+        {
+          "to": "c2_adivinos",
+          "risk": "medium",
+          "text": {
+            "es": "Consultar a los adivinos del templo",
+            "en": "Consult the temple diviners"
+          },
+          "description": {
+            "es": "Que lean en las entrañas lo que quieren decir los dioses.",
+            "en": "Let them read in the entrails what the gods mean."
+          }
+        },
+        {
+          "to": "c2_olvido",
+          "risk": "medium",
+          "text": {
+            "es": "Olvidarlo y salir de cacería",
+            "en": "Forget it and go hunting"
+          },
+          "description": {
+            "es": "Los sueños son humo; la estepa es real.",
+            "en": "Dreams are smoke; the steppe is real."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2_ninsun",
+      "chapter": 2,
+      "mood": "sacred",
+      "text": {
+        "es": "Tu madre, la diosa Ninsun, te escucha en silencio en su palacio. Cuando terminas, sonríe.\n\n—La estrella que no pudiste levantar es un compañero fuerte, hijo mío. Un amigo que salva a su amigo. Nació en la estepa y lo criaron las montañas. Lo amarás como a una esposa, y nunca te abandonará.\n\nPor primera vez en mucho tiempo, no sabes qué decir. Siempre estuviste solo en la cima, donde nadie podía seguirte. La idea de tener a alguien a tu lado te asusta tanto como te alegra.",
+        "en": "Your mother, the goddess Ninsun, listens in silence in her palace. When you finish, she smiles.\n\n\"The star you could not lift is a mighty companion, my son. A friend who saves his friend. He was born on the steppe and the mountains raised him. You will love him like a wife, and he will never abandon you.\"\n\nFor the first time in a long while, you do not know what to say. You have always been alone at the summit, where no one could follow. The thought of having someone at your side frightens you as much as it gladdens you."
+      },
+      "fact": {
+        "es": "El nombre de Ninsun, la madre de Gilgamesh, significa «Señora Vaca Salvaje». En el poema es una diosa sabia que interpreta los sueños de su hijo.",
+        "en": "The name of Ninsun, Gilgamesh's mother, means \"Lady Wild Cow.\" In the poem she is a wise goddess who interprets her son's dreams."
+      },
+      "choices": [
+        {
+          "to": "c3_boda",
+          "text": {
+            "es": "Esperar al compañero anunciado",
+            "en": "Wait for the promised companion"
+          },
+          "description": {
+            "es": "Si los dioses lo envían, llegará.",
+            "en": "If the gods are sending him, he will come."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2_adivinos",
+      "chapter": 2,
+      "mood": "mysterious",
+      "text": {
+        "es": "En el templo, el adivino sacrifica un cordero y estudia su hígado a la luz de las lámparas. Recorre con el dedo cada pliegue, cada mancha. Al final, no se atreve a mirarte a los ojos.\n\n—Los dioses escucharon un clamor, rey mío. Viene alguien hecho a tu medida, tan fuerte como tú. Viene porque tu pueblo lo pidió.\n\nLas palabras quedan flotando en el aire, cargadas de reproche. Ningún sacerdote se había atrevido nunca a tanto.",
+        "en": "In the temple, the diviner sacrifices a lamb and studies its liver by lamplight. He runs his finger over every fold, every blemish. At the end, he does not dare meet your eyes.\n\n\"The gods heard an outcry, my king. Someone is coming who is your match, as strong as you. He is coming because your people asked for him.\"\n\nThe words hang in the air, heavy with reproach. No priest has ever dared so much."
+      },
+      "fact": {
+        "es": "Los adivinos mesopotámicos leían el futuro en el hígado de ovejas sacrificadas. Se conservan modelos de hígado en arcilla, con anotaciones, que servían para enseñar ese arte.",
+        "en": "Mesopotamian diviners read the future in the livers of sacrificed sheep. Clay models of livers survive, with notes on them, used to teach that art."
+      },
+      "choices": [
+        {
+          "to": "c2_ninsun",
+          "risk": "low",
+          "text": {
+            "es": "Ir a ver a tu madre",
+            "en": "Go and see your mother"
+          },
+          "description": {
+            "es": "Ninsun sabrá si es una amenaza o una promesa.",
+            "en": "Ninsun will know whether this is a threat or a promise."
+          }
+        },
+        {
+          "to": "c3_boda",
+          "risk": "medium",
+          "text": {
+            "es": "Echar al adivino del templo",
+            "en": "Throw the diviner out of the temple"
+          },
+          "description": {
+            "es": "Nadie le habla así al rey de Uruk.",
+            "en": "No one speaks to the king of Uruk like that."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2_olvido",
+      "chapter": 2,
+      "mood": "peaceful",
+      "text": {
+        "es": "Sales a la estepa para olvidar el sueño. Al mediodía llegas a un campamento de pastores. Los hombres duermen tranquilos junto a sus rebaños, algo raro en tierra de lobos.\n\n—Tenemos un guardián —te explica un anciano—. Un hombre enorme que llegó de la estepa con una mujer del templo. Al principio no sabía comer pan; ahora come hasta hartarse. Bebió siete jarras de cerveza y cantó toda la noche. Caza a los lobos y espanta a los leones.\n\nTe cuentan que ya partió hacia Uruk. Que oyó hablar de su rey y no le gustó lo que oyó.",
+        "en": "You go out onto the steppe to forget the dream. At midday you reach a shepherds' camp. The men sleep soundly beside their flocks, a rare thing in wolf country.\n\n\"We have a guardian,\" an old man explains. \"A huge man who came in from the steppe with a woman of the temple. At first he did not know how to eat bread; now he eats his fill. He drank seven jugs of beer and sang all night. He hunts the wolves and scares off the lions.\"\n\nThey tell you he has already left for Uruk. That he heard about its king, and did not like what he heard."
+      },
+      "fact": {
+        "es": "La cerveza era parte de la comida diaria en Mesopotamia. Un himno a Ninkasi, la diosa de la cerveza, copiado hacia el 1800 a. C., describe cómo se elaboraba: se lo considera una de las recetas más antiguas.",
+        "en": "Beer was part of the daily diet in Mesopotamia. A hymn to Ninkasi, the goddess of beer, copied around 1800 BC, describes how it was brewed: it is considered one of the oldest recipes known."
+      },
+      "choices": [
+        {
+          "to": "c3_boda",
+          "risk": "medium",
+          "text": {
+            "es": "Regresar a Uruk antes que él",
+            "en": "Return to Uruk before he does"
+          },
+          "description": {
+            "es": "Si viene a desafiarte, que te encuentre en tu ciudad.",
+            "en": "If he is coming to challenge you, let him find you in your city."
+          }
+        },
+        {
+          "to": "c2_ninsun",
+          "risk": "low",
+          "text": {
+            "es": "Contarle el sueño a tu madre",
+            "en": "Tell your mother about the dream"
+          },
+          "description": {
+            "es": "Quizás el sueño y el guardián son la misma cosa.",
+            "en": "Perhaps the dream and the guardian are the same thing."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3_boda",
+      "chapter": 3,
+      "mood": "dangerous",
+      "text": {
+        "es": "Días después, Uruk celebra una boda. Hay tambores, antorchas y comida en las calles, y tú caminas hacia la casa de los novios como siempre, seguro de que la puerta se abrirá para ti.\n\nPero en el umbral hay un hombre. Es casi tan alto como tú, más ancho de hombros, con el cabello largo cayéndole sobre la espalda. Apoya el pie contra la puerta y no se mueve.\n\nLa multitud murmura: —Es igual a Gilgamesh. Más bajo, pero de hueso más fuerte.\n\nTe mira sin miedo, como nadie te ha mirado nunca.\n\n—No pasarás —dice.",
+        "en": "Days later, Uruk celebrates a wedding. There are drums, torches and food in the streets, and you walk toward the house of the bride and groom as you always do, certain that the door will open for you.\n\nBut on the threshold stands a man. He is almost as tall as you, broader in the shoulders, with long hair falling down his back. He braces his foot against the door and does not move.\n\nThe crowd murmurs: \"He is just like Gilgamesh. Shorter, but stronger in the bone.\"\n\nHe looks at you without fear, as no one has ever looked at you.\n\n\"You go no further,\" he says."
+      },
+      "fact": {
+        "es": "Las tablillas escritas más antiguas de Mesopotamia, de hacia el 3200 a. C., aparecieron en Uruk, en el recinto del templo de Eanna. Anotan sobre todo cereal, cerveza y ganado.",
+        "en": "The oldest written tablets of Mesopotamia, from around 3200 BC, were found at Uruk, in the precinct of the Eanna temple. They record mostly grain, beer and livestock."
+      },
+      "choices": [
+        {
+          "to": "c3_lucha",
+          "risk": "high",
+          "text": {
+            "es": "Apartarlo por la fuerza",
+            "en": "Force him aside"
+          },
+          "description": {
+            "es": "Nadie le cierra una puerta al rey.",
+            "en": "No one shuts a door on the king."
+          }
+        },
+        {
+          "to": "c3_palabras",
+          "risk": "low",
+          "text": {
+            "es": "Preguntarle quién es",
+            "en": "Ask him who he is"
+          },
+          "description": {
+            "es": "Antes de luchar, quieres saber a quién te enfrentas.",
+            "en": "Before you fight, you want to know whom you are facing."
+          }
+        },
+        {
+          "to": "c3_guardia",
+          "risk": "medium",
+          "text": {
+            "es": "Llamar a tu guardia",
+            "en": "Call your guards"
+          },
+          "description": {
+            "es": "Que tus soldados lo saquen del camino.",
+            "en": "Let your soldiers clear him out of the way."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3_lucha",
+      "chapter": 3,
+      "mood": "epic",
+      "text": {
+        "es": "Te lanzas sobre él y chocan como dos toros salvajes. Los marcos de la puerta se astillan, la pared tiembla, las antorchas ruedan por el suelo. Por primera vez en tu vida, alguien te devuelve cada golpe con la misma fuerza.\n\nLuchan hasta que la multitud enmudece. Al final, con una rodilla en tierra, logras derribarlo... y en ese mismo instante tu furia se apaga. Él jadea en el polvo y te mira sin odio.\n\n—Tu madre te hizo único entre los hombres —dice—. Enlil te dio la realeza.\n\nTienes al hombre más fuerte del mundo a tus pies.",
+        "en": "You hurl yourself at him and the two of you collide like wild bulls. The doorframes splinter, the wall shakes, the torches roll across the ground. For the first time in your life, someone returns every blow with the same strength.\n\nYou fight until the crowd falls silent. At last, dropping to one knee, you manage to throw him... and in that very instant your fury goes out. He pants in the dust and looks at you without hatred.\n\n\"Your mother made you unique among men,\" he says. \"Enlil gave you the kingship.\"\n\nThe strongest man in the world lies at your feet."
+      },
+      "choices": [
+        {
+          "to": "c4_amistad",
+          "risk": "low",
+          "text": {
+            "es": "Tenderle la mano",
+            "en": "Offer him your hand"
+          },
+          "description": {
+            "es": "Por fin alguien está a tu altura.",
+            "en": "At last someone is your equal."
+          }
+        },
+        {
+          "to": "fin_tirano",
+          "risk": "high",
+          "text": {
+            "es": "Rematarlo en el suelo",
+            "en": "Finish him on the ground"
+          },
+          "description": {
+            "es": "Un rey no deja vivo a quien lo desafía.",
+            "en": "A king does not spare the man who defies him."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3_palabras",
+      "chapter": 3,
+      "mood": "mysterious",
+      "text": {
+        "es": "—¿Quién eres? —preguntas.\n\n—Me llamo Enkidu. Los dioses me hicieron de arcilla en la estepa, y una mujer del templo me enseñó a ser hombre. Vine porque escuché lo que haces con tu pueblo. Alguien tenía que detenerte.\n\nNadie te había hablado así jamás. La multitud contiene la respiración, esperando tu golpe. Pero en sus ojos no hay arrogancia: hay algo parecido a la tristeza, y algo parecido a la curiosidad. Te das cuenta de que te está midiendo, igual que tú a él.",
+        "en": "\"Who are you?\" you ask.\n\n\"My name is Enkidu. The gods made me from clay on the steppe, and a woman of the temple taught me to be a man. I came because I heard what you do to your people. Someone had to stop you.\"\n\nNo one has ever spoken to you like this. The crowd holds its breath, waiting for your blow. But there is no arrogance in his eyes: there is something like sadness, and something like curiosity. You realize he is taking your measure, just as you are taking his."
+      },
+      "choices": [
+        {
+          "to": "c3_lucha",
+          "risk": "medium",
+          "text": {
+            "es": "Aceptar su desafío",
+            "en": "Accept his challenge"
+          },
+          "description": {
+            "es": "Que la fuerza decida quién tiene razón.",
+            "en": "Let strength decide who is right."
+          }
+        },
+        {
+          "to": "c4_amistad",
+          "risk": "low",
+          "text": {
+            "es": "Escucharlo y dejar la boda en paz",
+            "en": "Hear him out and spare the wedding"
+          },
+          "description": {
+            "es": "Por esta vez, la puerta quedará cerrada para ti.",
+            "en": "This once, the door will stay shut to you."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3_guardia",
+      "chapter": 3,
+      "mood": "dangerous",
+      "text": {
+        "es": "Tus guardias se lanzan sobre el desconocido. Él los toma de dos en dos y los arroja contra el suelo como si fueran sacos de cebada. En pocos instantes, todos están tirados en el polvo, gimiendo.\n\nEntonces oyes algo que nunca se había oído en Uruk: risas. La multitud se ríe del rey que necesita soldados para cruzar una puerta.\n\nEl desconocido no se ríe. Solo te espera.",
+        "en": "Your guards rush the stranger. He takes them two at a time and flings them to the ground like sacks of barley. In a few moments they are all sprawled in the dust, groaning.\n\nThen you hear something never before heard in Uruk: laughter. The crowd is laughing at a king who needs soldiers to get through a door.\n\nThe stranger does not laugh. He only waits for you."
+      },
+      "choices": [
+        {
+          "to": "c3_lucha",
+          "text": {
+            "es": "Enfrentarlo tú mismo",
+            "en": "Face him yourself"
+          },
+          "description": {
+            "es": "Ya no hay forma de evitarlo.",
+            "en": "There is no avoiding it now."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c4_amistad",
+      "chapter": 4,
+      "mood": "peaceful",
+      "text": {
+        "es": "Esa noche nace una amistad que ninguno de los dos esperaba. Se abrazan como hermanos, y tu madre Ninsun recibe a Enkidu en su palacio como a un hijo. Por primera vez dejas en paz las bodas de tu pueblo; por primera vez alguien te dice la verdad a la cara, y te ríes en lugar de enfurecerte.\n\nPero la calma te inquieta. Una mañana, de pie sobre las murallas, le hablas a Enkidu del Bosque de los Cedros, donde vive Humbaba, el guardián que puso Enlil.\n\n—Iremos, lo mataremos y talaremos el cedro más alto. Haremos un nombre que dure para siempre.\n\nEnkidu palidece. Él conoce ese bosque.",
+        "en": "That night a friendship is born that neither of you expected. You embrace like brothers, and your mother Ninsun welcomes Enkidu into her palace as a son. For the first time you leave your people's weddings in peace; for the first time someone tells you the truth to your face, and you laugh instead of raging.\n\nBut the calm unsettles you. One morning, standing on the walls, you speak to Enkidu of the Cedar Forest, where Humbaba lives, the guardian whom Enlil set there.\n\n\"We will go, we will kill him and we will fell the tallest cedar. We will make a name that lasts forever.\"\n\nEnkidu turns pale. He knows that forest."
+      },
+      "fact": {
+        "es": "La Lista Real Sumeria nombra a Gilgamesh como rey de Uruk y le atribuye un reinado de 126 años. Si existió, habría gobernado hacia el 2700 a. C.",
+        "en": "The Sumerian King List names Gilgamesh as king of Uruk and credits him with a reign of 126 years. If he existed, he would have ruled around 2700 BC."
+      },
+      "choices": [
+        {
+          "to": "c5_camino",
+          "risk": "high",
+          "text": {
+            "es": "Partir hacia el Bosque de los Cedros",
+            "en": "Set out for the Cedar Forest"
+          },
+          "description": {
+            "es": "La gloria no espera a los que dudan.",
+            "en": "Glory does not wait for those who hesitate."
+          }
+        },
+        {
+          "to": "c4_miedo",
+          "risk": "low",
+          "text": {
+            "es": "Escuchar el miedo de Enkidu",
+            "en": "Listen to Enkidu's fear"
+          },
+          "description": {
+            "es": "Él vivió en la estepa; sabe cosas que tú no.",
+            "en": "He lived on the steppe; he knows things you do not."
+          }
+        },
+        {
+          "to": "c4_ancianos",
+          "risk": "medium",
+          "text": {
+            "es": "Pedir consejo a los ancianos",
+            "en": "Ask the elders for counsel"
+          },
+          "description": {
+            "es": "Que la asamblea de Uruk diga si es una locura.",
+            "en": "Let the assembly of Uruk say whether this is madness."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c4_miedo",
+      "chapter": 4,
+      "mood": "mysterious",
+      "text": {
+        "es": "—Amigo mío —dice Enkidu en voz baja—, cuando vagaba con las bestias, me acerqué a ese bosque. El grito de Humbaba es el diluvio. Su boca es fuego. Su aliento es la muerte. Enlil lo puso allí para asustar a los hombres.\n\nLo miras largo rato. Luego le respondes con lo que sientes desde hace años:\n\n—¿Quién puede subir al cielo? Solo los dioses viven para siempre. Los días del hombre están contados, y todo lo que hace es viento. Si caigo, al menos habré dejado un nombre.\n\nEnkidu no contesta. Espera tu decisión.",
+        "en": "\"My friend,\" Enkidu says quietly, \"when I roamed with the beasts, I came near that forest. Humbaba's cry is the flood. His mouth is fire. His breath is death. Enlil set him there to frighten men.\"\n\nYou look at him for a long time. Then you answer with what you have felt for years:\n\n\"Who can climb up to heaven? Only the gods live forever. The days of man are numbered, and all he does is wind. If I fall, at least I will have left a name.\"\n\nEnkidu does not reply. He waits for your decision."
+      },
+      "choices": [
+        {
+          "to": "c4_ancianos",
+          "risk": "medium",
+          "text": {
+            "es": "Convencerlo de ir juntos",
+            "en": "Persuade him to come with you"
+          },
+          "description": {
+            "es": "Con él a tu lado, ningún guardián es invencible.",
+            "en": "With him at your side, no guardian is invincible."
+          }
+        },
+        {
+          "to": "fin_paz",
+          "risk": "low",
+          "text": {
+            "es": "Quedarte en Uruk con tu amigo",
+            "en": "Stay in Uruk with your friend"
+          },
+          "description": {
+            "es": "Hay otras formas de vivir además de la gloria.",
+            "en": "There are other ways to live besides glory."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c4_ancianos",
+      "chapter": 4,
+      "mood": "sacred",
+      "text": {
+        "es": "La asamblea de Uruk te escucha en silencio. Al final, el más anciano habla:\n\n—Eres joven, Gilgamesh, y tu corazón te arrastra. No sabes lo que buscas. Pero si has de ir, deja que Enkidu vaya delante: él conoce el camino, y quien va delante protege a su compañero.\n\nLos herreros funden hachas enormes y espadas nuevas. Tu madre sube al techo de su palacio, quema incienso y le reza a Shamash, el Sol, para que los proteja. Luego cuelga un amuleto del cuello de Enkidu y le pide que te cuide.\n\nTodo está listo para partir.",
+        "en": "The assembly of Uruk hears you out in silence. At last the eldest speaks:\n\n\"You are young, Gilgamesh, and your heart carries you away. You do not know what you seek. But if you must go, let Enkidu walk ahead: he knows the way, and the one who goes in front protects his companion.\"\n\nThe smiths cast enormous axes and new swords. Your mother climbs to the roof of her palace, burns incense and prays to Shamash, the Sun, to protect you. Then she hangs an amulet around Enkidu's neck and asks him to look after you.\n\nEverything is ready for the journey."
+      },
+      "fact": {
+        "es": "Shamash, el dios Sol, era también el dios de la justicia y el protector de los viajeros. En la estela del Código de Hammurabi, el rey aparece de pie ante él, que le entrega los símbolos del poder.",
+        "en": "Shamash, the sun god, was also the god of justice and the protector of travelers. On the stele of the Code of Hammurabi, the king stands before the god, who hands him the symbols of power."
+      },
+      "choices": [
+        {
+          "to": "c5_camino",
+          "risk": "low",
+          "text": {
+            "es": "Partir con la bendición de Shamash",
+            "en": "Set out with Shamash's blessing"
+          },
+          "description": {
+            "es": "El Sol vigilará el camino.",
+            "en": "The Sun will watch over the road."
+          }
+        },
+        {
+          "to": "fin_paz",
+          "risk": "low",
+          "text": {
+            "es": "Renunciar a la expedición",
+            "en": "Give up the expedition"
+          },
+          "description": {
+            "es": "Quizás los ancianos tienen razón.",
+            "en": "Perhaps the elders are right."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_paz",
+      "chapter": 4,
+      "mood": "peaceful",
+      "ending": {
+        "type": "alternative",
+        "title": {
+          "es": "Una vida sin leyenda",
+          "en": "A Life Without a Legend"
+        }
+      },
+      "text": {
+        "es": "No van al bosque. Los cedros siguen creciendo lejos, y Humbaba sigue cuidándolos sin que nadie lo moleste.\n\nEn cambio, gobiernas. Con Enkidu a tu lado aprendes a escuchar a tu pueblo: reparas los canales, abres los graneros en los años malos, dejas las bodas en paz. Uruk prospera, y los templos se llenan de ofrendas de gratitud en lugar de lamentos.\n\nEnvejecen juntos. Una tarde, sentados en las murallas, Enkidu te pregunta si te arrepientes. Miras la ciudad dorada bajo el sol y no sabes qué responder.\n\nNadie escribirá un poema sobre ustedes. Pero esta noche, en miles de casas de Uruk, hay pan.",
+        "en": "You do not go to the forest. The cedars go on growing far away, and Humbaba goes on guarding them with no one to trouble him.\n\nInstead, you rule. With Enkidu at your side you learn to listen to your people: you repair the canals, open the granaries in the bad years, leave the weddings in peace. Uruk prospers, and the temples fill with offerings of thanks instead of laments.\n\nYou grow old together. One evening, sitting on the walls, Enkidu asks whether you have any regrets. You look at the golden city beneath the sun and do not know what to answer.\n\nNo one will write a poem about the two of you. But tonight, in thousands of houses in Uruk, there is bread."
+      },
+      "fact": {
+        "es": "La versión babilónica estándar, la más completa, empieza con las palabras «Aquel que vio lo profundo»: celebra al rey no solo por su fuerza, sino por lo que aprendió en sus viajes.",
+        "en": "The Standard Babylonian version, the most complete, opens with the words \"He who saw the Deep\": it celebrates the king not only for his strength, but for what he learned on his journeys."
+      },
+      "choices": []
+    },
+    {
+      "id": "c5_camino",
+      "chapter": 5,
+      "mood": "epic",
+      "text": {
+        "es": "Caminan cincuenta leguas por día. Cada noche cavan un pozo y suben a una montaña para ofrecer harina a los dioses, y cada noche tú sueñas cosas terribles: montañas que se derrumban, fuego que cae del cielo. Cada mañana, Enkidu te dice que el sueño es bueno, que anuncia victoria. No sabes si le crees, pero te ayuda.\n\nAl fin llegan. Los cedros se alzan más altos que cualquier templo, y el aire huele a resina. El bosque está vivo: pájaros, cigarras y monos gritan entre las ramas. Un sendero ancho y limpio se interna en la sombra.\n\nEs el camino de Humbaba.",
+        "en": "You walk fifty leagues a day. Every night you dig a well and climb a mountain to offer flour to the gods, and every night you dream terrible things: mountains collapsing, fire falling from the sky. Every morning Enkidu tells you the dream is good, that it foretells victory. You do not know whether to believe him, but it helps.\n\nAt last you arrive. The cedars rise taller than any temple, and the air smells of resin. The forest is alive: birds, cicadas and monkeys shriek among the branches. A wide, clean path leads into the shade.\n\nIt is Humbaba's road."
+      },
+      "fact": {
+        "es": "En 2011, un museo de Suleimaniya, en Irak, adquirió una tablilla con unos 20 versos desconocidos del poema: describen el Bosque de los Cedros lleno de pájaros, cigarras y monos chillando.",
+        "en": "In 2011, a museum in Sulaymaniyah, Iraq, acquired a tablet with some 20 unknown lines of the poem: they describe the Cedar Forest full of birds, cicadas and shrieking monkeys."
+      },
+      "choices": [
+        {
+          "to": "c5_grito",
+          "risk": "high",
+          "text": {
+            "es": "Gritar tu nombre para desafiarlo",
+            "en": "Shout your name to challenge him"
+          },
+          "description": {
+            "es": "Que el guardián sepa quién ha venido.",
+            "en": "Let the guardian know who has come."
+          }
+        },
+        {
+          "to": "c5_sendero",
+          "risk": "medium",
+          "text": {
+            "es": "Seguir su sendero en silencio",
+            "en": "Follow his path in silence"
+          },
+          "description": {
+            "es": "Encontrarlo antes de que él los encuentre.",
+            "en": "Find him before he finds you."
+          }
+        },
+        {
+          "to": "c5_tala",
+          "risk": "high",
+          "text": {
+            "es": "Talar el primer cedro",
+            "en": "Fell the first cedar"
+          },
+          "description": {
+            "es": "Que el ruido del hacha sea tu desafío.",
+            "en": "Let the sound of the axe be your challenge."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5_grito",
+      "chapter": 5,
+      "mood": "dangerous",
+      "text": {
+        "es": "—¡Soy Gilgamesh, rey de Uruk! —gritas, y tu voz rebota entre los troncos.\n\nEl bosque enmudece de golpe. Ni un pájaro, ni una cigarra. Luego, desde muy lejos, llega la respuesta: un rugido que hace temblar el suelo y doblarse las copas de los cedros, como si el mismo diluvio bajara rodando por la montaña.\n\nEnkidu te agarra del brazo. —Juntos —dice—. Dos que van juntos no caen.\n\nPero tu sangre hierve, y la voz viene de allá adelante.",
+        "en": "\"I am Gilgamesh, king of Uruk!\" you shout, and your voice echoes among the trunks.\n\nThe forest falls silent all at once. Not a bird, not a cicada. Then, from very far away, the answer comes: a roar that makes the ground tremble and bends the crowns of the cedars, as if the flood itself were rolling down the mountain.\n\nEnkidu grabs your arm. \"Together,\" he says. \"Two who go together do not fall.\"\n\nBut your blood is boiling, and the voice is coming from up ahead."
+      },
+      "choices": [
+        {
+          "to": "c6_humbaba",
+          "risk": "low",
+          "text": {
+            "es": "Esperarlo junto a Enkidu",
+            "en": "Wait for him beside Enkidu"
+          },
+          "description": {
+            "es": "Que sea él quien venga a ustedes.",
+            "en": "Let him be the one who comes to you."
+          }
+        },
+        {
+          "to": "fin_bosque",
+          "risk": "high",
+          "text": {
+            "es": "Correr solo hacia la voz",
+            "en": "Run alone toward the voice"
+          },
+          "description": {
+            "es": "El primero en golpear gana.",
+            "en": "The first to strike wins."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_bosque",
+      "chapter": 5,
+      "mood": "tragic",
+      "ending": {
+        "type": "tragic",
+        "title": {
+          "es": "Un nombre perdido entre los cedros",
+          "en": "A Name Lost Among the Cedars"
+        }
+      },
+      "text": {
+        "es": "Corres entre los troncos, más rápido de lo que Enkidu puede seguirte. La voz está cada vez más cerca. Entonces el aire se vuelve pesado, y los siete resplandores de Humbaba caen sobre ti como un manto de fuego frío. No llegas a levantar el hacha.\n\nEnkidu te busca durante días. Solo encuentra tu espada, clavada al pie de un cedro.\n\nEn Uruk te lloran, y después te olvidan. El bosque sigue intacto, y su guardián sigue esperando al próximo que crea que la gloria se gana solo.\n\nEl nombre que querías hacer eterno se pierde entre las hojas.",
+        "en": "You run between the trunks, faster than Enkidu can follow. The voice draws closer and closer. Then the air turns heavy, and Humbaba's seven radiances fall over you like a cloak of cold fire. You never get to raise the axe.\n\nEnkidu searches for you for days. He finds only your sword, driven into the ground at the foot of a cedar.\n\nIn Uruk they mourn you, and then they forget you. The forest stands untouched, and its guardian goes on waiting for the next one who believes glory is won alone.\n\nThe name you wanted to make eternal is lost among the leaves."
+      },
+      "fact": {
+        "es": "Las primeras historias de Gilgamesh son poemas sumerios; las copias que se conservan son de hacia el 1800 a. C. El de Gilgamesh y Huwawa (el nombre sumerio de Humbaba) se copiaba en las escuelas de escribas.",
+        "en": "The earliest stories of Gilgamesh are Sumerian poems; the surviving copies date from around 1800 BC. The one about Gilgamesh and Huwawa (the Sumerian name of Humbaba) was copied in the scribal schools."
+      },
+      "choices": []
+    },
+    {
+      "id": "c5_sendero",
+      "chapter": 5,
+      "mood": "mysterious",
+      "text": {
+        "es": "Avanzan sin hablar por el sendero de Humbaba. Es ancho y liso, cuidado como el camino de un dios. Los cedros son tan altos que la luz llega verde y quieta, y la resina se pega a los dedos. Cada tanto, Enkidu se detiene a escuchar.\n\nDe pronto te das cuenta: ya no se oye ningún pájaro. Algo enorme se mueve entre los árboles, sin apuro, como quien está en su casa.\n\nEstá en su casa.",
+        "en": "You advance without a word along Humbaba's path. It is wide and smooth, kept like the road of a god. The cedars are so tall that the light comes down green and still, and the resin sticks to your fingers. Every so often, Enkidu stops to listen.\n\nSuddenly you realize: there is no birdsong anymore. Something enormous is moving among the trees, unhurried, like someone at home.\n\nHe is at home."
+      },
+      "choices": [
+        {
+          "to": "c6_humbaba",
+          "text": {
+            "es": "Prepararte para enfrentarlo",
+            "en": "Prepare to face him"
+          },
+          "description": {
+            "es": "El guardián ya sabe que están aquí.",
+            "en": "The guardian already knows you are here."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5_tala",
+      "chapter": 5,
+      "mood": "epic",
+      "text": {
+        "es": "Levantas el hacha y la descargas contra el tronco del cedro más cercano. El golpe resuena como un trueno. Uno, dos, diez golpes; Enkidu se te une, y el árbol cruje y se desploma con un estruendo que debe oírse hasta en Uruk.\n\nDesde el corazón del bosque llega un rugido.\n\n—¿Quién ha entrado en mi bosque? —dice una voz que parece salir de la tierra—. ¿Quién ha tocado mis árboles?",
+        "en": "You raise the axe and bring it down on the trunk of the nearest cedar. The blow rings out like thunder. One, two, ten strokes; Enkidu joins you, and the tree groans and crashes down with a din that must carry all the way to Uruk.\n\nFrom the heart of the forest comes a roar.\n\n\"Who has entered my forest?\" says a voice that seems to rise out of the earth. \"Who has touched my trees?\""
+      },
+      "fact": {
+        "es": "En el sur de Mesopotamia crecían palmeras, pero faltaba buena madera para construir. El cedro llegaba de montañas lejanas, como las del Líbano, y se usaba sobre todo en templos y palacios.",
+        "en": "In southern Mesopotamia palm trees grew, but good timber for building was scarce. Cedar came from distant mountains, such as those of Lebanon, and was used above all in temples and palaces."
+      },
+      "choices": [
+        {
+          "to": "c6_humbaba",
+          "text": {
+            "es": "Esperar al guardián con el hacha",
+            "en": "Wait for the guardian, axe in hand"
+          },
+          "description": {
+            "es": "Ya no hay vuelta atrás.",
+            "en": "There is no turning back now."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6_humbaba",
+      "chapter": 6,
+      "mood": "dangerous",
+      "text": {
+        "es": "Humbaba aparece entre los cedros. Es inmenso, y su rostro no se parece a ninguno: pliegues y vueltas, como entrañas enrolladas. Lo envuelven siete resplandores, siete auras de terror que hacen vibrar el aire.\n\nMira a Enkidu y se ríe. —Hijo de un pez, que no conoce a su padre. Te vi cuando eras pequeño y vagabas con las bestias. ¿Y ahora traes a este rey para que me mate?\n\nLuego te mira a ti, y sientes que las piernas se te vuelven de agua.\n\n—Gilgamesh —dice Enkidu a tu lado—, una cuerda de tres hilos no se corta. No retrocedas ahora.",
+        "en": "Humbaba appears among the cedars. He is immense, and his face is like no other: folds and coils, like coiled entrails. Seven radiances surround him, seven auras of terror that make the air vibrate.\n\nHe looks at Enkidu and laughs. \"Son of a fish, who never knew his father. I saw you when you were small, roaming with the beasts. And now you bring this king to kill me?\"\n\nThen he looks at you, and you feel your legs turn to water.\n\n\"Gilgamesh,\" says Enkidu at your side, \"a three-stranded rope cannot be cut. Do not back down now.\""
+      },
+      "fact": {
+        "es": "Se conservan máscaras de arcilla de Humbaba con el rostro hecho de intestinos enrollados. Se relacionan con la adivinación, que leía el futuro en las entrañas de los animales.",
+        "en": "Clay masks of Humbaba survive, with a face made of coiled intestines. They are linked to divination, which read the future in the entrails of animals."
+      },
+      "choices": [
+        {
+          "to": "c6_vientos",
+          "risk": "low",
+          "text": {
+            "es": "Rogar a Shamash por ayuda",
+            "en": "Beg Shamash for help"
+          },
+          "description": {
+            "es": "El Sol prometió vigilar el camino.",
+            "en": "The Sun promised to watch over the road."
+          }
+        },
+        {
+          "to": "c6_ataque",
+          "risk": "high",
+          "text": {
+            "es": "Atacarlo junto a Enkidu",
+            "en": "Attack him alongside Enkidu"
+          },
+          "description": {
+            "es": "Dos hachas contra un monstruo.",
+            "en": "Two axes against one monster."
+          }
+        },
+        {
+          "to": "c6_trato",
+          "risk": "medium",
+          "text": {
+            "es": "Ofrecerle regalos a cambio de paso",
+            "en": "Offer him gifts in exchange for passage"
+          },
+          "description": {
+            "es": "Quizás el guardián prefiere un trato a una batalla.",
+            "en": "Perhaps the guardian prefers a bargain to a battle."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6_vientos",
+      "chapter": 6,
+      "mood": "sacred",
+      "text": {
+        "es": "Levantas los ojos al cielo y llamas a Shamash con lágrimas en la cara. El Sol responde. Desde todos los rincones del mundo llegan los vientos: el del sur y el del norte, el del este y el del oeste, el torbellino, la tormenta, el viento helado, el que arrastra la arena. Trece vientos se lanzan contra Humbaba y lo aplastan contra el suelo.\n\nEl guardián ruge y se debate, pero no puede avanzar ni retroceder. Sus resplandores parpadean como lámparas en una corriente de aire.\n\nPor fin está a tu alcance.",
+        "en": "You lift your eyes to the sky and call on Shamash with tears on your face. The Sun answers. From every corner of the world the winds come: the south wind and the north, the east and the west, the whirlwind, the storm, the icy wind, the one that drags the sand. Thirteen winds hurl themselves at Humbaba and pin him to the ground.\n\nThe guardian roars and thrashes, but he can neither advance nor retreat. His radiances flicker like lamps in a draft.\n\nAt last he is within your reach."
+      },
+      "fact": {
+        "es": "«Una cuerda de tres hilos no se corta» es un proverbio de los relatos del Bosque de los Cedros: en la versión sumeria lo dice Gilgamesh para animar a Enkidu. Una idea casi igual aparece en el Eclesiastés bíblico.",
+        "en": "\"A three-stranded rope cannot be cut\" is a proverb from the Cedar Forest stories: in the Sumerian version, Gilgamesh says it to encourage Enkidu. An almost identical idea appears in the biblical book of Ecclesiastes."
+      },
+      "choices": [
+        {
+          "to": "c6_suplica",
+          "text": {
+            "es": "Acercarte al guardián vencido",
+            "en": "Approach the beaten guardian"
+          },
+          "description": {
+            "es": "Ahora la decisión es tuya.",
+            "en": "Now the decision is yours."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6_ataque",
+      "chapter": 6,
+      "mood": "dangerous",
+      "text": {
+        "es": "Se lanzan contra él al mismo tiempo. Tu hacha choca con los resplandores y rebota como si golpeara un muro de bronce. Humbaba barre el aire con el brazo, y Enkidu sale despedido contra un tronco. La tierra se abre bajo los pasos del guardián.\n\nEntonces, en el peor momento, sientes el calor del Sol en la nuca. Shamash no los abandonó: los vientos del cielo bajan rugiendo entre los cedros y caen sobre Humbaba, sujetándolo contra el suelo.\n\nEnkidu se levanta, sangrando, con el hacha todavía en la mano.",
+        "en": "You and Enkidu charge him at the same time. Your axe strikes the radiances and bounces off as if it had hit a wall of bronze. Humbaba sweeps the air with his arm, and Enkidu is flung against a trunk. The earth splits under the guardian's steps.\n\nThen, at the worst moment, you feel the Sun's warmth on the back of your neck. Shamash has not abandoned you: the winds of heaven come roaring down through the cedars and fall upon Humbaba, holding him against the ground.\n\nEnkidu gets up, bleeding, the axe still in his hand."
+      },
+      "choices": [
+        {
+          "to": "c6_suplica",
+          "text": {
+            "es": "Rodear al guardián caído",
+            "en": "Close in on the fallen guardian"
+          },
+          "description": {
+            "es": "Ahora la decisión es tuya.",
+            "en": "Now the decision is yours."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6_trato",
+      "chapter": 6,
+      "mood": "mysterious",
+      "text": {
+        "es": "—No vengo a pelear —le dices—. Vengo a traerte regalos.\n\nHumbaba inclina la cabeza, desconfiado. Le ofreces harina fina, agua fresca en odres, sandalias grandes para sus pies, piedras preciosas de las montañas. Y por cada regalo que acepta, el guardián se quita uno de sus siete resplandores y te lo entrega.\n\nCuando se apaga el último, Humbaba ya no es un monstruo envuelto en fuego. Es solo una criatura grande y vieja, de pie en su bosque, desarmada. Demasiado tarde, entiende lo que hizo.",
+        "en": "\"I have not come to fight,\" you tell him. \"I have come to bring you gifts.\"\n\nHumbaba tilts his head, suspicious. You offer him fine flour, fresh water in skins, great sandals for his feet, precious stones from the mountains. And for every gift he accepts, the guardian removes one of his seven radiances and hands it to you.\n\nWhen the last one goes out, Humbaba is no longer a monster wrapped in fire. He is just a large old creature, standing in his forest, defenseless. Too late, he understands what he has done."
+      },
+      "fact": {
+        "es": "En el relato sumerio más antiguo, Gilgamesh engaña a Huwawa con regalos y le quita, uno por uno, sus siete resplandores.",
+        "en": "In the oldest Sumerian tale, Gilgamesh tricks Huwawa with gifts and strips him, one by one, of his seven radiances."
+      },
+      "choices": [
+        {
+          "to": "c6_suplica",
+          "text": {
+            "es": "Dar un paso hacia él",
+            "en": "Take a step toward him"
+          },
+          "description": {
+            "es": "Ahora la decisión es tuya.",
+            "en": "Now the decision is yours."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6_suplica",
+      "chapter": 6,
+      "mood": "tragic",
+      "text": {
+        "es": "El guardián del bosque está a tu merced. Se arrodilla ante ti, y su voz terrible se vuelve casi un ruego.\n\n—Gilgamesh, déjame vivir. Seré tu siervo. Cuidaré estos cedros para ti y talaré para tu palacio los que quieras.\n\nDudas. Pero Enkidu se acerca, con la cara dura como una piedra.\n\n—No lo escuches, amigo mío. Mátalo antes de que Enlil se entere, antes de que los dioses se enfurezcan.\n\nHumbaba lo mira con odio. —Que no llegues a viejo, Enkidu. Que entre tus amigos no haya nadie que te entierre.\n\nTodos esperan tu respuesta.",
+        "en": "The guardian of the forest is at your mercy. He kneels before you, and his terrible voice becomes almost a plea.\n\n\"Gilgamesh, let me live. I will be your servant. I will tend these cedars for you and fell whichever ones you want for your palace.\"\n\nYou hesitate. But Enkidu steps closer, his face hard as stone.\n\n\"Do not listen to him, my friend. Kill him before Enlil finds out, before the gods grow angry.\"\n\nHumbaba glares at him with hatred. \"May you never grow old, Enkidu. May there be no one among your friends to bury you.\"\n\nEveryone waits for your answer."
+      },
+      "choices": [
+        {
+          "to": "c7_cedro",
+          "risk": "high",
+          "text": {
+            "es": "Matarlo como pide Enkidu",
+            "en": "Kill him, as Enkidu asks"
+          },
+          "description": {
+            "es": "Un guardián vivo es un enemigo para siempre.",
+            "en": "A living guardian is an enemy forever."
+          }
+        },
+        {
+          "to": "fin_perdon",
+          "risk": "medium",
+          "text": {
+            "es": "Perdonarle la vida",
+            "en": "Spare his life"
+          },
+          "description": {
+            "es": "Ya demostraste lo que querías demostrar.",
+            "en": "You have already proved what you wanted to prove."
+          }
+        },
+        {
+          "to": "c7_cedro",
+          "risk": "high",
+          "text": {
+            "es": "Dejar que Enkidu decida",
+            "en": "Let Enkidu decide"
+          },
+          "description": {
+            "es": "Él conoce este bosque mejor que tú.",
+            "en": "He knows this forest better than you."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_perdon",
+      "chapter": 6,
+      "mood": "peaceful",
+      "ending": {
+        "type": "alternative",
+        "title": {
+          "es": "El guardián perdonado",
+          "en": "The Guardian Spared"
+        }
+      },
+      "text": {
+        "es": "—Vive —le dices a Humbaba—. Que nadie diga que el rey de Uruk no conoce la piedad.\n\nEnkidu te mira largo rato, preocupado, y al final asiente. El guardián se levanta despacio y les abre el camino de regreso. No se llevan ningún cedro; se llevan algo más raro: una historia que nadie va a creer.\n\nEn Uruk, algunos se burlan del rey que volvió con las manos vacías. No te importa. Los dioses no tienen nada que reprocharles, y Enkidu envejece a tu lado, con el cabello cada vez más gris y la risa de siempre.\n\nA veces, de noche, sueñas con un bosque intacto. Es un buen sueño.",
+        "en": "\"Live,\" you tell Humbaba. \"Let no one say the king of Uruk knows no mercy.\"\n\nEnkidu looks at you for a long time, worried, and in the end he nods. The guardian rises slowly and opens the way home for you. You take no cedar with you; you take something rarer: a story no one is going to believe.\n\nIn Uruk, some mock the king who came back empty-handed. You do not care. The gods have nothing to hold against you, and Enkidu grows old at your side, his hair grayer each year and his laugh unchanged.\n\nSometimes, at night, you dream of an untouched forest. It is a good dream."
+      },
+      "fact": {
+        "es": "En el poema, Gilgamesh duda antes de matar al guardián y es Enkidu quien lo convence. Esa muerte es una de las razones por las que los dioses deciden castigarlos.",
+        "en": "In the poem, Gilgamesh hesitates before killing the guardian, and it is Enkidu who persuades him. That death is one of the reasons the gods decide to punish them."
+      },
+      "choices": []
+    },
+    {
+      "id": "c7_cedro",
+      "chapter": 7,
+      "mood": "triumphant",
+      "text": {
+        "es": "Humbaba cae, y el bosque entero parece suspirar. Talan cedros durante días. Con el más alto, Enkidu fabrica una puerta inmensa para el templo de Enlil, y la llevan flotando por el Éufrates de regreso.\n\nEn Uruk te reciben como a un dios. Te lavas el cabello, te pones tus mejores ropas y tu corona, y tu belleza deslumbra a todos... incluso a una diosa. Ishtar, señora del amor y de la guerra, baja de su templo y te habla con voz de miel:\n\n—Sé mi esposo, Gilgamesh. Te daré un carro de lapislázuli y oro. Los reyes se inclinarán ante ti, y las montañas te pagarán tributo.",
+        "en": "Humbaba falls, and the whole forest seems to sigh. You fell cedars for days. From the tallest, Enkidu builds an immense door for the temple of Enlil, and you float it home down the Euphrates.\n\nIn Uruk you are welcomed like a god. You wash your hair, put on your finest robes and your crown, and your beauty dazzles everyone... even a goddess. Ishtar, lady of love and war, comes down from her temple and speaks to you in a voice of honey:\n\n\"Be my husband, Gilgamesh. I will give you a chariot of lapis lazuli and gold. Kings will bow before you, and the mountains will pay you tribute.\""
+      },
+      "fact": {
+        "es": "Según el poema, con el cedro más alto Enkidu hizo una puerta para el templo de Enlil en Nippur, y la llevaron río abajo por el Éufrates.",
+        "en": "According to the poem, from the tallest cedar Enkidu made a door for the temple of Enlil at Nippur, and they carried it downstream along the Euphrates."
+      },
+      "choices": [
+        {
+          "to": "c7_toro",
+          "risk": "high",
+          "text": {
+            "es": "Rechazarla recordando a sus amantes",
+            "en": "Refuse her, recalling her lovers"
+          },
+          "description": {
+            "es": "Todos los que la amaron terminaron mal.",
+            "en": "All who loved her came to a bad end."
+          }
+        },
+        {
+          "to": "c7_toro",
+          "risk": "medium",
+          "text": {
+            "es": "Rechazarla con cortesía",
+            "en": "Refuse her politely"
+          },
+          "description": {
+            "es": "Un no respetuoso, por si acaso.",
+            "en": "A respectful no, just in case."
+          }
+        },
+        {
+          "to": "fin_ishtar",
+          "risk": "high",
+          "text": {
+            "es": "Aceptar ser su esposo",
+            "en": "Agree to be her husband"
+          },
+          "description": {
+            "es": "¿Quién se atreve a rechazar a una diosa?",
+            "en": "Who dares refuse a goddess?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_ishtar",
+      "chapter": 7,
+      "mood": "tragic",
+      "ending": {
+        "type": "tragic",
+        "title": {
+          "es": "El esposo de la diosa",
+          "en": "The Goddess's Husband"
+        }
+      },
+      "text": {
+        "es": "Aceptas. Durante un tiempo, todo es esplendor: el carro de lapislázuli, los reyes de rodillas, las fiestas en el templo de la diosa. Enkidu se queda cada vez más lejos, hasta que un día ya no está.\n\nPero el amor de Ishtar es como el fuego: calienta y consume. Una mañana te mira con otros ojos, los mismos con que miró a Dumuzi antes de entregarlo al inframundo. Recuerdas entonces a los que vinieron antes que tú: el pájaro del ala rota, el pastor convertido en lobo, el jardinero transformado en animal.\n\nYa es tarde para recordar. Uruk tiene un nuevo rey, y nadie canta tu nombre.",
+        "en": "You accept. For a while, all is splendor: the lapis lazuli chariot, kings on their knees, the feasts in the goddess's temple. Enkidu drifts further and further away, until one day he is simply gone.\n\nBut Ishtar's love is like fire: it warms and it consumes. One morning she looks at you with different eyes, the same eyes she turned on Dumuzi before handing him over to the underworld. Then you remember those who came before you: the bird with the broken wing, the shepherd turned into a wolf, the gardener changed into an animal.\n\nIt is too late to remember. Uruk has a new king, and no one sings your name."
+      },
+      "fact": {
+        "es": "Al rechazar a Ishtar, el Gilgamesh del poema le recuerda el destino de sus amantes: Dumuzi, condenado al llanto cada año; un pájaro con el ala rota; un pastor convertido en lobo.",
+        "en": "When he refuses Ishtar, the Gilgamesh of the poem reminds her of the fate of her lovers: Dumuzi, condemned to be wept for every year; a bird with a broken wing; a shepherd turned into a wolf."
+      },
+      "choices": []
+    },
+    {
+      "id": "c7_toro",
+      "chapter": 7,
+      "mood": "dangerous",
+      "text": {
+        "es": "Ishtar no está acostumbrada a que la rechacen. Sube al cielo temblando de furia y le exige a Anu, su padre, el Toro del Cielo.\n\n—Si no me lo das —grita—, romperé las puertas del inframundo y haré subir a los muertos para que devoren a los vivos.\n\nAnu cede. El Toro del Cielo baja sobre Uruk. Con su primer resoplido se abre un pozo en la tierra y caen cien hombres; con el segundo, doscientos. Con el tercero, Enkidu se hunde hasta la cintura, pero salta fuera y agarra a la bestia por los cuernos.\n\n—¡Amigo mío! —te grita—. ¡Clava la espada!",
+        "en": "Ishtar is not used to being refused. She goes up to heaven shaking with fury and demands the Bull of Heaven from Anu, her father.\n\n\"If you do not give it to me,\" she screams, \"I will smash the gates of the underworld and raise the dead to devour the living.\"\n\nAnu gives in. The Bull of Heaven comes down upon Uruk. With its first snort a pit opens in the earth and a hundred men fall in; with the second, two hundred. With the third, Enkidu sinks in up to his waist, but he leaps out and seizes the beast by the horns.\n\n\"My friend!\" he shouts to you. \"Drive your sword in!\""
+      },
+      "fact": {
+        "es": "En el mito del descenso de Inanna, Gugalanna es el esposo de Ereshkigal, reina del inframundo; algunos estudiosos lo identifican con el Toro del Cielo. Los babilonios llamaban «Toro del Cielo» a la constelación que hoy llamamos Tauro.",
+        "en": "In the myth of Inanna's descent, Gugalanna is the husband of Ereshkigal, queen of the underworld; some scholars identify him with the Bull of Heaven. The Babylonians called the constellation we know as Taurus the \"Bull of Heaven.\""
+      },
+      "choices": [
+        {
+          "to": "c7_victoria",
+          "risk": "high",
+          "text": {
+            "es": "Clavar la espada entre cuello y cuernos",
+            "en": "Drive the sword between neck and horns"
+          },
+          "description": {
+            "es": "Un solo golpe, firme y preciso.",
+            "en": "A single stroke, firm and precise."
+          }
+        },
+        {
+          "to": "c7_proteger",
+          "risk": "low",
+          "text": {
+            "es": "Proteger a la gente de los pozos",
+            "en": "Protect the people from the pits"
+          },
+          "description": {
+            "es": "Primero tu pueblo, después la gloria.",
+            "en": "Your people first, glory after."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7_proteger",
+      "chapter": 7,
+      "mood": "epic",
+      "text": {
+        "es": "Corres hacia el pozo más cercano y sacas a un niño, luego a una mujer, luego a un anciano. Gritas órdenes, y los soldados empiezan a tender cuerdas y a apartar a la gente de la bestia. Por un momento no eres el rey que busca la gloria: eres el rey que protege.\n\nDetrás de ti, Enkidu sigue sujetando al Toro por la cola, arrastrado por el polvo, con los dientes apretados.\n\n—¡Gilgamesh! —ruge—. ¡No voy a aguantar mucho más!",
+        "en": "You run to the nearest pit and pull out a child, then a woman, then an old man. You shout orders, and the soldiers begin stretching ropes and herding people away from the beast. For a moment you are not the king who seeks glory: you are the king who protects.\n\nBehind you, Enkidu still clings to the Bull by its tail, dragged through the dust, his teeth clenched.\n\n\"Gilgamesh!\" he roars. \"I cannot hold on much longer!\""
+      },
+      "choices": [
+        {
+          "to": "c7_victoria",
+          "text": {
+            "es": "Correr hacia el Toro",
+            "en": "Run to the Bull"
+          },
+          "description": {
+            "es": "Tu amigo te necesita.",
+            "en": "Your friend needs you."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7_victoria",
+      "chapter": 7,
+      "mood": "triumphant",
+      "text": {
+        "es": "Tu espada entra entre el cuello y los cuernos, y el Toro del Cielo cae con un estruendo que sacude las murallas. Le sacan el corazón y lo ofrecen a Shamash.\n\nDesde lo alto de la muralla, Ishtar grita maldiciones contra ti. Entonces Enkidu arranca un muslo del Toro y se lo arroja a la cara.\n\n—¡Si pudiera atraparte a ti, te haría lo mismo!\n\nLa ciudad estalla en fiesta. Recorres las calles y las mujeres cantan: —¿Quién es el más glorioso de los hombres? ¡Gilgamesh!\n\nEsa noche, Enkidu despierta gritando.",
+        "en": "Your sword goes in between the neck and the horns, and the Bull of Heaven falls with a crash that shakes the walls. You tear out its heart and offer it to Shamash.\n\nFrom the top of the wall, Ishtar screams curses at you. Then Enkidu rips off one of the Bull's haunches and hurls it in her face.\n\n\"If I could catch you, I would do the same to you!\"\n\nThe city erupts in celebration. You parade through the streets and the women sing: \"Who is the most glorious of men? Gilgamesh!\"\n\nThat night, Enkidu wakes up screaming."
+      },
+      "fact": {
+        "es": "Arrojarle a Ishtar un muslo del Toro fue un insulto terrible. En el poema, matar al Toro del Cielo y a Humbaba es lo que lleva a los dioses a condenar a uno de los dos amigos.",
+        "en": "Throwing a haunch of the Bull at Ishtar was a terrible insult. In the poem, killing the Bull of Heaven and Humbaba is what leads the gods to condemn one of the two friends."
+      },
+      "choices": [
+        {
+          "to": "c8_sueno",
+          "text": {
+            "es": "Escuchar el sueño de Enkidu",
+            "en": "Listen to Enkidu's dream"
+          },
+          "description": {
+            "es": "Nunca lo habías visto tan asustado.",
+            "en": "You have never seen him so frightened."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c8_sueno",
+      "chapter": 8,
+      "mood": "tragic",
+      "text": {
+        "es": "—Soñé con los dioses —te dice Enkidu, temblando—. Anu, Enlil, Ea y Shamash estaban reunidos. Anu dijo: «Mataron a Humbaba y al Toro del Cielo; uno de los dos debe morir». Y Enlil dijo: «Que muera Enkidu».\n\nAl día siguiente, Enkidu cae enfermo. La fiebre lo consume durante doce días. En su delirio maldice al cazador y a Shamhat, que lo sacaron de la estepa, hasta que la voz de Shamash le recuerda que Shamhat le dio pan, cerveza, ropa... y a ti por amigo. Entonces la bendice.\n\nAhora te toma la mano. Está muy débil.",
+        "en": "\"I dreamed of the gods,\" Enkidu tells you, trembling. \"Anu, Enlil, Ea and Shamash were gathered together. Anu said: 'They killed Humbaba and the Bull of Heaven; one of the two must die.' And Enlil said: 'Let Enkidu die.'\"\n\nThe next day, Enkidu falls ill. The fever consumes him for twelve days. In his delirium he curses the hunter and Shamhat, who took him from the steppe, until the voice of Shamash reminds him that Shamhat gave him bread, beer, clothing... and you as a friend. Then he blesses her.\n\nNow he takes your hand. He is very weak."
+      },
+      "fact": {
+        "es": "En otro sueño, Enkidu ve el inframundo: «la casa del polvo», donde los muertos comen barro, beben polvo y visten plumas como los pájaros.",
+        "en": "In another dream, Enkidu sees the underworld: \"the house of dust,\" where the dead eat clay, drink dust and wear feathers like birds."
+      },
+      "choices": [
+        {
+          "to": "fin_polvo",
+          "risk": "low",
+          "text": {
+            "es": "Quedarte a su lado hasta el final",
+            "en": "Stay by his side until the end"
+          },
+          "description": {
+            "es": "No lo dejarás solo ni un instante.",
+            "en": "You will not leave him alone for an instant."
+          }
+        },
+        {
+          "to": "c8_templo",
+          "risk": "high",
+          "text": {
+            "es": "Correr al templo a suplicar",
+            "en": "Run to the temple to plead"
+          },
+          "description": {
+            "es": "Tiene que haber algo que puedas hacer.",
+            "en": "There must be something you can do."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c8_templo",
+      "chapter": 8,
+      "mood": "sacred",
+      "text": {
+        "es": "Corres al templo y te arrojas al suelo ante los dioses. Suplicas. Ofreces oro, ganado, cosechas enteras, tu propia vida a cambio de la suya. Hablas hasta quedarte sin voz.\n\nLos dioses no responden. Las lámparas siguen ardiendo, quietas, y las estatuas te miran sin verte. Por primera vez entiendes que hay cosas que ni el rey de Uruk puede ordenar.\n\nVuelves corriendo al palacio, con miedo de llegar tarde.",
+        "en": "You run to the temple and throw yourself to the ground before the gods. You plead. You offer gold, cattle, whole harvests, your own life in exchange for his. You speak until your voice gives out.\n\nThe gods do not answer. The lamps go on burning, motionless, and the statues look at you without seeing. For the first time you understand that there are things even the king of Uruk cannot command.\n\nYou run back to the palace, afraid you are too late."
+      },
+      "choices": [
+        {
+          "to": "fin_polvo",
+          "text": {
+            "es": "Volver junto a Enkidu",
+            "en": "Go back to Enkidu"
+          },
+          "description": {
+            "es": "Todavía respira.",
+            "en": "He is still breathing."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_polvo",
+      "chapter": 8,
+      "mood": "tragic",
+      "ending": {
+        "type": "myth",
+        "title": {
+          "es": "La casa del polvo",
+          "en": "The House of Dust"
+        }
+      },
+      "text": {
+        "es": "Enkidu muere al amanecer. Le cubres el rostro con un velo, como a una novia, y das vueltas alrededor de su lecho como un león al que le robaron sus cachorros. Te arrancas el cabello y rasgas tus ropas finas.\n\nLo lloras siete días y siete noches, y no dejas que lo entierren hasta que un gusano cae de su nariz. Entonces lo entiendes: eso es lo que espera a todos. También a ti.\n\nMandas hacer una estatua de Enkidu en oro y lapislázuli. Después te vistes con pieles de león y sales a la estepa, solo, en busca del único hombre que venció a la muerte.\n\nPero esa es otra historia.",
+        "en": "Enkidu dies at dawn. You cover his face with a veil, as you would a bride's, and circle his bed like a lion whose cubs have been stolen. You tear out your hair and rip your fine robes.\n\nYou mourn him seven days and seven nights, and you will not let him be buried until a maggot drops from his nose. Then you understand: this is what awaits everyone. You too.\n\nYou order a statue of Enkidu made in gold and lapis lazuli. Then you dress in lion skins and go out onto the steppe, alone, in search of the only man who ever defeated death.\n\nBut that is another story."
+      },
+      "fact": {
+        "es": "La versión más completa del poema, en doce tablillas, se conservó sobre todo en la biblioteca del rey asirio Asurbanipal, en Nínive. En 1872, George Smith presentó en Londres su traducción del relato del Diluvio, y el poema se hizo famoso.",
+        "en": "The most complete version of the poem, on twelve tablets, was preserved above all in the library of the Assyrian king Ashurbanipal at Nineveh. In 1872, George Smith presented his translation of the Flood story in London, and the poem became famous."
+      },
+      "choices": []
+    }
+  ]
+}
