@@ -33,6 +33,12 @@ flutter:
   # Genera las clases de traducción desde lib/l10n/*.arb (ver l10n.yaml).
   generate: true
 
+  # Catálogo e historias (ver "Contenido" en CLAUDE.md). Cada carpeta se
+  # declara aparte: Flutter no incluye las subcarpetas solas.
+  assets:
+    - assets/data/
+    - assets/data/stories/
+
   fonts:
     - family: Cinzel
       fonts:
