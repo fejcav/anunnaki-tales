@@ -128,174 +128,6 @@ abstract class AppLocalizations {
   /// **'Aventura'**
   String get gameplayTitle;
 
-  /// No description provided for @paywallTitle.
-  ///
-  /// In es, this message translates to:
-  /// **'Premium'**
-  String get paywallTitle;
-
-  /// No description provided for @profileTitle.
-  ///
-  /// In es, this message translates to:
-  /// **'Perfil'**
-  String get profileTitle;
-
-  /// No description provided for @authTabSignIn.
-  ///
-  /// In es, this message translates to:
-  /// **'Ingresar'**
-  String get authTabSignIn;
-
-  /// No description provided for @authTabSignUp.
-  ///
-  /// In es, this message translates to:
-  /// **'Crear cuenta'**
-  String get authTabSignUp;
-
-  /// No description provided for @authEmail.
-  ///
-  /// In es, this message translates to:
-  /// **'Correo'**
-  String get authEmail;
-
-  /// No description provided for @authPassword.
-  ///
-  /// In es, this message translates to:
-  /// **'Contraseña'**
-  String get authPassword;
-
-  /// No description provided for @authRepeatPassword.
-  ///
-  /// In es, this message translates to:
-  /// **'Repetir contraseña'**
-  String get authRepeatPassword;
-
-  /// No description provided for @authForgotPassword.
-  ///
-  /// In es, this message translates to:
-  /// **'¿Olvidaste tu contraseña?'**
-  String get authForgotPassword;
-
-  /// No description provided for @authEmailInvalid.
-  ///
-  /// In es, this message translates to:
-  /// **'Escribe un correo válido'**
-  String get authEmailInvalid;
-
-  /// No description provided for @authPasswordTooShort.
-  ///
-  /// In es, this message translates to:
-  /// **'La contraseña debe tener al menos {min} caracteres'**
-  String authPasswordTooShort(int min);
-
-  /// No description provided for @authPasswordsDontMatch.
-  ///
-  /// In es, this message translates to:
-  /// **'Las contraseñas no coinciden'**
-  String get authPasswordsDontMatch;
-
-  /// No description provided for @authErrorInvalidCredentials.
-  ///
-  /// In es, this message translates to:
-  /// **'Correo o contraseña incorrectos'**
-  String get authErrorInvalidCredentials;
-
-  /// No description provided for @authErrorEmailTaken.
-  ///
-  /// In es, this message translates to:
-  /// **'Ese correo ya tiene cuenta'**
-  String get authErrorEmailTaken;
-
-  /// No description provided for @authErrorWeakPassword.
-  ///
-  /// In es, this message translates to:
-  /// **'Esa contraseña es muy débil. Prueba con otra más larga.'**
-  String get authErrorWeakPassword;
-
-  /// No description provided for @authErrorSamePassword.
-  ///
-  /// In es, this message translates to:
-  /// **'La contraseña nueva debe ser distinta de la anterior'**
-  String get authErrorSamePassword;
-
-  /// No description provided for @authErrorInvalidCode.
-  ///
-  /// In es, this message translates to:
-  /// **'El código no es correcto o ya venció'**
-  String get authErrorInvalidCode;
-
-  /// No description provided for @authErrorTooManyRequests.
-  ///
-  /// In es, this message translates to:
-  /// **'Demasiados intentos. Espera un rato y vuelve a intentarlo.'**
-  String get authErrorTooManyRequests;
-
-  /// No description provided for @authErrorNoConnection.
-  ///
-  /// In es, this message translates to:
-  /// **'Sin conexión'**
-  String get authErrorNoConnection;
-
-  /// No description provided for @authErrorUnknown.
-  ///
-  /// In es, this message translates to:
-  /// **'Algo salió mal. Inténtalo de nuevo.'**
-  String get authErrorUnknown;
-
-  /// No description provided for @resetTitle.
-  ///
-  /// In es, this message translates to:
-  /// **'Cambiar contraseña'**
-  String get resetTitle;
-
-  /// No description provided for @resetEmailIntro.
-  ///
-  /// In es, this message translates to:
-  /// **'Escribe tu correo y te enviaremos un código para cambiar la contraseña.'**
-  String get resetEmailIntro;
-
-  /// No description provided for @resetSendCode.
-  ///
-  /// In es, this message translates to:
-  /// **'Enviar código'**
-  String get resetSendCode;
-
-  /// No description provided for @resetCodeIntro.
-  ///
-  /// In es, this message translates to:
-  /// **'Te enviamos un código a {email}. Puede tardar unos minutos; revisa también la carpeta de correo no deseado.'**
-  String resetCodeIntro(String email);
-
-  /// No description provided for @resetCode.
-  ///
-  /// In es, this message translates to:
-  /// **'Código'**
-  String get resetCode;
-
-  /// No description provided for @resetCodeInvalid.
-  ///
-  /// In es, this message translates to:
-  /// **'El código tiene entre 6 y 10 números'**
-  String get resetCodeInvalid;
-
-  /// No description provided for @resetNewPassword.
-  ///
-  /// In es, this message translates to:
-  /// **'Contraseña nueva'**
-  String get resetNewPassword;
-
-  /// No description provided for @resetConfirm.
-  ///
-  /// In es, this message translates to:
-  /// **'Cambiar contraseña'**
-  String get resetConfirm;
-
-  /// No description provided for @resetDone.
-  ///
-  /// In es, this message translates to:
-  /// **'Contraseña cambiada'**
-  String get resetDone;
-
   /// No description provided for @homeStart.
   ///
   /// In es, this message translates to:
@@ -470,191 +302,59 @@ abstract class AppLocalizations {
   /// **'Volver a la última decisión'**
   String get endingLastDecision;
 
-  /// No description provided for @paywallHeadline.
+  /// No description provided for @settingsTitle.
   ///
   /// In es, this message translates to:
-  /// **'Desbloquea el poder de los dioses'**
-  String get paywallHeadline;
+  /// **'Ajustes'**
+  String get settingsTitle;
 
-  /// No description provided for @paywallBenefitUnlimited.
-  ///
-  /// In es, this message translates to:
-  /// **'Elecciones ilimitadas cada día'**
-  String get paywallBenefitUnlimited;
-
-  /// No description provided for @paywallBenefitNoAds.
-  ///
-  /// In es, this message translates to:
-  /// **'Sin anuncios'**
-  String get paywallBenefitNoAds;
-
-  /// No description provided for @paywallMonthly.
-  ///
-  /// In es, this message translates to:
-  /// **'Mensual'**
-  String get paywallMonthly;
-
-  /// No description provided for @paywallAnnual.
-  ///
-  /// In es, this message translates to:
-  /// **'Anual'**
-  String get paywallAnnual;
-
-  /// No description provided for @paywallPerMonth.
-  ///
-  /// In es, this message translates to:
-  /// **'{price} / mes'**
-  String paywallPerMonth(String price);
-
-  /// No description provided for @paywallPerYear.
-  ///
-  /// In es, this message translates to:
-  /// **'{price} / año'**
-  String paywallPerYear(String price);
-
-  /// No description provided for @paywallPopular.
-  ///
-  /// In es, this message translates to:
-  /// **'Más popular'**
-  String get paywallPopular;
-
-  /// No description provided for @paywallRestore.
-  ///
-  /// In es, this message translates to:
-  /// **'Restaurar compra'**
-  String get paywallRestore;
-
-  /// No description provided for @paywallContinueFree.
-  ///
-  /// In es, this message translates to:
-  /// **'Continuar gratis'**
-  String get paywallContinueFree;
-
-  /// No description provided for @paywallLegal.
-  ///
-  /// In es, this message translates to:
-  /// **'La suscripción se renueva automáticamente al final de cada período, al mismo precio, salvo que la canceles al menos 24 horas antes desde Google Play o App Store. El cobro se hace en tu cuenta de la tienda al confirmar la compra.'**
-  String get paywallLegal;
-
-  /// No description provided for @paywallLoadError.
-  ///
-  /// In es, this message translates to:
-  /// **'No pudimos cargar los planes. Revisa tu conexión.'**
-  String get paywallLoadError;
-
-  /// No description provided for @paywallBuyError.
-  ///
-  /// In es, this message translates to:
-  /// **'No pudimos completar la compra. Inténtalo de nuevo.'**
-  String get paywallBuyError;
-
-  /// No description provided for @restoreDone.
-  ///
-  /// In es, this message translates to:
-  /// **'Listo: Premium activo'**
-  String get restoreDone;
-
-  /// No description provided for @restoreNotFound.
-  ///
-  /// In es, this message translates to:
-  /// **'No encontramos compras para restaurar.'**
-  String get restoreNotFound;
-
-  /// No description provided for @restoreError.
-  ///
-  /// In es, this message translates to:
-  /// **'No pudimos restaurar las compras. Revisa tu conexión.'**
-  String get restoreError;
-
-  /// No description provided for @profilePremium.
-  ///
-  /// In es, this message translates to:
-  /// **'Suscripción'**
-  String get profilePremium;
-
-  /// No description provided for @profilePremiumActive.
-  ///
-  /// In es, this message translates to:
-  /// **'Premium activo'**
-  String get profilePremiumActive;
-
-  /// No description provided for @profileGetPremium.
-  ///
-  /// In es, this message translates to:
-  /// **'Hazte Premium'**
-  String get profileGetPremium;
-
-  /// No description provided for @profileRestore.
-  ///
-  /// In es, this message translates to:
-  /// **'Restaurar compras'**
-  String get profileRestore;
-
-  /// No description provided for @profileEmail.
-  ///
-  /// In es, this message translates to:
-  /// **'Correo'**
-  String get profileEmail;
-
-  /// No description provided for @profilePrivacyPolicy.
+  /// No description provided for @settingsPrivacyPolicy.
   ///
   /// In es, this message translates to:
   /// **'Política de privacidad'**
-  String get profilePrivacyPolicy;
+  String get settingsPrivacyPolicy;
 
-  /// No description provided for @profileLinkError.
+  /// No description provided for @settingsLinkError.
   ///
   /// In es, this message translates to:
   /// **'No pudimos abrir el enlace.'**
-  String get profileLinkError;
+  String get settingsLinkError;
 
-  /// No description provided for @profileVersion.
+  /// No description provided for @settingsResetProgress.
   ///
   /// In es, this message translates to:
-  /// **'Versión {version} ({build})'**
-  String profileVersion(String version, String build);
+  /// **'Borrar progreso'**
+  String get settingsResetProgress;
 
-  /// No description provided for @profileSignOut.
+  /// No description provided for @settingsResetQuestion.
   ///
   /// In es, this message translates to:
-  /// **'Cerrar sesión'**
-  String get profileSignOut;
+  /// **'Se borrarán la partida guardada y los finales descubiertos. Esto no se puede deshacer.'**
+  String get settingsResetQuestion;
 
-  /// No description provided for @profileDeleteAccount.
+  /// No description provided for @settingsResetConfirm.
   ///
   /// In es, this message translates to:
-  /// **'Eliminar cuenta'**
-  String get profileDeleteAccount;
+  /// **'Borrar'**
+  String get settingsResetConfirm;
 
-  /// No description provided for @profileDeleteTitle.
-  ///
-  /// In es, this message translates to:
-  /// **'¿Eliminar tu cuenta?'**
-  String get profileDeleteTitle;
-
-  /// No description provided for @profileDeleteBody.
-  ///
-  /// In es, this message translates to:
-  /// **'Se borrarán para siempre tu perfil, tus partidas y tu progreso. Esta acción no se puede deshacer. Si tienes Premium, cancela la suscripción desde Google Play o App Store: eliminar la cuenta no la cancela.'**
-  String get profileDeleteBody;
-
-  /// No description provided for @profileDeleteCancel.
+  /// No description provided for @settingsResetCancel.
   ///
   /// In es, this message translates to:
   /// **'Cancelar'**
-  String get profileDeleteCancel;
+  String get settingsResetCancel;
 
-  /// No description provided for @profileDeleteConfirm.
+  /// No description provided for @settingsResetDone.
   ///
   /// In es, this message translates to:
-  /// **'Eliminar'**
-  String get profileDeleteConfirm;
+  /// **'Progreso borrado'**
+  String get settingsResetDone;
 
-  /// No description provided for @profileDeleteError.
+  /// No description provided for @settingsVersion.
   ///
   /// In es, this message translates to:
-  /// **'No pudimos eliminar tu cuenta. Inténtalo de nuevo o escríbenos a fejcavallo@gmail.com'**
-  String get profileDeleteError;
+  /// **'Versión {version} ({build})'**
+  String settingsVersion(String version, String build);
 
   /// No description provided for @back.
   ///

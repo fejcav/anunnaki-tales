@@ -12,7 +12,7 @@ import '../gameplay/gameplay_screen.dart';
 
 // Inicio: título, "Comenzar aventura", "Continuar partida" (solo si hay una
 // partida guardada cuya historia y escena existen, con el título de la
-// aventura debajo) y el ícono de perfil.
+// aventura debajo) y el ícono de Ajustes.
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -74,9 +74,9 @@ class _HomeScreenState extends State<HomeScreen> with RouteAware {
               Align(
                 alignment: Alignment.topRight,
                 child: IconButton(
-                  icon: const Icon(Icons.person_outline, color: AppColors.gold),
-                  tooltip: l10n.profileTitle,
-                  onPressed: () => Navigator.of(context).pushNamed(Routes.profile),
+                  icon: const Icon(Icons.settings_outlined, color: AppColors.gold),
+                  tooltip: l10n.settingsTitle,
+                  onPressed: () => Navigator.of(context).pushNamed(Routes.settings),
                 ),
               ),
               Center(

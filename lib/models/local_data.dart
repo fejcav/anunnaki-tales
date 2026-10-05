@@ -35,7 +35,7 @@ class LocalData {
     'endingsFound': endingsFound,
   };
 
-  // Un JSON de la versión 1 (partidas de Supabase y contador de elecciones)
+  // Un JSON de la versión 1 (partidas del servidor viejo y contador de elecciones)
   // se descarta salvo el idioma.
   factory LocalData.fromJson(Map<String, dynamic> json) {
     final language = json['language'] as String?;

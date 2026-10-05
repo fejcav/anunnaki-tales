@@ -1,12 +1,10 @@
 # Anunnaki Tales — guía para Claude Code
 
-Versión 0.2 · 4 de octubre de 2026 · Iteración 9: historias escritas de antemano, sin servidor ni cuenta (decisión del 02/10/2026, en `docs/cambio-de-rumbo.md`). Esta copia (repo) es la oficial; la del Proyecto "Anunnaki Tales" de claude.ai es un espejo. El plan de iteraciones con los pedidos listos para pegar está en `docs/plan-migracion.md` (versión 2).
+Versión 0.3 · 4 de octubre de 2026 · Iteración 10: la app ya no tiene cuenta ni servidor en el código; historias escritas de antemano (decisión del 02/10/2026, en `docs/cambio-de-rumbo.md`). Esta copia (repo) es la oficial; la del Proyecto "Anunnaki Tales" de claude.ai es un espejo. El plan de iteraciones con los pedidos listos para pegar está en `docs/plan-migracion.md` (versión 2).
 
 Anunnaki Tales es un juego narrativo para Android e iOS ambientado en la mitología mesopotámica: el jugador elige un mito y vive la historia de su protagonista escena por escena; en cada escena hay hasta tres opciones con distinto riesgo y, muchas veces, un dato histórico real. Las historias están escritas de antemano (en `assets/data/stories/`, una por aventura) y cada una tiene varios finales. No hay servidor ni cuenta: todo se guarda en el teléfono. Tres aventuras son gratis con anuncios; una compra única desbloquea todas y quita los anuncios. (Hasta el 02/10/2026 la app dependía de Supabase, de una IA en vivo y de RevenueCat; ver `docs/cambio-de-rumbo.md`.)
 
 **Por qué este proyecto existe.** La app se hizo en FlutterFlow hasta el Build 11 (versión 1.0.0, versionCode 11, en prueba cerrada de Google Play). La cuenta de FlutterFlow pasó al plan Free, que no deja exportar código ni compilar, y Federico decidió no pagar suscripciones. Se reescribe como proyecto Flutter normal, igual que Ovun (su otra app), con los mismos IDs de AdMob, la misma ficha de Play Console, el mismo package y la misma clave de subida. El código viejo exportado de FlutterFlow (rama `flutterflow` del repo, congelada el 16/03/2026) sirve solo de referencia; no se copia.
-
-**Transición.** Hasta la iteración 10 siguen en el código la cuenta (Supabase Auth, pantalla de ingreso, Perfil con eliminar cuenta) y RevenueCat (Paywall de la iteración 8). No se tocan hasta esa iteración; todo lo demás ya funciona sin servidor.
 
 El dueño del proyecto (Federico) tiene nivel básico de Dart/Flutter: puede correr la app y cambiar textos o valores, pero no quiere meterse en la lógica. Por eso: **la opción más simple que funcione, siempre**, y una explicación de una o dos líneas de cada pieza nueva cuando se la presentás.
 
@@ -14,7 +12,7 @@ El dueño del proyecto (Federico) tiene nivel básico de Dart/Flutter: puede cor
 
 - Application ID (Android) y bundle ID (iOS): **`com.mycompany.anunnakitales`**. Es el de la app ya publicada en Play Console: **no se cambia nunca** (cambiarlo crea otra app). Se genera con `flutter create --org com.mycompany --project-name anunnakitales`.
 - Nombre visible: Anunnaki Tales. Subtítulo de pantalla de inicio: "Mitos Interactivos".
-- Política de privacidad: `https://fejcav.github.io/anunnaki-tales-legal/privacy_policy.html`. Eliminar cuenta (página pública): `https://fejcav.github.io/anunnaki-tales-legal/delete_account.html`. Fuente en el repo `fejcav/anunnaki-tales-legal` (GitHub Pages).
+- Política de privacidad: `https://fejcav.github.io/anunnaki-tales-legal/privacy_policy.html`. Fuente en el repo `fejcav/anunnaki-tales-legal` (GitHub Pages).
 - Repo: `fejcav/anunnaki-tales`, rama `main` (proyecto nuevo). La rama `flutterflow` queda como archivo histórico.
 - Versión inicial del proyecto nuevo: **`1.1.0+12`**. Play ya recibió el versionCode 11: el número después del `+` tiene que ser siempre mayor que el último subido.
 
@@ -46,7 +44,7 @@ El dueño del proyecto (Federico) tiene nivel básico de Dart/Flutter: puede cor
 - `url_launcher` (política de privacidad), `package_info_plus` (versión real), `flutter_localizations` + `intl` con ARB (`flutter gen-l10n`, español e inglés; ningún texto de interfaz hardcodeado en los widgets), `flutter_animate` (sin Rive ni Lottie).
 - Fuentes: archivos TTF **estáticos** en `assets/fonts/` (Cinzel para títulos, Lora para la narrativa, Inter para la interfaz; las tres con licencia OFL). **Sin el paquete `google_fonts`**. Imágenes: PNG en `assets/` con `Image.asset`, sin `flutter_svg`.
 - Tests: `flutter_test` para la lógica en `lib/logic/`, para `LocalStore` (con `SharedPreferences.setMockInitialValues`) y para validar las historias.
-- **Fuera del proyecto:** `supabase_flutter`, `purchases_flutter`, `google_sign_in`, `sign_in_with_apple`, `crypto`. (`supabase_flutter` y `purchases_flutter` todavía están instalados; se quitan en la iteración 10.)
+- **Fuera del proyecto:** `supabase_flutter`, `purchases_flutter`, `google_sign_in`, `sign_in_with_apple`, `crypto`.
 - Herramientas de desarrollo (no van en la app): `flutter_launcher_icons`, `flutter_native_splash`.
 
 No agregues paquetes que no estén en esta lista sin proponerlo primero y explicar para qué.
@@ -67,7 +65,7 @@ lib/
     story_repository.dart  ÚNICA clase que lee assets/data (catálogo e historias)
     purchases.dart         (iteración 11) ÚNICA clase que toca in_app_purchase
     ads.dart               (iteración 12) ÚNICA clase que toca google_mobile_ads
-  state/app_state.dart   ChangeNotifier: catálogo, partida actual, finales descubiertos, compra
+  state/app_state.dart   (iteración 11) ChangeNotifier con el estado de la compra
   screens/       home/ catalog/ hero_intro/ gameplay/ ending/ paywall/ settings/
   widgets/       AdventureCard, ChoiceButton, HistoricalFactCard, StarsBackground, AdBanner
   l10n/          app_es.arb, app_en.arb
@@ -105,13 +103,13 @@ La app publicada es oscura con dorado; se mantiene para que coincida con las cap
 
 ## Reglas de juego
 
-- **Inicio**: "ANUNNAKI TALES", "Mitos Interactivos", "Comenzar aventura" (va al Catálogo) y "Continuar partida" (solo si hay una partida guardada cuya historia y escena existen; muestra el título de la aventura). Arriba a la derecha, el ícono de Ajustes (hasta la iteración 10, Perfil).
+- **Inicio**: "ANUNNAKI TALES", "Mitos Interactivos", "Comenzar aventura" (va al Catálogo) y "Continuar partida" (solo si hay una partida guardada cuya historia y escena existen; muestra el título de la aventura). Arriba a la derecha, el ícono de Ajustes.
 - **Catálogo** ("Elige tu aventura"): una tarjeta por aventura en `sortOrder`, con título, subtítulo, dificultad con color y "~N escenas" (camino más corto hasta el final del mito, calculado de la historia). Si ya descubrió finales: "Finales: N de M". Estados: abierta, **con candado** (no gratis y sin compra: tocarla abre el Paywall; desde la iteración 11, hasta entonces todas las que tienen historia están abiertas) o **"Próximamente"** (sin historia; no se abre).
 - **Tu héroe**: nombre y descripción del protagonista (`hero` de la historia), descripción de la aventura y "Empezar". Empezar una aventura reemplaza la partida guardada.
 - **Gameplay**: arriba "Capítulo N · Título" y "Turno N" (cantidad de escenas vistas en esta partida); el texto en Lora, separado en párrafos por las líneas en blanco; la tarjeta "Dato histórico" si la escena tiene `fact`; las opciones con `ChoiceButton` (punto de color, texto, descripción y "Riesgo bajo / medio / alto"; una opción sin `risk` va sin punto ni etiqueta). Elegir es instantáneo. La partida se guarda en cada escena. La flecha atrás vuelve a Inicio.
 - **Final**: tipo ("Final del mito", "Final alternativo", "Final trágico"), título en Cinzel, texto, dato histórico, "Finales descubiertos: N de M" y los botones "Volver a jugar", "Otra aventura" y, solo en finales trágicos, "Volver a la última decisión" (vuelve a la última escena del camino con más de una opción). Al llegar a un final se guarda como descubierto y se borra la partida guardada.
-- **Ajustes** (reemplaza a Perfil en la iteración 10): "Desbloquear todo" o "Todo desbloqueado" (iteración 11), "Restaurar compra" (iteración 11), "Privacidad de anuncios" (solo si UMP lo exige, iteración 12), "Política de privacidad", "Borrar progreso" (con confirmación dentro de la pantalla: borra la partida guardada y los finales descubiertos, no la compra) y la versión.
-- No hay límite diario, cuenta, ingreso, cerrar sesión ni eliminar cuenta (la cuenta se quita del código en la iteración 10).
+- **Ajustes**: "Desbloquear todo" o "Todo desbloqueado" (iteración 11), "Restaurar compra" (iteración 11), "Privacidad de anuncios" (solo si UMP lo exige, iteración 12), "Política de privacidad", "Borrar progreso" (con confirmación dentro de la pantalla: borra la partida guardada y los finales descubiertos, no la compra ni el idioma) y la versión.
+- No hay límite diario ni cuenta.
 
 ## Compra única
 
@@ -139,7 +137,7 @@ Una sola clave, `localData`: JSON con `schemaVersion` 2, `language` (`null` = el
 
 - **Firma.** Clave de subida registrada en Play Console: `upload-keystore-new.jks`, alias `upload` (RSA 2048). Se guarda en `C:\dev\keys\anunnaki-upload.jks`, fuera del repo, con respaldo fuera de la PC. `android/key.properties` (ignorado por git) tiene `storeFile`, `storePassword`, `keyAlias`, `keyPassword`; `android/key.properties.example` es la plantilla commiteada. Si falta `key.properties`, el build de release falla con un mensaje claro en vez de firmar con debug. **Nunca escribir la contraseña en este archivo ni en el repo.**
 - **Versión.** `version` en `pubspec.yaml`: la parte antes del `+` es la visible; la de después es el versionCode y se incrementa en cada subida (el primero de este proyecto es 12).
-- **Build.** `flutter build appbundle --release` en la PC; el `.aab` se sube a mano a Play Console → Prueba cerrada (Alpha). R8 activado, con las reglas que pida AdMob (sin reglas de RevenueCat).
+- **Build.** `flutter build appbundle --release` en la PC; el `.aab` se sube a mano a Play Console → Prueba cerrada (Alpha). R8 activado, con las reglas que pida AdMob.
 - **Antes de cada release:** `flutter test` con la validación de historias en modo estricto para las aventuras publicadas.
 - **Ícono y splash.** `flutter_launcher_icons` y `flutter_native_splash` desde `assets/icon/icon.png` (fondo `#0A0E1A`; el PNG tiene canal alfa, así que para iOS va `remove_alpha_ios: true`, porque la App Store rechaza íconos con transparencia). Regenerar el splash puede reescribir `AndroidManifest.xml`: revisar después que siga `android:screenOrientation="portrait"` y `android:label="Anunnaki Tales"`.
 - **Manifest de release.** `INTERNET` y `com.google.android.gms.permission.AD_ID` declarados explícitamente (el de facturación lo agrega la librería de compras); meta-data `com.google.android.gms.ads.APPLICATION_ID` con el ID real.
@@ -150,14 +148,14 @@ Una sola clave, `localData`: JSON con `schemaVersion` 2, `language` (`null` = el
 ## Cómo trabajar
 
 - Una tarea por pedido. Antes de dar algo por terminado: `flutter analyze` sin warnings y `flutter test` en verde. Si tocaste una pantalla, probala vos en el emulador (ver abajo) y pasale a Federico un resumen de lo que viste.
-- **Pruebas en el emulador: las hace Claude Code** con `adb` (toques, texto, capturas de pantalla) y con cuentas de prueba inventadas, que al terminar se eliminan con `delete-account`. Federico interviene solo si hace falta un correo real (por ejemplo, recibir el código de cambiar contraseña).
+- **Pruebas en el emulador: las hace Claude Code** con `adb` (toques, texto, capturas de pantalla). Federico interviene solo si hace falta algo que Claude Code no puede hacer (por ejemplo, una compra con su cuenta de Google).
 - Commits chicos y descriptivos en español. Hacé el commit al cerrar cada tarea.
 - Código en inglés (nombres de clases, variables, archivos). Comentarios y mensajes de commit en español. Textos de interfaz en los ARB.
 - Los textos de interfaz en español van en **español neutro (tú)**, igual que la app publicada ("Elige tu aventura", "Hazte Premium"): nada de voseo. Los comentarios y commits siguen en el español de Federico.
 - Al terminar una tarea, resumí en 3–5 líneas qué archivos creaste y qué hace cada uno, sin jerga.
 - Si una regla de este archivo se contradice con lo que Federico pide, señalalo antes de implementar.
 - No refactorices lo que no te pidieron. No agregues abstracciones "por si acaso".
-- Toda pantalla tiene una forma clara de volver (flecha atrás), salvo el ingreso y la de fin de aventura.
+- Toda pantalla tiene una forma clara de volver (flecha atrás), salvo la de fin de aventura.
 - No se modifica nada del backend (tablas, funciones, reglas) desde este repo sin preguntar: la app publicada (Build 11) usa el mismo backend hasta que el Build 12 la reemplace.
 - Cuando se cambie una regla de juego, se actualizan en el mismo pedido este archivo, los textos en los dos idiomas y los tests.
 

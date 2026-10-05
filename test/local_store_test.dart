@@ -67,7 +67,7 @@ void main() {
     expect(data.endingsOf('gilgamesh_enkidu'), ['fin_paz']);
   });
 
-  test('clearAll borra todo', () async {
+  test('clearProgress borra la partida y los finales, y conserva el idioma', () async {
     final store = LocalStore();
     await store.save(
       const LocalData(
@@ -79,10 +79,10 @@ void main() {
       ),
     );
 
-    await store.clearAll();
+    await store.clearProgress();
     final data = await store.load();
 
-    expect(data.language, isNull);
+    expect(data.language, 'en');
     expect(data.savedGame, isNull);
     expect(data.endingsFound, isEmpty);
   });

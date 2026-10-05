@@ -43,8 +43,10 @@ class LocalStore {
     await save(data.withEndingFound(adventureId, endingId).withSavedGame(null));
   }
 
-  // Borra todo lo guardado en el teléfono (al eliminar la cuenta).
-  Future<void> clearAll() async {
-    await save(const LocalData());
+  // "Borrar progreso" (Ajustes): borra la partida guardada y los finales
+  // descubiertos. El idioma queda.
+  Future<void> clearProgress() async {
+    final data = await load();
+    await save(LocalData(language: data.language));
   }
 }
