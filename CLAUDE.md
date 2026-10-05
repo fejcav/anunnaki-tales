@@ -115,7 +115,7 @@ La app publicada es oscura con dorado; se mantiene para que coincida con las cap
 
 - Producto no consumible **`anunnaki_completo`** en Google Play (y en App Store desde la iteración 15). Precio: el que devuelve la tienda, nunca escrito a mano.
 - Desbloquea todas las aventuras y quita los anuncios. Paywall ("Desbloquea todos los mitos"): beneficios **solo los que existen** (las aventuras ya escritas, sin anuncios, pago único sin suscripción), precio de la tienda, "Comprar", "Restaurar compra" y "Ahora no".
-- Se implementa como la compra "Sin anuncios" de Ovun (`C:\dev\ovun\lib\services\purchases.dart` y `lib\logic\purchase_rules.dart`, **solo como referencia de lectura; no se toca nada de Ovun**): escuchar `purchaseStream`, completar las compras pendientes, reconocerlas, restaurar al pedirlo, y guardar el estado en `localData` para arrancar sin esperar a la tienda.
+- Se implementa como la compra "Sin anuncios" de Ovun (`C:\dev\ovun\lib\services\purchases.dart` y `lib\logic\purchase_rules.dart`, **solo como referencia de lectura; no se toca nada de Ovun**): escuchar `purchaseStream`, completar las compras pendientes, reconocerlas, restaurar al pedirlo ("Restaurar compra") y también al abrir la app si la compra no está guardada (en silencio: sin diálogo ni mensaje; si la tienda no contesta, se arranca con lo guardado), y guardar el estado en `localData` para arrancar sin esperar a la tienda.
 
 ## Anuncios (AdMob)
 

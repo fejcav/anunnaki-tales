@@ -17,9 +17,9 @@ const _restoreTimeout = Duration(seconds: 15);
 
 // ÚNICA clase que toca `in_app_purchase`. Sabe si la tienda está disponible,
 // lee el precio de `anunnaki_completo` (una vez por arranque), abre la compra,
-// reconoce lo comprado y restaura compras pasadas. Qué hacer con cada evento
-// lo decide `logic/purchase_rules.dart`; acá solo se aplica (la compra queda
-// guardada en AppState). Un error de la tienda se anota con `debugPrint` y deja
+// reconoce lo comprado y restaura compras pasadas (al pedirlo y, en silencio,
+// al arrancar). Qué hacer con cada evento lo decide `logic/purchase_rules.dart`;
+// acá solo se aplica (la compra queda guardada en AppState). Un error de la tienda se anota con `debugPrint` y deja
 // todo como estaba.
 class PurchasesService extends ChangeNotifier {
   PurchasesService({required this.appState});
@@ -48,13 +48,20 @@ class PurchasesService extends ChangeNotifier {
 
   // Se llama una vez al arrancar: escucha las compras desde ya (una compra
   // pendiente puede llegar en cualquier momento) y lee disponibilidad y precio
-  // sin frenar el arranque.
+  // sin frenar el arranque. Si la compra no está guardada (por ejemplo,
+  // después de reinstalar), consulta en silencio las compras pasadas: si
+  // aparece, queda hecha igual que con "Restaurar compra"; si no aparece o la
+  // tienda no contesta, sigue todo como estaba. Solo en Android: en iOS
+  // restaurar puede pedir la contraseña de Apple.
   void start() {
     _subscription = _store.purchaseStream.listen(
       _onPurchases,
       onError: (Object error) => debugPrint('Compras: error en el stream: $error'),
     );
     _loading = _loadProduct();
+    if (!appState.purchased && defaultTargetPlatform == TargetPlatform.android) {
+      unawaited(restore());
+    }
   }
 
   Future<void> _loadProduct() async {
