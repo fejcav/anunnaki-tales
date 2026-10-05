@@ -36,6 +36,7 @@
   "endingLastDecision": "Back to the last decision",
   "settingsTitle": "Settings",
   "settingsPrivacyPolicy": "Privacy policy",
+  "settingsAdPrivacy": "Ad privacy",
   "settingsLinkError": "We couldn't open the link.",
   "settingsResetProgress": "Delete progress",
   "settingsResetQuestion": "Your saved game and discovered endings will be deleted. This can't be undone.",

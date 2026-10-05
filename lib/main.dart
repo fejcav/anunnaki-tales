@@ -13,6 +13,7 @@ import 'screens/hero_intro/hero_intro_screen.dart';
 import 'screens/home/home_screen.dart';
 import 'screens/paywall/paywall_screen.dart';
 import 'screens/settings/settings_screen.dart';
+import 'services/ads.dart';
 import 'services/purchases.dart';
 import 'services/story_repository.dart';
 import 'state/app_state.dart';
@@ -27,11 +28,15 @@ Future<void> main() async {
   final appState = AppState(StoryRepository(), LocalStore());
   await appState.load();
   final purchases = PurchasesService(appState: appState)..start();
+  // Anuncios: si el consentimiento ya se resolvió en otra corrida, inicia el
+  // SDK sin frenar el arranque. El formulario se pide recién en el Catálogo.
+  final ads = AdsService(appState: appState)..start();
   runApp(
     MultiProvider(
       providers: [
         ChangeNotifierProvider.value(value: appState),
         ChangeNotifierProvider.value(value: purchases),
+        ChangeNotifierProvider.value(value: ads),
       ],
       child: const AnunnakiApp(),
     ),

@@ -7,11 +7,14 @@ import '../../app_theme.dart';
 import '../../config.dart';
 import '../../l10n/app_localizations.dart';
 import '../../main.dart';
+import '../../services/ads.dart';
 import '../../services/purchases.dart';
 import '../../state/app_state.dart';
 
 // Ajustes: "Desbloquear todo" (abre el Paywall) o "Todo desbloqueado",
-// "Restaurar compra", política de privacidad, "Borrar progreso" y la versión.
+// "Restaurar compra", "Privacidad de anuncios" (solo si el consentimiento de
+// anuncios lo exige, por ejemplo en el EEE), política de privacidad, "Borrar
+// progreso" y la versión.
 // "Borrar progreso" pide confirmación dentro de la misma pantalla (sin
 // diálogos): el botón se cambia por la pregunta con "Cancelar" y "Borrar".
 class SettingsScreen extends StatefulWidget {
@@ -81,6 +84,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     final info = _info;
     final purchased = context.watch<AppState>().purchased;
     final pending = context.watch<PurchasesService>().pending;
+    final ads = context.watch<AdsService>();
     return Scaffold(
       appBar: AppBar(title: Text(l10n.settingsTitle)),
       body: SafeArea(
@@ -120,6 +124,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
               onPressed: _restoring ? null : _restore,
               child: Text(l10n.restorePurchase),
             ),
+            if (ads.privacyOptionsRequired) ...[
+              const SizedBox(height: 16),
+              OutlinedButton(
+                onPressed: ads.showPrivacyOptions,
+                child: Text(l10n.settingsAdPrivacy),
+              ),
+            ],
             const SizedBox(height: 16),
             OutlinedButton(onPressed: _openPrivacyPolicy, child: Text(l10n.settingsPrivacyPolicy)),
             const SizedBox(height: 16),

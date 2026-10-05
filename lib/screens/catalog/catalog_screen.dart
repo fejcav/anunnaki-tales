@@ -6,13 +6,17 @@ import '../../l10n/app_localizations.dart';
 import '../../logic/purchase_rules.dart';
 import '../../logic/story_rules.dart';
 import '../../main.dart';
+import '../../services/ads.dart';
 import '../../state/app_state.dart';
+import '../../widgets/ad_banner.dart';
 import '../../widgets/adventure_card.dart';
 import '../../widgets/stars_background.dart';
 
 // "Elige tu aventura": una tarjeta por aventura del catálogo local. Las
 // abiertas van a "Tu héroe"; las que tienen candado (no gratis y sin la
 // compra) abren el Paywall; las que no tienen historia dicen "Próximamente".
+// Al pie, el banner (sin la compra); la primera vez que se abre, antes del
+// banner se pide el consentimiento de anuncios.
 class CatalogScreen extends StatelessWidget {
   const CatalogScreen({super.key});
 
@@ -44,14 +48,20 @@ class CatalogScreen extends StatelessWidget {
                     locked: locked,
                     endingsFound: entry.endingsFound,
                     endingsTotal: story == null ? 0 : endingsOf(story).length,
-                    onTap: () => Navigator.of(context).pushNamed(
-                      locked ? Routes.paywall : Routes.heroIntro,
-                      arguments: entry.adventure,
-                    ),
+                    onTap: () {
+                      // Al entrar a Tu héroe se deja cargado el intersticial
+                      // de "Empezar" (sin la compra; lo decide AdsService).
+                      if (!locked) context.read<AdsService>().preloadInterstitial();
+                      Navigator.of(context).pushNamed(
+                        locked ? Routes.paywall : Routes.heroIntro,
+                        arguments: entry.adventure,
+                      );
+                    },
                   );
                 },
               ),
       ),
+      bottomNavigationBar: const AdBanner(),
     );
   }
 }

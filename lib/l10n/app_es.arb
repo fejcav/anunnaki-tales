@@ -87,6 +87,7 @@
   "endingLastDecision": "Volver a la última decisión",
   "settingsTitle": "Ajustes",
   "settingsPrivacyPolicy": "Política de privacidad",
+  "settingsAdPrivacy": "Privacidad de anuncios",
   "settingsLinkError": "No pudimos abrir el enlace.",
   "settingsResetProgress": "Borrar progreso",
   "settingsResetQuestion": "Se borrarán la partida guardada y los finales descubiertos. Esto no se puede deshacer.",

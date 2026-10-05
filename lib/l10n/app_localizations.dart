@@ -314,6 +314,12 @@ abstract class AppLocalizations {
   /// **'Política de privacidad'**
   String get settingsPrivacyPolicy;
 
+  /// No description provided for @settingsAdPrivacy.
+  ///
+  /// In es, this message translates to:
+  /// **'Privacidad de anuncios'**
+  String get settingsAdPrivacy;
+
   /// No description provided for @settingsLinkError.
   ///
   /// In es, this message translates to:

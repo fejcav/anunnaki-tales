@@ -7,13 +7,16 @@ import '../../main.dart';
 import '../../models/adventure.dart';
 import '../../models/local_data.dart';
 import '../../models/story.dart';
+import '../../services/ads.dart';
 import '../../state/app_state.dart';
+import '../../widgets/ad_banner.dart';
 import '../../widgets/stars_background.dart';
 import '../gameplay/gameplay_screen.dart';
 
 // "Tu héroe": presenta al protagonista de la aventura (nombre y descripción)
 // y la aventura. "Empezar" guarda una partida nueva (pisa la anterior) y abre
-// la primera escena.
+// la primera escena; antes, sin la compra, pasa el intersticial si está listo
+// (si no, sigue sin anuncio). Al pie, el banner.
 class HeroIntroScreen extends StatelessWidget {
   const HeroIntroScreen({super.key});
 
@@ -23,6 +26,8 @@ class HeroIntroScreen extends StatelessWidget {
     await context.read<AppState>().saveGame(
       SavedGame(adventureId: adventure.id, sceneId: story.start, path: path),
     );
+    if (!context.mounted) return;
+    await context.read<AdsService>().showInterstitialIfReady();
     // Gameplay queda directamente sobre Inicio: la flecha atrás vuelve ahí.
     navigator.pushNamedAndRemoveUntil(
       Routes.gameplay,
@@ -117,6 +122,7 @@ class HeroIntroScreen extends StatelessWidget {
           },
         ),
       ),
+      bottomNavigationBar: const AdBanner(),
     );
   }
 }

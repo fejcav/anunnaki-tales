@@ -130,6 +130,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get settingsPrivacyPolicy => 'Privacy policy';
 
   @override
+  String get settingsAdPrivacy => 'Ad privacy';
+
+  @override
   String get settingsLinkError => 'We couldn\'t open the link.';
 
   @override
