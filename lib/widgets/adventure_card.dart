@@ -8,12 +8,14 @@ import '../models/adventure.dart';
 // Tarjeta de una aventura en el Catálogo: título, subtítulo, dificultad con
 // su color y "~N escenas"; debajo, "Finales: N de M" si ya descubrió alguno.
 // Sin historia escrita (`scenes` null) muestra "Próximamente", se ve apagada
-// y no se puede tocar.
+// y no se puede tocar. Con candado (`locked`) muestra un candado junto al
+// título; tocarla abre el Paywall.
 class AdventureCard extends StatelessWidget {
   const AdventureCard({
     super.key,
     required this.adventure,
     required this.scenes,
+    required this.locked,
     required this.endingsFound,
     required this.endingsTotal,
     required this.onTap,
@@ -21,6 +23,7 @@ class AdventureCard extends StatelessWidget {
 
   final Adventure adventure;
   final int? scenes; // camino más corto al final del mito; null = sin historia
+  final bool locked; // no es gratis y no se hizo la compra
   final int endingsFound;
   final int endingsTotal;
   final VoidCallback? onTap;
@@ -47,7 +50,26 @@ class AdventureCard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(adventure.title.of(lang), style: AppText.title.copyWith(fontSize: 18)),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      child: Text(
+                        adventure.title.of(lang),
+                        style: AppText.title.copyWith(fontSize: 18),
+                      ),
+                    ),
+                    if (locked && !comingSoon) ...[
+                      const SizedBox(width: 8),
+                      Icon(
+                        Icons.lock_outline,
+                        color: AppColors.gold,
+                        size: 20,
+                        semanticLabel: l10n.catalogLocked,
+                      ),
+                    ],
+                  ],
+                ),
                 const SizedBox(height: 6),
                 Text(adventure.subtitle.of(lang), style: AppText.bodySecondary),
                 const SizedBox(height: 12),
@@ -67,7 +89,10 @@ class AdventureCard extends StatelessWidget {
                     Text(
                       comingSoon ? l10n.catalogComingSoon : l10n.catalogScenes(scenes!),
                       style: comingSoon
-                          ? AppText.body.copyWith(color: AppColors.gold, fontWeight: FontWeight.w600)
+                          ? AppText.body.copyWith(
+                              color: AppColors.gold,
+                              fontWeight: FontWeight.w600,
+                            )
                           : AppText.bodySecondary,
                     ),
                   ],

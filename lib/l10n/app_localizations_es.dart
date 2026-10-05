@@ -154,5 +154,61 @@ class AppLocalizationsEs extends AppLocalizations {
   }
 
   @override
+  String get catalogLocked => 'Bloqueada';
+
+  @override
+  String get paywallTitle => 'Desbloquea todos los mitos';
+
+  @override
+  String paywallAdventures(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count aventuras más, ya escritas y listas para jugar',
+      one: '1 aventura más, ya escrita y lista para jugar',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get paywallNoAds => 'Sin anuncios';
+
+  @override
+  String get paywallOneTime => 'Pago único, sin suscripción';
+
+  @override
+  String get paywallBuy => 'Comprar';
+
+  @override
+  String get paywallNotNow => 'Ahora no';
+
+  @override
+  String get paywallUnavailable =>
+      'La tienda no está disponible ahora. Prueba más tarde.';
+
+  @override
+  String get restorePurchase => 'Restaurar compra';
+
+  @override
+  String get purchaseDone => '¡Listo! Todos los mitos están desbloqueados.';
+
+  @override
+  String get purchasePending =>
+      'Compra pendiente: se activará cuando la tienda confirme el pago.';
+
+  @override
+  String get restoreNotFound => 'No encontramos una compra para restaurar.';
+
+  @override
+  String get restoreFailed =>
+      'No pudimos conectar con la tienda. Prueba más tarde.';
+
+  @override
+  String get settingsUnlockAll => 'Desbloquear todo';
+
+  @override
+  String get settingsAllUnlocked => 'Todo desbloqueado';
+
+  @override
   String get back => 'Volver';
 }

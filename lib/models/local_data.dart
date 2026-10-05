@@ -1,20 +1,31 @@
 // Todo lo que la app guarda en el teléfono, en una sola clave de
 // shared_preferences (ver "Datos en shared_preferences" en CLAUDE.md).
 class LocalData {
-  const LocalData({this.language, this.savedGame, this.endingsFound = const {}});
+  const LocalData({
+    this.language,
+    this.savedGame,
+    this.endingsFound = const {},
+    this.purchased = false,
+  });
 
   static const schemaVersion = 2;
 
   final String? language; // null = el del teléfono
   final SavedGame? savedGame;
   final Map<String, List<String>> endingsFound; // aventura → ids de finales
+  final bool purchased; // compra única hecha (se guarda para no esperar a la tienda)
 
   // Los finales que ya descubrió en una aventura.
   List<String> endingsOf(String adventureId) => endingsFound[adventureId] ?? const [];
 
   // Copia con otra partida guardada (null = sin partida).
   LocalData withSavedGame(SavedGame? savedGame) {
-    return LocalData(language: language, savedGame: savedGame, endingsFound: endingsFound);
+    return LocalData(
+      language: language,
+      savedGame: savedGame,
+      endingsFound: endingsFound,
+      purchased: purchased,
+    );
   }
 
   // Copia con un final más descubierto (si ya estaba, no se repite).
@@ -24,15 +35,33 @@ class LocalData {
     return LocalData(
       language: language,
       savedGame: savedGame,
-      endingsFound: {...endingsFound, adventureId: [...found, endingId]},
+      endingsFound: {
+        ...endingsFound,
+        adventureId: [...found, endingId],
+      },
+      purchased: purchased,
     );
   }
+
+  // Copia con la compra hecha (o no).
+  LocalData withPurchased(bool purchased) {
+    return LocalData(
+      language: language,
+      savedGame: savedGame,
+      endingsFound: endingsFound,
+      purchased: purchased,
+    );
+  }
+
+  // "Borrar progreso": sin partida ni finales; el idioma y la compra quedan.
+  LocalData withoutProgress() => LocalData(language: language, purchased: purchased);
 
   Map<String, dynamic> toJson() => {
     'schemaVersion': schemaVersion,
     'language': language,
     'savedGame': savedGame?.toJson(),
     'endingsFound': endingsFound,
+    'purchased': purchased,
   };
 
   // Un JSON de la versión 1 (partidas del servidor viejo y contador de elecciones)
@@ -44,13 +73,11 @@ class LocalData {
     final endings = json['endingsFound'] as Map? ?? const {};
     return LocalData(
       language: language,
-      savedGame: game == null
-          ? null
-          : SavedGame.fromJson(Map<String, dynamic>.from(game as Map)),
+      savedGame: game == null ? null : SavedGame.fromJson(Map<String, dynamic>.from(game as Map)),
       endingsFound: {
-        for (final e in endings.entries)
-          e.key as String: (e.value as List).cast<String>().toList(),
+        for (final e in endings.entries) e.key as String: (e.value as List).cast<String>().toList(),
       },
+      purchased: json['purchased'] as bool? ?? false,
     );
   }
 }
@@ -64,11 +91,7 @@ class SavedGame {
   final String sceneId;
   final List<String> path;
 
-  Map<String, dynamic> toJson() => {
-    'adventureId': adventureId,
-    'sceneId': sceneId,
-    'path': path,
-  };
+  Map<String, dynamic> toJson() => {'adventureId': adventureId, 'sceneId': sceneId, 'path': path};
 
   factory SavedGame.fromJson(Map<String, dynamic> json) {
     return SavedGame(

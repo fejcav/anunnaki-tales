@@ -36,55 +36,57 @@ void main() {
     expect(data.endingsOf('descent_inanna'), isEmpty);
   });
 
-  test('finishGame guarda el final una sola vez y borra la partida', () async {
+  test('guarda y lee la compra; sin el campo, no hay compra', () async {
     final store = LocalStore();
-    await store.saveGame(game);
+    expect((await store.load()).purchased, isFalse);
 
-    await store.finishGame('gilgamesh_enkidu', 'fin_tirano');
-    await store.finishGame('gilgamesh_enkidu', 'fin_tirano');
-    await store.finishGame('gilgamesh_enkidu', 'fin_polvo');
-    final data = await store.load();
+    await store.save(const LocalData().withPurchased(true));
+
+    expect((await store.load()).purchased, isTrue);
+  });
+
+  test('un final se guarda una sola vez y borra la partida', () {
+    var data = const LocalData(savedGame: game);
+    for (final ending in ['fin_tirano', 'fin_tirano', 'fin_polvo']) {
+      data = data.withEndingFound('gilgamesh_enkidu', ending).withSavedGame(null);
+    }
 
     expect(data.savedGame, isNull);
     expect(data.endingsOf('gilgamesh_enkidu'), ['fin_tirano', 'fin_polvo']);
   });
 
-  test('clearGame borra solo la partida', () async {
-    final store = LocalStore();
-    await store.save(
-      const LocalData(
-        savedGame: game,
-        endingsFound: {
-          'gilgamesh_enkidu': ['fin_paz'],
-        },
-      ),
+  test('borrar la partida conserva los finales y la compra', () {
+    const before = LocalData(
+      savedGame: game,
+      endingsFound: {
+        'gilgamesh_enkidu': ['fin_paz'],
+      },
+      purchased: true,
     );
 
-    await store.clearGame();
-    final data = await store.load();
+    final data = before.withSavedGame(null);
 
     expect(data.savedGame, isNull);
     expect(data.endingsOf('gilgamesh_enkidu'), ['fin_paz']);
+    expect(data.purchased, isTrue);
   });
 
-  test('clearProgress borra la partida y los finales, y conserva el idioma', () async {
-    final store = LocalStore();
-    await store.save(
-      const LocalData(
-        language: 'en',
-        savedGame: game,
-        endingsFound: {
-          'gilgamesh_enkidu': ['fin_paz'],
-        },
-      ),
+  test('borrar progreso borra la partida y los finales; quedan el idioma y la compra', () {
+    const before = LocalData(
+      language: 'en',
+      savedGame: game,
+      endingsFound: {
+        'gilgamesh_enkidu': ['fin_paz'],
+      },
+      purchased: true,
     );
 
-    await store.clearProgress();
-    final data = await store.load();
+    final data = before.withoutProgress();
 
     expect(data.language, 'en');
     expect(data.savedGame, isNull);
     expect(data.endingsFound, isEmpty);
+    expect(data.purchased, isTrue);
   });
 
   test('la versión 1 descarta la partida vieja y el contador, y conserva el idioma', () async {

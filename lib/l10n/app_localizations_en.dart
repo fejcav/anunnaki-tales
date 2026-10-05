@@ -154,5 +154,61 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
+  String get catalogLocked => 'Locked';
+
+  @override
+  String get paywallTitle => 'Unlock all myths';
+
+  @override
+  String paywallAdventures(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count more adventures, already written and ready to play',
+      one: '1 more adventure, already written and ready to play',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get paywallNoAds => 'No ads';
+
+  @override
+  String get paywallOneTime => 'One-time payment, no subscription';
+
+  @override
+  String get paywallBuy => 'Buy';
+
+  @override
+  String get paywallNotNow => 'Not now';
+
+  @override
+  String get paywallUnavailable =>
+      'The store isn\'t available right now. Try again later.';
+
+  @override
+  String get restorePurchase => 'Restore purchase';
+
+  @override
+  String get purchaseDone => 'Done! All myths are unlocked.';
+
+  @override
+  String get purchasePending =>
+      'Purchase pending: it will be activated when the store confirms the payment.';
+
+  @override
+  String get restoreNotFound => 'We couldn\'t find a purchase to restore.';
+
+  @override
+  String get restoreFailed =>
+      'We couldn\'t connect to the store. Try again later.';
+
+  @override
+  String get settingsUnlockAll => 'Unlock everything';
+
+  @override
+  String get settingsAllUnlocked => 'Everything unlocked';
+
+  @override
   String get back => 'Back';
 }

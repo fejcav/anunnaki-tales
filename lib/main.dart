@@ -11,27 +11,32 @@ import 'screens/ending/ending_screen.dart';
 import 'screens/gameplay/gameplay_screen.dart';
 import 'screens/hero_intro/hero_intro_screen.dart';
 import 'screens/home/home_screen.dart';
+import 'screens/paywall/paywall_screen.dart';
 import 'screens/settings/settings_screen.dart';
+import 'services/purchases.dart';
 import 'services/story_repository.dart';
+import 'state/app_state.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   // Solo vertical.
   await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+  // Lo guardado, el catálogo y las historias se leen antes de mostrar nada
+  // (son archivos locales: tarda muy poco). La tienda se consulta aparte, sin
+  // frenar el arranque: la compra ya quedó guardada en el teléfono.
+  final appState = AppState(StoryRepository(), LocalStore());
+  await appState.load();
+  final purchases = PurchasesService(appState: appState)..start();
   runApp(
     MultiProvider(
       providers: [
-        Provider(create: (_) => StoryRepository()),
-        Provider(create: (_) => LocalStore()),
+        ChangeNotifierProvider.value(value: appState),
+        ChangeNotifierProvider.value(value: purchases),
       ],
       child: const AnunnakiApp(),
     ),
   );
 }
-
-// Avisa a Inicio cuando vuelve a quedar arriba (por ejemplo, al salir de
-// Gameplay), para que relea la partida guardada.
-final routeObserver = RouteObserver<ModalRoute<void>>();
 
 // Nombres de las rutas, para navegar con Navigator.pushNamed(context, Routes.x).
 class Routes {
@@ -43,6 +48,7 @@ class Routes {
   static const gameplay = '/gameplay';
   static const ending = '/ending';
   static const settings = '/settings';
+  static const paywall = '/paywall';
 }
 
 class AnunnakiApp extends StatelessWidget {
@@ -55,6 +61,7 @@ class AnunnakiApp extends StatelessWidget {
     Routes.gameplay: (_) => const GameplayScreen(),
     Routes.ending: (_) => const EndingScreen(),
     Routes.settings: (_) => const SettingsScreen(),
+    Routes.paywall: (_) => const PaywallScreen(),
   };
 
   @override
@@ -70,7 +77,6 @@ class AnunnakiApp extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: AppLocalizations.supportedLocales,
-      navigatorObservers: [routeObserver],
       routes: _routes,
     );
   }

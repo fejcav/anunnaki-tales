@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../../app_theme.dart';
-import '../../data/local_store.dart';
 import '../../l10n/app_localizations.dart';
 import '../../logic/risk_rules.dart';
 import '../../logic/story_rules.dart';
@@ -11,6 +10,7 @@ import '../../models/adventure.dart';
 import '../../models/local_data.dart';
 import '../../models/story.dart';
 import '../../models/story_scene.dart';
+import '../../state/app_state.dart';
 import '../../widgets/choice_button.dart';
 import '../../widgets/historical_fact_card.dart';
 import '../../widgets/stars_background.dart';
@@ -65,7 +65,7 @@ class _GameplayScreenState extends State<GameplayScreen> {
     final next = nextScene(args.story, choice);
     if (next == null || _busy) return; // null no pasa: la validación lo impide
     _busy = true;
-    final store = context.read<LocalStore>();
+    final store = context.read<AppState>();
     final navigator = Navigator.of(context);
     final path = [..._path, next.id];
 
@@ -78,9 +78,7 @@ class _GameplayScreenState extends State<GameplayScreen> {
       return;
     }
 
-    await store.saveGame(
-      SavedGame(adventureId: args.adventure.id, sceneId: next.id, path: path),
-    );
+    await store.saveGame(SavedGame(adventureId: args.adventure.id, sceneId: next.id, path: path));
     _busy = false;
     if (!mounted) return;
     setState(() => _path = path);

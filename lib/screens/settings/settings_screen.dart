@@ -5,10 +5,13 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../../app_theme.dart';
 import '../../config.dart';
-import '../../data/local_store.dart';
 import '../../l10n/app_localizations.dart';
+import '../../main.dart';
+import '../../services/purchases.dart';
+import '../../state/app_state.dart';
 
-// Ajustes: política de privacidad, "Borrar progreso" y la versión.
+// Ajustes: "Desbloquear todo" (abre el Paywall) o "Todo desbloqueado",
+// "Restaurar compra", política de privacidad, "Borrar progreso" y la versión.
 // "Borrar progreso" pide confirmación dentro de la misma pantalla (sin
 // diálogos): el botón se cambia por la pregunta con "Cancelar" y "Borrar".
 class SettingsScreen extends StatefulWidget {
@@ -21,6 +24,7 @@ class SettingsScreen extends StatefulWidget {
 class _SettingsScreenState extends State<SettingsScreen> {
   PackageInfo? _info; // versión de la app; null mientras se lee
   bool _confirmingReset = false; // mostrando la pregunta de "Borrar progreso"
+  bool _restoring = false; // consultando las compras pasadas
 
   @override
   void initState() {
@@ -46,11 +50,26 @@ class _SettingsScreenState extends State<SettingsScreen> {
     }
   }
 
+  Future<void> _restore() async {
+    final l10n = AppLocalizations.of(context);
+    final messenger = ScaffoldMessenger.of(context);
+    setState(() => _restoring = true);
+    final result = await context.read<PurchasesService>().restore();
+    if (!mounted) return;
+    setState(() => _restoring = false);
+    final message = switch (result) {
+      RestoreResult.found => l10n.purchaseDone,
+      RestoreResult.notFound => l10n.restoreNotFound,
+      RestoreResult.failed => l10n.restoreFailed,
+    };
+    messenger.showSnackBar(SnackBar(content: Text(message)));
+  }
+
   // Borra la partida guardada y los finales descubiertos.
   Future<void> _resetProgress() async {
     final l10n = AppLocalizations.of(context);
     final messenger = ScaffoldMessenger.of(context);
-    await context.read<LocalStore>().clearProgress();
+    await context.read<AppState>().clearProgress();
     if (!mounted) return;
     setState(() => _confirmingReset = false);
     messenger.showSnackBar(SnackBar(content: Text(l10n.settingsResetDone)));
@@ -60,16 +79,49 @@ class _SettingsScreenState extends State<SettingsScreen> {
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
     final info = _info;
+    final purchased = context.watch<AppState>().purchased;
+    final pending = context.watch<PurchasesService>().pending;
     return Scaffold(
       appBar: AppBar(title: Text(l10n.settingsTitle)),
       body: SafeArea(
         child: ListView(
           padding: const EdgeInsets.all(24),
           children: [
+            if (purchased)
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Icon(Icons.check_circle_outline, color: AppColors.softGold),
+                  const SizedBox(width: 8),
+                  Text(
+                    l10n.settingsAllUnlocked,
+                    style: AppText.body.copyWith(
+                      color: AppColors.softGold,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ],
+              )
+            else
+              ElevatedButton(
+                onPressed: () => Navigator.of(context).pushNamed(Routes.paywall),
+                child: Text(l10n.settingsUnlockAll),
+              ),
+            if (pending && !purchased) ...[
+              const SizedBox(height: 8),
+              Text(
+                l10n.purchasePending,
+                style: AppText.bodySecondary.copyWith(fontSize: 13),
+                textAlign: TextAlign.center,
+              ),
+            ],
+            const SizedBox(height: 16),
             OutlinedButton(
-              onPressed: _openPrivacyPolicy,
-              child: Text(l10n.settingsPrivacyPolicy),
+              onPressed: _restoring ? null : _restore,
+              child: Text(l10n.restorePurchase),
             ),
+            const SizedBox(height: 16),
+            OutlinedButton(onPressed: _openPrivacyPolicy, child: Text(l10n.settingsPrivacyPolicy)),
             const SizedBox(height: 16),
             if (_confirmingReset)
               _ResetConfirmation(

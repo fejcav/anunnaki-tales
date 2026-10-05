@@ -2,45 +2,25 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../../app_theme.dart';
-import '../../data/local_store.dart';
 import '../../l10n/app_localizations.dart';
 import '../../main.dart';
 import '../../models/adventure.dart';
 import '../../models/local_data.dart';
 import '../../models/story.dart';
-import '../../services/story_repository.dart';
+import '../../state/app_state.dart';
 import '../../widgets/stars_background.dart';
 import '../gameplay/gameplay_screen.dart';
 
 // "Tu héroe": presenta al protagonista de la aventura (nombre y descripción)
 // y la aventura. "Empezar" guarda una partida nueva (pisa la anterior) y abre
 // la primera escena.
-class HeroIntroScreen extends StatefulWidget {
+class HeroIntroScreen extends StatelessWidget {
   const HeroIntroScreen({super.key});
 
-  @override
-  State<HeroIntroScreen> createState() => _HeroIntroScreenState();
-}
-
-class _HeroIntroScreenState extends State<HeroIntroScreen> {
-  Adventure? _adventure; // llega como argumento de la ruta
-  late Future<Story?> _story;
-
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    // Los argumentos de la ruta no se pueden leer en initState.
-    if (_adventure == null) {
-      _adventure = ModalRoute.of(context)!.settings.arguments as Adventure;
-      _story = context.read<StoryRepository>().loadStory(_adventure!.id);
-    }
-  }
-
-  Future<void> _start(Story story) async {
-    final adventure = _adventure!;
+  Future<void> _start(BuildContext context, Adventure adventure, Story story) async {
     final navigator = Navigator.of(context);
     final path = [story.start];
-    await context.read<LocalStore>().saveGame(
+    await context.read<AppState>().saveGame(
       SavedGame(adventureId: adventure.id, sceneId: story.start, path: path),
     );
     // Gameplay queda directamente sobre Inicio: la flecha atrás vuelve ahí.
@@ -55,17 +35,13 @@ class _HeroIntroScreenState extends State<HeroIntroScreen> {
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
     final lang = Localizations.localeOf(context).languageCode;
-    final adventure = _adventure!;
+    final adventure = ModalRoute.of(context)!.settings.arguments as Adventure;
+    final story = context.read<AppState>().storyOf(adventure.id);
     return Scaffold(
       appBar: AppBar(title: Text(l10n.heroIntroTitle)),
       body: StarsBackground(
-        child: FutureBuilder<Story?>(
-          future: _story,
-          builder: (context, snapshot) {
-            if (snapshot.connectionState != ConnectionState.done) {
-              return const Center(child: CircularProgressIndicator());
-            }
-            final story = snapshot.data;
+        child: Builder(
+          builder: (context) {
             if (story == null) {
               return Center(
                 child: Padding(
@@ -130,7 +106,7 @@ class _HeroIntroScreenState extends State<HeroIntroScreen> {
                     child: SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                        onPressed: () => _start(story),
+                        onPressed: () => _start(context, adventure, story),
                         child: Text(l10n.heroStart),
                       ),
                     ),

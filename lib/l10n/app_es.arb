@@ -104,5 +104,27 @@
       }
     }
   },
+  "catalogLocked": "Bloqueada",
+  "paywallTitle": "Desbloquea todos los mitos",
+  "paywallAdventures": "{count, plural, =1{1 aventura más, ya escrita y lista para jugar} other{{count} aventuras más, ya escritas y listas para jugar}}",
+  "paywallNoAds": "Sin anuncios",
+  "paywallOneTime": "Pago único, sin suscripción",
+  "paywallBuy": "Comprar",
+  "paywallNotNow": "Ahora no",
+  "paywallUnavailable": "La tienda no está disponible ahora. Prueba más tarde.",
+  "restorePurchase": "Restaurar compra",
+  "purchaseDone": "¡Listo! Todos los mitos están desbloqueados.",
+  "purchasePending": "Compra pendiente: se activará cuando la tienda confirme el pago.",
+  "restoreNotFound": "No encontramos una compra para restaurar.",
+  "restoreFailed": "No pudimos conectar con la tienda. Prueba más tarde.",
+  "settingsUnlockAll": "Desbloquear todo",
+  "settingsAllUnlocked": "Todo desbloqueado",
+  "@paywallAdventures": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "back": "Volver"
 }

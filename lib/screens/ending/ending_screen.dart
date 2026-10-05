@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../../app_theme.dart';
-import '../../data/local_store.dart';
 import '../../l10n/app_localizations.dart';
 import '../../logic/story_rules.dart';
 import '../../main.dart';
 import '../../models/adventure.dart';
 import '../../models/local_data.dart';
 import '../../models/story.dart';
+import '../../state/app_state.dart';
 import '../../widgets/historical_fact_card.dart';
 import '../../widgets/stars_background.dart';
 import '../gameplay/gameplay_screen.dart';
@@ -36,28 +36,19 @@ class EndingScreen extends StatefulWidget {
 
 class _EndingScreenState extends State<EndingScreen> {
   EndingArgs? _args; // llega como argumento de la ruta
-  int? _found; // finales descubiertos de esta aventura
 
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
     // Los argumentos de la ruta no se pueden leer en initState.
-    if (_args == null) {
-      _args = ModalRoute.of(context)!.settings.arguments as EndingArgs;
-      _loadFound();
-    }
-  }
-
-  Future<void> _loadFound() async {
-    final data = await context.read<LocalStore>().load();
-    if (mounted) setState(() => _found = data.endingsOf(_args!.adventure.id).length);
+    _args ??= ModalRoute.of(context)!.settings.arguments as EndingArgs;
   }
 
   // Abre Gameplay con este camino y lo guarda como partida en curso.
   Future<void> _play(List<String> path) async {
     final args = _args!;
     final navigator = Navigator.of(context);
-    await context.read<LocalStore>().saveGame(
+    await context.read<AppState>().saveGame(
       SavedGame(adventureId: args.adventure.id, sceneId: path.last, path: path),
     );
     navigator.pushReplacementNamed(
@@ -74,19 +65,15 @@ class _EndingScreenState extends State<EndingScreen> {
     final scene = args.story.scene(args.path.last)!;
     final ending = scene.ending!;
     final fact = scene.fact?.of(lang) ?? '';
-    final lastDecision = ending.type == 'tragic'
-        ? pathToLastDecision(args.story, args.path)
-        : null;
+    final found = context.watch<AppState>().endingsFoundOf(args.adventure.id);
+    final lastDecision = ending.type == 'tragic' ? pathToLastDecision(args.story, args.path) : null;
     final typeLabel = switch (ending.type) {
       'myth' => l10n.endingTypeMyth,
       'tragic' => l10n.endingTypeTragic,
       _ => l10n.endingTypeAlternative,
     };
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        title: Text(args.adventure.title.of(lang)),
-      ),
+      appBar: AppBar(automaticallyImplyLeading: false, title: Text(args.adventure.title.of(lang))),
       body: StarsBackground(
         child: SafeArea(
           top: false,
@@ -113,12 +100,11 @@ class _EndingScreenState extends State<EndingScreen> {
                   HistoricalFactCard(title: l10n.historicalFactTitle, fact: fact),
                 ],
                 const SizedBox(height: 20),
-                if (_found != null)
-                  Text(
-                    l10n.endingFound(_found!, endingsOf(args.story).length),
-                    style: AppText.body.copyWith(color: AppColors.softGold),
-                    textAlign: TextAlign.center,
-                  ),
+                Text(
+                  l10n.endingFound(found, endingsOf(args.story).length),
+                  style: AppText.body.copyWith(color: AppColors.softGold),
+                  textAlign: TextAlign.center,
+                ),
                 const SizedBox(height: 24),
                 if (lastDecision != null) ...[
                   ElevatedButton(

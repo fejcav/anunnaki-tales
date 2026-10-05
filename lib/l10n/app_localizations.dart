@@ -356,6 +356,96 @@ abstract class AppLocalizations {
   /// **'Versión {version} ({build})'**
   String settingsVersion(String version, String build);
 
+  /// No description provided for @catalogLocked.
+  ///
+  /// In es, this message translates to:
+  /// **'Bloqueada'**
+  String get catalogLocked;
+
+  /// No description provided for @paywallTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Desbloquea todos los mitos'**
+  String get paywallTitle;
+
+  /// No description provided for @paywallAdventures.
+  ///
+  /// In es, this message translates to:
+  /// **'{count, plural, =1{1 aventura más, ya escrita y lista para jugar} other{{count} aventuras más, ya escritas y listas para jugar}}'**
+  String paywallAdventures(int count);
+
+  /// No description provided for @paywallNoAds.
+  ///
+  /// In es, this message translates to:
+  /// **'Sin anuncios'**
+  String get paywallNoAds;
+
+  /// No description provided for @paywallOneTime.
+  ///
+  /// In es, this message translates to:
+  /// **'Pago único, sin suscripción'**
+  String get paywallOneTime;
+
+  /// No description provided for @paywallBuy.
+  ///
+  /// In es, this message translates to:
+  /// **'Comprar'**
+  String get paywallBuy;
+
+  /// No description provided for @paywallNotNow.
+  ///
+  /// In es, this message translates to:
+  /// **'Ahora no'**
+  String get paywallNotNow;
+
+  /// No description provided for @paywallUnavailable.
+  ///
+  /// In es, this message translates to:
+  /// **'La tienda no está disponible ahora. Prueba más tarde.'**
+  String get paywallUnavailable;
+
+  /// No description provided for @restorePurchase.
+  ///
+  /// In es, this message translates to:
+  /// **'Restaurar compra'**
+  String get restorePurchase;
+
+  /// No description provided for @purchaseDone.
+  ///
+  /// In es, this message translates to:
+  /// **'¡Listo! Todos los mitos están desbloqueados.'**
+  String get purchaseDone;
+
+  /// No description provided for @purchasePending.
+  ///
+  /// In es, this message translates to:
+  /// **'Compra pendiente: se activará cuando la tienda confirme el pago.'**
+  String get purchasePending;
+
+  /// No description provided for @restoreNotFound.
+  ///
+  /// In es, this message translates to:
+  /// **'No encontramos una compra para restaurar.'**
+  String get restoreNotFound;
+
+  /// No description provided for @restoreFailed.
+  ///
+  /// In es, this message translates to:
+  /// **'No pudimos conectar con la tienda. Prueba más tarde.'**
+  String get restoreFailed;
+
+  /// No description provided for @settingsUnlockAll.
+  ///
+  /// In es, this message translates to:
+  /// **'Desbloquear todo'**
+  String get settingsUnlockAll;
+
+  /// No description provided for @settingsAllUnlocked.
+  ///
+  /// In es, this message translates to:
+  /// **'Todo desbloqueado'**
+  String get settingsAllUnlocked;
+
   /// No description provided for @back.
   ///
   /// In es, this message translates to:
