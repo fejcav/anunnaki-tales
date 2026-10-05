@@ -1,0 +1,6 @@
+# Plantilla. Copiar como android/key.properties (ignorado por git) y completar.
+# storeFile es la ruta al keystore de subida, fuera del repo.
+storeFile=C:/dev/keys/anunnaki-upload.jks
+storePassword=CONTRASEÑA_DEL_KEYSTORE
+keyAlias=upload
+keyPassword=CONTRASEÑA_DE_LA_CLAVE

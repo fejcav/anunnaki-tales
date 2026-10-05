@@ -27,6 +27,30 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.4
+  flutter_native_splash: ^2.4.8
+
+# Ícono de la app (dart run flutter_launcher_icons). Herramienta de desarrollo,
+# no va en la app. El adaptativo de Android usa el mismo PNG con el margen por
+# defecto, así el dibujo entra entero en la máscara redonda del teléfono.
+flutter_launcher_icons:
+  image_path: "assets/icon/icon.png"
+  android: true
+  ios: true
+  # La App Store rechaza íconos con transparencia.
+  remove_alpha_ios: true
+  adaptive_icon_background: "#0A0E1A"
+  adaptive_icon_foreground: "assets/icon/icon.png"
+
+# Pantalla de arranque (dart run flutter_native_splash:create). Herramienta de
+# desarrollo. splash.png es icon.png achicado al centro de un lienzo
+# transparente de 1152 px: Android 12+ recorta el centro en círculo.
+flutter_native_splash:
+  color: "#0A0E1A"
+  image: assets/icon/splash.png
+  android_12:
+    color: "#0A0E1A"
+    image: assets/icon/splash.png
 
 flutter:
   uses-material-design: true
