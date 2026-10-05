@@ -1,0 +1,1186 @@
+{
+  "formatVersion": 1,
+  "adventureId": "descent_inanna",
+  "contentVersion": "1.0",
+  "hero": {
+    "name": {
+      "es": "Inanna",
+      "en": "Inanna"
+    },
+    "description": {
+      "es": "Reina del Cielo, diosa del amor y de la guerra, estrella de la mañana y de la tarde. Lo tiene todo, menos lo que hay bajo la tierra.",
+      "en": "Queen of Heaven, goddess of love and of war, the morning and the evening star. She has everything, except what lies beneath the earth."
+    }
+  },
+  "chapters": [
+    {
+      "number": 1,
+      "title": {
+        "es": "La Reina del Cielo",
+        "en": "The Queen of Heaven"
+      }
+    },
+    {
+      "number": 2,
+      "title": {
+        "es": "Las órdenes a Ninshubur",
+        "en": "Orders for Ninshubur"
+      }
+    },
+    {
+      "number": 3,
+      "title": {
+        "es": "La puerta de Ganzer",
+        "en": "The Gate of Ganzer"
+      }
+    },
+    {
+      "number": 4,
+      "title": {
+        "es": "Las siete puertas",
+        "en": "The Seven Gates"
+      }
+    },
+    {
+      "number": 5,
+      "title": {
+        "es": "El trono de Ereshkigal",
+        "en": "The Throne of Ereshkigal"
+      }
+    },
+    {
+      "number": 6,
+      "title": {
+        "es": "Tres días y tres noches",
+        "en": "Three Days and Three Nights"
+      }
+    },
+    {
+      "number": 7,
+      "title": {
+        "es": "Los galla",
+        "en": "The Galla"
+      }
+    },
+    {
+      "number": 8,
+      "title": {
+        "es": "El manzano de Kulaba",
+        "en": "The Apple Tree of Kulaba"
+      }
+    }
+  ],
+  "start": "c1_cielo",
+  "scenes": [
+    {
+      "id": "c1_cielo",
+      "chapter": 1,
+      "mood": "epic",
+      "text": {
+        "es": "Desde la terraza del Eanna, tu templo en Uruk, ves salir el sol sobre los canales. Eres Inanna, Reina del Cielo. Por la mañana brillas como estrella en el este; por la tarde, en el oeste. Los reyes te cantan, las batallas se ganan en tu nombre, y nada de lo que florece o se destruye escapa a tu mano.\n\nNada, salvo una cosa.\n\nEsta mañana llega un mensajero cubierto de polvo: Gugalanna, el Gran Toro del Cielo, ha muerto. Era el esposo de tu hermana mayor, Ereshkigal, reina del Gran Abajo, el país del que nadie regresa. Habrá ritos fúnebres en el inframundo.\n\nSientes que tu oído se inclina hacia la tierra. Nunca nadie bajó por voluntad propia. Y tú no eres nadie.",
+        "en": "From the terrace of the Eanna, your temple in Uruk, you watch the sun rise over the canals. You are Inanna, Queen of Heaven. In the morning you shine as a star in the east; in the evening, in the west. Kings sing to you, battles are won in your name, and nothing that blossoms or is destroyed escapes your hand.\n\nNothing, except one thing.\n\nThis morning a messenger arrives covered in dust: Gugalanna, the Great Bull of Heaven, is dead. He was the husband of your elder sister, Ereshkigal, queen of the Great Below, the land from which no one returns. There will be funeral rites in the underworld.\n\nYou feel your ear turning toward the earth. No one has ever gone down of their own free will. And you are not no one."
+      },
+      "fact": {
+        "es": "Inanna era la diosa sumeria del amor y de la guerra, y se la identificaba con el planeta Venus. Los acadios la llamaron Ishtar. Su templo principal, el Eanna («Casa del Cielo»), estaba en Uruk.",
+        "en": "Inanna was the Sumerian goddess of love and of war, identified with the planet Venus. The Akkadians called her Ishtar. Her main temple, the Eanna (\"House of Heaven\"), stood in Uruk."
+      },
+      "choices": [
+        {
+          "to": "c1_me",
+          "risk": "low",
+          "text": {
+            "es": "Vestirte con las siete me",
+            "en": "Put on the seven me"
+          },
+          "description": {
+            "es": "Las joyas y las insignias de tu poder: si bajas, bajas como reina.",
+            "en": "The jewels and emblems of your power: if you go down, you go down as a queen."
+          }
+        },
+        {
+          "to": "c1_ninshubur",
+          "risk": "low",
+          "text": {
+            "es": "Llamar a Ninshubur, tu ministra",
+            "en": "Call Ninshubur, your minister"
+          },
+          "description": {
+            "es": "Ella siempre sabe qué decir, aunque no quieras oírlo.",
+            "en": "She always knows what to say, even when you don't want to hear it."
+          }
+        },
+        {
+          "to": "c1_ya",
+          "risk": "medium",
+          "text": {
+            "es": "Partir ahora mismo",
+            "en": "Set out right now"
+          },
+          "description": {
+            "es": "Los ritos no esperan, y tú tampoco.",
+            "en": "The rites won't wait, and neither will you."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c1_me",
+      "chapter": 1,
+      "mood": "sacred",
+      "text": {
+        "es": "Abandonas tus templos uno por uno: el de Uruk, el de Badtibira, el de Zabalam, el de Adab, el de Nippur, el de Kish, el de Akkad. Las sacerdotisas lloran al verte pasar.\n\nLuego te adornas con las siete me, los poderes que te hacen quien eres. La corona de la estepa sobre la cabeza. La peluca ordenada sobre la frente. El collar de lapislázuli en el cuello. Las dos cuentas gemelas sobre el pecho. El vestido de señora, el pala, sobre el cuerpo. El pectoral que dice «ven, hombre, ven». El anillo de oro en la mano. Y la vara y la cuerda de lapislázuli, con las que se mide el mundo.\n\nTe miras en el bronce pulido. Pareces invencible.",
+        "en": "You abandon your temples one by one: the one in Uruk, in Badtibira, in Zabalam, in Adab, in Nippur, in Kish, in Akkad. The priestesses weep as they watch you pass.\n\nThen you adorn yourself with the seven me, the powers that make you who you are. The crown of the steppe upon your head. The wig arranged over your brow. The lapis lazuli necklace at your throat. The twin beads upon your breast. The lady's dress, the pala, over your body. The breastplate that says \"come, man, come.\" The golden ring on your hand. And the lapis lazuli rod and line, with which the world is measured.\n\nYou look at yourself in the polished bronze. You look invincible."
+      },
+      "fact": {
+        "es": "Las «me» eran, para los sumerios, los poderes divinos que sostenían la civilización: la realeza, la escritura, los oficios, el amor. En otro mito, Inanna emborracha al dios Enki y se lleva las me en su barca hasta Uruk.",
+        "en": "To the Sumerians, the \"me\" were the divine powers that held civilization together: kingship, writing, the crafts, love. In another myth, Inanna gets the god Enki drunk and carries the me off to Uruk in her boat."
+      },
+      "choices": [
+        {
+          "to": "c2_ordenes",
+          "text": {
+            "es": "Salir hacia el Gran Abajo",
+            "en": "Set out for the Great Below"
+          },
+          "description": {
+            "es": "Ninshubur te espera en la puerta, con el rostro serio.",
+            "en": "Ninshubur is waiting at the gate, her face grave."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c1_ninshubur",
+      "chapter": 1,
+      "mood": "mysterious",
+      "text": {
+        "es": "Ninshubur llega sin que la llames dos veces. Es tu ministra, tu mensajera, la voz que habla en tu nombre ante los dioses. Te mira, mira el polvo del mensajero, y lo entiende todo antes de que hables.\n\n—Mi señora, nadie baja al país de Ereshkigal y vuelve. Ni los reyes, ni los héroes, ni los dioses. Los que entran se quedan.\n\n—Yo no soy «los que entran».\n\n—Lo sé. Por eso tengo miedo.\n\nSe arrodilla y apoya la frente en tus pies. No te pide que te quedes; sabe que no serviría. Solo pide una cosa: que bajes como lo que eres, con las siete me puestas, y no como una cualquiera.",
+        "en": "Ninshubur arrives before you have to call twice. She is your minister, your messenger, the voice that speaks in your name before the gods. She looks at you, looks at the dust on the messenger, and understands everything before you say a word.\n\n\"My lady, no one goes down to Ereshkigal's land and comes back. Not kings, not heroes, not gods. Those who enter stay.\"\n\n\"I am not 'those who enter.'\"\n\n\"I know. That is why I am afraid.\"\n\nShe kneels and rests her forehead against your feet. She does not ask you to stay; she knows it would be useless. She asks only one thing: that you go down as what you are, wearing the seven me, and not as just anyone."
+      },
+      "fact": {
+        "es": "Ninshubur era la «sukkal» de Inanna: su ministra y mensajera. En los mitos sumerios, el sukkal es el servidor de confianza que habla y actúa en nombre de un dios.",
+        "en": "Ninshubur was Inanna's \"sukkal\": her minister and messenger. In Sumerian myth, the sukkal is the trusted servant who speaks and acts on a god's behalf."
+      },
+      "choices": [
+        {
+          "to": "c1_me",
+          "risk": "low",
+          "text": {
+            "es": "Vestirte con las siete me",
+            "en": "Put on the seven me"
+          },
+          "description": {
+            "es": "Si vas a bajar, que te vean entera.",
+            "en": "If you are going down, let them see all of you."
+          }
+        },
+        {
+          "to": "c1_ya",
+          "risk": "medium",
+          "text": {
+            "es": "Partir así, sin más adornos",
+            "en": "Leave as you are, with no adornments"
+          },
+          "description": {
+            "es": "Tu nombre debería bastar en cualquier reino.",
+            "en": "Your name should be enough in any kingdom."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c1_ya",
+      "chapter": 1,
+      "mood": "dangerous",
+      "text": {
+        "es": "Bajas la escalinata del Eanna sin mirar atrás. Las sacerdotisas apenas alcanzan a apartarse. En la puerta de la ciudad, el guardia no se atreve a preguntarte adónde vas.\n\nPero antes de que cruces el canal, oyes pasos que corren. Es Ninshubur, con un bulto envuelto en lino contra el pecho: la corona, el collar, el pala, la vara y la cuerda de lapislázuli. Las siete me.\n\n—Si no puedo detenerte —jadea—, al menos no irás desnuda ante tu hermana.\n\nTe vistes ahí mismo, en el camino, mientras ella te sostiene el bronce para que te mires. Cuando terminas, ya no pareces una diosa que huye. Pareces una reina que va a reclamar algo.",
+        "en": "You go down the steps of the Eanna without looking back. The priestesses barely manage to step aside. At the city gate, the guard does not dare ask where you are going.\n\nBut before you cross the canal, you hear running footsteps. It is Ninshubur, with a bundle wrapped in linen pressed to her chest: the crown, the necklace, the pala, the lapis lazuli rod and line. The seven me.\n\n\"If I can't stop you,\" she pants, \"at least you won't go naked before your sister.\"\n\nYou dress right there, on the road, while she holds up the bronze so you can see yourself. When you finish, you no longer look like a goddess running away. You look like a queen going to claim something."
+      },
+      "choices": [
+        {
+          "to": "c2_ordenes",
+          "text": {
+            "es": "Seguir el camino con Ninshubur",
+            "en": "Go on down the road with Ninshubur"
+          },
+          "description": {
+            "es": "Hay cosas que todavía tienes que decirle.",
+            "en": "There are things you still have to tell her."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2_ordenes",
+      "chapter": 2,
+      "mood": "mysterious",
+      "text": {
+        "es": "Caminan hacia el norte, donde la tierra cultivada se acaba y empieza la estepa. Ninshubur va a tu lado en silencio. Sabe que en algún punto de este camino tendrás que dejarla.\n\nTe detienes junto a un pozo seco. Es el momento de darle tus órdenes. Si no vuelves, alguien tendrá que mover el cielo. Y los dioses no se mueven solos: hay que saber a qué puerta golpear, y en qué orden.\n\nNinshubur espera, con las manos juntas.",
+        "en": "You walk north, to where the farmland ends and the steppe begins. Ninshubur walks beside you in silence. She knows that somewhere along this road you will have to leave her.\n\nYou stop beside a dry well. It is time to give her your orders. If you do not return, someone will have to move heaven. And the gods do not move on their own: one has to know which door to knock on, and in what order.\n\nNinshubur waits, her hands folded."
+      },
+      "fact": {
+        "es": "El templo de Enlil era el Ekur, en Nippur; el del dios luna Nanna estaba en Ur, y el de Enki en Eridu, la ciudad que la tradición sumeria consideraba la más antigua del mundo.",
+        "en": "Enlil's temple was the Ekur, in Nippur; the moon god Nanna's was in Ur, and Enki's in Eridu, the city that Sumerian tradition held to be the oldest in the world."
+      },
+      "choices": [
+        {
+          "to": "c2_tres",
+          "risk": "low",
+          "text": {
+            "es": "Nombrar a tres dioses: Enlil, Nanna, Enki",
+            "en": "Name three gods: Enlil, Nanna, Enki"
+          },
+          "description": {
+            "es": "Si uno se niega, que vaya al siguiente.",
+            "en": "If one refuses, let her go to the next."
+          }
+        },
+        {
+          "to": "c2_enlil",
+          "risk": "medium",
+          "text": {
+            "es": "Confiar solo en Enlil, padre de los dioses",
+            "en": "Trust only Enlil, father of the gods"
+          },
+          "description": {
+            "es": "Su palabra basta; los demás obedecen.",
+            "en": "His word is enough; the others obey."
+          }
+        },
+        {
+          "to": "c2_sola",
+          "risk": "high",
+          "text": {
+            "es": "No dejar órdenes: una diosa no necesita rescate",
+            "en": "Leave no orders: a goddess needs no rescue"
+          },
+          "description": {
+            "es": "Bastará con tu nombre para volver.",
+            "en": "Your name will be enough to bring you back."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2_tres",
+      "chapter": 2,
+      "mood": "sacred",
+      "text": {
+        "es": "—Escucha bien —le dices—. Si en tres días y tres noches no he vuelto, llora por mí. Golpea el tambor en las plazas, recorre las casas de los dioses, rásgate los ojos, rásgate la boca, vístete con harapos como una mendiga.\n\n»Ve primero al Ekur, la casa de Enlil, en Nippur. Dile: «No dejes que tu hija muera en el inframundo». Si Enlil no te escucha, ve a Ur, a la casa de Nanna, y dile lo mismo. Y si Nanna tampoco te escucha, ve a Eridu, a la casa de Enki. Él conoce la planta de la vida y el agua de la vida. Él no me dejará morir.\n\nNinshubur repite cada palabra sin equivocarse. Después te abraza por primera vez en su vida.",
+        "en": "\"Listen well,\" you tell her. \"If in three days and three nights I have not returned, mourn for me. Beat the drum in the squares, go around the houses of the gods, scratch at your eyes, scratch at your mouth, dress in rags like a beggar.\n\n\"Go first to the Ekur, the house of Enlil, in Nippur. Say to him: 'Do not let your daughter die in the underworld.' If Enlil will not listen, go to Ur, to the house of Nanna, and tell him the same. And if Nanna will not listen either, go to Eridu, to the house of Enki. He knows the plant of life and the water of life. He will not let me die.\"\n\nNinshubur repeats every word without a mistake. Then she embraces you, for the first time in her life."
+      },
+      "fact": {
+        "es": "El poema se conoce por más de cincuenta tablillas de época paleobabilónica (hacia 1900–1600 a. C.), sobre todo de Nippur y Ur. Tras las primeras traducciones parciales (1916), Samuel Noah Kramer lo reconstruyó en sucesivas ediciones desde 1937.",
+        "en": "The poem is known from more than fifty tablets of the Old Babylonian period (around 1900–1600 BC), mostly from Nippur and Ur. After the first partial translations (1916), Samuel Noah Kramer reconstructed it in successive editions from 1937 onward."
+      },
+      "choices": [
+        {
+          "to": "c3_puerta",
+          "text": {
+            "es": "Seguir sola hacia la puerta",
+            "en": "Go on alone toward the gate"
+          },
+          "description": {
+            "es": "De aquí en adelante, nadie puede acompañarte.",
+            "en": "From here on, no one can go with you."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2_enlil",
+      "chapter": 2,
+      "mood": "mysterious",
+      "text": {
+        "es": "—Si en tres días no he vuelto, ve a Nippur, al Ekur, y habla con Enlil. Es el padre de los dioses. Una palabra suya abre cualquier puerta.\n\nNinshubur asiente, pero no se mueve.\n\n—Mi señora, ¿y si Enlil dice que no? Él hizo las leyes del Gran Abajo. Quizás no quiera romperlas por nadie, ni siquiera por ti.\n\nLa pregunta te molesta, porque tiene razón. Lo piensas un momento, mirando la estepa gris.\n\n—Entonces ve a Ur, a la casa de Nanna. Y si Nanna también se niega, ve a Eridu, a la casa de Enki. Enki conoce el agua de la vida. Él no me dejará morir.\n\nNinshubur sonríe apenas, como quien acaba de ganar una discusión que no quería tener.",
+        "en": "\"If in three days I have not returned, go to Nippur, to the Ekur, and speak with Enlil. He is the father of the gods. One word from him opens any door.\"\n\nNinshubur nods, but does not move.\n\n\"My lady, what if Enlil says no? He made the laws of the Great Below. He may not want to break them for anyone, not even for you.\"\n\nThe question annoys you, because she is right. You think it over for a moment, looking out at the grey steppe.\n\n\"Then go to Ur, to the house of Nanna. And if Nanna refuses too, go to Eridu, to the house of Enki. Enki knows the water of life. He will not let me die.\"\n\nNinshubur smiles faintly, like someone who has just won an argument she never wanted to have."
+      },
+      "choices": [
+        {
+          "to": "c3_puerta",
+          "text": {
+            "es": "Seguir sola hacia la puerta",
+            "en": "Go on alone toward the gate"
+          },
+          "description": {
+            "es": "De aquí en adelante, nadie puede acompañarte.",
+            "en": "From here on, no one can go with you."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2_sola",
+      "chapter": 2,
+      "mood": "dangerous",
+      "text": {
+        "es": "—No necesito que nadie venga a buscarme —dices—. Soy Inanna. Bajaré, haré lo que tenga que hacer y volveré. Espérame en Uruk.\n\nNinshubur no discute. Solo baja la cabeza, y ves que le tiemblan los hombros.\n\n—Esperaré tres días —dice al fin, con la voz quebrada—. Y si no vuelves, haré lo que haga falta. Iré a Nippur, a Ur, a Eridu. Golpearé todas las puertas del cielo hasta que alguien me escuche. No me lo ordenaste, mi señora, pero lo haré igual.\n\nNo sabes si enojarte o agradecerle. La dejas atrás, de pie junto al pozo seco, y no te vuelves a mirarla. Más tarde recordarás ese momento muchas veces.",
+        "en": "\"I don't need anyone to come looking for me,\" you say. \"I am Inanna. I will go down, do what I have to do, and come back. Wait for me in Uruk.\"\n\nNinshubur does not argue. She only lowers her head, and you see her shoulders trembling.\n\n\"I will wait three days,\" she says at last, her voice breaking. \"And if you don't come back, I will do whatever it takes. I will go to Nippur, to Ur, to Eridu. I will knock on every door in heaven until someone listens. You didn't order it, my lady, but I will do it all the same.\"\n\nYou don't know whether to be angry or grateful. You leave her behind, standing beside the dry well, and you do not turn to look at her. Later you will remember that moment many times."
+      },
+      "choices": [
+        {
+          "to": "c3_puerta",
+          "text": {
+            "es": "Seguir sola hacia la puerta",
+            "en": "Go on alone toward the gate"
+          },
+          "description": {
+            "es": "De aquí en adelante, nadie puede acompañarte.",
+            "en": "From here on, no one can go with you."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3_puerta",
+      "chapter": 3,
+      "mood": "dangerous",
+      "text": {
+        "es": "La puerta de Ganzer, la entrada del inframundo, se abre en la ladera de una montaña sin árboles. Es un portón de madera negra, tan alto que las bisagras parecen vigas de templo. No hay guardias afuera. No hace falta: nadie viene aquí por gusto.\n\nGolpeas con el puño, y luego con la vara de lapislázuli. El golpe resuena hacia abajo, muy abajo.\n\nUna ventana se abre en el portón. Un rostro gris te mira: es Neti, el portero jefe del Gran Abajo.\n\n—¿Quién eres?\n\nEl viento de la estepa te empuja la espalda. Hace frío.",
+        "en": "The gate of Ganzer, the entrance to the underworld, opens in the side of a treeless mountain. It is a great door of black wood, so tall that its hinges look like temple beams. There are no guards outside. None are needed: no one comes here willingly.\n\nYou knock with your fist, then with the lapis lazuli rod. The blow echoes downward, far down.\n\nA window opens in the door. A grey face looks out at you: it is Neti, chief gatekeeper of the Great Below.\n\n\"Who are you?\"\n\nThe wind of the steppe pushes at your back. It is cold."
+      },
+      "fact": {
+        "es": "La palabra sumeria «kur» significaba a la vez montaña, país extranjero e inframundo. A este último también lo llamaban «el país sin retorno».",
+        "en": "The Sumerian word \"kur\" meant mountain, foreign land and underworld all at once. The underworld was also called \"the land of no return.\""
+      },
+      "choices": [
+        {
+          "to": "c3_neti",
+          "risk": "low",
+          "text": {
+            "es": "Decir la verdad: vienes al funeral de Gugalanna",
+            "en": "Tell the truth: you've come for Gugalanna's funeral"
+          },
+          "description": {
+            "es": "Eres Inanna, hermana de Ereshkigal, y vienes a los ritos.",
+            "en": "You are Inanna, Ereshkigal's sister, and you have come for the rites."
+          }
+        },
+        {
+          "to": "c3_amenaza",
+          "risk": "high",
+          "text": {
+            "es": "Amenazar con romper la puerta",
+            "en": "Threaten to break down the gate"
+          },
+          "description": {
+            "es": "Si no abre, harás subir a los muertos a devorar a los vivos.",
+            "en": "If he won't open, you will raise the dead to devour the living."
+          }
+        },
+        {
+          "to": "c3_mentira",
+          "risk": "medium",
+          "text": {
+            "es": "Decir que eres una mensajera del cielo",
+            "en": "Say you are a messenger from heaven"
+          },
+          "description": {
+            "es": "Que no sepa quién llama hasta que estés dentro.",
+            "en": "Don't let him know who is knocking until you are inside."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3_neti",
+      "chapter": 3,
+      "mood": "mysterious",
+      "text": {
+        "es": "—Soy Inanna, Reina del Cielo, y voy hacia el este —dices—. Vengo a los ritos fúnebres de Gugalanna, el esposo de mi hermana mayor. Dejen que entre.\n\nNeti te mira largo rato. Luego cierra la ventana y lo oyes bajar.\n\nEn el palacio, Ereshkigal escucha el mensaje. Se golpea el muslo con la mano. Se muerde el labio. Cuando habla, su voz sube por la escalera hasta la puerta:\n\n—Neti, atranca las siete puertas del Gran Abajo. Ábrelas una por una. Que entre. Y que en cada puerta se le quite algo. Que llegue hasta mí inclinada, con la cabeza baja.\n\nLa ventana vuelve a abrirse. Neti te sonríe sin alegría.\n\n—Entra, Inanna. Tu hermana te espera.",
+        "en": "\"I am Inanna, Queen of Heaven, on my way to the east,\" you say. \"I have come for the funeral rites of Gugalanna, my elder sister's husband. Let me in.\"\n\nNeti looks at you for a long while. Then he closes the window, and you hear him going down.\n\nIn the palace, Ereshkigal hears the message. She slaps her thigh. She bites her lip. When she speaks, her voice rises up the stairway to the gate:\n\n\"Neti, bolt the seven gates of the Great Below. Open them one by one. Let her in. And at each gate, let something be taken from her. Let her come before me bowed low, with her head down.\"\n\nThe window opens again. Neti smiles at you without joy.\n\n\"Enter, Inanna. Your sister is waiting.\""
+      },
+      "fact": {
+        "es": "El nombre de Ereshkigal significa «Reina de la Gran Tierra». En el mito es la hermana mayor de Inanna y gobierna el inframundo. El poema llama Ganzer al palacio de su entrada; el nombre también designa al inframundo entero.",
+        "en": "Ereshkigal's name means \"Queen of the Great Earth.\" In the myth she is Inanna's elder sister and rules the underworld. The poem calls the palace at its entrance Ganzer; the name also stands for the underworld as a whole."
+      },
+      "choices": [
+        {
+          "to": "c4_primera",
+          "text": {
+            "es": "Cruzar la primera puerta",
+            "en": "Pass through the first gate"
+          },
+          "description": {
+            "es": "No hay otra forma de llegar hasta ella.",
+            "en": "There is no other way to reach her."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3_amenaza",
+      "chapter": 3,
+      "mood": "dangerous",
+      "text": {
+        "es": "—Abre, portero —dices—, o rompo esta puerta, arranco las trabas y hago subir a los muertos para que devoren a los vivos. Y los muertos serán más que los vivos.\n\nNeti palidece, si es que un rostro gris puede palidecer más. Detrás del portón se oye un murmullo, como de miles de voces que se despiertan a la vez. La madera cruje. Algo empuja desde el otro lado.\n\n—Señora —susurra Neti—, no sabes lo que hay aquí abajo. Yo tampoco. Nadie lo sabe hasta que lo suelta.\n\nTienes la vara de lapislázuli levantada. Un solo golpe más y la puerta cederá.",
+        "en": "\"Open, gatekeeper,\" you say, \"or I will smash this door, tear out the bolts and raise the dead to devour the living. And the dead will outnumber the living.\"\n\nNeti turns pale, if a grey face can turn any paler. From behind the door comes a murmur, like thousands of voices waking all at once. The wood creaks. Something is pushing from the other side.\n\n\"Lady,\" Neti whispers, \"you don't know what is down here. Neither do I. No one knows until they let it loose.\"\n\nYou stand with the lapis lazuli rod raised. One more blow and the door will give way."
+      },
+      "fact": {
+        "es": "En la versión acadia del mito, Ishtar amenaza al portero con romper la puerta y hacer subir a los muertos para que devoren a los vivos. Es la misma amenaza que hace a Anu en la Epopeya de Gilgamesh.",
+        "en": "In the Akkadian version of the myth, Ishtar threatens the gatekeeper that she will break down the door and raise the dead to devour the living. It is the same threat she makes to Anu in the Epic of Gilgamesh."
+      },
+      "choices": [
+        {
+          "to": "fin_muertos",
+          "risk": "high",
+          "text": {
+            "es": "Golpear la puerta",
+            "en": "Strike the door"
+          },
+          "description": {
+            "es": "Que tiemble el Gran Abajo.",
+            "en": "Let the Great Below tremble."
+          }
+        },
+        {
+          "to": "c3_neti",
+          "risk": "low",
+          "text": {
+            "es": "Bajar la vara y decir tu nombre",
+            "en": "Lower the rod and say your name"
+          },
+          "description": {
+            "es": "Hay cosas que ni la Reina del Cielo debería soltar.",
+            "en": "There are things not even the Queen of Heaven should let loose."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3_mentira",
+      "chapter": 3,
+      "mood": "mysterious",
+      "text": {
+        "es": "—Soy una mensajera del cielo —dices—. Traigo palabras para la reina de este lugar.\n\nNeti se ríe. Es una risa seca, como de hojas.\n\n—En el país sin retorno conocemos a todos los que llegan, señora. Conocemos a los reyes por el peso de sus coronas y a los esclavos por las marcas en la espalda. A ti te conocemos por el brillo. Ninguna mensajera brilla así.\n\nSe inclina hacia la ventana.\n\n—Eres Inanna. Y tu hermana ya sabe que estás aquí. Lo supo antes de que golpearas.",
+        "en": "\"I am a messenger from heaven,\" you say. \"I bring words for the queen of this place.\"\n\nNeti laughs. It is a dry laugh, like dead leaves.\n\n\"In the land of no return we know everyone who arrives, lady. We know kings by the weight of their crowns and slaves by the marks on their backs. You we know by your shining. No messenger shines like that.\"\n\nHe leans toward the window.\n\n\"You are Inanna. And your sister already knows you are here. She knew before you knocked.\""
+      },
+      "choices": [
+        {
+          "to": "c3_neti",
+          "text": {
+            "es": "Decir la verdad",
+            "en": "Tell the truth"
+          },
+          "description": {
+            "es": "Si de todos modos lo saben, que lo oigan de tu boca.",
+            "en": "If they know anyway, let them hear it from your own mouth."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_muertos",
+      "chapter": 3,
+      "mood": "tragic",
+      "ending": {
+        "type": "tragic",
+        "title": {
+          "es": "El día en que subieron los muertos",
+          "en": "The Day the Dead Came Up"
+        }
+      },
+      "text": {
+        "es": "El portón se parte en dos con un trueno. Durante un instante hay silencio. Después, los muertos salen.\n\nSalen pálidos, con los ojos vacíos, cubiertos de polvo. Salen reyes con coronas de barro y campesinos sin nombre. Pasan junto a ti sin verte, como pasa el agua junto a una piedra, y bajan hacia las ciudades.\n\nNo los puedes detener. Nadie puede: eso es lo que querías decir cuando amenazaste, y ahora es verdad. En Uruk, en Ur, en Nippur, los vivos cierran las puertas y los muertos entran igual, porque las puertas no se hicieron para ellos.\n\nEreshkigal no sube a reprocharte nada. No hace falta. Desde ese día, el Gran Arriba y el Gran Abajo son el mismo país, y tú eres la reina de ninguno.",
+        "en": "The door splits in two with a crack of thunder. For an instant there is silence. Then the dead come out.\n\nThey come out pale, with empty eyes, covered in dust. Kings come out with crowns of mud, and peasants with no names. They pass by you without seeing you, as water passes a stone, and go down toward the cities.\n\nYou cannot stop them. No one can: that is what you meant when you made your threat, and now it is true. In Uruk, in Ur, in Nippur, the living bar their doors and the dead come in anyway, because doors were not made for them.\n\nEreshkigal does not come up to reproach you. There is no need. From that day on, the Great Above and the Great Below are the same country, and you are queen of neither."
+      },
+      "fact": {
+        "es": "Para los mesopotámicos, los muertos sin ofrendas podían volver a atormentar a los vivos. Las familias celebraban el «kispum», un rito con comida y agua para los antepasados.",
+        "en": "To the Mesopotamians, the dead who received no offerings could come back to torment the living. Families held the \"kispum,\" a rite of food and water for the ancestors."
+      },
+      "choices": []
+    },
+    {
+      "id": "c4_primera",
+      "chapter": 4,
+      "mood": "mysterious",
+      "text": {
+        "es": "Cruzas la primera puerta y el portero te detiene con la mano abierta.\n\n—La corona.\n\n—¿Por qué?\n\nTe quita la corona de la estepa y la deja sobre una piedra. Por primera vez en mucho tiempo sientes el aire en el pelo.\n\n—Silencio, Inanna. Los poderes del Gran Abajo son perfectos. No abras la boca contra los ritos del inframundo.\n\nMás abajo, la escalera se pierde en una oscuridad que no es la de la noche. Es otra cosa. Faltan seis puertas, y sabes que en cada una te pedirán algo más.",
+        "en": "You pass through the first gate and the gatekeeper stops you with an open hand.\n\n\"The crown.\"\n\n\"Why?\"\n\nHe takes the crown of the steppe from you and sets it on a stone. For the first time in a long while you feel the air in your hair.\n\n\"Be silent, Inanna. The powers of the Great Below are perfect. Do not open your mouth against the rites of the underworld.\"\n\nFarther down, the stairway is lost in a darkness that is not the darkness of night. It is something else. Six gates remain, and you know that at each one they will ask you for something more."
+      },
+      "fact": {
+        "es": "El lapislázuli de las joyas mesopotámicas venía de las montañas de Badajshán, en el actual Afganistán, a más de dos mil kilómetros de Sumer.",
+        "en": "The lapis lazuli in Mesopotamian jewelry came from the mountains of Badakhshan, in present-day Afghanistan, more than two thousand kilometers from Sumer."
+      },
+      "choices": [
+        {
+          "to": "c4_silencio",
+          "risk": "low",
+          "text": {
+            "es": "Callar y seguir bajando",
+            "en": "Keep silent and go on down"
+          },
+          "description": {
+            "es": "Las reglas de este país no son las tuyas.",
+            "en": "The rules of this land are not yours."
+          }
+        },
+        {
+          "to": "c4_protesta",
+          "risk": "medium",
+          "text": {
+            "es": "Protestar en cada puerta",
+            "en": "Protest at every gate"
+          },
+          "description": {
+            "es": "Que sepan a quién están desnudando.",
+            "en": "Let them know whom they are stripping."
+          }
+        },
+        {
+          "to": "fin_regreso",
+          "risk": "medium",
+          "text": {
+            "es": "Dar la vuelta ahora",
+            "en": "Turn back now"
+          },
+          "description": {
+            "es": "Todavía estás a tiempo de subir con todo puesto.",
+            "en": "There is still time to go up with everything on."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c4_silencio",
+      "chapter": 4,
+      "mood": "sacred",
+      "text": {
+        "es": "No dices nada. Bajas.\n\nEn la segunda puerta te quitan el collar de lapislázuli. En la tercera, las dos cuentas gemelas del pecho. En la cuarta, el pectoral que dice «ven, hombre, ven». En la quinta, el anillo de oro. En la sexta, la vara y la cuerda de lapislázuli con las que se mide el mundo.\n\nEn cada puerta preguntas por qué, y en cada puerta te responden lo mismo: «Silencio, Inanna. Los poderes del Gran Abajo son perfectos».\n\nCon cada cosa que entregas, pesas menos y eres menos. Al llegar a la séptima puerta ya no brillas. Eres una mujer alta con un vestido, bajando una escalera en la oscuridad.",
+        "en": "You say nothing. You go down.\n\nAt the second gate they take the lapis lazuli necklace. At the third, the twin beads from your breast. At the fourth, the breastplate that says \"come, man, come.\" At the fifth, the golden ring. At the sixth, the lapis lazuli rod and line with which the world is measured.\n\nAt every gate you ask why, and at every gate you get the same answer: \"Be silent, Inanna. The powers of the Great Below are perfect.\"\n\nWith each thing you hand over, you weigh less and you are less. By the time you reach the seventh gate you no longer shine. You are a tall woman in a dress, going down a stairway in the dark."
+      },
+      "fact": {
+        "es": "En la estela de Ur-Nammu, rey de Ur hacia 2100 a. C., un dios entrega al rey una vara y una cuerda enrollada: suelen interpretarse como instrumentos para medir y construir.",
+        "en": "On the stele of Ur-Nammu, king of Ur around 2100 BC, a god hands the king a rod and a coiled line: they are usually read as tools for measuring and building."
+      },
+      "choices": [
+        {
+          "to": "c4_septima",
+          "text": {
+            "es": "Cruzar la séptima puerta",
+            "en": "Pass through the seventh gate"
+          },
+          "description": {
+            "es": "Lo único que te queda es el vestido.",
+            "en": "All you have left is the dress."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c4_protesta",
+      "chapter": 4,
+      "mood": "dangerous",
+      "text": {
+        "es": "—¡Soy la Reina del Cielo! —gritas en la segunda puerta, cuando te quitan el collar—. ¡Esto lo tallaron para mí!\n\n—Silencio, Inanna. Los poderes del Gran Abajo son perfectos.\n\nEn la tercera protestas por las cuentas del pecho; en la cuarta, por el pectoral; en la quinta, por el anillo. Cada vez la respuesta es la misma, dicha con la misma voz sin odio, y cada vez las manos de los porteros son un poco más ásperas.\n\nEn la sexta puerta, cuando te quitan la vara y la cuerda con las que mediste las ciudades, ya no gritas. No porque te hayas rendido, sino porque entiendes que aquí tu voz no mueve nada. Es la primera vez que te pasa.",
+        "en": "\"I am the Queen of Heaven!\" you shout at the second gate, when they take the necklace. \"This was carved for me!\"\n\n\"Be silent, Inanna. The powers of the Great Below are perfect.\"\n\nAt the third you protest over the beads from your breast; at the fourth, over the breastplate; at the fifth, over the ring. Each time the answer is the same, spoken in the same voice without hatred, and each time the gatekeepers' hands are a little rougher.\n\nAt the sixth gate, when they take the rod and line with which you measured cities, you no longer shout. Not because you have given up, but because you understand that down here your voice moves nothing. It is the first time that has ever happened to you."
+      },
+      "fact": {
+        "es": "El poema repite siete veces, casi palabra por palabra, la escena de la puerta y la respuesta «Silencio, Inanna». Esa repetición es típica de los poemas sumerios, hechos para recitarse.",
+        "en": "The poem repeats the scene at the gate and the answer \"Be silent, Inanna\" seven times, almost word for word. That kind of repetition is typical of Sumerian poems, which were made to be recited."
+      },
+      "choices": [
+        {
+          "to": "c4_septima",
+          "text": {
+            "es": "Cruzar la séptima puerta",
+            "en": "Pass through the seventh gate"
+          },
+          "description": {
+            "es": "Lo único que te queda es el vestido.",
+            "en": "All you have left is the dress."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c4_septima",
+      "chapter": 4,
+      "mood": "tragic",
+      "text": {
+        "es": "En la séptima puerta te quitan el pala, el vestido de señora. Entras desnuda, con la cabeza baja, como ordenó tu hermana.\n\nLa sala del trono del Ganzer es inmensa y está llena de gente que no hace ruido. Son los muertos: de pie, inmóviles, mirando el suelo. Entre ellos, en sillas de piedra, están sentados los siete Anuna, los jueces del Gran Abajo.\n\nY al fondo, en un trono de piedra negra, está Ereshkigal. Se parece a ti. Es más alta, más delgada, y tiene los ojos de alguien que lleva mucho tiempo sin dormir. Al verte, se pone de pie.\n\nEl trono queda vacío.",
+        "en": "At the seventh gate they take the pala, the lady's dress. You enter naked, with your head down, as your sister ordered.\n\nThe throne room of Ganzer is immense and full of people who make no sound. They are the dead: standing, motionless, staring at the floor. Among them, on stone seats, sit the seven Anuna, the judges of the Great Below.\n\nAnd at the far end, on a throne of black stone, sits Ereshkigal. She looks like you. She is taller, thinner, and she has the eyes of someone who has not slept in a very long time. When she sees you, she rises to her feet.\n\nThe throne stands empty."
+      },
+      "choices": [
+        {
+          "to": "c5_sala",
+          "text": {
+            "es": "Avanzar hacia tu hermana",
+            "en": "Walk toward your sister"
+          },
+          "description": {
+            "es": "Hasta aquí llegaron tus poderes. Ahora solo quedas tú.",
+            "en": "Your powers end here. Now there is only you."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_regreso",
+      "chapter": 4,
+      "mood": "peaceful",
+      "ending": {
+        "type": "alternative",
+        "title": {
+          "es": "La reina que no cruzó",
+          "en": "The Queen Who Did Not Cross"
+        }
+      },
+      "text": {
+        "es": "Te detienes en la escalera. Miras hacia abajo, hacia la oscuridad que no es la de la noche, y luego hacia arriba, hacia la rendija de luz de la primera puerta.\n\n—Mi corona —le dices al portero.\n\nÉl te la devuelve sin una palabra. Las reglas del Gran Abajo no prohíben irse; solo prohíben volver.\n\nSubes. El sol te recibe como a una hija. Ninshubur corre a tu encuentro y te abraza llorando, y esa noche en el Eanna hay música hasta el amanecer.\n\nPero algo te queda. En los años que siguen, cada tanto, tu mirada se va hacia el norte, hacia una montaña sin árboles. Sigues siendo la Reina del Cielo. Solo del Cielo. Lo que hay debajo sigue siendo de tu hermana, y ella sigue sola.",
+        "en": "You stop on the stairway. You look down, into the darkness that is not the darkness of night, and then up, toward the sliver of light at the first gate.\n\n\"My crown,\" you say to the gatekeeper.\n\nHe hands it back without a word. The rules of the Great Below do not forbid leaving; they only forbid returning.\n\nYou climb. The sun welcomes you like a daughter. Ninshubur runs to meet you and holds you, weeping, and that night in the Eanna there is music until dawn.\n\nBut something stays with you. In the years that follow, every so often, your gaze drifts north, toward a treeless mountain. You are still the Queen of Heaven. Only of Heaven. What lies beneath still belongs to your sister, and she is still alone."
+      },
+      "fact": {
+        "es": "Venus, el planeta de Inanna, desaparece del cielo durante varios días cada vez que pasa entre la Tierra y el Sol. Algunos estudiosos relacionan ese ciclo con el descenso y el regreso de la diosa.",
+        "en": "Venus, Inanna's planet, vanishes from the sky for several days each time it passes between the Earth and the Sun. Some scholars connect that cycle with the goddess's descent and return."
+      },
+      "choices": []
+    },
+    {
+      "id": "c5_sala",
+      "chapter": 5,
+      "mood": "dangerous",
+      "text": {
+        "es": "Cruzas la sala entre los muertos. Ninguno te mira. Los siete Anuna sí: te siguen con los ojos como siete lámparas.\n\nEreshkigal está de pie junto al trono, y por un instante son dos hermanas mirándose, nada más. Ella ve a la que subió, la que brilla, la que tuvo todo. Tú ves a la que bajó, la que reina sobre el polvo, la que acaba de quedarse viuda. Ninguna de las dos habla.\n\nEl trono de piedra negra está ahí, vacío, a un paso de tu mano.",
+        "en": "You cross the hall among the dead. None of them look at you. The seven Anuna do: their eyes follow you like seven lamps.\n\nEreshkigal stands beside the throne, and for an instant you are two sisters looking at each other, nothing more. She sees the one who rose, the one who shines, the one who had everything. You see the one who went down, the one who reigns over dust, the one who has just been widowed. Neither of you speaks.\n\nThe throne of black stone is right there, empty, within reach of your hand."
+      },
+      "fact": {
+        "es": "El relieve «Reina de la Noche» (Museo Británico, hacia 1800 a. C.) muestra una diosa alada con garras, lechuzas y leones. Se la ha identificado con Ereshkigal, con Ishtar o con un demonio; sigue en discusión.",
+        "en": "The \"Queen of the Night\" relief (British Museum, around 1800 BC) shows a winged goddess with talons, owls and lions. She has been identified as Ereshkigal, as Ishtar, or as a demon; the debate goes on."
+      },
+      "choices": [
+        {
+          "to": "c5_juicio",
+          "risk": "high",
+          "text": {
+            "es": "Sentarte en el trono de tu hermana",
+            "en": "Sit on your sister's throne"
+          },
+          "description": {
+            "es": "Es lo que viniste a hacer, aunque no lo supieras.",
+            "en": "It is what you came to do, even if you didn't know it."
+          }
+        },
+        {
+          "to": "c5_duelo",
+          "risk": "medium",
+          "text": {
+            "es": "Arrodillarte y llorar con ella a Gugalanna",
+            "en": "Kneel and mourn Gugalanna with her"
+          },
+          "description": {
+            "es": "Viniste a un funeral. Compórtate como una hermana.",
+            "en": "You came to a funeral. Behave like a sister."
+          }
+        },
+        {
+          "to": "fin_reina_abajo",
+          "risk": "high",
+          "text": {
+            "es": "Exigir tus me y el trono",
+            "en": "Demand your me and the throne"
+          },
+          "description": {
+            "es": "Eres Inanna. Nadie te desnuda sin pagarlo.",
+            "en": "You are Inanna. No one strips you without paying for it."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5_juicio",
+      "chapter": 5,
+      "mood": "tragic",
+      "text": {
+        "es": "Te sientas en el trono. La piedra está helada.\n\nEreshkigal no grita. Solo mira a los Anuna, y los siete jueces se levantan de sus sillas. Pronuncian la sentencia los siete a la vez, con una sola voz:\n\n—Que la mire la mirada de la muerte. Que le hable la palabra de la ira. Que la alcance el grito de la culpa.\n\nSientes la mirada, oyes la palabra, te atraviesa el grito. Y la mujer alta sentada en el trono se convierte en un cadáver.\n\nLo cuelgan de un gancho en la pared, como se cuelga un pedazo de carne.\n\nEso eres ahora.",
+        "en": "You sit on the throne. The stone is ice-cold.\n\nEreshkigal does not shout. She only looks at the Anuna, and the seven judges rise from their seats. They pronounce the sentence all seven at once, with a single voice:\n\n\"Let the look of death look upon her. Let the word of wrath speak to her. Let the cry of guilt reach her.\"\n\nYou feel the look, you hear the word, the cry goes through you. And the tall woman seated on the throne becomes a corpse.\n\nThey hang it from a hook on the wall, the way a piece of meat is hung.\n\nThat is what you are now."
+      },
+      "fact": {
+        "es": "En este poema, los Anuna (los Anunnaki) son los siete jueces del inframundo. En textos babilónicos posteriores, el nombre designa sobre todo a los dioses de la tierra y del mundo de abajo.",
+        "en": "In this poem, the Anuna (the Anunnaki) are the seven judges of the underworld. In later Babylonian texts, the name refers mostly to the gods of the earth and of the world below."
+      },
+      "choices": [
+        {
+          "to": "c6_gancho",
+          "text": {
+            "es": "Colgar en la oscuridad",
+            "en": "Hang in the darkness"
+          },
+          "description": {
+            "es": "Los muertos no cuentan los días. Pero tú no eres una muerta cualquiera.",
+            "en": "The dead do not count the days. But you are no ordinary dead woman."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5_duelo",
+      "chapter": 5,
+      "mood": "sacred",
+      "text": {
+        "es": "Te arrodillas en el suelo de piedra. Hablas de Gugalanna, el Gran Toro del Cielo. De cómo caminaba. De cómo sonaba su voz. Lloras, y no es fingido.\n\nEreshkigal te escucha de pie, y algo le tiembla en la cara. Por un momento parece que va a bajar hasta ti, que va a arrodillarse a tu lado, que las dos van a llorar al mismo muerto como dos hermanas.\n\nPero los siete Anuna ya se han levantado de sus sillas.\n\n—La ley del Gran Abajo es más antigua que las dos —dice uno—. La que entra no sale. Ni siquiera por amor.\n\nEreshkigal cierra los ojos. Cuando los abre, vuelve a ser la reina.",
+        "en": "You kneel on the stone floor. You speak of Gugalanna, the Great Bull of Heaven. Of how he walked. Of how his voice sounded. You weep, and it is no pretense.\n\nEreshkigal listens, standing, and something trembles in her face. For a moment it seems she will come down to you, that she will kneel at your side, that the two of you will mourn the same dead man like two sisters.\n\nBut the seven Anuna have already risen from their seats.\n\n\"The law of the Great Below is older than both of you,\" says one. \"She who enters does not leave. Not even for love.\"\n\nEreshkigal closes her eyes. When she opens them, she is the queen again."
+      },
+      "fact": {
+        "es": "Gugalanna, cuyo nombre suele traducirse «Gran Toro del Cielo», es el esposo de Ereshkigal en este mito. Algunos estudiosos lo identifican con el Toro del Cielo que matan Gilgamesh y Enkidu; otros lo consideran una figura distinta.",
+        "en": "Gugalanna, whose name is usually translated \"Great Bull of Heaven,\" is Ereshkigal's husband in this myth. Some scholars identify him with the Bull of Heaven that Gilgamesh and Enkidu kill; others consider him a separate figure."
+      },
+      "choices": [
+        {
+          "to": "c5_juicio",
+          "text": {
+            "es": "Levantarte y enfrentar el juicio",
+            "en": "Rise and face the judgment"
+          },
+          "description": {
+            "es": "Lo que tenga que pasar, pasará de pie.",
+            "en": "Whatever must happen will happen with you on your feet."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_reina_abajo",
+      "chapter": 5,
+      "mood": "tragic",
+      "ending": {
+        "type": "tragic",
+        "title": {
+          "es": "Dos tronos en el polvo",
+          "en": "Two Thrones in the Dust"
+        }
+      },
+      "text": {
+        "es": "—Devuélvanme mis me —dices, con la voz que usas para dar órdenes a los reyes—. Y que mi hermana se aparte del trono. El Cielo manda sobre lo que está debajo del Cielo.\n\nEreshkigal te mira con una calma terrible.\n\n—¿Mi reino te parece pequeño? Entonces quédate a gobernarlo. Compartirás mi trono para siempre.\n\nLos siete Anuna pronuncian la sentencia, y el Gran Abajo te acepta como se acepta a una reina: con cadenas de polvo que no se ven y no se rompen. Arriba, Ninshubur llora, golpea los tambores, recorre las casas de los dioses. Nadie puede ayudarla: no hay cadáver que revivir. Solo una reina más en el país sin retorno.\n\nPasan los años. Arriba, sin ti, los campos se secan y nadie se enamora. Abajo, dos hermanas se miran desde dos tronos, sin hablarse, para siempre.",
+        "en": "\"Give me back my me,\" you say, in the voice you use to give orders to kings. \"And let my sister step away from the throne. Heaven rules over what lies beneath Heaven.\"\n\nEreshkigal looks at you with a terrible calm.\n\n\"Does my kingdom seem small to you? Then stay and rule it. You will share my throne forever.\"\n\nThe seven Anuna pronounce the sentence, and the Great Below accepts you the way it accepts a queen: with chains of dust that cannot be seen and cannot be broken. Above, Ninshubur weeps, beats the drums, goes around the houses of the gods. No one can help her: there is no corpse to bring back to life. Only one more queen in the land of no return.\n\nThe years pass. Above, without you, the fields dry up and no one falls in love. Below, two sisters look at each other from two thrones, never speaking, forever."
+      },
+      "choices": []
+    },
+    {
+      "id": "c6_gancho",
+      "chapter": 6,
+      "mood": "tragic",
+      "text": {
+        "es": "Los muertos no sueñan. Pero tú no eres una muerta cualquiera: eres la Reina del Cielo, y desde el gancho sientes el mundo de arriba como se siente una herida.\n\nPasa un día. Pasan dos. Pasan tres.\n\nAl tercer día, Ninshubur hace lo que debe. Se rasga los ojos, se rasga la boca, se viste con harapos. Golpea el tambor en las plazas y recorre las casas de los dioses. Va al Ekur y le ruega a Enlil, y Enlil responde: «Mi hija quiso el Gran Arriba y quiso el Gran Abajo. Quien toma los poderes del inframundo se queda en el inframundo». Va a Ur, y Nanna dice lo mismo.\n\nVa a Eridu. Enki escucha, y se le llenan los ojos de lágrimas.\n\n—¿Qué ha hecho mi hija? —dice—. ¿Qué ha hecho?",
+        "en": "The dead do not dream. But you are no ordinary dead woman: you are the Queen of Heaven, and from the hook you feel the world above the way one feels a wound.\n\nA day passes. Two pass. Three.\n\nOn the third day, Ninshubur does what she must. She scratches at her eyes, scratches at her mouth, dresses in rags. She beats the drum in the squares and goes around the houses of the gods. She goes to the Ekur and pleads with Enlil, and Enlil answers: \"My daughter craved the Great Above and craved the Great Below. Whoever takes the powers of the underworld stays in the underworld.\" She goes to Ur, and Nanna says the same.\n\nShe goes to Eridu. Enki listens, and his eyes fill with tears.\n\n\"What has my daughter done?\" he says. \"What has she done?\""
+      },
+      "fact": {
+        "es": "En la versión acadia, mientras Ishtar está en el inframundo, los toros no montan a las vacas ni los hombres se unen a las mujeres: la fertilidad de todo el mundo se detiene.",
+        "en": "In the Akkadian version, while Ishtar is in the underworld, bulls do not mount cows and men do not lie with women: the fertility of the whole world comes to a halt."
+      },
+      "choices": [
+        {
+          "to": "c6_criaturas",
+          "text": {
+            "es": "Esperar en la oscuridad",
+            "en": "Wait in the darkness"
+          },
+          "description": {
+            "es": "Enki es el más astuto de los dioses. Si alguien puede, es él.",
+            "en": "Enki is the cleverest of the gods. If anyone can, it is he."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6_criaturas",
+      "chapter": 6,
+      "mood": "mysterious",
+      "text": {
+        "es": "Enki se saca la tierra de debajo de las uñas y con ella hace dos criaturas pequeñas: el kurgarra y el galatur. No son hombres ni mujeres. A uno le da la planta de la vida; al otro, el agua de la vida.\n\n—Entren como moscas por las rendijas de las puertas. Encontrarán a Ereshkigal gimiendo. Cuando ella diga «¡ay, mi vientre!», digan ustedes «¡ay, tu vientre!». Cuando diga «¡ay, mi espalda!», digan «¡ay, tu espalda!». Ella les ofrecerá regalos. No acepten nada. Pidan solo el cadáver que cuelga del gancho.\n\nAsí lo hacen. Ereshkigal, sorprendida de que alguien comparta su dolor, les ofrece el río en su crecida y el campo en su cosecha. Ellos piden el cadáver. Ella se lo da.\n\nLa planta te toca. El agua te toca. Abres los ojos.",
+        "en": "Enki scrapes the dirt from under his fingernails and from it makes two small creatures: the kurgarra and the galatur. They are neither men nor women. To one he gives the plant of life; to the other, the water of life.\n\n\"Slip in like flies through the cracks of the doors. You will find Ereshkigal moaning. When she says 'oh, my insides!', you say 'oh, your insides!'. When she says 'oh, my back!', you say 'oh, your back!'. She will offer you gifts. Accept nothing. Ask only for the corpse that hangs from the hook.\"\n\nSo they do. Ereshkigal, astonished that anyone should share her pain, offers them the river in its flood and the field in its harvest. They ask for the corpse. She gives it to them.\n\nThe plant touches you. The water touches you. You open your eyes."
+      },
+      "fact": {
+        "es": "Los kurgarra y los galatur eran servidores de culto de Inanna. Los sacerdotes gala cantaban lamentos en emesal, el dialecto sumerio que los textos ponen en boca de las mujeres y de las diosas.",
+        "en": "The kurgarra and the galatur were cult servants of Inanna. The gala priests sang laments in Emesal, the Sumerian dialect that the texts put in the mouths of women and goddesses."
+      },
+      "choices": [
+        {
+          "to": "c7_anuna",
+          "risk": "low",
+          "text": {
+            "es": "Levantarte y caminar hacia la puerta",
+            "en": "Rise and walk toward the gate"
+          },
+          "description": {
+            "es": "Vives. Sal de aquí antes de que alguien cambie de idea.",
+            "en": "You are alive. Get out before someone changes their mind."
+          }
+        },
+        {
+          "to": "c6_enki",
+          "risk": "low",
+          "text": {
+            "es": "Preguntar a las criaturas quién las envió",
+            "en": "Ask the creatures who sent them"
+          },
+          "description": {
+            "es": "Quieres saber a quién le debes la vida.",
+            "en": "You want to know whom you owe your life to."
+          }
+        },
+        {
+          "to": "fin_segundo",
+          "risk": "high",
+          "text": {
+            "es": "Volver a sentarte en el trono",
+            "en": "Sit on the throne again"
+          },
+          "description": {
+            "es": "Ahora que vives, nadie te lo va a impedir.",
+            "en": "Now that you are alive, no one will stop you."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6_enki",
+      "chapter": 6,
+      "mood": "sacred",
+      "text": {
+        "es": "—Nos envió Enki, señora —dice el galatur, con una voz que parece de niño—. Nos hizo con la tierra de sus uñas, con lo más bajo de lo más bajo. Dijo que solo lo que no vale nada puede entrar donde no entra nadie.\n\nEl kurgarra asiente.\n\n—Y dijo que a tu hermana no se la vence. Se la acompaña.\n\nMiras a Ereshkigal. Sigue sentada, encorvada, con las manos sobre el vientre. Hace un momento gemía y alguien gimió con ella; es lo más parecido a una visita que ha tenido en mil años. Te mira con odio, y también con algo que se parece al alivio.\n\nLas dos criaturas ya se escurren por las rendijas, de vuelta hacia la luz.",
+        "en": "\"Enki sent us, lady,\" says the galatur, in a voice like a child's. \"He made us from the dirt under his nails, from the lowest of the low. He said only what is worth nothing can enter where no one enters.\"\n\nThe kurgarra nods.\n\n\"And he said your sister is not to be defeated. She is to be kept company.\"\n\nYou look at Ereshkigal. She is still seated, hunched over, her hands on her belly. A moment ago she was moaning and someone moaned with her; it is the closest thing to a visit she has had in a thousand years. She looks at you with hatred, and also with something that resembles relief.\n\nThe two creatures are already slipping back out through the cracks, toward the light."
+      },
+      "fact": {
+        "es": "Enki (Ea para los acadios) era el dios de las aguas dulces y de la sabiduría, y vivía en el Abzu, el agua bajo la tierra. En el mito del diluvio es él quien salva a la humanidad.",
+        "en": "Enki (Ea to the Akkadians) was the god of fresh water and of wisdom, and lived in the Abzu, the water beneath the earth. In the flood myth, it is he who saves humankind."
+      },
+      "choices": [
+        {
+          "to": "c7_anuna",
+          "text": {
+            "es": "Caminar hacia la puerta",
+            "en": "Walk toward the gate"
+          },
+          "description": {
+            "es": "Vives. Pero en el Gran Abajo nada es gratis.",
+            "en": "You are alive. But in the Great Below, nothing is free."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_segundo",
+      "chapter": 6,
+      "mood": "tragic",
+      "ending": {
+        "type": "tragic",
+        "title": {
+          "es": "El segundo juicio",
+          "en": "The Second Judgment"
+        }
+      },
+      "text": {
+        "es": "Te levantas, te sacudes el polvo y vuelves a sentarte en el trono de piedra negra. Esta vez no está helado: está tibio, y eso es peor.\n\nEreshkigal ni siquiera se vuelve a mirarte. Los siete Anuna se ponen de pie por segunda vez, y la sentencia es la misma: la mirada, la palabra, el grito.\n\nPero esta vez nadie viene. Enki ya usó su astucia; la planta y el agua de la vida se gastaron en ti una vez, y no hay segunda vez. Ninshubur sigue golpeando el tambor en las plazas, y los dioses, cansados, dejan de escucharla.\n\nCuelgas del gancho. Pasa un día, pasan tres, pasan mil. Los muertos no cuentan los días, y al final, tú tampoco.",
+        "en": "You stand, shake off the dust, and sit once more on the throne of black stone. This time it is not ice-cold: it is warm, and that is worse.\n\nEreshkigal does not even turn to look at you. The seven Anuna rise for the second time, and the sentence is the same: the look, the word, the cry.\n\nBut this time no one comes. Enki has already spent his cunning; the plant and the water of life were used on you once, and there is no second time. Ninshubur goes on beating the drum in the squares, and the gods, weary, stop listening to her.\n\nYou hang from the hook. A day passes, three pass, a thousand pass. The dead do not count the days, and in the end, neither do you."
+      },
+      "choices": []
+    },
+    {
+      "id": "c7_anuna",
+      "chapter": 7,
+      "mood": "dangerous",
+      "text": {
+        "es": "Caminas hacia la puerta, y los siete Anuna te cierran el paso.\n\n—¿Quién ha subido jamás del Gran Abajo sin pagar? —dice uno—. Si Inanna quiere subir, que deje a alguien en su lugar.\n\nA tu alrededor aparecen los galla, los demonios del inframundo. Son grandes como cañas y pequeños como juncos. No comen pan. No beben agua. No aceptan regalos. No conocen el abrazo de una esposa ni la risa de un niño. Arrancan al hijo de las rodillas de su madre y a la novia de la casa de su suegro. Son la ley, y la ley no negocia.\n\n—Subirán contigo —dice el juez—. Hasta que elijas a tu reemplazo.",
+        "en": "You walk toward the gate, and the seven Anuna block your way.\n\n\"Who has ever come up from the Great Below without paying?\" says one. \"If Inanna wishes to go up, let her leave someone in her place.\"\n\nAround you appear the galla, the demons of the underworld. They are tall as reeds and small as rushes. They eat no bread. They drink no water. They accept no gifts. They know neither the embrace of a wife nor the laughter of a child. They tear the son from his mother's knees and the bride from her father-in-law's house. They are the law, and the law does not bargain.\n\n\"They will go up with you,\" says the judge. \"Until you choose your substitute.\""
+      },
+      "fact": {
+        "es": "El poema describe a los galla casi con estas palabras: no comen, no beben, no aceptan ofrendas, no conocen el placer, y arrancan a la esposa del abrazo del esposo y al hijo de las rodillas del padre.",
+        "en": "The poem describes the galla in almost exactly these words: they do not eat, do not drink, accept no offerings, know no pleasure, and tear the wife from her husband's embrace and the child from his father's knees."
+      },
+      "choices": [
+        {
+          "to": "c7_ganzer",
+          "risk": "low",
+          "text": {
+            "es": "Aceptar la ley y subir con los galla",
+            "en": "Accept the law, climb with the galla"
+          },
+          "description": {
+            "es": "Primero salir. Después se verá.",
+            "en": "First get out. The rest can wait."
+          }
+        },
+        {
+          "to": "c7_negativa",
+          "risk": "medium",
+          "text": {
+            "es": "Negarte: una diosa no entrega a nadie",
+            "en": "Refuse: a goddess hands over no one"
+          },
+          "description": {
+            "es": "No pagarás tu vida con otra.",
+            "en": "You will not pay for your life with another's."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7_negativa",
+      "chapter": 7,
+      "mood": "dangerous",
+      "text": {
+        "es": "—No entregaré a nadie —dices—. Que la ley se quede con su ley.\n\n—Entonces quédate tú —responde el Anuna, sin levantar la voz.\n\nLos galla se acercan. No te tocan; no hace falta. Sientes de nuevo el frío del gancho en la espalda, y detrás de ellos ves a tu hermana, que no interviene.\n\n—Esa ley es más vieja que ella y que tú —dice Ereshkigal desde el trono—. Yo tampoco puedo romperla. Nadie que suba de aquí sube solo.\n\nMiras la puerta. Miras los demonios. Entiendes que lo único que puedes elegir es quién, no si.",
+        "en": "\"I will hand over no one,\" you say. \"Let the law keep its law.\"\n\n\"Then you stay,\" the Anuna replies, without raising his voice.\n\nThe galla draw closer. They do not touch you; they don't need to. You feel again the cold of the hook against your back, and beyond them you see your sister, who does not intervene.\n\n\"That law is older than her and older than you,\" says Ereshkigal from the throne. \"I cannot break it either. No one who goes up from here goes up alone.\"\n\nYou look at the gate. You look at the demons. You understand that the only thing you can choose is who, not whether."
+      },
+      "choices": [
+        {
+          "to": "c7_ganzer",
+          "text": {
+            "es": "Subir con los galla",
+            "en": "Go up with the galla"
+          },
+          "description": {
+            "es": "Elegirás arriba, bajo el sol. Aquí abajo no se puede pensar.",
+            "en": "You will choose up there, under the sun. Down here, no one can think."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7_ganzer",
+      "chapter": 7,
+      "mood": "tragic",
+      "text": {
+        "es": "Subes las siete puertas y en cada una te devuelven algo: el vestido, la vara y la cuerda, el anillo, el pectoral, las cuentas, el collar, la corona. Al cruzar la última, vuelves a brillar. Los galla no parpadean.\n\nEn la puerta de Ganzer hay una figura vestida de harapos, con la cara rasgada y el pelo lleno de polvo, que lleva tres días sin moverse de ahí. Es Ninshubur. Al verte, se arroja a tus pies.\n\n—Esta —dice el galla más grande—. Esta estaba esperando. Llévenla.",
+        "en": "You climb through the seven gates, and at each one something is given back to you: the dress, the rod and line, the ring, the breastplate, the beads, the necklace, the crown. When you pass the last one, you shine again. The galla do not blink.\n\nAt the gate of Ganzer there is a figure dressed in rags, her face scratched and her hair full of dust, who has not moved from that spot in three days. It is Ninshubur. When she sees you, she throws herself at your feet.\n\n\"This one,\" says the biggest of the galla. \"This one was waiting. Take her.\""
+      },
+      "fact": {
+        "es": "Vestirse con harapos, rasgarse la cara y cubrirse de polvo eran gestos de duelo en Mesopotamia. Gilgamesh hace algo parecido por Enkidu: se arranca el pelo y rasga sus ropas finas.",
+        "en": "Dressing in rags, scratching one's face and covering oneself in dust were gestures of mourning in Mesopotamia. Gilgamesh does something similar for Enkidu: he tears out his hair and rips his fine clothes."
+      },
+      "choices": [
+        {
+          "to": "c7_umma",
+          "risk": "low",
+          "text": {
+            "es": "Proteger a Ninshubur",
+            "en": "Protect Ninshubur"
+          },
+          "description": {
+            "es": "Ella lloró por ti, golpeó el tambor, movió el cielo. Nunca.",
+            "en": "She mourned for you, beat the drum, moved heaven. Never."
+          }
+        },
+        {
+          "to": "c7_duda",
+          "risk": "medium",
+          "text": {
+            "es": "Dudar un instante",
+            "en": "Hesitate for an instant"
+          },
+          "description": {
+            "es": "Un instante es mucho tiempo cuando hay demonios mirando.",
+            "en": "An instant is a long time when demons are watching."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7_duda",
+      "chapter": 7,
+      "mood": "tragic",
+      "text": {
+        "es": "Dudas. Es solo un instante, pero Ninshubur lo ve. Levanta la cara del suelo y te mira, y en sus ojos no hay reproche. Hay algo peor: hay aceptación.\n\n—Si tiene que ser alguien, mi señora, que sea yo —dice—. Para eso estoy.\n\nLos galla se acercan. Y entonces entiendes lo que estás a punto de permitir: que la única persona que movió el cielo por ti pague el precio de tu viaje.\n\n—No —dices, y tu voz vuelve a ser la de la Reina del Cielo—. A esta no. Antes me quedo yo.",
+        "en": "You hesitate. It is only an instant, but Ninshubur sees it. She lifts her face from the ground and looks at you, and in her eyes there is no reproach. There is something worse: there is acceptance.\n\n\"If it has to be someone, my lady, let it be me,\" she says. \"That is what I am for.\"\n\nThe galla draw closer. And then you understand what you are about to allow: that the one person who moved heaven for you should pay the price of your journey.\n\n\"No,\" you say, and your voice is the Queen of Heaven's voice again. \"Not this one. I would sooner stay myself.\""
+      },
+      "choices": [
+        {
+          "to": "c7_umma",
+          "text": {
+            "es": "Seguir con los galla hacia las ciudades",
+            "en": "Go on with the galla toward the cities"
+          },
+          "description": {
+            "es": "Alguien tendrá que ser. Pero no ella.",
+            "en": "It will have to be someone. But not her."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7_umma",
+      "chapter": 7,
+      "mood": "dangerous",
+      "text": {
+        "es": "Sigues con los galla hacia el sur, hacia las ciudades. En Umma los espera Shara, el dios de la ciudad, vestido de harapos y cubierto de polvo. Lloró por ti. «Este», dicen los galla. «Nunca», dices tú.\n\nEn Badtibira los espera Lulal, vestido de harapos y cubierto de polvo. Lloró por ti. «Este», dicen los galla. «Nunca», dices tú.\n\nLos demonios no se cansan ni se impacientan. Para ellos, uno es tan bueno como otro. Pero tú empiezas a entender quiénes son los que lloraron por ti y quiénes no.\n\nQueda una ciudad por delante: Kulaba, el barrio viejo de Uruk. Tu casa.",
+        "en": "You go on with the galla toward the south, toward the cities. In Umma, Shara, the god of the city, is waiting for you, dressed in rags and covered in dust. He mourned for you. \"This one,\" say the galla. \"Never,\" you say.\n\nIn Badtibira, Lulal is waiting for you, dressed in rags and covered in dust. He mourned for you. \"This one,\" say the galla. \"Never,\" you say.\n\nThe demons do not tire and do not grow impatient. To them, one is as good as another. But you are beginning to understand who mourned for you and who did not.\n\nOne city lies ahead: Kulaba, the old quarter of Uruk. Your home."
+      },
+      "fact": {
+        "es": "Umma y Badtibira fueron ciudades sumerias reales. Según la Lista Real Sumeria, Badtibira fue la segunda ciudad en tener la realeza antes del diluvio, después de Eridu.",
+        "en": "Umma and Badtibira were real Sumerian cities. According to the Sumerian King List, Badtibira was the second city to hold kingship before the flood, after Eridu."
+      },
+      "choices": [
+        {
+          "to": "c8_manzano",
+          "text": {
+            "es": "Llegar a Uruk",
+            "en": "Reach Uruk"
+          },
+          "description": {
+            "es": "Donde te espera tu esposo.",
+            "en": "Where your husband is waiting."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c8_manzano",
+      "chapter": 8,
+      "mood": "dangerous",
+      "text": {
+        "es": "En la llanura de Kulaba, bajo el gran manzano, está Dumuzi. Tu esposo. El pastor al que elegiste entre todos los hombres.\n\nNo está vestido de harapos. Lleva su túnica más hermosa y su corona, y está sentado en un trono magnífico, rodeado de músicos. Hace tres días que estás muerta, y él no lloró. Ni un día. Ni una hora.\n\nAl verte llegar con los demonios, se queda inmóvil. No se levanta. No se arroja a tus pies.\n\nLos galla esperan. Esta vez no dicen «este». Esperan a que lo digas tú.",
+        "en": "On the plain of Kulaba, under the great apple tree, sits Dumuzi. Your husband. The shepherd you chose above all men.\n\nHe is not dressed in rags. He wears his finest robe and his crown, and he sits on a magnificent throne, surrounded by musicians. You have been dead for three days, and he did not mourn. Not for a day. Not for an hour.\n\nWhen he sees you arrive with the demons, he goes still. He does not rise. He does not throw himself at your feet.\n\nThe galla wait. This time they do not say \"this one.\" They wait for you to say it."
+      },
+      "fact": {
+        "es": "Dumuzi, el pastor, era el esposo de Inanna. Su nombre pasó al acadio (Du'uzu) y de ahí al hebreo como Tammuz, y quedó en el calendario: Tamuz es el cuarto mes babilónico y un mes del calendario hebreo.",
+        "en": "Dumuzi, the shepherd, was Inanna's husband. His name passed into Akkadian (Du'uzu) and from there into Hebrew as Tammuz, and it survives in the calendar: Tammuz is the fourth Babylonian month and a month of the Hebrew calendar."
+      },
+      "choices": [
+        {
+          "to": "c8_huida",
+          "risk": "high",
+          "text": {
+            "es": "Fijar en él la mirada de la muerte",
+            "en": "Fix the look of death on him"
+          },
+          "description": {
+            "es": "«Llévenselo». Dos palabras.",
+            "en": "\"Take him.\" Two words."
+          }
+        },
+        {
+          "to": "c8_dumuzi",
+          "risk": "medium",
+          "text": {
+            "es": "Preguntarle por qué no lloró",
+            "en": "Ask him why he did not mourn"
+          },
+          "description": {
+            "es": "Antes de condenarlo, quieres oírlo.",
+            "en": "Before you condemn him, you want to hear him."
+          }
+        },
+        {
+          "to": "fin_mitad",
+          "risk": "medium",
+          "text": {
+            "es": "No entregar a nadie: bajar tú misma",
+            "en": "Hand over no one: go down yourself"
+          },
+          "description": {
+            "es": "Si alguien tiene que pagar tu viaje, serás tú.",
+            "en": "If someone must pay for your journey, it will be you."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c8_dumuzi",
+      "chapter": 8,
+      "mood": "mysterious",
+      "text": {
+        "es": "—¿Por qué no lloraste?\n\nDumuzi tarda en responder. Los músicos han dejado de tocar.\n\n—Uruk necesita un rey —dice al fin—. Si yo me visto de harapos, la ciudad se viste de harapos. Alguien tenía que sentarse en el trono.\n\n—Ninshubur movió el cielo con harapos puestos.\n\n—Ninshubur no es el rey.\n\nLo miras largo rato. Puede que sea verdad. Puede que sea la mentira de un hombre que no quiso llorar. Los dos caben en esa cara que amaste, y no sabes cuál es la que te está mirando.\n\nLos galla esperan.",
+        "en": "\"Why didn't you mourn?\"\n\nDumuzi takes a while to answer. The musicians have stopped playing.\n\n\"Uruk needs a king,\" he says at last. \"If I dress in rags, the city dresses in rags. Someone had to sit on the throne.\"\n\n\"Ninshubur moved heaven wearing rags.\"\n\n\"Ninshubur is not the king.\"\n\nYou look at him for a long while. It may be the truth. It may be the lie of a man who did not want to mourn. Both fit the face you loved, and you don't know which one is looking back at you.\n\nThe galla wait."
+      },
+      "fact": {
+        "es": "En la Biblia, el profeta Ezequiel describe a mujeres que lloran por Tammuz a la puerta del templo de Jerusalén: el duelo anual por el dios pastor llegó muy lejos de Sumer.",
+        "en": "In the Bible, the prophet Ezekiel describes women weeping for Tammuz at the gate of the temple in Jerusalem: the yearly mourning for the shepherd god traveled very far from Sumer."
+      },
+      "choices": [
+        {
+          "to": "c8_huida",
+          "risk": "high",
+          "text": {
+            "es": "Entregarlo a los galla",
+            "en": "Hand him over to the galla"
+          },
+          "description": {
+            "es": "No lloró. Lo demás son palabras.",
+            "en": "He did not mourn. The rest is words."
+          }
+        },
+        {
+          "to": "fin_mitad",
+          "risk": "medium",
+          "text": {
+            "es": "Perdonarlo y bajar tú",
+            "en": "Forgive him and go down yourself"
+          },
+          "description": {
+            "es": "Quizás dice la verdad. No vas a jugártelo con su vida.",
+            "en": "Perhaps he is telling the truth. You won't gamble his life on it."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c8_huida",
+      "chapter": 8,
+      "mood": "tragic",
+      "text": {
+        "es": "Fijas en él la mirada de la muerte. Le hablas con la palabra de la ira. Le lanzas el grito de la culpa.\n\n—Llévenselo.\n\nLos galla lo agarran. Dumuzi llora por fin, pero no por ti: llora por él. Levanta las manos al cielo y le ruega a Utu, el Sol, tu hermano. «Soy el esposo de tu hermana; no dejes que me lleven». Y Utu, que es justo, le convierte las manos en manos de serpiente y los pies en pies de serpiente, y Dumuzi se escurre entre los dedos de los demonios.\n\nLo persiguen por los apriscos y los campos. Lo esconde su hermana, Geshtinanna, hasta que una mosca revela dónde está. Cuando lo atrapan, Geshtinanna se arroja ante ti.\n\n—Llévame a mí la mitad del año. Y a él la otra mitad.",
+        "en": "You fix the look of death on him. You speak to him with the word of wrath. You hurl at him the cry of guilt.\n\n\"Take him.\"\n\nThe galla seize him. Dumuzi weeps at last, but not for you: he weeps for himself. He raises his hands to the sky and pleads with Utu, the Sun, your brother. \"I am your sister's husband; do not let them take me.\" And Utu, who is just, turns his hands into snake's hands and his feet into snake's feet, and Dumuzi slips through the demons' fingers.\n\nThey hunt him through the sheepfolds and the fields. His sister Geshtinanna hides him, until a fly reveals where he is. When they catch him, Geshtinanna throws herself before you.\n\n\"Take me for half the year. And him for the other half.\""
+      },
+      "fact": {
+        "es": "Utu, el dios Sol, era el hermano de Inanna. Geshtinanna, la hermana de Dumuzi, lleva un nombre que suele traducirse «vid del cielo»; era intérprete de sueños y, en el poema, sustituye a su hermano en el inframundo la mitad del año.",
+        "en": "Utu, the sun god, was Inanna's brother. Geshtinanna, Dumuzi's sister, bears a name usually translated \"vine of heaven\"; she was an interpreter of dreams and, in the poem, takes her brother's place in the underworld for half the year."
+      },
+      "choices": [
+        {
+          "to": "fin_dumuzi",
+          "text": {
+            "es": "Aceptar el reparto",
+            "en": "Accept the division"
+          },
+          "description": {
+            "es": "Es lo más parecido a la justicia que ofrece el Gran Abajo.",
+            "en": "It is the closest thing to justice the Great Below offers."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_mitad",
+      "chapter": 8,
+      "mood": "peaceful",
+      "ending": {
+        "type": "alternative",
+        "title": {
+          "es": "La mitad del año",
+          "en": "Half the Year"
+        }
+      },
+      "text": {
+        "es": "—No —les dices a los galla—. Nadie pagará mi viaje. Yo bajé por mi voluntad; yo volveré a bajar.\n\nLos demonios te miran sin entender. Nunca nadie eligió ser el reemplazo de sí mismo. Pero la ley dice «alguien», y tú eres alguien.\n\nAsí queda hecho el trato. La mitad del año reinas arriba: los campos florecen, los rebaños paren, los hombres y las mujeres se buscan. La otra mitad bajas al Gran Abajo, cruzas las siete puertas y te sientas junto a tu hermana, en una silla de piedra que ella manda poner al lado del trono. No hablan mucho. No hace falta.\n\nDumuzi te espera cada primavera bajo el manzano, vestido de harapos. Aprendió tarde, pero aprendió.",
+        "en": "\"No,\" you tell the galla. \"No one will pay for my journey. I went down of my own will; I will go down again.\"\n\nThe demons look at you without understanding. No one has ever chosen to be their own substitute. But the law says \"someone,\" and you are someone.\n\nSo the bargain is made. For half the year you reign above: the fields blossom, the flocks give birth, men and women seek each other out. The other half, you go down to the Great Below, pass through the seven gates, and sit beside your sister, on a stone seat she has had placed next to the throne. The two of you don't talk much. There is no need.\n\nDumuzi waits for you each spring under the apple tree, dressed in rags. He learned late, but he learned."
+      },
+      "fact": {
+        "es": "El mito griego de Perséfone, más de mil años posterior, también reparte el año entre el mundo de arriba y el de abajo: un tercio en el Himno homérico a Deméter, la mitad en versiones más tardías.",
+        "en": "The Greek myth of Persephone, more than a thousand years later, also divides the year between the world above and the world below: a third of it in the Homeric Hymn to Demeter, half in later versions."
+      },
+      "choices": []
+    },
+    {
+      "id": "fin_dumuzi",
+      "chapter": 8,
+      "mood": "tragic",
+      "ending": {
+        "type": "myth",
+        "title": {
+          "es": "El precio del regreso",
+          "en": "The Price of Returning"
+        }
+      },
+      "text": {
+        "es": "—Tú la mitad del año; tu hermana, la otra mitad.\n\nAsí lo decides, y así queda. Los galla se llevan a Dumuzi hacia el norte, hacia la montaña sin árboles. Geshtinanna lo seguirá cuando le toque. Tú vuelves al Eanna, con las siete me puestas, y las sacerdotisas cantan.\n\nPero esa noche, sola en la terraza, lloras por tu esposo. Lo elegiste entre todos los hombres. Lo mandaste al polvo. Las dos cosas son verdad, y ninguna borra la otra.\n\nDesde entonces, cada año, cuando Dumuzi baja, los campos se secan y las mujeres de Sumer lloran con la Reina del Cielo. Y cuando sube, florece todo. Ese es el precio de haber bajado y vuelto: saber lo que cuesta.\n\nSanta Ereshkigal, dulce es tu alabanza.",
+        "en": "\"You for half the year; your sister for the other half.\"\n\nSo you decide, and so it stands. The galla carry Dumuzi off to the north, toward the treeless mountain. Geshtinanna will follow when her turn comes. You return to the Eanna, wearing the seven me, and the priestesses sing.\n\nBut that night, alone on the terrace, you weep for your husband. You chose him above all men. You sent him to the dust. Both things are true, and neither erases the other.\n\nFrom then on, every year, when Dumuzi goes down, the fields dry up and the women of Sumer weep with the Queen of Heaven. And when he comes up, everything blossoms. That is the price of having gone down and come back: knowing what it costs.\n\nHoly Ereshkigal, sweet is your praise."
+      },
+      "fact": {
+        "es": "El poema sumerio termina con una alabanza no a Inanna, sino a su hermana: «¡Santa Ereshkigal! ¡Dulce es tu alabanza!».",
+        "en": "The Sumerian poem ends with praise not for Inanna but for her sister: \"Holy Ereshkigal! Sweet is your praise!\""
+      },
+      "choices": []
+    }
+  ]
+}
