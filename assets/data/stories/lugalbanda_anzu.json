@@ -1,0 +1,1378 @@
+{
+  "formatVersion": 1,
+  "adventureId": "lugalbanda_anzu",
+  "contentVersion": "1.0",
+  "hero": {
+    "name": {
+      "es": "Lugalbanda",
+      "en": "Lugalbanda"
+    },
+    "description": {
+      "es": "El octavo oficial de Uruk, el más joven y el más débil. Marcha a la guerra contra Aratta sin saber que la montaña lo va a probar mucho antes que el enemigo.",
+      "en": "The eighth officer of Uruk, the youngest and the weakest. He marches to war against Aratta, not knowing that the mountain will test him long before the enemy does."
+    }
+  },
+  "chapters": [
+    {
+      "number": 1,
+      "title": {
+        "es": "La marcha a Aratta",
+        "en": "The March to Aratta"
+      }
+    },
+    {
+      "number": 2,
+      "title": {
+        "es": "La cueva",
+        "en": "The Cave"
+      }
+    },
+    {
+      "number": 3,
+      "title": {
+        "es": "Siete brasas",
+        "en": "Seven Embers"
+      }
+    },
+    {
+      "number": 4,
+      "title": {
+        "es": "El árbol águila",
+        "en": "The Eagle Tree"
+      }
+    },
+    {
+      "number": 5,
+      "title": {
+        "es": "El pájaro Anzu",
+        "en": "The Anzu Bird"
+      }
+    },
+    {
+      "number": 6,
+      "title": {
+        "es": "Los hermanos",
+        "en": "The Brothers"
+      }
+    },
+    {
+      "number": 7,
+      "title": {
+        "es": "Un año bajo los muros",
+        "en": "A Year Beneath the Walls"
+      }
+    },
+    {
+      "number": 8,
+      "title": {
+        "es": "Siete montañas en una noche",
+        "en": "Seven Mountains in One Night"
+      }
+    }
+  ],
+  "start": "c1_uruk",
+  "scenes": [
+    {
+      "id": "c1_uruk",
+      "chapter": 1,
+      "mood": "epic",
+      "text": {
+        "es": "Enmerkar, rey de Uruk, ha hecho sonar los tambores de guerra, y la ciudad entera marcha hacia el este. El objetivo está lejos, detrás de las montañas: Aratta, la ciudad del lapislázuli, de la plata y del oro, que no quiere inclinarse ante Uruk.\n\nAl frente del ejército van siete oficiales nacidos en Kulaba, el barrio antiguo de Uruk, hijos de la diosa Urash. Cada uno manda a miles de hombres. Tú eres el octavo. Eres Lugalbanda: el más joven, el más flaco, el que todavía no ha ganado ninguna batalla.\n\nTus siete hermanos de armas te miran de reojo. Saben que el rey te dio un lugar a su lado, pero no saben por qué. Tú tampoco.",
+        "en": "Enmerkar, king of Uruk, has sounded the drums of war, and the whole city marches east. The goal lies far away, beyond the mountains: Aratta, city of lapis lazuli, of silver and of gold, which refuses to bow to Uruk.\n\nAt the head of the army march seven officers born in Kulaba, the old quarter of Uruk, sons of the goddess Urash. Each one commands thousands of men. You are the eighth. You are Lugalbanda: the youngest, the thinnest, the one who has yet to win a single battle.\n\nYour seven brothers in arms watch you sidelong. They know the king gave you a place at his side, but they do not know why. Neither do you."
+      },
+      "fact": {
+        "es": "La Lista Real Sumeria registra a «Lugalbanda, el pastor» como rey de Uruk, sucesor de Enmerkar. La Epopeya de Gilgamesh llama a Gilgamesh «hijo de Lugalbanda» y de la diosa Ninsun.",
+        "en": "The Sumerian King List records \"Lugalbanda, the shepherd\" as king of Uruk, successor to Enmerkar. The Epic of Gilgamesh calls Gilgamesh \"son of Lugalbanda\" and of the goddess Ninsun."
+      },
+      "choices": [
+        {
+          "to": "c1_hermanos",
+          "risk": "low",
+          "text": {
+            "es": "Caminar junto a tus hermanos",
+            "en": "Walk alongside your brothers"
+          },
+          "description": {
+            "es": "Escuchar más y hablar menos: así se aprende a ser oficial.",
+            "en": "Listen more and speak less: that is how one learns to be an officer."
+          }
+        },
+        {
+          "to": "c1_rey",
+          "risk": "low",
+          "text": {
+            "es": "Preguntarle al rey por Aratta",
+            "en": "Ask the king about Aratta"
+          },
+          "description": {
+            "es": "Quieres saber por qué vale la pena cruzar tantas montañas.",
+            "en": "You want to know why it is worth crossing so many mountains."
+          }
+        },
+        {
+          "to": "c1_vanguardia",
+          "risk": "medium",
+          "text": {
+            "es": "Marchar a la cabeza de la columna",
+            "en": "March at the head of the column"
+          },
+          "description": {
+            "es": "Que nadie diga que el octavo se queda atrás.",
+            "en": "Let no one say the eighth lags behind."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c1_hermanos",
+      "chapter": 1,
+      "mood": "peaceful",
+      "text": {
+        "es": "Caminas entre tus hermanos durante seis días. Ellos hablan de batallas que tú no viste y de mujeres de Uruk que tú no conoces. Te ríes cuando hay que reírse. Cargas lo que nadie quiere cargar.\n\nEl mayor te observa una tarde, mientras levantas el campamento, y dice sin mirarte:\n\n—Las montañas no perdonan a los flacos, muchacho. Come.\n\nEs lo más parecido a un cariño que te ha dicho en su vida. Comes.\n\nAl séptimo día, cuando el camino se empina y el aire se vuelve delgado, sientes el primer escalofrío. No le das importancia. Es solo el frío de la altura.",
+        "en": "You walk among your brothers for six days. They talk of battles you did not see and of women in Uruk you do not know. You laugh when laughter is called for. You carry what no one else wants to carry.\n\nOne evening, as you set up camp, the eldest watches you and says, without looking at you:\n\n\"The mountains show no mercy to the thin, boy. Eat.\"\n\nIt is the closest he has ever come to kindness. You eat.\n\nOn the seventh day, as the road steepens and the air grows thin, you feel the first chill. You pay it no mind. It is only the mountain cold."
+      },
+      "fact": {
+        "es": "En otro poema del ciclo, «Enmerkar y el señor de Aratta», se atribuye a Enmerkar la invención de la escritura: inventa la tablilla de arcilla porque su mensajero no es capaz de repetir un mensaje tan largo.",
+        "en": "In another poem of the cycle, \"Enmerkar and the Lord of Aratta,\" Enmerkar is credited with inventing writing: he invents the clay tablet because his messenger cannot repeat so long a message."
+      },
+      "choices": [
+        {
+          "to": "c2_fiebre",
+          "text": {
+            "es": "Seguir subiendo",
+            "en": "Keep climbing"
+          },
+          "description": {
+            "es": "El escalofrío no se va. Al contrario.",
+            "en": "The chill does not go away. Quite the opposite."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c1_rey",
+      "chapter": 1,
+      "mood": "mysterious",
+      "text": {
+        "es": "Una noche, junto al fuego del rey, te atreves a preguntar.\n\n—¿Qué hay en Aratta que no tengamos en Uruk?\n\nEnmerkar no se ofende. Sonríe con la mitad de la boca.\n\n—Lapislázuli azul como el cielo de la tarde. Plata, oro, estaño. Artesanos que trabajan el metal como nadie. Y un señor que cree que Inanna lo prefiere a él. —Escupe en el fuego—. Inanna es de Uruk. Vamos a recordárselo.\n\nMira las montañas negras que se levantan al este, y por primera vez le ves los años en la cara.\n\nAl séptimo día de marcha, mientras el camino se empina, sientes el primer escalofrío.",
+        "en": "One night, by the king's fire, you dare to ask.\n\n\"What is there in Aratta that we don't have in Uruk?\"\n\nEnmerkar takes no offense. One corner of his mouth lifts in a smile.\n\n\"Lapis lazuli as blue as the evening sky. Silver, gold, tin. Craftsmen who work metal like no one else. And a lord who believes Inanna favors him.\" He spits into the fire. \"Inanna belongs to Uruk. We are going to remind him.\"\n\nHe looks at the black mountains rising in the east, and for the first time you see how old he is.\n\nOn the seventh day of the march, as the road steepens, you feel the first chill."
+      },
+      "fact": {
+        "es": "Aratta aparece en cuatro poemas sumerios como una ciudad rica en lapislázuli, oro y plata, al otro lado de siete cordilleras. Nunca se la encontró; se la busca en la meseta de Irán.",
+        "en": "Aratta appears in four Sumerian poems as a city rich in lapis lazuli, gold and silver, beyond seven mountain ranges. It has never been found; scholars look for it on the Iranian plateau."
+      },
+      "choices": [
+        {
+          "to": "c2_fiebre",
+          "text": {
+            "es": "Seguir subiendo",
+            "en": "Keep climbing"
+          },
+          "description": {
+            "es": "El escalofrío no se va. Al contrario.",
+            "en": "The chill does not go away. Quite the opposite."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c1_vanguardia",
+      "chapter": 1,
+      "mood": "dangerous",
+      "text": {
+        "es": "Marchas al frente, donde el polvo es más espeso y las piedras más filosas. Tus hermanos se dejan alcanzar y luego te dejan pasar, con una sonrisa que no sabes leer. Durante seis días caminas más que nadie y duermes menos que nadie.\n\nAl séptimo día, cuando el camino se mete entre las montañas, el escalofrío te alcanza como una flecha. No es el frío de la altura. Viene de adentro.\n\nAprietas los dientes y sigues. Un oficial no se detiene por un escalofrío. Eso crees, hasta que la mano se te abre sola y la lanza cae al suelo.",
+        "en": "You march at the front, where the dust is thickest and the stones are sharpest. Your brothers let you catch up and then let you pass, with a smile you cannot read. For six days you walk more than anyone and sleep less than anyone.\n\nOn the seventh day, as the road winds in among the mountains, the chill strikes you like an arrow. It is not the mountain cold. It comes from within.\n\nYou clench your teeth and keep going. An officer does not stop for a chill. Or so you think, until your hand opens of its own accord and the spear falls to the ground."
+      },
+      "choices": [
+        {
+          "to": "c2_fiebre",
+          "text": {
+            "es": "Levantar la lanza",
+            "en": "Pick up the spear"
+          },
+          "description": {
+            "es": "Si es que puedes.",
+            "en": "If you can."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2_fiebre",
+      "chapter": 2,
+      "mood": "tragic",
+      "text": {
+        "es": "En medio de las montañas, la enfermedad te derriba. Los sumerios la llaman «enfermedad de la cabeza»: no puedes cerrar la mano, no puedes levantar el pie. Te arde la frente y te tiembla todo lo demás.\n\nTus hermanos se reúnen alrededor. Discuten en voz baja, como si ya estuvieras muerto. ¿Llevarlo de vuelta a Uruk? Son siete días de camino, y el ejército no puede esperar. ¿Cargarlo hasta Aratta? Los enfermos no sirven en un sitio.\n\nHay una cueva en la ladera, seca y escondida. El mayor la señala con el mentón.\n\n—Lo dejamos ahí. A la vuelta lo recogemos. Si todavía está.",
+        "en": "In the heart of the mountains, the sickness brings you down. The Sumerians call it \"head sickness\": you cannot close your hand, you cannot lift your foot. Your forehead burns and the rest of you shakes.\n\nYour brothers gather around. They argue in low voices, as if you were already dead. Carry him back to Uruk? That is seven days on the road, and the army cannot wait. Carry him to Aratta? The sick are no use in a siege.\n\nThere is a cave on the slope, dry and hidden. The eldest points to it with his chin.\n\n\"We leave him there. We'll pick him up on the way back. If he's still there.\""
+      },
+      "fact": {
+        "es": "Los dos poemas de Lugalbanda se conocen por copias de época paleobabilónica (hacia 1800 a. C.), sobre todo de Nippur, pero se cree que fueron compuestos antes, en tiempos de la Tercera Dinastía de Ur (hacia 2100 a. C.).",
+        "en": "The two Lugalbanda poems are known from Old Babylonian copies (around 1800 BC), mostly from Nippur, but they are thought to have been composed earlier, in the time of the Third Dynasty of Ur (around 2100 BC)."
+      },
+      "choices": [
+        {
+          "to": "c2_pedir",
+          "risk": "low",
+          "text": {
+            "es": "Pedir que te dejen comida y armas",
+            "en": "Ask them to leave food and weapons"
+          },
+          "description": {
+            "es": "Si vas a quedarte, que al menos puedas defenderte.",
+            "en": "If you must stay, you should at least be able to defend yourself."
+          }
+        },
+        {
+          "to": "c2_rogar",
+          "risk": "medium",
+          "text": {
+            "es": "Rogar que te lleven con ellos",
+            "en": "Beg them to take you along"
+          },
+          "description": {
+            "es": "Prefieres morir en el camino que solo en un agujero.",
+            "en": "You would rather die on the road than alone in a hole."
+          }
+        },
+        {
+          "to": "c2_seguir",
+          "risk": "high",
+          "text": {
+            "es": "Negarte: seguirás al ejército como puedas",
+            "en": "Refuse: you'll follow the army somehow"
+          },
+          "description": {
+            "es": "Nadie deja atrás a un oficial de Uruk. Ni siquiera enfermo.",
+            "en": "No one leaves an officer of Uruk behind. Not even a sick one."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2_pedir",
+      "chapter": 2,
+      "mood": "sacred",
+      "text": {
+        "es": "—Déjenme lo que puedan —dices, con la voz que te queda.\n\nY te dejan. Dátiles e higos. Quesos de varias clases. Grasa del establo, queso fresco del aprisco, aceite y huevos. Cerveza oscura mezclada con jarabe de dátil, vino, agua en odres de cuero. Resinas para quemar. Un hacha de estaño de las montañas de Zubi y una daga de hierro de las montañas de Gig.\n\nLo apilan a tu alrededor, dentro de la cueva, como se apilan las ofrendas en una tumba. Después se van, con lágrimas, con lamentos, con llanto, pero se van.\n\nOyes los tambores alejarse por el desfiladero hasta que ya no los oyes más.",
+        "en": "\"Leave me whatever you can,\" you say, with what voice you have left.\n\nAnd they do. Dates and figs. Cheeses of several kinds. Fat from the cowpen, fresh cheese from the sheepfold, oil and eggs. Dark beer mixed with date syrup, wine, water in leather skins. Resins to burn. A tin axe from the mountains of Zubi and an iron dagger from the mountains of Gig.\n\nThey pile it all around you, inside the cave, the way offerings are piled in a tomb. Then they leave, with tears, with laments, with weeping, but they leave.\n\nYou hear the drums fade down the gorge until you hear them no more."
+      },
+      "fact": {
+        "es": "El poema dice que a Lugalbanda le dejan un hacha de estaño y una daga de hierro. Hacia el 2000 a. C. el hierro era un metal rarísimo en Mesopotamia, probablemente de origen meteórico, y valía mucho más que la plata, incluso más que el oro.",
+        "en": "The poem says Lugalbanda is left a tin axe and an iron dagger. Around 2000 BC iron was an extremely rare metal in Mesopotamia, probably meteoric in origin, and worth far more than silver, even more than gold."
+      },
+      "choices": [
+        {
+          "to": "c3_solo",
+          "text": {
+            "es": "Quedarte en la oscuridad",
+            "en": "Stay in the darkness"
+          },
+          "description": {
+            "es": "La cueva huele a piedra fría y a queso.",
+            "en": "The cave smells of cold stone and cheese."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2_rogar",
+      "chapter": 2,
+      "mood": "tragic",
+      "text": {
+        "es": "—Llévenme —dices—. Átenme a una mula. Arrástrenme. Pero no me dejen aquí.\n\nLo intentan. Dos de tus hermanos te cargan medio día por la pendiente, y a la tarde los dos tienen la espalda rota y tú estás peor que a la mañana. El mayor se detiene y te apoya contra una roca, junto a la boca de una cueva.\n\n—No llegas, hermano. Y si seguimos así, no llegamos ninguno.\n\nTe dejan comida, bebida, un hacha y una daga, y se van con lágrimas, con lamentos, con llanto. Tú no lloras. No te queda agua para eso.\n\nOyes los tambores alejarse por el desfiladero hasta que ya no los oyes más.",
+        "en": "\"Take me with you,\" you say. \"Tie me to a mule. Drag me. But don't leave me here.\"\n\nThey try. Two of your brothers carry you up the slope for half a day, and by evening both their backs are giving out and you are worse than you were in the morning. The eldest stops and props you against a rock, beside the mouth of a cave.\n\n\"You won't make it, brother. And if we go on like this, none of us will.\"\n\nThey leave you food, drink, an axe and a dagger, and they go, with tears, with laments, with weeping. You do not weep. You have no water left for that.\n\nYou hear the drums fade down the gorge until you hear them no more."
+      },
+      "choices": [
+        {
+          "to": "c3_solo",
+          "text": {
+            "es": "Arrastrarte hasta la cueva",
+            "en": "Crawl into the cave"
+          },
+          "description": {
+            "es": "Adentro, al menos, no hay viento.",
+            "en": "Inside, at least, there is no wind."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2_seguir",
+      "chapter": 2,
+      "mood": "dangerous",
+      "text": {
+        "es": "—No me quedo —dices, y te pones de pie.\n\nTus hermanos te miran como se mira a un loco. El mayor se encoge de hombros: si quieres caminar, camina. Dejan en la cueva, por si acaso, comida, bebida, un hacha y una daga. El ejército se pone en marcha y tú vas detrás, apoyado en la lanza, con los ojos clavados en la última fila.\n\nAguantas medio día. Después una hora. Después veinte pasos. La fiebre te muerde las piernas y el desfiladero da vueltas. Cuando levantas la cabeza, la última fila ya no está: solo hay polvo que se asienta.\n\nDetrás de ti, a media jornada, queda la cueva que no quisiste. Delante, una montaña que no termina.",
+        "en": "\"I'm not staying,\" you say, and you get to your feet.\n\nYour brothers look at you the way one looks at a madman. The eldest shrugs: if you want to walk, walk. Just in case, they leave food, drink, an axe and a dagger in the cave. The army sets off and you follow behind, leaning on your spear, your eyes fixed on the last rank.\n\nYou hold out for half a day. Then an hour. Then twenty steps. The fever gnaws at your legs and the gorge spins. When you lift your head, the last rank is gone: there is only dust settling.\n\nBehind you, half a day's walk away, lies the cave you refused. Ahead, a mountain that never ends."
+      },
+      "choices": [
+        {
+          "to": "fin_fiebre",
+          "risk": "high",
+          "text": {
+            "es": "Seguir adelante",
+            "en": "Keep going"
+          },
+          "description": {
+            "es": "Un oficial de Uruk no vuelve atrás.",
+            "en": "An officer of Uruk does not turn back."
+          }
+        },
+        {
+          "to": "c3_solo",
+          "risk": "low",
+          "text": {
+            "es": "Volver a la cueva",
+            "en": "Go back to the cave"
+          },
+          "description": {
+            "es": "Vivo en un agujero es mejor que muerto en una cuesta.",
+            "en": "Alive in a hole is better than dead on a hillside."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_fiebre",
+      "chapter": 2,
+      "mood": "tragic",
+      "text": {
+        "es": "Sigues. Un paso, y otro. La lanza se te clava en el sobaco y las piedras se te clavan en los pies. Te dices que a la vuelta de esa roca verás al ejército. A la vuelta de esa roca hay otra roca.\n\nAl anochecer ya no sientes frío, y eso es lo peor que puede pasar. Te sientas a descansar un momento contra la ladera. El cielo se llena de estrellas que no reconoces.\n\nTus hermanos vuelven de Aratta un año después. Buscan la cueva y la encuentran vacía, con la comida intacta. Nadie sabe dónde fuiste a parar. En Uruk, Enmerkar nombra a otro octavo oficial.\n\nLa montaña no es cruel. Solo es grande, y tú eras pequeño, y nadie te enseñó a esperar.",
+        "en": "You go on. One step, then another. The spear digs into your armpit and the stones dig into your feet. You tell yourself that beyond that rock you will see the army. Beyond that rock there is another rock.\n\nBy nightfall you no longer feel the cold, and that is the worst thing that can happen. You sit down against the slope to rest for a moment. The sky fills with stars you do not recognize.\n\nYour brothers return from Aratta a year later. They look for the cave and find it empty, the food untouched. No one knows what became of you. In Uruk, Enmerkar names another eighth officer.\n\nThe mountain is not cruel. It is only large, and you were small, and no one taught you to wait."
+      },
+      "fact": {
+        "es": "El texto médico más antiguo que se conoce es una tablilla sumeria de Nippur, de hacia 2100 a. C., con recetas a base de plantas, sal y cerveza. No menciona dioses ni conjuros.",
+        "en": "The oldest known medical text is a Sumerian tablet from Nippur, from around 2100 BC, with remedies made from plants, salt and beer. It mentions no gods and no spells."
+      },
+      "ending": {
+        "type": "tragic",
+        "title": {
+          "es": "La fiebre de la montaña",
+          "en": "The Mountain Fever"
+        }
+      },
+      "choices": []
+    },
+    {
+      "id": "c3_solo",
+      "chapter": 3,
+      "mood": "mysterious",
+      "text": {
+        "es": "Pasan dos días y medio. Los cuentas por la luz que entra en la boca de la cueva, cuando puedes abrir los ojos.\n\nAl tercer día, la fiebre afloja apenas. Te sientas. Tienes a tu alrededor comida que no puedes tragar y armas que no puedes levantar, y afuera, una montaña donde no vive nadie que te conozca.\n\nEl sol asoma entre dos picos, rojo y enorme. Es Utu, el dios que sale cada mañana de las montañas del este y lo ve todo. Tú eres una de las cosas que ve.",
+        "en": "Two and a half days go by. You count them by the light that comes in at the mouth of the cave, when you can open your eyes.\n\nOn the third day, the fever eases just a little. You sit up. Around you lies food you cannot swallow and weapons you cannot lift, and outside, a mountain where not a soul knows you.\n\nThe sun appears between two peaks, red and enormous. It is Utu, the god who rises every morning from the mountains of the east and sees everything. You are one of the things he sees."
+      },
+      "fact": {
+        "es": "En los sellos cilíndricos de época acadia (hacia 2300 a. C.), Utu, el dios Sol, aparece saliendo entre dos montañas, con rayos en los hombros y una sierra en la mano. Era también el dios de la justicia, porque lo veía todo.",
+        "en": "On Akkadian-period cylinder seals (around 2300 BC), Utu, the Sun god, is shown rising between two mountains, with rays on his shoulders and a saw in his hand. He was also the god of justice, because he saw everything."
+      },
+      "choices": [
+        {
+          "to": "c3_utu",
+          "risk": "low",
+          "text": {
+            "es": "Rezar a Utu, a Inanna y a Nanna",
+            "en": "Pray to Utu, Inanna and Nanna"
+          },
+          "description": {
+            "es": "El sol, la estrella de la tarde y la luna: los tres que nunca se apagan.",
+            "en": "The sun, the evening star and the moon: the three that never go out."
+          }
+        },
+        {
+          "to": "c3_fuego",
+          "risk": "medium",
+          "text": {
+            "es": "Hacer fuego y comer",
+            "en": "Make a fire and eat"
+          },
+          "description": {
+            "es": "Primero el cuerpo. Los dioses pueden esperar.",
+            "en": "The body first. The gods can wait."
+          }
+        },
+        {
+          "to": "c3_dormir",
+          "risk": "medium",
+          "text": {
+            "es": "Volver a dormir",
+            "en": "Go back to sleep"
+          },
+          "description": {
+            "es": "Quizás mañana la fiebre se haya ido sola.",
+            "en": "Perhaps by tomorrow the fever will have gone on its own."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3_utu",
+      "chapter": 3,
+      "mood": "sacred",
+      "text": {
+        "es": "Te arrastras hasta la boca de la cueva y levantas las manos hacia el sol.\n\n—Utu, no me dejes enfermo más tiempo. No me dejes morir donde no hay madre que llore, en una tierra que no es la mía.\n\nAl atardecer, rezas a Inanna, la estrella de la tarde. A la noche, a Nanna, la luna, que ilumina a los perdidos. Hablas hasta que te duele la garganta, y después sigues hablando sin voz.\n\nNo sabes cuándo te duermes. Sabes que al despertar hay, junto a tu mano, plantas que no estaban ahí y agua que no es del odre. Comes. Bebes. Te pones de pie, y las piernas aguantan.\n\nTe sientes como un caballo de las montañas que acaba de romper la soga.",
+        "en": "You crawl to the mouth of the cave and raise your hands to the sun.\n\n\"Utu, do not leave me sick any longer. Do not let me die where there is no mother to weep for me, in a land that is not mine.\"\n\nAt dusk, you pray to Inanna, the evening star. At night, to Nanna, the moon, who lights the way for the lost. You speak until your throat aches, and then you go on speaking without a voice.\n\nYou do not know when you fall asleep. You know that when you wake there are, beside your hand, plants that were not there before and water that is not from the skin. You eat. You drink. You stand, and your legs hold.\n\nYou feel like a mountain horse that has just broken its tether."
+      },
+      "fact": {
+        "es": "Nanna (Suen para los acadios) era el dios de la luna y el padre de Utu y de Inanna. Su templo principal estaba en Ur, donde el rey Ur-Nammu levantó el gran zigurat hacia 2100 a. C.",
+        "en": "Nanna (Suen to the Akkadians) was the moon god and the father of Utu and Inanna. His main temple was in Ur, where King Ur-Nammu built the great ziggurat around 2100 BC."
+      },
+      "choices": [
+        {
+          "to": "c3_toro",
+          "text": {
+            "es": "Salir de la cueva",
+            "en": "Leave the cave"
+          },
+          "description": {
+            "es": "Afuera hay sol, viento y hambre.",
+            "en": "Outside there is sun, wind and hunger."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3_fuego",
+      "chapter": 3,
+      "mood": "mysterious",
+      "text": {
+        "es": "Encuentras dos pedernales entre tus cosas y los golpeas hasta que saltan chispas. Con solo siete brasas horneas una masa de harina y la endulzas con jarabe de dátil. Es el primer pan que haces en tu vida. Te sabe a victoria.\n\nComes despacio, con las manos temblando. Bebes la cerveza oscura. La fiebre no se va, pero retrocede un paso, como un perro que teme al fuego.\n\nEsa noche, con las brasas ya grises, te das cuenta de que estás vivo porque alguien dejó que lo estuvieras. Rezas a Utu, a Inanna y a Nanna, tarde y mal, pero rezas. Al amanecer, las piernas te aguantan.",
+        "en": "You find two flints among your things and strike them until sparks fly. With only seven embers you bake a dough of flour and sweeten it with date syrup. It is the first bread you have ever made. It tastes of victory.\n\nYou eat slowly, your hands trembling. You drink the dark beer. The fever does not leave, but it steps back, like a dog that fears the fire.\n\nThat night, with the embers already grey, you realize that you are alive because someone allowed you to be. You pray to Utu, to Inanna and to Nanna, late and clumsily, but you pray. At dawn, your legs hold."
+      },
+      "fact": {
+        "es": "Los sumerios endulzaban con jarabe de dátil: la miel de abejas era rara en Mesopotamia. El pan se horneaba en hornos de barro o, como hace Lugalbanda, directamente sobre las brasas.",
+        "en": "The Sumerians sweetened food with date syrup: honey was rare in Mesopotamia. Bread was baked in clay ovens or, as Lugalbanda does, directly on the embers."
+      },
+      "choices": [
+        {
+          "to": "c3_toro",
+          "text": {
+            "es": "Salir de la cueva",
+            "en": "Leave the cave"
+          },
+          "description": {
+            "es": "Afuera hay sol, viento y hambre.",
+            "en": "Outside there is sun, wind and hunger."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3_dormir",
+      "chapter": 3,
+      "mood": "tragic",
+      "text": {
+        "es": "Te vuelves a acostar. Si la fiebre vino sola, se irá sola.\n\nDuermes un día entero. Sueñas con los tambores de Uruk y despiertas con los labios partidos y la lengua pegada. El agua del odre está tibia y sabe a cuero. La fiebre no se fue: se quedó, esperando a que te rindieras.\n\nEntiendes que nadie va a venir. Ni tus hermanos, que vuelven en un año, ni la fiebre, que no necesita apurarse. Si quieres salir de aquí, alguien tiene que mover el cielo, y el único que hay en esta cueva eres tú.\n\nTe arrastras hasta la luz y levantas las manos hacia el sol.",
+        "en": "You lie down again. If the fever came on its own, it will leave on its own.\n\nYou sleep a whole day. You dream of the drums of Uruk and wake with cracked lips and your tongue stuck to the roof of your mouth. The water in the skin is warm and tastes of leather. The fever has not gone: it stayed, waiting for you to give in.\n\nYou understand that no one is coming. Not your brothers, who will be back in a year, nor the fever, which is in no hurry. If you want to get out of here, someone has to move heaven, and the only one in this cave is you.\n\nYou crawl toward the light and raise your hands to the sun."
+      },
+      "choices": [
+        {
+          "to": "c3_utu",
+          "text": {
+            "es": "Rezar a Utu",
+            "en": "Pray to Utu"
+          },
+          "description": {
+            "es": "Es lo único que no has probado.",
+            "en": "It is the one thing you have not tried."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3_toro",
+      "chapter": 3,
+      "mood": "epic",
+      "text": {
+        "es": "Caminas por el desierto de piedra con la daga en el cinto. Al segundo día, en un valle con enebros, encuentras lo que nadie esperaría: un toro salvaje pardo, enorme, comiendo tranquilo. Lo acechas, lo atas a un enebro con una soga trenzada. Después atrapas dos cabras y las encadenas.\n\nEsa noche, con el estómago vacío y las bestias mugiendo, sueñas. Un dios parado como un toro, con la cabeza de un toro, te mira desde el borde del sueño. Es Zangara, el dios de los sueños.\n\n—¿Quién degollará para mí al toro pardo? —pregunta—. ¿Quién me ofrecerá la grasa de las cabras? Que lo haga antes de que salga el sol.",
+        "en": "You walk through the stony wilderness with the dagger at your belt. On the second day, in a valley of junipers, you find what no one would expect: a wild brown bull, enormous, calmly grazing. You stalk it and tie it to a juniper with a braided rope. Then you catch two goats and chain them.\n\nThat night, with an empty stomach and the beasts bellowing, you dream. A god standing like a bull, with the head of a bull, watches you from the edge of the dream. It is Zangara, the god of dreams.\n\n\"Who will slaughter the brown bull for me?\" he asks. \"Who will offer me the fat of the goats? Let it be done before the sun rises.\""
+      },
+      "fact": {
+        "es": "Para los mesopotámicos, los sueños eran mensajes de los dioses y se interpretaban con cuidado. En la Epopeya de Gilgamesh, la diosa Ninsun le explica a su hijo los sueños que anuncian la llegada de Enkidu.",
+        "en": "To the Mesopotamians, dreams were messages from the gods and were interpreted with care. In the Epic of Gilgamesh, the goddess Ninsun explains to her son the dreams that foretell the coming of Enkidu."
+      },
+      "choices": [
+        {
+          "to": "c3_banquete",
+          "risk": "low",
+          "text": {
+            "es": "Sacrificar y ofrecer un banquete a los dioses",
+            "en": "Sacrifice and hold a feast for the gods"
+          },
+          "description": {
+            "es": "Un sueño así no se discute.",
+            "en": "A dream like that is not to be argued with."
+          }
+        },
+        {
+          "to": "c3_comer",
+          "risk": "medium",
+          "text": {
+            "es": "Comer primero y ofrecer después",
+            "en": "Eat first, make the offering after"
+          },
+          "description": {
+            "es": "Llevas días sin carne. Los dioses no tienen hambre; tú sí.",
+            "en": "You have gone days without meat. The gods are not hungry; you are."
+          }
+        },
+        {
+          "to": "c3_volver",
+          "risk": "medium",
+          "text": {
+            "es": "Llevarte las cabras y volver a Uruk",
+            "en": "Take the goats and go back to Uruk"
+          },
+          "description": {
+            "es": "Estás vivo. No tientes a la suerte dos veces.",
+            "en": "You are alive. Do not tempt fate twice."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3_banquete",
+      "chapter": 3,
+      "mood": "sacred",
+      "text": {
+        "es": "Antes del alba degüellas al toro pardo con la daga de hierro y ofreces la grasa de las cabras. Cavas un hoyo, enciendes el fuego, asas los hígados y dejas que el humo suba como incienso.\n\nPreparas un banquete como el que se prepara en Uruk para los grandes dioses: para An, el cielo; para Enlil, el viento que manda; para Enki, el sabio del agua dulce; para Ninhursag, la madre de las montañas. Derramas cerveza. Derramas vino. Te quedas con lo que sobra, que es mucho.\n\nCuando sale el sol, ya no eres un enfermo en una cueva. Eres un hombre que sabe dar de comer a los dioses. Y con eso, dicen, se puede ir a cualquier parte.",
+        "en": "Before dawn you slaughter the brown bull with the iron dagger and offer up the fat of the goats. You dig a pit, light the fire, roast the livers and let the smoke rise like incense.\n\nYou prepare a feast like the ones prepared in Uruk for the great gods: for An, the sky; for Enlil, the wind that commands; for Enki, the wise one of the fresh waters; for Ninhursag, mother of the mountains. You pour out beer. You pour out wine. You keep what is left over, which is a great deal.\n\nWhen the sun rises, you are no longer a sick man in a cave. You are a man who knows how to feed the gods. And with that, they say, a man can go anywhere."
+      },
+      "fact": {
+        "es": "An, Enlil, Enki y Ninhursag eran los cuatro grandes dioses del panteón sumerio: el cielo, el aire, el agua dulce y la tierra. El poema los nombra juntos y en ese orden, como muchas listas de dioses, aunque el cuarto lugar a veces varía.",
+        "en": "An, Enlil, Enki and Ninhursag were the four great gods of the Sumerian pantheon: sky, air, fresh water and earth. The poem names them together and in that order, as many god lists do, though the fourth place sometimes varies."
+      },
+      "choices": [
+        {
+          "to": "c4_arbol",
+          "text": {
+            "es": "Seguir hacia el este",
+            "en": "Head east"
+          },
+          "description": {
+            "es": "El ejército fue por ahí. Y hay algo más por ahí.",
+            "en": "The army went that way. And something else lies that way."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3_comer",
+      "chapter": 3,
+      "mood": "dangerous",
+      "text": {
+        "es": "Asas una pierna de cabra y te la comes con las dos manos, de pie, mirando al toro atado. Hace días que no comes carne. Está buena. Está mejor que cualquier cosa que hayas probado en Uruk.\n\nDespués te sientas, satisfecho, y el sueño vuelve. Zangara te mira sin hablar. No hace falta: entiendes que el toro era para los dioses primero, y para ti después, y que lo has hecho al revés.\n\nAntes del alba degüellas al toro y ofreces lo que queda a An, a Enlil, a Enki y a Ninhursag, con cerveza y con vino. El humo sube igual. Pero te queda una duda, pequeña como una espina, de si subió a tiempo.",
+        "en": "You roast a goat's leg and eat it with both hands, standing, looking at the tethered bull. You have not eaten meat in days. It is good. It is better than anything you ever tasted in Uruk.\n\nThen you sit down, full, and the dream returns. Zangara looks at you without speaking. There is no need: you understand that the bull was for the gods first and for you after, and that you have done it the wrong way round.\n\nBefore dawn you slaughter the bull and offer what is left to An, Enlil, Enki and Ninhursag, with beer and with wine. The smoke rises just the same. But a doubt stays with you, small as a thorn: whether it rose in time."
+      },
+      "choices": [
+        {
+          "to": "c4_arbol",
+          "text": {
+            "es": "Seguir hacia el este",
+            "en": "Head east"
+          },
+          "description": {
+            "es": "Lo hecho, hecho está. El ejército fue por ahí.",
+            "en": "What is done is done. The army went that way."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3_volver",
+      "chapter": 3,
+      "mood": "peaceful",
+      "text": {
+        "es": "Miras hacia el este, donde se fue el ejército, y hacia el oeste, donde queda Uruk. El toro muge. Las cabras tiran de la cadena.\n\nDegüellas al toro para los dioses, como pide el sueño, y después tomas una decisión que ningún poema celebrará: te das la vuelta. Con las dos cabras, los odres llenos y la daga al cinto, bajas las montañas por el camino que subiste.\n\nTardas doce días. Cruzas el río en una balsa de pastores. Cuando ves los muros de Uruk brillando al sol, te sientas en el camino y lloras, por primera vez desde que te dejaron.",
+        "en": "You look east, where the army went, and west, where Uruk lies. The bull bellows. The goats strain at their chain.\n\nYou slaughter the bull for the gods, as the dream demands, and then you make a decision no poem will ever celebrate: you turn back. With the two goats, your skins full and the dagger at your belt, you go down the mountains by the road you came up.\n\nIt takes you twelve days. You cross the river on a herdsmen's raft. When you see the walls of Uruk shining in the sun, you sit down on the road and weep, for the first time since they left you."
+      },
+      "choices": [
+        {
+          "to": "fin_casa",
+          "text": {
+            "es": "Entrar en Uruk",
+            "en": "Enter Uruk"
+          },
+          "description": {
+            "es": "Vivo, flaco y sin gloria.",
+            "en": "Alive, thin and without glory."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_casa",
+      "chapter": 4,
+      "mood": "peaceful",
+      "text": {
+        "es": "En Uruk nadie te esperaba. Tu madre te abraza como a un fantasma. Enmerkar no está para recibirte: está en Aratta, y pasará un año entero bajo sus muros sin tomarlos.\n\nCuando el ejército vuelve, cansado y sin lapislázuli, tus hermanos te encuentran en el mercado vendiendo quesos de cabra. Se miran entre ellos. El mayor te pone una mano en el hombro y no dice nada. No hace falta.\n\nVives muchos años. Crías rebaños en la estepa junto al río, y la gente te llama «el pastor». Nadie te canta. Pero cada mañana, cuando sale el sol entre las montañas del este, levantas las manos y le das las gracias a Utu, que te vio cuando nadie más te veía.",
+        "en": "No one in Uruk was expecting you. Your mother holds you as if you were a ghost. Enmerkar is not there to receive you: he is at Aratta, and he will spend a whole year beneath its walls without taking them.\n\nWhen the army returns, weary and without lapis lazuli, your brothers find you in the market selling goat's cheese. They look at one another. The eldest puts a hand on your shoulder and says nothing. There is no need.\n\nYou live many years. You raise flocks on the steppe by the river, and people call you \"the shepherd.\" No one sings of you. But every morning, when the sun rises between the mountains of the east, you raise your hands and give thanks to Utu, who saw you when no one else did."
+      },
+      "fact": {
+        "es": "En «Enmerkar y el señor de Aratta», Uruk no vence a Aratta por las armas sino en una serie de desafíos de ingenio. Al final, aunque el texto está dañado, Aratta entrega a Uruk oro, plata y lapislázuli para el Eanna, el templo de Inanna.",
+        "en": "In \"Enmerkar and the Lord of Aratta,\" Uruk defeats Aratta not by force of arms but in a series of contests of wit. In the end, though the text is damaged, Aratta delivers gold, silver and lapis lazuli to Uruk for the Eanna, Inanna's temple."
+      },
+      "ending": {
+        "type": "alternative",
+        "title": {
+          "es": "El que volvió a Uruk",
+          "en": "The One Who Returned to Uruk"
+        }
+      },
+      "choices": []
+    },
+    {
+      "id": "c4_arbol",
+      "chapter": 4,
+      "mood": "mysterious",
+      "text": {
+        "es": "Sigues hacia el este, por los montes de Zabu, hasta la montaña de cornalina de Inanna, roja y multicolor. En su cima crece un árbol que no debería existir: el árbol águila de Enki, firme sobre la tierra como una torre, con una sombra que cubre la montaña entera.\n\nEn lo alto hay un nido hecho de enebro y de boj. Y en el nido, solo, hay un polluelo del tamaño de un cordero, con dientes de tiburón y garras de águila que todavía no sabe usar. Es la cría del pájaro Anzu.\n\nLos padres no están. Han salido a cazar, y cuando Anzu grita al amanecer, dicen, tiembla la tierra en los montes de Lulubi.\n\nEl polluelo te mira. Tiene hambre.",
+        "en": "You head east, through the Zabu mountains, to Inanna's mountain of carnelian, red and many-colored. On its summit grows a tree that should not exist: Enki's eagle tree, standing firm on the earth like a tower, its shade covering the whole mountain.\n\nHigh up is a nest made of juniper and boxwood. And in the nest, alone, is a chick the size of a lamb, with shark's teeth and eagle's talons it does not yet know how to use. It is the young of the Anzu bird.\n\nThe parents are away. They have gone hunting, and when Anzu cries out at dawn, they say, the earth trembles in the Lulubi mountains.\n\nThe chick looks at you. It is hungry."
+      },
+      "fact": {
+        "es": "A Anzu se lo representaba como un águila con cabeza de león. El relieve de cobre del templo de Ninhursag en Tell al-Ubaid, de hacia 2500 a. C. y hoy en el Museo Británico, lo muestra sujetando dos ciervos.",
+        "en": "Anzu was depicted as an eagle with a lion's head. The copper relief from the temple of Ninhursag at Tell al-Ubaid, from around 2500 BC and now in the British Museum, shows him gripping two stags."
+      },
+      "choices": [
+        {
+          "to": "c4_cuidar",
+          "risk": "low",
+          "text": {
+            "es": "Alimentar y adornar al polluelo",
+            "en": "Feed and adorn the chick"
+          },
+          "description": {
+            "es": "Si el padre vuelve y lo encuentra contento, quizás no te coma.",
+            "en": "If the father comes back and finds it content, perhaps he won't eat you."
+          }
+        },
+        {
+          "to": "c4_esperar",
+          "risk": "medium",
+          "text": {
+            "es": "Esconderte y esperar al pájaro",
+            "en": "Hide and wait for the bird"
+          },
+          "description": {
+            "es": "Mejor ver primero con quién estás tratando.",
+            "en": "Better to see first what you are dealing with."
+          }
+        },
+        {
+          "to": "c4_nido",
+          "risk": "high",
+          "text": {
+            "es": "Tomar al polluelo como rehén",
+            "en": "Take the chick hostage"
+          },
+          "description": {
+            "es": "Quien tiene a la cría tiene al padre.",
+            "en": "Whoever holds the young holds the father."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c4_cuidar",
+      "chapter": 4,
+      "mood": "sacred",
+      "text": {
+        "es": "Subes al nido. El polluelo abre el pico y tú le das lo que tienes: tortas dulces amasadas con jarabe de dátil, grasa de cordero, carne con sal. Come como si no hubiera comido nunca.\n\nDespués haces algo que ni tú entiendes del todo. Le pintas los ojos con kohl, como se pintan los ojos de las estatuas de los dioses. Le pones en la cabeza aroma de cedro blanco. Dejas carne salada en el borde del nido, para los padres.\n\nEl polluelo se duerme, satisfecho, con los ojos pintados y el pico lleno. Tú bajas del árbol y te escondes entre las raíces. Al amanecer, el cielo se oscurece: viene Anzu.",
+        "en": "You climb to the nest. The chick opens its beak and you give it what you have: sweet cakes kneaded with date syrup, lamb fat, salted meat. It eats as if it had never eaten before.\n\nThen you do something even you do not fully understand. You paint its eyes with kohl, the way the eyes of the gods' statues are painted. You anoint its head with the scent of white cedar. You leave salted meat on the edge of the nest, for the parents.\n\nThe chick falls asleep, content, its eyes painted and its beak full. You climb down from the tree and hide among the roots. At dawn, the sky darkens: Anzu is coming."
+      },
+      "fact": {
+        "es": "El kohl, un polvo negro de antimonio o de galena, se usaba en Mesopotamia para pintar los ojos de personas y de estatuas de dioses. El cedro venía del Líbano y de los montes Amanus, muy lejos de Sumer.",
+        "en": "Kohl, a black powder of antimony or galena, was used in Mesopotamia to paint the eyes of people and of statues of gods. Cedar came from Lebanon and the Amanus mountains, far from Sumer."
+      },
+      "choices": [
+        {
+          "to": "c5_grito",
+          "text": {
+            "es": "Esperar al pájaro",
+            "en": "Wait for the bird"
+          },
+          "description": {
+            "es": "Lo que has hecho, está hecho. Ahora se verá si bastó.",
+            "en": "What you have done is done. Now you will see whether it was enough."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c4_esperar",
+      "chapter": 4,
+      "mood": "dangerous",
+      "text": {
+        "es": "Te escondes entre las raíces del árbol y esperas. El polluelo pía todo el día. Pía de hambre, de frío, de soledad. Al mediodía te tapas los oídos. A la tarde ya no puedes más.\n\nSubes y le das de comer, de apuro, lo que tienes: tortas con jarabe de dátil, grasa de cordero, carne con sal. Le limpias las plumas. Le pintas los ojos con kohl, como a las estatuas, y le pones en la cabeza aroma de cedro, porque no sabes qué otra cosa hacer para que un dios te perdone.\n\nEl polluelo se calla y se duerme. Tú bajas y te vuelves a esconder, con el corazón en la garganta. Al amanecer, el cielo se oscurece: viene Anzu.",
+        "en": "You hide among the roots of the tree and wait. The chick cheeps all day long. It cheeps from hunger, from cold, from loneliness. At midday you cover your ears. By afternoon you cannot bear it any longer.\n\nYou climb up and, in haste, feed it what you have: cakes with date syrup, lamb fat, salted meat. You clean its feathers. You paint its eyes with kohl, as on the statues, and anoint its head with the scent of cedar, because you do not know what else to do to make a god forgive you.\n\nThe chick falls silent and goes to sleep. You climb down and hide again, your heart in your throat. At dawn, the sky darkens: Anzu is coming."
+      },
+      "choices": [
+        {
+          "to": "c5_grito",
+          "text": {
+            "es": "Esperar al pájaro",
+            "en": "Wait for the bird"
+          },
+          "description": {
+            "es": "Lo hiciste tarde, pero lo hiciste.",
+            "en": "You did it late, but you did it."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c4_nido",
+      "chapter": 4,
+      "mood": "dangerous",
+      "text": {
+        "es": "Subes al nido y agarras al polluelo por el cuello. Pesa como un cordero y chilla como una ciudad en llamas. Las garras te rasgan el brazo; los dientes de tiburón te buscan la mano.\n\nLo aprietas contra el pecho y miras al cielo. Cuando el padre vuelva, tendrá que escucharte: un hombre con la cría de un dios en los brazos puede pedir lo que quiera.\n\nEso piensas. Pero el polluelo deja de chillar y te mira con los ojos redondos y dorados de una criatura que todavía no sabe qué es el miedo, y la soga de tus brazos se afloja sola.",
+        "en": "You climb to the nest and seize the chick by the neck. It weighs as much as a lamb and shrieks like a city in flames. Its talons tear at your arm; its shark's teeth go for your hand.\n\nYou press it to your chest and look up at the sky. When the father returns, he will have to listen to you: a man holding a god's young in his arms can ask for whatever he wants.\n\nSo you think. But the chick stops shrieking and looks at you with the round golden eyes of a creature that does not yet know what fear is, and your grip loosens on its own."
+      },
+      "choices": [
+        {
+          "to": "c4_soltar",
+          "risk": "low",
+          "text": {
+            "es": "Soltarlo y darle de comer",
+            "en": "Let it go and feed it"
+          },
+          "description": {
+            "es": "No eres de los que amenazan a un polluelo.",
+            "en": "You are not one to threaten a chick."
+          }
+        },
+        {
+          "to": "fin_nido",
+          "risk": "high",
+          "text": {
+            "es": "Sujetarlo y esperar al padre",
+            "en": "Hold on and wait for the father"
+          },
+          "description": {
+            "es": "Ya empezaste. Ahora termina.",
+            "en": "You have started. Now finish it."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c4_soltar",
+      "chapter": 4,
+      "mood": "sacred",
+      "text": {
+        "es": "Lo sueltas en el nido. El polluelo se sacude, te mira, y abre el pico. Tiene hambre.\n\nLe das lo que tienes: tortas dulces con jarabe de dátil, grasa de cordero, carne con sal. Le curas con saliva el rasguño que le hiciste sin querer. Le pintas los ojos con kohl, como a las estatuas de los dioses, y le pones en la cabeza aroma de cedro blanco. Es tu manera de pedir perdón.\n\nEl polluelo se duerme con el pico lleno. Tú bajas del árbol con el brazo sangrando y te escondes entre las raíces. Al amanecer, el cielo se oscurece: viene Anzu.",
+        "en": "You set it down in the nest. The chick shakes itself, looks at you, and opens its beak. It is hungry.\n\nYou give it what you have: sweet cakes with date syrup, lamb fat, salted meat. With your spit you tend the scratch you gave it without meaning to. You paint its eyes with kohl, like the statues of the gods, and anoint its head with the scent of white cedar. It is your way of asking forgiveness.\n\nThe chick falls asleep with its beak full. You climb down from the tree, your arm bleeding, and hide among the roots. At dawn, the sky darkens: Anzu is coming."
+      },
+      "choices": [
+        {
+          "to": "c5_grito",
+          "text": {
+            "es": "Esperar al pájaro",
+            "en": "Wait for the bird"
+          },
+          "description": {
+            "es": "Lo que has hecho, está hecho. Ahora se verá si bastó.",
+            "en": "What you have done is done. Now you will see whether it was enough."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_nido",
+      "chapter": 4,
+      "mood": "tragic",
+      "text": {
+        "es": "Anzu vuelve al amanecer, con su esposa, y encuentra el nido vacío y a un hombre con su cría en los brazos.\n\nNo hay trato. Hay un grito de dolor que sube hasta el cielo, y el «¡ay!» de su esposa, que baja hasta el Abzu, el agua bajo la tierra. La tierra tiembla en los montes de Lulubi. El árbol águila se sacude como una caña.\n\nSueltas al polluelo. Es tarde. Lo último que ves son los dientes de tiburón y las garras de águila de un dios que decide el destino de los ríos, y que acaba de decidir el tuyo.\n\nTus hermanos no encuentran nada en la cueva. En los montes de Zabu, durante muchos años, los pastores cuentan que hay un árbol donde el viento grita con voz de hombre.",
+        "en": "Anzu returns at dawn, with his wife, and finds the nest empty and a man holding his young in his arms.\n\nThere is no bargain. There is a cry of grief that rises to heaven, and the \"Woe!\" of his wife, which sinks down to the Abzu, the water beneath the earth. The earth trembles in the Lulubi mountains. The eagle tree shakes like a reed.\n\nYou let go of the chick. It is too late. The last things you see are the shark's teeth and eagle's talons of a god who decides the destiny of rivers, and who has just decided yours.\n\nYour brothers find nothing in the cave. In the Zabu mountains, for many years, the shepherds tell of a tree where the wind cries out with a man's voice."
+      },
+      "fact": {
+        "es": "Los lulubi eran un pueblo real de los montes Zagros. La Estela de la Victoria de Naram-Sin (hacia 2250 a. C., hoy en el Louvre) celebra el triunfo del rey de Akkad sobre ellos.",
+        "en": "The Lulubi were a real people of the Zagros mountains. The Victory Stele of Naram-Sin (around 2250 BC, now in the Louvre) celebrates the triumph of the king of Akkad over them."
+      },
+      "ending": {
+        "type": "tragic",
+        "title": {
+          "es": "El grito que sube al cielo",
+          "en": "The Cry That Rises to Heaven"
+        }
+      },
+      "choices": []
+    },
+    {
+      "id": "c5_grito",
+      "chapter": 5,
+      "mood": "epic",
+      "text": {
+        "es": "Anzu llega con su esposa y una presa en las garras. Llama al nido. El polluelo, dormido y harto, no contesta.\n\nEl grito de dolor del pájaro sube hasta el cielo. El «¡ay!» de su esposa baja hasta el Abzu. La tierra tiembla. Y entonces Anzu mira dentro del nido y ve a su cría con los ojos pintados de kohl, oliendo a cedro, con carne salada a los pies, y el grito se le vuelve risa.\n\n—¿Quién hizo esto? —ruge—. Soy el príncipe que decide el destino de los ríos. Mi padre Enlil me puso aquí, para cerrar las montañas como una gran puerta. Quien cuidó a mi hijo tendrá lo que pida.\n\nSales de entre las raíces.",
+        "en": "Anzu arrives with his wife and prey in his talons. He calls to the nest. The chick, asleep and full, does not answer.\n\nThe bird's cry of grief rises to heaven. His wife's \"Woe!\" sinks down to the Abzu. The earth trembles. And then Anzu looks into the nest and sees his young with its eyes painted with kohl, smelling of cedar, with salted meat at its feet, and his cry turns to laughter.\n\n\"Who did this?\" he roars. \"I am the prince who decides the destiny of rivers. My father Enlil set me here, to bar the mountains like a great door. Whoever cared for my son shall have whatever he asks.\"\n\nYou step out from among the roots."
+      },
+      "fact": {
+        "es": "Anzu es el mismo pájaro que, en un poema babilónico posterior, le roba a Enlil la Tablilla de los Destinos y pone el mundo en peligro hasta que lo vence el dios Ninurta.",
+        "en": "Anzu is the same bird who, in a later Babylonian poem, steals the Tablet of Destinies from Enlil and puts the world in danger until the god Ninurta defeats him."
+      },
+      "choices": [
+        {
+          "to": "c5_rechazar",
+          "risk": "low",
+          "text": {
+            "es": "Saludarlo y no pedir nada todavía",
+            "en": "Greet him and ask for nothing yet"
+          },
+          "description": {
+            "es": "Un hombre que pide rápido, pide mal.",
+            "en": "A man who asks in haste asks badly."
+          }
+        },
+        {
+          "to": "fin_riqueza",
+          "risk": "medium",
+          "text": {
+            "es": "Pedir la riqueza que te ofrece",
+            "en": "Ask for the riches he offers"
+          },
+          "description": {
+            "es": "Una barca llena de plata y oro: nunca más serás el octavo.",
+            "en": "A boat full of silver and gold: you will never be the eighth again."
+          }
+        },
+        {
+          "to": "c5_armas",
+          "risk": "medium",
+          "text": {
+            "es": "Pedir las armas de los dioses",
+            "en": "Ask for the weapons of the gods"
+          },
+          "description": {
+            "es": "Con armas de dios, Aratta cae en un día.",
+            "en": "With a god's weapons, Aratta falls in a day."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5_rechazar",
+      "chapter": 5,
+      "mood": "mysterious",
+      "text": {
+        "es": "—Mi señor —dices, con la cabeza inclinada—, soy Lugalbanda, de Uruk. Cuidé a tu hijo porque tenía hambre. No pido nada.\n\nAnzu se ríe de nuevo. Un hombre que no pide es un hombre al que hay que tentar.\n\n—Te daré prosperidad como una barca llena de metales preciosos. —Callas—. Te daré el arco de Shara: tus flechas no fallarán. —Callas—. Te daré el casco y el pectoral de Ninurta: ninguna lanza te tocará. —Callas—. Te daré la mantequera sagrada de Dumuzi, y tus rebaños no tendrán fin.\n\nCada vez bajas más la cabeza. Nada de eso te lleva a Aratta. Nada de eso te devuelve a tus hermanos.",
+        "en": "\"My lord,\" you say, your head bowed, \"I am Lugalbanda, of Uruk. I cared for your son because he was hungry. I ask for nothing.\"\n\nAnzu laughs again. A man who asks for nothing is a man who must be tempted.\n\n\"I will give you prosperity like a boat full of precious metals.\" You stay silent. \"I will give you the bow of Shara: your arrows will never miss.\" You stay silent. \"I will give you the helmet and breastplate of Ninurta: no spear will touch you.\" You stay silent. \"I will give you the holy churn of Dumuzi, and your flocks will have no end.\"\n\nEach time you bow your head lower. None of it takes you to Aratta. None of it gives you back your brothers."
+      },
+      "fact": {
+        "es": "Shara era el dios de la ciudad de Umma, y en los poemas se lo llama hijo de Inanna. Ninurta, hijo de Enlil, era el dios de la guerra y también de la agricultura. Dumuzi, el esposo de Inanna, era el dios pastor.",
+        "en": "Shara was the god of the city of Umma, and in the poems he is called the son of Inanna. Ninurta, son of Enlil, was the god of war and also of farming. Dumuzi, Inanna's husband, was the shepherd god."
+      },
+      "choices": [
+        {
+          "to": "c5_carrera",
+          "text": {
+            "es": "Pedir lo que de verdad necesitas",
+            "en": "Ask for what you truly need"
+          },
+          "description": {
+            "es": "Hay una sola cosa que un octavo oficial no tiene.",
+            "en": "There is one thing an eighth officer does not have."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5_armas",
+      "chapter": 5,
+      "mood": "dangerous",
+      "text": {
+        "es": "—Dame el casco y el pectoral de Ninurta —dices—. Dame el arco de Shara. Con eso tomo Aratta yo solo.\n\nAnzu te mira largo rato, y después hace algo peor que negarse: se ríe.\n\n—Con el casco de Ninurta seguirás siendo el octavo, muchacho. Llegarás a Aratta tres meses tarde, y tus hermanos te preguntarán dónde estuviste. Las armas no sirven a quien no llega.\n\nTiene razón, y lo sabes. Lo que te falta no es con qué pelear. Es cómo llegar. Miras las montañas que te separan del ejército, y entiendes qué tienes que pedir.",
+        "en": "\"Give me the helmet and breastplate of Ninurta,\" you say. \"Give me the bow of Shara. With those I will take Aratta by myself.\"\n\nAnzu looks at you for a long while, and then does something worse than refusing: he laughs.\n\n\"With Ninurta's helmet you will still be the eighth, boy. You will reach Aratta three months late, and your brothers will ask you where you have been. Weapons are no use to one who never arrives.\"\n\nHe is right, and you know it. What you lack is not something to fight with. It is a way to get there. You look at the mountains that lie between you and the army, and you understand what you must ask for."
+      },
+      "choices": [
+        {
+          "to": "c5_carrera",
+          "text": {
+            "es": "Pedir lo que de verdad necesitas",
+            "en": "Ask for what you truly need"
+          },
+          "description": {
+            "es": "Hay una sola cosa que un octavo oficial no tiene.",
+            "en": "There is one thing an eighth officer does not have."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_riqueza",
+      "chapter": 5,
+      "mood": "peaceful",
+      "text": {
+        "es": "—Dame la riqueza —dices—. Una barca llena de metales preciosos.\n\nAnzu asiente, sin alegría y sin reproche. Al pie de la montaña, en un río que no conocías, hay una barca cargada de plata, de oro y de estaño hasta la borda. Es tuya. Bajas por el río durante veinte días, sin remar, y llegas a Uruk como no llegó nunca un hijo de Kulaba.\n\nCompras campos. Compras rebaños. Compras hombres. Cuando el ejército vuelve de Aratta, un año después y sin lapislázuli, tus hermanos te encuentran en una casa con dos patios y te saludan con respeto y con algo más frío. Nunca les cuentas de dónde salió la plata.\n\nVives mucho. Mueres rico. Nadie compone un canto sobre ti, porque sobre los ricos no se canta: se cuenta.",
+        "en": "\"Give me the riches,\" you say. \"A boat full of precious metals.\"\n\nAnzu nods, without joy and without reproach. At the foot of the mountain, on a river you did not know, there is a boat loaded to the gunwales with silver, gold and tin. It is yours. You drift downriver for twenty days without rowing, and you arrive in Uruk as no son of Kulaba ever arrived before.\n\nYou buy fields. You buy flocks. You buy men. When the army returns from Aratta, a year later and without lapis lazuli, your brothers find you in a house with two courtyards, and they greet you with respect and with something colder. You never tell them where the silver came from.\n\nYou live long. You die rich. No one composes a song about you, because the rich are not sung of: they are talked about."
+      },
+      "fact": {
+        "es": "En Mesopotamia no había metales: todo el cobre, el estaño, la plata y el oro llegaban de afuera, de Irán, de Anatolia o de Magan, el actual Omán, a cambio de grano, lana y telas.",
+        "en": "Mesopotamia had no metals of its own: all the copper, tin, silver and gold came from outside, from Iran, Anatolia or Magan, present-day Oman, in exchange for grain, wool and textiles."
+      },
+      "ending": {
+        "type": "alternative",
+        "title": {
+          "es": "La barca llena de metal",
+          "en": "The Boat Full of Metal"
+        }
+      },
+      "choices": []
+    },
+    {
+      "id": "c5_carrera",
+      "chapter": 5,
+      "mood": "triumphant",
+      "text": {
+        "es": "—Que el poder de correr esté en mis muslos —dices—. Que no me canse nunca. Que salte como una llama, que brille como un relámpago. Como la luz del sol, como Inanna, como las siete tormentas. Que pueda ir a donde miro.\n\nAnzu te observa con los ojos de un dios que ha visto pedir muchas cosas, y nunca esa.\n\n—Así sea. Correrás como la luz y no te cansarás. Y cuando corras, yo iré a tu lado. —Baja la cabeza enorme hasta tu altura—. Pero no se lo digas a tus compañeros. No se lo expliques a tus hermanos. La buena fortuna puede esconder la mala.\n\nLevanta vuelo con su esposa y su cría. Te quedas solo en la cima, y las piernas te queman como si hubieras tragado el sol.",
+        "en": "\"Let the power of running be in my thighs,\" you say. \"Let me never tire. Let me leap like a flame, flash like lightning. Like the light of the sun, like Inanna, like the seven storms. Let me go wherever I look.\"\n\nAnzu studies you with the eyes of a god who has been asked for many things, and never for that.\n\n\"So be it. You will run like light and never tire. And when you run, I will be at your side.\" He lowers his enormous head until it is level with yours. \"But do not tell your companions. Do not explain it to your brothers. Good fortune may hide bad.\"\n\nHe takes flight with his wife and his young. You are left alone on the summit, your legs burning as if you had swallowed the sun."
+      },
+      "fact": {
+        "es": "Shulgi, rey de Ur hacia 2090 a. C., se jactaba en un himno de haber corrido de Nippur a Ur, unos 150 kilómetros, y de vuelta a Nippur el mismo día, en medio de una tormenta.",
+        "en": "Shulgi, king of Ur around 2090 BC, boasted in a hymn that he had run from Nippur to Ur, some 150 kilometers, and back to Nippur on the same day, through a storm."
+      },
+      "choices": [
+        {
+          "to": "c6_hermanos",
+          "text": {
+            "es": "Correr hacia el este",
+            "en": "Run east"
+          },
+          "description": {
+            "es": "El ejército está a días de camino. Ya no.",
+            "en": "The army was days away. Not anymore."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6_hermanos",
+      "chapter": 6,
+      "mood": "epic",
+      "text": {
+        "es": "Corres. Las montañas pasan como pasan los juncos junto a una barca. Cruzas los ríos de la montaña de un paso, y bebes de ellos como de un odre. Antes de que se ponga el sol, ves los fuegos del ejército de Uruk, acampado al pie de los muros de Aratta.\n\nTus hermanos te daban por muerto. Te tocan la cara, los brazos, como si fueras un espectro. Te dan de comer y de beber. Y después preguntan:\n\n—¿Cómo volviste de las grandes montañas, adonde nadie va solo, de donde nadie regresa?\n\nSiete pares de ojos te miran. Anzu te dijo que callaras. Pero son tus hermanos, y te dejaron en una cueva, y ahora quieren saber.",
+        "en": "You run. The mountains slip past the way reeds slip past a boat. You cross the mountain rivers in a single stride and drink from them as from a waterskin. Before the sun sets, you see the fires of the army of Uruk, camped at the foot of the walls of Aratta.\n\nYour brothers had given you up for dead. They touch your face, your arms, as if you were a ghost. They give you food and drink. And then they ask:\n\n\"How did you come back from the great mountains, where no one goes alone, from where no one returns?\"\n\nSeven pairs of eyes are on you. Anzu told you to keep silent. But they are your brothers, and they left you in a cave, and now they want to know."
+      },
+      "fact": {
+        "es": "Los reyes de la Tercera Dinastía de Ur, como Shulgi, se decían hijos de Lugalbanda y de Ninsun, y por lo tanto hermanos de Gilgamesh. Lugalbanda recibía ofrendas como un dios en Uruk y en Ur.",
+        "en": "The kings of the Third Dynasty of Ur, such as Shulgi, called themselves sons of Lugalbanda and Ninsun, and therefore brothers of Gilgamesh. Lugalbanda received offerings as a god in Uruk and in Ur."
+      },
+      "choices": [
+        {
+          "to": "c6_callar",
+          "risk": "low",
+          "text": {
+            "es": "«Con mis piernas las crucé»",
+            "en": "\"I crossed them on my own legs\""
+          },
+          "description": {
+            "es": "La verdad, aunque no toda.",
+            "en": "The truth, though not the whole of it."
+          }
+        },
+        {
+          "to": "c6_insinuar",
+          "risk": "medium",
+          "text": {
+            "es": "Decir que un dios te ayudó, sin nombrarlo",
+            "en": "Say a god helped you, without naming him"
+          },
+          "description": {
+            "es": "Que sepan que no fuiste tú solo.",
+            "en": "Let them know you did not do it alone."
+          }
+        },
+        {
+          "to": "c6_contar",
+          "risk": "high",
+          "text": {
+            "es": "Contarles de Anzu y del don",
+            "en": "Tell them about Anzu and the gift"
+          },
+          "description": {
+            "es": "Son tus hermanos. ¿A quién más vas a contárselo?",
+            "en": "They are your brothers. Who else would you tell?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6_callar",
+      "chapter": 6,
+      "mood": "peaceful",
+      "text": {
+        "es": "—Con mis piernas las crucé —dices—. Con mis piernas pasé por encima de los ríos, y los bebí como se bebe de un odre.\n\nEs verdad, palabra por palabra. Es también una mentira, y tus hermanos lo saben. Pero eres el que volvió, y al que volvió no se le discute.\n\nEl mayor te mira un rato largo. Después te alcanza un pedazo de pan y dice:\n\n—Come, muchacho. Las montañas no perdonan a los flacos.\n\nEsa noche duermes junto al fuego, entre los siete, con las piernas todavía calientes. Nadie vuelve a preguntar. Y el secreto, guardado, se queda contigo como un animal manso.",
+        "en": "\"I crossed them on my own legs,\" you say. \"On my own legs I stepped over the rivers, and drank them as one drinks from a waterskin.\"\n\nIt is true, word for word. It is also a lie, and your brothers know it. But you are the one who came back, and no one argues with the one who came back.\n\nThe eldest looks at you for a long while. Then he hands you a piece of bread and says:\n\n\"Eat, boy. The mountains show no mercy to the thin.\"\n\nThat night you sleep by the fire, among the seven, your legs still warm. No one asks again. And the secret, kept, stays with you like a tame animal."
+      },
+      "choices": [
+        {
+          "to": "c7_sitio",
+          "text": {
+            "es": "Despertar bajo los muros de Aratta",
+            "en": "Wake beneath the walls of Aratta"
+          },
+          "description": {
+            "es": "El sitio lleva ya mucho tiempo. Y no va bien.",
+            "en": "The siege has gone on a long time. And it is not going well."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6_insinuar",
+      "chapter": 6,
+      "mood": "mysterious",
+      "text": {
+        "es": "—Un dios me ayudó —dices—. No preguntes cuál. No puedo decirlo.\n\nEra lo más honesto que podías decir sin romper tu palabra. Pero las palabras a medias crecen solas. Esa noche oyes a dos de tus hermanos cuchichear junto al fuego: que si hiciste un trato en la montaña, que si los dioses de allá no son los de Uruk, que si los que vuelven de donde nadie vuelve, vuelven cambiados.\n\nAl día siguiente te dan el pan de lejos. Te hablan con respeto, que es la forma más educada del miedo.\n\nEl secreto está a salvo. Tú, un poco menos.",
+        "en": "\"A god helped me,\" you say. \"Don't ask which one. I cannot say.\"\n\nIt was the most honest thing you could say without breaking your word. But half-spoken words grow on their own. That night you hear two of your brothers whispering by the fire: that you struck a bargain on the mountain, that the gods up there are not the gods of Uruk, that those who come back from where no one comes back come back changed.\n\nThe next day they hand you your bread at arm's length. They speak to you with respect, which is the most courteous form of fear.\n\nThe secret is safe. You, a little less so."
+      },
+      "choices": [
+        {
+          "to": "c7_sitio",
+          "text": {
+            "es": "Despertar bajo los muros de Aratta",
+            "en": "Wake beneath the walls of Aratta"
+          },
+          "description": {
+            "es": "El sitio lleva ya mucho tiempo. Y no va bien.",
+            "en": "The siege has gone on a long time. And it is not going well."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6_contar",
+      "chapter": 6,
+      "mood": "dangerous",
+      "text": {
+        "es": "Se lo cuentas todo. La cueva, los dioses, el toro, el árbol águila, el polluelo con los ojos pintados, Anzu riendo en la cima. Y el don: correr como la luz, no cansarse nunca.\n\nTus hermanos escuchan en silencio. Cuando terminas, el mayor escupe en el fuego.\n\n—Un pájaro de la montaña —dice—. Y tú le creíste.\n\nLos otros se ríen. No con maldad; con la risa de quien prefiere no creer. Pero esa noche, cuando te acuestas, las piernas no te queman. Están tibias, nada más, como las de cualquiera. Y recuerdas, tarde, lo que te dijo el pájaro: la buena fortuna puede esconder la mala.",
+        "en": "You tell them everything. The cave, the gods, the bull, the eagle tree, the chick with painted eyes, Anzu laughing on the summit. And the gift: to run like light, never to tire.\n\nYour brothers listen in silence. When you finish, the eldest spits into the fire.\n\n\"A mountain bird,\" he says. \"And you believed it.\"\n\nThe others laugh. Not cruelly; with the laughter of men who would rather not believe. But that night, when you lie down, your legs do not burn. They are warm, nothing more, like anyone's. And you remember, too late, what the bird told you: good fortune may hide bad."
+      },
+      "choices": [
+        {
+          "to": "c6_arrepentir",
+          "risk": "low",
+          "text": {
+            "es": "Pedir perdón a Anzu en silencio",
+            "en": "Silently ask Anzu for forgiveness"
+          },
+          "description": {
+            "es": "Quizás todavía haya tiempo de callar.",
+            "en": "Perhaps there is still time to keep quiet."
+          }
+        },
+        {
+          "to": "fin_secreto",
+          "risk": "high",
+          "text": {
+            "es": "Demostrarles que es cierto",
+            "en": "Prove to them it is true"
+          },
+          "description": {
+            "es": "Que se rían. Mañana los harás tragarse la risa.",
+            "en": "Let them laugh. Tomorrow you will make them swallow their laughter."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6_arrepentir",
+      "chapter": 6,
+      "mood": "sacred",
+      "text": {
+        "es": "Te alejas del fuego y subes a una roca, de cara a las montañas del este. No hay nadie que te oiga, y eso está bien.\n\n—Anzu, hablé cuando no debía. No me quites lo que me diste. Si tiene que ser, quítame el don, pero no me quites a mis hermanos.\n\nNo contesta nadie. Solo el viento. Vuelves al campamento, te acuestas, y no sabes si las piernas te queman o si te lo imaginas.\n\nA la mañana, tus hermanos no hablan del asunto. Lo que contaste se convierte en una historia de borracho, de esas que se cuentan y se olvidan. Tú no la olvidas.",
+        "en": "You walk away from the fire and climb onto a rock, facing the mountains of the east. There is no one to hear you, and that is just as well.\n\n\"Anzu, I spoke when I should not have. Do not take back what you gave me. If it must be, take the gift, but do not take my brothers from me.\"\n\nNo one answers. Only the wind. You go back to the camp, lie down, and cannot tell whether your legs are burning or you are imagining it.\n\nIn the morning, your brothers say nothing of it. What you told them becomes a drunkard's tale, the kind that is told and forgotten. You do not forget it."
+      },
+      "choices": [
+        {
+          "to": "c7_sitio",
+          "text": {
+            "es": "Despertar bajo los muros de Aratta",
+            "en": "Wake beneath the walls of Aratta"
+          },
+          "description": {
+            "es": "El sitio lleva ya mucho tiempo. Y no va bien.",
+            "en": "The siege has gone on a long time. And it is not going well."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_secreto",
+      "chapter": 6,
+      "mood": "tragic",
+      "text": {
+        "es": "—Mañana —les dices— van a verme cruzar el río de la montaña de un solo salto.\n\nY al amanecer vas al río, que baja ancho y rápido entre dos paredes de piedra, con tus siete hermanos mirando desde la orilla. Tomas carrera. Saltas.\n\nEn el aire, las piernas no responden. No queman; no son nada. Caes en el agua como cae cualquier hombre, y el río te lleva.\n\nTus hermanos corren por la orilla gritando tu nombre, hasta que la garganta se cierra y ya no pueden seguir. Vuelven al campamento sin ti. El mayor no habla en tres días.\n\nLa buena fortuna puede esconder la mala. Anzu lo dijo claro. Y tú lo contaste, y al contarlo lo perdiste, y al perderlo te perdiste tú.",
+        "en": "\"Tomorrow,\" you tell them, \"you will see me cross the mountain river in a single leap.\"\n\nAnd at dawn you go to the river, which runs wide and fast between two walls of rock, with your seven brothers watching from the bank. You take a running start. You leap.\n\nIn mid-air, your legs do not answer. They do not burn; they are nothing. You fall into the water as any man falls, and the river carries you away.\n\nYour brothers run along the bank shouting your name, until their voices give out and they can go no farther. They return to camp without you. The eldest does not speak for three days.\n\nGood fortune may hide bad. Anzu said it plainly. And you told, and in the telling you lost it, and in losing it you lost yourself."
+      },
+      "fact": {
+        "es": "Los sumerios reunían proverbios en colecciones que los escribas copiaban para aprender. Son las colecciones de refranes más antiguas que se conocen: casi todas las copias son de hacia 1800 a. C., pero algunos proverbios ya aparecen en tablillas de hacia 2500 a. C.",
+        "en": "The Sumerians gathered proverbs into collections that scribes copied as they learned. They are the oldest known collections of sayings: nearly all the copies date from around 1800 BC, but some proverbs already appear on tablets from around 2500 BC."
+      },
+      "ending": {
+        "type": "tragic",
+        "title": {
+          "es": "La buena fortuna esconde la mala",
+          "en": "Good Fortune Hides Bad"
+        }
+      },
+      "choices": []
+    },
+    {
+      "id": "c7_sitio",
+      "chapter": 7,
+      "mood": "dangerous",
+      "text": {
+        "es": "Un año. Un año entero llevan Uruk y Kulaba bajo los muros de Aratta. Las jabalinas caen como lluvia de las nubes y las piedras de honda son tantas como las gotas de un año de lluvia, y los muros siguen ahí, con sus almenas de lapislázuli verde.\n\nEnmerkar llama a sus oficiales a la tienda. Está más viejo que cuando salió de Uruk.\n\n—Mi hermana Inanna ya no me mira —dice—. Antes le gustaba; ahora se me ha escapado. Alguien tiene que ir a Uruk y decírselo: que me lleve de vuelta a Kulaba, la de los ladrillos, y ese día dejaré la lanza.\n\nMira a los ocho. Nadie se mueve. Ir a Uruk es cruzar otra vez las grandes montañas, solo, de donde nadie vuelve.",
+        "en": "A year. For a whole year Uruk and Kulaba have lain beneath the walls of Aratta. Javelins fall like rain from the clouds and the sling stones are as many as the raindrops of a whole year, and still the walls stand, with their battlements of green lapis lazuli.\n\nEnmerkar summons his officers to his tent. He is older than when he left Uruk.\n\n\"My sister Inanna no longer looks upon me,\" he says. \"Once she delighted in me; now she has slipped away from me. Someone must go to Uruk and tell her: let her bring me back to Kulaba of the brickwork, and on that day I will lay down my spear.\"\n\nHe looks at the eight of you. No one moves. To go to Uruk is to cross the great mountains again, alone, from where no one returns."
+      },
+      "fact": {
+        "es": "El ciclo de Enmerkar y Aratta son cuatro poemas sumerios: «Enmerkar y el señor de Aratta», «Enmerkar y En-suhgir-ana», «Lugalbanda en la cueva de la montaña» y «Lugalbanda y el pájaro Anzu».",
+        "en": "The Enmerkar and Aratta cycle consists of four Sumerian poems: \"Enmerkar and the Lord of Aratta,\" \"Enmerkar and En-suhgir-ana,\" \"Lugalbanda in the Mountain Cave\" and \"Lugalbanda and the Anzu Bird.\""
+      },
+      "choices": [
+        {
+          "to": "c7_solo",
+          "risk": "medium",
+          "text": {
+            "es": "Ofrecerte a ir solo",
+            "en": "Volunteer to go alone"
+          },
+          "description": {
+            "es": "Es lo que Anzu te dio. Es para esto.",
+            "en": "This is what Anzu gave you. This is what it is for."
+          }
+        },
+        {
+          "to": "c7_escolta",
+          "risk": "low",
+          "text": {
+            "es": "Ofrecerte a ir con una escolta",
+            "en": "Volunteer to go with an escort"
+          },
+          "description": {
+            "es": "Dos hermanos contigo, por si las montañas no te quieren.",
+            "en": "Two brothers with you, in case the mountains will not have you."
+          }
+        },
+        {
+          "to": "c7_retirada",
+          "risk": "medium",
+          "text": {
+            "es": "Pedirle al rey que levante el sitio",
+            "en": "Ask the king to lift the siege"
+          },
+          "description": {
+            "es": "Un año es suficiente. Que vuelva el ejército entero, no un mensajero.",
+            "en": "A year is enough. Let the whole army go home, not a messenger."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7_solo",
+      "chapter": 7,
+      "mood": "epic",
+      "text": {
+        "es": "—Iré a la ciudad —dices—, pero nadie vendrá conmigo. Iré solo a Kulaba.\n\nTus hermanos se te vienen encima como una tormenta.\n\n—¿Solo? Si nuestro buen espíritu no te acompaña allá, no volverás de las grandes montañas, adonde nadie va solo, de donde nadie regresa.\n\n—Ya volví una vez.\n\nNo tienen respuesta para eso. Enmerkar te mira desde la silla, y en su cara ves que te está viendo por primera vez: no al octavo, sino al que se levanta cuando los otros siete se quedan sentados. Te dicta el mensaje palabra por palabra. Lo repites dos veces sin fallar. Al anochecer, sales de la tienda y empiezas a correr.",
+        "en": "\"I will go to the city,\" you say, \"but no one will come with me. I will go to Kulaba alone.\"\n\nYour brothers descend on you like a storm.\n\n\"Alone? If our good spirit does not go with you there, you will not come back from the great mountains, where no one goes alone, from where no one returns.\"\n\n\"I came back once already.\"\n\nThey have no answer to that. Enmerkar looks at you from his seat, and in his face you see that he is seeing you for the first time: not the eighth, but the one who stands up when the other seven stay seated. He dictates the message to you word for word. You repeat it twice without a slip. At nightfall, you leave the tent and begin to run."
+      },
+      "fact": {
+        "es": "Uruk se llamaba Unug en sumerio y Erech en la Biblia. Hoy es Warka, en el sur de Irak. Kulaba era su barrio más antiguo, el de los templos, antes de que la ciudad creciera alrededor.",
+        "en": "Uruk was called Unug in Sumerian and Erech in the Bible. Today it is Warka, in southern Iraq. Kulaba was its oldest quarter, the quarter of the temples, before the city grew up around it."
+      },
+      "choices": [
+        {
+          "to": "c8_montanas",
+          "text": {
+            "es": "Correr hacia Uruk",
+            "en": "Run toward Uruk"
+          },
+          "description": {
+            "es": "Cinco montañas. Seis. Siete.",
+            "en": "Five mountains. Six. Seven."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7_escolta",
+      "chapter": 7,
+      "mood": "mysterious",
+      "text": {
+        "es": "—Iré yo —dices—, con dos hermanos.\n\nEl mayor y el más fuerte se levantan sin que nadie se lo pida. Enmerkar te dicta el mensaje y los tres salen al anochecer.\n\nAl mediodía del día siguiente, los dos van muy atrás. Al atardecer, no los ves. Los esperas en un paso, junto a un arroyo, y cuando llegan, el mayor se deja caer en el suelo y te mira con ojos nuevos.\n\n—Tú no caminas como nosotros, muchacho. Nunca caminaste así.\n\nNo pregunta más. Te da su odre y su pan, y te dice que sigas solo: ellos volverán al campamento, y le dirán al rey que el mensajero va en camino. Los dejas sentados junto al agua, mirando cómo te vas.",
+        "en": "\"I will go,\" you say, \"with two of my brothers.\"\n\nThe eldest and the strongest stand up without being asked. Enmerkar dictates the message to you and the three of you set out at nightfall.\n\nBy noon the next day, the two are far behind. By evening, you cannot see them at all. You wait for them at a pass, beside a stream, and when they arrive, the eldest drops to the ground and looks at you as he never has before.\n\n\"You don't walk like us, boy. You never walked like that.\"\n\nHe asks nothing more. He gives you his waterskin and his bread and tells you to go on alone: they will return to camp and tell the king the messenger is on his way. You leave them sitting by the water, watching you go."
+      },
+      "choices": [
+        {
+          "to": "c8_montanas",
+          "text": {
+            "es": "Correr hacia Uruk",
+            "en": "Run toward Uruk"
+          },
+          "description": {
+            "es": "Cinco montañas. Seis. Siete.",
+            "en": "Five mountains. Six. Seven."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7_retirada",
+      "chapter": 7,
+      "mood": "dangerous",
+      "text": {
+        "es": "—Mi señor —dices—, un año es suficiente. Levanta el sitio y vuelve con el ejército entero. Aratta seguirá aquí el año que viene.\n\nEnmerkar no se enoja. Te mira con una tristeza vieja.\n\n—Un rey que vuelve sin el lapislázuli no vuelve rey, muchacho. Vuelve con la cabeza gacha, y detrás de él vuelve Uruk con la cabeza gacha. No. Que Inanna decida. Ella puso la lanza en mi mano; que ella me la quite.\n\nMira a los ocho otra vez. Nadie se mueve. Y entonces te das cuenta de que tu consejo, aunque era bueno, no era el que hacía falta. Lo que hace falta es alguien que corra.\n\n—Iré yo —dices—. Solo.",
+        "en": "\"My lord,\" you say, \"a year is enough. Lift the siege and go home with the whole army. Aratta will still be here next year.\"\n\nEnmerkar does not grow angry. He looks at you with an old sadness.\n\n\"A king who comes home without the lapis lazuli does not come home a king, boy. He comes home with his head bowed, and behind him Uruk comes home with its head bowed. No. Let Inanna decide. She put the spear in my hand; let her be the one to take it from me.\"\n\nHe looks at the eight of you again. No one moves. And then you realize that your advice, good as it was, was not what was needed. What is needed is someone who can run.\n\n\"I will go,\" you say. \"Alone.\""
+      },
+      "choices": [
+        {
+          "to": "c8_montanas",
+          "text": {
+            "es": "Correr hacia Uruk",
+            "en": "Run toward Uruk"
+          },
+          "description": {
+            "es": "Cinco montañas. Seis. Siete.",
+            "en": "Five mountains. Six. Seven."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c8_montanas",
+      "chapter": 8,
+      "mood": "triumphant",
+      "text": {
+        "es": "Corres de noche. Cruzas cinco montañas, seis montañas, siete montañas, y los ríos de la montaña los pasas de un paso y los bebes como de un odre. A medianoche ves brillar, bajo la luna, los muros de Kulaba, la de los ladrillos.\n\nEntras en el Eanna, la Casa del Cielo, sin que nadie te detenga, porque nadie corre así. Inanna está sentada en su trono, y al verte llegar con el polvo de siete montañas en la cara, inclina la cabeza como quien reconoce algo.\n\n—Habla, Lugalbanda.\n\nTraes las palabras de Enmerkar en la boca, repetidas cien veces en la carrera. Pero también traes las tuyas.",
+        "en": "You run through the night. You cross five mountains, six mountains, seven mountains, and you cross the mountain rivers in a single stride and drink from them as from a waterskin. At midnight you see the walls of Kulaba of the brickwork gleaming under the moon.\n\nYou enter the Eanna, the House of Heaven, and no one stops you, because no one runs like that. Inanna sits on her throne, and when she sees you arrive with the dust of seven mountains on your face, she inclines her head as if she recognizes something.\n\n\"Speak, Lugalbanda.\"\n\nYou carry Enmerkar's words in your mouth, repeated a hundred times along the way. But you carry your own as well."
+      },
+      "fact": {
+        "es": "El Eanna de Uruk es uno de los conjuntos de templos más antiguos del mundo: hacia 3200 a. C. ya era monumental, y entre sus ruinas aparecieron las tablillas de escritura más antiguas que se conocen.",
+        "en": "The Eanna at Uruk is one of the oldest temple complexes in the world: by around 3200 BC it was already monumental, and the oldest known writing tablets were found among its ruins."
+      },
+      "choices": [
+        {
+          "to": "c8_inanna",
+          "risk": "low",
+          "text": {
+            "es": "Repetir el mensaje del rey, palabra por palabra",
+            "en": "Repeat the king's message word for word"
+          },
+          "description": {
+            "es": "Para eso viniste. Ni una palabra más.",
+            "en": "That is what you came for. Not one word more."
+          }
+        },
+        {
+          "to": "c8_propias",
+          "risk": "medium",
+          "text": {
+            "es": "Decir el mensaje y hablar por el ejército",
+            "en": "Give the message and speak for the army"
+          },
+          "description": {
+            "es": "El rey pide volver. Tus hermanos quieren ganar.",
+            "en": "The king asks to go home. Your brothers want to win."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c8_inanna",
+      "chapter": 8,
+      "mood": "sacred",
+      "text": {
+        "es": "Repites el mensaje palabra por palabra: la hermana que ya no mira, el rey que pide volver a Kulaba y dejar la lanza. Ni una sílaba de más.\n\nInanna escucha hasta el final. Después habla, y su voz es clara como el agua de río:\n\n—Hay un río de agua clara, el odre reluciente de Inanna. En su orilla crece un tamarisco solo, apartado de los demás. En la poza que está a sus pies vive el pez suhurmash, que se divierte entre los juncos. Que Enmerkar haga del tamarisco un balde, que corte los juncos, que saque el pez y lo sacrifique al arma a-ankara, mi fuerza en la batalla.\n\n»Y entonces, que se lleve de Aratta el metal trabajado y los herreros, y que los asiente en Uruk. Ese día, todos los moldes de Aratta serán suyos.",
+        "en": "You repeat the message word for word: the sister who no longer looks upon him, the king who asks to return to Kulaba and lay down his spear. Not one syllable more.\n\nInanna listens to the end. Then she speaks, and her voice is as clear as river water:\n\n\"There is a river of clear water, the shining waterskin of Inanna. On its bank grows a tamarisk, alone, apart from the others. In the pool at its foot lives the suhurmash fish, sporting among the reeds. Let Enmerkar make a bucket from the tamarisk, let him cut the reeds, let him catch the fish and sacrifice it to the a-ankara weapon, my strength in battle.\n\n\"And then let him carry off from Aratta its worked metal and its smiths, and settle them in Uruk. On that day, all the molds of Aratta will be his.\""
+      },
+      "fact": {
+        "es": "El suhurmash, mitad carpa y mitad cabra, era el animal emblemático de Enki, el dios de las aguas dulces. De esa figura, pasando por Babilonia y por Grecia, viene el signo de Capricornio.",
+        "en": "The suhurmash, half carp and half goat, was the emblematic animal of Enki, god of fresh waters. From that figure, by way of Babylon and Greece, comes the sign of Capricorn."
+      },
+      "choices": [
+        {
+          "to": "c8_regreso",
+          "text": {
+            "es": "Volver con la respuesta",
+            "en": "Return with the answer"
+          },
+          "description": {
+            "es": "Siete montañas más, y amanece.",
+            "en": "Seven more mountains, and then dawn."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c8_propias",
+      "chapter": 8,
+      "mood": "epic",
+      "text": {
+        "es": "Repites el mensaje del rey. Y después, cuando Inanna va a hablar, te atreves:\n\n—Señora, el rey pide volver. Pero mis siete hermanos y todo Uruk llevan un año bajo esos muros. No vinieron a dejar la lanza. Vinieron a ganar.\n\nInanna sonríe, apenas, como sonríe una reina a la que hace tiempo nadie le pide nada.\n\n—Entonces escucha, mensajero. Hay un río de agua clara. En su orilla crece un tamarisco solo. En la poza a sus pies vive el pez suhurmash. Que Enmerkar haga del tamarisco un balde, corte los juncos, saque el pez y lo sacrifique al arma a-ankara, mi fuerza en la batalla. Que se lleve de Aratta el metal trabajado y los herreros. Ese día, todos los moldes de Aratta serán suyos.\n\n—Y a ti, Lugalbanda, Uruk te recordará.",
+        "en": "You repeat the king's message. And then, as Inanna is about to speak, you dare:\n\n\"Lady, the king asks to come home. But my seven brothers and all of Uruk have spent a year beneath those walls. They did not come to lay down the spear. They came to win.\"\n\nInanna smiles, barely, the way a queen smiles when no one has asked her for anything in a long time.\n\n\"Then listen, messenger. There is a river of clear water. On its bank grows a tamarisk, alone. In the pool at its foot lives the suhurmash fish. Let Enmerkar make a bucket from the tamarisk, cut the reeds, catch the fish and sacrifice it to the a-ankara weapon, my strength in battle. Let him carry off from Aratta its worked metal and its smiths. On that day, all the molds of Aratta will be his.\n\n\"And you, Lugalbanda, Uruk will remember.\""
+      },
+      "fact": {
+        "es": "Los mensajeros eran una pieza clave de los reinos mesopotámicos. En «Enmerkar y el señor de Aratta», el mensajero cruza siete montañas tantas veces entre las dos ciudades que el rey inventa la escritura para no depender de su memoria.",
+        "en": "Messengers were a key part of Mesopotamian kingdoms. In \"Enmerkar and the Lord of Aratta,\" the messenger crosses the seven mountains between the two cities so many times that the king invents writing so as not to depend on his memory."
+      },
+      "choices": [
+        {
+          "to": "c8_regreso",
+          "text": {
+            "es": "Volver con la respuesta",
+            "en": "Return with the answer"
+          },
+          "description": {
+            "es": "Siete montañas más, y amanece.",
+            "en": "Seven more mountains, and then dawn."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c8_regreso",
+      "chapter": 8,
+      "mood": "triumphant",
+      "text": {
+        "es": "Sales del Eanna antes de que amanezca y corres hacia el este. Siete montañas, seis, cinco. Cuando el sol de Utu sale entre los picos, estás de pie en la tienda de Enmerkar, con la respuesta de Inanna en la boca y ni una gota de sudor.\n\nEl rey te escucha de rodillas. Tus siete hermanos, detrás, no dicen nada: ya no hace falta.\n\nEnmerkar hace lo que dijo la diosa. El tamarisco, el balde, los juncos, el pez de la poza. Y el arma a-ankara, la fuerza de Inanna en la batalla, se despierta.\n\nAratta, la de las almenas de lapislázuli verde y los muros rojos, abre sus puertas sin que caiga una sola piedra más.",
+        "en": "You leave the Eanna before dawn and run east. Seven mountains, six, five. When Utu rises between the peaks, you are standing in Enmerkar's tent, with Inanna's answer in your mouth and not a drop of sweat on you.\n\nThe king hears you out on his knees. Your seven brothers, behind, say nothing: there is no longer any need.\n\nEnmerkar does as the goddess said. The tamarisk, the bucket, the reeds, the fish from the pool. And the a-ankara weapon, Inanna's strength in battle, awakens.\n\nAratta, with its battlements of green lapis lazuli and its red walls, opens its gates without another stone falling."
+      },
+      "fact": {
+        "es": "El poema describe Aratta con almenas de lapislázuli verde y muros de color rojo brillante, hechos con barro de estaño de las montañas donde crece el ciprés.",
+        "en": "The poem describes Aratta with battlements of green lapis lazuli and walls of bright red, made of tin-clay from the mountains where the cypress grows."
+      },
+      "choices": [
+        {
+          "to": "fin_mensajero",
+          "text": {
+            "es": "Volver a Uruk",
+            "en": "Return to Uruk"
+          },
+          "description": {
+            "es": "Con los herreros de Aratta detrás, y tu nombre delante.",
+            "en": "With the smiths of Aratta behind you, and your name before you."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_mensajero",
+      "chapter": 8,
+      "mood": "triumphant",
+      "text": {
+        "es": "Enmerkar se lleva de Aratta el metal trabajado y los herreros, y los asienta en Uruk. Desde ese día, todos los moldes de Aratta son de Uruk, y el lapislázuli azul como el cielo de la tarde brilla en los templos de Inanna.\n\nTú vuelves a casa en la primera fila, al lado del rey. Tus siete hermanos marchan detrás, y ninguno pregunta ya cómo cruzaste las montañas. Ya no eres el octavo. Eres el que fue y volvió.\n\nPasan los años. Enmerkar muere y Uruk te hace rey, a ti, el pastor. Tomas por esposa a la diosa Ninsun, la Vaca Salvaje, y tienes un hijo que será más fuerte que tú y más terco que tú, y que también cruzará montañas de donde nadie vuelve. Lo llamarás Gilgamesh.\n\nAlabado sea Lugalbanda el puro.",
+        "en": "Enmerkar carries off from Aratta its worked metal and its smiths, and settles them in Uruk. From that day on, all the molds of Aratta belong to Uruk, and lapis lazuli as blue as the evening sky shines in the temples of Inanna.\n\nYou come home in the front rank, at the king's side. Your seven brothers march behind, and none of them asks any longer how you crossed the mountains. You are no longer the eighth. You are the one who went and came back.\n\nThe years pass. Enmerkar dies and Uruk makes you king: you, the shepherd. You take as your wife the goddess Ninsun, the Wild Cow, and you have a son who will be stronger than you and more stubborn than you, and who will also cross mountains from which no one returns. You will call him Gilgamesh.\n\nPraise be to holy Lugalbanda."
+      },
+      "fact": {
+        "es": "El poema termina con la frase «Alabado sea Lugalbanda el puro». Siglos después, en Uruk y en Ur, Lugalbanda y Ninsun recibían culto como dioses, y los reyes de Ur se decían sus hijos.",
+        "en": "The poem ends with the words \"Praise be to holy Lugalbanda.\" Centuries later, in Uruk and in Ur, Lugalbanda and Ninsun were worshipped as gods, and the kings of Ur called themselves their sons."
+      },
+      "ending": {
+        "type": "myth",
+        "title": {
+          "es": "El mensajero de Inanna",
+          "en": "Inanna's Messenger"
+        }
+      },
+      "choices": []
+    }
+  ]
+}
