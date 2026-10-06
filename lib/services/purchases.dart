@@ -51,14 +51,17 @@ class PurchasesService extends ChangeNotifier {
   // sin frenar el arranque. Si la compra no está guardada (por ejemplo,
   // después de reinstalar), consulta en silencio las compras pasadas: si
   // aparece, queda hecha igual que con "Restaurar compra"; si no aparece o la
-  // tienda no contesta, sigue todo como estaba. Solo en Android: en iOS
-  // restaurar puede pedir la contraseña de Apple.
+  // tienda no contesta, sigue todo como estaba.
   void start() {
     _subscription = _store.purchaseStream.listen(
       _onPurchases,
       onError: (Object error) => debugPrint('Compras: error en el stream: $error'),
     );
     _loading = _loadProduct();
+    // Solo en Android. En iOS NO se consulta la tienda al arrancar, a
+    // propósito: restaurar puede pedir la contraseña de Apple sin que el
+    // usuario haya tocado nada. Ahí la compra se recupera solo con el botón
+    // "Restaurar compra" (Ajustes o Paywall).
     if (!appState.purchased && defaultTargetPlatform == TargetPlatform.android) {
       unawaited(restore());
     }

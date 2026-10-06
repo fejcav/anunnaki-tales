@@ -1,0 +1,37 @@
+# Build de iOS en Codemagic (misma cuenta que Ovun).
+# Android no pasa por acá: se compila y se sube a mano (ver docs/release.md).
+# Receta completa y pasos previos en docs/release.md, sección "iOS".
+workflows:
+  # Compila iOS sin firmar, para descubrir problemas de paquetes antes de tener
+  # la membresía de Apple. No sube nada; el workflow que firma y va a
+  # TestFlight llega en la iteración 15.
+  ios-check:
+    name: iOS → solo compilar, sin firma
+    max_build_duration: 30
+    instance_type: mac_mini_m2
+    environment:
+      flutter: stable
+      xcode: latest
+      cocoapods: default
+    scripts:
+      - name: Dependencias
+        script: flutter pub get
+      - name: Análisis
+        script: flutter analyze
+      - name: Tests (historias en modo estricto)
+        script: flutter test --dart-define=STRICT_STORIES=true
+      - name: Pods
+        script: |
+          cd ios
+          pod install --repo-update
+      - name: Build sin firma
+        script: flutter build ios --release --no-codesign
+    artifacts:
+      - /tmp/xcodebuild_logs/*.log
+    publishing:
+      email:
+        recipients:
+          - fejcavallo@gmail.com
+        notify:
+          success: true
+          failure: true
