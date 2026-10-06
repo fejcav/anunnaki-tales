@@ -1,4 +1,4 @@
-# Release de Android — receta paso a paso
+# Release — receta paso a paso (Android en la PC, iOS en Codemagic)
 
 Cómo compilar el `.aab` en la PC y subirlo a mano a Play Console (prueba
 cerrada). Primera vez: Build 12 (versión 1.1.0+12), 05/10/2026.
@@ -98,3 +98,57 @@ dart run flutter_native_splash:create
   al abrir; mismo caso que Ovun).
 - `AndroidManifest.xml`: permisos `INTERNET` y `AD_ID`, el ID de la app de
   AdMob (`ca-app-pub-8769741188201469~9074937716`), solo vertical.
+
+## iOS: compilar en Codemagic (`ios-check`)
+
+No hay Mac: iOS se compila en Codemagic, en la misma cuenta que Ovun (los 500
+minutos gratis de macOS por mes se comparten entre las dos apps). Por ahora
+solo existe `ios-check`, que **compila sin firmar** y no sube nada; sirve para
+saber que iOS compila sin tener todavía la membresía de Apple. Firmar y subir
+a TestFlight es la iteración 15.
+
+### Qué hace `ios-check` (`codemagic.yaml`, en la raíz)
+
+En una Mac mini M2, con Flutter estable y Xcode al día: `flutter pub get`,
+`flutter analyze`, `flutter test --dart-define=STRICT_STORIES=true`,
+`pod install` en `ios/` y `flutter build ios --release --no-codesign`. Corta a
+los 30 minutos. Al terminar (bien o mal) manda un mail a fejcavallo@gmail.com.
+Si falla, el log de Xcode queda en los artefactos del build.
+
+### Una sola vez: agregar la app en Codemagic
+
+1. Entrar a codemagic.io con la cuenta de Ovun → **Add application**.
+2. Elegir **GitHub** y el repo `fejcav/anunnaki-tales` (si no aparece, darle
+   acceso a Codemagic a ese repo en la configuración de la GitHub App).
+3. Tipo de proyecto: **Flutter App (via codemagic.yaml)**. Codemagic lee
+   `codemagic.yaml` de la rama `main`; no hace falta configurar nada más.
+
+### Cada vez que se quiera comprobar iOS
+
+1. Hacer push a `main`.
+2. En Codemagic → Anunnaki Tales → **Start new build** → rama `main`,
+   workflow **iOS → solo compilar, sin firma** → **Start new build**.
+3. Tarda unos 10–15 minutos. No corre solo con cada push (a propósito): cada
+   corrida descuenta minutos del cupo mensual compartido con Ovun.
+4. Llega un mail con el resultado. Si falla, en Codemagic se ve en qué paso;
+   el log completo de Xcode queda en los artefactos del build.
+
+### Qué hay configurado en iOS
+
+- `ios/Runner/Info.plist`: ID de app de AdMob para iOS
+  (`ca-app-pub-8769741188201469~2296085996`), la lista de `SKAdNetworkItems`
+  que recomienda Google (copiada de developers.google.com/admob/ios/3p-skadnetworks;
+  conviene repasarla de vez en cuando), el texto del permiso de seguimiento
+  (ATT) en inglés, `UIRequiresFullScreen`, solo vertical (iPhone y iPad),
+  nombre "Anunnaki Tales" e idiomas en/es.
+- `ios/Runner/es.lproj/InfoPlist.strings`: el texto del permiso de
+  seguimiento en español. Está registrado en el proyecto de Xcode (si no, no
+  se copia a la app).
+- `ios/Podfile`: iOS 15 como mínimo (igual que el proyecto de Xcode).
+- Bundle ID `com.mycompany.anunnakitales` en Debug, Release y Profile.
+- Ícono y splash de iOS: los genera `flutter_launcher_icons` /
+  `flutter_native_splash` (ver arriba), con `remove_alpha_ios: true` porque
+  la App Store rechaza íconos con transparencia.
+- Compra en iOS: la app **no** consulta la tienda al arrancar (restaurar
+  puede pedir la contraseña de Apple). La compra se recupera solo con el
+  botón "Restaurar compra".
