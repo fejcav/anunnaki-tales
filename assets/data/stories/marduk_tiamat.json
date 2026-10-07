@@ -1,0 +1,1246 @@
+{
+  "formatVersion": 1,
+  "adventureId": "marduk_tiamat",
+  "contentVersion": "1.0",
+  "hero": {
+    "name": {
+      "es": "Marduk",
+      "en": "Marduk"
+    },
+    "description": {
+      "es": "Hijo de Ea y de Damkina, nacido en la casa construida sobre el cadáver de Apsu. Tiene cuatro ojos, cuatro orejas y fuego en los labios. Todavía no sabe que los dioses van a necesitarlo.",
+      "en": "Son of Ea and Damkina, born in the house built on the corpse of Apsu. He has four eyes, four ears and fire on his lips. He does not yet know that the gods will need him."
+    }
+  },
+  "chapters": [
+    {
+      "number": 1,
+      "title": {
+        "es": "Hijo del Apsu",
+        "en": "Son of the Apsu"
+      }
+    },
+    {
+      "number": 2,
+      "title": {
+        "es": "Los cuatro vientos",
+        "en": "The Four Winds"
+      }
+    },
+    {
+      "number": 3,
+      "title": {
+        "es": "La ira de Tiamat",
+        "en": "Tiamat's Wrath"
+      }
+    },
+    {
+      "number": 4,
+      "title": {
+        "es": "El precio del campeón",
+        "en": "The Champion's Price"
+      }
+    },
+    {
+      "number": 5,
+      "title": {
+        "es": "Cerveza y destino",
+        "en": "Beer and Destiny"
+      }
+    },
+    {
+      "number": 6,
+      "title": {
+        "es": "El carro de la tormenta",
+        "en": "The Storm Chariot"
+      }
+    },
+    {
+      "number": 7,
+      "title": {
+        "es": "Combate singular",
+        "en": "Single Combat"
+      }
+    },
+    {
+      "number": 8,
+      "title": {
+        "es": "El mundo nuevo",
+        "en": "The New World"
+      }
+    }
+  ],
+  "start": "c1_apsu",
+  "scenes": [
+    {
+      "id": "c1_apsu",
+      "chapter": 1,
+      "mood": "epic",
+      "text": {
+        "es": "Cuando en lo alto el cielo no tenía nombre, y abajo la tierra no tenía nombre, solo había agua. Apsu, el agua dulce, y Tiamat, el agua salada, mezclaban sus aguas en un solo cuerpo. De esa mezcla nacieron los dioses: Lahmu y Lahamu, Anshar y Kishar, Anu, y Ea, el más sabio.\n\nLos dioses jóvenes eran ruidosos. Apsu no podía dormir, y quiso destruirlos. Pero Ea lo durmió con un conjuro, lo mató y construyó su casa sobre él.\n\nEn esa casa, en el corazón del Apsu, naces tú. Eres Marduk, hijo de Ea y de Damkina. Tienes cuatro ojos y cuatro orejas, y cuando mueves los labios, sale fuego. Tu padre te levanta en brazos y se ríe de orgullo.",
+        "en": "When on high the heavens had no name, and below the earth had no name, there was only water. Apsu, the fresh water, and Tiamat, the salt water, mingled their waters in a single body. From that mingling the gods were born: Lahmu and Lahamu, Anshar and Kishar, Anu, and Ea, the wisest of all.\n\nThe young gods were noisy. Apsu could not sleep, and he wanted to destroy them. But Ea put him to sleep with a spell, killed him and built his house upon him.\n\nIn that house, in the heart of the Apsu, you are born. You are Marduk, son of Ea and Damkina. You have four eyes and four ears, and when you move your lips, fire comes out. Your father lifts you in his arms and laughs with pride."
+      },
+      "fact": {
+        "es": "«Enuma elish» significa «Cuando en lo alto»: son las primeras palabras del poema, que ocupa siete tablillas de arcilla. Los babilonios solían nombrar sus textos por sus palabras iniciales.",
+        "en": "\"Enuma elish\" means \"When on high\": these are the opening words of the poem, which spans seven clay tablets. The Babylonians usually named their texts after their opening words."
+      },
+      "choices": [
+        {
+          "to": "c1_ea",
+          "risk": "low",
+          "text": {
+            "es": "Escuchar la historia de tu padre",
+            "en": "Listen to your father's story"
+          },
+          "description": {
+            "es": "Ea sabe cosas que nadie más sabe, y quieres saber cómo murió Apsu.",
+            "en": "Ea knows things no one else knows, and you want to know how Apsu died."
+          }
+        },
+        {
+          "to": "c1_mirar",
+          "risk": "low",
+          "text": {
+            "es": "Mirar el mundo con tus cuatro ojos",
+            "en": "Look at the world with your four eyes"
+          },
+          "description": {
+            "es": "Hay mucho que ver, y tú puedes verlo todo a la vez.",
+            "en": "There is so much to see, and you can see it all at once."
+          }
+        },
+        {
+          "to": "c1_asamblea",
+          "risk": "medium",
+          "text": {
+            "es": "Presentarte ante los dioses mayores",
+            "en": "Present yourself to the elder gods"
+          },
+          "description": {
+            "es": "Que los antiguos vean quién acaba de nacer.",
+            "en": "Let the ancient ones see who has just been born."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c1_ea",
+      "chapter": 1,
+      "mood": "mysterious",
+      "text": {
+        "es": "Ea te sienta sobre sus rodillas y baja la voz.\n\n—Apsu tenía un visir, Mummu. Juntos se sentaron frente a Tiamat y hablaron de nosotros. «De día no descanso, de noche no duermo», decía Apsu. «Voy a acabar con ellos.» Tiamat gritó. No quería matar a sus hijos. Pero Apsu no la escuchó.\n\n»Yo los oí. No levanté un arma. Hice un conjuro, lo dije sobre el agua, y Apsu se durmió. Le quité la corona. Lo maté. A Mummu lo até con una cuerda por la nariz.\n\nTe mira con sus ojos tranquilos.\n\n—Tiamat lloró, hijo. Y el agua salada no olvida.",
+        "en": "Ea sits you on his knees and lowers his voice.\n\n\"Apsu had a vizier, Mummu. Together they sat before Tiamat and talked of us. 'By day I find no rest, by night I cannot sleep,' Apsu said. 'I will put an end to them.' Tiamat cried out. She did not want to kill her children. But Apsu would not listen to her.\n\n\"I heard them. I did not raise a weapon. I worked a spell, I spoke it over the water, and Apsu fell asleep. I took away his crown. I killed him. Mummu I bound with a rope through his nose.\"\n\nHe looks at you with his calm eyes.\n\n\"Tiamat wept, son. And the salt water does not forget.\""
+      },
+      "fact": {
+        "es": "En el poema, Ea no vence a Apsu con armas, sino con un conjuro que lo hace dormir. Ea, llamado Enki en sumerio, era el dios de la sabiduría, de la magia y de las aguas dulces.",
+        "en": "In the poem, Ea defeats Apsu not with weapons but with a spell that puts him to sleep. Ea, called Enki in Sumerian, was the god of wisdom, of magic and of the fresh waters."
+      },
+      "choices": [
+        {
+          "to": "c2_vientos",
+          "text": {
+            "es": "Crecer en la casa de Ea",
+            "en": "Grow up in the house of Ea"
+          },
+          "description": {
+            "es": "Los dioses te crían, y tú creces rápido.",
+            "en": "The gods raise you, and you grow up fast."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c1_mirar",
+      "chapter": 1,
+      "mood": "mysterious",
+      "text": {
+        "es": "Abres los cuatro ojos a la vez, y el mundo entra por todos lados.\n\nDebajo de ti, el Apsu: agua dulce, quieta, convertida en casa. Arriba, nada que tenga nombre. Y alrededor, hasta donde llega la vista, Tiamat: un agua salada, enorme y viva, que respira despacio como un animal dormido.\n\nVes en ella algo que los otros dioses no ven. No duerme. Está de luto. Cada tanto, una ola se levanta sin viento y vuelve a caer, como un suspiro.\n\nTus cuatro orejas oyen ese suspiro. No sabes todavía qué significa. Sabes que no te gusta.",
+        "en": "You open all four eyes at once, and the world pours in from every side.\n\nBelow you, the Apsu: fresh water, still, turned into a home. Above, nothing that has a name. And all around, as far as the eye can see, Tiamat: salt water, vast and alive, breathing slowly like a sleeping animal.\n\nYou see something in her that the other gods do not see. She is not asleep. She is in mourning. Every so often, a wave rises with no wind and falls again, like a sigh.\n\nYour four ears hear that sigh. You do not yet know what it means. You know you do not like it."
+      },
+      "fact": {
+        "es": "El nombre Tiamat está emparentado con la palabra acadia para «mar». El Apsu era, para los mesopotámicos, el océano de agua dulce bajo la tierra, del que salían ríos, pozos y manantiales.",
+        "en": "The name Tiamat is related to the Akkadian word for \"sea.\" To the Mesopotamians, the Apsu was the ocean of fresh water beneath the earth, the source of rivers, wells and springs."
+      },
+      "choices": [
+        {
+          "to": "c2_vientos",
+          "text": {
+            "es": "Crecer en la casa de Ea",
+            "en": "Grow up in the house of Ea"
+          },
+          "description": {
+            "es": "Los dioses te crían, y tú creces rápido.",
+            "en": "The gods raise you, and you grow up fast."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c1_asamblea",
+      "chapter": 1,
+      "mood": "epic",
+      "text": {
+        "es": "Ea te lleva ante los dioses mayores. Lahmu y Lahamu te miran con ojos de barro antiguo. Anshar, tu bisabuelo, se inclina para verte mejor. Anu, tu abuelo, el señor del cielo, no puede apartar la vista.\n\nEres más alto que todos ellos. Tus miembros están hechos de un modo que nadie entiende. Cuando hablas, el fuego sale de tu boca, y los dioses dan un paso atrás sin darse cuenta.\n\n—Hijo mío —dice Ea, orgulloso—. El Sol entre los dioses.\n\nAnu sonríe. Es la primera vez en mucho tiempo que alguien lo ve sonreír.",
+        "en": "Ea takes you before the elder gods. Lahmu and Lahamu look at you with eyes of ancient clay. Anshar, your great-grandfather, leans down to see you better. Anu, your grandfather, lord of the sky, cannot look away.\n\nYou are taller than all of them. Your limbs are made in a way no one understands. When you speak, fire comes from your mouth, and the gods take a step back without realizing it.\n\n\"My son,\" says Ea, proudly. \"The Sun among the gods.\"\n\nAnu smiles. It is the first time in a long while that anyone has seen him smile."
+      },
+      "choices": [
+        {
+          "to": "c2_vientos",
+          "text": {
+            "es": "Crecer en la casa de Ea",
+            "en": "Grow up in the house of Ea"
+          },
+          "description": {
+            "es": "Los dioses te crían, y tú creces rápido.",
+            "en": "The gods raise you, and you grow up fast."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2_vientos",
+      "chapter": 2,
+      "mood": "epic",
+      "text": {
+        "es": "Anu viene a verte con un regalo en las manos. Son cuatro vientos: el del sur, el del norte, el del este y el del oeste. Se retuercen entre sus dedos como cachorros que quieren correr.\n\n—Hijo mío —dice—, que jueguen.\n\nTe los entrega, y tú los sientes vivos en las palmas. Con ellos levantas polvo, haces remolinos, empujas olas. Nunca has tenido un juguete. Nunca un dios ha tenido uno así.\n\nPero todo lo que no es el Apsu es Tiamat. Cada ola que levantas, la levantas en ella. Los dioses que viven dentro de su cuerpo empiezan a quejarse: no pueden dormir.",
+        "en": "Anu comes to see you with a gift in his hands. He has brought four winds: the south wind, the north wind, the east wind and the west wind. They squirm between his fingers like puppies eager to run.\n\n\"My son,\" he says, \"let them play.\"\n\nHe hands them to you, and you feel them alive in your palms. With them you raise dust, spin whirlwinds, push waves. You have never had a toy. No god has ever had one like this.\n\nBut everything that is not the Apsu is Tiamat. Every wave you raise, you raise in her. The gods who live inside her body begin to complain: they cannot sleep."
+      },
+      "fact": {
+        "es": "Las primeras tablillas del poema aparecieron en Nínive, entre las ruinas de la biblioteca del rey asirio Asurbanipal. George Smith las publicó en 1876, en «The Chaldean Account of Genesis».",
+        "en": "The first tablets of the poem were found at Nineveh, among the ruins of the library of the Assyrian king Ashurbanipal. George Smith published them in 1876, in \"The Chaldean Account of Genesis.\""
+      },
+      "choices": [
+        {
+          "to": "c2_jugar",
+          "risk": "medium",
+          "text": {
+            "es": "Jugar con los vientos sobre las aguas",
+            "en": "Play with the winds over the waters"
+          },
+          "description": {
+            "es": "Eres joven y los vientos son tuyos: ¿qué daño puede hacer una ola?",
+            "en": "You are young and the winds are yours: what harm can a wave do?"
+          }
+        },
+        {
+          "to": "c2_atar",
+          "risk": "low",
+          "text": {
+            "es": "Atar los vientos y guardarlos",
+            "en": "Tie up the winds and put them away"
+          },
+          "description": {
+            "es": "Si el juego molesta, se termina el juego.",
+            "en": "If the game bothers them, the game is over."
+          }
+        },
+        {
+          "to": "c2_desafiar",
+          "risk": "high",
+          "text": {
+            "es": "Soplar los vientos dentro de Tiamat",
+            "en": "Blow the winds down into Tiamat"
+          },
+          "description": {
+            "es": "Quieres ver qué hay en el fondo del agua salada.",
+            "en": "You want to see what lies at the bottom of the salt water."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2_jugar",
+      "chapter": 2,
+      "mood": "dangerous",
+      "text": {
+        "es": "Juegas durante días. Haces un remolino que levanta polvo hasta lo alto. Haces una ola tan grande que tarda un día entero en caer. Te ríes, y los vientos se ríen contigo.\n\nDebajo, Tiamat se revuelve. De día y de noche, sus aguas se agitan, y los dioses que viven en ella no descansan. Sus ojos se hinchan de sueño. Sus voces se vuelven ásperas.\n\nUna noche, al guardar los vientos, oyes con tus cuatro orejas un murmullo que viene del fondo del mar. Son ellos, hablando con su madre.",
+        "en": "You play for days. You make a whirlwind that lifts the dust on high. You make a wave so tall that it takes a whole day to fall. You laugh, and the winds laugh with you.\n\nBelow, Tiamat stirs. Day and night her waters churn, and the gods who live in her get no rest. Their eyes swell from lack of sleep. Their voices turn rough.\n\nOne night, as you put the winds away, your four ears catch a murmur rising from the bottom of the sea. It is them, talking to their mother."
+      },
+      "fact": {
+        "es": "En versiones asirias del poema, halladas en Asur y en Nínive, el héroe ya no es Marduk sino Anshar, a quien los asirios identificaban con su dios Asur. Asiria quería que el vencedor de Tiamat fuera su propio dios.",
+        "en": "In Assyrian versions of the poem, found at Ashur and Nineveh, the hero is no longer Marduk but Anshar, whom the Assyrians identified with their god Ashur. Assyria wanted Tiamat's conqueror to be its own god."
+      },
+      "choices": [
+        {
+          "to": "c3_tiamat",
+          "text": {
+            "es": "Escuchar lo que dicen",
+            "en": "Listen to what they are saying"
+          },
+          "description": {
+            "es": "Algo se está tramando en el fondo del agua.",
+            "en": "Something is being plotted at the bottom of the water."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2_atar",
+      "chapter": 2,
+      "mood": "peaceful",
+      "text": {
+        "es": "Juntas los cuatro vientos y los atas con una cuerda de juncos. Protestan. Tiran. Son jóvenes, como tú, y no les gusta estar quietos.\n\nDurante un tiempo, todo calla. Pero un viento atado sigue siendo viento: se escurre entre los nudos, levanta una ola pequeña, después otra. Tú duermes, y mientras duermes, ellos juegan solos sobre Tiamat.\n\nEl daño ya está hecho. Los dioses que viven en ella llevan mucho sin dormir. Una noche, oyes con tus cuatro orejas un murmullo que viene del fondo del mar.",
+        "en": "You gather the four winds and tie them with a rope of reeds. They protest. They pull. They are young, like you, and they do not like to keep still.\n\nFor a while, all is quiet. But a tied wind is still a wind: it slips between the knots, raises a small wave, then another. You sleep, and while you sleep, they play on their own over Tiamat.\n\nThe harm is already done. The gods who live in her have gone a long time without sleep. One night, your four ears catch a murmur rising from the bottom of the sea."
+      },
+      "choices": [
+        {
+          "to": "c3_tiamat",
+          "text": {
+            "es": "Escuchar lo que dicen",
+            "en": "Listen to what they are saying"
+          },
+          "description": {
+            "es": "Algo se está tramando en el fondo del agua.",
+            "en": "Something is being plotted at the bottom of the water."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2_desafiar",
+      "chapter": 2,
+      "mood": "dangerous",
+      "text": {
+        "es": "Juntas los cuatro vientos en un solo puño y los hundes en el mar. El agua salada se abre como una herida. Abajo, mucho más abajo de lo que esperabas, algo se mueve.\n\nTiamat abre los ojos.\n\nNo ves su forma. Ves el agua que se levanta, una pared negra más alta que la casa de tu padre, y oyes una voz que no viene de ningún lado:\n\n—¿Tú eres el hijo del que mató a mi esposo?\n\nLos vientos se te escapan de las manos y huyen a esconderse. Estás solo frente a la madre de todos los dioses.",
+        "en": "You gather the four winds in a single fist and plunge them into the sea. The salt water opens like a wound. Below, far deeper than you expected, something moves.\n\nTiamat opens her eyes.\n\nYou do not see her shape. You see the water rising, a black wall taller than your father's house, and you hear a voice that comes from nowhere:\n\n\"Are you the son of the one who killed my husband?\"\n\nThe winds slip from your hands and flee to hide. You are alone before the mother of all the gods."
+      },
+      "choices": [
+        {
+          "to": "c3_tiamat",
+          "risk": "low",
+          "text": {
+            "es": "Retroceder hasta la casa de Ea",
+            "en": "Retreat to the house of Ea"
+          },
+          "description": {
+            "es": "No es el momento, y ni siquiera sabes qué tienes delante.",
+            "en": "This is not the time, and you do not even know what you are facing."
+          }
+        },
+        {
+          "to": "fin_abismo",
+          "risk": "high",
+          "text": {
+            "es": "Bajar al abismo a enfrentarla",
+            "en": "Dive into the abyss to face her"
+          },
+          "description": {
+            "es": "Ya la despertaste, así que termina lo que empezaste.",
+            "en": "You have already woken her, so finish what you started."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_abismo",
+      "chapter": 2,
+      "mood": "tragic",
+      "text": {
+        "es": "Te lanzas hacia abajo, con fuego en los labios y sin un arma en las manos.\n\nEl agua salada te recibe como una madre recibe a un hijo que vuelve: te rodea, te aprieta, te cierra. El fuego se apaga en tu boca. Tus cuatro ojos ven negro, negro, negro. Tus cuatro orejas solo oyen el latido lento de Tiamat.\n\nArriba, Ea espera a su hijo, y su hijo no vuelve. Los dioses jóvenes no tienen campeón. Tiamat levanta su ejército sin prisa, porque ya nadie la puede detener.\n\nNunca habrá cielo con estrellas. Nunca correrán el Tigris y el Éufrates. Nunca se dirá tu nombre cincuenta veces. Solo habrá agua, y en el agua, silencio, que es lo que Apsu quería desde el principio.",
+        "en": "You hurl yourself downward, with fire on your lips and no weapon in your hands.\n\nThe salt water receives you as a mother receives a son who comes home: it surrounds you, holds you tight, closes over you. The fire goes out in your mouth. Your four eyes see black, black, black. Your four ears hear only the slow heartbeat of Tiamat.\n\nAbove, Ea waits for his son, and his son does not return. The young gods have no champion. Tiamat raises her army without haste, because now no one can stop her.\n\nThere will never be a sky with stars. The Tigris and the Euphrates will never flow. Your name will never be spoken fifty times. There will be only water, and in the water, silence, which is what Apsu wanted from the beginning."
+      },
+      "ending": {
+        "type": "tragic",
+        "title": {
+          "es": "El silencio de las aguas",
+          "en": "The Silence of the Waters"
+        }
+      },
+      "choices": []
+    },
+    {
+      "id": "c3_tiamat",
+      "chapter": 3,
+      "mood": "dangerous",
+      "text": {
+        "es": "Los dioses que viven en Tiamat le hablan a su madre:\n\n—Cuando mataron a Apsu, tu esposo, no hiciste nada. Ahora Anu le dio cuatro vientos a ese niño, y no nos deja dormir. ¿No nos quieres? Venga a Apsu. Haz la guerra.\n\nY Tiamat los escucha.\n\nDa a luz once monstruos: serpientes con veneno en lugar de sangre, dragones con aura de dioses, la víbora, el dragón furioso, el lahmu, el gran león, el perro rabioso, el hombre-escorpión, las tormentas feroces, el hombre-pez y el toro-hombre. Al frente pone a Kingu, su nuevo esposo. Le cuelga al pecho la Tablilla de los Destinos.\n\n—Tu palabra no cambiará —le dice—. Tu orden será firme.\n\nEa se entera, y por primera vez ves a tu padre callado.",
+        "en": "The gods who live in Tiamat speak to their mother:\n\n\"When they killed Apsu, your husband, you did nothing. Now Anu has given that child four winds, and he will not let us sleep. Do you not love us? Avenge Apsu. Make war.\"\n\nAnd Tiamat listens to them.\n\nShe gives birth to eleven monsters: serpents with venom in place of blood, dragons cloaked in godlike radiance, the viper, the raging dragon, the lahmu, the great lion, the mad dog, the scorpion-man, the fierce storms, the fish-man and the bull-man. At their head she places Kingu, her new husband. She hangs the Tablet of Destinies on his chest.\n\n\"Your word shall not be changed,\" she tells him. \"Your command shall stand.\"\n\nEa hears of it, and for the first time you see your father fall silent."
+      },
+      "choices": [
+        {
+          "to": "c3_anshar",
+          "risk": "low",
+          "text": {
+            "es": "Acompañar a Ea ante Anshar",
+            "en": "Go with Ea before Anshar"
+          },
+          "description": {
+            "es": "Anshar es el mayor, y él sabrá qué hacer.",
+            "en": "Anshar is the eldest, and he will know what to do."
+          }
+        },
+        {
+          "to": "c3_espiar",
+          "risk": "medium",
+          "text": {
+            "es": "Ir a ver el ejército con tus ojos",
+            "en": "See the army with your own eyes"
+          },
+          "description": {
+            "es": "Cuatro ojos ven más que cualquier mensajero.",
+            "en": "Four eyes see more than any messenger."
+          }
+        },
+        {
+          "to": "c3_culpa",
+          "risk": "medium",
+          "text": {
+            "es": "Confesar que tus vientos la despertaron",
+            "en": "Confess that your winds woke her"
+          },
+          "description": {
+            "es": "Fuiste tú, y alguien tiene que decirlo en voz alta.",
+            "en": "It was you, and someone has to say it out loud."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3_anshar",
+      "chapter": 3,
+      "mood": "sacred",
+      "text": {
+        "es": "Caminas detrás de tu padre hasta la casa de Anshar. Ea repite, palabra por palabra, todo lo que oyó: el llanto de los dioses, los once monstruos, Kingu, la Tablilla.\n\nAnshar se golpea el muslo y se muerde los labios. Está inquieto, y no lo esconde.\n\n—Ea, tú mataste a Apsu. Tú empezaste esto. Ve tú, y calma a Tiamat.\n\nTu padre inclina la cabeza y sale. Tú te quedas en un rincón, mirando a Anshar, que no deja de caminar de un lado a otro. Esperan. Esperan mucho.",
+        "en": "You walk behind your father to the house of Anshar. Ea repeats, word for word, everything he heard: the gods' lament, the eleven monsters, Kingu, the Tablet.\n\nAnshar strikes his thigh and bites his lip. He is uneasy, and he does not hide it.\n\n\"Ea, you killed Apsu. You started this. You go and calm Tiamat.\"\n\nYour father bows his head and leaves. You stay in a corner, watching Anshar, who keeps pacing back and forth. The two of you wait. You wait a long time."
+      },
+      "fact": {
+        "es": "Anshar y Kishar significan, más o menos, «todo el cielo» y «toda la tierra». En el poema son los padres de Anu y los abuelos de Ea.",
+        "en": "Anshar and Kishar mean, roughly, \"whole sky\" and \"whole earth.\" In the poem they are the parents of Anu and the grandparents of Ea."
+      },
+      "choices": [
+        {
+          "to": "c4_anshar",
+          "text": {
+            "es": "Esperar el regreso de Ea",
+            "en": "Wait for Ea to return"
+          },
+          "description": {
+            "es": "Si alguien puede calmarla con palabras, es él.",
+            "en": "If anyone can calm her with words, it is him."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3_espiar",
+      "chapter": 3,
+      "mood": "dangerous",
+      "text": {
+        "es": "Subes al borde del Apsu y abres los cuatro ojos sobre el mar.\n\nLo ves todo. Las serpientes de colmillos afilados, con veneno donde debería haber sangre. Los dragones envueltos en terror, tan brillantes que mirarlos da miedo. El hombre-escorpión, con su cola levantada. El hombre-pez, que nada sin ruido. El toro-hombre, que golpea el agua con los cascos.\n\nY en medio de todos, Kingu. No es el más fuerte. Pero en el pecho le brilla una tablilla de arcilla, y todos los monstruos lo miran a él.\n\nVuelves corriendo. Ea ya fue a ver a Anshar.",
+        "en": "You climb to the edge of the Apsu and open your four eyes over the sea.\n\nYou see everything. The serpents with sharp fangs, venom where blood should be. The dragons wrapped in terror, so bright it is frightening to look at them. The scorpion-man, his tail raised. The fish-man, swimming without a sound. The bull-man, pounding the water with his hooves.\n\nAnd in the middle of them all, Kingu. He is not the strongest. But on his chest a clay tablet gleams, and all the monsters look to him.\n\nYou run back. Ea has already gone to see Anshar."
+      },
+      "fact": {
+        "es": "El hombre-escorpión aparece también en la Epopeya de Gilgamesh: una pareja de ellos custodia la puerta del monte Mashu, por donde el sol sale y se pone.",
+        "en": "The scorpion-man also appears in the Epic of Gilgamesh: a pair of them guard the gate of Mount Mashu, where the sun rises and sets."
+      },
+      "choices": [
+        {
+          "to": "c4_anshar",
+          "text": {
+            "es": "Contarle a Anshar lo que viste",
+            "en": "Tell Anshar what you saw"
+          },
+          "description": {
+            "es": "Nadie más tiene ojos como los tuyos.",
+            "en": "No one else has eyes like yours."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3_culpa",
+      "chapter": 3,
+      "mood": "sacred",
+      "text": {
+        "es": "—Fui yo —le dices a tu padre—. Mis vientos la despertaron.\n\nEa te mira largo rato. Después te pone una mano en el hombro.\n\n—Tus vientos la despertaron, hijo. Pero la herida es más vieja que tú. Yo maté a Apsu. Ella perdió a su esposo, y nadie le pidió perdón. Los dioses que viven en ella solo le recordaron lo que ya sabía.\n\nSe levanta, cansado.\n\n—Voy a ver a Anshar. Tú ven conmigo. Si esto tiene arreglo, no lo encontraremos escondidos.",
+        "en": "\"It was me,\" you tell your father. \"My winds woke her.\"\n\nEa looks at you for a long while. Then he puts a hand on your shoulder.\n\n\"Your winds woke her, son. But the wound is older than you. I killed Apsu. She lost her husband, and no one asked her forgiveness. The gods who live in her only reminded her of what she already knew.\"\n\nHe rises, weary.\n\n\"I am going to see Anshar. Come with me. If this can be mended, we will not find the way by hiding.\""
+      },
+      "fact": {
+        "es": "Kingu, también escrito Qingu, es casi desconocido fuera de este poema. Tiamat lo hace su esposo y jefe de su ejército, y le entrega el poder de decidir los destinos.",
+        "en": "Kingu, also spelled Qingu, is almost unknown outside this poem. Tiamat makes him her husband and the leader of her army, and gives him the power to decide destinies."
+      },
+      "choices": [
+        {
+          "to": "c4_anshar",
+          "text": {
+            "es": "Ir con Ea ante Anshar",
+            "en": "Go with Ea before Anshar"
+          },
+          "description": {
+            "es": "La culpa se reparte, y el miedo también.",
+            "en": "Guilt is shared, and so is fear."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c4_anshar",
+      "chapter": 4,
+      "mood": "dangerous",
+      "text": {
+        "es": "Ea vuelve. Fue hasta Tiamat, oyó su voz, y regresó sin decir una palabra contra ella. Su conjuro, el que durmió a Apsu, no alcanza para la madre.\n\nAnshar envía entonces a Anu, el señor del cielo. Anu se acerca tanto que llega a ver sus planes. Y él también vuelve, con las manos vacías.\n\n—No puedo con ella —dice.\n\nAnshar se queda mudo. Los dioses se sientan en silencio, con los labios cerrados. Nadie se ofrece.\n\nEa te llama aparte y te habla al oído: —Ve ante Anshar. Acércate como alguien dispuesto a pelear.\n\nTe paras frente al viejo dios. Anshar te mira y algo en él se tranquiliza.\n\n—Hijo mío, ¿irás tú?",
+        "en": "Ea returns. He went to Tiamat, heard her voice, and came back without a word against her. His spell, the one that put Apsu to sleep, is not enough for the mother.\n\nSo Anshar sends Anu, lord of the sky. Anu comes so close that he sees her plans. And he too comes back empty-handed.\n\n\"I cannot stand against her,\" he says.\n\nAnshar falls silent. The gods sit without a word, their lips sealed. No one steps forward.\n\nEa calls you aside and whispers in your ear: \"Go before Anshar. Go to him as one ready to fight.\"\n\nYou stand before the old god. Anshar looks at you, and something in him grows calm.\n\n\"My son, will you go?\""
+      },
+      "fact": {
+        "es": "La Tablilla de los Destinos aparece también en el mito de Anzu, donde ese pájaro monstruoso se la roba a Enlil y el dios Ninurta tiene que recuperarla.",
+        "en": "The Tablet of Destinies also appears in the myth of Anzu, in which that monstrous bird steals it from Enlil and the god Ninurta must win it back."
+      },
+      "choices": [
+        {
+          "to": "c4_destinos",
+          "risk": "low",
+          "text": {
+            "es": "Aceptar y poner tu condición",
+            "en": "Accept, and set your condition"
+          },
+          "description": {
+            "es": "Si vas a salvarlos, que tu palabra mande después.",
+            "en": "If you are going to save them, let your word rule afterward."
+          }
+        },
+        {
+          "to": "c4_gratis",
+          "risk": "medium",
+          "text": {
+            "es": "Ofrecerte sin pedir nada",
+            "en": "Offer yourself and ask for nothing"
+          },
+          "description": {
+            "es": "Son tu familia, y no se cobra por defender a la familia.",
+            "en": "They are your family, and no one charges for defending family."
+          }
+        },
+        {
+          "to": "c4_anu",
+          "risk": "low",
+          "text": {
+            "es": "Preguntarle a Anu cómo es ella",
+            "en": "Ask Anu what she is like"
+          },
+          "description": {
+            "es": "Antes de prometer nada, quieres saber contra qué peleas.",
+            "en": "Before promising anything, you want to know what you are fighting."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c4_destinos",
+      "chapter": 4,
+      "mood": "epic",
+      "text": {
+        "es": "—Si he de ser su vengador —dices—, si he de vencer a Tiamat y salvarlos, convoquen a la asamblea. Proclamen mi destino. Que mi palabra, y no la de ustedes, fije los destinos. Que lo que yo haga no cambie nunca. Que lo que yo diga no vuelva atrás.\n\nAnshar no se ofende. Llama a Kakka, su visir.\n\n—Ve a Lahmu y a Lahamu. Diles que Tiamat se levantó contra nosotros, que Ea y Anu volvieron sin vencerla. Diles que Marduk irá, pero con una condición. Que vengan todos.\n\nKakka sale corriendo. Tú te quedas quieto, con el fuego tranquilo en los labios.",
+        "en": "\"If I am to be your avenger,\" you say, \"if I am to defeat Tiamat and save you, convene the assembly. Proclaim my destiny. Let my word, not yours, fix the destinies. Let what I do never change. Let what I say never be taken back.\"\n\nAnshar takes no offense. He calls Kakka, his vizier.\n\n\"Go to Lahmu and Lahamu. Tell them Tiamat has risen against us, that Ea and Anu came back without defeating her. Tell them Marduk will go, but on one condition. Let them all come.\"\n\nKakka runs off. You stay where you are, the fire calm on your lips."
+      },
+      "fact": {
+        "es": "En el prólogo de su código, hacia 1750 a. C., Hammurabi dice que Anu y Enlil dieron a Marduk el poder sobre todos los pueblos. Babilonia y su dios ascendieron juntos.",
+        "en": "In the prologue to his code, around 1750 BC, Hammurabi says that Anu and Enlil gave Marduk power over all peoples. Babylon and its god rose together."
+      },
+      "choices": [
+        {
+          "to": "c5_banquete",
+          "text": {
+            "es": "Esperar a la asamblea",
+            "en": "Wait for the assembly"
+          },
+          "description": {
+            "es": "Los dioses mayores van a venir, y van a decidir.",
+            "en": "The elder gods will come, and they will decide."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c4_gratis",
+      "chapter": 4,
+      "mood": "peaceful",
+      "text": {
+        "es": "—Iré —dices—. No pido nada.\n\nAnshar se emociona. Los dioses te miran con alivio. Pero tu padre frunce el ceño y te lleva aparte.\n\n—Escúchame, hijo. Si vas como soldado, volverás como soldado. Y cuando Tiamat haya caído, ¿quién va a ordenar lo que quede? Una asamblea que tuvo miedo. Un mundo sin forma, decidido por muchas voces que no se ponen de acuerdo.\n\n»Pide que tu palabra fije los destinos. No por orgullo. Porque alguien tiene que hacerlo.",
+        "en": "\"I will go,\" you say. \"I ask for nothing.\"\n\nAnshar is moved. The gods look at you with relief. But your father frowns and takes you aside.\n\n\"Listen to me, son. If you go as a soldier, you will come back as a soldier. And when Tiamat has fallen, who will set in order what remains? An assembly that was afraid. A shapeless world, decided by many voices that cannot agree.\n\n\"Ask that your word fix the destinies. Not out of pride. Because someone has to.\""
+      },
+      "choices": [
+        {
+          "to": "c5_banquete",
+          "risk": "low",
+          "text": {
+            "es": "Pedir el poder, como dice Ea",
+            "en": "Ask for the power, as Ea says"
+          },
+          "description": {
+            "es": "Tu padre durmió a Apsu, y sabe lo que dice.",
+            "en": "Your father put Apsu to sleep, and he knows what he is saying."
+          }
+        },
+        {
+          "to": "fin_soldado",
+          "risk": "medium",
+          "text": {
+            "es": "Ir como soldado de los dioses",
+            "en": "Go as the soldier of the gods"
+          },
+          "description": {
+            "es": "No quieres ser rey: quieres ganar y volver a casa.",
+            "en": "You do not want to be king: you want to win and go home."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c4_anu",
+      "chapter": 4,
+      "mood": "mysterious",
+      "text": {
+        "es": "Te vuelves hacia Anu, tu abuelo, el que te regaló los vientos.\n\n—¿Cómo es ella?\n\nAnu tarda en contestar.\n\n—No tiene forma, muchacho. O tiene todas. Es el mar, y el mar te mira. Sus monstruos rodean a Kingu como abejas, y Kingu lleva la Tablilla, así que todo lo que él dice, se cumple. Mi palabra no la alcanzó.\n\nAsientes. Entonces miras a Anshar.\n\n—Iré. Pero si he de vencer, que mi palabra fije los destinos, como hoy los fija la de Kingu. Convoquen a la asamblea.\n\nAnshar llama a su visir y lo manda a buscar a todos los dioses.",
+        "en": "You turn to Anu, your grandfather, the one who gave you the winds.\n\n\"What is she like?\"\n\nAnu takes a while to answer.\n\n\"She has no shape, boy. Or she has every shape. She is the sea, and the sea looks back at you. Her monsters swarm around Kingu like bees, and Kingu wears the Tablet, so everything he says comes true. My word could not reach her.\"\n\nYou nod. Then you look at Anshar.\n\n\"I will go. But if I am to win, let my word fix the destinies, as Kingu's does today. Convene the assembly.\"\n\nAnshar calls his vizier and sends him to summon all the gods."
+      },
+      "choices": [
+        {
+          "to": "c5_banquete",
+          "text": {
+            "es": "Esperar a la asamblea",
+            "en": "Wait for the assembly"
+          },
+          "description": {
+            "es": "Los dioses mayores van a venir, y van a decidir.",
+            "en": "The elder gods will come, and they will decide."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_soldado",
+      "chapter": 4,
+      "mood": "peaceful",
+      "text": {
+        "es": "Vas como soldado. Y vences.\n\nTiamat cae. Kingu queda atado. Vuelves a la asamblea con la Tablilla de los Destinos en la mano y la dejas a los pies de Anshar. Los dioses te abrazan, te dan de beber, cantan tu nombre una noche entera.\n\nDespués, discuten. Anu quiere el cuerpo de Tiamat para el cielo. Enlil lo quiere para la tierra. Ea quiere que se respete a la madre. Discuten durante eras, y el cadáver flota, enorme y sin forma, mientras nadie decide.\n\nTú vuelves a la casa de tu padre. A veces sales con tus vientos a mirar el agua quieta. Fuiste el más grande de los dioses durante una batalla. Después, solo un hijo más.",
+        "en": "You go as a soldier. And you win.\n\nTiamat falls. Kingu is bound. You return to the assembly with the Tablet of Destinies in your hand and lay it at Anshar's feet. The gods embrace you, give you drink, sing your name all night long.\n\nThen they argue. Anu wants Tiamat's body for the sky. Enlil wants it for the earth. Ea wants the mother to be respected. They argue for ages, and the corpse floats, vast and shapeless, while no one decides.\n\nYou go back to your father's house. Sometimes you go out with your winds to look at the still water. For one battle, you were the greatest of the gods. After that, just one more son."
+      },
+      "fact": {
+        "es": "Durante siglos, Enlil, dios del aire y señor de Nippur, fue el rey de los dioses. El Enuma Elish traspasa ese papel a Marduk: al final, Enlil le da su propio título, «señor de las tierras».",
+        "en": "For centuries, Enlil, god of the air and lord of Nippur, was king of the gods. The Enuma Elish hands that role to Marduk: at the end, Enlil gives him his own title, \"Lord of the Lands.\""
+      },
+      "ending": {
+        "type": "alternative",
+        "title": {
+          "es": "El soldado de los dioses",
+          "en": "The Soldier of the Gods"
+        }
+      },
+      "choices": []
+    },
+    {
+      "id": "c5_banquete",
+      "chapter": 5,
+      "mood": "sacred",
+      "text": {
+        "es": "Los dioses llegan de todas partes. Lahmu y Lahamu, los más antiguos. Los Igigi, los Anunnaki. Se abrazan en la sala de la asamblea, se sientan a la mesa.\n\nComen pan. Beben cerveza, mucha, y la cerveza dulce les afloja el cuerpo y les quita el miedo. Cantan. Se ríen. Por un rato, se olvidan de Tiamat.\n\nDespués te levantan un trono, frente a tus padres, y te dicen:\n\n—Eres el más honrado entre los grandes dioses. Tu destino no tiene igual. Pero antes, muéstranos que es cierto.\n\nPonen en medio de la sala una constelación.\n\n—Habla, y que desaparezca. Habla otra vez, y que vuelva.",
+        "en": "The gods arrive from every direction. Lahmu and Lahamu, the most ancient. The Igigi, the Anunnaki. They embrace in the assembly hall and sit down at the table.\n\nThey eat bread. They drink beer, a great deal of it, and the sweet beer loosens their limbs and takes away their fear. They sing. They laugh. For a while, they forget Tiamat.\n\nThen they set up a throne for you, before your fathers, and they say:\n\n\"You are the most honored of the great gods. Your destiny has no equal. But first, show us that it is true.\"\n\nIn the middle of the hall they place a constellation.\n\n\"Speak, and let it vanish. Speak again, and let it return.\""
+      },
+      "fact": {
+        "es": "Los mesopotámicos bebían cerveza con pajillas largas, a veces desde una misma jarra, para no tragar los restos del grano. El poema cuenta que los dioses del banquete bebieron hasta quedar alegres y despreocupados.",
+        "en": "The Mesopotamians drank beer through long straws, sometimes from a shared jar, so as not to swallow the bits of grain. The poem says the gods at the banquet drank until they were merry and carefree."
+      },
+      "choices": [
+        {
+          "to": "c5_estrella",
+          "risk": "low",
+          "text": {
+            "es": "Hacer la prueba con calma",
+            "en": "Take the test calmly"
+          },
+          "description": {
+            "es": "Una palabra para borrarla y otra para traerla, nada más.",
+            "en": "One word to erase it and another to bring it back, nothing more."
+          }
+        },
+        {
+          "to": "c5_todas",
+          "risk": "high",
+          "text": {
+            "es": "Borrar todas las estrellas a la vez",
+            "en": "Wipe out all the stars at once"
+          },
+          "description": {
+            "es": "Que sepan de verdad lo que tu palabra puede hacer.",
+            "en": "Let them truly know what your word can do."
+          }
+        },
+        {
+          "to": "c5_ea",
+          "risk": "low",
+          "text": {
+            "es": "Mirar a tu padre antes de hablar",
+            "en": "Look at your father before speaking"
+          },
+          "description": {
+            "es": "Ea sabe de palabras que cambian el mundo.",
+            "en": "Ea knows about words that change the world."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5_estrella",
+      "chapter": 5,
+      "mood": "triumphant",
+      "text": {
+        "es": "Miras la constelación. Hablas.\n\nY ya no está. En su lugar queda el vacío, tan limpio que parece que nunca hubo nada.\n\nHablas otra vez. Y vuelve, estrella por estrella, como si nunca se hubiera ido.\n\nLos dioses se ponen de pie. Se alegran, se inclinan, gritan:\n\n—¡Marduk es rey!\n\nTe dan el cetro, el trono y el bastón de mando. Te dan un arma que nadie puede resistir.\n\n—Ve —dicen—. Corta la vida de Tiamat. Que los vientos lleven su sangre a lugares secretos.",
+        "en": "You look at the constellation. You speak.\n\nAnd it is gone. In its place lies emptiness, so clean it seems nothing was ever there.\n\nYou speak again. And it returns, star by star, as if it had never left.\n\nThe gods rise to their feet. They rejoice, they bow, they shout:\n\n\"Marduk is king!\"\n\nThey give you the scepter, the throne and the staff of rule. They give you a weapon no one can withstand.\n\n\"Go,\" they say. \"Cut off the life of Tiamat. Let the winds carry her blood to secret places.\""
+      },
+      "fact": {
+        "es": "La prueba cambia según la traducción. L. W. King, en 1902, leyó una «vestidura» que desaparece y reaparece; traductores posteriores, como Lambert y Foster, leen una «constelación».",
+        "en": "The test varies by translation. L. W. King, in 1902, read a \"garment\" that vanishes and reappears; later translators, such as Lambert and Foster, read a \"constellation.\""
+      },
+      "choices": [
+        {
+          "to": "c6_armas",
+          "text": {
+            "es": "Prepararte para la guerra",
+            "en": "Prepare for war"
+          },
+          "description": {
+            "es": "Ahora tu palabra manda, y falta que tu brazo también.",
+            "en": "Your word rules now, and your arm must rule too."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5_todas",
+      "chapter": 5,
+      "mood": "dangerous",
+      "text": {
+        "es": "Abres la boca y no hablas para una constelación. Hablas para todas.\n\nEl cielo se apaga. No queda una sola luz. Los dioses gritan en la oscuridad, se buscan las manos, tiran las copas de cerveza. Alguien llora.\n\nTe das cuenta, tarde, de que el miedo no es respeto.\n\nHablas otra vez, y las estrellas vuelven, una por una. Los dioses tardan en levantarse. Cuando lo hacen, gritan «¡Marduk es rey!», pero algunos lo dicen mirando el suelo.\n\nTe dan el cetro, el trono y el bastón de mando. Tú los recibes en silencio. Ahora sabes lo que pesa tu palabra.",
+        "en": "You open your mouth and do not speak to one constellation. You speak to all of them.\n\nThe sky goes dark. Not a single light is left. The gods cry out in the darkness, grope for each other's hands, knock over their cups of beer. Someone weeps.\n\nYou realize, too late, that fear is not respect.\n\nYou speak again, and the stars return, one by one. The gods are slow to get up. When they do, they shout, \"Marduk is king!\" but some of them say it looking at the floor.\n\nThey give you the scepter, the throne and the staff of rule. You receive them in silence. Now you know the weight of your word."
+      },
+      "fact": {
+        "es": "Uno de los cincuenta nombres de Marduk es Neberu, «el cruce». Los astrónomos babilonios solían identificarlo con Júpiter, el astro de Marduk, aunque algunos textos lo asocian con Mercurio.",
+        "en": "One of Marduk's fifty names is Neberu, \"the crossing.\" Babylonian astronomers usually identified it with Jupiter, Marduk's planet, though some texts link it with Mercury."
+      },
+      "choices": [
+        {
+          "to": "c6_armas",
+          "text": {
+            "es": "Prepararte para la guerra",
+            "en": "Prepare for war"
+          },
+          "description": {
+            "es": "Ahora tu palabra manda, y falta que tu brazo también.",
+            "en": "Your word rules now, and your arm must rule too."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5_ea",
+      "chapter": 5,
+      "mood": "sacred",
+      "text": {
+        "es": "Antes de hablar, buscas los ojos de tu padre. Ea no dice nada. Solo te mira, y en esa mirada está todo lo que te enseñó: que las palabras son como el agua, que llenan la forma que les das.\n\nRespiras. Miras la constelación y hablas despacio, sin fuego.\n\nLa constelación desaparece. Hablas otra vez, y vuelve.\n\nLos dioses se ponen de pie y gritan: —¡Marduk es rey! —Te dan el cetro, el trono y el bastón de mando.\n\nEa sonríe apenas. Es el único que no grita. No le hace falta.",
+        "en": "Before you speak, you seek your father's eyes. Ea says nothing. He only looks at you, and in that look is everything he taught you: that words are like water, that they fill whatever shape you give them.\n\nYou take a breath. You look at the constellation and speak slowly, without fire.\n\nThe constellation vanishes. You speak again, and it returns.\n\nThe gods rise to their feet and shout, \"Marduk is king!\" They give you the scepter, the throne and the staff of rule.\n\nEa barely smiles. He is the only one who does not shout. He has no need to."
+      },
+      "choices": [
+        {
+          "to": "c6_armas",
+          "text": {
+            "es": "Prepararte para la guerra",
+            "en": "Prepare for war"
+          },
+          "description": {
+            "es": "Ahora tu palabra manda, y falta que tu brazo también.",
+            "en": "Your word rules now, and your arm must rule too."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6_armas",
+      "chapter": 6,
+      "mood": "epic",
+      "text": {
+        "es": "Haces un arco y lo marcas como tu arma. Le pones flecha y cuerda. Tomas la maza con la mano derecha. Pones el rayo delante de ti y llenas tu cuerpo de llamas.\n\nTejes una red para atrapar a Tiamat, y pones a los cuatro vientos a sostenerla, para que nada de ella escape. Creas siete vientos más: el imhullu, el viento malo, el torbellino, el huracán, y otros que no tienen igual.\n\nLevantas el diluvio, tu gran arma. Subes al carro de la tormenta, tirado por cuatro bestias: la Asesina, la Implacable, la Que Pisotea, la Veloz. En los labios llevas un conjuro. En la mano, una hierba contra el veneno.\n\nKingu te ve venir y pierde el rumbo. Sus monstruos ya no ven claro.",
+        "en": "You make a bow and mark it as your weapon. You fit it with arrow and string. You take up the mace in your right hand. You set the lightning before you and fill your body with flame.\n\nYou weave a net to trap Tiamat, and set the four winds to hold it, so that no part of her can escape. You create seven more winds: the imhullu, the evil wind, the whirlwind, the hurricane, and others without equal.\n\nYou raise the flood, your great weapon. You mount the storm chariot, drawn by four beasts: the Killer, the Pitiless, the Trampler, the Swift. On your lips you carry a spell. In your hand, an herb to counter poison.\n\nKingu sees you coming and loses his bearings. His monsters can no longer see clearly."
+      },
+      "fact": {
+        "es": "El animal de Marduk era el mushhushu, un dragón con cuerpo de serpiente y patas de león y de ave. Decenas de ellos, en ladrillo vidriado, adornan la Puerta de Ishtar de Babilonia, hoy reconstruida en Berlín.",
+        "en": "Marduk's animal was the mushhushu, a dragon with a serpent's body and the legs of a lion and a bird. Dozens of them, in glazed brick, adorn Babylon's Ishtar Gate, now reconstructed in Berlin."
+      },
+      "choices": [
+        {
+          "to": "c6_desafio",
+          "risk": "low",
+          "text": {
+            "es": "Desafiar a Tiamat a combate singular",
+            "en": "Challenge Tiamat to single combat"
+          },
+          "description": {
+            "es": "Que el ejército mire, porque esto es entre ella y tú.",
+            "en": "Let the army watch, for this is between you and her."
+          }
+        },
+        {
+          "to": "c6_paz",
+          "risk": "medium",
+          "text": {
+            "es": "Ofrecerle la paz una última vez",
+            "en": "Offer her peace one last time"
+          },
+          "description": {
+            "es": "Es la madre de todos, y quizás todavía escuche.",
+            "en": "She is the mother of all, and perhaps she will still listen."
+          }
+        },
+        {
+          "to": "c6_kingu",
+          "risk": "high",
+          "text": {
+            "es": "Cargar primero contra Kingu",
+            "en": "Charge at Kingu first"
+          },
+          "description": {
+            "es": "Sin su jefe, el ejército se deshace.",
+            "en": "Without its leader, the army falls apart."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6_desafio",
+      "chapter": 6,
+      "mood": "dangerous",
+      "text": {
+        "es": "Levantas el diluvio y le hablas a Tiamat:\n\n—¿Por qué te levantaste con tanta soberbia? Los hijos gritaron, y tú, que los diste a luz, los odias. Hiciste de Kingu tu esposo y le diste lo que no le correspondía. Ármate, entonces. Prepara a tu ejército. Tú y yo, en combate singular.\n\nTiamat oye tus palabras y pierde la razón. Grita, fuerte, salvaje. Sus raíces tiemblan desde el fondo. Recita un conjuro, lanza un hechizo, y los dioses de su ejército afilan las armas.\n\nElla avanza. Tú avanzas.",
+        "en": "You raise the flood and speak to Tiamat:\n\n\"Why have you risen up in such pride? The children cried out, and you, who gave them birth, hate them. You made Kingu your husband and gave him what was not his to have. Arm yourself, then. Ready your army. You and I, in single combat.\"\n\nTiamat hears your words and loses her mind. She shrieks, loud and wild. Her roots shake from the depths. She recites an incantation, casts a spell, and the gods of her army sharpen their weapons.\n\nShe advances. You advance."
+      },
+      "fact": {
+        "es": "La Biblia nombra a Marduk: lo llama Merodac en Jeremías 50:2 y Bel en Isaías 46:1. «Bel», que significa «señor», era su título más común.",
+        "en": "The Bible names Marduk: it calls him Merodach in Jeremiah 50:2 and Bel in Isaiah 46:1. \"Bel,\" meaning \"lord,\" was his most common title."
+      },
+      "choices": [
+        {
+          "to": "c7_combate",
+          "text": {
+            "es": "Encontrarte con ella",
+            "en": "Go to meet her"
+          },
+          "description": {
+            "es": "Ya no hay palabras, solo agua y tormenta.",
+            "en": "No more words now, only water and storm."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6_paz",
+      "chapter": 6,
+      "mood": "mysterious",
+      "text": {
+        "es": "—Madre —le dices—, entrega la Tablilla. Despide a tus monstruos. Nadie más tiene que morir.\n\nEl agua se queda quieta un momento. Después habla, sin girar el cuello:\n\n—Apsu también quería silencio. Tu padre se lo dio. ¿Ahora vienes tú, con sus vientos y su fuego, a pedirme paz? —El mar se ríe, y la risa suena a olas que rompen—. Te daré la paz que le dieron a él.\n\nComprendes que no hay trato posible. La herida es demasiado vieja. Levantas el diluvio y la desafías a combate singular.\n\nElla avanza. Tú avanzas.",
+        "en": "\"Mother,\" you say, \"hand over the Tablet. Send your monsters away. No one else has to die.\"\n\nThe water lies still for a moment. Then it speaks, without turning its head:\n\n\"Apsu wanted silence too. Your father gave it to him. And now you come, with his winds and his fire, to ask me for peace?\" The sea laughs, and the laughter sounds like breaking waves. \"I will give you the peace they gave him.\"\n\nYou understand that no bargain is possible. The wound is too old. You raise the flood and challenge her to single combat.\n\nShe advances. You advance."
+      },
+      "fact": {
+        "es": "Hacia 1100 a. C., el rey Nabucodonosor I recuperó la estatua de Marduk que los elamitas se habían llevado de Babilonia. W. G. Lambert propuso que el Enuma Elish se compuso en esa época, aunque otros lo creen anterior.",
+        "en": "Around 1100 BC, King Nebuchadnezzar I brought back the statue of Marduk that the Elamites had carried off from Babylon. W. G. Lambert proposed that the Enuma Elish was composed at that time, though others think it older."
+      },
+      "choices": [
+        {
+          "to": "c7_combate",
+          "text": {
+            "es": "Encontrarte con ella",
+            "en": "Go to meet her"
+          },
+          "description": {
+            "es": "Ya no hay palabras, solo agua y tormenta.",
+            "en": "No more words now, only water and storm."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6_kingu",
+      "chapter": 6,
+      "mood": "dangerous",
+      "text": {
+        "es": "Lanzas el carro de la tormenta contra el centro del ejército. Los monstruos se apartan. Kingu levanta la mano para dar una orden, y la orden no le sale: tu brillo lo ciega, y la Tablilla le tiembla en el pecho.\n\nEstás a un paso de él cuando el mar entero se levanta a tu espalda.\n\nTiamat no va a dejar que toquen a su esposo. Te das vuelta. Kingu puede esperar: ella no. Levantas el diluvio y la desafías a gritos a combate singular.\n\nElla avanza. Tú avanzas.",
+        "en": "You drive the storm chariot into the heart of the army. The monsters scatter. Kingu raises his hand to give an order, and the order will not come: your radiance blinds him, and the Tablet trembles on his chest.\n\nYou are one step away from him when the whole sea rises at your back.\n\nTiamat will not let anyone touch her husband. You turn around. Kingu can wait: she cannot. You raise the flood and shout your challenge to single combat.\n\nShe advances. You advance."
+      },
+      "choices": [
+        {
+          "to": "c7_combate",
+          "text": {
+            "es": "Encontrarte con ella",
+            "en": "Go to meet her"
+          },
+          "description": {
+            "es": "Ya no hay palabras, solo agua y tormenta.",
+            "en": "No more words now, only water and storm."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7_combate",
+      "chapter": 7,
+      "mood": "dangerous",
+      "text": {
+        "es": "Tiamat y tú se encuentran. Ella, la madre de todo. Tú, el más joven de los grandes dioses.\n\nDespliegas la red y la envuelves. Los cuatro vientos tiran de las puntas, y por un momento el mar entero queda atrapado entre tus manos.\n\nEntonces Tiamat abre la boca. Es más grande que el cielo que todavía no existe. Quiere tragarte, con carro, con vientos, con todo.\n\nDetrás de ti, el imhullu, el viento malo, aúlla esperando tu orden. En tu mano, la maza pesa. En el carcaj, una flecha espera.\n\nKingu y los monstruos miran desde lejos, sin atreverse a moverse. Todo el mundo que todavía no existe depende de lo que hagas ahora.",
+        "en": "You and Tiamat meet. She, the mother of everything. You, the youngest of the great gods.\n\nYou spread the net and wrap her in it. The four winds pull at its corners, and for a moment the whole sea is caught between your hands.\n\nThen Tiamat opens her mouth. It is wider than the sky that does not yet exist. She wants to swallow you, chariot, winds and all.\n\nBehind you, the imhullu, the evil wind, howls as it awaits your command. In your hand, the mace is heavy. In the quiver, an arrow waits.\n\nKingu and the monsters watch from afar, not daring to move. The whole world that does not yet exist depends on what you do now."
+      },
+      "fact": {
+        "es": "Un famoso relieve asirio de Nimrud, en el Museo Británico, suele llamarse «Marduk contra Tiamat». Muchos especialistas creen que en realidad muestra a Ninurta persiguiendo a un monstruo.",
+        "en": "A famous Assyrian relief from Nimrud, in the British Museum, is often called \"Marduk versus Tiamat.\" Many scholars believe it actually shows Ninurta pursuing a monster."
+      },
+      "choices": [
+        {
+          "to": "c7_imhullu",
+          "risk": "medium",
+          "text": {
+            "es": "Lanzar el imhullu dentro de su boca",
+            "en": "Hurl the imhullu into her mouth"
+          },
+          "description": {
+            "es": "Que el viento malo le impida cerrar los labios.",
+            "en": "Let the evil wind keep her from closing her lips."
+          }
+        },
+        {
+          "to": "c7_red",
+          "risk": "low",
+          "text": {
+            "es": "Tensar la red y aguantar",
+            "en": "Pull the net tight and hold on"
+          },
+          "description": {
+            "es": "Que los cuatro vientos la sujeten hasta que se canse.",
+            "en": "Let the four winds hold her until she tires."
+          }
+        },
+        {
+          "to": "fin_tragado",
+          "risk": "high",
+          "text": {
+            "es": "Saltar dentro de su boca con la maza",
+            "en": "Leap into her mouth with the mace"
+          },
+          "description": {
+            "es": "Golpearla desde adentro, donde nadie la ha herido.",
+            "en": "Strike her from within, where no one has ever wounded her."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7_imhullu",
+      "chapter": 7,
+      "mood": "triumphant",
+      "text": {
+        "es": "Sueltas el imhullu. El viento malo entra en su boca abierta, y Tiamat ya no puede cerrar los labios.\n\nLos vientos furiosos le llenan el vientre. Su cuerpo se hincha. Su boca queda abierta de par en par.\n\nTensas el arco. La flecha vuela, le parte el vientre, le corta las entrañas, le atraviesa el corazón.\n\nTiamat se queda quieta. La madre de los dioses, la que mezcló sus aguas con Apsu cuando nada tenía nombre, ha muerto.\n\nTe paras sobre su cuerpo. Alrededor, su ejército mira, sin poder creerlo.",
+        "en": "You release the imhullu. The evil wind rushes into her open mouth, and Tiamat can no longer close her lips.\n\nThe raging winds fill her belly. Her body swells. Her mouth gapes wide.\n\nYou draw the bow. The arrow flies, splits her belly, cuts through her insides, pierces her heart.\n\nTiamat lies still. The mother of the gods, she who mingled her waters with Apsu when nothing had a name, is dead.\n\nYou stand over her body. All around, her army watches, unable to believe it."
+      },
+      "fact": {
+        "es": "Muchos especialistas vinculan el nombre de Tiamat con «tehom», el abismo de las aguas que menciona el Génesis hebreo en su segundo versículo.",
+        "en": "Many scholars link the name Tiamat with \"tehom,\" the watery deep mentioned in the second verse of the Hebrew Genesis."
+      },
+      "choices": [
+        {
+          "to": "c7_tablilla",
+          "text": {
+            "es": "Volverte hacia su ejército",
+            "en": "Turn toward her army"
+          },
+          "description": {
+            "es": "Los monstruos tiemblan, y Kingu también.",
+            "en": "The monsters tremble, and so does Kingu."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7_red",
+      "chapter": 7,
+      "mood": "dangerous",
+      "text": {
+        "es": "Tensas la red. Tiamat se retuerce, y la red cruje. Los cuatro vientos aguantan, pero el sur se dobla y el norte jadea.\n\nElla vuelve a abrir la boca, más grande que antes. Esta vez no esperas: sueltas el imhullu, y el viento malo entra en ella. Ya no puede cerrar los labios. Los vientos le llenan el vientre hasta hincharlo.\n\nTensas el arco. La flecha le parte el vientre y le atraviesa el corazón.\n\nTiamat se queda quieta. Te paras sobre su cuerpo, con los brazos temblando. Alrededor, su ejército mira, sin poder creerlo.",
+        "en": "You pull the net tight. Tiamat thrashes, and the net creaks. The four winds hold, but the south wind bends and the north wind gasps.\n\nShe opens her mouth again, wider than before. This time you do not wait: you release the imhullu, and the evil wind rushes into her. She can no longer close her lips. The winds fill her belly until it swells.\n\nYou draw the bow. The arrow splits her belly and pierces her heart.\n\nTiamat lies still. You stand over her body, your arms trembling. All around, her army watches, unable to believe it."
+      },
+      "choices": [
+        {
+          "to": "c7_tablilla",
+          "text": {
+            "es": "Volverte hacia su ejército",
+            "en": "Turn toward her army"
+          },
+          "description": {
+            "es": "Los monstruos tiemblan, y Kingu también.",
+            "en": "The monsters tremble, and so does Kingu."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_tragado",
+      "chapter": 7,
+      "mood": "tragic",
+      "text": {
+        "es": "Saltas del carro con la maza en alto y entras en la boca de Tiamat.\n\nAdentro no hay carne que golpear. Hay agua, oscura y salada, que no termina. Golpeas y golpeas, y la maza solo levanta espuma. Detrás de ti, los labios de Tiamat se cierran, y el imhullu, que esperaba tu orden, se queda afuera, aullando solo.\n\nLos dioses ven cómo el mar se traga a su campeón. Kingu, con la Tablilla en el pecho, dice que la guerra terminó, y su palabra se cumple.\n\nYa no hay quien fije otros destinos. Los dioses jóvenes se dispersan, y el mundo se queda sin forma, en el vientre de una madre que ya no quería hijos. Tú sigues ahí, golpeando el agua.",
+        "en": "You leap from the chariot with the mace raised high and plunge into Tiamat's mouth.\n\nInside there is no flesh to strike. There is water, dark and salty, without end. You strike and strike, and the mace only stirs up foam. Behind you, Tiamat's lips close, and the imhullu, which was waiting for your command, is left outside, howling alone.\n\nThe gods watch the sea swallow their champion. Kingu, with the Tablet on his chest, declares the war over, and his word comes true.\n\nNo one is left to fix other destinies. The young gods scatter, and the world remains shapeless, in the belly of a mother who no longer wanted children. You are still in there, striking the water."
+      },
+      "fact": {
+        "es": "Aunque hoy se la imagina como un dragón, el poema nunca describe a Tiamat con claridad. Menciona su boca, su vientre, sus ojos, sus ubres y su cola, pero no dice qué forma tiene.",
+        "en": "Although she is imagined today as a dragon, the poem never describes Tiamat clearly. It mentions her mouth, belly, eyes, udders and tail, but never says what shape she has."
+      },
+      "ending": {
+        "type": "tragic",
+        "title": {
+          "es": "En el vientre del mar",
+          "en": "In the Belly of the Sea"
+        }
+      },
+      "choices": []
+    },
+    {
+      "id": "c7_tablilla",
+      "chapter": 7,
+      "mood": "epic",
+      "text": {
+        "es": "El ejército de Tiamat se rompe. Los dioses que la apoyaban intentan huir, pero tu red los alcanza: quedan atrapados, llorando, con las armas rotas. Los once monstruos, los que daban miedo con solo mirarlos, terminan atados con cuerdas, bajo tus pies.\n\nY Kingu. Lo atas y lo cuentas entre los vencidos. Le arrancas la Tablilla de los Destinos, que nunca le correspondió. La sellas con tu sello y te la cuelgas al pecho.\n\nDespués vuelves junto a Tiamat. Con la maza le partes el cráneo. Cortas sus venas, y el viento del norte se lleva su sangre a lugares secretos.\n\nSu cuerpo enorme flota delante de ti. Todo el mundo que no existe está ahí, esperando.",
+        "en": "Tiamat's army breaks. The gods who stood with her try to flee, but your net catches them: they are trapped, weeping, their weapons broken. The eleven monsters, so fearsome that just looking at them was terrifying, end up bound with ropes beneath your feet.\n\nAnd Kingu. You bind him and count him among the defeated. You tear from him the Tablet of Destinies, which was never his to hold. You seal it with your seal and hang it on your own chest.\n\nThen you go back to Tiamat. With the mace you split her skull. You cut her veins, and the north wind carries her blood away to secret places.\n\nHer vast body floats before you. The whole world that does not exist is there, waiting."
+      },
+      "fact": {
+        "es": "Según el poema, Marduk no destruye a los once monstruos: los ata, y después pone imágenes de ellos en la entrada del Apsu, como una señal para que nunca se olvide.",
+        "en": "According to the poem, Marduk does not destroy the eleven monsters: he binds them, and later places images of them at the entrance to the Apsu, as a sign that must never be forgotten."
+      },
+      "choices": [
+        {
+          "to": "c8_cielo",
+          "risk": "low",
+          "text": {
+            "es": "Partirla en dos, como un pez",
+            "en": "Split her in two, like a fish"
+          },
+          "description": {
+            "es": "Una mitad arriba y la otra abajo: así se empieza un mundo.",
+            "en": "One half above and the other below: that is how a world begins."
+          }
+        },
+        {
+          "to": "c7_guardar",
+          "risk": "medium",
+          "text": {
+            "es": "Escribir tu propio destino en la Tablilla",
+            "en": "Write your own destiny on the Tablet"
+          },
+          "description": {
+            "es": "La tienes en el pecho, y nadie podría impedírtelo.",
+            "en": "It hangs on your chest, and no one could stop you."
+          }
+        },
+        {
+          "to": "fin_mar",
+          "risk": "high",
+          "text": {
+            "es": "Dejar su cuerpo entero, en paz",
+            "en": "Leave her body whole, in peace"
+          },
+          "description": {
+            "es": "Era la madre de todos, y ya sufrió bastante.",
+            "en": "She was the mother of all, and she has suffered enough."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7_guardar",
+      "chapter": 7,
+      "mood": "mysterious",
+      "text": {
+        "es": "Tocas la Tablilla con un dedo. Está tibia. Puedes sentir cada destino escrito en ella, y el espacio vacío donde caben los que todavía no existen.\n\nBastaría una palabra. Rey para siempre, solo, sin asamblea. Nadie podría discutirlo.\n\nPero recuerdas a Kingu, con la Tablilla en el pecho y los ojos perdidos, y entiendes que nunca la tuvo: ella lo tuvo a él.\n\nLa sueltas. Decides regalársela a Anu, tu abuelo, el que te dio los vientos. Y te vuelves hacia el cuerpo de Tiamat, que espera.",
+        "en": "You touch the Tablet with one finger. It is warm. You can feel every destiny written on it, and the empty space where the ones that do not yet exist would fit.\n\nOne word would be enough. King forever, alone, with no assembly. No one could dispute it.\n\nBut you remember Kingu, with the Tablet on his chest and that lost look in his eyes, and you understand that he never held it: it held him.\n\nYou let it go. You decide to give it to Anu, your grandfather, the one who gave you the winds. And you turn back to Tiamat's body, which is waiting."
+      },
+      "fact": {
+        "es": "El poema cuenta que Marduk, después de la victoria, tomó la Tablilla de los Destinos que le había quitado a Kingu y se la entregó a Anu como regalo.",
+        "en": "The poem says that after his victory Marduk took the Tablet of Destinies he had seized from Kingu and gave it to Anu as a gift."
+      },
+      "choices": [
+        {
+          "to": "c8_cielo",
+          "text": {
+            "es": "Partir el cuerpo en dos",
+            "en": "Split the body in two"
+          },
+          "description": {
+            "es": "Hay un mundo que hacer, y nadie más lo va a hacer.",
+            "en": "There is a world to make, and no one else will make it."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_mar",
+      "chapter": 8,
+      "mood": "tragic",
+      "text": {
+        "es": "Te sientas junto a ella y no levantas el arma. Era la madre de todos, y ya sufrió bastante.\n\nPero un cuerpo como el de Tiamat no descansa. Sus aguas siguen saliendo, sin orilla, sin cerrojo, sin nadie que les diga hasta dónde. Suben sin fin. Llegan a la puerta del Apsu. Entran en la casa de Ea.\n\nLos dioses se suben a lo más alto que encuentran, y cuando ya no hay nada más alto, flotan, abrazados, sobre un mar que no termina.\n\nNo hay cielo arriba ni tierra abajo. Solo agua salada, en todas direcciones, y tú en medio, con la Tablilla en el pecho, fijando destinos para un mundo que nunca va a tener forma.",
+        "en": "You sit beside her and do not raise your weapon. She was the mother of all, and she has suffered enough.\n\nBut a body like Tiamat's does not rest. Her waters keep pouring out, with no shore, no bar, no one to tell them how far to go. They rise without end. They reach the door of the Apsu. They flood into the house of Ea.\n\nThe gods climb to the highest places they can find, and when there is nothing higher left, they float, clinging to one another, on a sea that never ends.\n\nThere is no sky above and no earth below. Only salt water, in every direction, and you in the middle, with the Tablet on your chest, fixing destinies for a world that will never have a shape."
+      },
+      "fact": {
+        "es": "Un mapa babilónico, en una tablilla del siglo VI a. C., copia de un original más antiguo, hoy en el Museo Británico, muestra la tierra como un disco rodeado por un anillo de agua salada, llamado «río amargo».",
+        "en": "A Babylonian map, on a 6th-century BC tablet copied from an older original and now in the British Museum, shows the earth as a disc surrounded by a ring of salt water called the \"Bitter River.\""
+      },
+      "ending": {
+        "type": "tragic",
+        "title": {
+          "es": "El mar sin orillas",
+          "en": "The Shoreless Sea"
+        }
+      },
+      "choices": []
+    },
+    {
+      "id": "c8_cielo",
+      "chapter": 8,
+      "mood": "triumphant",
+      "text": {
+        "es": "Partes a Tiamat en dos, como un pez que se pone a secar.\n\nCon una mitad haces el cielo. Le pones un cerrojo y guardianes, y les ordenas que no dejen escapar sus aguas. Con la otra mitad haces la tierra. Le amontonas montañas sobre la cabeza. De sus dos ojos haces brotar el Tigris y el Éufrates.\n\nFijas en el cielo las moradas de los grandes dioses y las estrellas que los representan. Divides el año en meses. Haces brillar a la luna y le confías la noche.\n\nLos dioses miran el mundo nuevo, y después se miran las manos.\n\n—¿Quién va a cavar los canales? —preguntan—. ¿Quién va a trabajar esta tierra?\n\nTraen a Kingu, atado, ante ti.",
+        "en": "You split Tiamat in two, like a fish for drying.\n\nFrom one half you make the sky. You fix a bar across it and post guards, and you order them not to let her waters escape. From the other half you make the earth. You heap mountains upon her head. From her two eyes you make the Tigris and the Euphrates spring forth.\n\nIn the sky you fix the stations of the great gods and the stars that stand for them. You divide the year into months. You make the moon shine forth and entrust the night to it.\n\nThe gods look at the new world, and then they look at their hands.\n\n\"Who will dig the canals?\" they ask. \"Who will work this land?\"\n\nThey bring Kingu before you, bound."
+      },
+      "fact": {
+        "es": "El poema dice que Marduk hizo brotar el Éufrates y el Tigris de los ojos de Tiamat. Toda la vida de Mesopotamia, «la tierra entre ríos», dependía de esos dos ríos.",
+        "en": "The poem says that Marduk made the Euphrates and the Tigris flow from Tiamat's eyes. All life in Mesopotamia, \"the land between rivers,\" depended on those two rivers."
+      },
+      "choices": [
+        {
+          "to": "c8_kingu",
+          "risk": "low",
+          "text": {
+            "es": "Que la asamblea juzgue a Kingu",
+            "en": "Let the assembly judge Kingu"
+          },
+          "description": {
+            "es": "Él levantó la guerra, así que la asamblea decide.",
+            "en": "He stirred up the war, so the assembly decides."
+          }
+        },
+        {
+          "to": "c8_perdon",
+          "risk": "medium",
+          "text": {
+            "es": "Perdonar a Kingu",
+            "en": "Pardon Kingu"
+          },
+          "description": {
+            "es": "Ya perdió todo, y solo obedecía a su madre.",
+            "en": "He has already lost everything, and he only obeyed his mother."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c8_perdon",
+      "chapter": 8,
+      "mood": "sacred",
+      "text": {
+        "es": "—Lo perdono —dices.\n\nLa asamblea calla. Ea se acerca y te habla con calma:\n\n—Hijo, dijiste que crearías un ser que haga el trabajo de los dioses, y que se llamaría hombre. Pero hace falta la sangre de un dios. Si no es la de Kingu, ¿de quién?\n\nMiras a Kingu, que tiembla. Miras a los dioses, que no quieren cargar canastas de barro hasta el fin de los tiempos. Te miras las manos.",
+        "en": "\"I pardon him,\" you say.\n\nThe assembly falls silent. Ea comes closer and speaks to you calmly:\n\n\"Son, you said you would create a being to do the work of the gods, and that it would be called man. But that takes the blood of a god. If not Kingu's, then whose?\"\n\nYou look at Kingu, who is trembling. You look at the gods, who do not want to carry baskets of mud until the end of time. You look at your hands."
+      },
+      "fact": {
+        "es": "Beroso, sacerdote babilonio del siglo III a. C., cuenta otra versión: Bel, es decir Marduk, se cortó la cabeza, y los dioses mezclaron su sangre con tierra para crear a los humanos.",
+        "en": "Berossus, a Babylonian priest of the 3rd century BC, tells another version: Bel, that is, Marduk, cut off his own head, and the gods mixed his blood with earth to create humans."
+      },
+      "choices": [
+        {
+          "to": "c8_kingu",
+          "risk": "low",
+          "text": {
+            "es": "Dejar que decida la asamblea",
+            "en": "Let the assembly decide"
+          },
+          "description": {
+            "es": "No puedes cargar con todo, así que hablará la asamblea.",
+            "en": "You cannot carry everything, so the assembly will speak."
+          }
+        },
+        {
+          "to": "fin_sangre",
+          "risk": "medium",
+          "text": {
+            "es": "Ofrecer tu propia sangre",
+            "en": "Offer your own blood"
+          },
+          "description": {
+            "es": "Si alguien tiene que dar su sangre, que sea quien manda.",
+            "en": "If someone has to give their blood, let it be the one who rules."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c8_kingu",
+      "chapter": 8,
+      "mood": "sacred",
+      "text": {
+        "es": "La asamblea habla:\n\n—Fue Kingu quien hizo la guerra. Fue Kingu quien empujó a Tiamat.\n\nLo atan y lo llevan ante Ea. Le cortan las venas. De su sangre, Ea crea a la humanidad, y le impone el trabajo de los dioses, para que los dioses descansen.\n\nLos Anunnaki, agradecidos, te dicen: —Construiremos para ti un santuario.\n\nDurante un año entero hacen ladrillos. Al segundo año, levantan el Esagila, tu templo, con la cabeza tan alta como el Apsu es profundo. Junto a él, una ciudad: Babilonia. Allí, en tu casa, los dioses se sientan a un banquete.",
+        "en": "The assembly speaks:\n\n\"It was Kingu who made the war. It was Kingu who drove Tiamat on.\"\n\nThey bind him and bring him before Ea. They cut his veins. From his blood, Ea creates humankind, and lays upon it the work of the gods, so that the gods may rest.\n\nThe Anunnaki, grateful, say to you: \"We will build you a sanctuary.\"\n\nFor a whole year they make bricks. In the second year, they raise the Esagila, your temple, its head as high as the Apsu is deep. Beside it, a city: Babylon. There, in your house, the gods sit down to a banquet."
+      },
+      "fact": {
+        "es": "El Esagila, «casa de techo alto», era el templo de Marduk en Babilonia. Junto a él se alzaba el zigurat Etemenanki, «casa del fundamento del cielo y de la tierra», que muchos asocian con la Torre de Babel.",
+        "en": "The Esagila, \"house whose top is high,\" was Marduk's temple in Babylon. Beside it rose the ziggurat Etemenanki, \"house of the foundation of heaven and earth,\" which many associate with the Tower of Babel."
+      },
+      "choices": [
+        {
+          "to": "fin_nombres",
+          "text": {
+            "es": "Escuchar a los dioses",
+            "en": "Listen to the gods"
+          },
+          "description": {
+            "es": "Están por decir algo que va a durar.",
+            "en": "They are about to say something that will last."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_sangre",
+      "chapter": 8,
+      "mood": "peaceful",
+      "text": {
+        "es": "—Usa la mía —le dices a Ea.\n\nTu padre te mira como te miró el día que naciste. Después asiente. Te abre una vena, y tu sangre de dios cae sobre la tierra nueva. Ea la mezcla con barro, con el barro que tus manos sacaron del cuerpo de Tiamat.\n\nAsí nacen los hombres. No del traidor, sino del rey. Cuando trabajan los campos, lo hacen cantando, y no saben por qué.\n\nKingu vive. Va y viene por la tierra nueva, sin Tablilla y sin ejército, y a veces se sienta a mirar trabajar a los hombres.\n\nTú sanas despacio. Babilonia se levanta igual. Pero en ella nadie te llama «el que venció»: te llaman «el que dio su sangre».",
+        "en": "\"Use mine,\" you tell Ea.\n\nYour father looks at you the way he looked at you on the day you were born. Then he nods. He opens one of your veins, and your divine blood falls on the new earth. Ea mixes it with clay, the clay your hands drew from Tiamat's body.\n\nThat is how humans are born. Not from the traitor, but from the king. When they work the fields, they sing as they work, and they do not know why.\n\nKingu lives. He wanders the new earth, with no Tablet and no army, and sometimes he sits down to watch the humans work.\n\nYou heal slowly. Babylon rises all the same. But there, no one calls you \"the one who conquered\": they call you \"the one who gave his blood.\""
+      },
+      "fact": {
+        "es": "En el poema de Atrahasis, más antiguo que el Enuma Elish, los humanos se crean con arcilla mezclada con la carne y la sangre de un dios sacrificado, llamado We-ila (otros leen Geshtu-e).",
+        "en": "In the poem of Atrahasis, older than the Enuma Elish, humans are made from clay mixed with the flesh and blood of a slain god named We-ila (others read Geshtu-e)."
+      },
+      "ending": {
+        "type": "alternative",
+        "title": {
+          "es": "La sangre del rey",
+          "en": "The King's Blood"
+        }
+      },
+      "choices": []
+    },
+    {
+      "id": "fin_nombres",
+      "chapter": 8,
+      "mood": "triumphant",
+      "text": {
+        "es": "En el Esagila, los grandes dioses se sientan a tu alrededor. Anu levanta el arco con el que venciste y lo pone entre las estrellas. Después, uno por uno, empiezan a decir tus nombres.\n\nAsalluhi, el que salva. Tutu, el que renueva. Neberu, el que sostiene el paso de las estrellas. Enlil, el viejo rey de los dioses, te da su propio nombre: «señor de las tierras». Ea dice: —Que se llame como yo.\n\nSon cincuenta nombres. Con cada uno, el mundo que hiciste se vuelve un poco más firme.\n\nQue el padre se los enseñe al hijo. Que el sabio y el pastor los recuerden. Que la tierra sea fértil, y que tú, Marduk, señor de los dioses, nunca seas olvidado.",
+        "en": "In the Esagila, the great gods sit around you. Anu lifts the bow you conquered with and sets it among the stars. Then, one by one, they begin to speak your names.\n\nAsalluhi, the one who saves. Tutu, the one who renews. Neberu, the one who keeps the stars on their course. Enlil, the old king of the gods, gives you his own name: \"Lord of the Lands.\" Ea says: \"Let him be named as I am.\"\n\nThere are fifty names. With each one, the world you made grows a little firmer.\n\nLet the father teach them to the son. Let the wise man and the shepherd remember them. Let the earth be fruitful, and may you, Marduk, lord of the gods, never be forgotten."
+      },
+      "fact": {
+        "es": "Un texto ritual de época tardía indica que, en el festival de Año Nuevo babilonio, el Akitu, el Enuma Elish se recitaba entero ante la estatua de Marduk el cuarto día del mes de Nisan.",
+        "en": "A late ritual text states that at the Babylonian New Year festival, the Akitu, the Enuma Elish was recited in full before the statue of Marduk on the fourth day of the month of Nisan."
+      },
+      "ending": {
+        "type": "myth",
+        "title": {
+          "es": "Los cincuenta nombres",
+          "en": "The Fifty Names"
+        }
+      },
+      "choices": []
+    }
+  ]
+}
