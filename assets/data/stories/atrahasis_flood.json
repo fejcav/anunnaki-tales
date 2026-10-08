@@ -1,0 +1,1296 @@
+{
+  "formatVersion": 1,
+  "adventureId": "atrahasis_flood",
+  "contentVersion": "1.0",
+  "hero": {
+    "name": {
+      "es": "Atrahasis",
+      "en": "Atrahasis"
+    },
+    "description": {
+      "es": "Su nombre significa «el sumamente sabio». Vive en una tierra llena de gente y de ruido, y tiene un don raro entre los hombres: su dios, Enki, le habla, y él sabe escuchar.",
+      "en": "His name means “Exceedingly Wise.” He lives in a land full of people and noise, and he has a gift rare among men: his god, Enki, speaks to him, and he knows how to listen."
+    }
+  },
+  "chapters": [
+    {
+      "number": 1,
+      "title": {
+        "es": "El ruido de la tierra",
+        "en": "The Noise of the Land"
+      }
+    },
+    {
+      "number": 2,
+      "title": {
+        "es": "La puerta de Namtar",
+        "en": "Namtar’s Door"
+      }
+    },
+    {
+      "number": 3,
+      "title": {
+        "es": "El cielo cerrado",
+        "en": "The Sky Shut Tight"
+      }
+    },
+    {
+      "number": 4,
+      "title": {
+        "es": "Los años de hambre",
+        "en": "The Hungry Years"
+      }
+    },
+    {
+      "number": 5,
+      "title": {
+        "es": "El muro de juncos",
+        "en": "The Reed Wall"
+      }
+    },
+    {
+      "number": 6,
+      "title": {
+        "es": "La casa desarmada",
+        "en": "The House Torn Down"
+      }
+    },
+    {
+      "number": 7,
+      "title": {
+        "es": "Siete días y siete noches",
+        "en": "Seven Days and Seven Nights"
+      }
+    },
+    {
+      "number": 8,
+      "title": {
+        "es": "Las moscas sobre la ofrenda",
+        "en": "Flies over the Offering"
+      }
+    }
+  ],
+  "start": "c1_plaga",
+  "scenes": [
+    {
+      "id": "c1_plaga",
+      "chapter": 1,
+      "mood": "dangerous",
+      "text": {
+        "es": "Hace mucho tiempo que los hombres caminan sobre la tierra. Se multiplicaron como el grano en los campos regados. La tierra se volvió ancha, la gente se volvió mucha, y la tierra entera muge como un toro.\n\nLejos, en Nippur, en su casa del Ekur, Enlil no puede dormir. «El ruido de los hombres se me hizo pesado», dice. «Por su alboroto, el sueño no me llega.» Y ordena que la enfermedad baje sobre ellos.\n\nTú eres Atrahasis. Esta mañana, tu vecino no se levantó. Al mediodía, sus hijos tosían. Al atardecer, la fiebre camina por las calles como un perro sin dueño.\n\nTienes un don que los demás no tienen: tu oído está abierto a tu dios, Enki. Y él, a veces, te contesta.",
+        "en": "Men have walked the earth for a long time. They have multiplied like grain in watered fields. The land grew wide, the people grew many, and the whole land bellows like a bull.\n\nFar away, in Nippur, in his house, the Ekur, Enlil cannot sleep. “The noise of mankind has become too much for me,” he says. “Their uproar keeps sleep from me.” And he orders disease to come down on them.\n\nYou are Atrahasis. This morning, your neighbor did not get up. By noon, his children were coughing. By dusk, the fever walks the streets like a stray dog.\n\nYou have a gift the others lack: your ear is open to your god, Enki. And sometimes, he answers."
+      },
+      "fact": {
+        "es": "En acadio, Atrahasis significa «el sumamente sabio». El mismo nombre recibe, como epíteto, Utnapishtim, el sobreviviente del diluvio en la Epopeya de Gilgamesh.",
+        "en": "In Akkadian, Atrahasis means “Exceedingly Wise.” The same name is given, as an epithet, to Utnapishtim, the flood survivor in the Epic of Gilgamesh."
+      },
+      "choices": [
+        {
+          "to": "c1_enki",
+          "risk": "low",
+          "text": {
+            "es": "Ir de noche a hablar con Enki",
+            "en": "Go to Enki in the night"
+          },
+          "description": {
+            "es": "Él es el dios que más quiere a los hombres, y no querrá perderlos.",
+            "en": "He is the god who loves mankind most, and he will not want to lose them."
+          }
+        },
+        {
+          "to": "c1_enfermos",
+          "risk": "medium",
+          "text": {
+            "es": "Quedarte a cuidar a los enfermos",
+            "en": "Stay and tend the sick"
+          },
+          "description": {
+            "es": "Antes de pedir nada, hay que dar de beber a los que arden.",
+            "en": "Before asking for anything, someone must bring water to the fevered."
+          }
+        },
+        {
+          "to": "c1_ekur",
+          "risk": "high",
+          "text": {
+            "es": "Viajar a Nippur a enfrentar a Enlil",
+            "en": "Travel to Nippur to confront Enlil"
+          },
+          "description": {
+            "es": "Si él mandó la enfermedad, que te lo diga a la cara.",
+            "en": "If he sent the disease, let him say so to your face."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c1_enki",
+      "chapter": 1,
+      "mood": "sacred",
+      "text": {
+        "es": "Esperas a que la ciudad se duerma y te arrodillas en el santuario de tu casa, frente a la imagen de Enki. No lo llamas a gritos. Le hablas como se le habla a un padre.\n\n—Señor, la gente gime. Tu enfermedad se come la tierra. ¿Hasta cuándo?\n\nAfuera, alguien tose en la oscuridad. Una lámpara se apaga.\n\nEntonces, desde abajo, desde el agua dulce que corre bajo la tierra, sube una voz que solo tú oyes. Es tranquila, como un pozo profundo. Es la voz de Enki, y empieza a responderte.",
+        "en": "You wait for the city to fall asleep, then kneel at the shrine in your house, before the image of Enki. You do not shout for him. You speak to him the way one speaks to a father.\n\n“Lord, the people are groaning. Your disease is devouring the land. How long?”\n\nOutside, someone coughs in the dark. A lamp goes out.\n\nThen, from below, from the sweet water that runs beneath the earth, a voice rises that only you can hear. It is calm, like a deep well. It is the voice of Enki, and he begins to answer."
+      },
+      "fact": {
+        "es": "Enki, llamado Ea en acadio, era el dios del Apsu, el océano de agua dulce bajo la tierra, y de la sabiduría. En el poema es el único dios que siempre defiende a los hombres.",
+        "en": "Enki, called Ea in Akkadian, was the god of the Apsu, the freshwater ocean beneath the earth, and of wisdom. In the poem he is the only god who always defends mankind."
+      },
+      "choices": [
+        {
+          "to": "c2_namtar",
+          "text": {
+            "es": "Escuchar la respuesta de Enki",
+            "en": "Listen to Enki’s answer"
+          },
+          "description": {
+            "es": "Tu dios ya sabe lo que pasa, y sabe qué hacer.",
+            "en": "Your god already knows what is happening, and what to do."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c1_enfermos",
+      "chapter": 1,
+      "mood": "peaceful",
+      "text": {
+        "es": "Llenas jarras en el canal y vas de casa en casa. Mojas paños para las frentes que arden. Sostienes la cabeza de un niño para que beba, y le cantas la canción de cuna que te enseñó tu madre.\n\nNo alcanza. Por cada fiebre que baja, otras dos suben. Los sanadores recitan sus conjuros y queman hierbas, pero la enfermedad es más vieja que sus palabras.\n\nAl amanecer, con las manos todavía húmedas, entiendes que esto no es un mal cualquiera. Es un castigo. Y los castigos de los dioses solo se discuten con los dioses. Esa noche, te arrodillas frente a la imagen de Enki.",
+        "en": "You fill jars at the canal and go from house to house. You soak cloths for burning foreheads. You hold up a child’s head so he can drink, and sing him the lullaby your mother taught you.\n\nIt is not enough. For every fever that breaks, two more rise. The healers chant their spells and burn their herbs, but the disease is older than their words.\n\nAt dawn, your hands still damp, you understand that this is no ordinary sickness. It is a punishment. And a punishment from the gods can only be taken up with the gods. That night, you kneel before the image of Enki."
+      },
+      "fact": {
+        "es": "Los mesopotámicos tenían dos clases de sanadores: el asû, que usaba plantas y ungüentos, y el ashipu, que recitaba conjuros contra los demonios de la enfermedad. A menudo trabajaban juntos.",
+        "en": "The Mesopotamians had two kinds of healers: the asû, who used plants and ointments, and the ashipu, who recited spells against the demons of disease. They often worked together."
+      },
+      "choices": [
+        {
+          "to": "c2_namtar",
+          "text": {
+            "es": "Pedirle ayuda a Enki",
+            "en": "Ask Enki for help"
+          },
+          "description": {
+            "es": "Si alguien sabe cómo parar esto, es tu dios.",
+            "en": "If anyone knows how to stop this, it is your god."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c1_ekur",
+      "chapter": 1,
+      "mood": "dangerous",
+      "text": {
+        "es": "Caminas días enteros río arriba hasta Nippur. Por el camino ves aldeas vacías y campos que nadie cosecha.\n\nEl Ekur, la casa de Enlil, se levanta como una montaña de ladrillo. En la puerta te detiene Nusku, su visir, con una lámpara en la mano.\n\n—El señor duerme —dice—. Por fin duerme. ¿Vienes a despertarlo con más ruido?\n\nDetrás de ti, los peregrinos tosen. Un hombre cae de rodillas en la escalinata. Comprendes que aquí nadie te va a escuchar: aquí lo único que se pide es silencio.",
+        "en": "You walk for days upriver to Nippur. Along the way you see empty villages and fields no one is harvesting.\n\nThe Ekur, the house of Enlil, rises like a mountain of brick. At the gate you are stopped by Nusku, his vizier, a lamp in his hand.\n\n“The lord is sleeping,” he says. “At last he sleeps. Have you come to wake him with more noise?”\n\nBehind you, the pilgrims cough. A man falls to his knees on the stairs. You realize no one here will listen to you: here, all anyone asks for is silence."
+      },
+      "fact": {
+        "es": "El Ekur, «casa montaña», era el templo de Enlil en Nippur. Nippur no fue la capital de ningún gran reino, pero durante siglos fue el centro religioso de Sumer.",
+        "en": "The Ekur, “Mountain House,” was Enlil’s temple in Nippur. Nippur was never the capital of a great kingdom, but for centuries it was the religious center of Sumer."
+      },
+      "choices": [
+        {
+          "to": "c2_namtar",
+          "risk": "low",
+          "text": {
+            "es": "Volver a casa y hablar con Enki",
+            "en": "Go home and speak with Enki"
+          },
+          "description": {
+            "es": "Enlil no escucha a los hombres, pero tu dios sí.",
+            "en": "Enlil does not listen to men, but your god does."
+          }
+        },
+        {
+          "to": "fin_nippur",
+          "risk": "high",
+          "text": {
+            "es": "Gritar hasta que Enlil despierte",
+            "en": "Shout until Enlil wakes"
+          },
+          "description": {
+            "es": "Que el dios que no quiere oír oiga de una vez lo que hizo.",
+            "en": "Let the god who will not hear finally hear what he has done."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_nippur",
+      "chapter": 1,
+      "mood": "tragic",
+      "text": {
+        "es": "Levantas los brazos frente al Ekur y gritas. Gritas el nombre de Enlil, el de tu ciudad, el de cada vecino muerto. Los peregrinos te miran con miedo. Nusku cierra las puertas.\n\nGritas hasta que la voz se te rompe. Esa noche, en la escalinata, la fiebre te encuentra a ti también.\n\nMueres en Nippur, lejos de tu casa y de tu dios. Enki te busca en el silencio de tu santuario y no te encuentra. Ya no queda un oído abierto entre los hombres.\n\nCuando Enlil manda la sequía, nadie sabe a quién rezar. Cuando manda el hambre, nadie sabe cómo resistir. Y cuando, al final, decide el diluvio, no hay nadie a quien avisarle. Las aguas suben sobre una tierra callada, que es lo que Enlil quería.",
+        "en": "You raise your arms before the Ekur and shout. You shout Enlil’s name, your city’s name, the name of every dead neighbor. The pilgrims stare at you in fear. Nusku shuts the gates.\n\nYou shout until your voice breaks. That night, on the stairs, the fever finds you too.\n\nYou die in Nippur, far from your home and your god. Enki searches for you in the silence of your shrine and does not find you. There is no open ear left among men.\n\nWhen Enlil sends the drought, no one knows whom to pray to. When he sends the famine, no one knows how to endure. And when, at last, he decides on the flood, there is no one to warn. The waters rise over a silent land, which is what Enlil wanted."
+      },
+      "fact": {
+        "es": "En el poema, Nusku es el visir de Enlil: es él quien lo despierta cuando los dioses Igigi, en rebeldía, rodean su casa en plena noche.",
+        "en": "In the poem, Nusku is Enlil’s vizier: he is the one who wakes him when the rebellious Igigi gods surround his house in the dead of night."
+      },
+      "ending": {
+        "type": "tragic",
+        "title": {
+          "es": "El grito en Nippur",
+          "en": "The Cry at Nippur"
+        }
+      },
+      "choices": []
+    },
+    {
+      "id": "c2_namtar",
+      "chapter": 2,
+      "mood": "sacred",
+      "text": {
+        "es": "—Atrahasis —dice Enki—, Enlil no duerme por el ruido de ustedes. Por eso mandó a Namtar, y la enfermedad es su mano.\n\n»Escúchame bien. Que los heraldos griten por toda la tierra. Que nadie reverencie a sus dioses ni rece a sus diosas. Que todos busquen la puerta de Namtar y lleven ante ella pan horneado. Que la ofrenda de harina llegue a él. Le dará vergüenza recibir regalos de quienes está matando, y levantará la mano.\n\nLa voz se apaga. Te quedas solo, con el corazón golpeándote el pecho. El plan es extraño: dejar de rezar a todos los dioses para llevarle pan a uno solo, el que está matando.\n\nPero es tu dios quien lo dice.",
+        "en": "“Atrahasis,” says Enki, “Enlil cannot sleep because of your noise. So he sent Namtar, and the disease is his hand.\n\n“Listen carefully. Let the heralds cry out across the land. Let no one revere their gods or pray to their goddesses. Let everyone seek out Namtar’s door and bring baked bread before it. Let the offering of flour reach him. He will be ashamed to take gifts from those he is killing, and he will lift his hand.”\n\nThe voice fades. You are left alone, your heart pounding. The plan is strange: stop praying to every god to bring bread to just one, the one doing the killing.\n\nBut it is your god who says so."
+      },
+      "fact": {
+        "es": "Namtar, cuyo nombre significa «destino» o «lo que fue decidido», era un dios de la muerte y de las pestes. En otros mitos es el visir de Ereshkigal, la reina del inframundo.",
+        "en": "Namtar, whose name means “fate” or “that which was decided,” was a god of death and plague. In other myths he is the vizier of Ereshkigal, queen of the underworld."
+      },
+      "choices": [
+        {
+          "to": "c2_ancianos",
+          "risk": "low",
+          "text": {
+            "es": "Llevar el mensaje a los ancianos",
+            "en": "Take the message to the elders"
+          },
+          "description": {
+            "es": "Si toda la tierra obedece a la vez, Namtar no podrá ignorarlo.",
+            "en": "If the whole land obeys at once, Namtar cannot ignore it."
+          }
+        },
+        {
+          "to": "c2_porque",
+          "risk": "low",
+          "text": {
+            "es": "Preguntarle a Enki por qué nos hicieron",
+            "en": "Ask Enki why we were made"
+          },
+          "description": {
+            "es": "Antes de obedecer, quieres entender de dónde viene todo esto.",
+            "en": "Before you obey, you want to understand where all this comes from."
+          }
+        },
+        {
+          "to": "c2_pan",
+          "risk": "medium",
+          "text": {
+            "es": "Hornear el pan y llevarlo tú mismo",
+            "en": "Bake the bread and bring it yourself"
+          },
+          "description": {
+            "es": "No hay tiempo de convencer a nadie: alguien tiene que empezar.",
+            "en": "There is no time to convince anyone: someone has to start."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2_ancianos",
+      "chapter": 2,
+      "mood": "epic",
+      "text": {
+        "es": "Reúnes a los ancianos en la puerta de la ciudad y les repites, palabra por palabra, lo que dijo tu dios.\n\nAl principio te miran como a un loco. Después, uno que perdió dos hijos se levanta y dice: —¿Qué más podemos perder? —Y otro lo sigue.\n\nLos heraldos salen a gritar. La gente deja de visitar los templos de sus dioses. Todos hornean pan y lo llevan a la puerta de Namtar, hasta que las hogazas se amontonan como piedras.\n\nNamtar mira los regalos y siente vergüenza. Levanta la mano. La fiebre se va de la tierra como el agua de un campo después de la crecida.",
+        "en": "You gather the elders at the city gate and repeat, word for word, what your god said.\n\nAt first they look at you as if you were mad. Then one who lost two sons stands up and says, “What more can we lose?” And another follows him.\n\nThe heralds go out crying. People stop visiting the temples of their gods. Everyone bakes bread and brings it to Namtar’s door, until the loaves are piled up like stones.\n\nNamtar looks at the gifts and feels ashamed. He lifts his hand. The fever leaves the land like water draining from a field when the river falls."
+      },
+      "choices": [
+        {
+          "to": "c3_sequia",
+          "text": {
+            "es": "Volver a vivir",
+            "en": "Go back to living"
+          },
+          "description": {
+            "es": "La tierra respira otra vez, por un tiempo.",
+            "en": "The land breathes again, for a while."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2_porque",
+      "chapter": 2,
+      "mood": "mysterious",
+      "text": {
+        "es": "—¿Por qué nos hicieron, si tanto les molestamos?\n\nEnki tarda en contestar.\n\n—Antes de ustedes, los dioses trabajaban. Los dioses menores, los Igigi, cavaban los canales y cargaban la tierra. Cavaron el Tigris, cavaron el Éufrates, durante años sin fin. Una noche quemaron sus herramientas y rodearon la casa de Enlil, gritando.\n\n»Yo propuse una salida. Matamos a un dios, We-ila, el que tenía entendimiento. Con su carne y su sangre, la diosa madre amasó la arcilla, y todos los dioses escupieron sobre ella. Así nacieron ustedes, para cargar con el trabajo. Por eso tienen un espíritu, y un tambor que les late en el pecho.\n\n»Ahora son muchos, y hacen ruido. Pero no voy a dejar que los borren. Haz lo que te dije.",
+        "en": "“Why did you make us, if we bother you so much?”\n\nEnki is slow to answer.\n\n“Before you, the gods did the work. The lesser gods, the Igigi, dug the canals and carried the earth. They dug the Tigris, they dug the Euphrates, for endless years. One night they burned their tools and surrounded Enlil’s house, shouting.\n\n“I proposed a way out. We slew a god, We-ila, the one who had understanding. With his flesh and his blood, the mother goddess mixed the clay, and all the gods spat upon it. That is how you were born, to bear the toil. That is why you have a spirit, and a drum beating in your chest.\n\n“Now you are many, and you make noise. But I will not let them wipe you out. Do as I told you.”"
+      },
+      "fact": {
+        "es": "El poema empieza con las palabras «Cuando los dioses eran como hombres»: entonces eran los dioses quienes hacían el trabajo pesado. La humanidad se crea para relevarlos.",
+        "en": "The poem begins with the words “When the gods were like men”: back then, it was the gods who did the heavy labor. Mankind was created to relieve them."
+      },
+      "choices": [
+        {
+          "to": "c2_ancianos",
+          "text": {
+            "es": "Llevar el mensaje a los ancianos",
+            "en": "Take the message to the elders"
+          },
+          "description": {
+            "es": "Ahora sabes de qué barro estás hecho, y qué hay que hacer.",
+            "en": "Now you know what clay you are made of, and what must be done."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2_pan",
+      "chapter": 2,
+      "mood": "dangerous",
+      "text": {
+        "es": "No esperas a nadie. Mueles la harina tú mismo, horneas una hogaza y caminas con ella hasta la puerta de Namtar, donde el aire huele a hierbas quemadas.\n\nTe arrodillas. Pones el pan en el umbral. Durante un rato largo, no pasa nada. Después, sientes que alguien te mira desde adentro, alguien que no está acostumbrado a recibir regalos.\n\nAl día siguiente, tus vecinos te ven volver vivo. Preguntan. Les cuentas. Al tercer día hay veinte hogazas en el umbral. Al séptimo, cientos.\n\nNamtar siente vergüenza. Levanta la mano, y la fiebre se va de la tierra.",
+        "en": "You wait for no one. You grind the flour yourself, bake a loaf, and carry it to Namtar’s door, where the air smells of burned herbs.\n\nYou kneel. You set the bread on the threshold. For a long while, nothing happens. Then you feel someone watching you from inside, someone not used to receiving gifts.\n\nThe next day, your neighbors see you come back alive. They ask. You tell them. By the third day there are twenty loaves on the threshold. By the seventh, hundreds.\n\nNamtar feels ashamed. He lifts his hand, and the fever leaves the land."
+      },
+      "fact": {
+        "es": "En 1872, George Smith, del Museo Británico, leyó en una tablilla de Nínive el relato babilónico del diluvio. Lo presentó ese diciembre en Londres, ante la Sociedad de Arqueología Bíblica.",
+        "en": "In 1872, George Smith of the British Museum read the Babylonian flood story on a tablet from Nineveh. He presented it that December in London, before the Society of Biblical Archaeology."
+      },
+      "choices": [
+        {
+          "to": "c3_sequia",
+          "text": {
+            "es": "Volver a vivir",
+            "en": "Go back to living"
+          },
+          "description": {
+            "es": "La tierra respira otra vez, por un tiempo.",
+            "en": "The land breathes again, for a while."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3_sequia",
+      "chapter": 3,
+      "mood": "dangerous",
+      "text": {
+        "es": "Pasan los años, muchos años. La gente vuelve a multiplicarse, y la tierra vuelve a mugir como un toro.\n\nEnlil vuelve a perder el sueño. Esta vez no manda una enfermedad: cierra el cielo. Ordena que Adad, el señor de la tormenta, retenga la lluvia. Que el agua del río no suba. Que los campos den poco grano y que el vientre de la tierra se cierre.\n\nLas espigas salen vacías. Los canales huelen a barro seco. Los niños preguntan por qué no hay pan.\n\nTu oído sigue abierto. Por la noche, Enki te habla otra vez:\n\n—Haz lo mismo, pero con Adad. Que la gente le construya una casa y le lleve pan. Que le dé vergüenza.",
+        "en": "Years pass, many years. The people multiply again, and once more the land bellows like a bull.\n\nAgain Enlil cannot sleep. This time he sends no disease: he shuts the sky. He orders Adad, lord of the storm, to hold back the rain. Let the river not rise. Let the fields yield little grain and the womb of the earth close up.\n\nThe ears of barley come up empty. The canals smell of dry mud. The children ask why there is no bread.\n\nYour ear is still open. At night, Enki speaks to you again:\n\n“Do the same, but with Adad. Let the people build him a house and bring him bread. Let him be ashamed.”"
+      },
+      "fact": {
+        "es": "En el sur de Mesopotamia llueve muy poco: los campos vivían del riego con agua del Tigris y del Éufrates. Una crecida pobre del río podía arruinar la cosecha.",
+        "en": "Southern Mesopotamia gets very little rain: the fields lived on irrigation with water from the Tigris and Euphrates. A poor river flood could ruin the harvest."
+      },
+      "choices": [
+        {
+          "to": "c3_adad",
+          "risk": "low",
+          "text": {
+            "es": "Construir la casa de Adad",
+            "en": "Build the house of Adad"
+          },
+          "description": {
+            "es": "Ya funcionó una vez, y tu dios no se equivoca.",
+            "en": "It worked once before, and your god is never wrong."
+          }
+        },
+        {
+          "to": "c3_grano",
+          "risk": "medium",
+          "text": {
+            "es": "Guardar grano para los años malos",
+            "en": "Store grain for the bad years"
+          },
+          "description": {
+            "es": "Enlil no se va a rendir, y conviene estar preparado.",
+            "en": "Enlil will not give up, and it is wise to be ready."
+          }
+        },
+        {
+          "to": "c3_rogar",
+          "risk": "medium",
+          "text": {
+            "es": "Pedirle a Enki que hable con Enlil",
+            "en": "Ask Enki to speak with Enlil"
+          },
+          "description": {
+            "es": "Quizás una palabra entre dioses valga más que mil hogazas.",
+            "en": "Maybe one word between gods is worth more than a thousand loaves."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3_adad",
+      "chapter": 3,
+      "mood": "triumphant",
+      "text": {
+        "es": "Les cuentas a los ancianos lo que dijo tu dios, y esta vez nadie duda. Toda la ciudad trabaja: hacen ladrillos, levantan una casa para Adad y la llenan de pan.\n\nAdad, el señor de la tormenta, mira la ofrenda. Está acostumbrado a que le teman, no a que le den de comer en plena sequía. Siente vergüenza.\n\nAl amanecer, una niebla baja sobre los campos. Por la noche cae el rocío. Las espigas se llenan otra vez, despacio, en secreto, como si la lluvia se hubiera escapado de las manos de Enlil.",
+        "en": "You tell the elders what your god said, and this time no one doubts. The whole city sets to work: they make bricks, raise a house for Adad, and fill it with bread.\n\nAdad, lord of the storm, looks at the offering. He is used to being feared, not fed in the middle of a drought. He feels ashamed.\n\nAt dawn, a mist settles over the fields. At night, the dew falls. The ears of barley fill again, slowly, secretly, as if the rain had slipped through Enlil’s fingers."
+      },
+      "fact": {
+        "es": "Adad, llamado Ishkur en sumerio, era el dios de la tormenta y de la lluvia. Se lo representaba con un rayo en la mano, a menudo de pie sobre un toro.",
+        "en": "Adad, called Ishkur in Sumerian, was the god of storm and rain. He was shown with a lightning bolt in his hand, often standing on a bull."
+      },
+      "choices": [
+        {
+          "to": "c4_hambre",
+          "text": {
+            "es": "Cosechar lo que crezca",
+            "en": "Harvest whatever grows"
+          },
+          "description": {
+            "es": "El grano volvió, y la gente también.",
+            "en": "The grain has come back, and so have the people."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3_grano",
+      "chapter": 3,
+      "mood": "peaceful",
+      "text": {
+        "es": "Antes de hacer nada más, abres tus graneros y los de tus vecinos. Cuentan los sacos. Sellan las tinajas con barro. Apartas semilla para sembrar el año que viene, aunque el año que viene parezca no llegar nunca.\n\nDespués haces lo que dijo Enki. La ciudad levanta una casa para Adad y la llena de pan. El dios siente vergüenza: al amanecer manda niebla, y por la noche, rocío.\n\nEl grano vuelve. Pero tú no vacías las tinajas. Las dejas selladas, en el fondo del depósito, por si acaso.",
+        "en": "Before anything else, you open your granaries and your neighbors’. They count the sacks. They seal the jars with mud. You set aside seed to sow next year, even if next year seems never to come.\n\nThen you do as Enki said. The city raises a house for Adad and fills it with bread. The god feels ashamed: at dawn he sends mist, and at night, dew.\n\nThe grain returns. But you do not empty the jars. You leave them sealed, at the back of the storehouse, just in case."
+      },
+      "fact": {
+        "es": "Los mesopotámicos llevaban la cuenta del grano en tablillas de arcilla. Muchos especialistas creen que la escritura nació en Uruk, hacia el 3300 a. C., para registrar raciones y bienes.",
+        "en": "The Mesopotamians kept count of grain on clay tablets. Many scholars believe writing was born in Uruk, around 3300 BCE, to record rations and goods."
+      },
+      "choices": [
+        {
+          "to": "c4_hambre",
+          "text": {
+            "es": "Cosechar lo que crezca",
+            "en": "Harvest whatever grows"
+          },
+          "description": {
+            "es": "El grano volvió, y la gente también.",
+            "en": "The grain has come back, and so have the people."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3_rogar",
+      "chapter": 3,
+      "mood": "mysterious",
+      "text": {
+        "es": "—Señor, habla tú con Enlil. Dile que seremos más silenciosos.\n\nEnki se ríe, pero sin alegría.\n\n—Enlil y yo nos repartimos el mundo hace mucho, Atrahasis. Él gobierna la tierra; yo, las aguas de abajo. Cuando le hablo de ustedes, solo oye ruido. Una palabra mía ya no lo calma: lo enoja más.\n\n»No pidas que los dioses se pongan de acuerdo. Pide lo que se puede conseguir. Haz la casa de Adad.\n\nObedeces. La ciudad le lleva pan a Adad, y Adad siente vergüenza. Al amanecer manda niebla, y por la noche, rocío. El grano vuelve.",
+        "en": "“Lord, speak to Enlil yourself. Tell him we will be quieter.”\n\nEnki laughs, but without joy.\n\n“Enlil and I divided the world long ago, Atrahasis. He rules the earth; I rule the waters below. When I speak to him of you, all he hears is noise. A word from me no longer calms him: it only angers him more.\n\n“Do not ask the gods to agree. Ask for what can be won. Build the house of Adad.”\n\nYou obey. The city brings bread to Adad, and Adad feels ashamed. At dawn he sends mist, and at night, dew. The grain returns."
+      },
+      "fact": {
+        "es": "Al comienzo del poema, los grandes dioses se reparten el universo echando suertes: el cielo para Anu, la tierra para Enlil y el Apsu, las aguas de abajo, para Enki.",
+        "en": "At the start of the poem, the great gods divide the universe by casting lots: the sky for Anu, the earth for Enlil, and the Apsu, the waters below, for Enki."
+      },
+      "choices": [
+        {
+          "to": "c4_hambre",
+          "text": {
+            "es": "Cosechar lo que crezca",
+            "en": "Harvest whatever grows"
+          },
+          "description": {
+            "es": "El grano volvió, y la gente también.",
+            "en": "The grain has come back, and so have the people."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c4_hambre",
+      "chapter": 4,
+      "mood": "dangerous",
+      "text": {
+        "es": "Enlil ve los campos verdes y se enfurece. Esta vez no deja nada librado al azar. Anu y Adad custodian el cielo. Sin, la luna, y Nergal custodian la tierra. Y a Enki le ordena vigilar el cerrojo del mar, para que nada se escape.\n\nSin lluvia, el campo negro se vuelve blanco. La llanura se ahoga en sal. Un año, la gente come la cebada que guardaba. Otro, las semillas. Después, la hierba. Las mujeres ya no esperan hijos. Los que pasan por la calle caminan encorvados, con la cara oscura de hambre.\n\nAl sexto año, ves a una madre mirar a su hija de una manera que te hiela la sangre.\n\nTú sigues hablando con tu dios. Pero esta vez, Enki tarda en contestar.",
+        "en": "Enlil sees the green fields and flies into a rage. This time he leaves nothing to chance. Anu and Adad guard the sky. Sin, the moon, and Nergal guard the earth. And Enki he orders to watch the bolt of the sea, so that nothing slips through.\n\nWithout rain, the black fields turn white. The plain chokes on salt. One year, the people eat the barley they had saved. The next, the seed. Then, the grass. Women no longer conceive. Those who pass in the street walk hunched over, their faces dark with hunger.\n\nIn the sixth year, you see a mother look at her daughter in a way that turns your blood cold.\n\nYou keep speaking with your god. But this time, Enki is slow to answer."
+      },
+      "fact": {
+        "es": "La salinización de los campos regados fue un problema real en el sur de Mesopotamia. El poema la describe: los campos negros se vuelven blancos y la llanura se cubre de sal.",
+        "en": "The salinization of irrigated fields was a real problem in southern Mesopotamia. The poem describes it: the black fields turn white and the plain is covered in salt."
+      },
+      "choices": [
+        {
+          "to": "c4_rio",
+          "risk": "low",
+          "text": {
+            "es": "Poner tu lecho frente al río",
+            "en": "Set your bed facing the river"
+          },
+          "description": {
+            "es": "Llorar junto al agua, donde tu dios pueda oírte.",
+            "en": "Weep beside the water, where your god can hear you."
+          }
+        },
+        {
+          "to": "c4_compartir",
+          "risk": "medium",
+          "text": {
+            "es": "Repartir lo último que te queda",
+            "en": "Share the last of what you have"
+          },
+          "description": {
+            "es": "Si nadie comparte, la ciudad se come a sí misma.",
+            "en": "If no one shares, the city will devour itself."
+          }
+        },
+        {
+          "to": "c4_mar",
+          "risk": "high",
+          "text": {
+            "es": "Ir hasta el cerrojo del mar",
+            "en": "Go to the bolt of the sea"
+          },
+          "description": {
+            "es": "Si Enki vigila esa puerta, quizás la abra para ti.",
+            "en": "If Enki guards that gate, maybe he will open it for you."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c4_rio",
+      "chapter": 4,
+      "mood": "sacred",
+      "text": {
+        "es": "Sacas tu lecho de la casa y lo pones frente al río, que ya casi no corre. Te acuestas ahí, de cara al agua, y lloras. Llevas ofrendas cada día, aunque no tengas qué comer.\n\nUna noche, el agua se mueve sin viento. Enki está atado por la orden de Enlil, pero el mar es suyo, y el mar tiene sus propios caminos. Algo pasa por el cerrojo sin que nadie lo vea: peces que suben por el río, unas espigas en la orilla.\n\nNo es mucho. Pero la gente sobrevive. Y en el Ekur, Enlil se entera, y llama a la asamblea de los dioses.",
+        "en": "You carry your bed out of the house and set it facing the river, which barely flows now. You lie there, facing the water, and weep. You bring offerings every day, though you have nothing to eat.\n\nOne night, the water stirs with no wind. Enki is bound by Enlil’s order, but the sea is his, and the sea has its own ways. Something slips past the bolt unseen: fish swimming up the river, a few ears of barley on the bank.\n\nIt is not much. But the people survive. And in the Ekur, Enlil hears of it, and calls the assembly of the gods."
+      },
+      "fact": {
+        "es": "En el poema, Atrahasis pone su lecho frente al río y sigue hablando con su dios durante el hambre. Las tablillas de este pasaje están rotas, y parte del episodio se perdió.",
+        "en": "In the poem, Atrahasis sets his bed facing the river and keeps speaking with his god during the famine. The tablets of this passage are broken, and part of the episode is lost."
+      },
+      "choices": [
+        {
+          "to": "c5_muro",
+          "text": {
+            "es": "Esperar lo que decidan",
+            "en": "Wait for their decision"
+          },
+          "description": {
+            "es": "Los dioses se reúnen, y nada bueno sale de esa reunión.",
+            "en": "The gods are gathering, and nothing good comes of that gathering."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c4_compartir",
+      "chapter": 4,
+      "mood": "peaceful",
+      "text": {
+        "es": "Abres tu casa. Repartes lo que queda: un puñado de cebada para cada familia, un poco de aceite, el agua del último pozo que no se secó. Cuando no queda nada, repartes tu turno de comer.\n\nLa gente te mira de otro modo. Ya no eres el vecino raro que habla con su dios por las noches. Eres el que no cerró la puerta.\n\nMientras tanto, algo se escapa por el cerrojo del mar: peces que suben por el río, unas espigas en la orilla. No es mucho, pero alcanza para seguir vivos. Y en el Ekur, Enlil se entera, y llama a la asamblea de los dioses.",
+        "en": "You open your house. You share what is left: a handful of barley for each family, a little oil, water from the last well that has not run dry. When there is nothing left, you give away your turn to eat.\n\nPeople look at you differently now. You are no longer the strange neighbor who talks to his god at night. You are the one who did not shut his door.\n\nMeanwhile, something slips past the bolt of the sea: fish swimming up the river, a few ears of barley on the bank. It is not much, but it is enough to stay alive. And in the Ekur, Enlil hears of it, and calls the assembly of the gods."
+      },
+      "choices": [
+        {
+          "to": "c5_muro",
+          "text": {
+            "es": "Esperar lo que decidan",
+            "en": "Wait for their decision"
+          },
+          "description": {
+            "es": "Los dioses se reúnen, y nada bueno sale de esa reunión.",
+            "en": "The gods are gathering, and nothing good comes of that gathering."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c4_mar",
+      "chapter": 4,
+      "mood": "dangerous",
+      "text": {
+        "es": "Caminas hacia el sur hasta donde los ríos se pierden en el mar. Allí, entre los juncos, el agua dulce y la salada se mezclan, y el aire huele a sal.\n\nVes el cerrojo del mar: no una puerta, sino una fuerza, un nudo en las aguas. Y ves a los guardianes de Enki, de pie entre las olas, inmóviles.\n\n—Señor —gritas—, mi pueblo se muere.\n\nEl agua se mueve sin viento. Ningún guardián se aparta, pero algo pasa entre ellos: un cardumen de peces que sube hacia el río, plateado bajo la luna. Enki no rompió la orden. Solo miró para otro lado.\n\nEn el Ekur, Enlil se entera, y llama a la asamblea de los dioses.",
+        "en": "You walk south to where the rivers lose themselves in the sea. There, among the reeds, sweet water and salt water mingle, and the air smells of brine.\n\nYou see the bolt of the sea: not a gate, but a force, a knot in the waters. And you see Enki’s guardians, standing motionless among the waves.\n\n“Lord,” you cry, “my people are dying.”\n\nThe water stirs with no wind. No guardian steps aside, but something passes between them: a school of fish heading up the river, silver under the moon. Enki did not break the order. He only looked the other way.\n\nIn the Ekur, Enlil hears of it, and calls the assembly of the gods."
+      },
+      "fact": {
+        "es": "Eridu, la ciudad de Enki, estaba junto a las marismas del sur. Según la Lista Real Sumeria, fue allí donde la realeza bajó del cielo por primera vez.",
+        "en": "Eridu, Enki’s city, lay beside the southern marshes. According to the Sumerian King List, it was there that kingship first came down from heaven."
+      },
+      "choices": [
+        {
+          "to": "c5_muro",
+          "text": {
+            "es": "Esperar lo que decidan",
+            "en": "Wait for their decision"
+          },
+          "description": {
+            "es": "Los dioses se reúnen, y nada bueno sale de esa reunión.",
+            "en": "The gods are gathering, and nothing good comes of that gathering."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5_muro",
+      "chapter": 5,
+      "mood": "mysterious",
+      "text": {
+        "es": "En la asamblea, Enlil habla con furia: —Rompieron la regla. Hagamos un juramento todos juntos: el diluvio.\n\nLos dioses juran. Solo Enki se niega: —¿Por qué me atas con un juramento? ¿Voy a levantar la mano contra mi propia gente?\n\nEsa noche sueñas, y despiertas sin entender el sueño. Estás en tu casa de juncos cuando oyes la voz de tu dios. Pero no te habla a ti. Le habla a la pared.\n\n—Pared, escúchame. Muro de juncos, atiende mis palabras. Desarma la casa, construye un barco. Rechaza las riquezas y salva la vida. Que su techo sea como el Apsu, que el sol no vea su interior.\n\nDespués oyes correr el agua en un reloj: Enki lo llenó. Cuando se vacíe, en la séptima noche, llegará el diluvio.",
+        "en": "In the assembly, Enlil speaks in fury: “They broke the rule. Let us all swear an oath together: the flood.”\n\nThe gods swear. Only Enki refuses: “Why do you bind me with an oath? Shall I raise my hand against my own people?”\n\nThat night you dream, and wake without understanding the dream. You are in your reed house when you hear your god’s voice. But he is not speaking to you. He is speaking to the wall.\n\n“Wall, listen to me! Reed wall, attend to all my words! Tear down your house, build a boat. Spurn property and save life. Roof it like the Apsu, so that the sun cannot see inside.”\n\nThen you hear the trickle of a water clock: Enki has filled it. When it empties, on the seventh night, the flood will come."
+      },
+      "fact": {
+        "es": "Enki no le cuenta el plan de los dioses a Atrahasis cara a cara: se lo dice a la pared de juncos de su casa. En la Epopeya de Gilgamesh, Ea usa el mismo recurso con Utnapishtim.",
+        "en": "Enki does not tell Atrahasis the gods’ plan face to face: he tells it to the reed wall of his house. In the Epic of Gilgamesh, Ea uses the same device with Utnapishtim."
+      },
+      "choices": [
+        {
+          "to": "c5_obedecer",
+          "risk": "low",
+          "text": {
+            "es": "Desarmar tu casa ahora mismo",
+            "en": "Tear down your house right now"
+          },
+          "description": {
+            "es": "Siete noches no son nada, y no hay tiempo que perder.",
+            "en": "Seven nights is nothing, and there is no time to lose."
+          }
+        },
+        {
+          "to": "c5_plano",
+          "risk": "low",
+          "text": {
+            "es": "Pedirle que te dibuje el barco",
+            "en": "Ask him to draw the boat"
+          },
+          "description": {
+            "es": "Nunca construiste un barco y no sabes por dónde empezar.",
+            "en": "You have never built a boat and do not know where to start."
+          }
+        },
+        {
+          "to": "c5_rogar",
+          "risk": "medium",
+          "text": {
+            "es": "Rogarle que salve a todos",
+            "en": "Beg him to save everyone"
+          },
+          "description": {
+            "es": "No puede ser que solo tu casa merezca vivir.",
+            "en": "Surely your house is not the only one that deserves to live."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5_obedecer",
+      "chapter": 5,
+      "mood": "epic",
+      "text": {
+        "es": "Antes de que amanezca, ya estás sacando los juncos de tu casa, uno por uno. Tu mujer te mira desde la puerta con los ojos llenos de preguntas. Tus hijos se despiertan con el ruido.\n\n—El dios habló —les dices—. No a mí: a la pared. Pero yo estaba del otro lado.\n\nLas paredes de tu casa se vuelven el casco de un barco. Las vigas, sus costillas. Pides betún, sogas, cañas. Cada vez que el sol se pone, piensas en el reloj de agua de Enki, que se vacía gota a gota.",
+        "en": "Before dawn, you are already pulling the reeds from your house, one by one. Your wife watches from the doorway, her eyes full of questions. Your children wake at the noise.\n\n“The god has spoken,” you tell them. “Not to me: to the wall. But I was on the other side.”\n\nThe walls of your house become the hull of a boat. The beams, its ribs. You ask for bitumen, ropes, reeds. Each time the sun sets, you think of Enki’s water clock, emptying drop by drop."
+      },
+      "fact": {
+        "es": "El betún que brotaba en lugares como Hit, junto al Éufrates, se usaba en Mesopotamia para impermeabilizar barcos y canastos, y también como mortero para los ladrillos.",
+        "en": "Bitumen, which seeped up at places like Hit, on the Euphrates, was used in Mesopotamia to waterproof boats and baskets, and also as mortar for bricks."
+      },
+      "choices": [
+        {
+          "to": "c6_ancianos",
+          "text": {
+            "es": "Seguir trabajando",
+            "en": "Keep working"
+          },
+          "description": {
+            "es": "Los vecinos ya empiezan a mirar.",
+            "en": "The neighbors are starting to stare."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5_plano",
+      "chapter": 5,
+      "mood": "mysterious",
+      "text": {
+        "es": "—Señor —le dices a la pared, porque es la pared la que escuchó—, nunca construí un barco. Dibuja su forma en el suelo, para que pueda verla.\n\nAl amanecer, en el piso de tierra de tu casa, hay un dibujo. Es un círculo grande, perfecto. Al lado, marcas de medidas: tantas cuerdas de largo, tantas varas de alto. Un barco redondo, como un canasto gigante de fibra de palma, cubierto de betún por dentro y por fuera.\n\nLo miras un largo rato. Después llamas a los carpinteros.",
+        "en": "“Lord,” you say to the wall, since it was the wall that listened, “I have never built a boat. Draw its shape on the ground, so I can see it.”\n\nAt dawn, on the dirt floor of your house, there is a drawing. It is a great circle, perfect. Beside it, marks of measure: so many ropes long, so many rods high. A round boat, like a giant basket of palm fiber, coated with bitumen inside and out.\n\nYou stare at it a long while. Then you send for the carpenters."
+      },
+      "fact": {
+        "es": "En 2014, Irving Finkel, del Museo Británico, publicó la «Tablilla del Arca», de hacia el 1750 a. C. En ella, el dios manda construir un barco redondo de cuerda de palma, recubierto de betún.",
+        "en": "In 2014, Irving Finkel of the British Museum published the “Ark Tablet,” from around 1750 BCE. In it, the god orders a round boat built of palm-fiber rope, coated with bitumen."
+      },
+      "choices": [
+        {
+          "to": "c6_ancianos",
+          "text": {
+            "es": "Seguir trabajando",
+            "en": "Keep working"
+          },
+          "description": {
+            "es": "Los vecinos ya empiezan a mirar.",
+            "en": "The neighbors are starting to stare."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5_rogar",
+      "chapter": 5,
+      "mood": "sacred",
+      "text": {
+        "es": "—Señor, ¿y los demás? ¿Mis vecinos, los niños de la calle, los viejos del mercado?\n\nLa voz tarda en volver. Cuando vuelve, sigue hablándole a la pared, pero suena cansada.\n\n—Muro de juncos, escucha. Los dioses juraron. Yo no juré, pero tampoco puedo deshacer lo que decidieron. No puedo detener la ola. Solo puedo avisarle a una casa. Que esa casa lleve consigo la vida: los animales del campo, las aves del cielo.\n\n»Que el barco sea la semilla de todo lo que vendrá.\n\nTe tapas la cara con las manos. Después, empiezas a desarmar tu casa.",
+        "en": "“Lord, and the others? My neighbors, the children in the street, the old men at the market?”\n\nThe voice is slow to return. When it does, it is still speaking to the wall, but it sounds tired.\n\n“Reed wall, listen. The gods have sworn. I did not swear, but I cannot undo what they decided. I cannot stop the wave. I can only warn one house. Let that house carry life with it: the beasts of the field, the birds of the sky.\n\n“Let the boat be the seed of all that is to come.”\n\nYou cover your face with your hands. Then you begin to tear down your house."
+      },
+      "fact": {
+        "es": "Atrahasis sube al barco animales domésticos y salvajes, y aves del cielo. En la Epopeya de Gilgamesh, Utnapishtim carga además «la semilla de todo ser vivo».",
+        "en": "Atrahasis brings domestic and wild animals aboard, and birds of the sky. In the Epic of Gilgamesh, Utnapishtim also loads “the seed of all living things.”"
+      },
+      "choices": [
+        {
+          "to": "c6_ancianos",
+          "text": {
+            "es": "Seguir trabajando",
+            "en": "Keep working"
+          },
+          "description": {
+            "es": "Los vecinos ya empiezan a mirar.",
+            "en": "The neighbors are starting to stare."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6_ancianos",
+      "chapter": 6,
+      "mood": "dangerous",
+      "text": {
+        "es": "Al tercer día, los ancianos de la ciudad se presentan frente a lo que fue tu casa. Ven juncos apilados, vigas atadas, calderos de betún hirviendo.\n\n—Atrahasis —dice el mayor—, ¿por qué desarmas tu casa? ¿Qué sabes que nosotros no sabemos?\n\nDetrás de ellos se juntan vecinos, carpinteros, niños. Todos esperan tu respuesta.\n\nTu dios te advirtió a ti, no a ellos. Y el barco no es grande. Si todos supieran, todos querrían subir. Pero son tu gente. Pasaste con ellos los años de la peste y del hambre.",
+        "en": "On the third day, the city elders appear before what used to be your house. They see stacked reeds, lashed beams, cauldrons of boiling bitumen.\n\n“Atrahasis,” says the eldest, “why are you tearing down your house? What do you know that we do not?”\n\nBehind them gather neighbors, carpenters, children. They all wait for your answer.\n\nYour god warned you, not them. And the boat is not large. If everyone knew, everyone would want to board. But they are your people. You lived through the years of plague and famine with them."
+      },
+      "fact": {
+        "es": "En la Epopeya de Gilgamesh, Ea le enseña a Utnapishtim qué decir: que Enlil hará llover abundancia, panes al amanecer y trigo al atardecer. Las palabras acadias tenían doble sentido y anunciaban otra lluvia.",
+        "en": "In the Epic of Gilgamesh, Ea teaches Utnapishtim what to say: that Enlil will rain down abundance, loaves at dawn and wheat at dusk. The Akkadian words had a double meaning and foretold another kind of rain."
+      },
+      "choices": [
+        {
+          "to": "c6_mentira",
+          "risk": "low",
+          "text": {
+            "es": "Decir que te vas a vivir con Enki",
+            "en": "Say you are going to live with Enki"
+          },
+          "description": {
+            "es": "Una verdad a medias que no asusta a nadie.",
+            "en": "A half-truth that frightens no one."
+          }
+        },
+        {
+          "to": "c6_callar",
+          "risk": "medium",
+          "text": {
+            "es": "No contestar y seguir trabajando",
+            "en": "Say nothing and keep working"
+          },
+          "description": {
+            "es": "Que piensen lo que quieran: el reloj de agua no espera.",
+            "en": "Let them think what they like: the water clock will not wait."
+          }
+        },
+        {
+          "to": "c6_verdad",
+          "risk": "high",
+          "text": {
+            "es": "Contarles la verdad del diluvio",
+            "en": "Tell them the truth about the flood"
+          },
+          "description": {
+            "es": "Tienen derecho a saber lo que se viene.",
+            "en": "They have a right to know what is coming."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6_mentira",
+      "chapter": 6,
+      "mood": "mysterious",
+      "text": {
+        "es": "—Mi dios no se lleva bien con el de ustedes —dices—. Enki y Enlil están enojados el uno con el otro. Me echaron de mi casa. Como yo reverencio a Enki, él me lo advirtió. Ya no puedo vivir en esta ciudad ni pisar la tierra de Enlil. Voy a bajar al Apsu, a vivir con mi señor.\n\nLos ancianos asienten. Eso lo entienden: las peleas de los dioses las pagan los hombres. Algunos hasta te tienen lástima.\n\nLos carpinteros traen sus hachas. Los niños cargan betún. Toda la ciudad te ayuda a irte.",
+        "en": "“My god is at odds with yours,” you say. “Enki and Enlil are angry with each other. I have been driven from my house. Because I revere Enki, he warned me. I can no longer live in this city or set foot on Enlil’s land. I am going down to the Apsu, to live with my lord.”\n\nThe elders nod. That they understand: when gods quarrel, men pay the price. Some even pity you.\n\nThe carpenters bring their axes. The children carry bitumen. The whole city helps you leave."
+      },
+      "fact": {
+        "es": "Este discurso aparece en el poema de Atrahasis y, casi igual, en la Epopeya de Gilgamesh. Técnicamente no es mentira: el héroe se va, y Enki es el señor del Apsu.",
+        "en": "This speech appears in the poem of Atrahasis and, almost word for word, in the Epic of Gilgamesh. Technically it is no lie: the hero is leaving, and Enki is lord of the Apsu."
+      },
+      "choices": [
+        {
+          "to": "c7_fiesta",
+          "text": {
+            "es": "Terminar el barco",
+            "en": "Finish the boat"
+          },
+          "description": {
+            "es": "Falta poco para que se vacíe el reloj.",
+            "en": "The clock is almost empty."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6_callar",
+      "chapter": 6,
+      "mood": "peaceful",
+      "text": {
+        "es": "No contestas. Bajas la vista y sigues atando juncos.\n\nLos ancianos murmuran. Uno dice que te volviste loco con el hambre. Otro, que los locos a veces ven cosas. Se van sin una respuesta.\n\nPero al día siguiente, un carpintero aparece con su hacha. Después, otro. No preguntan nada. Te miran trabajar, entienden lo que haces mejor que tú, y se ponen a ayudar. Los niños traen el betún en canastos. Los ricos mandan aceite.\n\nNadie sabe para qué es el barco. Todos ayudan a terminarlo.",
+        "en": "You do not answer. You lower your eyes and keep tying reeds.\n\nThe elders mutter. One says hunger has driven you mad. Another, that madmen sometimes see things. They leave without an answer.\n\nBut the next day, a carpenter shows up with his axe. Then another. They ask nothing. They watch you work, understand what you are doing better than you do, and pitch in. The children bring bitumen in baskets. The rich send oil.\n\nNo one knows what the boat is for. Everyone helps finish it."
+      },
+      "fact": {
+        "es": "En la Epopeya de Gilgamesh, toda la ciudad ayuda a Utnapishtim a construir el barco: carpinteros, cesteros, ricos y pobres. Él les da de beber como en una fiesta de Año Nuevo.",
+        "en": "In the Epic of Gilgamesh, the whole city helps Utnapishtim build the boat: carpenters, reed workers, rich and poor. He gives them drink as if at a New Year’s festival."
+      },
+      "choices": [
+        {
+          "to": "c7_fiesta",
+          "text": {
+            "es": "Terminar el barco",
+            "en": "Finish the boat"
+          },
+          "description": {
+            "es": "Falta poco para que se vacíe el reloj.",
+            "en": "The clock is almost empty."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6_verdad",
+      "chapter": 6,
+      "mood": "dangerous",
+      "text": {
+        "es": "—Viene un diluvio —dices—. Los dioses lo juraron. En siete noches, el agua va a cubrir la tierra. Enki me avisó. Por eso hago el barco.\n\nSilencio. Después, un grito. Una mujer corre a buscar a sus hijos. Un hombre se ríe, nervioso, hasta que deja de reírse.\n\nEn una hora, la ciudad entera está frente a tu casa. No miran el barco como un barco: lo miran como la última puerta del mundo. Es chico. No está terminado. Y cien manos ya se estiran para tocarlo.",
+        "en": "“A flood is coming,” you say. “The gods have sworn it. In seven nights, the water will cover the land. Enki warned me. That is why I am building the boat.”\n\nSilence. Then a scream. A woman runs to find her children. A man laughs nervously, until he stops laughing.\n\nWithin an hour, the whole city stands before your house. They do not see the boat as a boat: they see it as the last door in the world. It is small. It is unfinished. And a hundred hands are already reaching out to touch it."
+      },
+      "choices": [
+        {
+          "to": "c7_fiesta",
+          "risk": "low",
+          "text": {
+            "es": "Decir que fue un mal sueño",
+            "en": "Say it was a bad dream"
+          },
+          "description": {
+            "es": "Mejor una mentira a tiempo que una estampida.",
+            "en": "Better a timely lie than a stampede."
+          }
+        },
+        {
+          "to": "fin_verdad",
+          "risk": "high",
+          "text": {
+            "es": "Dejar que suban al barco",
+            "en": "Let them board the boat"
+          },
+          "description": {
+            "es": "No puedes negarle la vida a nadie.",
+            "en": "You cannot deny anyone their life."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_verdad",
+      "chapter": 6,
+      "mood": "tragic",
+      "text": {
+        "es": "—Suban —dices—. Que suban todos.\n\nSuben. Primero las madres con sus hijos, después los viejos, después los que empujan más fuerte. El barco cruje. El betún, todavía blando, se agrieta. Alguien trae sus cofres de plata; alguien, sus cabras. Nadie quiere dejar nada.\n\nLa séptima noche, el reloj de agua se vacía. Adad ruge en las nubes. El agua sube.\n\nEl barco, que debía llevar a una casa, lleva a una ciudad. Se inclina, se llena, se hunde despacio, con todos adentro, abrazados. Arriba, Enlil oye por fin el silencio que pedía.\n\nEnki busca en las aguas una sola semilla de vida, y no la encuentra. Les dijiste la verdad a todos, y la verdad no cabía en un barco.",
+        "en": "“Come aboard,” you say. “Everyone, come aboard.”\n\nThey board. First the mothers with their children, then the old, then those who push hardest. The boat creaks. The bitumen, still soft, cracks. Someone brings chests of silver; someone, goats. No one wants to leave anything behind.\n\nOn the seventh night, the water clock runs dry. Adad roars in the clouds. The water rises.\n\nThe boat meant to carry one house carries a city. It tilts, fills, and sinks slowly, with everyone inside, holding each other. Above, Enlil at last hears the silence he wanted.\n\nEnki searches the waters for a single seed of life, and finds none. You told everyone the truth, and the truth did not fit in a boat."
+      },
+      "fact": {
+        "es": "La orden de Enki es «rechaza las riquezas y salva la vida». Casi con las mismas palabras, Ea le pide a Utnapishtim en la Epopeya de Gilgamesh que abandone sus bienes para salvar a los seres vivos.",
+        "en": "Enki’s command is “spurn property and save life.” In almost the same words, Ea tells Utnapishtim in the Epic of Gilgamesh to abandon his possessions to save living things."
+      },
+      "ending": {
+        "type": "tragic",
+        "title": {
+          "es": "El barco de todos",
+          "en": "A Boat for Everyone"
+        }
+      },
+      "choices": []
+    },
+    {
+      "id": "c7_fiesta",
+      "chapter": 7,
+      "mood": "sacred",
+      "text": {
+        "es": "El barco está terminado. Subes a los animales: los del campo, los salvajes, las aves del cielo. Después invitas a tu gente a un banquete.\n\nComen. Beben. Por un rato, se ríen como en los buenos tiempos.\n\nPero tú no puedes sentarte. Entras y sales del barco, sin parar. Tienes el corazón roto y la boca amarga, como si tragaras hiel.\n\nEntonces el cielo cambia. Las nubes se oscurecen. Adad ruge desde adentro de ellas, y el ruido rueda sobre la ciudad como un carro de guerra. Tus invitados levantan la vista, todavía con las copas en la mano.\n\nSubes a tu familia. El reloj de agua está casi vacío.",
+        "en": "The boat is finished. You bring the animals aboard: those of the field, the wild ones, the birds of the sky. Then you invite your people to a banquet.\n\nThey eat. They drink. For a while, they laugh as in the good times.\n\nBut you cannot sit down. You go in and out of the boat, without rest. Your heart is broken, and your mouth is bitter, as if you had swallowed gall.\n\nThen the sky changes. The clouds darken. Adad roars from within them, and the sound rolls over the city like a war chariot. Your guests look up, cups still in hand.\n\nYou bring your family aboard. The water clock is nearly empty."
+      },
+      "fact": {
+        "es": "El poema no oculta el dolor del héroe: durante el banquete, Atrahasis no puede sentarse ni agacharse, tiene el corazón roto y vomita hiel.",
+        "en": "The poem does not hide the hero’s pain: during the banquet, Atrahasis cannot sit or crouch, his heart is broken, and he vomits gall."
+      },
+      "choices": [
+        {
+          "to": "c7_cerrar",
+          "risk": "low",
+          "text": {
+            "es": "Subir y sellar la puerta con betún",
+            "en": "Board and seal the door with bitumen"
+          },
+          "description": {
+            "es": "Lo que queda afuera ya no está en tus manos.",
+            "en": "Whatever stays outside is no longer in your hands."
+          }
+        },
+        {
+          "to": "c7_mirar",
+          "risk": "medium",
+          "text": {
+            "es": "Mirar tu ciudad una última vez",
+            "en": "Look at your city one last time"
+          },
+          "description": {
+            "es": "Quieres recordar cómo era antes del agua.",
+            "en": "You want to remember how it was before the water."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7_cerrar",
+      "chapter": 7,
+      "mood": "dangerous",
+      "text": {
+        "es": "Subes al barco. Traen el betún, y con tus propias manos sellas la puerta. Del otro lado se oyen las voces del banquete, cada vez más bajas, y después el primer trueno.\n\nCuando la puerta queda cerrada, tomas el cuchillo y cortas la soga que ata el barco a la orilla.\n\nAdentro está oscuro. Huele a animales y a brea. Tu mujer te toma la mano. Tus hijos no dicen nada.\n\nAfuera, el viento empieza a gritar.",
+        "en": "You board the boat. They bring the bitumen, and with your own hands you seal the door. From the other side come the voices of the banquet, fainter and fainter, and then the first thunder.\n\nOnce the door is sealed, you take the knife and cut the rope that ties the boat to the shore.\n\nInside it is dark. It smells of animals and pitch. Your wife takes your hand. Your children say nothing.\n\nOutside, the wind begins to scream."
+      },
+      "fact": {
+        "es": "Como Atrahasis, Utnapishtim recubre su barco con betún en la Epopeya de Gilgamesh. En el Génesis, Noé recubre el arca con brea por dentro y por fuera (Génesis 6:14).",
+        "en": "Like Atrahasis, Utnapishtim coats his boat with bitumen in the Epic of Gilgamesh. In Genesis, Noah covers the ark with pitch within and without (Genesis 6:14)."
+      },
+      "choices": [
+        {
+          "to": "c7_diluvio",
+          "text": {
+            "es": "Esperar a que llegue el agua",
+            "en": "Wait for the water to come"
+          },
+          "description": {
+            "es": "Ya no queda nada más por hacer.",
+            "en": "There is nothing left to do."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7_mirar",
+      "chapter": 7,
+      "mood": "peaceful",
+      "text": {
+        "es": "Te quedas un momento en la rampa del barco y miras.\n\nLa calle donde jugaste de chico. El templo adonde tu padre te llevó por primera vez. La casa del vecino que se curó de la fiebre, y la del que no. El canal donde las mujeres lavan la ropa. El mercado, ruidoso como siempre, lleno de esa gente que Enlil no soporta.\n\nEs verdad: hacen ruido. Es el ruido de estar vivos.\n\nUn trueno te devuelve a ti mismo. Entras, sellas la puerta con betún y cortas la soga que ata el barco a la orilla.",
+        "en": "You stay a moment on the boat’s ramp and look.\n\nThe street where you played as a boy. The temple where your father first took you. The house of the neighbor who recovered from the fever, and the house of the one who did not. The canal where the women wash clothes. The market, noisy as ever, full of the people Enlil cannot stand.\n\nIt is true: they make noise. It is the noise of being alive.\n\nA thunderclap brings you back to yourself. You go in, seal the door with bitumen, and cut the rope that ties the boat to the shore."
+      },
+      "fact": {
+        "es": "Según la Lista Real Sumeria, antes del diluvio la realeza estuvo en cinco ciudades: Eridu, Bad-tibira, Larak, Sippar y Shuruppak. Shuruppak es la ciudad de Utnapishtim en la Epopeya de Gilgamesh.",
+        "en": "According to the Sumerian King List, before the flood kingship was held by five cities: Eridu, Bad-tibira, Larak, Sippar, and Shuruppak. Shuruppak is Utnapishtim’s city in the Epic of Gilgamesh."
+      },
+      "choices": [
+        {
+          "to": "c7_diluvio",
+          "text": {
+            "es": "Esperar a que llegue el agua",
+            "en": "Wait for the water to come"
+          },
+          "description": {
+            "es": "Ya no queda nada más por hacer.",
+            "en": "There is nothing left to do."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7_diluvio",
+      "chapter": 7,
+      "mood": "dangerous",
+      "text": {
+        "es": "El diluvio llega como un ejército.\n\nLos vientos se desatan. Anzu, el pájaro de la tormenta, desgarra el cielo con sus garras. El agua cae y sube al mismo tiempo, y ya nadie puede ver a nadie: un hombre no distingue a su hermano a un paso. La crecida muge como un toro. La oscuridad es tan espesa que no hay sol.\n\nEl barco se levanta, gira, golpea. Los animales gritan en la oscuridad.\n\nY entre el rugido, oyes otra cosa: voces humanas. Alguien golpea el casco desde afuera. Son tus vecinos, aferrados a vigas, a puertas, a balsas, pidiendo que abras.\n\nEn el techo hay una escotilla. En la puerta, el betún todavía está fresco.",
+        "en": "The flood comes like an army.\n\nThe winds break loose. Anzu, the storm bird, rends the sky with his talons. The water falls and rises at once, and no one can see anyone: a man cannot make out his brother a step away. The flood bellows like a bull. The darkness is so thick there is no sun.\n\nThe boat lifts, spins, slams. The animals cry out in the dark.\n\nAnd through the roar, you hear something else: human voices. Someone is pounding on the hull from outside. It is your neighbors, clinging to beams, to doors, to rafts, begging you to open.\n\nThere is a hatch in the roof. On the door, the bitumen is still fresh."
+      },
+      "fact": {
+        "es": "La copia más completa del poema la escribió un escriba llamado Ku-Aya, en tiempos del rey Ammi-saduqa de Babilonia, hacia el 1635 a. C. Probablemente provenga de Sippar.",
+        "en": "The most complete copy of the poem was written by a scribe named Ku-Aya, in the time of King Ammi-saduqa of Babylon, around 1635 BCE. It probably comes from Sippar."
+      },
+      "choices": [
+        {
+          "to": "c7_esperar",
+          "risk": "low",
+          "text": {
+            "es": "Taparte los oídos y esperar",
+            "en": "Cover your ears and wait"
+          },
+          "description": {
+            "es": "Enki dijo una casa, y una casa es lo que salvas.",
+            "en": "Enki said one house, and one house is what you save."
+          }
+        },
+        {
+          "to": "fin_extranjeros",
+          "risk": "medium",
+          "text": {
+            "es": "Bajar sogas desde la escotilla",
+            "en": "Lower ropes from the hatch"
+          },
+          "description": {
+            "es": "No abres la puerta, pero puedes subir a algunos por el techo.",
+            "en": "You will not open the door, but you can pull some up through the roof."
+          }
+        },
+        {
+          "to": "fin_puerta",
+          "risk": "high",
+          "text": {
+            "es": "Abrir la puerta para salvarlos",
+            "en": "Open the door to save them"
+          },
+          "description": {
+            "es": "No vas a dejar que se ahoguen a tu lado.",
+            "en": "You will not let them drown beside you."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7_esperar",
+      "chapter": 7,
+      "mood": "tragic",
+      "text": {
+        "es": "Te tapas los oídos. Abrazas a tus hijos. Las voces de afuera se vuelven más débiles, y después, ninguna.\n\nSiete días y siete noches dura el torrente, la tempestad, el diluvio.\n\nArriba, los dioses ven lo que hicieron y tienen miedo. Nintu, la diosa madre, la que amasó a los hombres con barro, llora a gritos: —¿Cómo pude estar de acuerdo con esto? Mis hijos llenan el río como libélulas.\n\nLos Anunnaki lloran con ella. No hay ofrendas, no hay pan, no hay cerveza. Los dioses tienen sed, tienen hambre, y los labios se les secan de fiebre.\n\nAl séptimo día, el agua se calma.",
+        "en": "You cover your ears. You hold your children close. The voices outside grow weaker, and then there are none.\n\nFor seven days and seven nights comes the torrent, the storm, the flood.\n\nAbove, the gods see what they have done and are afraid. Nintu, the mother goddess, who shaped mankind from clay, wails aloud: “How could I agree to this? My children have filled the river like dragonflies.”\n\nThe Anunnaki weep with her. There are no offerings, no bread, no beer. The gods are thirsty, they are hungry, and their lips are parched with fever.\n\nOn the seventh day, the water grows calm."
+      },
+      "fact": {
+        "es": "En el poema de Atrahasis y en la Epopeya de Gilgamesh, la tormenta dura siete días y siete noches. En el Génesis, la lluvia cae durante cuarenta días y cuarenta noches.",
+        "en": "In the poem of Atrahasis and in the Epic of Gilgamesh, the storm lasts seven days and seven nights. In Genesis, the rain falls for forty days and forty nights."
+      },
+      "choices": [
+        {
+          "to": "c8_ofrenda",
+          "text": {
+            "es": "Abrir la escotilla",
+            "en": "Open the hatch"
+          },
+          "description": {
+            "es": "Afuera hay luz, por primera vez en siete días.",
+            "en": "There is light outside, for the first time in seven days."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_puerta",
+      "chapter": 7,
+      "mood": "tragic",
+      "text": {
+        "es": "Rompes el betún con el hacha y abres la puerta.\n\nEl agua entra antes que nadie. Entra como un toro, derriba los corrales, apaga las lámparas, arrastra a los animales contra las paredes. Tus vecinos se aferran al marco, gritando tu nombre. Tú les tiendes la mano.\n\nEl barco se inclina hacia la puerta abierta y ya no se endereza.\n\nEn la oscuridad sientes la mano de tu mujer, y después ya no la sientes. Afuera, el diluvio sigue siete días y siete noches, sin nadie que lo vea.\n\nCuando las aguas bajan, Enki busca en la llanura un barco, un hombre, una semilla. Solo encuentra barro. Abriste la puerta por bondad. El diluvio no sabe de bondad.",
+        "en": "You break the bitumen with the axe and open the door.\n\nThe water gets in before anyone else. It charges in like a bull, knocks down the pens, puts out the lamps, hurls the animals against the walls. Your neighbors cling to the frame, shouting your name. You reach out your hand to them.\n\nThe boat tilts toward the open door and never rights itself.\n\nIn the dark you feel your wife’s hand, and then you feel it no more. Outside, the flood goes on seven days and seven nights, with no one to see it.\n\nWhen the waters recede, Enki searches the plain for a boat, a man, a seed. He finds only mud. You opened the door out of kindness. The flood knows nothing of kindness."
+      },
+      "fact": {
+        "es": "La Epopeya de Gilgamesh describe la crecida con crudeza: ni siquiera los dioses la soportan, y se encogen como perros junto al muro del cielo.",
+        "en": "The Epic of Gilgamesh describes the flood starkly: not even the gods can bear it, and they cower like dogs against the wall of heaven."
+      },
+      "ending": {
+        "type": "tragic",
+        "title": {
+          "es": "La puerta abierta",
+          "en": "The Open Door"
+        }
+      },
+      "choices": []
+    },
+    {
+      "id": "fin_extranjeros",
+      "chapter": 7,
+      "mood": "peaceful",
+      "text": {
+        "es": "No abres la puerta. Subes por la escotilla, con una soga atada a la cintura, y la tiras al agua oscura.\n\nAlguien la agarra. Tiras. Es una muchacha de la calle de los alfareros. Después, un viejo. Después, un chico que no conoces, de otra ciudad, que flotó días sobre una puerta. Subes a todos los que alcanzas, hasta que se te despellejan las manos.\n\nSon once. No son muchos. Son once más.\n\nCuando el agua baja, salen del barco junto con tu familia y los animales. Hablan con acentos distintos y rezan a dioses distintos. Arriba, Enlil cuenta a los vivos y la cuenta no le cierra. Pero Enki sonríe: la humanidad nueva no nace de una casa cerrada, sino de una casa abierta.",
+        "en": "You do not open the door. You climb through the hatch with a rope tied around your waist and throw it into the dark water.\n\nSomeone grabs it. You pull. It is a girl from the potters’ street. Then an old man. Then a boy you do not know, from another city, who drifted for days on a door. You haul up everyone you can reach, until the skin peels from your hands.\n\nThere are eleven. Not many. Eleven more.\n\nWhen the water recedes, they leave the boat with your family and the animals. They speak with different accents and pray to different gods. Above, Enlil counts the living and the count does not add up. But Enki smiles: the new mankind is not born from a closed house, but from an open one."
+      },
+      "fact": {
+        "es": "Beroso, un sacerdote babilonio del siglo III a. C., llama Xisutros al héroe del diluvio. En su versión, sube al barco a su familia y a sus amigos más cercanos.",
+        "en": "Berossus, a Babylonian priest of the 3rd century BCE, calls the flood hero Xisouthros. In his version, he takes his family and his closest friends aboard."
+      },
+      "ending": {
+        "type": "alternative",
+        "title": {
+          "es": "Los que llegaron nadando",
+          "en": "Those Who Came Swimming"
+        }
+      },
+      "choices": []
+    },
+    {
+      "id": "c8_ofrenda",
+      "chapter": 8,
+      "mood": "sacred",
+      "text": {
+        "es": "El barco toca tierra. Abres, y la luz te encandila. Todo es barro, silencio y cielo limpio.\n\nBajas con tu familia y los animales. Lo primero que haces es una ofrenda: preparas el fuego, quemas incienso, sacrificas a los dioses.\n\nLos dioses huelen el aroma. Hace siete días que no comen. Se juntan sobre la ofrenda como moscas.\n\nEnlil también llega. Ve el barco y se enfurece: —¿Por dónde se escapó la vida? ¿Cómo sobrevivió un hombre a la destrucción?\n\nAnu responde sin mirarlo: —¿Quién más que Enki podría haberlo hecho?\n\nTodos los ojos de los dioses están sobre ti. Enki da un paso adelante. Nintu, la diosa madre, todavía tiene los ojos rojos de llorar.",
+        "en": "The boat touches land. You open it, and the light blinds you. All is mud, silence, and clear sky.\n\nYou come down with your family and the animals. The first thing you do is make an offering: you build the fire, burn incense, sacrifice to the gods.\n\nThe gods smell the savor. They have not eaten in seven days. They gather like flies over the offering.\n\nEnlil comes too. He sees the boat and flies into a rage: “Where did life escape? How did a man survive the destruction?”\n\nAnu answers without looking at him: “Who but Enki could have done this?”\n\nEvery god’s eye is on you. Enki steps forward. Nintu, the mother goddess, her eyes still red from weeping, looks on."
+      },
+      "fact": {
+        "es": "En el Génesis, después del diluvio, Dios huele el aroma agradable del sacrificio de Noé (Génesis 8:21), como los dioses mesopotámicos atraídos por la ofrenda del sobreviviente.",
+        "en": "In Genesis, after the flood, God smells the pleasing odor of Noah’s sacrifice (Genesis 8:21), like the Mesopotamian gods drawn to the survivor’s offering."
+      },
+      "choices": [
+        {
+          "to": "c8_enki",
+          "risk": "low",
+          "text": {
+            "es": "Dejar que Enki responda por ti",
+            "en": "Let Enki answer for you"
+          },
+          "description": {
+            "es": "Fue tu dios quien desobedeció, y él sabe defenderse.",
+            "en": "It was your god who disobeyed, and he knows how to defend himself."
+          }
+        },
+        {
+          "to": "c8_nintu",
+          "risk": "low",
+          "text": {
+            "es": "Inclinarte ante la diosa madre",
+            "en": "Bow before the mother goddess"
+          },
+          "description": {
+            "es": "Ella lloró por los hombres; quizás ahora hable por ellos.",
+            "en": "She wept for mankind; perhaps now she will speak for them."
+          }
+        },
+        {
+          "to": "c8_hablar",
+          "risk": "medium",
+          "text": {
+            "es": "Hablarle tú mismo a Enlil",
+            "en": "Speak to Enlil yourself"
+          },
+          "description": {
+            "es": "Eres el último hombre en pie, y alguien tiene que decirle algo.",
+            "en": "You are the last man standing, and someone has to say something."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c8_enki",
+      "chapter": 8,
+      "mood": "epic",
+      "text": {
+        "es": "Enki se para frente a la asamblea, sin bajar la vista.\n\n—Lo hice yo —dice—. Contra tu voluntad, Enlil. Me aseguré de que la vida se salvara.\n\nEnlil abre la boca, pero Enki no lo deja hablar.\n\n—¿Por qué castigaste a todos por la culpa de algunos? Al que peca, cárgale su pecado. Pero no vuelvas a borrar la tierra entera.\n\nDespués se vuelve hacia Nintu, y los dos hablan en voz baja, como hablan los que amasaron algo juntos. Cuando terminan, tienen una propuesta para Enlil.",
+        "en": "Enki stands before the assembly and does not lower his eyes.\n\n“I did it,” he says. “Against your will, Enlil. I made sure life was saved.”\n\nEnlil opens his mouth, but Enki does not let him speak.\n\n“Why did you punish everyone for the fault of a few? Lay his sin on the sinner. But never again wipe out the whole earth.”\n\nThen he turns to Nintu, and the two speak softly, as those speak who once shaped something together. When they finish, they have a proposal for Enlil."
+      },
+      "fact": {
+        "es": "Las palabras «al que peca, cárgale su pecado» las dice Ea en la Epopeya de Gilgamesh, cuyo relato del diluvio se basa en el poema de Atrahasis.",
+        "en": "The words “lay his sin on the sinner” are spoken by Ea in the Epic of Gilgamesh, whose flood story is based on the poem of Atrahasis."
+      },
+      "choices": [
+        {
+          "to": "fin_medida",
+          "text": {
+            "es": "Escuchar lo que proponen",
+            "en": "Hear their proposal"
+          },
+          "description": {
+            "es": "Los dioses van a decidir cómo vivirán los hombres.",
+            "en": "The gods are about to decide how men will live."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c8_nintu",
+      "chapter": 8,
+      "mood": "sacred",
+      "text": {
+        "es": "Te arrodillas ante Nintu. La diosa madre te mira, y en sus ojos ves a todos los que amasó con barro y vio flotar en el río.\n\nToma las moscas grandes que hizo Anu y las cuelga en su collar, azules como el lapislázuli, como el agua profunda.\n\n—Por este collar, no olvidaré estos días —dice—. Nunca.\n\nDespués mira a la asamblea: —¿Y Enlil se atreve a venir a la ofrenda? Él, que mandó el diluvio sin pensarlo.\n\nEnki se pone a su lado. Los dos hablan en voz baja, como hablan los que amasaron algo juntos. Cuando terminan, tienen una propuesta.",
+        "en": "You kneel before Nintu. The mother goddess looks at you, and in her eyes you see everyone she shaped from clay and watched float in the river.\n\nShe takes the great flies that Anu made and hangs them on her necklace, blue as lapis lazuli, like deep water.\n\n“By this necklace, I will not forget these days,” she says. “Ever.”\n\nThen she looks at the assembly: “Does Enlil dare come to the offering, he who sent the flood without a thought?”\n\nEnki moves to her side. The two speak softly, as those speak who once shaped something together. When they finish, they have a proposal."
+      },
+      "fact": {
+        "es": "Tanto en el poema de Atrahasis como en la Epopeya de Gilgamesh, la diosa madre toma un collar de moscas de lapislázuli y jura no olvidar nunca los días del diluvio.",
+        "en": "In both the poem of Atrahasis and the Epic of Gilgamesh, the mother goddess takes a necklace of lapis lazuli flies and swears never to forget the days of the flood."
+      },
+      "choices": [
+        {
+          "to": "fin_medida",
+          "text": {
+            "es": "Escuchar lo que proponen",
+            "en": "Hear their proposal"
+          },
+          "description": {
+            "es": "Los dioses van a decidir cómo vivirán los hombres.",
+            "en": "The gods are about to decide how men will live."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c8_hablar",
+      "chapter": 8,
+      "mood": "dangerous",
+      "text": {
+        "es": "Das un paso al frente. Tu voz suena pequeña entre los dioses.\n\n—Señor Enlil, no te molestaremos más. Pero no nos borres. Somos tus trabajadores. Si no estamos, ¿quién cavará tus canales? ¿Quién te dará pan?\n\nLos dioses hambrientos murmuran. Saben que es verdad: siete días sin ofrendas les enseñaron lo que vale un hombre.\n\nEnlil te mira un largo rato. Por primera vez, no parece enojado. Parece cansado.\n\n—Pide, entonces —dice—. Pide algo para ti, hombre que habla con los dioses.\n\nDetrás de él, Enki y Nintu esperan.",
+        "en": "You step forward. Your voice sounds small among the gods.\n\n“Lord Enlil, we will not disturb you again. But do not wipe us out. We are your workers. Without us, who will dig your canals? Who will give you bread?”\n\nThe hungry gods murmur. They know it is true: seven days without offerings have taught them what a man is worth.\n\nEnlil looks at you for a long while. For the first time, he does not seem angry. He seems tired.\n\n“Ask, then,” he says. “Ask a boon for yourself, man who speaks with the gods.”\n\nBehind him, Enki and Nintu wait."
+      },
+      "choices": [
+        {
+          "to": "fin_medida",
+          "risk": "low",
+          "text": {
+            "es": "Pedir solo que vivan los hombres",
+            "en": "Ask only that mankind live"
+          },
+          "description": {
+            "es": "No quieres nada para ti, solo que tu gente siga.",
+            "en": "You want nothing for yourself, only that your people go on."
+          }
+        },
+        {
+          "to": "fin_dilmun",
+          "risk": "medium",
+          "text": {
+            "es": "Pedir la vida de los dioses",
+            "en": "Ask for the life the gods have"
+          },
+          "description": {
+            "es": "Si sobreviviste al fin del mundo, quizás merezcas no morir.",
+            "en": "If you survived the end of the world, perhaps you deserve not to die."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_medida",
+      "chapter": 8,
+      "mood": "triumphant",
+      "text": {
+        "es": "Enki y Nintu le hablan a la asamblea, y Enlil escucha.\n\nLos hombres vivirán. Pero tendrán medida, para que nunca vuelvan a ser demasiados. Entre las mujeres, algunas darán a luz y otras no. Un demonio femenino, la Pashittu, arrebatará a los recién nacidos del regazo de sus madres. Habrá sacerdotisas consagradas que no tendrán hijos.\n\nEs un precio duro. Pero es un precio, no un diluvio.\n\nMiras a tu familia, a los animales que bajan del barco, al barro donde mañana vas a sembrar. Oyes, a lo lejos, a tu hijo menor que se ríe. Es un ruido pequeño. Es el primer ruido de la tierra nueva.\n\nY esta vez, Enlil lo deja sonar.",
+        "en": "Enki and Nintu address the assembly, and Enlil listens.\n\nMankind will live. But it will have a limit, so it can never again grow too many. Among women, some will bear children and some will not. A demoness, the Pashittu, will snatch newborns from their mothers’ laps. There will be consecrated priestesses who bear no children.\n\nIt is a hard price. But it is a price, not a flood.\n\nYou look at your family, at the animals coming down from the boat, at the mud where tomorrow you will sow. Far off, you hear your youngest son laughing. It is a small noise. It is the first noise of the new land.\n\nAnd this time, Enlil lets it ring."
+      },
+      "fact": {
+        "es": "El poema explica así la mortalidad infantil y la existencia de sacerdotisas sin hijos, como las ugbabtu y las entu: son la medida que los dioses le ponen a la humanidad después del diluvio.",
+        "en": "This is how the poem explains infant death and the existence of childless priestesses, such as the ugbabtu and the entu: they are the limit the gods set on mankind after the flood."
+      },
+      "ending": {
+        "type": "myth",
+        "title": {
+          "es": "La medida de los hombres",
+          "en": "The Measure of Mankind"
+        }
+      },
+      "choices": []
+    },
+    {
+      "id": "fin_dilmun",
+      "chapter": 8,
+      "mood": "peaceful",
+      "text": {
+        "es": "—Pido no morir —dices.\n\nLos dioses se miran. Enki sonríe apenas. Enlil, contra lo que todos esperan, asiente.\n\n—Hasta ahora fuiste un hombre. Desde hoy tendrás vida como nosotros. Pero no vivirás entre los hombres. Vivirás lejos, en Dilmun, donde sale el sol.\n\nTe llevan allí. Es una tierra limpia, sin enfermedad, donde el león no mata y el cuervo no grazna. Tienes vida sin fin.\n\nDesde tu orilla ves, a veces, barcos que pasan. Los hombres vuelven a ser muchos. Hacen ruido. Mueren. Nunca sabrán que alguien que los quería vive para siempre del otro lado del agua, sin poder volver.",
+        "en": "“I ask not to die,” you say.\n\nThe gods exchange glances. Enki barely smiles. Enlil, to everyone’s surprise, nods.\n\n“Until now you were a man. From this day you will have life like ours. But you will not live among men. You will live far away, in Dilmun, where the sun rises.”\n\nThey take you there. It is a pure land, free of sickness, where the lion does not kill and the raven does not croak. You have life without end.\n\nFrom your shore you sometimes see ships pass. Men are many again. They make noise. They die. They will never know that someone who loved them lives forever on the far side of the water, unable to return."
+      },
+      "fact": {
+        "es": "En la versión sumeria, el héroe del diluvio se llama Ziusudra. An y Enlil le dan una vida como la de un dios y lo instalan en Dilmun, que hoy suele identificarse con Bahréin.",
+        "en": "In the Sumerian version, the flood hero is called Ziusudra. An and Enlil give him life like a god’s and settle him in Dilmun, which today is usually identified with Bahrain."
+      },
+      "ending": {
+        "type": "alternative",
+        "title": {
+          "es": "La vida de los dioses",
+          "en": "The Life of the Gods"
+        }
+      },
+      "choices": []
+    }
+  ]
+}
