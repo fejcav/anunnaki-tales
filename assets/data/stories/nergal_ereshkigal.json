@@ -1,0 +1,1165 @@
+{
+  "formatVersion": 1,
+  "adventureId": "nergal_ereshkigal",
+  "contentVersion": "1.0",
+  "hero": {
+    "name": {
+      "es": "Nergal",
+      "en": "Nergal"
+    },
+    "description": {
+      "es": "Dios de la guerra, de la peste y del calor que seca los campos. Hijo de Enlil, señor de Kutha, temido en el cielo y en la tierra. Nunca te has inclinado ante nadie que no sea tu padre.",
+      "en": "God of war, of plague and of the heat that withers the fields. Son of Enlil, lord of Kutha, feared in heaven and on earth. You have never bowed to anyone but your father."
+    }
+  },
+  "chapters": [
+    {
+      "number": 1,
+      "title": {
+        "es": "El banquete de Anu",
+        "en": "The Banquet of Anu"
+      }
+    },
+    {
+      "number": 2,
+      "title": {
+        "es": "La ira de la reina",
+        "en": "The Queen’s Wrath"
+      }
+    },
+    {
+      "number": 3,
+      "title": {
+        "es": "Los consejos de Ea",
+        "en": "The Counsel of Ea"
+      }
+    },
+    {
+      "number": 4,
+      "title": {
+        "es": "Las siete puertas",
+        "en": "The Seven Gates"
+      }
+    },
+    {
+      "number": 5,
+      "title": {
+        "es": "La mesa de la reina",
+        "en": "The Queen’s Table"
+      }
+    },
+    {
+      "number": 6,
+      "title": {
+        "es": "Seis días y seis noches",
+        "en": "Six Days and Six Nights"
+      }
+    },
+    {
+      "number": 7,
+      "title": {
+        "es": "El llanto de Ereshkigal",
+        "en": "The Tears of Ereshkigal"
+      }
+    },
+    {
+      "number": 8,
+      "title": {
+        "es": "La tierra ancha",
+        "en": "The Broad Earth"
+      }
+    }
+  ],
+  "start": "c1_banquete",
+  "scenes": [
+    {
+      "id": "c1_banquete",
+      "chapter": 1,
+      "mood": "epic",
+      "text": {
+        "es": "Anu, el padre de los dioses, ha preparado un banquete en el cielo. Pero hay una diosa que no puede subir: Ereshkigal, la reina de la tierra de los muertos, no sale nunca de su casa. Anu le mandó a su mensajero Kakka por la larga escalera del cielo, con un recado: «Tú no puedes subir y nosotros no podemos bajar. Manda a tu mensajero a buscar tu parte».\n\nY el mensajero llegó. Se llama Namtar, el visir de la reina, el que trae las enfermedades. Es flaco, gris y silencioso, y entra en la sala como si no viniera de ningún lado.\n\nTodos los dioses se ponen de pie. Anu, Enlil, Ea. Los grandes y los chicos. Todos menos tú.\n\nEres Nergal. Hijo de Enlil, señor de Kutha, dios de la guerra y de la peste. Y tienes la copa en la mano.",
+        "en": "Anu, father of the gods, has prepared a banquet in heaven. But there is one goddess who cannot come up: Ereshkigal, queen of the land of the dead, never leaves her house. Anu sent his messenger Kakka down the long stairway of heaven with a message: “You cannot come up, and we cannot go down. Send your messenger to fetch your portion.”\n\nAnd the messenger came. His name is Namtar, the queen’s vizier, the bringer of sickness. He is thin, gray and silent, and he enters the hall as if he came from nowhere.\n\nAll the gods rise to their feet. Anu, Enlil, Ea. The great and the small. All but you.\n\nYou are Nergal. Son of Enlil, lord of Kutha, god of war and of plague. And your cup is in your hand."
+      },
+      "fact": {
+        "es": "El poema «Nergal y Ereshkigal» se conoce por dos versiones: una breve hallada en Amarna, en Egipto, del siglo XIV a. C., y una más larga copiada en Sultantepe y en Uruk, en el primer milenio a. C.",
+        "en": "The poem “Nergal and Ereshkigal” is known in two versions: a short one found at Amarna, in Egypt, from the 14th century BCE, and a longer one copied at Sultantepe and at Uruk in the first millennium BCE."
+      },
+      "choices": [
+        {
+          "to": "c1_sentado",
+          "risk": "medium",
+          "text": {
+            "es": "Quedarte sentado",
+            "en": "Stay seated"
+          },
+          "description": {
+            "es": "No te levantas por un sirviente, ni siquiera por el de una reina.",
+            "en": "You do not rise for a servant, not even a queen’s."
+          }
+        },
+        {
+          "to": "c1_mirar",
+          "risk": "low",
+          "text": {
+            "es": "Levantarte último, mirándolo a los ojos",
+            "en": "Rise last, looking him in the eye"
+          },
+          "description": {
+            "es": "Te pones de pie, pero que sepa que no es por respeto.",
+            "en": "You stand, but let him know it is not out of respect."
+          }
+        },
+        {
+          "to": "c1_burla",
+          "risk": "high",
+          "text": {
+            "es": "Burlarte del mensajero en voz alta",
+            "en": "Mock the messenger aloud"
+          },
+          "description": {
+            "es": "Los muertos mandan a un escriba a buscar comida.",
+            "en": "The dead send a scribe to fetch food."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c1_sentado",
+      "chapter": 1,
+      "mood": "dangerous",
+      "text": {
+        "es": "No te mueves. Bebes un trago largo y dejas la copa sobre la mesa con cuidado, sin ruido.\n\nNamtar recorre la sala con la vista. Se detiene en ti. No dice nada: solo te mira, y en su mirada no hay enojo, sino otra cosa, más vieja. La mirada de alguien que apunta un nombre.\n\nDespués toma la parte de su reina de la mesa de Anu, se inclina ante el padre de los dioses y se va por donde vino.\n\nLos dioses vuelven a sentarse. Nadie te dice nada. Pero Ea, el más sabio, te observa un momento más largo que los demás.",
+        "en": "You do not move. You take a long drink and set the cup down on the table, carefully, without a sound.\n\nNamtar’s gaze sweeps the hall. It stops on you. He says nothing: he only looks at you, and in his look there is no anger, but something else, something older. The look of someone writing down a name.\n\nThen he takes his queen’s portion from Anu’s table, bows to the father of the gods and leaves the way he came.\n\nThe gods sit down again. No one says a word to you. But Ea, the wisest of them, watches you a moment longer than the rest."
+      },
+      "fact": {
+        "es": "Namtar, cuyo nombre significa «destino», era el visir de Ereshkigal y el portador de las enfermedades. En el poema de Atrahasis, Enlil ordena una plaga para reducir a los hombres, y la plaga lleva su nombre.",
+        "en": "Namtar, whose name means “fate,” was Ereshkigal’s vizier and the bringer of disease. In the poem of Atrahasis, Enlil orders a plague to reduce mankind, and the plague bears his name."
+      },
+      "choices": [
+        {
+          "to": "c2_sentencia",
+          "text": {
+            "es": "Esperar la respuesta de la reina",
+            "en": "Await the queen’s answer"
+          },
+          "description": {
+            "es": "Namtar ya baja la escalera del cielo.",
+            "en": "Namtar is already coming down the stairway of heaven."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c1_mirar",
+      "chapter": 1,
+      "mood": "mysterious",
+      "text": {
+        "es": "Te levantas cuando ya todos están de pie. Despacio. Y mientras te levantas, lo miras a los ojos.\n\nNamtar sostiene la mirada. Tiene los ojos de todos los enfermos que ha visitado. Por un instante te parece que sonríe, pero los mensajeros de la tierra de los muertos no sonríen.\n\nToma la parte de su reina, se inclina ante Anu y se va por la larga escalera.\n\nCuando se ha ido, Ea se acerca a tu mesa. —Te vio —dice—. Vio que te levantaste último, y vio por qué. No vas a engañar a los de abajo con una reverencia tardía.",
+        "en": "You rise when everyone else is already standing. Slowly. And as you rise, you look him in the eye.\n\nNamtar holds your gaze. He has the eyes of all the sick he has ever visited. For an instant he seems to smile, but the messengers of the land of the dead do not smile.\n\nHe takes his queen’s portion, bows to Anu and leaves by the long stairway.\n\nWhen he is gone, Ea comes over to your table. “He saw you,” he says. “He saw that you rose last, and he saw why. You will not fool those below with a late bow.”"
+      },
+      "fact": {
+        "es": "Ea, el Enki sumerio, era el dios de la sabiduría y de las aguas dulces. En casi todos los mitos mesopotámicos es él quien encuentra la salida cuando los otros dioses no la ven.",
+        "en": "Ea, the Sumerian Enki, was the god of wisdom and of fresh water. In nearly every Mesopotamian myth, he is the one who finds the way out when the other gods cannot see it."
+      },
+      "choices": [
+        {
+          "to": "c2_sentencia",
+          "text": {
+            "es": "Esperar la respuesta de la reina",
+            "en": "Await the queen’s answer"
+          },
+          "description": {
+            "es": "Namtar ya baja la escalera del cielo.",
+            "en": "Namtar is already coming down the stairway of heaven."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c1_burla",
+      "chapter": 1,
+      "mood": "dangerous",
+      "text": {
+        "es": "—Miren —dices, y tu voz llena la sala—: la reina de los muertos tiene hambre y manda a su escriba a buscar las sobras.\n\nAlgunos dioses jóvenes se ríen. Los grandes no. Anu baja la vista hacia su copa.\n\nNamtar no te contesta. Toma la parte de su reina, se inclina ante Anu y, antes de irse, se detiene un instante frente a tu mesa. No se inclina ante ti. Te mira como se mira una ciudad que ya cayó.\n\nCuando sus pasos se pierden por la escalera, Ea se levanta y viene a sentarse a tu lado. —Hiciste reír a los jóvenes —dice—. Ahora vamos a ver quién ríe abajo.",
+        "en": "“Look,” you say, and your voice fills the hall. “The queen of the dead is hungry, and she sends her scribe to fetch the leftovers.”\n\nSome of the young gods laugh. The great ones do not. Anu lowers his eyes to his cup.\n\nNamtar does not answer you. He takes his queen’s portion, bows to Anu and, before leaving, stops for a moment in front of your table. He does not bow to you. He looks at you the way one looks at a city that has already fallen.\n\nWhen his footsteps fade down the stairway, Ea rises and comes to sit beside you. “You made the young ones laugh,” he says. “Now we shall see who laughs below.”"
+      },
+      "fact": {
+        "es": "Nergal se llamaba en sumerio «señor de la gran ciudad», un modo de nombrar al rey del inframundo sin decirlo. Su ciudad en la tierra era Kutha, al noreste de Babilonia.",
+        "en": "In Sumerian, Nergal’s name meant “lord of the great city,” a way of naming the king of the underworld without saying it. His city on earth was Kutha, northeast of Babylon."
+      },
+      "choices": [
+        {
+          "to": "c2_sentencia",
+          "text": {
+            "es": "Esperar la respuesta de la reina",
+            "en": "Await the queen’s answer"
+          },
+          "description": {
+            "es": "Namtar ya baja la escalera del cielo.",
+            "en": "Namtar is already coming down the stairway of heaven."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2_sentencia",
+      "chapter": 2,
+      "mood": "dangerous",
+      "text": {
+        "es": "Namtar vuelve a subir la escalera al día siguiente, y esta vez no viene por comida.\n\n—Mi señora Ereshkigal dice: «Todos los dioses se pusieron de pie ante mi mensajero. Uno no lo hizo. Mándenmelo, para que lo mate».\n\nAnu, Enlil y Ea se miran. Son los tres más grandes, y los tres saben que la reina de los muertos tiene derecho a lo que pide. Lo que pasa en la tierra de abajo no lo gobierna el cielo.\n\n—Busca al que no se levantó ante ti —le dice Anu a Namtar—, y llévaselo a tu señora.\n\nNamtar recorre la sala. Y tú sientes por primera vez en tu vida algo que no conoces, y que los hombres llaman miedo.",
+        "en": "Namtar climbs the stairway again the next day, and this time he has not come for food.\n\n“My lady Ereshkigal says: ‘All the gods stood up before my messenger. One did not. Send him to me, so that I may kill him.’”\n\nAnu, Enlil and Ea look at one another. They are the three greatest, and all three know that the queen of the dead has a right to what she asks. What happens in the land below is not ruled by heaven.\n\n“Find the one who did not rise before you,” Anu tells Namtar, “and take him to your lady.”\n\nNamtar moves through the hall. And for the first time in your life you feel something you have never known, which men call fear."
+      },
+      "fact": {
+        "es": "En la versión de Amarna, Ereshkigal pide que le manden al dios para matarlo. En la versión estándar, Anu lo envía a disculparse, y el peligro queda en las reglas de la tierra de los muertos.",
+        "en": "In the Amarna version, Ereshkigal asks for the god to be sent to her so that she can kill him. In the standard version, Anu sends him down to apologize, and the danger lies in the rules of the land of the dead."
+      },
+      "choices": [
+        {
+          "to": "c2_ea",
+          "risk": "low",
+          "text": {
+            "es": "Pedirle consejo a Ea",
+            "en": "Ask Ea for counsel"
+          },
+          "description": {
+            "es": "Si alguien sabe cómo bajar y volver, es él.",
+            "en": "If anyone knows how to go down and come back, it is he."
+          }
+        },
+        {
+          "to": "c2_anu",
+          "risk": "medium",
+          "text": {
+            "es": "Pedirle a Anu que te perdone",
+            "en": "Ask Anu to pardon you"
+          },
+          "description": {
+            "es": "Eres hijo de Enlil; el padre de los dioses puede negarse.",
+            "en": "You are Enlil’s son; the father of the gods can say no."
+          }
+        },
+        {
+          "to": "c2_bajar",
+          "risk": "high",
+          "text": {
+            "es": "Bajar ahora mismo con tu maza",
+            "en": "Go down at once with your mace"
+          },
+          "description": {
+            "es": "Que la reina de los muertos vea lo que es la guerra.",
+            "en": "Let the queen of the dead see what war is."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2_ea",
+      "chapter": 2,
+      "mood": "mysterious",
+      "text": {
+        "es": "Encuentras a Ea en su casa de aguas dulces, el Apsu, donde todo está en penumbra y huele a cañas mojadas.\n\n—Me va a matar —le dices.\n\n—Va a intentarlo —contesta él—. Pero Ereshkigal no mata con un cuchillo. Mata con una silla, con un pan, con una jarra de cerveza. Todo lo que recibas en su casa te ata a su casa. Es la ley de abajo, y ni Anu puede romperla.\n\n—¿Entonces qué hago?\n\nEa se queda callado un largo rato, mirando el agua.\n\n—Vas a bajar —dice al fin—. Pero vas a bajar como yo te diga.",
+        "en": "You find Ea in his house of fresh waters, the Apsu, where everything lies in half-darkness and smells of wet reeds.\n\n“She is going to kill me,” you tell him.\n\n“She is going to try,” he answers. “But Ereshkigal does not kill with a knife. She kills with a chair, with a loaf of bread, with a jar of beer. Everything you accept in her house binds you to her house. That is the law below, and not even Anu can break it.”\n\n“Then what do I do?”\n\nEa is silent for a long time, gazing at the water.\n\n“You will go down,” he says at last. “But you will go down the way I tell you.”"
+      },
+      "fact": {
+        "es": "El Apsu era el agua dulce que, según los mesopotámicos, estaba debajo de la tierra y brotaba en los manantiales y los ríos. Ea reinaba en él desde su ciudad, Eridu.",
+        "en": "For the Mesopotamians, the Apsu was the fresh water that lay beneath the earth and welled up in springs and rivers. Ea ruled over it from his city, Eridu."
+      },
+      "choices": [
+        {
+          "to": "c3_consejo",
+          "text": {
+            "es": "Escuchar a Ea",
+            "en": "Listen to Ea"
+          },
+          "description": {
+            "es": "Nadie conoce la tierra de los muertos como el más sabio de los dioses.",
+            "en": "No one knows the land of the dead like the wisest of the gods."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2_anu",
+      "chapter": 2,
+      "mood": "sacred",
+      "text": {
+        "es": "Te arrodillas ante el trono de Anu.\n\n—Padre de los dioses, soy el hijo de Enlil. No me entregues a los muertos por una copa de cerveza.\n\nAnu te mira con sus ojos antiguos. —Nergal, en mi cielo yo soy el rey. En la tierra de abajo, la reina es ella. Si te niego, Ereshkigal cierra sus puertas y los muertos dejan de recibir a los muertos. ¿Quieres que los cadáveres se queden caminando por las calles de Kutha?\n\nBajas la cabeza.\n\n—Ve a ver a Ea —dice Anu, más bajo—. Él te explicará cómo se baja a esa casa sin quedarse en ella.",
+        "en": "You kneel before the throne of Anu.\n\n“Father of the gods, I am the son of Enlil. Do not hand me over to the dead for a cup of beer.”\n\nAnu looks at you with his ancient eyes. “Nergal, in my heaven I am king. In the land below, she is queen. If I refuse her, Ereshkigal will shut her gates, and the dead will no longer receive the dead. Do you want corpses walking the streets of Kutha?”\n\nYou bow your head.\n\n“Go and see Ea,” says Anu, more quietly. “He will tell you how to go down to that house without staying there.”"
+      },
+      "fact": {
+        "es": "Anu, el An sumerio, era el dios del cielo y el padre de los dioses. Se lo veneraba en Uruk, en el recinto de Kullab. El Eanna, «casa del cielo», era de Inanna: según la tradición, An se lo había cedido.",
+        "en": "Anu, the Sumerian An, was the god of the sky and the father of the gods. He was worshipped at Uruk, in the precinct of Kullab. The Eanna, “house of heaven,” belonged to Inanna: according to tradition, An had given it to her."
+      },
+      "choices": [
+        {
+          "to": "c3_consejo",
+          "text": {
+            "es": "Escuchar a Ea",
+            "en": "Listen to Ea"
+          },
+          "description": {
+            "es": "Nadie conoce la tierra de los muertos como el más sabio de los dioses.",
+            "en": "No one knows the land of the dead like the wisest of the gods."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2_bajar",
+      "chapter": 2,
+      "mood": "epic",
+      "text": {
+        "es": "Tomas tu maza, la de las tres cabezas de león, y sales de la sala sin despedirte de nadie. Bajas los primeros escalones de la larga escalera del cielo a grandes pasos.\n\nEn el décimo escalón, alguien te espera sentado.\n\n—Siéntate —dice Ea.\n\n—No tengo tiempo.\n\n—Tienes toda la eternidad, si bajas así. Con esa maza vas a abrir las puertas, sí. Y después te van a dar una silla, y te vas a sentar, porque estarás cansado. Y te van a dar pan, y comerás. Y no vas a volver nunca más.\n\nTe detienes. Ea no se mueve del escalón.\n\n—Ahora sí —dice—. Siéntate, y escucha.",
+        "en": "You take up your mace, the one with three lion heads, and leave the hall without a word to anyone. You stride down the first steps of the long stairway of heaven.\n\nOn the tenth step, someone sits waiting for you.\n\n“Sit down,” says Ea.\n\n“I have no time.”\n\n“You have all eternity, if you go down like this. With that mace you will open the gates, yes. And then they will give you a chair, and you will sit, because you will be tired. And they will give you bread, and you will eat. And you will never come back.”\n\nYou stop. Ea does not move from his step.\n\n“There,” he says. “Now sit down, and listen.”"
+      },
+      "fact": {
+        "es": "Nergal solía representarse con una maza rematada en cabezas de león y con una cimitarra con adornos de león. Esos símbolos aparecen en sellos cilíndricos y en las estelas que marcaban los límites de las tierras.",
+        "en": "Nergal was often shown with a mace topped with lion heads and a scimitar adorned with lions. These symbols appear on cylinder seals and on the stelae that marked the boundaries of land."
+      },
+      "choices": [
+        {
+          "to": "c3_consejo",
+          "text": {
+            "es": "Escuchar a Ea",
+            "en": "Listen to Ea"
+          },
+          "description": {
+            "es": "Nadie conoce la tierra de los muertos como el más sabio de los dioses.",
+            "en": "No one knows the land of the dead like the wisest of the gods."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3_consejo",
+      "chapter": 3,
+      "mood": "mysterious",
+      "text": {
+        "es": "—Escucha bien —dice Ea—. Cuando bajes, vas a cruzar siete puertas. En la casa de Ereshkigal te van a traer una silla: no te sientes. El panadero te traerá pan: no lo comas. El carnicero te traerá carne: no la comas. El cervecero te traerá cerveza: no la bebas. Te traerán agua para lavarte los pies: no te laves.\n\n»Y cuando la reina vaya a bañarse y se ponga su vestido, y deje que veas su cuerpo, tú no hagas lo que hacen un hombre y una mujer.\n\n—¿Eso es todo?\n\n—Eso es todo lo que te puede matar. Lo demás es lo que te puede salvar. —Ea señala el bosque de abajo—. Vas a cortar madera y vas a hacer una silla. Llévala contigo: una silla propia protege de los muertos.",
+        "en": "“Listen well,” says Ea. “When you go down, you will pass through seven gates. In the house of Ereshkigal they will bring you a chair: do not sit on it. The baker will bring you bread: do not eat it. The butcher will bring you meat: do not eat it. The brewer will bring you beer: do not drink it. They will bring you water to wash your feet: do not wash them.\n\n“And when the queen goes to bathe and puts on her robe, and lets you see her body, you must not do that which men and women do.”\n\n“Is that all?”\n\n“That is all that can kill you. The rest is what can save you.” Ea points to the forest below. “You will cut wood and make a chair. Take it with you: a chair of your own protects you from the dead.”"
+      },
+      "fact": {
+        "es": "En la versión estándar del poema, Ea le prohíbe a Nergal sentarse, comer pan, comer carne, beber cerveza, lavarse los pies y acostarse con Ereshkigal. Se cree que aceptar algo de la tierra de los muertos era quedar atado a ella.",
+        "en": "In the standard version of the poem, Ea forbids Nergal to sit, to eat bread, to eat meat, to drink beer, to wash his feet and to lie with Ereshkigal. It is believed that accepting anything from the land of the dead meant being bound to it."
+      },
+      "choices": [
+        {
+          "to": "c3_silla",
+          "risk": "low",
+          "text": {
+            "es": "Cortar la madera y hacer la silla",
+            "en": "Cut the wood and make the chair"
+          },
+          "description": {
+            "es": "Haces lo que Ea dice, sin preguntar.",
+            "en": "You do as Ea says, without asking questions."
+          }
+        },
+        {
+          "to": "c3_demonios",
+          "risk": "medium",
+          "text": {
+            "es": "Pedirle también catorce demonios",
+            "en": "Ask him for fourteen demons too"
+          },
+          "description": {
+            "es": "Una silla no abre puertas; una escolta, sí.",
+            "en": "A chair opens no gates; an escort does."
+          }
+        },
+        {
+          "to": "c3_memoria",
+          "risk": "medium",
+          "text": {
+            "es": "Repetir las siete reglas hasta aprenderlas",
+            "en": "Recite the seven rules until you know them"
+          },
+          "description": {
+            "es": "Lo que no está en la memoria no está en ninguna parte.",
+            "en": "What is not in your memory is nowhere at all."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3_silla",
+      "chapter": 3,
+      "mood": "peaceful",
+      "text": {
+        "es": "Bajas al bosque con un hacha. Cortas los árboles que Ea te señala, los descortezas, los dejas secar. Con tus propias manos, las manos que solo habían sostenido armas, armas una silla.\n\nTe lleva días. Ea viene a mirar cada tarde y no dice nada, hasta la última.\n\n—Está bien —dice—. Cuando te la ofrezcan, dirás: «Traigo la mía». Y cuando se la regales a la reina, dirás: «Es un regalo de Anu para la casa de Ereshkigal». Así tendrá su reverencia, y tú tendrás tus piernas.\n\nTe cargas la silla al hombro. Pesa menos que la maza.",
+        "en": "You go down to the forest with an axe. You cut the trees Ea points out, strip their bark, leave them to dry. With your own hands, hands that had only ever held weapons, you build a chair.\n\nIt takes you days. Ea comes to watch every evening and says nothing, until the last.\n\n“It is good,” he says. “When they offer you a chair, you will say: ‘I have brought my own.’ And when you give it to the queen, you will say: ‘It is a gift from Anu for the house of Ereshkigal.’ So she will have her bow, and you will stay on your feet.”\n\nYou hoist the chair onto your shoulder. It weighs less than the mace."
+      },
+      "fact": {
+        "es": "En la versión estándar, Ea le hace cortar maderas a Nergal y fabricar una silla pintada como si fuera de plata, oro y lapislázuli. El texto no explica para qué; algunos la relacionan con la «silla del espíritu», que protegía de los fantasmas.",
+        "en": "In the standard version, Ea has Nergal cut timber and make a chair painted to look like silver, gold and lapis lazuli. The text does not explain why; some link it to the “chair of the spirit,” which protected against ghosts."
+      },
+      "choices": [
+        {
+          "to": "c4_puertas",
+          "text": {
+            "es": "Bajar la larga escalera del cielo",
+            "en": "Go down the long stairway of heaven"
+          },
+          "description": {
+            "es": "Abajo espera la puerta de Ereshkigal.",
+            "en": "Below, the gate of Ereshkigal is waiting."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3_demonios",
+      "chapter": 3,
+      "mood": "dangerous",
+      "text": {
+        "es": "—Una silla no abre puertas —le dices a Ea—. Dame una escolta.\n\nEa suspira, como quien ya sabía que lo ibas a pedir. Levanta una mano, y del agua oscura del Apsu salen catorce sombras: el Relámpago, el Acechador, la Fiebre, el Vértigo, el Que Derriba, la Convulsión, y ocho más cuyos nombres solo se dicen en voz baja.\n\n—Son tuyos —dice Ea—. Pon dos en cada puerta, para que las puertas no se cierren detrás de ti. Pero escúchame: los demonios te sacan de la casa. No te salvan de la silla ni del pan. De eso te salvas tú.\n\nHaces la silla igual, en tres días, con los demonios mirando.",
+        "en": "“A chair opens no gates,” you tell Ea. “Give me an escort.”\n\nEa sighs, as if he had known you would ask. He raises a hand, and from the dark water of the Apsu rise fourteen shadows: Lightning, the Lurker, Fever, Vertigo, the One Who Fells, Convulsion, and eight more whose names are spoken only in a whisper.\n\n“They are yours,” says Ea. “Set two at each gate, so the gates do not close behind you. But listen to me: the demons can get you out of the house. They do not save you from the chair or from the bread. From that, only you can save yourself.”\n\nYou make the chair all the same, in three days, with the demons watching."
+      },
+      "fact": {
+        "es": "En la versión de Amarna, Ea le da a Nergal catorce demonios para bajar, entre ellos el Relámpago, el Acechador, la Fiebre y el Vértigo. El texto los reparte en catorce puertas: probablemente siete puertas dobles, con dos demonios en cada una.",
+        "en": "In the Amarna version, Ea gives Nergal fourteen demons for his descent, among them Lightning, the Lurker, Fever and Vertigo. The text spreads them across fourteen gates: probably seven double gates, with two demons at each."
+      },
+      "choices": [
+        {
+          "to": "c4_puertas",
+          "text": {
+            "es": "Bajar la larga escalera del cielo",
+            "en": "Go down the long stairway of heaven"
+          },
+          "description": {
+            "es": "Abajo espera la puerta de Ereshkigal.",
+            "en": "Below, the gate of Ereshkigal is waiting."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3_memoria",
+      "chapter": 3,
+      "mood": "mysterious",
+      "text": {
+        "es": "—Dímelas —ordena Ea.\n\n—La silla, no. El pan, no. La carne, no. La cerveza, no. El agua para los pies, no. La reina…\n\n—La reina.\n\n—No.\n\n—Otra vez.\n\nLas repites hasta que te salen sin pensar, como un conjuro. Ea te despierta en mitad de la noche y te las pide de nuevo, y se las dices con los ojos cerrados.\n\nMientras tanto, cortas la madera y haces la silla, y cada golpe de hacha es una regla. Cuando terminas, Ea toca el respaldo y asiente.\n\n—La reina es la más fácil de olvidar —dice—. Recuérdalo.",
+        "en": "“Tell them to me,” Ea commands.\n\n“The chair, no. The bread, no. The meat, no. The beer, no. The water for the feet, no. The queen…”\n\n“The queen.”\n\n“No.”\n\n“Again.”\n\nYou repeat them until you can say them without thinking, like a spell. Ea wakes you in the middle of the night and asks for them again, and you recite them with your eyes closed.\n\nMeanwhile, you cut the wood and build the chair, and every stroke of the axe is a rule. When you finish, Ea touches the backrest and nods.\n\n“The queen is the easiest to forget,” he says. “Remember that.”"
+      },
+      "fact": {
+        "es": "Según «El descenso de Ishtar», en la tierra de los muertos el polvo es el alimento y la arcilla es el pan, y sus habitantes viven en la oscuridad, vestidos con plumas, como pájaros.",
+        "en": "According to “The Descent of Ishtar,” in the land of the dead dust is the food and clay the bread, and its people live in darkness, clothed in feathers like birds."
+      },
+      "choices": [
+        {
+          "to": "c4_puertas",
+          "text": {
+            "es": "Bajar la larga escalera del cielo",
+            "en": "Go down the long stairway of heaven"
+          },
+          "description": {
+            "es": "Abajo espera la puerta de Ereshkigal.",
+            "en": "Below, the gate of Ereshkigal is waiting."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c4_puertas",
+      "chapter": 4,
+      "mood": "mysterious",
+      "text": {
+        "es": "Bajas la larga escalera del cielo con la silla al hombro. Al principio hay luz. Después, menos. Después, ninguna.\n\nAl pie de la escalera hay una puerta de bronce verde, y detrás, otras seis, cada una más adentro que la anterior. Es la tierra de donde nadie regresa, la casa de Irkalla.\n\nEl portero, Nedu, levanta una lámpara que no alumbra nada y te mira.\n\n—¿Quién eres, que vienes a la puerta de Ereshkigal?\n\nSabes que lo que digas ahora va a llegar a los oídos de la reina antes que tú.",
+        "en": "You go down the long stairway of heaven with the chair on your shoulder. At first there is light. Then less. Then none.\n\nAt the foot of the stairway stands a gate of green bronze, and beyond it six more, each one deeper than the last. This is the Land of No Return, the house of Irkalla.\n\nThe gatekeeper, Nedu, raises a lamp that lights nothing and looks at you.\n\n“Who are you, who come to the gate of Ereshkigal?”\n\nYou know that whatever you say now will reach the queen’s ears before you do."
+      },
+      "fact": {
+        "es": "La tierra de los muertos se llamaba Kurnugi, «la tierra sin retorno», y también Irkalla. Se entraba por siete puertas, como cuenta «El descenso de Inanna».",
+        "en": "The land of the dead was called Kurnugi, “the land of no return,” and also Irkalla. It was entered through seven gates, as “The Descent of Inanna” tells."
+      },
+      "choices": [
+        {
+          "to": "c4_nombre",
+          "risk": "medium",
+          "text": {
+            "es": "Decir tu nombre verdadero",
+            "en": "Speak your true name"
+          },
+          "description": {
+            "es": "Que sepa quién viene: el que no se levantó.",
+            "en": "Let him know who is coming: the one who did not rise."
+          }
+        },
+        {
+          "to": "c4_mensajero",
+          "risk": "low",
+          "text": {
+            "es": "Presentarte como enviado de Anu",
+            "en": "Present yourself as Anu’s envoy"
+          },
+          "description": {
+            "es": "Un mensajero tiene derecho a entrar y a salir.",
+            "en": "A messenger has the right to come in and go out."
+          }
+        },
+        {
+          "to": "c4_fuerza",
+          "risk": "high",
+          "text": {
+            "es": "Abrir la puerta a golpes",
+            "en": "Batter down the gate"
+          },
+          "description": {
+            "es": "No viniste a pedir permiso.",
+            "en": "You did not come to ask permission."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c4_nombre",
+      "chapter": 4,
+      "mood": "epic",
+      "text": {
+        "es": "—Soy Nergal, hijo de Enlil. El que no se levantó ante Namtar.\n\nNedu no se inmuta. —Entra, Nergal. Que la puerta te bendiga.\n\nY así en cada una de las siete puertas: das tu nombre, y cada portero te deja pasar con la misma frase. Nadie te quita nada. Nadie te toca. Es peor que si lo hicieran.\n\nEn la séptima, te espera Namtar. Te mira de arriba abajo, como en el banquete.\n\n—Ella ya sabe que estás aquí —dice—. Lo supo cuando dijiste tu nombre en la primera puerta.",
+        "en": "“I am Nergal, son of Enlil. The one who did not rise before Namtar.”\n\nNedu does not flinch. “Come in, Nergal, and may the gate bless you.”\n\nAnd so at each of the seven gates: you give your name, and every gatekeeper lets you through with the same words. No one takes anything from you. No one touches you. It is worse than if they did.\n\nAt the seventh, Namtar is waiting for you. He looks you up and down, as he did at the banquet.\n\n“She already knows you are here,” he says. “She knew it when you spoke your name at the first gate.”"
+      },
+      "fact": {
+        "es": "En «El descenso de Inanna», el portero de la tierra de los muertos se llama Neti; en los textos babilónicos aparece como Nedu o Bitu. En cada puerta le quita a Inanna uno de sus adornos.",
+        "en": "In “The Descent of Inanna,” the gatekeeper of the land of the dead is called Neti; in Babylonian texts he appears as Nedu or Bitu. At each gate he takes one of Inanna’s ornaments from her."
+      },
+      "choices": [
+        {
+          "to": "c5_trono",
+          "text": {
+            "es": "Entrar en la sala del trono",
+            "en": "Enter the throne room"
+          },
+          "description": {
+            "es": "Ereshkigal te está esperando.",
+            "en": "Ereshkigal is waiting for you."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c4_mensajero",
+      "chapter": 4,
+      "mood": "mysterious",
+      "text": {
+        "es": "—Vengo de parte de Anu, con un regalo para la reina —dices, y señalas la silla.\n\nNedu mira la silla y después te mira a ti. —Entra, enviado de Anu. Que la puerta te bendiga.\n\nPasas la primera puerta. Y la segunda, y la tercera. En cada una, la misma frase. Ninguna puerta se cierra detrás de ti con el ruido de las puertas que no se vuelven a abrir.\n\nEn la séptima está Namtar. Te reconoce enseguida, pero no dice tu nombre.\n\n—Enviado de Anu —repite, despacio, como probando si la mentira aguanta—. Mi señora te espera.",
+        "en": "“I come on Anu’s behalf, with a gift for the queen,” you say, pointing to the chair.\n\nNedu looks at the chair, then at you. “Come in, envoy of Anu, and may the gate bless you.”\n\nYou pass the first gate. And the second, and the third. At each, the same words. No gate shuts behind you with the sound of gates that never open again.\n\nAt the seventh stands Namtar. He knows you at once, but he does not say your name.\n\n“Envoy of Anu,” he repeats slowly, as if testing whether the lie will hold. “My lady is waiting for you.”"
+      },
+      "fact": {
+        "es": "Kakka, el mensajero de Anu, baja al principio del poema «la larga escalera del cielo» y el portero le abre diciendo: «Entra, Kakka, que la puerta te bendiga», y lo hace pasar por las siete puertas.",
+        "en": "At the start of the poem, Kakka, Anu’s messenger, goes down “the long stairway of heaven,” and the gatekeeper lets him in, saying: “Come in, Kakka, and may the gate bless you,” and leads him through the seven gates."
+      },
+      "choices": [
+        {
+          "to": "c5_trono",
+          "text": {
+            "es": "Entrar en la sala del trono",
+            "en": "Enter the throne room"
+          },
+          "description": {
+            "es": "Ereshkigal te está esperando.",
+            "en": "Ereshkigal is waiting for you."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c4_fuerza",
+      "chapter": 4,
+      "mood": "dangerous",
+      "text": {
+        "es": "No contestas. Dejas la silla en el suelo, levantas la maza y golpeas el bronce. La primera puerta cae con un ruido que nadie había oído nunca en la tierra de los muertos.\n\nNedu no se defiende. Se aparta, y las otras seis puertas se van abriendo solas, una tras otra, como si alguien las empujara desde adentro.\n\nRecoges la silla. Caminas por un pasillo cada vez más estrecho y más frío, y entiendes que no estás entrando: te están dejando entrar.\n\nEn la séptima puerta, Namtar te espera con las manos cruzadas.\n\n—Mi señora se ríe —dice—. Hacía mucho que no se reía.",
+        "en": "You do not answer. You set the chair on the ground, raise your mace and strike the bronze. The first gate falls with a crash never heard before in the land of the dead.\n\nNedu does not defend himself. He steps aside, and the other six gates open by themselves, one after another, as if someone were pushing them from within.\n\nYou pick up the chair. You walk down a passage that grows ever narrower and colder, and you understand that you are not breaking in: you are being let in.\n\nAt the seventh gate, Namtar waits for you with folded hands.\n\n“My lady is laughing,” he says. “It has been a long time since she laughed.”"
+      },
+      "fact": {
+        "es": "En la versión de Amarna, Nergal baja con sus demonios y entra en la casa de Ereshkigal por la fuerza. En la versión estándar, la primera vez entra como enviado y es la casa la que intenta retenerlo; la fuerza llega en la segunda bajada.",
+        "en": "In the Amarna version, Nergal goes down with his demons and enters the house of Ereshkigal by force. In the standard version, the first time he enters as an envoy and it is the house that tries to hold him; force comes on the second descent."
+      },
+      "choices": [
+        {
+          "to": "c5_trono",
+          "text": {
+            "es": "Entrar en la sala del trono",
+            "en": "Enter the throne room"
+          },
+          "description": {
+            "es": "Ereshkigal te está esperando.",
+            "en": "Ereshkigal is waiting for you."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5_trono",
+      "chapter": 5,
+      "mood": "sacred",
+      "text": {
+        "es": "La sala del trono de Ereshkigal es enorme y no tiene techo, o el techo está tan lejos que no se ve. La reina está sentada en lo alto, vestida de un color que no existe arriba. No es vieja. No es joven. Es la señora de la tierra grande.\n\n—Siéntate —dice, y un sirviente te acerca una silla.\n\nDespués vienen los otros. El panadero con pan tibio. El carnicero con carne. El cervecero con una jarra que suda frío. Una sirvienta con agua para tus pies.\n\nEreshkigal te mira, y en su mirada hay algo que no esperabas: curiosidad.\n\n—Eres el que no se levantó —dice—. Siéntate, entonces. Come.",
+        "en": "The throne room of Ereshkigal is vast and has no roof, or the roof is so far away it cannot be seen. The queen sits on high, dressed in a color that does not exist above. She is not old. She is not young. She is the lady of the great earth.\n\n“Sit,” she says, and a servant brings you a chair.\n\nThen come the others. The baker with warm bread. The butcher with meat. The brewer with a jar beaded with cold. A servant girl with water for your feet.\n\nEreshkigal looks at you, and in her look there is something you did not expect: curiosity.\n\n“You are the one who did not rise,” she says. “Then sit. Eat.”"
+      },
+      "fact": {
+        "es": "El nombre Ereshkigal significa en sumerio «señora de la tierra grande». Era hermana de Inanna. En «El descenso de Inanna», su esposo es Gugalanna, que algunos identifican con el Toro del Cielo.",
+        "en": "In Sumerian, the name Ereshkigal means “lady of the great earth.” She was the sister of Inanna. In “The Descent of Inanna,” her husband is Gugalanna, whom some identify with the Bull of Heaven."
+      },
+      "choices": [
+        {
+          "to": "c5_rechazar",
+          "risk": "low",
+          "text": {
+            "es": "Rechazar todo, como dijo Ea",
+            "en": "Refuse everything, as Ea said"
+          },
+          "description": {
+            "es": "Ni la silla, ni el pan, ni la carne, ni la cerveza, ni el agua.",
+            "en": "Not the chair, not the bread, not the meat, not the beer, not the water."
+          }
+        },
+        {
+          "to": "c5_sentarte",
+          "risk": "medium",
+          "text": {
+            "es": "Sentarte en la silla que trajiste",
+            "en": "Sit in the chair you brought"
+          },
+          "description": {
+            "es": "Ea no dijo nada de tu propia silla.",
+            "en": "Ea said nothing about your own chair."
+          }
+        },
+        {
+          "to": "fin_polvo",
+          "risk": "high",
+          "text": {
+            "es": "Comer el pan de la reina",
+            "en": "Eat the queen’s bread"
+          },
+          "description": {
+            "es": "Un solo bocado; no puede ser tan grave.",
+            "en": "Just one bite; it cannot be that bad."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5_rechazar",
+      "chapter": 5,
+      "mood": "peaceful",
+      "text": {
+        "es": "—No —dices—. No me siento. No como. No bebo. No me lavo.\n\nLa sala se queda en silencio. El panadero, el carnicero y el cervecero se retiran con sus bandejas intactas. La sirvienta derrama el agua en el suelo, donde desaparece sin mancharlo.\n\nEreshkigal no parece ofendida. Parece interesada.\n\n—Ea te enseñó bien —dice—. Nadie había dicho que no cinco veces seguidas en esta sala. Ni siquiera mi hermana.\n\nPones la silla que trajiste a los pies de su trono. —Regalo de Anu para tu casa.\n\nLa reina la mira largo rato. —Entonces siéntate en ella, si es tuya. Y quédate. Esta noche hay tiempo.",
+        "en": "“No,” you say. “I will not sit. I will not eat. I will not drink. I will not wash.”\n\nThe hall falls silent. The baker, the butcher and the brewer withdraw with their trays untouched. The servant girl pours the water onto the floor, where it vanishes without a stain.\n\nEreshkigal does not seem offended. She seems intrigued.\n\n“Ea taught you well,” she says. “No one has ever said no five times in a row in this hall. Not even my sister.”\n\nYou set the chair you brought at the foot of her throne. “A gift from Anu for your house.”\n\nThe queen looks at it for a long while. “Then sit in it, if it is yours. And stay. There is time tonight.”"
+      },
+      "fact": {
+        "es": "Ereshkigal es la hermana mayor de Inanna. En «El descenso de Inanna», Inanna baja a la tierra de los muertos, su hermana la condena y su cadáver queda colgado de un gancho hasta que Enki la rescata.",
+        "en": "Ereshkigal is the older sister of Inanna. In “The Descent of Inanna,” Inanna goes down to the land of the dead, her sister condemns her, and her corpse hangs from a hook until Enki rescues her."
+      },
+      "choices": [
+        {
+          "to": "c6_bano",
+          "text": {
+            "es": "Quedarte en la casa de la reina",
+            "en": "Stay in the queen’s house"
+          },
+          "description": {
+            "es": "Ea no dijo cuánto tiempo.",
+            "en": "Ea did not say for how long."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5_sentarte",
+      "chapter": 5,
+      "mood": "mysterious",
+      "text": {
+        "es": "Dejas en el suelo la silla que trajiste y te sientas en ella, con las piernas cruzadas, como un rey en campaña.\n\n—Esa no es mi silla —dice Ereshkigal.\n\n—No. Es la mía. Regalo de Anu, de aquí en adelante, para tu casa.\n\nEl pan, la carne, la cerveza y el agua pasan delante de ti y vuelven intactos a la cocina.\n\nLa reina baja del trono. Camina alrededor de ti y de tu silla, despacio, como alrededor de una cosa nueva.\n\n—Nadie trae su silla a la casa de los muertos —dice—. Nadie piensa en volver. Tú sí. —Se detiene frente a ti—. Quédate esta noche, Nergal. Nadie va a tocar tu silla.",
+        "en": "You set down the chair you brought and sit in it, legs crossed, like a king on campaign.\n\n“That is not my chair,” says Ereshkigal.\n\n“No. It is mine. A gift from Anu, from now on, for your house.”\n\nThe bread, the meat, the beer and the water pass before you and go back to the kitchen untouched.\n\nThe queen comes down from her throne. She walks around you and your chair, slowly, as one circles something new.\n\n“No one brings a chair to the house of the dead,” she says. “No one thinks of going back. You do.” She stops in front of you. “Stay tonight, Nergal. No one will touch your chair.”"
+      },
+      "fact": {
+        "es": "En el poema, Nergal rechaza todo lo que le ofrecen en la casa de Ereshkigal, uno por uno: la silla, el pan, la carne, la cerveza y el agua para los pies. Solo con la reina falla.",
+        "en": "In the poem, Nergal refuses everything he is offered in the house of Ereshkigal, one by one: the chair, the bread, the meat, the beer and the water for his feet. Only with the queen does he fail."
+      },
+      "choices": [
+        {
+          "to": "c6_bano",
+          "text": {
+            "es": "Quedarte en la casa de la reina",
+            "en": "Stay in the queen’s house"
+          },
+          "description": {
+            "es": "Ea no dijo cuánto tiempo.",
+            "en": "Ea did not say for how long."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_polvo",
+      "chapter": 5,
+      "mood": "tragic",
+      "text": {
+        "es": "Tomas el pan. Está tibio y huele a horno, como el pan de Kutha. Comes un bocado.\n\nSabe a polvo.\n\nTragas, y el polvo baja por tu garganta hasta los pies. Las piernas te pesan. Te sientas en la silla que te ofrecieron, porque de pronto no puedes estar de pie. Alguien te lava los pies, y no sientes el agua.\n\nEreshkigal no sonríe. Te mira con algo parecido a la pena.\n\n—Ea te lo dijo —murmura—. Siempre lo dice. Y siempre hay uno que come.\n\nArriba, en el cielo, los dioses esperan tu regreso durante años. Después dejan de esperar. En la casa de Irkalla hay un dios más, sentado entre los muertos, vestido de plumas, que ya no recuerda su nombre.",
+        "en": "You take the bread. It is warm and smells of the oven, like the bread of Kutha. You take a bite.\n\nIt tastes of dust.\n\nYou swallow, and the dust sinks from your throat down to your feet. Your legs grow heavy. You sit in the chair they offered you, because suddenly you cannot stand. Someone washes your feet, and you do not feel the water.\n\nEreshkigal does not smile. She looks at you with something like sorrow.\n\n“Ea told you,” she murmurs. “He always tells them. And there is always one who eats.”\n\nAbove, in heaven, the gods wait years for your return. Then they stop waiting. In the house of Irkalla there is one more god, seated among the dead, clothed in feathers, who no longer remembers his name."
+      },
+      "fact": {
+        "es": "Según la Epopeya de Gilgamesh, Enkidu sueña con la casa del polvo, donde los que entran no salen, el polvo es la comida, la arcilla el pan, y nadie ve la luz.",
+        "en": "In the Epic of Gilgamesh, Enkidu dreams of the house of dust, where those who enter never come out, dust is their food, clay their bread, and no one sees the light."
+      },
+      "ending": {
+        "type": "tragic",
+        "title": {
+          "es": "Polvo por comida",
+          "en": "Dust for Food"
+        }
+      },
+      "choices": []
+    },
+    {
+      "id": "c6_bano",
+      "chapter": 6,
+      "mood": "mysterious",
+      "text": {
+        "es": "La reina se retira a bañarse. Lo hace en la misma sala, detrás de un velo que no tapa nada. Oyes el agua. La ves salir del baño y ponerse su vestido, despacio, y te mira mientras lo hace.\n\nSabes que lo hace para que mires. Ea te lo dijo. Es la última regla, la que más fácil se olvida.\n\nEreshkigal se vuelve hacia ti. No habla. Espera.\n\nY entiendes que no está jugando. Que la reina de los muertos, que puede tener lo que quiera de cualquier cosa que entre en su casa, te está pidiendo algo.",
+        "en": "The queen withdraws to bathe. She does so in the hall itself, behind a veil that hides nothing. You hear the water. You see her step out of the bath and put on her robe, slowly, and she watches you as she does.\n\nYou know she does it so that you will look. Ea told you. It is the last rule, the one most easily forgotten.\n\nEreshkigal turns toward you. She does not speak. She waits.\n\nAnd you understand that she is not playing. That the queen of the dead, who can have whatever she wants of anything that enters her house, is asking you for something."
+      },
+      "fact": {
+        "es": "En la versión estándar, Nergal resiste la primera vez que Ereshkigal se baña ante él y cede la segunda. Pasan seis días y seis noches juntos; al séptimo, él se va.",
+        "en": "In the standard version, Nergal resists the first time Ereshkigal bathes before him and gives in the second. They spend six days and six nights together; on the seventh, he leaves."
+      },
+      "choices": [
+        {
+          "to": "c6_resistir",
+          "risk": "medium",
+          "text": {
+            "es": "Apartar la mirada",
+            "en": "Look away"
+          },
+          "description": {
+            "es": "La última regla de Ea es la única que falta.",
+            "en": "Ea’s last rule is the only one left."
+          }
+        },
+        {
+          "to": "c6_ceder",
+          "risk": "medium",
+          "text": {
+            "es": "Dejarte llevar",
+            "en": "Give in"
+          },
+          "description": {
+            "es": "Eres un dios, no una regla.",
+            "en": "You are a god, not a rule."
+          }
+        },
+        {
+          "to": "c6_hablar",
+          "risk": "low",
+          "text": {
+            "es": "Hablarle antes de tocarla",
+            "en": "Speak to her before you touch her"
+          },
+          "description": {
+            "es": "Quieres saber qué quiere, no solo qué ofrece.",
+            "en": "You want to know what she wants, not just what she offers."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6_resistir",
+      "chapter": 6,
+      "mood": "dangerous",
+      "text": {
+        "es": "Bajas la vista. Miras el suelo de la sala, que es de un negro liso, y cuentas tus respiraciones.\n\nOyes a la reina acercarse. Oyes que se detiene a un paso. Sientes el frío que viene de ella, pero no es el frío de los muertos: es el frío de alguien que lleva mucho tiempo sola.\n\n—Mírame —dice.\n\nNo la miras.\n\nEreshkigal se queda un rato así, de pie frente a ti. Después se va al baño otra vez, y oyes el agua de nuevo, y sabes que va a salir, y a vestirse, y a volver.\n\nLa segunda vez es siempre la más difícil.",
+        "en": "You lower your eyes. You look at the floor of the hall, which is smooth and black, and count your breaths.\n\nYou hear the queen approach. You hear her stop a step away. You feel the cold that comes from her, but it is not the cold of the dead: it is the cold of someone who has been alone for a very long time.\n\n“Look at me,” she says.\n\nYou do not look at her.\n\nEreshkigal stands like that for a while, in front of you. Then she goes back to the bath, and you hear the water again, and you know she will come out, and dress, and come back.\n\nThe second time is always the hardest."
+      },
+      "fact": {
+        "es": "En el poema, la primera vez Nergal «resistió el deseo de su corazón de hacer lo que hacen un hombre y una mujer». La segunda vez, cedió.",
+        "en": "In the poem, the first time Nergal “resisted his heart’s desire to do that which men and women do.” The second time, he gave in."
+      },
+      "choices": [
+        {
+          "to": "c6_segunda",
+          "text": {
+            "es": "Levantar la vista",
+            "en": "Raise your eyes"
+          },
+          "description": {
+            "es": "La reina vuelve del baño.",
+            "en": "The queen comes back from the bath."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6_ceder",
+      "chapter": 6,
+      "mood": "epic",
+      "text": {
+        "es": "La miras. Y después de mirarla, ya no hay regla que valga.\n\nTe levantas de la silla, cruzas la sala, y la reina de los muertos te recibe sin decir nada. Es fría al principio, como una piedra en la sombra, y después no.\n\nPasan un día y una noche. Pasan dos. En la tierra de abajo no hay sol, pero los días se cuentan igual, porque Namtar los cuenta desde la puerta.\n\nPasan seis. Ereshkigal te habla poco. Una vez, con la cabeza en tu pecho, te cuenta que nunca salió de esta casa. Ni de niña.\n\nNo sabes qué contestar. Y en la tierra de los muertos, todo lo que dura, dura siete días.",
+        "en": "You look at her. And once you have looked, no rule holds any longer.\n\nYou rise from the chair, cross the hall, and the queen of the dead receives you without a word. She is cold at first, like a stone in the shade, and then she is not.\n\nA day and a night go by. Then two. In the land below there is no sun, but the days are counted all the same, because Namtar counts them from the door.\n\nSix go by. Ereshkigal speaks little. Once, with her head on your chest, she tells you she has never left this house. Not even as a girl.\n\nYou do not know what to answer. And in the land of the dead, whatever lasts, lasts seven days."
+      },
+      "fact": {
+        "es": "Cuando Nergal se va, Ereshkigal manda a Namtar a decirles a Anu, Enlil y Ea: «Desde que era niña no conocí el juego de las muchachas ni las travesuras de los niños». Nunca había salido de su casa.",
+        "en": "When Nergal leaves, Ereshkigal sends Namtar to tell Anu, Enlil and Ea: “Ever since I was a child, I have not known the play of girls, nor the romping of children.” She had never left her house."
+      },
+      "choices": [
+        {
+          "to": "c7_partida",
+          "text": {
+            "es": "Esperar el séptimo día",
+            "en": "Wait for the seventh day"
+          },
+          "description": {
+            "es": "Todo lo que empieza en la tierra de los muertos termina en siete días.",
+            "en": "Everything that begins in the land of the dead ends in seven days."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6_hablar",
+      "chapter": 6,
+      "mood": "peaceful",
+      "text": {
+        "es": "—¿Qué quieres de mí? —le preguntas.\n\nEreshkigal no esperaba la pregunta. Se sienta en el borde de su trono, con el vestido mal puesto, y por un momento no parece una reina.\n\n—Mi hermana baja aquí a hacerse famosa. Los dioses me mandan recados. Los muertos me dan lo que no quieren. Nunca dejé esta casa, ni de niña. ¿Quieres saber qué quiero? Quiero que alguien se quede porque quiere.\n\nLa miras un largo rato. Y después de mirarla, ya no hay regla que valga.\n\nPasan seis días y seis noches. Al séptimo, Namtar golpea la puerta.",
+        "en": "“What do you want from me?” you ask her.\n\nEreshkigal did not expect the question. She sits on the edge of her throne, her robe askew, and for a moment she does not look like a queen.\n\n“My sister comes down here to make herself famous. The gods send me messages. The dead hand me what they no longer want. I have never left this house, not even as a girl. You want to know what I want? I want someone to stay because he wants to.”\n\nYou look at her for a long while. And once you have looked, no rule holds any longer.\n\nSix days and six nights go by. On the seventh, Namtar knocks at the door."
+      },
+      "fact": {
+        "es": "Los mesopotámicos creían que los muertos necesitaban que sus parientes les llevaran agua y ofrendas a la tumba. Si nadie lo hacía, el espíritu vagaba y podía volverse peligroso para los vivos.",
+        "en": "The Mesopotamians believed the dead needed their kin to bring water and offerings to the grave. If no one did, the spirit wandered and could become dangerous to the living."
+      },
+      "choices": [
+        {
+          "to": "c7_partida",
+          "text": {
+            "es": "Esperar el séptimo día",
+            "en": "Wait for the seventh day"
+          },
+          "description": {
+            "es": "Todo lo que empieza en la tierra de los muertos termina en siete días.",
+            "en": "Everything that begins in the land of the dead ends in seven days."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6_segunda",
+      "chapter": 6,
+      "mood": "dangerous",
+      "text": {
+        "es": "Ereshkigal sale del baño por segunda vez. Se pone el vestido. Se vuelve.\n\nLevantas la vista. Es solo un instante, pero un instante es lo que la tierra de los muertos necesita.\n\nLa reina se acerca. No te toca.\n\n—Ya me miraste —dice—. Ahora elige. Puedes darme tu silla, decirme que viniste de parte de Anu, y subir la escalera como un enviado que cumplió. O puedes mirarme otra vez.\n\nSabes cuál es la respuesta de Ea. También sabes que Ea nunca ha estado en esta sala.",
+        "en": "Ereshkigal comes out of the bath a second time. She puts on her robe. She turns.\n\nYou raise your eyes. It is only an instant, but an instant is all the land of the dead needs.\n\nThe queen comes closer. She does not touch you.\n\n“You have looked at me,” she says. “Now choose. You can give me your chair, tell me you came on Anu’s behalf, and climb the stairway like an envoy who has done his duty. Or you can look at me again.”\n\nYou know Ea’s answer. You also know that Ea has never been in this hall."
+      },
+      "fact": {
+        "es": "En la Epopeya de Gilgamesh, Ishtar, la hermana de Ereshkigal, le ofrece a Gilgamesh ser su esposo y él la rechaza enumerando a sus amantes anteriores. Ella pide el Toro del Cielo para vengarse.",
+        "en": "In the Epic of Gilgamesh, Ishtar, the sister of Ereshkigal, offers to make Gilgamesh her husband, and he refuses her, listing her former lovers. She asks for the Bull of Heaven to take her revenge."
+      },
+      "choices": [
+        {
+          "to": "fin_silla",
+          "risk": "medium",
+          "text": {
+            "es": "Entregarle la silla de Ea y partir",
+            "en": "Give her Ea’s chair and leave"
+          },
+          "description": {
+            "es": "Cumpliste con Anu, con Ea y contigo.",
+            "en": "You have done your duty to Anu, to Ea and to yourself."
+          }
+        },
+        {
+          "to": "c6_mirar2",
+          "risk": "medium",
+          "text": {
+            "es": "Mirarla otra vez",
+            "en": "Look at her again"
+          },
+          "description": {
+            "es": "Ya la miraste una vez; la segunda no es peor.",
+            "en": "You have looked once already; the second time is no worse."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6_mirar2",
+      "chapter": 6,
+      "mood": "epic",
+      "text": {
+        "es": "La miras otra vez. Y esta vez no bajas la vista.\n\nTe levantas de la silla, cruzas la sala, y la reina de los muertos te recibe sin decir nada. Es fría al principio, como una piedra en la sombra, y después no.\n\nPasan un día y una noche. Pasan dos. En la tierra de abajo no hay sol, pero Namtar cuenta los días desde la puerta.\n\nPasan seis. Una noche, con la cabeza en tu pecho, Ereshkigal te cuenta que nunca salió de esta casa. Ni de niña.\n\nNo contestas. En la tierra de los muertos, todo lo que dura, dura siete días.",
+        "en": "You look at her again. And this time you do not lower your eyes.\n\nYou rise from the chair, cross the hall, and the queen of the dead receives you without a word. She is cold at first, like a stone in the shade, and then she is not.\n\nA day and a night go by. Then two. In the land below there is no sun, but Namtar counts the days from the door.\n\nSix go by. One night, with her head on your chest, Ereshkigal tells you she has never left this house. Not even as a girl.\n\nYou do not answer. In the land of the dead, whatever lasts, lasts seven days."
+      },
+      "choices": [
+        {
+          "to": "c7_partida",
+          "text": {
+            "es": "Esperar el séptimo día",
+            "en": "Wait for the seventh day"
+          },
+          "description": {
+            "es": "Todo lo que empieza en la tierra de los muertos termina en siete días.",
+            "en": "Everything that begins in the land of the dead ends in seven days."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_silla",
+      "chapter": 6,
+      "mood": "peaceful",
+      "text": {
+        "es": "—Esta silla —dices— es un regalo de Anu para la casa de Ereshkigal. La traje yo. Ahora es tuya.\n\nLa pones junto al trono. La reina la mira, y después te mira a ti, y ves en su cara que entiende lo que acabas de hacer: le diste lo único tuyo que había en su casa.\n\n—Vete —dice—. Mi mensajero te vio sentado. Yo te vi de pie. Estamos a mano.\n\nSubes las siete puertas y la larga escalera. Arriba, Ea te espera en el último escalón y no te pregunta nada.\n\nVuelves a ser el dios de la guerra, el señor de Kutha, el que seca los campos en verano. Pero cuando los hombres te rezan para alejar la muerte, les contestas rápido. Sabes dónde vive.",
+        "en": "“This chair,” you say, “is a gift from Anu for the house of Ereshkigal. I brought it. Now it is yours.”\n\nYou set it beside the throne. The queen looks at it, then at you, and you see in her face that she understands what you have just done: you have given her the only thing of yours in her house.\n\n“Go,” she says. “My messenger saw you seated. I have seen you standing. We are even.”\n\nYou climb back through the seven gates and up the long stairway. At the top, Ea waits on the last step and asks you nothing.\n\nOnce more you are the god of war, the lord of Kutha, who scorches the fields in summer. But when men pray to you to keep death away, you answer quickly. You know where it lives."
+      },
+      "fact": {
+        "es": "La ciudad de Nergal, Kutha, estaba al noreste de Babilonia; sus ruinas son el actual Tell Ibrahim. Su templo se llamaba E-meslam, y de allí viene otro nombre del dios: Meslamtaea, «el que salió del Meslam».",
+        "en": "Nergal’s city, Kutha, lay northeast of Babylon; its ruins are today’s Tell Ibrahim. His temple was called E-meslam, and from it comes another of the god’s names: Meslamtaea, “he who came forth from the Meslam.”"
+      },
+      "ending": {
+        "type": "alternative",
+        "title": {
+          "es": "La silla de Ea",
+          "en": "Ea’s Chair"
+        }
+      },
+      "choices": []
+    },
+    {
+      "id": "c7_partida",
+      "chapter": 7,
+      "mood": "mysterious",
+      "text": {
+        "es": "El séptimo día te despiertas antes que ella.\n\nLa miras dormir y entiendes que, si te quedas un día más, no te vas nunca. Le hablas al oído: —Déjame ir, hermana. Volveré.\n\nNo se despierta. Subes las siete puertas; a cada portero le dices que la reina te manda a Anu con un recado. Subes la larga escalera. Arriba, Ea te espera y te lava con agua del Apsu, sin decir palabra.\n\nAbajo, Ereshkigal despierta sola. Grita. Namtar sube la escalera por tercera vez.\n\n—Mi señora dice: «Desde que era niña no conocí el juego de las muchachas. El dios que me mandaste durmió conmigo. Mándenmelo, que sea mi esposo. Si no, levantaré a los muertos para que se coman a los vivos, y los muertos serán más que los vivos».",
+        "en": "On the seventh day you wake before she does.\n\nYou watch her sleep and understand that if you stay one more day, you will never leave. You whisper in her ear: “Let me go, my sister. I will come back.”\n\nShe does not wake. You climb through the seven gates, telling each gatekeeper that the queen is sending you to Anu with a message. You climb the long stairway. At the top, Ea is waiting, and he washes you with water from the Apsu without a word.\n\nBelow, Ereshkigal wakes alone. She screams. Namtar climbs the stairway for the third time.\n\n“My lady says: ‘Ever since I was a child, I have not known the play of girls. The god you sent me lay with me. Send him to me, that he may be my husband. If not, I will raise up the dead to devour the living, and the dead will outnumber the living.’”"
+      },
+      "fact": {
+        "es": "En «El descenso de Ishtar», es Ishtar quien hace la misma amenaza ante la puerta de la tierra de los muertos: si no le abren, levantará a los muertos para que se coman a los vivos, hasta que sean más que los vivos.",
+        "en": "In “The Descent of Ishtar,” it is Ishtar who makes the same threat at the gate of the land of the dead: if it is not opened to her, she will raise up the dead to devour the living, until they outnumber the living."
+      },
+      "choices": [
+        {
+          "to": "c7_disfraz",
+          "risk": "medium",
+          "text": {
+            "es": "Esconderte con el disfraz de Ea",
+            "en": "Hide behind Ea’s disguise"
+          },
+          "description": {
+            "es": "Calvo, bizco y cojo: Namtar busca a un dios, no a eso.",
+            "en": "Bald, cross-eyed and lame: Namtar is looking for a god, not for that."
+          }
+        },
+        {
+          "to": "c7_volver",
+          "risk": "low",
+          "text": {
+            "es": "Bajar por tu propia voluntad",
+            "en": "Go down of your own free will"
+          },
+          "description": {
+            "es": "Dijiste «volveré».",
+            "en": "You said, “I will come back.”"
+          }
+        },
+        {
+          "to": "fin_muertos",
+          "risk": "high",
+          "text": {
+            "es": "Negarte y pedir la protección de Anu",
+            "en": "Refuse, and seek Anu’s protection"
+          },
+          "description": {
+            "es": "Que la reina amenace; tú eres hijo de Enlil.",
+            "en": "Let the queen threaten; you are the son of Enlil."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7_disfraz",
+      "chapter": 7,
+      "mood": "mysterious",
+      "text": {
+        "es": "Ea te rocía con agua de manantial, y te cambia. Se te cae el pelo. Un ojo se te tuerce. Una pierna se te acorta. Te sientas al fondo de la sala, entre los dioses menores, y nadie te mira.\n\nNamtar recorre la sala tres veces. Se detiene frente a cada dios. Pasa a tu lado, y sus ojos resbalan sobre ti como sobre una pared.\n\nNamtar baja y le dice a su señora: «No está. Solo había uno al fondo, calvo, bizco y cojo». Y vuelve a subir, porque Ereshkigal le dijo: «El calvo. El bizco. El cojo. Tráemelo».\n\nEsta vez te encuentra sin buscar.",
+        "en": "Ea sprinkles you with spring water, and changes you. Your hair falls out. One eye turns inward. One leg grows shorter. You sit at the back of the hall, among the lesser gods, and no one looks at you.\n\nNamtar goes around the hall three times. He stops before each god. He passes right by you, and his eyes slide over you as over a wall.\n\nNamtar goes down and tells his lady: “He is not there. There was only one at the back, bald, cross-eyed and lame.” And he climbs up again, because Ereshkigal has told him: “The bald one. The cross-eyed one. The lame one. Bring him to me.”\n\nThis time he finds you without looking."
+      },
+      "fact": {
+        "es": "En el poema, Ea disfraza a Nergal para que Namtar no lo reconozca, y Namtar informa que vio a un dios calvo, bizco y cojo. Ereshkigal lo manda de nuevo a buscar justamente a ese.",
+        "en": "In the poem, Ea disguises Nergal so that Namtar will not recognize him, and Namtar reports that he saw a bald, cross-eyed, lame god. Ereshkigal sends him back to fetch that very one."
+      },
+      "choices": [
+        {
+          "to": "c8_bajada",
+          "text": {
+            "es": "Bajar por segunda vez",
+            "en": "Go down a second time"
+          },
+          "description": {
+            "es": "Esta vez no vas como enviado de nadie.",
+            "en": "This time you go as no one’s envoy."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7_volver",
+      "chapter": 7,
+      "mood": "sacred",
+      "text": {
+        "es": "—Volveré, le dije. —Te pones de pie en medio de la sala, delante de Anu, de Enlil y de Ea—. Bajo.\n\nEa cierra los ojos un momento. —Entonces no bajes como un enviado. Ya no lo eres.\n\nNamtar te espera al pie de la escalera. No te dice nada en todo el camino. Pero en la primera puerta, Nedu no la abre.\n\n—La reina dice: «Se fue como un ladrón. Que vuelva como un ladrón».\n\nEntiendes. Ereshkigal no quiere un enviado que vuelve a cumplir. Quiere saber si vas a derribar su puerta por ella.",
+        "en": "“I will come back, I told her.” You stand up in the middle of the hall, before Anu, Enlil and Ea. “I am going down.”\n\nEa closes his eyes for a moment. “Then do not go down as an envoy. You are one no longer.”\n\nNamtar waits for you at the foot of the stairway. He says nothing to you the whole way. But at the first gate, Nedu does not open it.\n\n“The queen says: ‘He left like a thief. Let him come back like a thief.’”\n\nYou understand. Ereshkigal does not want an envoy coming back to do his duty. She wants to know whether you will break down her gate for her."
+      },
+      "fact": {
+        "es": "En «Enlil y Ninlil», Enlil es desterrado de Nippur por su falta con Ninlil y baja hacia la tierra de los muertos. En el camino engendra con ella tres dioses para que ocupen el lugar de su hijo Nanna. Uno de ellos es Nergal.",
+        "en": "In “Enlil and Ninlil,” Enlil is banished from Nippur for his transgression with Ninlil and goes down toward the land of the dead. On the way, he fathers three gods with her to take the place of their son Nanna. One of them is Nergal."
+      },
+      "choices": [
+        {
+          "to": "c8_bajada",
+          "text": {
+            "es": "Bajar por segunda vez",
+            "en": "Go down a second time"
+          },
+          "description": {
+            "es": "Esta vez no vas como enviado de nadie.",
+            "en": "This time you go as no one’s envoy."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_muertos",
+      "chapter": 7,
+      "mood": "tragic",
+      "text": {
+        "es": "—No bajo —dices—. Y si la reina de los muertos quiere guerra, que la tenga.\n\nAnu no te defiende. Enlil, tu padre, no te defiende. Ea se tapa la cara con las manos.\n\nEsa noche, en Kutha, se abren las tumbas. En Uruk, en Nippur, en Babilonia. Los muertos salen a las calles, vestidos de plumas, con los ojos llenos de polvo, y tienen hambre. Los hombres les rezan a los dioses, y los dioses no contestan, porque ellos tampoco saben qué hacer.\n\nPasa un año. Pasan diez. Los muertos son más que los vivos.\n\nY tú, el dios de la guerra, miras desde el cielo una tierra donde ya no queda nadie a quien matar.",
+        "en": "“I will not go down,” you say. “And if the queen of the dead wants war, let her have it.”\n\nAnu does not defend you. Enlil, your father, does not defend you. Ea covers his face with his hands.\n\nThat night, in Kutha, the graves open. In Uruk, in Nippur, in Babylon. The dead come out into the streets, clothed in feathers, their eyes full of dust, and they are hungry. Men pray to the gods, and the gods do not answer, because they do not know what to do either.\n\nA year goes by. Ten go by. The dead outnumber the living.\n\nAnd you, the god of war, look down from heaven on a land where there is no one left to kill."
+      },
+      "fact": {
+        "es": "En la «Visión del inframundo de un príncipe asirio», un texto del siglo VII a. C., el príncipe Kummaya ve a Nergal sentado en su trono y rodeado de demonios con cabezas de animales.",
+        "en": "In “The Underworld Vision of an Assyrian Prince,” a text from the 7th century BCE, Prince Kummaya sees Nergal seated on his throne, surrounded by demons with the heads of animals."
+      },
+      "ending": {
+        "type": "tragic",
+        "title": {
+          "es": "Los muertos superan a los vivos",
+          "en": "The Dead Outnumber the Living"
+        }
+      },
+      "choices": []
+    },
+    {
+      "id": "c8_bajada",
+      "chapter": 8,
+      "mood": "epic",
+      "text": {
+        "es": "Bajas la larga escalera por segunda vez, y esta vez no traes silla ni recado. Traes tu maza y tu hacha.\n\nLa primera puerta está cerrada. Golpeas, y Nedu cae. Golpeas la segunda, y cae Kishar. La tercera, y cae Endashurimma. Enuralla, Endukuga, Endushuba, Ennugigi: siete porteros, siete puertas, siete golpes.\n\nNamtar te espera en la sala, y lo apartas con un gesto. Ereshkigal está en su trono, y no se mueve. La tomas del pelo. La arrancas del trono y la tiras al suelo, y levantas el hacha.\n\n—No me mates, hermano —dice ella, sin miedo—. Déjame decirte una cosa.\n\nEl hacha está en lo alto. La sala espera.",
+        "en": "You go down the long stairway a second time, and this time you bring no chair and no message. You bring your mace and your axe.\n\nThe first gate is shut. You strike, and Nedu falls. You strike the second, and Kishar falls. The third, and Endashurimma falls. Enuralla, Endukuga, Endushuba, Ennugigi: seven gatekeepers, seven gates, seven blows.\n\nNamtar is waiting in the hall, and you brush him aside. Ereshkigal sits on her throne and does not move. You seize her by the hair. You drag her from the throne, throw her to the ground and raise the axe.\n\n“Do not kill me, my brother,” she says, without fear. “Let me tell you something.”\n\nThe axe is raised high. The hall waits."
+      },
+      "fact": {
+        "es": "En la versión estándar, Nergal derriba a los siete porteros de la tierra de los muertos: Nedu, Kishar, Endashurimma, Enuralla, Endukuga, Endushuba y Ennugigi. Después toma a Ereshkigal del pelo y la baja del trono.",
+        "en": "In the standard version, Nergal fells the seven gatekeepers of the land of the dead: Nedu, Kishar, Endashurimma, Enuralla, Endukuga, Endushuba and Ennugigi. Then he seizes Ereshkigal by the hair and pulls her down from her throne."
+      },
+      "choices": [
+        {
+          "to": "fin_rey",
+          "risk": "medium",
+          "text": {
+            "es": "Escucharla",
+            "en": "Listen to her"
+          },
+          "description": {
+            "es": "Que diga lo que vino a decir desde el primer día.",
+            "en": "Let her say what she has meant to say since the first day."
+          }
+        },
+        {
+          "to": "fin_meses",
+          "risk": "medium",
+          "text": {
+            "es": "Poner tus condiciones antes de soltarla",
+            "en": "Set your terms before you let go"
+          },
+          "description": {
+            "es": "Sabes lo que te va a ofrecer; quieres más.",
+            "en": "You know what she will offer you; you want more."
+          }
+        },
+        {
+          "to": "fin_cabeza",
+          "risk": "high",
+          "text": {
+            "es": "Bajar el hacha",
+            "en": "Bring down the axe"
+          },
+          "description": {
+            "es": "Nadie amenaza con comerse a los vivos dos veces.",
+            "en": "No one threatens to devour the living twice."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_rey",
+      "chapter": 8,
+      "mood": "triumphant",
+      "text": {
+        "es": "—Habla.\n\n—Tú serás mi esposo y yo seré tu esposa —dice Ereshkigal, desde el suelo, mirándote a los ojos—. Te dejaré tomar la realeza sobre la tierra ancha. Pondré en tu mano la tablilla de la sabiduría. Tú serás el señor. Yo seré la señora.\n\nBajas el hacha. La levantas a ella. Le secas las lágrimas con el pulgar, y la besas como se sella un pacto.\n\n—¿Qué es lo que me has estado pidiendo todos estos meses? —dices—. Que así sea.\n\nArriba, Anu manda a Kakka con la última palabra: el dios que bajó se queda. Abajo, en la casa de Irkalla, hay por primera vez un rey, y una reina que ya no está sola.\n\nLos muertos siguen llegando, y los recibe una pareja.",
+        "en": "“Speak.”\n\n“You will be my husband, and I will be your wife,” says Ereshkigal from the floor, looking you in the eye. “I will let you seize kingship over the broad earth. I will put the tablet of wisdom in your hand. You will be lord. I will be lady.”\n\nYou lower the axe. You lift her up. You wipe away her tears with your thumb, and you kiss her the way a pact is sealed.\n\n“Is this what you have been asking of me all these months?” you say. “So be it.”\n\nAbove, Anu sends Kakka with the last word: the god who went down stays. Below, in the house of Irkalla, there is a king for the first time, and a queen who is no longer alone.\n\nThe dead keep arriving, and now there are two to receive them."
+      },
+      "fact": {
+        "es": "Así termina la versión de Amarna: Ereshkigal ofrece ser su esposa, darle la realeza sobre la tierra ancha y la tablilla de la sabiduría. Nergal la besa, le seca las lágrimas y acepta. Desde entonces reinan juntos.",
+        "en": "So ends the Amarna version: Ereshkigal offers to be his wife and to give him kingship over the broad earth and the tablet of wisdom. Nergal kisses her, wipes away her tears and accepts. From then on they reign together."
+      },
+      "ending": {
+        "type": "myth",
+        "title": {
+          "es": "Señor de la tierra ancha",
+          "en": "Lord of the Broad Earth"
+        }
+      },
+      "choices": []
+    },
+    {
+      "id": "fin_meses",
+      "chapter": 8,
+      "mood": "triumphant",
+      "text": {
+        "es": "—Habla —dices—, pero escucha tú también.\n\nElla habla: el trono, la tierra ancha, la tablilla de la sabiduría. Tú serás el señor, yo la señora.\n\n—Acepto —contestas—. Pero soy el dios de la guerra, y la guerra está arriba. Me quedaré contigo una parte del año, cuando el sol seca los campos y los hombres mueren de fiebre. El resto subiré a Kutha, y los muertos esperarán.\n\nEreshkigal lo piensa. En su casa no hay prisa.\n\n—Baja cuando el calor empiece —dice—. Sube cuando llegue el frío. Pero vuelve.\n\nLa levantas y la besas. Y desde entonces, cada verano, los hombres de Kutha saben dónde está su dios.",
+        "en": "“Speak,” you say. “But you listen too.”\n\nShe speaks: the throne, the broad earth, the tablet of wisdom. You will be lord, I will be lady.\n\n“I accept,” you answer. “But I am the god of war, and war is above. I will stay with you for part of the year, when the sun scorches the fields and men die of fever. The rest of the year I will go up to Kutha, and the dead will wait.”\n\nEreshkigal considers it. In her house there is no hurry.\n\n“Come down when the heat begins,” she says. “Go up when the cold comes. But come back.”\n\nYou lift her up and kiss her. And ever since, every summer, the people of Kutha know where their god is."
+      },
+      "fact": {
+        "es": "Una tablilla asiria hallada en Assur dice que Nergal baja al inframundo el 18 del mes de Tammuz, en pleno verano, y sube el 28 de Kislimu, en invierno. Su planeta era Marte, y esas fechas coincidirían con su desaparición del cielo.",
+        "en": "An Assyrian tablet found at Assur says that Nergal goes down to the underworld on the 18th of the month of Tammuz, in high summer, and comes up on the 28th of Kislimu, in winter. His planet was Mars, and those dates would match its disappearance from the sky."
+      },
+      "ending": {
+        "type": "alternative",
+        "title": {
+          "es": "Una estación bajo la tierra",
+          "en": "A Season Beneath the Earth"
+        }
+      },
+      "choices": []
+    },
+    {
+      "id": "fin_cabeza",
+      "chapter": 8,
+      "mood": "tragic",
+      "text": {
+        "es": "Bajas el hacha.\n\nLa sala no grita. En la tierra de los muertos nadie grita. Namtar se arrodilla junto a su señora y se queda así, sin moverse, y no se mueve nunca más.\n\nTe sientas en el trono. Es tuyo. La tierra ancha es tuya, y la tablilla de la sabiduría, y las siete puertas rotas.\n\nPero los muertos que llegan no te miran. Los Anunnaki, los jueces de abajo, te dan la espalda. Nadie te trae pan ni cerveza, porque ya no hay quien lo ordene. El agua no corre. Los días no se cuentan.\n\nReinas sobre el silencio, para siempre. Y en el cielo, cuando dicen tu nombre, lo dicen bajito, como el de una enfermedad.",
+        "en": "You bring down the axe.\n\nThe hall does not scream. In the land of the dead no one screams. Namtar kneels beside his lady and stays there, motionless, and never moves again.\n\nYou sit on the throne. It is yours. The broad earth is yours, and the tablet of wisdom, and the seven broken gates.\n\nBut the dead who arrive do not look at you. The Anunnaki, the judges below, turn their backs on you. No one brings you bread or beer, because there is no one left to order it. The water does not flow. The days are not counted.\n\nYou reign over silence, forever. And in heaven, when they say your name, they say it softly, like the name of a disease."
+      },
+      "fact": {
+        "es": "Nergal era también el dios de la peste. El poema de Erra, que cuenta cómo devasta Babilonia, se copiaba en tablillas que se colgaban en las casas como amuletos contra las plagas.",
+        "en": "Nergal was also the god of plague. The Poem of Erra, which tells how he lays Babylon waste, was copied onto tablets that were hung in houses as amulets against plague."
+      },
+      "ending": {
+        "type": "tragic",
+        "title": {
+          "es": "La cabeza de la reina",
+          "en": "The Queen’s Head"
+        }
+      },
+      "choices": []
+    }
+  ]
+}
