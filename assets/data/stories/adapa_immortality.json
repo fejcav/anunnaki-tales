@@ -1,0 +1,1078 @@
+{
+  "formatVersion": 1,
+  "adventureId": "adapa_immortality",
+  "contentVersion": "1.0",
+  "hero": {
+    "name": {
+      "es": "Adapa",
+      "en": "Adapa"
+    },
+    "description": {
+      "es": "Sabio de Eridu y sacerdote de Ea, el dios de la sabiduría. Ea te dio entendimiento para conocer el cielo y la tierra, pero no te dio la vida eterna. Cada día llevas pan, agua y pescado a su templo.",
+      "en": "Sage of Eridu and priest of Ea, the god of wisdom. Ea gave you understanding to know heaven and earth, but he did not give you eternal life. Every day you bring bread, water and fish to his temple."
+    }
+  },
+  "chapters": [
+    {
+      "number": 1,
+      "title": {
+        "es": "El sabio de Eridu",
+        "en": "The Sage of Eridu"
+      }
+    },
+    {
+      "number": 2,
+      "title": {
+        "es": "El viento del sur",
+        "en": "The South Wind"
+      }
+    },
+    {
+      "number": 3,
+      "title": {
+        "es": "Siete días sin viento",
+        "en": "Seven Days Without Wind"
+      }
+    },
+    {
+      "number": 4,
+      "title": {
+        "es": "Los consejos de Ea",
+        "en": "The Counsel of Ea"
+      }
+    },
+    {
+      "number": 5,
+      "title": {
+        "es": "La puerta de Anu",
+        "en": "The Gate of Anu"
+      }
+    },
+    {
+      "number": 6,
+      "title": {
+        "es": "Ante el padre de los dioses",
+        "en": "Before the Father of the Gods"
+      }
+    },
+    {
+      "number": 7,
+      "title": {
+        "es": "El pan y el agua",
+        "en": "The Bread and the Water"
+      }
+    },
+    {
+      "number": 8,
+      "title": {
+        "es": "La risa de Anu",
+        "en": "The Laughter of Anu"
+      }
+    }
+  ],
+  "start": "c1_eridu",
+  "scenes": [
+    {
+      "id": "c1_eridu",
+      "chapter": 1,
+      "mood": "peaceful",
+      "text": {
+        "es": "Eridu es la ciudad más antigua de la tierra, dicen los sabios. Allí bajó la realeza del cielo por primera vez, y allí, en medio del agua dulce, tiene su casa Ea, el dios de la sabiduría.\n\nTú eres Adapa, su sabio. Ea te dio entendimiento para conocer los planes de la tierra. Te dio sabiduría. Pero no te dio la vida eterna.\n\nCada día te levantas antes que nadie. Haces el pan con los panaderos de Eridu, llevas el agua, pones la mesa del dios. Y cuando el templo necesita pescado, tomas tu barca y sales al mar.\n\nHoy el alba es tranquila.",
+        "en": "Eridu is the oldest city on earth, the sages say. There kingship first came down from heaven, and there, amid the fresh water, Ea, the god of wisdom, has his house.\n\nYou are Adapa, his sage. Ea gave you understanding to know the designs of the land. He gave you wisdom. But he did not give you eternal life.\n\nEvery day you rise before anyone else. You bake bread with the bakers of Eridu, you fetch the water, you set the god’s table. And when the temple needs fish, you take your boat and go out to sea.\n\nToday the dawn is calm."
+      },
+      "fact": {
+        "es": "La Lista Real Sumeria empieza así: «Cuando la realeza bajó del cielo, la realeza estuvo en Eridu». Sus ruinas, hoy Tell Abu Shahrain, están en el sur de Irak.",
+        "en": "The Sumerian King List begins: “After the kingship descended from heaven, the kingship was in Eridu.” Its ruins, today Tell Abu Shahrain, lie in southern Iraq."
+      },
+      "choices": [
+        {
+          "to": "c1_pan",
+          "risk": "low",
+          "text": {
+            "es": "Hornear el pan del templo",
+            "en": "Bake the temple bread"
+          },
+          "description": {
+            "es": "Primero, lo que Ea come cada mañana.",
+            "en": "First, what Ea eats every morning."
+          }
+        },
+        {
+          "to": "c1_cerrojo",
+          "risk": "low",
+          "text": {
+            "es": "Revisar el cerrojo sagrado",
+            "en": "Check the sacred bolt"
+          },
+          "description": {
+            "es": "Nadie más tiene permiso para tocarlo.",
+            "en": "No one else is allowed to touch it."
+          }
+        },
+        {
+          "to": "c1_mar",
+          "risk": "medium",
+          "text": {
+            "es": "Ir directo al muelle",
+            "en": "Go straight to the quay"
+          },
+          "description": {
+            "es": "El mar está quieto, y eso no dura.",
+            "en": "The sea is still, and that will not last."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c1_pan",
+      "chapter": 1,
+      "mood": "peaceful",
+      "text": {
+        "es": "Los hornos de Eridu ya están calientes. Los panaderos te saludan con la cabeza; no hablan mientras amasan.\n\nAmasas con ellos. Le das forma al pan, lo pones sobre las piedras, esperas. El olor llena el patio del templo.\n\nLlevas los panes a la mesa de Ea y los acomodas uno por uno, como cada día desde hace años. Al lado pones el agua fresca.\n\nFalta el pescado. Los pescadores no han traído nada en dos días. Bajas al muelle.",
+        "en": "The ovens of Eridu are already hot. The bakers greet you with a nod; they do not speak while they knead.\n\nYou knead with them. You shape the bread, set it on the stones and wait. The smell fills the temple courtyard.\n\nYou carry the loaves to Ea’s table and arrange them one by one, as you have every day for years. Beside them you set the fresh water.\n\nThe fish is missing. The fishermen have brought nothing in two days. You go down to the quay."
+      },
+      "fact": {
+        "es": "En el poema, Adapa hornea con los panaderos de Eridu, provee cada día el pan y el agua de la ciudad y prepara la mesa de las ofrendas de Ea.",
+        "en": "In the poem, Adapa bakes with the bakers of Eridu, provides the city’s bread and water every day and sets Ea’s offering table."
+      },
+      "choices": [
+        {
+          "to": "c2_barca",
+          "text": {
+            "es": "Salir a pescar al ancho mar",
+            "en": "Go fishing on the broad sea"
+          },
+          "description": {
+            "es": "El templo de Ea necesita pescado fresco.",
+            "en": "Ea’s temple needs fresh fish."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c1_cerrojo",
+      "chapter": 1,
+      "mood": "sacred",
+      "text": {
+        "es": "El cerrojo de Eridu es un madero grueso que cierra la puerta del templo. Para cualquier otro, es solo madera. Para ti, es lo que separa la casa del dios del mundo de afuera.\n\nLo revisas como todas las mañanas. Lo untas con aceite. Rezas la oración corta que te enseñó Ea, la que nadie más conoce.\n\nCuando terminas, el sol ya asoma sobre las marismas. En la mesa del dios hay pan y agua, pero falta el pescado.\n\nBajas al muelle.",
+        "en": "The bolt of Eridu is a thick beam that closes the temple door. To anyone else, it is only wood. To you, it is what separates the god’s house from the world outside.\n\nYou check it as you do every morning. You rub it with oil. You say the short prayer Ea taught you, the one no one else knows.\n\nWhen you finish, the sun is already rising over the marshes. On the god’s table there is bread and water, but the fish is missing.\n\nYou go down to the quay."
+      },
+      "fact": {
+        "es": "Adapa figuraba entre los apkallu, los siete sabios anteriores al diluvio que enseñaron las artes de la civilización. Algunas tradiciones lo identifican con el primero, Uanna, el Oannes de los griegos; otras, con el séptimo, «que subió al cielo».",
+        "en": "Adapa was counted among the apkallu, the seven sages before the Flood who taught the arts of civilization. Some traditions identify him with the first, Uanna, the Oannes of the Greeks; others, with the seventh, “who went up to heaven.”"
+      },
+      "choices": [
+        {
+          "to": "c2_barca",
+          "text": {
+            "es": "Salir a pescar al ancho mar",
+            "en": "Go fishing on the broad sea"
+          },
+          "description": {
+            "es": "El templo de Ea necesita pescado fresco.",
+            "en": "Ea’s temple needs fresh fish."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c1_mar",
+      "chapter": 1,
+      "mood": "epic",
+      "text": {
+        "es": "No esperas. Bajas al muelle de Kar-usakar mientras la ciudad todavía duerme. Tu barca está atada donde la dejaste, oliendo a brea y a sal.\n\nSueltas la cuerda. Empujas con la pértiga. El agua es un espejo gris, sin una arruga.\n\nOtros pescadores te ven pasar y bajan la cabeza: es el sabio de Ea, el que habla con el dios. Tú no te sientes sabio esta mañana. Te sientes un hombre en una barca, que tiene que volver con pescado antes del mediodía.",
+        "en": "You do not wait. You go down to the quay of Kar-usakar while the city still sleeps. Your boat is tied where you left it, smelling of pitch and salt.\n\nYou loose the rope. You push off with the pole. The water is a gray mirror without a single ripple.\n\nOther fishermen see you pass and bow their heads: there goes Ea’s sage, the one who speaks with the god. You do not feel wise this morning. You feel like a man in a boat who must come back with fish before noon."
+      },
+      "fact": {
+        "es": "El mito de Adapa se conoce sobre todo por una tablilla hallada en Amarna, en Egipto, del siglo XIV a. C. Tiene puntos rojos entre las palabras, quizá porque se usaba para aprender acadio.",
+        "en": "The myth of Adapa is known mainly from a tablet found at Amarna, in Egypt, from the 14th century BCE. It has red dots between the words, perhaps because it was used to learn Akkadian."
+      },
+      "choices": [
+        {
+          "to": "c2_barca",
+          "text": {
+            "es": "Salir a pescar al ancho mar",
+            "en": "Go fishing on the broad sea"
+          },
+          "description": {
+            "es": "El templo de Ea necesita pescado fresco.",
+            "en": "Ea’s temple needs fresh fish."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2_barca",
+      "chapter": 2,
+      "mood": "dangerous",
+      "text": {
+        "es": "Llevas tu barca al ancho mar, sin timón, solo con la pértiga y el viento. Echas las redes. Los peces vienen, plateados, uno tras otro.\n\nEntonces el cielo se oscurece hacia el sur.\n\nEl viento del sur llega de golpe. Levanta el agua, sacude la barca, la empuja de costado. Una ola te pasa por encima. Otra. La barca se da vuelta y caes al mar, y el viento te hunde hacia abajo, hacia la casa de los peces.\n\nTragas agua salada. Tienes la boca llena de palabras que Ea te enseñó, palabras con poder.",
+        "en": "You take your boat out onto the broad sea, without a rudder, with only the pole and the wind. You cast the nets. The fish come, silver, one after another.\n\nThen the sky darkens to the south.\n\nThe South Wind strikes all at once. It lifts the water, shakes the boat, shoves it sideways. A wave breaks over you. Another. The boat capsizes and you fall into the sea, and the wind drives you down, down to the house of the fish.\n\nYou swallow salt water. Your mouth is full of words Ea taught you, words with power."
+      },
+      "fact": {
+        "es": "En las excavaciones del templo de Enki en Eridu se hallaron capas de espinas de pescado, probablemente restos de ofrendas al dios de las aguas dulces.",
+        "en": "Excavations at the temple of Enki in Eridu uncovered layers of fish bones, probably the remains of offerings to the god of fresh water."
+      },
+      "choices": [
+        {
+          "to": "c2_maldicion",
+          "risk": "medium",
+          "text": {
+            "es": "Maldecir al viento del sur",
+            "en": "Curse the South Wind"
+          },
+          "description": {
+            "es": "Que sepa quién es el sabio de Ea.",
+            "en": "Let it learn who Ea’s sage is."
+          }
+        },
+        {
+          "to": "c2_rezo",
+          "risk": "low",
+          "text": {
+            "es": "Rezarle a Ea para que te salve",
+            "en": "Pray to Ea to save you"
+          },
+          "description": {
+            "es": "Él es el señor de las aguas.",
+            "en": "He is the lord of the waters."
+          }
+        },
+        {
+          "to": "fin_peces",
+          "risk": "high",
+          "text": {
+            "es": "Dejar que el mar te lleve",
+            "en": "Let the sea take you"
+          },
+          "description": {
+            "es": "Ya no te quedan fuerzas para pelear.",
+            "en": "You have no strength left to fight."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2_maldicion",
+      "chapter": 2,
+      "mood": "epic",
+      "text": {
+        "es": "Sacas la cabeza del agua y gritas contra el cielo:\n\n—¡Viento del sur! ¡Aunque me mandes a tus hermanos, aunque vengan todos, te voy a romper el ala!\n\nY en cuanto la palabra sale de tu boca, se oye un crujido en lo alto, como una rama que se parte. El viento chilla. Las olas se aplanan de golpe.\n\nEl ala del viento del sur está rota.\n\nNadas hasta tu barca, la das vuelta y subes, temblando. El mar está quieto otra vez. Demasiado quieto.",
+        "en": "You lift your head out of the water and shout at the sky:\n\n“South Wind! Though you send your brothers against me, though they all come, I will break your wing!”\n\nAnd as soon as the word leaves your mouth, there is a crack high above, like a branch snapping. The wind shrieks. The waves fall flat at once.\n\nThe South Wind’s wing is broken.\n\nYou swim to your boat, right it and climb in, shaking. The sea is calm again. Too calm."
+      },
+      "fact": {
+        "es": "En el poema, Adapa maldice al viento del sur: «Te voy a romper el ala». Y apenas lo dice, el ala del viento queda rota.",
+        "en": "In the poem, Adapa curses the South Wind: “I will break your wing.” And the moment he says it, the wind’s wing is broken."
+      },
+      "choices": [
+        {
+          "to": "c3_anu",
+          "text": {
+            "es": "Volver a Eridu",
+            "en": "Return to Eridu"
+          },
+          "description": {
+            "es": "Con las redes vacías y el corazón inquieto.",
+            "en": "With empty nets and an uneasy heart."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2_rezo",
+      "chapter": 2,
+      "mood": "sacred",
+      "text": {
+        "es": "—¡Ea! —gritas, tragando agua—. ¡Señor de las aguas dulces, sálvame del viento!\n\nY las palabras que salen de tu boca no son las de un hombre que reza. Son las de Ea mismo, las que él te enseñó, y tienen su poder.\n\nSe oye un crujido en lo alto, como una rama que se parte. El viento chilla. Las olas se aplanan de golpe.\n\nNo querías romperle el ala. Pero el ala del viento del sur está rota.\n\nNadas hasta tu barca y subes, temblando. El mar está quieto. Demasiado quieto.",
+        "en": "“Ea!” you cry, swallowing water. “Lord of the fresh waters, save me from the wind!”\n\nBut the words that leave your mouth are not those of a man at prayer. They are Ea’s own, the ones he taught you, and they carry his power.\n\nThere is a crack high above, like a branch snapping. The wind shrieks. The waves fall flat at once.\n\nYou did not mean to break its wing. But the South Wind’s wing is broken.\n\nYou swim to your boat and climb in, shaking. The sea is calm. Too calm."
+      },
+      "fact": {
+        "es": "Los mesopotámicos imaginaban algunos vientos como seres alados. Pazuzu, rey de los demonios del viento, aparece en amuletos con cuatro alas de ave, y se lo usaba como protector.",
+        "en": "Mesopotamians imagined some winds as winged beings. Pazuzu, king of the wind demons, appears on amulets with four bird wings, and he was used as a protector."
+      },
+      "choices": [
+        {
+          "to": "c3_anu",
+          "text": {
+            "es": "Volver a Eridu",
+            "en": "Return to Eridu"
+          },
+          "description": {
+            "es": "Con las redes vacías y el corazón inquieto.",
+            "en": "With empty nets and an uneasy heart."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_peces",
+      "chapter": 2,
+      "mood": "tragic",
+      "text": {
+        "es": "Dejas de luchar.\n\nEl agua te envuelve, fría y verde. Arriba, la luz se hace chica, cada vez más chica. El viento del sur sigue soplando sobre el mar, pero aquí abajo ya no lo oyes.\n\nLos peces se acercan a mirarte, curiosos. Bajas despacio hacia su casa, entre las algas, hasta el fondo.\n\nEn Eridu, esa mañana, la mesa de Ea queda sin pescado. Al día siguiente, sin pan. Los panaderos esperan al sabio, y el sabio no viene. Ea, en su casa de agua dulce, sabe dónde estás. Pero el mar salado no es su casa.",
+        "en": "You stop fighting.\n\nThe water wraps around you, cold and green. Above, the light grows small, smaller and smaller. The South Wind still blows over the sea, but down here you no longer hear it.\n\nThe fish come close to look at you, curious. You sink slowly toward their house, through the seaweed, to the bottom.\n\nIn Eridu, that morning, Ea’s table has no fish. The next day, no bread. The bakers wait for the sage, and the sage does not come. Ea, in his house of fresh water, knows where you are. But the salt sea is not his house."
+      },
+      "fact": {
+        "es": "En el poema, el viento del sur hunde a Adapa y lo manda «a la casa de los peces». Es la imagen que usa el texto para decir que se fue al fondo del mar.",
+        "en": "In the poem, the South Wind plunges Adapa under and sends him “to the house of the fish.” It is the text’s image for going down to the bottom of the sea."
+      },
+      "ending": {
+        "type": "tragic",
+        "title": {
+          "es": "La casa de los peces",
+          "en": "The House of the Fish"
+        }
+      },
+      "choices": []
+    },
+    {
+      "id": "c3_anu",
+      "chapter": 3,
+      "mood": "mysterious",
+      "text": {
+        "es": "Pasa un día, y el viento del sur no sopla. Pasan dos, tres. Al séptimo día, el aire sobre la tierra sigue quieto, y la gente de Eridu mira al cielo con miedo.\n\nArriba, en el cielo, Anu, el padre de los dioses, llama a su visir.\n\n—Ilabrat, ¿por qué hace siete días que el viento del sur no sopla sobre la tierra?\n\n—Mi señor, Adapa, el hijo de Ea, le rompió el ala.\n\nAnu se levanta de su trono.\n\n—¡Que lo traigan aquí!\n\nLa orden baja por el cielo como un trueno. Ea la oye en su casa de agua dulce. Y tú la oyes en sueños, esa misma noche.",
+        "en": "A day passes, and the South Wind does not blow. Two days pass, three. On the seventh day the air over the land has still not stirred, and the people of Eridu look at the sky in fear.\n\nAbove, in heaven, Anu, the father of the gods, calls his vizier.\n\n“Ilabrat, why has the South Wind not blown over the land for seven days?”\n\n“My lord, Adapa, the son of Ea, broke its wing.”\n\nAnu rises from his throne.\n\n“Bring him here!”\n\nThe order rolls down through heaven like thunder. Ea hears it in his house of fresh water. And you hear it in a dream, that same night."
+      },
+      "fact": {
+        "es": "Ilabrat era el visir de Anu, el mensajero del dios del cielo. Se lo identificaba con Ninshubur, la fiel servidora de Inanna en los poemas sumerios, aunque en acadio era un dios masculino.",
+        "en": "Ilabrat was Anu’s vizier, the messenger of the sky god. He was identified with Ninshubur, Inanna’s faithful servant in the Sumerian poems, although in Akkadian he was a male god."
+      },
+      "choices": [
+        {
+          "to": "c4_consejo",
+          "risk": "low",
+          "text": {
+            "es": "Ir a ver a Ea",
+            "en": "Go to Ea"
+          },
+          "description": {
+            "es": "Él te dio la palabra; él sabrá qué hacer.",
+            "en": "He gave you the word; he will know what to do."
+          }
+        },
+        {
+          "to": "c3_pantano",
+          "risk": "medium",
+          "text": {
+            "es": "Esconderte en las marismas",
+            "en": "Hide in the marshes"
+          },
+          "description": {
+            "es": "Anu es el rey del cielo, no de los juncos.",
+            "en": "Anu is king of heaven, not of the reeds."
+          }
+        },
+        {
+          "to": "c3_curar",
+          "risk": "medium",
+          "text": {
+            "es": "Intentar curar el ala del viento",
+            "en": "Try to heal the wind’s wing"
+          },
+          "description": {
+            "es": "Quizás todavía estás a tiempo de arreglarlo.",
+            "en": "Perhaps there is still time to set it right."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3_pantano",
+      "chapter": 3,
+      "mood": "dangerous",
+      "text": {
+        "es": "Tomas tu barca de noche y te metes en las marismas, donde los juncos son más altos que un hombre y el agua no tiene camino.\n\nTe escondes tres días. Comes pescado crudo. Duermes mal.\n\nLa tercera noche, el agua alrededor de tu barca empieza a brillar. De entre los juncos sale Ea, con el agua dulce corriéndole por la barba.\n\n—Adapa —dice—, a Anu no se le escapa nadie. Él es el cielo, y el cielo está encima de todos los juncos de la tierra. —Te mira, más triste que enojado—. Ven. Te voy a decir cómo subir y cómo volver.",
+        "en": "You take your boat out at night and slip into the marshes, where the reeds are taller than a man and the water has no paths.\n\nYou hide for three days. You eat raw fish. You sleep badly.\n\nOn the third night, the water around your boat begins to glow. Out of the reeds comes Ea, with fresh water running down his beard.\n\n“Adapa,” he says, “no one escapes Anu. He is heaven, and heaven is above every reed on earth.” He looks at you, more sad than angry. “Come. I will tell you how to go up and how to come back.”"
+      },
+      "fact": {
+        "es": "En las marismas del sur de Irak se siguen construyendo grandes casas de juncos, llamadas mudhif, con una técnica que ya aparece en sellos y relieves sumerios.",
+        "en": "In the marshes of southern Iraq, people still build great reed houses called mudhif, with a technique already seen on Sumerian seals and reliefs."
+      },
+      "choices": [
+        {
+          "to": "c4_consejo",
+          "text": {
+            "es": "Escuchar a Ea",
+            "en": "Listen to Ea"
+          },
+          "description": {
+            "es": "Él sabe cómo se habla en el cielo.",
+            "en": "He knows how to speak in heaven."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3_curar",
+      "chapter": 3,
+      "mood": "sacred",
+      "text": {
+        "es": "Si tu palabra rompió el ala, quizás tu palabra pueda curarla.\n\nSubes al techo del templo a medianoche, con una lámpara y un cuenco de agua del Apsu. Te pones mirando al sur y recitas los conjuros de sanación que te enseñó Ea, uno tras otro, hasta que se te seca la boca.\n\nAl amanecer, sientes en la cara algo leve. Una brisa. Viene del sur, débil, rengueando, como un pájaro que aprende de nuevo a volar.\n\nEa aparece a tu lado, en silencio. Mira hacia el sur.\n\n—No está mal —dice—. Pero Anu ya dio la orden.",
+        "en": "If your word broke the wing, perhaps your word can heal it.\n\nYou climb onto the temple roof at midnight, with a lamp and a bowl of water from the Apsu. You face south and recite the healing incantations Ea taught you, one after another, until your mouth is dry.\n\nAt dawn you feel something light on your face. A breeze. It comes from the south, weak, limping, like a bird learning to fly again.\n\nEa appears beside you, in silence. He looks south.\n\n“Not bad,” he says. “But Anu has already given the order.”"
+      },
+      "fact": {
+        "es": "Ea era el señor de los conjuros. Los exorcistas mesopotámicos, llamados ashipu, decían que sus fórmulas no eran suyas sino de Ea y de su hijo Asalluhi: eran «conjuros de Eridu», la ciudad del dios.",
+        "en": "Ea was the lord of incantations. Mesopotamian exorcists, called ashipu, said their spells were not their own but Ea’s and his son Asalluhi’s: they were “incantations of Eridu,” the god’s city."
+      },
+      "choices": [
+        {
+          "to": "fin_sanado",
+          "risk": "medium",
+          "text": {
+            "es": "Pedirle a Ea que hable con Anu",
+            "en": "Ask Ea to speak with Anu"
+          },
+          "description": {
+            "es": "Ya arreglaste el daño; que el cielo lo sepa.",
+            "en": "You have mended the harm; let heaven know it."
+          }
+        },
+        {
+          "to": "c4_consejo",
+          "risk": "low",
+          "text": {
+            "es": "Preguntarle cómo presentarte ante Anu",
+            "en": "Ask how to stand before Anu"
+          },
+          "description": {
+            "es": "Una orden de Anu no se ignora.",
+            "en": "An order from Anu cannot be ignored."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_sanado",
+      "chapter": 3,
+      "mood": "peaceful",
+      "text": {
+        "es": "Ea sube al cielo esa misma mañana. Tú esperas en el techo del templo, mirando al sur.\n\nVuelve al anochecer.\n\n—Anu dice que un hombre que rompe lo que no es suyo y después lo arregla con sus propias manos no necesita subir a dar explicaciones. Dice que te quedes en Eridu y que no vuelvas a maldecir a sus vientos.\n\nEl viento del sur sopla otra vez sobre la tierra, cada día un poco más fuerte.\n\nNunca subes al cielo. Nunca te ofrecen nada. Vives tus años de hombre en Eridu, haciendo el pan y pescando para Ea, y enseñas a otros sabios lo que aprendiste. Y cuando el viento del sur te despeina en el muelle, sonríes.",
+        "en": "Ea goes up to heaven that very morning. You wait on the temple roof, looking south.\n\nHe returns at dusk.\n\n“Anu says that a man who breaks what is not his and then mends it with his own hands need not come up to explain himself. He says you are to stay in Eridu and never curse his winds again.”\n\nThe South Wind blows over the land once more, a little stronger every day.\n\nYou never go up to heaven. You are never offered anything. You live out your mortal years in Eridu, baking bread and fishing for Ea, and you teach other sages what you have learned. And when the South Wind tousles your hair on the quay, you smile."
+      },
+      "fact": {
+        "es": "En palacios y templos asirios, como los de Nimrud, se tallaron grandes relieves de apkallu, los sabios antiguos: algunos con cabeza de águila y otros vestidos con una piel de pez. Eran figuras protectoras.",
+        "en": "In Assyrian palaces and temples, like those at Nimrud, great reliefs of apkallu, the ancient sages, were carved: some with eagle heads, others dressed in a fish skin. They were protective figures."
+      },
+      "ending": {
+        "type": "alternative",
+        "title": {
+          "es": "El viento que volvió",
+          "en": "The Wind That Came Back"
+        }
+      },
+      "choices": []
+    },
+    {
+      "id": "c4_consejo",
+      "chapter": 4,
+      "mood": "mysterious",
+      "text": {
+        "es": "Ea te recibe en su casa de agua dulce. Habla despacio, como quien enseña algo que no se puede repetir dos veces.\n\n—Vas a ir ante Anu con el pelo suelto y ropa de luto. En la puerta del cielo están Dumuzi y Gizzida. Te preguntarán por quién estás de luto. Diles: «Dos dioses desaparecieron de nuestra tierra». Te preguntarán quiénes. Diles: «Dumuzi y Gizzida». Se mirarán, se reirán, y hablarán bien de ti a Anu.\n\n»Cuando estés ante Anu, te ofrecerán pan de muerte: no lo comas. Te ofrecerán agua de muerte: no la bebas. Te ofrecerán ropa: póntela. Te ofrecerán aceite: úngete. No olvides lo que te digo.",
+        "en": "Ea receives you in his house of fresh water. He speaks slowly, like someone teaching a thing that cannot be said twice.\n\n“You will go before Anu with your hair unbound, dressed in mourning. At the gate of heaven stand Dumuzi and Gizzida. They will ask for whom you mourn. Tell them: ‘Two gods have disappeared from our land.’ They will ask which gods. Tell them: ‘Dumuzi and Gizzida.’ They will look at each other, laugh, and speak well of you to Anu.\n\n“When you stand before Anu, they will offer you the bread of death: do not eat it. They will offer you the water of death: do not drink it. They will offer you a garment: put it on. They will offer you oil: anoint yourself. Do not forget what I tell you.”"
+      },
+      "fact": {
+        "es": "En el poema, Ea le advierte que le ofrecerán «pan de muerte» y «agua de muerte», que no los acepte, y que acepte la ropa y el aceite.",
+        "en": "In the poem, Ea warns him that he will be offered “the bread of death” and “the water of death,” which he must refuse, and that he must accept the garment and the oil."
+      },
+      "choices": [
+        {
+          "to": "c4_luto",
+          "risk": "low",
+          "text": {
+            "es": "Vestirte de luto, como dice Ea",
+            "en": "Dress in mourning, as Ea says"
+          },
+          "description": {
+            "es": "Él nunca te ha fallado.",
+            "en": "He has never failed you."
+          }
+        },
+        {
+          "to": "c4_preguntar",
+          "risk": "medium",
+          "text": {
+            "es": "Preguntarle por qué pan de muerte",
+            "en": "Ask him: why the bread of death?"
+          },
+          "description": {
+            "es": "¿Por qué Anu querría matarte con pan?",
+            "en": "Why would Anu kill you with bread?"
+          }
+        },
+        {
+          "to": "c4_eridu",
+          "risk": "low",
+          "text": {
+            "es": "Despedirte antes del templo",
+            "en": "First, take leave of the temple"
+          },
+          "description": {
+            "es": "Si no vuelves, que quede en orden.",
+            "en": "If you do not return, leave it in order."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c4_luto",
+      "chapter": 4,
+      "mood": "sacred",
+      "text": {
+        "es": "Te sueltas el pelo y no te lo peinas. Te quitas la ropa de sacerdote y te pones la de luto, áspera y oscura.\n\nTe miras en el agua del Apsu y no te reconoces. Pareces un hombre que perdió a alguien.\n\nEa te observa y asiente.\n\n—Así. Que vean tu tristeza antes que tu cara. —Te pone una mano en el hombro—. Y recuerda: el pan y el agua, no. La ropa y el aceite, sí.\n\nLo repites en voz baja mientras caminas hacia el lugar donde la tierra se toca con el cielo.",
+        "en": "You unbind your hair and leave it uncombed. You take off your priest’s robes and put on mourning clothes, rough and dark.\n\nYou look at yourself in the water of the Apsu and do not recognize yourself. You look like a man who has lost someone.\n\nEa watches you and nods.\n\n“Like that. Let them see your grief before your face.” He lays a hand on your shoulder. “And remember: the bread and the water, no. The garment and the oil, yes.”\n\nYou repeat it under your breath as you walk toward the place where earth touches heaven."
+      },
+      "fact": {
+        "es": "En Mesopotamia, el luto se mostraba con el pelo suelto y despeinado, la ropa rasgada o áspera y polvo sobre la cabeza. Son gestos que aparecen en muchos poemas.",
+        "en": "In Mesopotamia, mourning was shown with loose, unkempt hair, torn or rough clothing and dust on the head. These gestures appear in many poems."
+      },
+      "choices": [
+        {
+          "to": "c5_puerta",
+          "text": {
+            "es": "Subir por el camino del cielo",
+            "en": "Go up the road to heaven"
+          },
+          "description": {
+            "es": "Arriba espera la puerta de Anu.",
+            "en": "Above, the gate of Anu is waiting."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c4_preguntar",
+      "chapter": 4,
+      "mood": "mysterious",
+      "text": {
+        "es": "—Señor, ¿por qué Anu querría darme pan de muerte? Si quiere castigarme, tiene rayos. Tiene vientos.\n\nEa no contesta enseguida. El agua se mueve a su alrededor, aunque no hay corriente.\n\n—Anu es el padre de los dioses —dice al fin—, y en su mesa se sirven cosas que los hombres no pueden comer. Lo que es vida para un dios puede ser muerte para un hombre. No preguntes más, Adapa. Haz lo que te digo.\n\nLo miras a los ojos. Por primera vez en tu vida, no sabes leer lo que hay en ellos.\n\nTe vistes de luto y partes.",
+        "en": "“Lord, why would Anu give me the bread of death? If he wants to punish me, he has lightning. He has winds.”\n\nEa does not answer at once. The water stirs around him, though there is no current.\n\n“Anu is the father of the gods,” he says at last, “and at his table things are served that men cannot eat. What is life for a god can be death for a man. Ask no more, Adapa. Do as I tell you.”\n\nYou look into his eyes. For the first time in your life, you cannot read what is in them.\n\nYou dress in mourning and set out."
+      },
+      "fact": {
+        "es": "Los especialistas todavía discuten si Ea engañó a Adapa a propósito, para que no se volviera inmortal, o si se equivocó sobre lo que Anu iba a hacer.",
+        "en": "Scholars still debate whether Ea deceived Adapa on purpose, so that he would not become immortal, or whether he was mistaken about what Anu would do."
+      },
+      "choices": [
+        {
+          "to": "c5_puerta",
+          "text": {
+            "es": "Subir por el camino del cielo",
+            "en": "Go up the road to heaven"
+          },
+          "description": {
+            "es": "Arriba espera la puerta de Anu.",
+            "en": "Above, the gate of Anu is waiting."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c4_eridu",
+      "chapter": 4,
+      "mood": "peaceful",
+      "text": {
+        "es": "Antes de partir, vuelves al templo una última vez. Haces el pan con los panaderos, sin decirles nada. Llevas el agua. Revisas el cerrojo.\n\nA tu discípulo más joven le muestras cómo se pone la mesa del dios, aunque ya lo sabe.\n\n—¿Adónde vas, maestro?\n\n—Arriba.\n\nNo pregunta más. Te ve soltarte el pelo y ponerte la ropa de luto, y entiende que es un viaje del que no todos vuelven.\n\nEa te espera en la orilla del Apsu, con las últimas palabras: el pan y el agua, no; la ropa y el aceite, sí.",
+        "en": "Before you leave, you go back to the temple one last time. You bake bread with the bakers without telling them anything. You fetch the water. You check the bolt.\n\nYou show your youngest disciple how to set the god’s table, though he already knows.\n\n“Where are you going, master?”\n\n“Up.”\n\nHe asks nothing more. He watches you unbind your hair and put on mourning clothes, and he understands that this is a journey not everyone returns from.\n\nEa waits for you on the shore of the Apsu with his last words: the bread and the water, no; the garment and the oil, yes."
+      },
+      "fact": {
+        "es": "Bajo el zigurat de Eridu, los arqueólogos encontraron dieciocho templos superpuestos, levantados uno sobre otro durante unos dos mil años. El más antiguo es de hacia el 5300 a. C., hace más de siete mil años.",
+        "en": "Beneath the ziggurat of Eridu, archaeologists found eighteen temples built one on top of another over some two thousand years. The oldest dates from around 5300 BCE, more than seven thousand years ago."
+      },
+      "choices": [
+        {
+          "to": "c5_puerta",
+          "text": {
+            "es": "Subir por el camino del cielo",
+            "en": "Go up the road to heaven"
+          },
+          "description": {
+            "es": "Arriba espera la puerta de Anu.",
+            "en": "Above, the gate of Anu is waiting."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5_puerta",
+      "chapter": 5,
+      "mood": "mysterious",
+      "text": {
+        "es": "Subes por el camino del cielo. Arriba, la luz es blanca y no da calor.\n\nAnte la puerta de Anu hay dos dioses. Uno es joven y hermoso, con un cayado de pastor: Dumuzi. El otro tiene serpientes enroscadas en el bastón: Gizzida, el señor del buen árbol.\n\nTe miran de arriba abajo. El pelo suelto, la ropa de luto.\n\n—Hombre —dicen los dos—, ¿por qué estás así? ¿Por quién llevas luto?",
+        "en": "You go up the road to heaven. Above, the light is white and gives no warmth.\n\nBefore the gate of Anu stand two gods. One is young and handsome, with a shepherd’s crook: Dumuzi. The other has serpents coiled around his staff: Gizzida, lord of the good tree.\n\nThey look you up and down. The unbound hair, the mourning clothes.\n\n“Man,” they both say, “why do you look like this? For whom are you in mourning?”"
+      },
+      "fact": {
+        "es": "En el poema, Dumuzi y Gizzida, es decir, Ningishzida, son los porteros de Anu. Los dos eran dioses que, según los mitos, habían desaparecido de la tierra.",
+        "en": "In the poem, Dumuzi and Gizzida, that is, Ningishzida, are Anu’s gatekeepers. According to the myths, both were gods who had disappeared from the earth."
+      },
+      "choices": [
+        {
+          "to": "c5_verdad",
+          "risk": "low",
+          "text": {
+            "es": "Responder lo que dijo Ea",
+            "en": "Answer as Ea told you"
+          },
+          "description": {
+            "es": "«Dos dioses desaparecieron de nuestra tierra».",
+            "en": "“Two gods have disappeared from our land.”"
+          }
+        },
+        {
+          "to": "c5_halago",
+          "risk": "medium",
+          "text": {
+            "es": "Alabarlos antes de responder",
+            "en": "Praise them before answering"
+          },
+          "description": {
+            "es": "Unas buenas palabras nunca sobran ante un dios.",
+            "en": "Kind words are never wasted on a god."
+          }
+        },
+        {
+          "to": "fin_puerta",
+          "risk": "high",
+          "text": {
+            "es": "Exigir que te dejen pasar",
+            "en": "Demand that they let you pass"
+          },
+          "description": {
+            "es": "Anu te llamó; no tienes que explicarles nada.",
+            "en": "Anu summoned you; you owe them no explanation."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5_verdad",
+      "chapter": 5,
+      "mood": "sacred",
+      "text": {
+        "es": "—Dos dioses desaparecieron de nuestra tierra —dices—. Por eso estoy de luto.\n\n—¿Quiénes son esos dos dioses? —pregunta Gizzida.\n\n—Dumuzi y Gizzida.\n\nLos dos porteros se miran. Y se ríen, mucho, como hace siglos que no se reían. Dumuzi se seca los ojos.\n\n—En la tierra todavía nos lloran —le dice a Gizzida.\n\n—Entonces este hombre merece que hablemos por él.\n\nAbren la puerta y entran antes que tú, y los oyes hablarle a Anu en voz baja, en tu favor.",
+        "en": "“Two gods have disappeared from our land,” you say. “That is why I am in mourning.”\n\n“Who are these two gods?” asks Gizzida.\n\n“Dumuzi and Gizzida.”\n\nThe two gatekeepers look at each other. And they laugh, long and hard, as they have not laughed in centuries. Dumuzi wipes his eyes.\n\n“On earth they still weep for us,” he tells Gizzida.\n\n“Then this man deserves to have us speak for him.”\n\nThey open the gate and go in ahead of you, and you hear them speaking to Anu in low voices, in your favor."
+      },
+      "fact": {
+        "es": "La desaparición de Dumuzi, el Tammuz babilónico, se lloraba cada año en el mes que llevaba su nombre. Hasta el libro de Ezequiel menciona a mujeres que lloran a Tammuz.",
+        "en": "The disappearance of Dumuzi, the Babylonian Tammuz, was mourned every year in the month that bore his name. Even the Book of Ezekiel mentions women weeping for Tammuz."
+      },
+      "choices": [
+        {
+          "to": "c6_anu",
+          "text": {
+            "es": "Entrar ante Anu",
+            "en": "Go in before Anu"
+          },
+          "description": {
+            "es": "La puerta se abre.",
+            "en": "The gate opens."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5_halago",
+      "chapter": 5,
+      "mood": "mysterious",
+      "text": {
+        "es": "—Grandes señores, porteros del cielo, que su nombre…\n\n—¿Por quién llevas luto? —te interrumpe Gizzida. Las serpientes de su bastón levantan la cabeza.\n\nTragas saliva. —Dos dioses desaparecieron de nuestra tierra.\n\n—¿Quiénes?\n\n—Dumuzi y Gizzida.\n\nLos dos se miran. Dumuzi sonríe; Gizzida tarda un poco más, pero al final también.\n\n—La próxima vez, hombre, empieza por lo importante. —Abren la puerta—. Pero hablaremos por ti.",
+        "en": "“Great lords, gatekeepers of heaven, may your names…”\n\n“For whom do you mourn?” Gizzida cuts you off. The serpents on his staff raise their heads.\n\nYou swallow. “Two gods have disappeared from our land.”\n\n“Which ones?”\n\n“Dumuzi and Gizzida.”\n\nThe two look at each other. Dumuzi smiles; Gizzida takes a little longer, but in the end he smiles too.\n\n“Next time, man, start with what matters.” They open the gate. “But we will speak for you.”"
+      },
+      "fact": {
+        "es": "El símbolo de Ningishzida era una serpiente con cuernos. En el vaso de libación de Gudea de Lagash, hoy en el Louvre, aparecen dos serpientes enroscadas que se asocian con él.",
+        "en": "Ningishzida’s symbol was a horned serpent. On the libation vase of Gudea of Lagash, now in the Louvre, two entwined serpents associated with him appear."
+      },
+      "choices": [
+        {
+          "to": "c6_anu",
+          "text": {
+            "es": "Entrar ante Anu",
+            "en": "Go in before Anu"
+          },
+          "description": {
+            "es": "La puerta se abre.",
+            "en": "The gate opens."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_puerta",
+      "chapter": 5,
+      "mood": "tragic",
+      "text": {
+        "es": "—Anu me llamó —dices—. No tengo que explicarle mi ropa a nadie más.\n\nLos dos porteros se miran. No se ríen.\n\nAbren la puerta, sí, pero entran antes que tú y le hablan a Anu en voz baja. Oyes palabras sueltas: «soberbio», «hombre», «el ala rota».\n\nCuando entras, Anu ya ha decidido. No te ofrece nada. No te pregunta nada.\n\n—Un hombre que rompe las alas del viento y les habla así a los dioses no tiene lugar ni en el cielo ni en la tierra —dice—. Que lo lleven abajo.\n\nY abajo, en la casa del polvo, la reina de los muertos ya tiene un lugar preparado para el sabio de Eridu.",
+        "en": "“Anu summoned me,” you say. “I do not have to explain my clothes to anyone else.”\n\nThe two gatekeepers look at each other. They do not laugh.\n\nThey open the gate, yes, but they go in ahead of you and speak to Anu in low voices. You catch scattered words: “arrogant,” “man,” “the broken wing.”\n\nWhen you enter, Anu has already decided. He offers you nothing. He asks you nothing.\n\n“A man who breaks the wings of the wind and speaks to the gods like that has no place in heaven or on earth,” he says. “Take him below.”\n\nAnd below, in the house of dust, the queen of the dead already has a place prepared for the sage of Eridu."
+      },
+      "fact": {
+        "es": "Ningishzida también era un dios del inframundo. En el poema sumerio «La muerte de Gilgamesh», el rey muerto lleva regalos a Ningishzida y a Dumuzi en la tierra de los muertos.",
+        "en": "Ningishzida was also a god of the underworld. In the Sumerian poem “The Death of Gilgamesh,” the dead king brings gifts to Ningishzida and Dumuzi in the land of the dead."
+      },
+      "ending": {
+        "type": "tragic",
+        "title": {
+          "es": "La puerta cerrada",
+          "en": "The Closed Gate"
+        }
+      },
+      "choices": []
+    },
+    {
+      "id": "c6_anu",
+      "chapter": 6,
+      "mood": "sacred",
+      "text": {
+        "es": "La sala de Anu es tan alta que el techo es el cielo mismo. Él está sentado en su trono, viejo como las estrellas.\n\n—Ven aquí, Adapa. ¿Por qué le rompiste el ala al viento del sur?\n\nDumuzi y Gizzida están a su lado. Te miran, y en sus ojos hay algo parecido a la amistad.\n\nAnu espera. Detrás de su pregunta hay otra, más grande, que no dice: ¿quién le enseñó a un hombre palabras que pueden romper el viento?",
+        "en": "Anu’s hall is so high that its ceiling is heaven itself. He sits on his throne, as old as the stars.\n\n“Come here, Adapa. Why did you break the South Wind’s wing?”\n\nDumuzi and Gizzida stand beside him. They look at you, and in their eyes there is something like friendship.\n\nAnu waits. Behind his question lies another, larger one that he does not ask: who taught a man words that can break the wind?"
+      },
+      "fact": {
+        "es": "Anu, el An sumerio, era el dios del cielo y el padre de los dioses. En el poema es él, y no Enlil ni Ea, quien nota que falta el viento y manda llamar a Adapa.",
+        "en": "Anu, the Sumerian An, was the sky god and the father of the gods. In the poem it is he, not Enlil or Ea, who notices that the wind is missing and summons Adapa."
+      },
+      "choices": [
+        {
+          "to": "c6_relato",
+          "risk": "low",
+          "text": {
+            "es": "Contarle lo que pasó en el mar",
+            "en": "Tell him what happened at sea"
+          },
+          "description": {
+            "es": "La verdad, sin adornos.",
+            "en": "The truth, without ornament."
+          }
+        },
+        {
+          "to": "c6_ea",
+          "risk": "medium",
+          "text": {
+            "es": "Decirle que Ea te enseñó todo",
+            "en": "Tell him Ea taught you everything"
+          },
+          "description": {
+            "es": "Si la palabra era de Ea, la culpa también.",
+            "en": "If the word was Ea’s, so is the blame."
+          }
+        },
+        {
+          "to": "fin_caida",
+          "risk": "high",
+          "text": {
+            "es": "Pedirle un lugar entre los dioses",
+            "en": "Ask for a place among the gods"
+          },
+          "description": {
+            "es": "Ya sabes lo que saben ellos; ¿por qué no?",
+            "en": "You know what they know; why not?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6_relato",
+      "chapter": 6,
+      "mood": "peaceful",
+      "text": {
+        "es": "—Mi señor —dices—, estaba pescando en medio del mar para la casa de mi señor Ea. El mar estaba como un espejo. Entonces sopló el viento del sur y me hundió, me mandó a la casa de los peces. Con la rabia de mi corazón, lo maldije.\n\nDumuzi y Gizzida hablan a tu lado, en voz baja, en tu favor.\n\nAnu escucha. Su enojo se va calmando, como el mar después de la tormenta.\n\n—¿Por qué Ea le reveló a un hombre, a un simple mortal, lo de adentro del cielo y de la tierra? —dice, más para sí que para ti—. Le dio un corazón grande, le hizo un nombre. ¿Y nosotros qué hacemos con él?",
+        "en": "“My lord,” you say, “I was fishing in the middle of the sea for the house of my lord Ea. The sea was like a mirror. Then the South Wind blew and plunged me under, sent me down to the house of the fish. In the anger of my heart, I cursed it.”\n\nDumuzi and Gizzida speak at your side, in low voices, in your favor.\n\nAnu listens. His anger subsides, like the sea after a storm.\n\n“Why did Ea reveal to a man, a mere mortal, what lies within heaven and earth?” he says, more to himself than to you. “He gave him a great heart, he made a name for him. And what are we to do with him?”"
+      },
+      "fact": {
+        "es": "En el poema, Anu se pregunta por qué Ea le reveló a un ser humano «lo de adentro del cielo y de la tierra». Es una de las preguntas centrales del mito.",
+        "en": "In the poem, Anu asks why Ea revealed to a human being “what lies within heaven and earth.” It is one of the central questions of the myth."
+      },
+      "choices": [
+        {
+          "to": "c7_mesa",
+          "text": {
+            "es": "Esperar la decisión de Anu",
+            "en": "Await Anu’s decision"
+          },
+          "description": {
+            "es": "El padre de los dioses ya no está enojado.",
+            "en": "The father of the gods is no longer angry."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6_ea",
+      "chapter": 6,
+      "mood": "mysterious",
+      "text": {
+        "es": "—Mi señor, la palabra que rompió el ala no era mía. Era de Ea. Él me la enseñó, como me enseñó todo lo que sé.\n\nAnu entrecierra los ojos.\n\n—Eso ya lo sé. —Su voz no es dura—. Ea siempre les da a los hombres más de lo que les corresponde. Les dio el pan, el arado, los conjuros. Ahora les da palabras que rompen mis vientos.\n\nDumuzi y Gizzida hablan en tu favor. Anu los escucha y su enojo se calma.\n\n—Le dio un corazón grande, le hizo un nombre —dice—. ¿Y nosotros qué hacemos con él?",
+        "en": "“My lord, the word that broke the wing was not mine. It was Ea’s. He taught it to me, as he taught me everything I know.”\n\nAnu narrows his eyes.\n\n“I know that already.” His voice is not harsh. “Ea always gives men more than is their due. He gave them bread, the plow, the incantations. Now he gives them words that break my winds.”\n\nDumuzi and Gizzida speak in your favor. Anu listens to them, and his anger subsides.\n\n“He gave him a great heart, he made a name for him,” he says. “And what are we to do with him?”"
+      },
+      "fact": {
+        "es": "Según el sacerdote babilonio Beroso, que escribió en griego hacia el 290 a. C., un ser mitad hombre y mitad pez llamado Oannes salió del mar para enseñar a los humanos las letras y las artes.",
+        "en": "According to the Babylonian priest Berossus, who wrote in Greek around 290 BCE, a being half man and half fish called Oannes came out of the sea to teach humans writing and the arts."
+      },
+      "choices": [
+        {
+          "to": "c7_mesa",
+          "text": {
+            "es": "Esperar la decisión de Anu",
+            "en": "Await Anu’s decision"
+          },
+          "description": {
+            "es": "El padre de los dioses ya no está enojado.",
+            "en": "The father of the gods is no longer angry."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7_mesa",
+      "chapter": 7,
+      "mood": "mysterious",
+      "text": {
+        "es": "Anu levanta una mano.\n\n—Tráiganle pan de vida, para que coma.\n\nLos sirvientes del cielo ponen ante ti un pan que brilla como si tuviera el sol adentro. Después, una copa de agua clara. Después, una ropa nueva, blanca. Después, una vasija de aceite.\n\nLa sala se queda en silencio. Dumuzi y Gizzida te miran. Anu te mira.\n\nEn tu cabeza suena la voz de Ea: «Te ofrecerán pan de muerte: no lo comas. Agua de muerte: no la bebas».\n\nPero Anu no dijo «muerte». Dijo «vida».",
+        "en": "Anu raises a hand.\n\n“Bring him the bread of life, so that he may eat.”\n\nThe servants of heaven set before you a loaf that shines as if the sun were inside it. Then a cup of clear water. Then a new garment, white. Then a jar of oil.\n\nThe hall falls silent. Dumuzi and Gizzida are watching you. Anu is watching you.\n\nIn your head you hear Ea’s voice: “They will offer you the bread of death: do not eat it. The water of death: do not drink it.”\n\nBut Anu did not say “death.” He said “life.”"
+      },
+      "fact": {
+        "es": "En la versión de Amarna, Anu ordena que le traigan a Adapa «pan de vida» y «agua de vida». Es lo contrario de lo que Ea le había anunciado.",
+        "en": "In the Amarna version, Anu orders that Adapa be brought “the bread of life” and “the water of life.” It is the opposite of what Ea had foretold."
+      },
+      "choices": [
+        {
+          "to": "c7_rechazar",
+          "risk": "low",
+          "text": {
+            "es": "Rechazar el pan y el agua",
+            "en": "Refuse the bread and the water"
+          },
+          "description": {
+            "es": "Ea nunca te ha fallado.",
+            "en": "Ea has never failed you."
+          }
+        },
+        {
+          "to": "c7_pregunta",
+          "risk": "medium",
+          "text": {
+            "es": "Preguntar qué pan es este",
+            "en": "Ask what bread this is"
+          },
+          "description": {
+            "es": "Quieres estar seguro antes de decidir.",
+            "en": "You want to be sure before you decide."
+          }
+        },
+        {
+          "to": "fin_inmortal",
+          "risk": "high",
+          "text": {
+            "es": "Comer el pan de Anu",
+            "en": "Eat Anu’s bread"
+          },
+          "description": {
+            "es": "Lo dijo el padre de los dioses: es vida.",
+            "en": "The father of the gods said it: it is life."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7_rechazar",
+      "chapter": 7,
+      "mood": "sacred",
+      "text": {
+        "es": "Bajas la vista.\n\n—No, mi señor. No como. No bebo.\n\nLos sirvientes se llevan el pan y el agua. Nadie dice nada.\n\nDespués te ofrecen la ropa, y te la pones: es suave como el agua y no pesa nada. Te ofrecen el aceite, y te unges la frente y las manos, como te dijo Ea.\n\nCumpliste. El pan y el agua, no; la ropa y el aceite, sí. Respiras.\n\nY entonces oyes un ruido que no esperabas en la sala del padre de los dioses.",
+        "en": "You lower your eyes.\n\n“No, my lord. I will not eat. I will not drink.”\n\nThe servants take away the bread and the water. No one says a word.\n\nThen they offer you the garment, and you put it on: it is soft as water and weighs nothing. They offer you the oil, and you anoint your brow and your hands, as Ea told you.\n\nYou have done it. The bread and the water, no; the garment and the oil, yes. You breathe again.\n\nAnd then you hear a sound you never expected in the hall of the father of the gods."
+      },
+      "fact": {
+        "es": "En el poema, Adapa rechaza el pan y el agua, pero se pone la ropa y se unge con el aceite, tal como le había dicho Ea.",
+        "en": "In the poem, Adapa refuses the bread and the water, but he puts on the garment and anoints himself with the oil, just as Ea had told him."
+      },
+      "choices": [
+        {
+          "to": "c8_risa",
+          "text": {
+            "es": "Mirar a Anu",
+            "en": "Look at Anu"
+          },
+          "description": {
+            "es": "Algo en su cara ha cambiado.",
+            "en": "Something in his face has changed."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7_pregunta",
+      "chapter": 7,
+      "mood": "mysterious",
+      "text": {
+        "es": "—Mi señor —dices—, ¿qué pan es este?\n\nAnu te mira largo rato, y algo como una sonrisa le cruza la cara.\n\n—Pan de vida, hombre. El que comen los dioses. Quien lo come no muere.\n\nDumuzi asiente despacio. Gizzida no se mueve.\n\nTienes el pan delante. Tienes la voz de Ea en la cabeza. Ea te dijo «muerte». Anu te dice «vida». Uno de los dos te está diciendo la verdad, o los dos, cada uno a su manera.",
+        "en": "“My lord,” you say, “what bread is this?”\n\nAnu looks at you for a long while, and something like a smile crosses his face.\n\n“The bread of life, man. The bread the gods eat. Whoever eats it does not die.”\n\nDumuzi nods slowly. Gizzida does not move.\n\nThe bread is in front of you. Ea’s voice is in your head. Ea told you “death.” Anu tells you “life.” One of them is telling you the truth, or both are, each in his own way."
+      },
+      "fact": {
+        "es": "Muchos especialistas comparan el pan de vida de Adapa con el árbol de la vida del Génesis: en los dos relatos, el ser humano queda sin la inmortalidad que tuvo al alcance.",
+        "en": "Many scholars compare Adapa’s bread of life with the tree of life in Genesis: in both stories, humankind is left without the immortality that was within its reach."
+      },
+      "choices": [
+        {
+          "to": "c7_rechazar",
+          "risk": "low",
+          "text": {
+            "es": "Confiar en Ea y rechazarlo",
+            "en": "Trust Ea and refuse it"
+          },
+          "description": {
+            "es": "Él te dio todo lo que eres.",
+            "en": "He gave you all that you are."
+          }
+        },
+        {
+          "to": "fin_inmortal",
+          "risk": "high",
+          "text": {
+            "es": "Confiar en Anu y comer",
+            "en": "Trust Anu and eat"
+          },
+          "description": {
+            "es": "El padre de los dioses no necesita mentirle a un hombre.",
+            "en": "The father of the gods has no need to lie to a man."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c8_risa",
+      "chapter": 8,
+      "mood": "mysterious",
+      "text": {
+        "es": "Anu se está riendo.\n\nEs una risa larga y cansada, la de alguien que ve repetirse algo que ya conocía.\n\n—Ven aquí, Adapa. ¿Por qué no comiste? ¿Por qué no bebiste? Ahora no vivirás. ¡Ay de la humanidad, que es poca cosa!\n\nLo miras sin entender.\n\n—Ea, mi señor, me dijo: «No comas, no bebas».\n\nAnu deja de reírse. Mira hacia abajo, hacia el Apsu, donde está Ea, y sacude la cabeza.\n\n—Llévenlo —dice—. Devuélvanlo a su tierra.",
+        "en": "Anu is laughing.\n\nIt is a long, weary laugh, the laugh of someone who sees something he already knew repeat itself.\n\n“Come here, Adapa. Why did you not eat? Why did you not drink? Now you shall not live. Alas for inferior humanity!”\n\nYou stare at him without understanding.\n\n“Ea, my lord, told me: ‘Do not eat, do not drink.’”\n\nAnu stops laughing. He looks down, toward the Apsu, where Ea dwells, and shakes his head.\n\n“Take him away,” he says, “and return him to his earth.”"
+      },
+      "fact": {
+        "es": "En el poema, Anu se ríe de Adapa y le dice que, por no comer ni beber, no tendrá vida. Después ordena: «Llévenlo y devuélvanlo a su tierra».",
+        "en": "In the poem, Anu laughs at Adapa and tells him that, because he did not eat or drink, he shall not have life. Then he orders: “Take him away and return him to his earth.”"
+      },
+      "choices": [
+        {
+          "to": "fin_tierra",
+          "risk": "low",
+          "text": {
+            "es": "Volver a tu tierra",
+            "en": "Return to your earth"
+          },
+          "description": {
+            "es": "El viaje termina como empezó: a pie.",
+            "en": "The journey ends as it began: on foot."
+          }
+        },
+        {
+          "to": "c8_ea",
+          "risk": "medium",
+          "text": {
+            "es": "Preguntarle a Ea por qué",
+            "en": "Ask Ea why"
+          },
+          "description": {
+            "es": "Tiene que haber una razón.",
+            "en": "There must be a reason."
+          }
+        },
+        {
+          "to": "fin_caida",
+          "risk": "high",
+          "text": {
+            "es": "Pedir que te den el pan otra vez",
+            "en": "Ask for the bread again"
+          },
+          "description": {
+            "es": "Un error así no puede ser para siempre.",
+            "en": "A mistake like this cannot last forever."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c8_ea",
+      "chapter": 8,
+      "mood": "mysterious",
+      "text": {
+        "es": "Bajas del cielo y vas derecho a la casa de agua dulce.\n\n—¿Por qué? —preguntas. No gritas. No te queda fuerza para gritar.\n\nEa te mira mucho tiempo.\n\n—Porque eres mi sabio, Adapa. Si comías, te quedabas arriba, entre los dioses, y Eridu se quedaba sin pan, sin agua, sin nadie que enseñara a los hombres. Te di sabiduría. No podía darte las dos cosas.\n\n—¿Y si me hubieras dicho la verdad?\n\n—Habrías comido.\n\nNo le contestas. Porque tiene razón.",
+        "en": "You come down from heaven and go straight to the house of fresh water.\n\n“Why?” you ask. You do not shout. You have no strength left to shout.\n\nEa looks at you for a long time.\n\n“Because you are my sage, Adapa. If you had eaten, you would have stayed above, among the gods, and Eridu would have been left without bread, without water, without anyone to teach mankind. I gave you wisdom. I could not give you both.”\n\n“And if you had told me the truth?”\n\n“You would have eaten.”\n\nYou do not answer him. Because he is right."
+      },
+      "fact": {
+        "es": "En algunos fragmentos asirios del mito, Anu termina concediendo privilegios a Eridu y a su sacerdocio. Esos fragmentos están muy dañados y su sentido exacto se discute.",
+        "en": "In some Assyrian fragments of the myth, Anu ends up granting privileges to Eridu and its priesthood. Those fragments are badly damaged, and their exact meaning is debated."
+      },
+      "choices": [
+        {
+          "to": "fin_tierra",
+          "text": {
+            "es": "Volver a tu templo",
+            "en": "Return to your temple"
+          },
+          "description": {
+            "es": "La mesa de Ea sigue sin pescado.",
+            "en": "Ea’s table still has no fish."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_inmortal",
+      "chapter": 8,
+      "mood": "triumphant",
+      "text": {
+        "es": "Tomas el pan y lo muerdes.\n\nSabe a luz. Te baja por la garganta como agua tibia, y sientes que algo en ti se cierra para siempre: la puerta por donde entra la muerte.\n\nBebes el agua. Te pones la ropa. Te unges con el aceite.\n\nAnu asiente, satisfecho, como quien ve volver algo a su lugar.\n\n—Ahora eres de aquí —dice—. Te quedarás en el cielo.\n\nNunca más vuelves a Eridu. Desde lo alto ves pasar a los panaderos, a tus discípulos, a sus hijos y a los hijos de sus hijos, envejecer y morir. Tú no. Y cada mañana, en la mesa de Ea, alguien que no eres tú pone el pan.",
+        "en": "You take the bread and bite into it.\n\nIt tastes of light. It goes down your throat like warm water, and you feel something in you close forever: the door through which death comes in.\n\nYou drink the water. You put on the garment. You anoint yourself with the oil.\n\nAnu nods, satisfied, like someone watching a thing return to its place.\n\n“Now you belong here,” he says. “You will stay in heaven.”\n\nYou never go back to Eridu. From on high you watch the bakers, your disciples, their children and their children’s children grow old and die. Not you. And every morning, at Ea’s table, someone who is not you sets out the bread."
+      },
+      "fact": {
+        "es": "En la Epopeya de Gilgamesh, los únicos humanos que reciben la vida eterna de los dioses son Utnapishtim, el sobreviviente del diluvio, y su esposa. Gilgamesh la busca y no la consigue.",
+        "en": "In the Epic of Gilgamesh, the only humans who receive eternal life from the gods are Utnapishtim, the survivor of the Flood, and his wife. Gilgamesh seeks it and does not find it."
+      },
+      "ending": {
+        "type": "alternative",
+        "title": {
+          "es": "El pan de los dioses",
+          "en": "The Bread of the Gods"
+        }
+      },
+      "choices": []
+    },
+    {
+      "id": "fin_caida",
+      "chapter": 8,
+      "mood": "tragic",
+      "text": {
+        "es": "—Señor, dame el pan. Lo merezco. Sé lo que saben los dioses. Déjame quedarme entre ustedes.\n\nLa sala del cielo se queda helada. Dumuzi baja la vista. Gizzida da un paso atrás.\n\nAnu se pone de pie, y es tan alto como el cielo.\n\n—Ea te dio sabiduría —dice—, y tú creíste que eso te hacía un dios. Ahora vas a aprender lo que es un hombre.\n\nEl suelo de la sala se abre bajo tus pies. Caes por el cielo, entre las estrellas, hasta el mar. Esta vez no hay palabra de Ea que te salve. Las aguas saladas se cierran sobre ti, y el sabio de Eridu no vuelve a salir.",
+        "en": "“Lord, give me the bread. I deserve it. I know what the gods know. Let me stay among you.”\n\nThe hall of heaven turns to ice. Dumuzi lowers his eyes. Gizzida takes a step back.\n\nAnu rises to his feet, and he is as tall as heaven.\n\n“Ea gave you wisdom,” he says, “and you thought that made you a god. Now you will learn what a man is.”\n\nThe floor of the hall opens beneath your feet. You fall through the sky, among the stars, down to the sea. This time no word of Ea’s can save you. The salt waters close over you, and the sage of Eridu never rises again."
+      },
+      "fact": {
+        "es": "Un texto ritual babilónico enumera sabios antiguos que enojaron a los dioses. De uno dice que hizo enojar a Adad, que dejó la tierra tres años sin lluvia; de otro, que ofendió a Ea en el Apsu.",
+        "en": "A Babylonian ritual text lists ancient sages who angered the gods. Of one it says that he angered Adad, who left the land without rain for three years; of another, that he offended Ea in the Apsu."
+      },
+      "ending": {
+        "type": "tragic",
+        "title": {
+          "es": "El sabio que quiso ser dios",
+          "en": "The Sage Who Would Be a God"
+        }
+      },
+      "choices": []
+    },
+    {
+      "id": "fin_tierra",
+      "chapter": 8,
+      "mood": "sacred",
+      "text": {
+        "es": "Te devuelven a tu tierra.\n\nBajas por el camino del cielo con la ropa nueva y el aceite en la frente. Abajo, el viento del sur vuelve a soplar, despacio, como si te pidiera perdón. O como si tú se lo pidieras a él.\n\nEn Eridu, los panaderos ya tienen los hornos encendidos. Tu discípulo puso la mesa de Ea. Falta el pescado.\n\nTomas la barca y sales al mar.\n\nVivirás tus años de hombre y morirás, como todos. Pero tu nombre no. Muchos siglos después, los reyes de Asiria todavía se jactarán de tener una sabiduría «como la de Adapa».",
+        "en": "They return you to your earth.\n\nYou come down the road of heaven in the new garment, with the oil on your brow. Below, the South Wind blows again, gently, as if asking your forgiveness. Or as if you were asking for its.\n\nIn Eridu, the bakers already have the ovens lit. Your disciple has set Ea’s table. The fish is missing.\n\nYou take the boat and go out to sea.\n\nYou will live out your mortal years and die, like everyone. But your name will not. Many centuries later, the kings of Assyria will still boast of having wisdom “like that of Adapa.”"
+      },
+      "fact": {
+        "es": "Asurbanipal, rey de Asiria en el siglo VII a. C., escribió que había aprendido «el arte del sabio Adapa». Su biblioteca de Nínive conservó copias de este mito.",
+        "en": "Ashurbanipal, king of Assyria in the 7th century BCE, wrote that he had learned “the art of the sage Adapa.” His library at Nineveh preserved copies of this myth."
+      },
+      "ending": {
+        "type": "myth",
+        "title": {
+          "es": "La risa de Anu",
+          "en": "The Laughter of Anu"
+        }
+      },
+      "choices": []
+    }
+  ]
+}
