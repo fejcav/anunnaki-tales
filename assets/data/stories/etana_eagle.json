@@ -1,0 +1,1158 @@
+{
+  "formatVersion": 1,
+  "adventureId": "etana_eagle",
+  "contentVersion": "1.0",
+  "hero": {
+    "name": {
+      "es": "Etana",
+      "en": "Etana"
+    },
+    "description": {
+      "es": "Rey de Kish, la primera ciudad que tuvo rey después del diluvio. Es el pastor de su pueblo, justo y piadoso, pero no tiene un hijo que herede el trono. Cada día le reza a Shamash, el dios del sol.",
+      "en": "King of Kish, the first city to have a king after the Flood. He is the shepherd of his people, just and pious, but he has no son to inherit the throne. Every day he prays to Shamash, the sun god."
+    }
+  },
+  "chapters": [
+    {
+      "number": 1,
+      "title": {
+        "es": "El pastor de Kish",
+        "en": "The Shepherd of Kish"
+      }
+    },
+    {
+      "number": 2,
+      "title": {
+        "es": "La respuesta del sol",
+        "en": "The Sun’s Answer"
+      }
+    },
+    {
+      "number": 3,
+      "title": {
+        "es": "El pozo de la montaña",
+        "en": "The Pit on the Mountain"
+      }
+    },
+    {
+      "number": 4,
+      "title": {
+        "es": "Mes tras mes",
+        "en": "Month after Month"
+      }
+    },
+    {
+      "number": 5,
+      "title": {
+        "es": "Los sueños",
+        "en": "The Dreams"
+      }
+    },
+    {
+      "number": 6,
+      "title": {
+        "es": "La tierra se achica",
+        "en": "The Earth Grows Small"
+      }
+    },
+    {
+      "number": 7,
+      "title": {
+        "es": "Entre el cielo y la tierra",
+        "en": "Between Heaven and Earth"
+      }
+    },
+    {
+      "number": 8,
+      "title": {
+        "es": "La planta del nacimiento",
+        "en": "The Plant of Birth"
+      }
+    }
+  ],
+  "start": "c1_kish",
+  "scenes": [
+    {
+      "id": "c1_kish",
+      "chapter": 1,
+      "mood": "epic",
+      "text": {
+        "es": "Después del diluvio, la realeza bajó del cielo por segunda vez, y bajó a Kish. Los dioses trazaron la ciudad y buscaron un pastor para su gente. Te eligieron a ti.\n\nEres Etana. Le construiste un templo a Adad, el señor de la tormenta. A la sombra de ese templo creció un álamo. Tu pueblo come, tus rebaños engordan, tus enemigos te temen.\n\nPero tu casa está en silencio. Tu esposa no te ha dado un hijo, y sin hijo, el cetro de Kish no tendrá a quién pasar. Cuando mueras, nadie derramará agua en tu tumba ni dirá tu nombre.\n\nCada mañana, cuando Shamash asoma por el horizonte, tú ya lo estás esperando.",
+        "en": "After the Flood, kingship came down from heaven a second time, and it came down to Kish. The gods laid out the city and looked for a shepherd for its people. They chose you.\n\nYou are Etana. You built a temple for Adad, lord of the storm. In the shade of that temple a poplar grew. Your people are fed, your flocks grow fat, your enemies fear you.\n\nBut your house is silent. Your wife has not given you a son, and without a son, there will be no one to pass the scepter of Kish to. When you die, no one will pour water on your grave or speak your name.\n\nEvery morning, when Shamash appears on the horizon, you are already waiting for him."
+      },
+      "fact": {
+        "es": "Según la Lista Real Sumeria, después del diluvio la realeza bajó a Kish. Allí aparece «Etana, el pastor, el que subió al cielo», con un reinado legendario de 1.500 años.",
+        "en": "According to the Sumerian King List, after the Flood kingship came down to Kish. There we find “Etana, the shepherd, who ascended to heaven,” with a legendary reign of 1,500 years."
+      },
+      "choices": [
+        {
+          "to": "c1_ofrenda",
+          "risk": "low",
+          "text": {
+            "es": "Sacrificar otro cordero a Shamash",
+            "en": "Sacrifice another lamb to Shamash"
+          },
+          "description": {
+            "es": "Él ve todo lo que pasa bajo el cielo; tiene que verte a ti.",
+            "en": "He sees everything that happens beneath the sky; he must see you too."
+          }
+        },
+        {
+          "to": "c1_adivinos",
+          "risk": "medium",
+          "text": {
+            "es": "Consultar a los adivinos",
+            "en": "Consult the diviners"
+          },
+          "description": {
+            "es": "Que lean en las entrañas de un cordero lo que los dioses callan.",
+            "en": "Let them read in a lamb’s entrails what the gods will not say."
+          }
+        },
+        {
+          "to": "c1_esposa",
+          "risk": "low",
+          "text": {
+            "es": "Hablar con tu esposa",
+            "en": "Talk to your wife"
+          },
+          "description": {
+            "es": "Ella carga con este silencio tanto como tú.",
+            "en": "She bears this silence as much as you do."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c1_ofrenda",
+      "chapter": 1,
+      "mood": "sacred",
+      "text": {
+        "es": "Llevas un cordero blanco al altar y lo sacrificas con tus propias manos. El humo sube derecho, sin viento.\n\n—Shamash —dices—, has comido lo mejor de mis ovejas. La tierra ha bebido la sangre de mis corderos. He honrado a los dioses y he respetado a los espíritus de los muertos. Los intérpretes de sueños han gastado mi incienso.\n\n»Señor, que salga de tu boca la orden. Dame la planta del nacimiento. Muéstrame dónde crece. Quita mi vergüenza y dame un hijo.\n\nEl sol sigue su camino por el cielo, como todos los días. Pero esta vez sientes que te escucha.",
+        "en": "You bring a white lamb to the altar and sacrifice it with your own hands. The smoke rises straight up; there is no wind.\n\n“Shamash,” you say, “you have eaten the best of my sheep. The earth has drunk the blood of my lambs. I have honored the gods and revered the spirits of the dead. The interpreters of dreams have used up my incense.\n\n“Lord, let the command go forth from your mouth. Give me the plant of birth. Show me where it grows. Remove my shame and give me a son.”\n\nThe sun goes on its way across the sky, as it does every day. But this time you feel that he is listening."
+      },
+      "fact": {
+        "es": "Shamash, llamado Utu en sumerio, era el dios del sol y de la justicia. Sus grandes templos, los dos llamados Ebabbar, «casa resplandeciente», estaban en Sippar y en Larsa.",
+        "en": "Shamash, called Utu in Sumerian, was the god of the sun and of justice. His great temples, both named Ebabbar, “Shining House,” stood in Sippar and in Larsa."
+      },
+      "choices": [
+        {
+          "to": "c2_respuesta",
+          "text": {
+            "es": "Esperar la respuesta del sol",
+            "en": "Wait for the sun’s answer"
+          },
+          "description": {
+            "es": "Shamash ve todo lo que pasa bajo el cielo.",
+            "en": "Shamash sees everything that happens beneath the sky."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c1_adivinos",
+      "chapter": 1,
+      "mood": "mysterious",
+      "text": {
+        "es": "Llamas a los adivinos. Sacrifican un cordero y abren su cuerpo con cuidado. El más viejo saca el hígado y lo sostiene a la luz de las lámparas, girándolo despacio.\n\n—Aquí, en la vesícula —dice—, hay una marca que apunta hacia arriba. Y aquí, en el lóbulo, el dibujo de un ave.\n\n—¿Qué significa?\n\nEl viejo duda. —Que lo que buscas no está en la tierra, majestad. Y que un ave tendrá que ver en esto.\n\nLos otros adivinos se miran. Nadie se atreve a decir más. Esa noche, sin entender del todo, subes al techo del palacio y le rezas a Shamash.",
+        "en": "You summon the diviners. They sacrifice a lamb and open its body with care. The eldest lifts out the liver and holds it up to the lamplight, turning it slowly.\n\n“Here, on the gallbladder,” he says, “there is a mark pointing upward. And here, on the lobe, the shape of a bird.”\n\n“What does it mean?”\n\nThe old man hesitates. “That what you seek is not on earth, Majesty. And that a bird will have a part in it.”\n\nThe other diviners exchange glances. No one dares say more. That night, not fully understanding, you climb to the palace roof and pray to Shamash."
+      },
+      "fact": {
+        "es": "Los adivinos mesopotámicos, llamados baru, leían el futuro en el hígado de los corderos sacrificados. Se conservan modelos de hígado en arcilla con anotaciones, usados para enseñar ese arte.",
+        "en": "Mesopotamian diviners, called baru, read the future in the livers of sacrificed lambs. Inscribed clay models of livers, used to teach the art, have survived."
+      },
+      "choices": [
+        {
+          "to": "c2_respuesta",
+          "text": {
+            "es": "Esperar la respuesta del sol",
+            "en": "Wait for the sun’s answer"
+          },
+          "description": {
+            "es": "Shamash ve todo lo que pasa bajo el cielo.",
+            "en": "Shamash sees everything that happens beneath the sky."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c1_esposa",
+      "chapter": 1,
+      "mood": "peaceful",
+      "text": {
+        "es": "Encuentras a tu esposa en el patio, sentada junto a la fuente. No te mira cuando llegas.\n\n—En el mercado ya no hablan de tus victorias —dice—. Hablan de mí.\n\nTe sientas a su lado. Durante un rato, solo se oye el agua.\n\n—No es tu culpa —le dices—. Si los dioses cerraron una puerta, tiene que haber otra.\n\nElla por fin te mira. —Entonces búscala, Etana. Pero búscala de verdad. Pídeselo a Shamash, que ve todo lo que pasa bajo el cielo. Y no dejes de pedírselo hasta que te conteste.",
+        "en": "You find your wife in the courtyard, sitting beside the fountain. She does not look at you when you arrive.\n\n“In the market they no longer talk about your victories,” she says. “They talk about me.”\n\nYou sit down beside her. For a while, there is only the sound of the water.\n\n“It is not your fault,” you tell her. “If the gods have closed one door, there must be another.”\n\nAt last she looks at you. “Then look for it, Etana. But look for it in earnest. Ask Shamash, who sees everything that happens beneath the sky. And do not stop asking until he answers you.”"
+      },
+      "fact": {
+        "es": "La antigua Kish se identifica con los montículos de Tell al-Uhaymir y Tell Ingharra, en el centro de Irak, al este de Babilonia.",
+        "en": "Ancient Kish is identified with the mounds of Tell al-Uhaymir and Tell Ingharra, in central Iraq, east of Babylon."
+      },
+      "choices": [
+        {
+          "to": "c2_respuesta",
+          "text": {
+            "es": "Esperar la respuesta del sol",
+            "en": "Wait for the sun’s answer"
+          },
+          "description": {
+            "es": "Shamash ve todo lo que pasa bajo el cielo.",
+            "en": "Shamash sees everything that happens beneath the sky."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2_respuesta",
+      "chapter": 2,
+      "mood": "sacred",
+      "text": {
+        "es": "Una mañana, cuando el primer rayo toca el altar, Shamash te habla.\n\n—Etana, toma el camino, cruza la montaña. Busca un pozo y mira lo que hay dentro. Allí han arrojado a un águila. Ella te mostrará la planta del nacimiento.\n\nLa voz se va con la luz, y te quedas de rodillas, con el corazón golpeando.\n\nUn águila. No un dios, no un sabio, no un rey extranjero: un ave tirada en un pozo. No es lo que esperabas. Pero es una respuesta, después de tantos años sin ninguna.",
+        "en": "One morning, as the first ray touches the altar, Shamash speaks to you.\n\n“Etana, go along the road, cross the mountain. Find a pit and look at what is inside it. An eagle has been thrown into it. She will show you the plant of birth.”\n\nThe voice fades with the light, and you stay on your knees, your heart pounding.\n\nAn eagle. Not a god, not a sage, not a foreign king: a bird cast into a pit. It is not what you expected. But it is an answer, after so many years without one."
+      },
+      "fact": {
+        "es": "La leyenda de Etana se conoce por tres versiones: una paleobabilónica, una mesoasiria y otra neoasiria, hallada en Nínive. Ninguna conserva el final del poema.",
+        "en": "The Legend of Etana is known from three versions: an Old Babylonian one, a Middle Assyrian one and a Neo-Assyrian one, found at Nineveh. None preserves the end of the poem."
+      },
+      "choices": [
+        {
+          "to": "c2_partir",
+          "risk": "low",
+          "text": {
+            "es": "Partir de inmediato hacia la montaña",
+            "en": "Set out for the mountain at once"
+          },
+          "description": {
+            "es": "Esperaste demasiado; no vas a esperar un día más.",
+            "en": "You have waited too long; you will not wait another day."
+          }
+        },
+        {
+          "to": "c2_preparar",
+          "risk": "low",
+          "text": {
+            "es": "Preparar provisiones para el camino",
+            "en": "Prepare provisions for the road"
+          },
+          "description": {
+            "es": "Un ave en un pozo necesitará comer tanto como tú.",
+            "en": "A bird in a pit will need food as much as you do."
+          }
+        },
+        {
+          "to": "c2_dudar",
+          "risk": "medium",
+          "text": {
+            "es": "Preguntarle a Shamash por qué un águila",
+            "en": "Ask Shamash why an eagle"
+          },
+          "description": {
+            "es": "Antes de partir, quieres entender qué estás buscando.",
+            "en": "Before you leave, you want to understand what you are looking for."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2_partir",
+      "chapter": 2,
+      "mood": "epic",
+      "text": {
+        "es": "Sales de Kish antes del mediodía, con una escolta pequeña y un solo burro cargado. Al pasar junto al templo de Adad, levantas la vista hacia el álamo.\n\nArriba, en la copa, hay un nido enorme, vacío. Abajo, entre las raíces, la boca de una madriguera, también vacía. Nunca te habías fijado en ellos. Ahora te parece que el árbol guarda una historia.\n\nCaminas varios días. La llanura se vuelve colina, y la colina, montaña. El aire se hace frío. Una tarde, mandas a la escolta a esperar abajo y sigues solo.",
+        "en": "You leave Kish before noon, with a small escort and a single laden donkey. As you pass the temple of Adad, you look up at the poplar.\n\nHigh in its crown is an enormous nest, empty. Below, among the roots, is the mouth of a burrow, empty too. You had never noticed them. Now it seems to you that the tree holds a story.\n\nYou walk for several days. The plain turns into hills, and the hills into mountains. The air grows cold. One afternoon, you send the escort to wait below and go on alone."
+      },
+      "fact": {
+        "es": "En el poema, el álamo crece a la sombra del templo de Adad que construyó Etana. En la copa anida el águila y, entre las raíces, vive la serpiente.",
+        "en": "In the poem, the poplar grows in the shade of the temple of Adad that Etana built. The eagle nests in its crown, and the serpent lives among its roots."
+      },
+      "choices": [
+        {
+          "to": "c3_pozo",
+          "text": {
+            "es": "Cruzar la montaña",
+            "en": "Cross the mountain"
+          },
+          "description": {
+            "es": "Al otro lado está lo que Shamash te prometió.",
+            "en": "On the other side lies what Shamash promised you."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2_preparar",
+      "chapter": 2,
+      "mood": "peaceful",
+      "text": {
+        "es": "No sales enseguida. Mandas a llenar odres de agua y a preparar carne seca, pan y un cordero vivo. Tus consejeros preguntan para qué tanta comida, si el rey va a viajar solo.\n\n—Voy a buscar a alguien que lleva mucho tiempo sin comer —contestas.\n\nSales al amanecer siguiente, con el cordero atado a tu burro. Caminas varios días. La llanura se vuelve colina, y la colina, montaña. El aire se hace frío. Una tarde, mandas a la escolta a esperar abajo y sigues solo, con el cordero balando a tu lado.",
+        "en": "You do not leave at once. You send for waterskins to be filled, and for dried meat, bread and a live lamb. Your counselors ask why so much food is needed if the king is going to travel alone.\n\n“I am going to find someone who has not eaten in a long time,” you answer.\n\nYou set out the next dawn, the lamb tied to your donkey. You walk for several days. The plain turns into hills, and the hills into mountains. The air grows cold. One afternoon, you send the escort to wait below and go on alone, the lamb bleating at your side."
+      },
+      "fact": {
+        "es": "Los reyes mesopotámicos se llamaban a sí mismos «pastores» de su pueblo. La Lista Real Sumeria le da a Etana justamente ese título: «el pastor».",
+        "en": "Mesopotamian kings called themselves the “shepherds” of their people. The Sumerian King List gives Etana exactly that title: “the shepherd.”"
+      },
+      "choices": [
+        {
+          "to": "c3_pozo",
+          "text": {
+            "es": "Cruzar la montaña",
+            "en": "Cross the mountain"
+          },
+          "description": {
+            "es": "Al otro lado está lo que Shamash te prometió.",
+            "en": "On the other side lies what Shamash promised you."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2_dudar",
+      "chapter": 2,
+      "mood": "mysterious",
+      "text": {
+        "es": "—Señor —dices—, ¿por qué un águila?\n\nLa luz se detiene un instante sobre el altar.\n\n—Porque juró por mi nombre y rompió su juramento. La juzgué, y la castigué. Pero el castigo no es lo último que tengo para dar. Tú le darás lo que le falta, y ella te dará lo que te falta a ti.\n\nNo entiendes del todo. Pero entiendes lo suficiente: vas a buscar a un culpable. Y un culpable sabe cosas que un inocente no sabe.\n\nSales de Kish al día siguiente y caminas hasta que la llanura se vuelve montaña.",
+        "en": "“Lord,” you say, “why an eagle?”\n\nThe light lingers for a moment on the altar.\n\n“Because she swore by my name and broke her oath. I judged her, and I punished her. But punishment is not the last thing I have to give. You will give her what she lacks, and she will give you what you lack.”\n\nYou do not fully understand. But you understand enough: you are going to look for a culprit. And a culprit knows things the innocent do not.\n\nYou leave Kish the next day and walk until the plain turns into mountains."
+      },
+      "fact": {
+        "es": "Shamash era también el dios de los juramentos. Los tratados y los contratos mesopotámicos se juraban ante él, y romperlos atraía su castigo.",
+        "en": "Shamash was also the god of oaths. Mesopotamian treaties and contracts were sworn before him, and breaking them brought down his punishment."
+      },
+      "choices": [
+        {
+          "to": "c3_pozo",
+          "text": {
+            "es": "Cruzar la montaña",
+            "en": "Cross the mountain"
+          },
+          "description": {
+            "es": "Al otro lado está lo que Shamash te prometió.",
+            "en": "On the other side lies what Shamash promised you."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3_pozo",
+      "chapter": 3,
+      "mood": "mysterious",
+      "text": {
+        "es": "Encuentras el pozo al atardecer. Te asomas. Abajo, en el fondo, hay un águila enorme, sin plumas en las alas, flaca como un palo. Levanta la cabeza y te mira.\n\n—¿Te manda Shamash? —pregunta.\n\nY te cuenta. Ella y una serpiente vivían en el álamo de Kish. Juraron amistad ante Shamash y cazaban juntas para sus crías. Pero cuando sus pichones crecieron, el águila decidió comerse a las crías de la serpiente. El más pequeño de sus hijos le advirtió que Shamash la castigaría. No le hizo caso. La serpiente lloró ante Shamash, se escondió en el cadáver de un toro salvaje y, cuando el águila bajó a comer, la atrapó, le arrancó las plumas y la tiró aquí.\n\n—Sálvame —dice—, y haré tu nombre famoso para siempre.",
+        "en": "You find the pit at sunset. You lean over the edge. Down at the bottom lies a huge eagle, her wings stripped of feathers, thin as a stick. She raises her head and looks at you.\n\n“Has Shamash sent you?” she asks.\n\nAnd she tells you. She and a serpent lived in the poplar of Kish. They swore friendship before Shamash and hunted together for their young. But when her chicks grew up, the eagle decided to eat the serpent’s young. The smallest of her fledglings warned her that Shamash would punish her. She paid no heed. The serpent wept before Shamash, hid inside the carcass of a wild bull and, when the eagle came down to eat, seized her, plucked out her feathers and threw her in here.\n\n“Save me,” she says, “and I will make your name famous forever.”"
+      },
+      "fact": {
+        "es": "La historia del águila y la serpiente es una de las fábulas de animales más antiguas que se conocen. Está dentro de la leyenda de Etana desde su versión más antigua.",
+        "en": "The tale of the eagle and the serpent is one of the oldest animal fables known. It has been part of the Legend of Etana since its oldest version."
+      },
+      "choices": [
+        {
+          "to": "c3_rescatar",
+          "risk": "low",
+          "text": {
+            "es": "Darle de comer y sacarla del pozo",
+            "en": "Feed her and get her out"
+          },
+          "description": {
+            "es": "Shamash te mandó a buscarla, no a juzgarla.",
+            "en": "Shamash sent you to find her, not to judge her."
+          }
+        },
+        {
+          "to": "c3_serpiente",
+          "risk": "medium",
+          "text": {
+            "es": "Buscar antes a la serpiente",
+            "en": "Seek out the serpent first"
+          },
+          "description": {
+            "es": "Quieres oír la otra mitad de la historia.",
+            "en": "You want to hear the other half of the story."
+          }
+        },
+        {
+          "to": "fin_pozo",
+          "risk": "high",
+          "text": {
+            "es": "Dejarla morir en el pozo",
+            "en": "Leave her to die in the pit"
+          },
+          "description": {
+            "es": "Quien traicionó un juramento puede traicionar otro.",
+            "en": "One who has broken one oath can break another."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3_rescatar",
+      "chapter": 3,
+      "mood": "peaceful",
+      "text": {
+        "es": "Le bajas carne con una soga, y el águila come como si nunca hubiera comido. Le bajas agua en un cuenco. Todavía no puede salir: sin plumas, es un peso muerto, y el pozo es hondo.\n\n—Antes de seguir —le dices—, júrame por Shamash que me mostrarás la planta.\n\nEl águila se queda quieta. Sabe lo que significa jurar por ese nombre.\n\n—Lo juro —dice—. Y esta vez lo voy a cumplir.\n\nArmas tu campamento junto al borde del pozo, al reparo del viento. Esa noche duermes cerca del fuego, oyéndola respirar allá abajo.",
+        "en": "You lower meat to her on a rope, and the eagle eats as if she had never eaten. You lower water in a bowl. She cannot get out yet: without feathers, she is dead weight, and the pit is deep.\n\n“Before we go on,” you tell her, “swear to me by Shamash that you will show me the plant.”\n\nThe eagle goes still. She knows what it means to swear by that name.\n\n“I swear it,” she says. “And this time I will keep my word.”\n\nYou make your camp by the edge of the pit, sheltered from the wind. That night you sleep near the fire, listening to her breathe down below."
+      },
+      "fact": {
+        "es": "Sellos cilíndricos acadios, de hacia el 2300 a. C., muestran a un hombre que sube al cielo sobre un águila. Muchos especialistas creen que representan a Etana.",
+        "en": "Akkadian cylinder seals from around 2300 BCE show a man rising to heaven on an eagle. Many scholars believe they depict Etana."
+      },
+      "choices": [
+        {
+          "to": "c4_meses",
+          "text": {
+            "es": "Cuidar al águila",
+            "en": "Tend the eagle"
+          },
+          "description": {
+            "es": "Sin plumas, no va a salir de ahí.",
+            "en": "Without feathers, she will never get out of there."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3_serpiente",
+      "chapter": 3,
+      "mood": "dangerous",
+      "text": {
+        "es": "Bajas la montaña hasta el álamo de Kish y llamas a la serpiente. Sale de entre las raíces, despacio, y se enrosca frente a ti.\n\n—Me comió a los hijos —dice—. Habíamos jurado ante Shamash. Él me dijo cómo vengarme, y lo hice. Si la sacas del pozo, rey, ten cuidado. Lo que rompió una vez puede romperlo otra vez.\n\n—Shamash me mandó a buscarla.\n\nLa serpiente te mira largo rato. —Entonces Shamash sabrá por qué. Yo ya tuve mi justicia. Haz con ella lo que el sol te diga.\n\nVuelves a subir la montaña, pensando.",
+        "en": "You go down the mountain to the poplar of Kish and call the serpent. It glides out from among the roots, slowly, and coils before you.\n\n“She ate my children,” it says. “We had sworn before Shamash. He told me how to take my revenge, and I did. If you pull her out of the pit, king, be careful. What she broke once she can break again.”\n\n“Shamash sent me to find her.”\n\nThe serpent looks at you for a long time. “Then Shamash will know why. I have had my justice. Do with her what the sun tells you.”\n\nYou climb back up the mountain, deep in thought."
+      },
+      "fact": {
+        "es": "En el poema, Shamash le aconseja a la serpiente que se esconda dentro del cadáver de un toro salvaje para atrapar al águila cuando baje a comer.",
+        "en": "In the poem, Shamash advises the serpent to hide inside the carcass of a wild bull to catch the eagle when she comes down to eat."
+      },
+      "choices": [
+        {
+          "to": "c3_rescatar",
+          "risk": "low",
+          "text": {
+            "es": "Volver al pozo y ayudarla",
+            "en": "Go back to the pit and help her"
+          },
+          "description": {
+            "es": "La serpiente ya tuvo su justicia, y tú tienes un pedido del sol.",
+            "en": "The serpent has had its justice, and you have a charge from the sun."
+          }
+        },
+        {
+          "to": "fin_pozo",
+          "risk": "high",
+          "text": {
+            "es": "Dejar el águila a su suerte",
+            "en": "Leave the eagle to her fate"
+          },
+          "description": {
+            "es": "La serpiente tiene razón: no se puede confiar en ella.",
+            "en": "The serpent is right: she cannot be trusted."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_pozo",
+      "chapter": 3,
+      "mood": "tragic",
+      "text": {
+        "es": "Te das vuelta y te vas. Detrás de ti, el águila grita tu nombre una vez, y después calla.\n\nVuelves a Kish con las manos vacías. Le dices a tu esposa que Shamash te mandó a buscar a un traidor y que no quisiste ensuciarte. Ella no dice nada.\n\nLos años pasan. Le sigues rezando al sol, pero el sol ya te contestó una vez, y no vuelve a hacerlo. Ningún adivino encuentra otra señal.\n\nCuando mueres, los dioses buscan a otro pastor para Kish, de otra familia. Nadie derrama agua en tu tumba. Y en una montaña lejana, en el fondo de un pozo, quedan unos huesos de ave que nadie va a encontrar.",
+        "en": "You turn and walk away. Behind you, the eagle cries your name once, then falls silent.\n\nYou return to Kish empty-handed. You tell your wife that Shamash sent you to find a traitor and that you would not dirty your hands. She says nothing.\n\nThe years go by. You keep praying to the sun, but the sun answered you once already, and it does not answer again. No diviner finds another sign.\n\nWhen you die, the gods look for another shepherd for Kish, from another family. No one pours water on your grave. And on a distant mountain, at the bottom of a pit, lie the bones of a bird that no one will ever find."
+      },
+      "fact": {
+        "es": "En el poema, el más pequeño de los pichones le ruega al águila que no se coma a las crías de la serpiente, porque la red de Shamash la atrapará. El águila no le hace caso.",
+        "en": "In the poem, the smallest of the fledglings begs the eagle not to eat the serpent’s young, because the net of Shamash will catch her. The eagle pays no heed."
+      },
+      "ending": {
+        "type": "tragic",
+        "title": {
+          "es": "Los huesos en el pozo",
+          "en": "The Bones in the Pit"
+        }
+      },
+      "choices": []
+    },
+    {
+      "id": "c4_meses",
+      "chapter": 4,
+      "mood": "peaceful",
+      "text": {
+        "es": "Mes tras mes, alimentas al águila en el fondo del pozo. Le bajas carne, agua, a veces un cordero entero. Las plumas le vuelven, primero cortas y grises, después largas y oscuras. Al séptimo mes la tomas de la mano. Al octavo, la sacas por el borde del pozo.\n\nPronto vuela otra vez, y una mañana sube tan alto que la pierdes de vista. Cuando vuelve, trae algo en la mirada.\n\n—Busqué la planta del nacimiento en todas las montañas —dice—. Busqué en las laderas y en las cumbres. No crece en la tierra, Etana.\n\nTe sientas en una piedra. Tantos meses, tanto esfuerzo.\n\nEl águila se acomoda las plumas, ya enteras. —Pero yo conozco el camino hacia el cielo.",
+        "en": "Month after month, you feed the eagle at the bottom of the pit. You lower meat, water, sometimes a whole lamb. Her feathers grow back, short and gray at first, then long and dark. In the seventh month you take her by the hand. In the eighth, you lift her over the rim of the pit.\n\nSoon she flies again, and one morning she climbs so high that you lose sight of her. When she returns, there is something in her eyes.\n\n“I searched for the plant of birth on every mountain,” she says. “I searched the slopes and the peaks. It does not grow on earth, Etana.”\n\nYou sit down on a stone. So many months, so much effort.\n\nThe eagle smooths her feathers, whole again now. “But I know the way to heaven.”"
+      },
+      "fact": {
+        "es": "La planta del nacimiento, que Etana busca para tener un hijo, recuerda a otra planta famosa: la que Gilgamesh saca del fondo del Apsu para volver joven, y que le roba una serpiente.",
+        "en": "The plant of birth, which Etana seeks in order to have a son, recalls another famous plant: the one Gilgamesh brings up from the depths of the Apsu to become young again, and which a serpent steals from him."
+      },
+      "choices": [
+        {
+          "to": "c4_cielo",
+          "risk": "low",
+          "text": {
+            "es": "Preguntarle dónde crece entonces",
+            "en": "Ask her where it grows, then"
+          },
+          "description": {
+            "es": "Si no está en la tierra, tiene que estar en algún lugar.",
+            "en": "If it is not on earth, it must be somewhere."
+          }
+        },
+        {
+          "to": "c4_cuerda",
+          "risk": "medium",
+          "text": {
+            "es": "Atarle una cuerda a la pata",
+            "en": "Tie a cord to her leg"
+          },
+          "description": {
+            "es": "Ahora que vuela, podría irse y no volver nunca.",
+            "en": "Now that she can fly, she could leave and never come back."
+          }
+        },
+        {
+          "to": "fin_libre",
+          "risk": "medium",
+          "text": {
+            "es": "Dejarla ir sin pedirle nada",
+            "en": "Let her go, asking for nothing"
+          },
+          "description": {
+            "es": "Ya cumpliste con lo que te pidió Shamash: salvarla.",
+            "en": "You have done what Shamash asked of you: you saved her."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c4_cielo",
+      "chapter": 4,
+      "mood": "mysterious",
+      "text": {
+        "es": "—¿Dónde, entonces?\n\nEl águila mira hacia arriba, hacia el azul limpio de la mañana.\n\n—Arriba de las nubes están las casas de los grandes dioses. Primero, el cielo de Anu. Más arriba, la casa de Ishtar, la señora del cielo, que da los hijos y los quita. Si la planta del nacimiento crece en algún lugar, crece en su jardín.\n\n—Ningún hombre ha subido al cielo.\n\n—Ningún hombre ha tenido un águila que le debe la vida —contesta ella.\n\nEsa noche, junto al fuego, no puedes dormir. Cuando por fin cierras los ojos, empiezas a soñar.",
+        "en": "“Where, then?”\n\nThe eagle looks up, into the clear blue of the morning.\n\n“Above the clouds are the houses of the great gods. First, the heaven of Anu. Higher still, the house of Ishtar, the lady of heaven, who gives children and takes them away. If the plant of birth grows anywhere, it grows in her garden.”\n\n“No man has ever gone up to heaven.”\n\n“No man has ever had an eagle that owes him her life,” she answers.\n\nThat night, by the fire, you cannot sleep. When at last you close your eyes, you begin to dream."
+      },
+      "fact": {
+        "es": "Ishtar, la Inanna sumeria, era la diosa del amor, de la guerra y del planeta Venus. En Kish tenía un gran templo, llamado Hursagkalamma.",
+        "en": "Ishtar, the Sumerian Inanna, was the goddess of love, of war and of the planet Venus. In Kish she had a great temple, called Hursagkalamma."
+      },
+      "choices": [
+        {
+          "to": "c5_suenos",
+          "text": {
+            "es": "Dormir junto al águila",
+            "en": "Sleep beside the eagle"
+          },
+          "description": {
+            "es": "Esa noche, los sueños llegan.",
+            "en": "That night, the dreams come."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c4_cuerda",
+      "chapter": 4,
+      "mood": "dangerous",
+      "text": {
+        "es": "Mientras el águila come, le atas una cuerda a la pata. Ella siente el nudo y te mira.\n\n—¿Esto es lo que valgo para ti? ¿Un animal atado?\n\n—Ya rompiste un juramento una vez.\n\nEl águila se queda en silencio. Después agacha la cabeza. —Es justo —dice—. Pero escúchame: la planta no crece en la tierra. Crece arriba, en el jardín de Ishtar. Y para subir, vas a tener que confiar en mí más que en una cuerda.\n\nEsa noche no la desatas. Pero tampoco duermes tranquilo. Cuando por fin cierras los ojos, empiezas a soñar.",
+        "en": "While the eagle eats, you tie a cord to her leg. She feels the knot and looks at you.\n\n“Is this what I am worth to you? An animal on a tether?”\n\n“You have broken an oath before.”\n\nThe eagle is silent. Then she lowers her head. “That is fair,” she says. “But listen to me: the plant does not grow on earth. It grows above, in Ishtar’s garden. And to go up there, you will have to trust me more than a cord.”\n\nThat night you do not untie her. But you do not sleep easy either. When at last you close your eyes, you begin to dream."
+      },
+      "choices": [
+        {
+          "to": "c5_suenos",
+          "text": {
+            "es": "Dormir junto al águila",
+            "en": "Sleep beside the eagle"
+          },
+          "description": {
+            "es": "Esa noche, los sueños llegan.",
+            "en": "That night, the dreams come."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_libre",
+      "chapter": 4,
+      "mood": "peaceful",
+      "text": {
+        "es": "—Vete —le dices—. Shamash me mandó a salvarte, y ya estás salvada.\n\nEl águila te mira, sorprendida. Después abre las alas y se va, más alto que las nubes.\n\nVuelves a Kish sin la planta. Le cuentas todo a tu esposa, y ella, para tu sorpresa, sonríe. —Hiciste algo que ningún rey hace —dice—: diste sin pedir nada.\n\nNo tienen hijos. Pero crían como propio a un huérfano de la ciudad, y cuando mueres, él te llora y derrama agua en tu tumba.\n\nCada primavera, durante muchos años, un águila enorme da tres vueltas sobre los muros de Kish antes de seguir su camino.",
+        "en": "“Go,” you tell her. “Shamash sent me to save you, and you are saved.”\n\nThe eagle looks at you, surprised. Then she spreads her wings and is gone, higher than the clouds.\n\nYou return to Kish without the plant. You tell your wife everything, and she, to your surprise, smiles. “You did something no king does,” she says. “You gave without asking for anything.”\n\nThe two of you have no children. But you raise an orphan of the city as your own, and when you die, he weeps for you and pours water on your grave.\n\nEvery spring, for many years, a huge eagle circles three times over the walls of Kish before going on her way."
+      },
+      "fact": {
+        "es": "Para los mesopotámicos, los muertos dependían de que un hijo o un heredero les llevara agua y comida y dijera su nombre. Por eso no tener descendencia era una desgracia tan temida.",
+        "en": "For the Mesopotamians, the dead depended on a son or an heir to bring them water and food and to speak their name. That is why having no descendants was such a dreaded misfortune."
+      },
+      "ending": {
+        "type": "alternative",
+        "title": {
+          "es": "Tres vueltas sobre Kish",
+          "en": "Three Circles over Kish"
+        }
+      },
+      "choices": []
+    },
+    {
+      "id": "c5_suenos",
+      "chapter": 5,
+      "mood": "mysterious",
+      "text": {
+        "es": "Sueñas que subes con el águila, y que una diosa te pone una planta en las manos. Te despiertas con el corazón acelerado. El águila ya está despierta, sobresaltada.\n\n—Yo también soñé —dice—. Tú y yo pasábamos por la puerta de Anu, de Enlil y de Ea, y nos inclinábamos. Después, por la puerta de Sin, de Shamash, de Adad y de Ishtar. Vi una casa con ventanas sin sellar. Adentro, sentada en un trono, había una joven hermosa. A sus pies había leones, y cuando entré, saltaron hacia mí.\n\nSe sacude las plumas.\n\n—Los dioses nos abren el camino, Etana. Subamos al cielo de Anu.",
+        "en": "You dream that you are rising with the eagle, and that a goddess places a plant in your hands. You wake with your heart racing. The eagle is already awake, startled.\n\n“I dreamed too,” she says. “You and I were passing through the gate of Anu, Enlil and Ea, and we bowed down. Then through the gate of Sin, Shamash, Adad and Ishtar. I saw a house with unsealed windows. Inside, seated on a throne, was a beautiful young woman. Lions lay at her feet, and when I went in, they sprang at me.”\n\nShe shakes out her feathers.\n\n“The gods are opening the way for us, Etana. Let us go up to the heaven of Anu.”"
+      },
+      "fact": {
+        "es": "En el poema, es el águila quien sueña con las puertas del cielo y la joven entre leones. Los mesopotámicos creían que los dioses hablaban en sueños. En la biblioteca de Asurbanipal, en Nínive, se encontraron manuales para interpretarlos.",
+        "en": "In the poem, it is the eagle who dreams of the gates of heaven and the young woman among lions. The Mesopotamians believed the gods spoke in dreams. Manuals for interpreting them were found in Ashurbanipal’s library at Nineveh."
+      },
+      "choices": [
+        {
+          "to": "c5_volar",
+          "risk": "low",
+          "text": {
+            "es": "Aceptar el vuelo",
+            "en": "Agree to the flight"
+          },
+          "description": {
+            "es": "Los dioses hablaron en sueños, y eso es una señal.",
+            "en": "The gods have spoken in dreams, and that is a sign."
+          }
+        },
+        {
+          "to": "c5_esposa",
+          "risk": "low",
+          "text": {
+            "es": "Volver a despedirte de tu esposa",
+            "en": "Go back to bid your wife farewell"
+          },
+          "description": {
+            "es": "Si no vuelves, ella tiene que saber adónde fuiste.",
+            "en": "If you do not return, she must know where you went."
+          }
+        },
+        {
+          "to": "c5_temor",
+          "risk": "medium",
+          "text": {
+            "es": "Pedirle a Shamash otra señal",
+            "en": "Ask Shamash for another sign"
+          },
+          "description": {
+            "es": "Un sueño puede engañar, y la caída es larga.",
+            "en": "A dream can deceive, and the fall is long."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5_volar",
+      "chapter": 5,
+      "mood": "epic",
+      "text": {
+        "es": "—Subamos —dices.\n\nComen juntos por última vez en la montaña. Tú preparas carne para ella, y ella se limpia las plumas una por una, despacio, como un guerrero que afila su espada.\n\nAl amanecer, el águila se acerca a la roca más alta.\n\n—Pon tu pecho contra mi pecho —dice—. Pon tus manos en las plumas de mis alas, y tus brazos a mis costados. No me sueltes, pase lo que pase.\n\nLo haces. Sientes su corazón latir contra el tuyo, rápido como el de un pájaro chico.",
+        "en": "“Let us go up,” you say.\n\nYou eat together one last time on the mountain. You prepare meat for her, and she cleans her feathers one by one, slowly, like a warrior sharpening his sword.\n\nAt dawn, the eagle goes to the highest rock.\n\n“Put your breast against my breast,” she says, “your hands on my wing feathers, your arms on my sides. Do not let go of me, whatever happens.”\n\nYou do. You feel her heart beating against yours, quick as a little bird’s."
+      },
+      "fact": {
+        "es": "En los sellos acadios con la escena de Etana se ve, debajo del águila, a pastores con sus perros y rebaños que miran hacia arriba, asombrados.",
+        "en": "On the Akkadian seals with the Etana scene, shepherds with their dogs and flocks can be seen beneath the eagle, looking up in amazement."
+      },
+      "choices": [
+        {
+          "to": "c6_vuelo",
+          "text": {
+            "es": "Subir al cielo de Anu",
+            "en": "Go up to the heaven of Anu"
+          },
+          "description": {
+            "es": "El águila abre las alas, y tú te aferras.",
+            "en": "The eagle spreads her wings, and you hold on tight."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5_esposa",
+      "chapter": 5,
+      "mood": "peaceful",
+      "text": {
+        "es": "Bajas a Kish montado en tu burro, con el águila volando en círculos sobre ti. La gente sale a las calles a mirar.\n\nTu esposa te espera en la puerta del palacio. Le cuentas todo: el pozo, los meses, el sueño.\n\n—Vas a subir al cielo —dice, despacio, como para creerlo.\n\n—Voy a buscar a nuestro hijo.\n\nElla te abraza, largo. Después le habla al águila, que se posó en el muro. —Tráemelo de vuelta.\n\nEl águila inclina la cabeza. Esa misma tarde, desde la terraza más alta del palacio, se preparan para subir.",
+        "en": "You ride down to Kish on your donkey, the eagle circling above you. People pour into the streets to watch.\n\nYour wife is waiting for you at the palace gate. You tell her everything: the pit, the months, the dream.\n\n“You are going up to heaven,” she says slowly, as if to make herself believe it.\n\n“I am going to find our son.”\n\nShe holds you for a long time. Then she speaks to the eagle, who has perched on the wall. “Bring him back to me.”\n\nThe eagle bows her head. That same afternoon, from the highest terrace of the palace, the two of you make ready to go up."
+      },
+      "fact": {
+        "es": "La Lista Real Sumeria dice de Etana que «consolidó todas las tierras extranjeras». Kish fue durante siglos símbolo del poder real: «rey de Kish» se volvió un título de prestigio.",
+        "en": "The Sumerian King List says that Etana “consolidated all the foreign countries.” For centuries Kish was a symbol of royal power: “king of Kish” became a title of prestige."
+      },
+      "choices": [
+        {
+          "to": "c6_vuelo",
+          "text": {
+            "es": "Subir al cielo de Anu",
+            "en": "Go up to the heaven of Anu"
+          },
+          "description": {
+            "es": "El águila abre las alas, y tú te aferras.",
+            "en": "The eagle spreads her wings, and you hold on tight."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5_temor",
+      "chapter": 5,
+      "mood": "sacred",
+      "text": {
+        "es": "Antes de decidir, sacrificas a Shamash lo último que te queda: el cordero que trajiste de Kish.\n\n—Señor, un sueño puede mentir. Si debo subir, dame otra señal.\n\nEl sol sale detrás de la montaña, y su primera luz cae justo sobre el águila, que abre las alas como para mostrarte cada pluma. Arriba, muy arriba, una estrella todavía brilla en el cielo de la mañana. Es la estrella de Ishtar.\n\nEl águila te mira. —¿Te alcanza?\n\nTe alcanza.",
+        "en": "Before you decide, you sacrifice to Shamash the last thing you have left: the lamb you brought from Kish.\n\n“Lord, a dream can lie. If I must go up, give me another sign.”\n\nThe sun rises behind the mountain, and its first light falls right on the eagle, who spreads her wings as if to show you every feather. Above, far above, a star still shines in the morning sky. It is the star of Ishtar.\n\nThe eagle looks at you. “Is that enough for you?”\n\nIt is enough."
+      },
+      "fact": {
+        "es": "Ishtar era el planeta Venus, el astro más brillante después del Sol y la Luna, visible al amanecer o al atardecer. Los babilonios registraron sus apariciones durante años en tablillas.",
+        "en": "Ishtar was the planet Venus, the brightest object in the sky after the Sun and the Moon, visible at dawn or at dusk. The Babylonians recorded its appearances on tablets for years."
+      },
+      "choices": [
+        {
+          "to": "c6_vuelo",
+          "text": {
+            "es": "Subir al cielo de Anu",
+            "en": "Go up to the heaven of Anu"
+          },
+          "description": {
+            "es": "El águila abre las alas, y tú te aferras.",
+            "en": "The eagle spreads her wings, and you hold on tight."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6_vuelo",
+      "chapter": 6,
+      "mood": "epic",
+      "text": {
+        "es": "El águila salta, y el mundo cae debajo de ti.\n\nCuando han subido una legua, te dice: —Mira, amigo, cómo está la tierra.\n\nMiras. La tierra es un montón de colinas, y el mar, un arroyo.\n\nSuben otra legua. —Mira ahora. —La tierra es un huerto, y el ancho mar, un abrevadero.\n\nSuben otra. —Mira. —Y la tierra ya no se ve, y el mar es una zanja de riego.\n\nLlegan al cielo de Anu. Pasan por la puerta de Anu, de Enlil y de Ea, y se inclinan juntos, el rey y el águila. Todo es como en el sueño.\n\n—Más arriba —dice ella—, está la casa de Ishtar.",
+        "en": "The eagle leaps, and the world falls away beneath you.\n\nWhen you have risen one league, she says: “Look, my friend, at how the land appears.”\n\nYou look. The land is a heap of hills, and the sea, a stream.\n\nYou rise another league. “Look now.” The land is a garden, and the wide sea, a trough.\n\nYou rise another. “Look.” And the land can no longer be seen, and the sea is an irrigation ditch.\n\nYou reach the heaven of Anu. You pass through the gate of Anu, Enlil and Ea, and bow down together, the king and the eagle. Everything is as it was in the dream.\n\n“Higher still,” she says, “is the house of Ishtar.”"
+      },
+      "fact": {
+        "es": "La legua mesopotámica, el beru, equivalía a unos diez kilómetros: la distancia que se recorría a pie en unas dos horas. También se usaba para medir el tiempo.",
+        "en": "The Mesopotamian league, the beru, was about ten kilometers: the distance covered on foot in about two hours. It was also used to measure time."
+      },
+      "choices": [
+        {
+          "to": "c6_seguir",
+          "risk": "low",
+          "text": {
+            "es": "Seguir subiendo hacia Ishtar",
+            "en": "Keep climbing toward Ishtar"
+          },
+          "description": {
+            "es": "El sueño te mostró el camino, y vas por la mitad.",
+            "en": "The dream showed you the way, and you are halfway there."
+          }
+        },
+        {
+          "to": "c6_mirar",
+          "risk": "medium",
+          "text": {
+            "es": "Mirar hacia abajo una vez más",
+            "en": "Look down one more time"
+          },
+          "description": {
+            "es": "Quieres ver qué tan lejos quedó todo.",
+            "en": "You want to see how far away it all is now."
+          }
+        },
+        {
+          "to": "c6_anu",
+          "risk": "medium",
+          "text": {
+            "es": "Pedirle la planta a Anu mismo",
+            "en": "Ask Anu himself for the plant"
+          },
+          "description": {
+            "es": "Si este es el cielo del rey de los dioses, quizás él decida.",
+            "en": "If this is the heaven of the king of the gods, perhaps the choice is his."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6_seguir",
+      "chapter": 6,
+      "mood": "triumphant",
+      "text": {
+        "es": "—Sigamos —dices.\n\nEl águila bate las alas. Pasan junto a la casa de Sin, la luna, que brilla de cerca como plata pulida. Pasan junto a la puerta de Shamash, y la luz te obliga a cerrar los ojos aunque no quieras.\n\nNunca un hombre vio esto. Lo piensas, y el pensamiento te llena el pecho, más fuerte que el miedo. Te ríes, y el viento se lleva tu risa.\n\nEl águila también se ríe, a su manera, con un grito largo.\n\nY siguen subiendo.",
+        "en": "“Let us go on,” you say.\n\nThe eagle beats her wings. You pass the house of Sin, the moon, which shines up close like polished silver. You pass the gate of Shamash, and the light forces your eyes shut against your will.\n\nNo man has ever seen this. You think it, and the thought fills your chest, stronger than fear. You laugh, and the wind carries your laughter away.\n\nThe eagle laughs too, in her own way, with a long cry.\n\nAnd you keep rising."
+      },
+      "choices": [
+        {
+          "to": "c7_vertigo",
+          "text": {
+            "es": "Seguir subiendo",
+            "en": "Keep climbing"
+          },
+          "description": {
+            "es": "Arriba espera la casa de Ishtar.",
+            "en": "Above you, the house of Ishtar is waiting."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6_mirar",
+      "chapter": 6,
+      "mood": "dangerous",
+      "text": {
+        "es": "Miras hacia abajo una vez más.\n\nYa no hay colinas ni huerto. Por un instante, entre las nubes, ves un punto oscuro junto a un agua que brilla, tan chico que podrías taparlo con la uña. Allí está Kish. Allí está tu esposa, tu palacio, el álamo, el pozo. Todo cabe en una uña.\n\nSientes el estómago dar vuelta. Te aprietas contra el pecho del águila.\n\n—No mires tanto —dice ella—. Lo de abajo no se va a mover. Lo de arriba es lo que importa ahora.\n\nY sube.",
+        "en": "You look down once more.\n\nThere are no hills now, no garden. For an instant, between the clouds, you see a dark speck beside a glint of water, so small you could cover it with your fingernail. That is Kish. There are your wife, your palace, the poplar, the pit. All of it fits under a fingernail.\n\nYour stomach turns over. You press yourself against the eagle’s breast.\n\n“Do not look down so much,” she says. “What is below will not move. What is above is what matters now.”\n\nAnd she climbs."
+      },
+      "fact": {
+        "es": "El vuelo de Etana suele citarse como una de las descripciones más antiguas de la Tierra vista desde lo alto. En el poema, la tierra se achica y el mar que la rodea se vuelve un arroyo.",
+        "en": "Etana’s flight is often cited as one of the oldest descriptions of the Earth seen from above. In the poem, the land shrinks and the sea around it becomes a stream."
+      },
+      "choices": [
+        {
+          "to": "c7_vertigo",
+          "text": {
+            "es": "Seguir subiendo",
+            "en": "Keep climbing"
+          },
+          "description": {
+            "es": "Arriba espera la casa de Ishtar.",
+            "en": "Above you, the house of Ishtar is waiting."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6_anu",
+      "chapter": 6,
+      "mood": "sacred",
+      "text": {
+        "es": "—Espera —le dices al águila—. Este es el cielo de Anu, el padre de los dioses. Si alguien decide, es él.\n\nTe arrodillas frente a su puerta. Desde adentro llega una voz tan antigua que parece hecha de piedra.\n\n—Hombre de Kish. Te dimos la realeza, el cetro y el trono. ¿Qué más quieres?\n\n—Un hijo, padre de los dioses. La planta del nacimiento.\n\nAnu calla un rato. —Lo que nace no es asunto mío. Sube a la casa de Ishtar. Si ella te recibe, te recibe. Si no, que tu caída sea corta.\n\nEl águila se estremece. Y sigue subiendo.",
+        "en": "“Wait,” you tell the eagle. “This is the heaven of Anu, the father of the gods. If anyone decides, it is he.”\n\nYou kneel before his gate. From within comes a voice so ancient it seems made of stone.\n\n“Man of Kish. We gave you kingship, the scepter and the throne. What more do you want?”\n\n“A son, father of the gods. The plant of birth.”\n\nAnu is silent for a while. “What is born is no concern of mine. Go up to the house of Ishtar. If she receives you, she receives you. If not, may your fall be short.”\n\nThe eagle shudders. And she keeps climbing."
+      },
+      "fact": {
+        "es": "Un texto babilónico describe tres cielos superpuestos, hechos de piedras distintas. El más alto era el de Anu, el dios del cielo y padre de los grandes dioses.",
+        "en": "A Babylonian text describes three heavens, one above the other, made of different stones. The highest was the heaven of Anu, the sky god and father of the great gods."
+      },
+      "choices": [
+        {
+          "to": "c7_vertigo",
+          "text": {
+            "es": "Seguir subiendo",
+            "en": "Keep climbing"
+          },
+          "description": {
+            "es": "Arriba espera la casa de Ishtar.",
+            "en": "Above you, the house of Ishtar is waiting."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7_vertigo",
+      "chapter": 7,
+      "mood": "dangerous",
+      "text": {
+        "es": "Suben, suben, suben.\n\nMiras hacia abajo y ya no hay tierra. No hay mar. No hay nada: solo el vacío, azul y frío, hasta donde llega la vista. Tus brazos tiemblan sobre las alas. El viento te arranca las lágrimas.\n\n—Amiga —dices, y la voz te sale rota—, no puedo subir al cielo. No puedo.\n\nEl águila sigue batiendo las alas. Arriba, todavía lejos, ves una luz que podría ser una ventana. Abajo, nada. Tus dedos empiezan a resbalar entre las plumas.\n\n—Etana —grita ella—, ¡no me sueltes!",
+        "en": "You rise, and rise, and rise.\n\nYou look down, and there is no land. There is no sea. There is nothing: only the void, blue and cold, as far as the eye can see. Your arms tremble on her wings. The wind whips tears from your eyes.\n\n“My friend,” you say, and your voice breaks, “I cannot go up to heaven. I cannot.”\n\nThe eagle keeps beating her wings. Above, still far away, you see a light that might be a window. Below, nothing. Your fingers begin to slip among the feathers.\n\n“Etana,” she cries, “do not let go of me!”"
+      },
+      "fact": {
+        "es": "En la versión tardía del poema, Etana, aterrado, le pide al águila que lo baje. Caen legua tras legua y el águila lo atrapa una y otra vez. Poco después, el texto se interrumpe.",
+        "en": "In the late version of the poem, Etana, terrified, asks the eagle to take him down. They fall league after league, and the eagle catches him again and again. Soon after, the text breaks off."
+      },
+      "choices": [
+        {
+          "to": "c7_ojos",
+          "risk": "low",
+          "text": {
+            "es": "Cerrar los ojos y aferrarte",
+            "en": "Close your eyes and hold on"
+          },
+          "description": {
+            "es": "Lo que no ves no te puede asustar.",
+            "en": "What you cannot see cannot frighten you."
+          }
+        },
+        {
+          "to": "c7_bajar",
+          "risk": "medium",
+          "text": {
+            "es": "Pedirle que baje",
+            "en": "Ask her to take you down"
+          },
+          "description": {
+            "es": "El miedo es más fuerte que tú, y lo sabes.",
+            "en": "Your fear is stronger than you, and you know it."
+          }
+        },
+        {
+          "to": "fin_caida",
+          "risk": "high",
+          "text": {
+            "es": "Soltar una mano para tocar la luz",
+            "en": "Free one hand to touch the light"
+          },
+          "description": {
+            "es": "Está tan cerca que casi podrías alcanzarla.",
+            "en": "It is so close you could almost reach it."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7_ojos",
+      "chapter": 7,
+      "mood": "triumphant",
+      "text": {
+        "es": "Cierras los ojos. Hundes la cara en las plumas del pecho del águila y la abrazas con todas tus fuerzas.\n\nYa no ves el vacío. Sientes solamente el latido de ella, rápido, firme, y el ritmo de sus alas: arriba, abajo, arriba, abajo. Te pones a contar los aleteos, como un niño que cuenta ovejas para dormirse.\n\nNo sabes cuánto tiempo pasa. En algún momento, el viento se calma. Se hace un silencio tibio. El águila se posa.\n\n—Abre los ojos, rey de Kish —dice—. Llegamos.",
+        "en": "You close your eyes. You bury your face in the feathers of the eagle’s breast and hold her with all your strength.\n\nYou no longer see the void. You feel only her heartbeat, quick and steady, and the rhythm of her wings: up, down, up, down. You start counting the wingbeats, like a child counting sheep to fall asleep.\n\nYou do not know how much time passes. At some point, the wind dies down. A warm silence falls. The eagle lands.\n\n“Open your eyes, king of Kish,” she says. “We have arrived.”"
+      },
+      "choices": [
+        {
+          "to": "c8_ishtar",
+          "text": {
+            "es": "Entrar en la casa de Ishtar",
+            "en": "Enter the house of Ishtar"
+          },
+          "description": {
+            "es": "La puerta está abierta, como en el sueño.",
+            "en": "The door is open, just as in the dream."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7_bajar",
+      "chapter": 7,
+      "mood": "dangerous",
+      "text": {
+        "es": "—¡Baja! ¡Bájame!\n\nEl águila pliega las alas, y caen. A la legua, te suelta, y caes solo. Ella se lanza detrás de ti y te atrapa en el aire.\n\nOtra legua, y otra vez te suelta, y otra vez te atrapa. Y otra más. Ves de nuevo la tierra, que viene hacia ustedes, enorme.\n\nLa última vez te atrapa a tres codos del suelo. Se posan en la cima de una montaña, temblando los dos.\n\nTe quedas tirado sobre las piedras, respirando. Arriba, muy lejos, la luz de la ventana todavía brilla.",
+        "en": "“Go down! Take me down!”\n\nThe eagle folds her wings, and the two of you drop. After a league, she lets go of you, and you fall alone. She dives after you and catches you in midair.\n\nAnother league, and again she lets you go, and again she catches you. And once more. You see the land again, rushing toward you, enormous.\n\nThe last time, she catches you three cubits from the ground. You land on a mountaintop, both of you trembling.\n\nYou lie sprawled on the stones, breathing. Above, far away, the light of the window still shines."
+      },
+      "fact": {
+        "es": "Un fragmento del poema sugiere que el águila y Etana caen varias leguas seguidas. Cómo termina la caída, y si suben de nuevo, es uno de los grandes misterios de la literatura mesopotámica.",
+        "en": "A fragment of the poem suggests that the eagle and Etana fall several leagues in a row. How the fall ends, and whether they rise again, is one of the great mysteries of Mesopotamian literature."
+      },
+      "choices": [
+        {
+          "to": "c7_intentar",
+          "risk": "low",
+          "text": {
+            "es": "Intentarlo de nuevo, más despacio",
+            "en": "Try again, more slowly"
+          },
+          "description": {
+            "es": "Ya sabes lo que se siente; no te va a tomar por sorpresa.",
+            "en": "Now you know how it feels; it will not take you by surprise."
+          }
+        },
+        {
+          "to": "fin_tierra",
+          "risk": "medium",
+          "text": {
+            "es": "Volver a Kish con lo que viste",
+            "en": "Return to Kish with what you saw"
+          },
+          "description": {
+            "es": "Ningún hombre subió tan alto, y eso ya es bastante.",
+            "en": "No man has ever risen so high, and that is enough."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7_intentar",
+      "chapter": 7,
+      "mood": "epic",
+      "text": {
+        "es": "Comes, duermes, rezas. Al día siguiente, te subes de nuevo al pecho del águila.\n\n—Esta vez no mires hacia abajo —dice ella—. Mira hacia arriba. Mira solo la ventana.\n\nSuben. Pasan las colinas, el huerto, la zanja de riego. Pasan la puerta de Anu sin detenerse. Cuando el vacío empieza, tú no lo ves: tienes los ojos clavados en la luz de arriba, que crece y crece.\n\nYa no tiemblas. O tiemblas, pero no importa.\n\nEl águila se posa en un umbral de lapislázuli. La ventana es una puerta, y está abierta.",
+        "en": "You eat, you sleep, you pray. The next day, you climb onto the eagle’s breast again.\n\n“This time do not look down,” she says. “Look up. Look only at the window.”\n\nYou rise. You pass the hills, the garden, the irrigation ditch. You pass the gate of Anu without stopping. When the void begins, you do not see it: your eyes are fixed on the light above, which grows and grows.\n\nYou no longer tremble. Or you tremble, but it does not matter.\n\nThe eagle lands on a threshold of lapis lazuli. The window is a door, and it is open."
+      },
+      "choices": [
+        {
+          "to": "c8_ishtar",
+          "text": {
+            "es": "Entrar en la casa de Ishtar",
+            "en": "Enter the house of Ishtar"
+          },
+          "description": {
+            "es": "La puerta está abierta, como en el sueño.",
+            "en": "The door is open, just as in the dream."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_caida",
+      "chapter": 7,
+      "mood": "tragic",
+      "text": {
+        "es": "Sueltas una mano y la estiras hacia la luz. Tus dedos casi la tocan.\n\nEl viento te arranca de las plumas.\n\nCaes. El águila se lanza detrás de ti, pliega las alas, grita tu nombre. Te alcanza una vez, y se le escapa tu brazo. Te alcanza otra, y se le escapa tu manto. La tierra crece debajo de ti, hasta que ya no es una zanja, ni un huerto, ni un montón de colinas.\n\nEn Kish, ese día, unos pastores ven caer algo del cielo, muy lejos, detrás de la montaña. Durante siglos contarán que el rey Etana subió al cielo. Nadie contará cómo bajó.",
+        "en": "You let go with one hand and stretch it toward the light. Your fingers almost touch it.\n\nThe wind tears you from her feathers.\n\nYou fall. The eagle dives after you, folds her wings, cries your name. She reaches you once, and your arm slips from her grasp. She reaches you again, and your cloak slips away. The land grows beneath you, until it is no longer a ditch, nor a garden, nor a heap of hills.\n\nIn Kish, that day, some shepherds see something fall from the sky, far away, behind the mountain. For centuries, people will tell how King Etana went up to heaven. No one will tell how he came down."
+      },
+      "fact": {
+        "es": "En la Epopeya de Gilgamesh, Enkidu sueña con la casa de los muertos y ve allí a Etana. Para los babilonios, el rey que subió al cielo también terminó en el inframundo.",
+        "en": "In the Epic of Gilgamesh, Enkidu dreams of the house of the dead and sees Etana there. For the Babylonians, the king who went up to heaven also ended up in the underworld."
+      },
+      "ending": {
+        "type": "tragic",
+        "title": {
+          "es": "Lo que cayó detrás de la montaña",
+          "en": "What Fell Behind the Mountain"
+        }
+      },
+      "choices": []
+    },
+    {
+      "id": "fin_tierra",
+      "chapter": 7,
+      "mood": "peaceful",
+      "text": {
+        "es": "—Volvamos a Kish —dices.\n\nEl águila no discute. Te lleva despacio, bajando en círculos, y te deja en la terraza del palacio al atardecer. Media ciudad está abajo, mirando.\n\nNo traes la planta. Pero traes otra cosa. Les cuentas a todos que la tierra es un huerto y el mar, una zanja de riego. Que viste la puerta de Anu. Que Kish cabe en una uña.\n\nNo tienes hijo. Tu sobrino hereda el cetro. Pero los grabadores de sellos de toda la llanura empiezan a tallar a un hombre montado en un águila, y tu nombre viaja con ellos, en arcilla, de ciudad en ciudad.",
+        "en": "“Let us go back to Kish,” you say.\n\nThe eagle does not argue. She carries you down slowly, in circles, and sets you on the palace terrace at sunset. Half the city is below, watching.\n\nYou bring back no plant. But you bring back something else. You tell everyone that the land is a garden and the sea an irrigation ditch. That you saw the gate of Anu. That Kish fits under a fingernail.\n\nYou have no son. Your nephew inherits the scepter. But the seal cutters all across the plain begin to carve a man riding an eagle, and your name travels with them, in clay, from city to city."
+      },
+      "fact": {
+        "es": "La imagen de Etana sobre el águila se grabó en sellos cilíndricos que se usaban para firmar documentos. Así, la historia viajaba impresa en arcilla de una ciudad a otra.",
+        "en": "The image of Etana on the eagle was carved on cylinder seals used to sign documents. In this way, the story traveled, impressed in clay, from one city to another."
+      },
+      "ending": {
+        "type": "alternative",
+        "title": {
+          "es": "El que vio la tierra desde arriba",
+          "en": "He Who Saw the Earth from Above"
+        }
+      },
+      "choices": []
+    },
+    {
+      "id": "c8_ishtar",
+      "chapter": 8,
+      "mood": "sacred",
+      "text": {
+        "es": "La casa de Ishtar es como la del sueño del águila. Hay una ventana sin sellar, y detrás, una joven sentada en un trono. A sus pies descansan unos leones, que levantan las cabezas cuando entras.\n\nDetrás del trono hay un jardín. Entre todas las plantas, una brilla con una luz propia, suave, como la de la mañana.\n\nLa señora del cielo te mira.\n\n—Un hombre en mi casa —dice—. Hace mucho que no pasaba. ¿Qué viniste a buscar, rey de Kish?\n\nLos leones esperan. El águila, a tu lado, no se mueve.",
+        "en": "Ishtar’s house is like the one in the eagle’s dream. There is an unsealed window, and behind it, a young woman seated on a throne. At her feet rest lions, which raise their heads as you enter.\n\nBehind the throne is a garden. Among all the plants, one shines with a light of its own, soft, like the light of morning.\n\nThe lady of heaven looks at you.\n\n“A man in my house,” she says. “It has been a long time. What have you come for, king of Kish?”\n\nThe lions wait. The eagle, at your side, does not move."
+      },
+      "fact": {
+        "es": "Ishtar solía representarse con leones, su animal sagrado. Los leones de ladrillo vidriado de la Vía Procesional de Babilonia, junto a la Puerta de Ishtar, son el ejemplo más famoso.",
+        "en": "Ishtar was often depicted with lions, her sacred animal. The glazed-brick lions of the Processional Way in Babylon, beside the Ishtar Gate, are the most famous example."
+      },
+      "choices": [
+        {
+          "to": "c8_pedir",
+          "risk": "low",
+          "text": {
+            "es": "Pedirle la planta con humildad",
+            "en": "Ask humbly for the plant"
+          },
+          "description": {
+            "es": "Viniste a pedir, no a exigir.",
+            "en": "You came to ask, not to demand."
+          }
+        },
+        {
+          "to": "c8_ofrecer",
+          "risk": "medium",
+          "text": {
+            "es": "Ofrecerle tu corona a cambio",
+            "en": "Offer her your crown in exchange"
+          },
+          "description": {
+            "es": "Lo más valioso que tienes por lo que más deseas.",
+            "en": "The most precious thing you have for what you most desire."
+          }
+        },
+        {
+          "to": "fin_ladron",
+          "risk": "high",
+          "text": {
+            "es": "Arrancar la planta y huir",
+            "en": "Snatch the plant and run"
+          },
+          "description": {
+            "es": "Está ahí mismo, y los leones parecen dormidos.",
+            "en": "It is right there, and the lions seem to be asleep."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c8_pedir",
+      "chapter": 8,
+      "mood": "sacred",
+      "text": {
+        "es": "Te arrodillas.\n\n—Señora, tengo una ciudad, un pueblo y un trono. Me falta un hijo que los herede. He sacrificado al sol cada mañana. He sacado a un águila de un pozo y la he cuidado mes tras mes. He subido hasta aquí aunque me temblaban los brazos. No tengo más que dar. Solo puedo pedir.\n\nIshtar se ríe, pero no de ti.\n\n—Eso es lo que nadie entiende. Los que suben aquí siempre quieren tomar. —Se levanta, va al jardín y arranca la planta que brilla—. Toma, Etana. Y vuelve rápido, antes de que se marchite.",
+        "en": "You kneel.\n\n“Lady, I have a city, a people and a throne. I lack a son to inherit them. I have sacrificed to the sun every morning. I have pulled an eagle out of a pit and cared for her month after month. I have climbed all the way here though my arms were shaking. I have nothing more to give. I can only ask.”\n\nIshtar laughs, but not at you.\n\n“That is what no one understands. Those who come up here always want to take.” She rises, goes into the garden and picks the shining plant. “Take it, Etana. And go back quickly, before it withers.”"
+      },
+      "choices": [
+        {
+          "to": "fin_balih",
+          "text": {
+            "es": "Volver a Kish con la planta",
+            "en": "Return to Kish with the plant"
+          },
+          "description": {
+            "es": "El águila ya abre las alas.",
+            "en": "The eagle is already spreading her wings."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c8_ofrecer",
+      "chapter": 8,
+      "mood": "mysterious",
+      "text": {
+        "es": "Te quitas la corona y la pones a los pies de la diosa, entre los leones.\n\n—Te doy mi corona, señora, a cambio de la planta.\n\nIshtar mira la corona y se ríe. —¿Y para qué la quiero? Yo doy las coronas. Yo las quito. —Te la devuelve con un gesto, y la corona vuelve a tu cabeza sola—. Pero me gusta que la hayas ofrecido. Un rey que se saca la corona por un hijo será un buen padre.\n\nVa al jardín, arranca la planta que brilla y te la pone en las manos.\n\n—Vuelve rápido, antes de que se marchite.",
+        "en": "You take off your crown and lay it at the goddess’s feet, among the lions.\n\n“I give you my crown, lady, in exchange for the plant.”\n\nIshtar looks at the crown and laughs. “And what would I want it for? I give crowns. I take them away.” With a gesture she gives it back, and the crown returns to your head by itself. “But I like that you offered it. A king who takes off his crown for a son will be a good father.”\n\nShe goes into the garden, picks the shining plant and places it in your hands.\n\n“Go back quickly, before it withers.”"
+      },
+      "choices": [
+        {
+          "to": "fin_balih",
+          "text": {
+            "es": "Volver a Kish con la planta",
+            "en": "Return to Kish with the plant"
+          },
+          "description": {
+            "es": "El águila ya abre las alas.",
+            "en": "The eagle is already spreading her wings."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_ladron",
+      "chapter": 8,
+      "mood": "tragic",
+      "text": {
+        "es": "Saltas hacia el jardín y arrancas la planta de raíz.\n\nLos leones no estaban dormidos.\n\nEl primero te derriba antes de que llegues a la ventana. El segundo se lleva la planta entre los dientes y la deja a los pies de su señora. El águila grita y se lanza sobre ellos, pero es solo un ave, y ellos son los leones de Ishtar.\n\n—Viniste como ladrón —dice la diosa, sin levantarse del trono—, y como ladrón vas a caer.\n\nTe arroja por la ventana. Caes, caes, caes. Abajo, en Kish, nadie te ve pasar. Esa noche, en el cielo, la estrella de Ishtar brilla más que nunca.",
+        "en": "You leap toward the garden and tear the plant out by the roots.\n\nThe lions were not asleep.\n\nThe first one brings you down before you reach the window. The second carries the plant off in its teeth and lays it at its lady’s feet. The eagle screams and hurls herself at them, but she is only a bird, and they are the lions of Ishtar.\n\n“You came as a thief,” says the goddess, without rising from her throne, “and as a thief you will fall.”\n\nShe hurls you out of the window. You fall, and fall, and fall. Below, in Kish, no one sees you pass. That night, in the sky, the star of Ishtar shines brighter than ever."
+      },
+      "fact": {
+        "es": "En los mitos mesopotámicos, Ishtar castiga con dureza a quien la ofende. En la Epopeya de Gilgamesh, cuando el héroe la rechaza, ella pide a Anu el Toro del Cielo para destruirlo.",
+        "en": "In Mesopotamian myths, Ishtar harshly punishes anyone who offends her. In the Epic of Gilgamesh, when the hero rejects her, she asks Anu for the Bull of Heaven to destroy him."
+      },
+      "ending": {
+        "type": "tragic",
+        "title": {
+          "es": "El ladrón del cielo",
+          "en": "The Thief of Heaven"
+        }
+      },
+      "choices": []
+    },
+    {
+      "id": "fin_balih",
+      "chapter": 8,
+      "mood": "triumphant",
+      "text": {
+        "es": "El águila te baja del cielo en círculos lentos, como una hoja que cae sin prisa. Te deja en la terraza del palacio con la planta entre las manos, todavía brillando.\n\nTu esposa la come esa misma noche. Antes de que se cumpla el año, en el palacio de Kish se oye el llanto de un niño.\n\nLo llaman Balih. Crece fuerte y justo, y cuando mueres, él derrama agua en tu tumba y dice tu nombre. Después se sienta en tu trono, y la realeza de Kish sigue su camino.\n\nEl águila vive en el álamo del templo de Adad. Nunca más rompe un juramento. Y cada vez que un rey de Kish la mira volar, recuerda que hubo uno que subió hasta el cielo, y volvió.",
+        "en": "The eagle carries you down from heaven in slow circles, like a leaf falling without haste. She sets you on the palace terrace with the plant in your hands, still shining.\n\nYour wife eats it that very night. Before the year is out, the cry of a child is heard in the palace of Kish.\n\nThey name him Balih. He grows up strong and just, and when you die, he pours water on your grave and speaks your name. Then he sits on your throne, and the kingship of Kish goes on its way.\n\nThe eagle lives in the poplar by the temple of Adad. Never again does she break an oath. And whenever a king of Kish watches her fly, he remembers that there was once a king who went up to heaven, and came back."
+      },
+      "fact": {
+        "es": "El final del poema se perdió. Pero la Lista Real Sumeria nombra a Balih como hijo y sucesor de Etana en el trono de Kish, lo que sugiere que el rey consiguió su heredero.",
+        "en": "The end of the poem is lost. But the Sumerian King List names Balih as Etana’s son and successor on the throne of Kish, which suggests that the king got his heir."
+      },
+      "ending": {
+        "type": "myth",
+        "title": {
+          "es": "El hijo de Kish",
+          "en": "The Son of Kish"
+        }
+      },
+      "choices": []
+    }
+  ]
+}
