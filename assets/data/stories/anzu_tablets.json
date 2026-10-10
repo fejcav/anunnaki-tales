@@ -1,0 +1,1078 @@
+{
+  "formatVersion": 1,
+  "adventureId": "anzu_tablets",
+  "contentVersion": "1.0",
+  "hero": {
+    "name": {
+      "es": "Ninurta",
+      "en": "Ninurta"
+    },
+    "description": {
+      "es": "Hijo de Enlil y de la diosa madre, guerrero de los dioses y señor del arado. Tu maza, Sharur, habla y vuela. Todavía nadie te ha visto pelear contra algo que no pueda vencerse con fuerza.",
+      "en": "Son of Enlil and of the mother goddess, warrior of the gods and lord of the plow. Your mace, Sharur, speaks and flies. No one has yet seen you fight anything that strength cannot beat."
+    }
+  },
+  "chapters": [
+    {
+      "number": 1,
+      "title": {
+        "es": "El robo",
+        "en": "The Theft"
+      }
+    },
+    {
+      "number": 2,
+      "title": {
+        "es": "Los que se negaron",
+        "en": "Those Who Refused"
+      }
+    },
+    {
+      "number": 3,
+      "title": {
+        "es": "La voz de la madre",
+        "en": "The Mother’s Voice"
+      }
+    },
+    {
+      "number": 4,
+      "title": {
+        "es": "La montaña de Anzu",
+        "en": "Anzu’s Mountain"
+      }
+    },
+    {
+      "number": 5,
+      "title": {
+        "es": "Las flechas que volvieron",
+        "en": "The Arrows That Turned Back"
+      }
+    },
+    {
+      "number": 6,
+      "title": {
+        "es": "El consejo de Ea",
+        "en": "The Counsel of Ea"
+      }
+    },
+    {
+      "number": 7,
+      "title": {
+        "es": "Ala con ala",
+        "en": "Wing to Wing"
+      }
+    },
+    {
+      "number": 8,
+      "title": {
+        "es": "La tablilla en la mano",
+        "en": "The Tablet in Hand"
+      }
+    }
+  ],
+  "start": "c1_asamblea",
+  "scenes": [
+    {
+      "id": "c1_asamblea",
+      "chapter": 1,
+      "mood": "dangerous",
+      "text": {
+        "es": "En Nippur, en el Ekur, la casa de tu padre Enlil, había un guardián en la puerta del santuario: Anzu, el pájaro enorme con cabeza de león, nacido en las montañas. Enlil le dio ese lugar. Tú nunca confiaste en él.\n\nEsta mañana, mientras tu padre se bañaba en agua pura y dejaba su corona sobre el trono, Anzu miró la Tablilla de los Destinos. La tomó con las garras. Y voló.\n\nAhora el Ekur está en silencio. Los ritos se detuvieron. Nadie sabe qué decir, porque la tablilla que decide el destino de todas las cosas está en una montaña lejana, entre las garras de un ladrón.\n\nEres Ninurta, hijo de Enlil.",
+        "en": "In Nippur, in the Ekur, the house of your father Enlil, there was a guardian at the door of the sanctuary: Anzu, the huge lion-headed bird, born in the mountains. Enlil gave him that place. You never trusted him.\n\nThis morning, while your father bathed in pure water and left his crown on the throne, Anzu looked at the Tablet of Destinies. He seized it in his talons. And he flew.\n\nNow the Ekur is silent. The rites have stopped. No one knows what to say, because the tablet that decides the destiny of all things is on a distant mountain, in the talons of a thief.\n\nYou are Ninurta, son of Enlil."
+      },
+      "fact": {
+        "es": "El poema de Anzu se conoce por una versión paleobabilónica, cuyo héroe es Ningirsu, y por una versión estándar en tres tablillas, conservada en copias asirias del primer milenio a. C., cuyo héroe es Ninurta.",
+        "en": "The Anzu poem is known from an Old Babylonian version, whose hero is Ningirsu, and from a standard version in three tablets, preserved in Assyrian copies of the first millennium BCE, whose hero is Ninurta."
+      },
+      "choices": [
+        {
+          "to": "c1_enlil",
+          "risk": "low",
+          "text": {
+            "es": "Ir a ver a tu padre",
+            "en": "Go to your father"
+          },
+          "description": {
+            "es": "Enlil perdió lo más importante que tenía.",
+            "en": "Enlil has lost the most precious thing he had."
+          }
+        },
+        {
+          "to": "c1_puerta",
+          "risk": "low",
+          "text": {
+            "es": "Revisar la puerta del santuario",
+            "en": "Check the sanctuary door"
+          },
+          "description": {
+            "es": "Quieres ver con tus ojos lo que pasó.",
+            "en": "You want to see with your own eyes what happened."
+          }
+        },
+        {
+          "to": "c1_cielo",
+          "risk": "medium",
+          "text": {
+            "es": "Salir a buscar a Anzu en el cielo",
+            "en": "Search the sky for Anzu"
+          },
+          "description": {
+            "es": "Quizás todavía se ve su sombra.",
+            "en": "Perhaps his shadow is still in sight."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c1_enlil",
+      "chapter": 1,
+      "mood": "sacred",
+      "text": {
+        "es": "Encuentras a tu padre sentado en el borde del baño, todavía mojado, con la corona en las manos. No la ha vuelto a poner.\n\n—Yo lo puse en la puerta —dice, sin mirarte—. Yo le di el lugar. Lo vi crecer en las montañas y pensé que su fuerza me protegería.\n\n—¿Qué dice la tablilla, padre? ¿Qué puede hacer con ella?\n\nEnlil levanta la vista. Por primera vez en tu vida, ves miedo en los ojos del señor de los vientos.\n\n—Todo. Quien tiene la tablilla decide lo que será. Anzu puede decir «muere», y morirás.",
+        "en": "You find your father sitting on the edge of the bath, still wet, the crown in his hands. He has not put it back on.\n\n“I put him at the door,” he says, without looking at you. “I gave him that place. I watched him grow in the mountains and thought his strength would protect me.”\n\n“What does the tablet say, Father? What can he do with it?”\n\nEnlil looks up. For the first time in your life, you see fear in the eyes of the lord of the winds.\n\n“Anything. Whoever holds the tablet decides what will be. Anzu can say ‘die,’ and you will die.”"
+      },
+      "fact": {
+        "es": "El Ekur, «la casa montaña», era el gran templo de Enlil en Nippur, el centro religioso de Sumer. Allí se reconocía la autoridad de los reyes de toda la llanura.",
+        "en": "The Ekur, “the Mountain House,” was the great temple of Enlil at Nippur, the religious center of Sumer. There the kings of the whole plain had their authority recognized."
+      },
+      "choices": [
+        {
+          "to": "c2_anu",
+          "text": {
+            "es": "Ir a la asamblea de los dioses",
+            "en": "Go to the assembly of the gods"
+          },
+          "description": {
+            "es": "Anu ya los está llamando.",
+            "en": "Anu is already calling them."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c1_puerta",
+      "chapter": 1,
+      "mood": "mysterious",
+      "text": {
+        "es": "Vas hasta la puerta del santuario. En el umbral hay plumas: enormes, oscuras, con brillo de bronce. En el suelo de piedra, las marcas de unas garras.\n\nEl trono de Enlil está vacío. La corona ya no está; la tiene tu padre. Pero lo que falta es otra cosa: el lugar sobre el trono donde descansaba la tablilla, pequeña, de arcilla, con los destinos de todas las cosas escritos en ella.\n\nRecoges una pluma. Todavía está tibia.\n\nAfuera, los dioses empiezan a reunirse.",
+        "en": "You go to the door of the sanctuary. On the threshold there are feathers: enormous, dark, with a gleam of bronze. On the stone floor, the marks of talons.\n\nEnlil’s throne is empty. The crown is gone; your father has it. But something else is missing: the place above the throne where the tablet used to rest, small, made of clay, with the destinies of all things written on it.\n\nYou pick up a feather. It is still warm.\n\nOutside, the gods are beginning to gather."
+      },
+      "fact": {
+        "es": "En el poema, Anzu aprovecha que Enlil se lava con agua pura y deja la corona sobre el trono. En ese momento toma la Tablilla de los Destinos y huye a su montaña.",
+        "en": "In the poem, Anzu seizes the moment when Enlil washes in pure water and leaves his crown on the throne. That is when he takes the Tablet of Destinies and flies off to his mountain."
+      },
+      "choices": [
+        {
+          "to": "c2_anu",
+          "text": {
+            "es": "Ir a la asamblea de los dioses",
+            "en": "Go to the assembly of the gods"
+          },
+          "description": {
+            "es": "Anu ya los está llamando.",
+            "en": "Anu is already calling them."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c1_cielo",
+      "chapter": 1,
+      "mood": "epic",
+      "text": {
+        "es": "Sales del Ekur y subes al techo más alto. Miras hacia las montañas del este.\n\nAllá lejos, contra el cielo, ves una sombra que se achica. Las alas son tan grandes que, al batirlas, levantan polvo en los campos de abajo. El viento que dejan tumba los juncos.\n\nPodrías seguirlo. Pero cuando das el primer paso, una voz te llama desde el patio. Es un mensajero de Anu: los dioses se reúnen, y tu padre te necesita ahí.\n\nLa sombra desaparece detrás de las montañas.",
+        "en": "You leave the Ekur and climb to the highest roof. You look toward the mountains of the east.\n\nFar away, against the sky, you see a shadow growing smaller. The wings are so vast that every beat raises dust from the fields below. The wind they leave behind flattens the reeds.\n\nYou could follow him. But as you take the first step, a voice calls you from the courtyard. It is a messenger from Anu: the gods are gathering, and your father needs you there.\n\nThe shadow disappears behind the mountains."
+      },
+      "fact": {
+        "es": "Anzu se representaba como un águila con cabeza de león. Un gran relieve de cobre del templo de Tell al-Ubaid, hoy en el Museo Británico, lo muestra con las garras sobre dos ciervos.",
+        "en": "Anzu was depicted as a lion-headed eagle. A large copper relief from the temple at Tell al-Ubaid, now in the British Museum, shows him with his talons on two stags."
+      },
+      "choices": [
+        {
+          "to": "c2_anu",
+          "text": {
+            "es": "Ir a la asamblea de los dioses",
+            "en": "Go to the assembly of the gods"
+          },
+          "description": {
+            "es": "Anu ya los está llamando.",
+            "en": "Anu is already calling them."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2_anu",
+      "chapter": 2,
+      "mood": "dangerous",
+      "text": {
+        "es": "Anu, el padre de los dioses, habla ante la asamblea:\n\n—¿Quién de ustedes matará a Anzu? El que lo haga tendrá el nombre más grande entre los dioses.\n\nLlama a Adad, el señor de la tormenta. Adad baja la vista: «Anzu tiene la tablilla. Al que maldice, lo convierte en arcilla». Llama a Girra, el fuego. Dice lo mismo. Llama a Shara, el hijo de Ishtar. Dice lo mismo.\n\nNadie se mueve. Los dioses más fuertes del cielo se miran los pies.\n\nSientes que todos los ojos, sin decirlo, empiezan a buscarte.",
+        "en": "Anu, the father of the gods, speaks before the assembly:\n\n“Which of you will kill Anzu? Whoever does will have the greatest name among the gods.”\n\nHe calls on Adad, lord of the storm. Adad lowers his eyes: “Anzu has the tablet. Whoever he curses, he turns to clay.” He calls on Girra, the fire. He says the same. He calls on Shara, son of Ishtar. He says the same.\n\nNo one moves. The strongest gods of heaven stare at their feet.\n\nYou feel every eye in the room, without a word spoken, begin to search for you."
+      },
+      "fact": {
+        "es": "En el poema, Anu les ofrece la gloria a Adad, a Girra y a Shara, y los tres se niegan: temen que Anzu los maldiga con la tablilla y los convierta en arcilla.",
+        "en": "In the poem, Anu offers the glory to Adad, to Girra and to Shara, and all three refuse: they fear that Anzu will curse them with the tablet and turn them to clay."
+      },
+      "choices": [
+        {
+          "to": "c2_ofrecer",
+          "risk": "medium",
+          "text": {
+            "es": "Dar un paso al frente",
+            "en": "Step forward"
+          },
+          "description": {
+            "es": "Si nadie va, iré yo.",
+            "en": "If no one else goes, you will."
+          }
+        },
+        {
+          "to": "c2_callar",
+          "risk": "low",
+          "text": {
+            "es": "Esperar a ver qué dice Ea",
+            "en": "Wait to hear what Ea says"
+          },
+          "description": {
+            "es": "Una pelea contra la tablilla no se gana con valor.",
+            "en": "A fight against the tablet is not won with courage."
+          }
+        },
+        {
+          "to": "fin_caos",
+          "risk": "high",
+          "text": {
+            "es": "Salir de la asamblea",
+            "en": "Leave the assembly"
+          },
+          "description": {
+            "es": "Si los más fuertes no van, tú tampoco.",
+            "en": "If the strongest will not go, neither will you."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2_ofrecer",
+      "chapter": 2,
+      "mood": "epic",
+      "text": {
+        "es": "—Iré yo —dices.\n\nLos dioses se dan vuelta. Enlil te mira con los ojos de un padre que no quiere oír eso.\n\n—Eres joven —dice Anu—. Y tienes fuerza, eso todos lo saben. Pero Anzu no se vence con fuerza.\n\nAntes de que puedas contestar, Ea se levanta. Es el más sabio de los dioses, y cuando se levanta, todos callan.\n\n—Tiene razón el muchacho en ir —dice—. Pero no tiene que ir solo. Hay alguien que debería mandarlo.",
+        "en": "“I will go,” you say.\n\nThe gods turn to look. Enlil watches you with the eyes of a father who does not want to hear it.\n\n“You are young,” says Anu. “And you are strong, everyone knows that. But Anzu cannot be beaten by strength.”\n\nBefore you can answer, Ea rises. He is the wisest of the gods, and when he rises, everyone falls silent.\n\n“The boy is right to go,” he says. “But he must not go alone. There is someone who ought to send him.”"
+      },
+      "fact": {
+        "es": "Ninurta era hijo de Enlil y dios de la guerra y de la agricultura. Su templo en Nippur se llamaba Eshumesha.",
+        "en": "Ninurta was the son of Enlil and the god of war and of agriculture. His temple at Nippur was called the Eshumesha."
+      },
+      "choices": [
+        {
+          "to": "c3_madre",
+          "text": {
+            "es": "Escuchar lo que propone Ea",
+            "en": "Listen to what Ea proposes"
+          },
+          "description": {
+            "es": "El sabio siempre encuentra otra puerta.",
+            "en": "The wise one always finds another door."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2_callar",
+      "chapter": 2,
+      "mood": "mysterious",
+      "text": {
+        "es": "No dices nada. Miras a Ea, el más sabio de los dioses, que tampoco ha hablado.\n\nEa tiene los ojos entrecerrados, como quien hace cuentas. Después mira a Enlil. Después a ti.\n\nSe levanta.\n\n—Ninguno de ustedes va a vencer a Anzu con fuerza —dice—. Pero hay alguien que puede mandar a un guerrero que todavía no conoce el miedo. Llamen a la madre de los dioses.",
+        "en": "You say nothing. You look at Ea, the wisest of the gods, who has not spoken either.\n\nEa’s eyes are half closed, like a man doing sums in his head. Then he looks at Enlil. Then at you.\n\nHe rises.\n\n“None of you will beat Anzu with strength,” he says. “But there is someone who can send a warrior who does not yet know fear. Call the mother of the gods.”"
+      },
+      "fact": {
+        "es": "La Tablilla de los Destinos aparece también en el Enuma Elish: Tiamat se la da a Kingu, su campeón, y Marduk se la quita al vencerlo.",
+        "en": "The Tablet of Destinies also appears in the Enuma Elish: Tiamat gives it to Kingu, her champion, and Marduk takes it from him when he defeats him."
+      },
+      "choices": [
+        {
+          "to": "c3_madre",
+          "text": {
+            "es": "Escuchar lo que propone Ea",
+            "en": "Listen to what Ea proposes"
+          },
+          "description": {
+            "es": "El sabio siempre encuentra otra puerta.",
+            "en": "The wise one always finds another door."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_caos",
+      "chapter": 2,
+      "mood": "tragic",
+      "text": {
+        "es": "Te levantas y sales de la asamblea. Nadie te detiene.\n\nPasan los días. Nadie va a la montaña. En el Ekur, los ritos siguen detenidos. Los sacerdotes no saben qué destino escribir para los reyes, ni para las cosechas, ni para los muertos.\n\nY Anzu, en su montaña, empieza a usar la tablilla. Dice «lluvia», y llueve sin parar. Dice «sequía», y los ríos se secan. Dice «que los dioses se arrodillen», y algunos lo hacen.\n\nUn día te llega su voz desde la montaña, tranquila, divertida: «Ninurta, hijo de Enlil. Ven aquí». Y tus pies empiezan a caminar.",
+        "en": "You rise and leave the assembly. No one stops you.\n\nThe days pass. No one goes to the mountain. In the Ekur, the rites are still at a standstill. The priests do not know what destiny to write for the kings, or for the harvests, or for the dead.\n\nAnd Anzu, on his mountain, begins to use the tablet. He says “rain,” and it rains without end. He says “drought,” and the rivers run dry. He says “let the gods kneel,” and some of them do.\n\nOne day his voice reaches you from the mountain, calm, amused: “Ninurta, son of Enlil. Come here.” And your feet begin to walk."
+      },
+      "fact": {
+        "es": "En el poema, cuando Anzu se lleva la tablilla, los ritos de los dioses se interrumpen y el silencio se extiende por todas partes.",
+        "en": "In the poem, when Anzu carries off the tablet, the rites of the gods come to a halt and silence spreads everywhere."
+      },
+      "ending": {
+        "type": "tragic",
+        "title": {
+          "es": "El mundo sin destinos",
+          "en": "The World Without Destinies"
+        }
+      },
+      "choices": []
+    },
+    {
+      "id": "c3_madre",
+      "chapter": 3,
+      "mood": "sacred",
+      "text": {
+        "es": "Llaman a Belet-ili, la hermana de los dioses, tu madre. Llega a la asamblea y la escucha en silencio. Después se vuelve hacia ti.\n\n—Hijo, Anzu le quitó la realeza a tu padre. Ve. Arma la batalla. Lleva contigo a los siete vientos malos, que levantan polvo y oscurecen el día. Que tus armas brillen como el rayo. Manda una niebla para que no reconozca tu rostro, y córtale el cuello al malvado Anzu. Que los vientos lleven sus plumas como buena noticia.\n\n»Y cuando vuelvas, que tu nombre sea el más grande en el Ekur.\n\nTe arrodillas ante ella. Por primera vez sientes el peso de lo que te piden.",
+        "en": "They call Belet-ili, sister of the gods, your mother. She comes to the assembly and listens in silence. Then she turns to you.\n\n“Son, Anzu has taken the kingship from your father. Go. Set the battle in array. Take with you the seven evil winds, which raise dust and darken the day. Let your weapons flash like lightning. Send a mist so that he cannot know your face, and slit the throat of the wicked Anzu. Let the winds carry his feathers as good news.\n\n“And when you return, may your name be the greatest in the Ekur.”\n\nYou kneel before her. For the first time, you feel the weight of what they are asking of you."
+      },
+      "fact": {
+        "es": "En la versión estándar, Ea propone llamar a Belet-ili, la «hermana de los dioses», para que mande a su hijo Ninurta contra Anzu. Desde entonces la llaman Mami, «Señora de todos los dioses».",
+        "en": "In the standard version, Ea proposes calling Belet-ili, the “sister of the gods,” to send her son Ninurta against Anzu. From then on she is called Mami, “Lady of All the Gods.”"
+      },
+      "choices": [
+        {
+          "to": "c3_vientos",
+          "risk": "low",
+          "text": {
+            "es": "Llamar a los siete vientos",
+            "en": "Summon the seven winds"
+          },
+          "description": {
+            "es": "Como dijo tu madre.",
+            "en": "As your mother said."
+          }
+        },
+        {
+          "to": "c3_armas",
+          "risk": "low",
+          "text": {
+            "es": "Preparar tus armas y a Sharur",
+            "en": "Prepare your weapons and Sharur"
+          },
+          "description": {
+            "es": "Tu maza nunca te ha fallado.",
+            "en": "Your mace has never failed you."
+          }
+        },
+        {
+          "to": "c3_solo",
+          "risk": "medium",
+          "text": {
+            "es": "Partir enseguida, sin preparar nada",
+            "en": "Set out at once, unprepared"
+          },
+          "description": {
+            "es": "Cada día que pasa, Anzu aprende a usar la tablilla.",
+            "en": "Every day that passes, Anzu learns to use the tablet."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3_vientos",
+      "chapter": 3,
+      "mood": "epic",
+      "text": {
+        "es": "Te paras en la orilla del mundo y llamas a los vientos.\n\nVienen de los cuatro rincones: el viento que arranca árboles, el que trae arena, el que trae granizo, el que no se ve pero quema la garganta. Siete en total, enroscados como perros alrededor de tus piernas.\n\n—Iremos a la montaña de Anzu —les dices—. Levanten tanto polvo que no pueda ver ni sus propias garras.\n\nLos vientos aúllan, contentos. Les gusta pelear.",
+        "en": "You stand at the edge of the world and call the winds.\n\nThey come from the four corners: the wind that uproots trees, the wind that brings sand, the wind that brings hail, the wind that cannot be seen but burns the throat. Seven in all, curled like dogs around your legs.\n\n“We are going to Anzu’s mountain,” you tell them. “Raise so much dust that he cannot see his own talons.”\n\nThe winds howl, delighted. They like a fight."
+      },
+      "fact": {
+        "es": "En el poema, Ninurta sale a la batalla con siete vientos malos y levanta un remolino de polvo que oscurece todo, como le aconsejó su madre.",
+        "en": "In the poem, Ninurta goes into battle with the seven evil winds and raises a whirlwind of dust that darkens everything, as his mother advised him."
+      },
+      "choices": [
+        {
+          "to": "c4_montana",
+          "text": {
+            "es": "Partir hacia la montaña",
+            "en": "Set out for the mountain"
+          },
+          "description": {
+            "es": "Anzu está allí, con la tablilla.",
+            "en": "Anzu is there, with the tablet."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3_armas",
+      "chapter": 3,
+      "mood": "peaceful",
+      "text": {
+        "es": "Bajas al arsenal del Ekur y preparas tus armas una por una. El arco. Las flechas, con punta de bronce. Y Sharur.\n\nSharur es tu maza, pero no es solo una maza. Tiene voz y tiene alas. Cuando la levantas, despierta.\n\n—¿Adónde vamos, señor? —pregunta.\n\n—A la montaña de Anzu.\n\nSharur se queda callada un momento. —Entonces vamos a necesitar más que fuerza —dice—. Si hace falta, yo puedo volar más rápido que cualquier mensajero.",
+        "en": "You go down to the armory of the Ekur and ready your weapons one by one. The bow. The arrows, tipped with bronze. And Sharur.\n\nSharur is your mace, but it is not only a mace. It has a voice and it has wings. When you lift it, it wakes.\n\n“Where are we going, my lord?” it asks.\n\n“To Anzu’s mountain.”\n\nSharur is quiet for a moment. “Then we are going to need more than strength,” it says. “If need be, I can fly faster than any messenger.”"
+      },
+      "fact": {
+        "es": "Sharur, la maza de Ninurta, era un arma con voluntad propia: en el poema sumerio Lugal-e habla con su señor, le lleva noticias y le da consejos.",
+        "en": "Sharur, Ninurta’s mace, was a weapon with a will of its own: in the Sumerian poem Lugal-e it talks with its master, brings him news and gives him advice."
+      },
+      "choices": [
+        {
+          "to": "c4_montana",
+          "text": {
+            "es": "Partir hacia la montaña",
+            "en": "Set out for the mountain"
+          },
+          "description": {
+            "es": "Anzu está allí, con la tablilla.",
+            "en": "Anzu is there, with the tablet."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3_solo",
+      "chapter": 3,
+      "mood": "dangerous",
+      "text": {
+        "es": "No esperas. Tomas el arco y sales por la puerta del Ekur antes de que tu madre termine de hablar.\n\nCorres hacia el este, hacia las montañas. Los campos pasan bajo tus pies. Los ríos.\n\nA mitad de camino, algo zumba a tu lado. Es Sharur, tu maza, que te alcanzó volando.\n\n—Señor, se olvidó de mí —dice—. Y se olvidó de los vientos. Su madre los mandó detrás de usted.\n\nTe das vuelta. En el horizonte, una nube de polvo avanza hacia ti. Los siete vientos vienen corriendo.",
+        "en": "You do not wait. You take the bow and walk out the door of the Ekur before your mother has finished speaking.\n\nYou run east, toward the mountains. The fields pass beneath your feet. The rivers.\n\nHalfway there, something buzzes at your side. It is Sharur, your mace, which has flown after you and caught up.\n\n“My lord, you forgot me,” it says. “And you forgot the winds. Your mother sent them after you.”\n\nYou turn around. On the horizon, a cloud of dust is coming toward you. The seven winds are running to catch up."
+      },
+      "fact": {
+        "es": "En otro poema, Lugal-e, Ninurta vence al demonio Asag en las montañas. Después ordena las piedras: bendice a las que lo ayudaron y maldice a las que pelearon a favor de su enemigo.",
+        "en": "In another poem, Lugal-e, Ninurta defeats the demon Asag in the mountains. Afterward he passes judgment on the stones: he blesses those that helped him and curses those that fought for his enemy."
+      },
+      "choices": [
+        {
+          "to": "c4_montana",
+          "text": {
+            "es": "Partir hacia la montaña",
+            "en": "Set out for the mountain"
+          },
+          "description": {
+            "es": "Anzu está allí, con la tablilla.",
+            "en": "Anzu is there, with the tablet."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c4_montana",
+      "chapter": 4,
+      "mood": "dangerous",
+      "text": {
+        "es": "La montaña de Anzu se levanta sola en medio de la nada, negra, escarpada. En la cima, el ave te espera.\n\nEs más grande de lo que recordabas. Sus alas abiertas tapan el sol. Tiene la tablilla bajo una garra, y la arcilla brilla con una luz que no es del día.\n\nCuando te ve, tiembla de furia y enseña los dientes como un león.\n\n—¿Quién eres tú, que vienes a pelear conmigo? Yo tengo los destinos de todos los dioses. Yo decido lo que será.",
+        "en": "Anzu’s mountain rises alone in the middle of nowhere, black and sheer. On the summit, the bird is waiting for you.\n\nHe is bigger than you remembered. His open wings blot out the sun. He has the tablet under one talon, and the clay glows with a light that is not daylight.\n\nWhen he sees you, he shakes with fury and bares his teeth like a lion.\n\n“Who are you, that you come to fight me? I hold the destinies of all the gods. I decide what will be.”"
+      },
+      "fact": {
+        "es": "En «Lugalbanda y el pájaro Anzud», un poema sumerio, el ave es poderosa pero benévola: el héroe alimenta a su cría y le adorna el nido, y el ave, agradecida, le da el don de correr sin cansarse.",
+        "en": "In “Lugalbanda and the Anzud Bird,” a Sumerian poem, the bird is powerful but kindly: the hero feeds its chick and adorns its nest, and the grateful bird grants him the gift of running without tiring."
+      },
+      "choices": [
+        {
+          "to": "c4_desafio",
+          "risk": "medium",
+          "text": {
+            "es": "Decirle tu nombre y desafiarlo",
+            "en": "Give your name and defy him"
+          },
+          "description": {
+            "es": "Que sepa quién viene a buscar la tablilla.",
+            "en": "Let him know who has come for the tablet."
+          }
+        },
+        {
+          "to": "c4_pedir",
+          "risk": "low",
+          "text": {
+            "es": "Pedirle que devuelva la tablilla",
+            "en": "Ask him to return the tablet"
+          },
+          "description": {
+            "es": "Si la devuelve, nadie tiene que morir.",
+            "en": "If he gives it back, no one has to die."
+          }
+        },
+        {
+          "to": "c4_nube",
+          "risk": "medium",
+          "text": {
+            "es": "Esconderte en la nube de polvo",
+            "en": "Hide in the cloud of dust"
+          },
+          "description": {
+            "es": "Mejor que no sepa dónde estás.",
+            "en": "Better that he not know where you are."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c4_desafio",
+      "chapter": 4,
+      "mood": "epic",
+      "text": {
+        "es": "—Soy Ninurta, hijo de Enlil. Vengo por lo que robaste.\n\nAnzu se ríe. Su risa hace temblar la montaña.\n\n—El hijo de Enlil. Tu padre me dio la puerta, y yo me llevé la casa. ¿Qué crees que vas a hacer con tu arquito, muchacho?\n\nNo contestas. Tensas el arco.\n\nDetrás de ti, los siete vientos se levantan, y el día se vuelve oscuro.",
+        "en": "“I am Ninurta, son of Enlil. I have come for what you stole.”\n\nAnzu laughs. His laughter makes the mountain shake.\n\n“The son of Enlil. Your father gave me the door, and I took the house. What do you think you are going to do with that little bow, boy?”\n\nYou do not answer. You draw the bow.\n\nBehind you, the seven winds rise, and the day turns dark."
+      },
+      "fact": {
+        "es": "El nombre del ave se leía antes «Zu», porque se creía que el signo AN solo indicaba que era un dios. Hoy se lee Anzu en acadio y Anzud en sumerio.",
+        "en": "The bird’s name used to be read “Zu,” because the sign AN was thought to be only the marker for a god. Today it is read Anzu in Akkadian and Anzud in Sumerian."
+      },
+      "choices": [
+        {
+          "to": "c5_flechas",
+          "text": {
+            "es": "Empezar la batalla",
+            "en": "Begin the battle"
+          },
+          "description": {
+            "es": "Ya no hay más palabras que decir.",
+            "en": "There is nothing more to say."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c4_pedir",
+      "chapter": 4,
+      "mood": "peaceful",
+      "text": {
+        "es": "—Devuelve la tablilla —dices—. Vuelve a tu puerta. Nadie tiene que morir.\n\nAnzu inclina la cabeza, como un pájaro que mira un gusano.\n\n—¿Volver a cuidar la puerta de otro? Ahora soy yo el que decide quién vive y quién muere. ¿Y tú me pides que vuelva a ser un portero?\n\nAbre las alas.\n\n—No, hijo de Enlil. Si quieres la tablilla, ven a buscarla.\n\nSuspiras. Lo intentaste. Tensas el arco, y detrás de ti los siete vientos se levantan.",
+        "en": "“Give back the tablet,” you say. “Go back to your door. No one has to die.”\n\nAnzu tilts his head, like a bird eyeing a worm.\n\n“Go back to guarding another god’s door? Now I am the one who decides who lives and who dies. And you ask me to be a doorkeeper again?”\n\nHe opens his wings.\n\n“No, son of Enlil. If you want the tablet, come and get it.”\n\nYou sigh. You tried. You draw the bow, and behind you the seven winds rise."
+      },
+      "fact": {
+        "es": "En el poema, Anzu planea su robo pensando: «Me llevaré la Tablilla de los Destinos de los dioses, tendré todas sus órdenes, poseeré el trono y seré señor de los ritos. ¡Gobernaré a todos los Igigi!».",
+        "en": "In the poem, Anzu plans his theft, thinking: “I will take the gods’ Tablet of Destinies, I will gather all their commands, I will possess the throne and be master of the rites. I will rule all the Igigi!”"
+      },
+      "choices": [
+        {
+          "to": "c5_flechas",
+          "text": {
+            "es": "Empezar la batalla",
+            "en": "Begin the battle"
+          },
+          "description": {
+            "es": "Ya no hay más palabras que decir.",
+            "en": "There is nothing more to say."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c4_nube",
+      "chapter": 4,
+      "mood": "mysterious",
+      "text": {
+        "es": "Te metes en la nube de polvo que levantan los vientos. Desde afuera, debe parecer que la tormenta misma subió a la montaña.\n\nAnzu entrecierra los ojos.\n\n—Te escondes —dice—. Bien. Eso quiere decir que me tienes miedo. Pero la tablilla ve lo que mis ojos no ven.\n\nPone la garra sobre la arcilla, y el polvo a tu alrededor se aquieta de golpe. Quedas a la vista, solo, en la ladera.\n\nNo hay más que hacer. Tensas el arco.",
+        "en": "You slip into the cloud of dust the winds are raising. From outside, it must look as if the storm itself has climbed the mountain.\n\nAnzu narrows his eyes.\n\n“You hide,” he says. “Good. That means you are afraid of me. But the tablet sees what my eyes do not.”\n\nHe sets his talon on the clay, and the dust around you settles all at once. You are left in plain sight, alone, on the slope.\n\nThere is nothing else for it. You draw the bow."
+      },
+      "fact": {
+        "es": "En la Estela de los Buitres, del rey Eannatum de Lagash, el dios Ningirsu sostiene una red llena de enemigos. Sobre ella aparece Anzu, el águila con cabeza de león, emblema del dios.",
+        "en": "On the Stele of the Vultures, set up by King Eannatum of Lagash, the god Ningirsu holds a net full of enemies. Above it appears Anzu, the lion-headed eagle, the god’s emblem."
+      },
+      "choices": [
+        {
+          "to": "c5_flechas",
+          "text": {
+            "es": "Empezar la batalla",
+            "en": "Begin the battle"
+          },
+          "description": {
+            "es": "Ya no hay más palabras que decir.",
+            "en": "There is nothing more to say."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5_flechas",
+      "chapter": 5,
+      "mood": "dangerous",
+      "text": {
+        "es": "Disparas. La flecha vuela derecho al pecho de Anzu.\n\nY Anzu, con la garra sobre la tablilla, le habla:\n\n—Caña que vienes hacia mí, vuelve a tu cañaveral. Arco, vuelve a tu bosque. Cuerda, vuelve a las tripas del carnero. Plumas, vuelvan a los pájaros.\n\nLa flecha se deshace en el aire. La caña cae hacia el río, las plumas se dispersan, la punta se hunde en la tierra. No llega a tocarlo.\n\nDisparas otra. Lo mismo. Y otra. Ninguna llega.\n\nAnzu se ríe.",
+        "en": "You shoot. The arrow flies straight at Anzu’s chest.\n\nAnd Anzu, with his talon on the tablet, speaks to it:\n\n“Shaft that comes at me, return to your reed bed. Bow, return to your forest. Bowstring, return to the ram’s gut. Feathers, return to the birds.”\n\nThe arrow comes apart in midair. The reed falls toward the river, the feathers scatter, the point sinks into the earth. It never touches him.\n\nYou shoot another. The same. And another. None of them reaches him.\n\nAnzu laughs."
+      },
+      "fact": {
+        "es": "En el poema, Anzu deshace cada flecha con su palabra mientras sostiene la tablilla: manda a la caña volver al cañaveral, al arco a su bosque, a la cuerda a las tripas del carnero y a las plumas a los pájaros.",
+        "en": "In the poem, Anzu undoes each arrow with his word while he holds the tablet: he orders the shaft back to its reed bed, the bow to its forest, the bowstring to the ram’s gut and the feathers to the birds."
+      },
+      "choices": [
+        {
+          "to": "c5_sharur",
+          "risk": "low",
+          "text": {
+            "es": "Mandar a Sharur a pedirle consejo a Ea",
+            "en": "Send Sharur to ask Ea for counsel"
+          },
+          "description": {
+            "es": "Él sabe cosas que tus flechas no.",
+            "en": "He knows things your arrows do not."
+          }
+        },
+        {
+          "to": "c5_otra",
+          "risk": "medium",
+          "text": {
+            "es": "Seguir disparando",
+            "en": "Keep shooting"
+          },
+          "description": {
+            "es": "Tarde o temprano se le van a acabar las palabras.",
+            "en": "Sooner or later he will run out of words."
+          }
+        },
+        {
+          "to": "fin_arcilla",
+          "risk": "high",
+          "text": {
+            "es": "Subir a golpearlo con las manos",
+            "en": "Climb up and beat him with your fists"
+          },
+          "description": {
+            "es": "Contra tus puños no hay conjuro.",
+            "en": "There is no spell against your fists."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5_otra",
+      "chapter": 5,
+      "mood": "dangerous",
+      "text": {
+        "es": "Disparas una y otra vez, hasta que te sangran los dedos. El cielo se llena de plumas que vuelven a los pájaros y de cañas que vuelven al río.\n\nAnzu ni siquiera se mueve. Repite las mismas palabras, aburrido.\n\nBajas el arco. Respiras.\n\n—Sharur —dices—, ve a ver a Ea. Dile lo que pasa. Pregúntale qué hago.\n\nLa maza sale volando hacia el sur, hacia las aguas dulces del Apsu.",
+        "en": "You shoot again and again, until your fingers bleed. The sky fills with feathers returning to the birds and reeds returning to the river.\n\nAnzu does not even move. He repeats the same words, bored.\n\nYou lower the bow. You breathe.\n\n“Sharur,” you say, “go to Ea. Tell him what is happening. Ask him what I should do.”\n\nThe mace flies off to the south, toward the fresh waters of the Apsu."
+      },
+      "fact": {
+        "es": "El poema está escrito en acadio, la lengua semítica de Babilonia y Asiria, aunque sus dioses y sus lugares vienen sobre todo de la tradición sumeria.",
+        "en": "The poem is written in Akkadian, the Semitic language of Babylonia and Assyria, although its gods and its places come mostly from the Sumerian tradition."
+      },
+      "choices": [
+        {
+          "to": "c6_ea",
+          "text": {
+            "es": "Esperar el regreso de Sharur",
+            "en": "Wait for Sharur to return"
+          },
+          "description": {
+            "es": "Ea siempre contesta.",
+            "en": "Ea always answers."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5_sharur",
+      "chapter": 5,
+      "mood": "mysterious",
+      "text": {
+        "es": "—Sharur —dices, sin dejar de mirar a Anzu—, ve a ver a Ea. Dile que mis flechas no lo tocan. Pregúntale qué hago.\n\nLa maza sale volando hacia el sur, hacia las aguas dulces del Apsu.\n\nTe quedas solo en la ladera, con los siete vientos a tu alrededor. Anzu te mira desde la cima.\n\n—¿Mandas a pedir ayuda, hijo de Enlil? —dice—. Hasta tu maza sabe que no puedes ganar.\n\nNo contestas. Esperas.",
+        "en": "“Sharur,” you say, without taking your eyes off Anzu, “go to Ea. Tell him my arrows cannot touch him. Ask him what I should do.”\n\nThe mace flies off to the south, toward the fresh waters of the Apsu.\n\nYou are left alone on the slope, with the seven winds around you. Anzu watches you from the summit.\n\n“Sending for help, son of Enlil?” he says. “Even your mace knows you cannot win.”\n\nYou do not answer. You wait."
+      },
+      "fact": {
+        "es": "En el poema, Ninurta manda a Sharur a pedirle consejo a Ea, el dios de la sabiduría, cuando ve que sus flechas no sirven contra el poder de la tablilla.",
+        "en": "In the poem, Ninurta sends Sharur to ask Ea, the god of wisdom, for counsel when he sees that his arrows are useless against the power of the tablet."
+      },
+      "choices": [
+        {
+          "to": "c6_ea",
+          "text": {
+            "es": "Esperar el regreso de Sharur",
+            "en": "Wait for Sharur to return"
+          },
+          "description": {
+            "es": "Ea siempre contesta.",
+            "en": "Ea always answers."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_arcilla",
+      "chapter": 5,
+      "mood": "tragic",
+      "text": {
+        "es": "Tiras el arco y subes la ladera corriendo, con los puños cerrados.\n\nAnzu te espera sin moverse. Cuando estás a un paso, pone la garra sobre la tablilla.\n\n—Ninurta, hijo de Enlil —dice, despacio—, sé arcilla.\n\nSientes que los dedos se te endurecen. Después las manos. Después los brazos, el pecho, la cara. Tratas de gritar, y la boca ya no se abre.\n\nTe quedas ahí, en la ladera de la montaña, con el puño levantado. Durante siglos, los pastores que pasan por esa montaña ven una estatua de barro con forma de guerrero, y no saben quién fue.",
+        "en": "You throw down the bow and run up the slope, fists clenched.\n\nAnzu waits for you without moving. When you are one step away, he sets his talon on the tablet.\n\n“Ninurta, son of Enlil,” he says slowly, “be clay.”\n\nYou feel your fingers stiffen. Then your hands. Then your arms, your chest, your face. You try to scream, and your mouth will no longer open.\n\nYou stay there, on the mountainside, with your fist raised. For centuries, the shepherds who pass that mountain see a clay statue in the shape of a warrior, and do not know who he was."
+      },
+      "fact": {
+        "es": "En el poema, los dioses temen ir contra Anzu porque, con la tablilla en sus manos, puede maldecir a cualquiera y convertirlo en arcilla.",
+        "en": "In the poem, the gods are afraid to go against Anzu because, with the tablet in his hands, he can curse anyone and turn them to clay."
+      },
+      "ending": {
+        "type": "tragic",
+        "title": {
+          "es": "El guerrero de barro",
+          "en": "The Warrior of Clay"
+        }
+      },
+      "choices": []
+    },
+    {
+      "id": "c6_ea",
+      "chapter": 6,
+      "mood": "sacred",
+      "text": {
+        "es": "Sharur vuelve al atardecer, cansada, con las alas mojadas de agua dulce.\n\n—Ea dice esto, señor: no sigas peleando de frente. Cánsalo. Que vuele, que grite, que use la tablilla una y otra vez. Cuando se canse y le caigan las alas, toma una vara arrojadiza que siga a tus flechas y córtale las plumas de las alas, a derecha y a izquierda.\n\n»Cuando vea caer sus plumas, gritará: «¡Ala con ala!», para llamarlas de vuelta. En ese momento, cuando abra la boca y se olvide de la tablilla, dispárale al corazón.\n\nMiras hacia la cima. Anzu se acomoda las plumas, tranquilo.",
+        "en": "Sharur returns at dusk, weary, its wings wet with fresh water.\n\n“Ea says this, my lord: stop fighting him head on. Wear him out. Let him fly, let him shriek, let him use the tablet again and again. When he tires and his wings droop, take a throw-stick to follow your arrows and cut the feathers from his wings, right and left.\n\n“When he sees his feathers fall, he will cry out ‘Wing to wing!’ to call them back. At that moment, when he opens his mouth and forgets the tablet, shoot him through the heart.”\n\nYou look toward the summit. Anzu is settling his feathers, unconcerned."
+      },
+      "fact": {
+        "es": "En el poema, Ea aconseja cansar a Anzu hasta que se le caigan las alas, cortarle las plumas y, cuando el ave grite «¡Ala con ala!» para recuperarlas, dispararle una flecha.",
+        "en": "In the poem, Ea advises wearing Anzu down until his wings droop, cutting off his feathers and, when the bird cries “Wing to wing!” to get them back, shooting him with an arrow."
+      },
+      "choices": [
+        {
+          "to": "c6_seguir",
+          "risk": "low",
+          "text": {
+            "es": "Hacer lo que dice Ea",
+            "en": "Do as Ea says"
+          },
+          "description": {
+            "es": "Él nunca se equivoca en estas cosas.",
+            "en": "He is never wrong about these things."
+          }
+        },
+        {
+          "to": "c6_dudar",
+          "risk": "medium",
+          "text": {
+            "es": "Pedirle a Sharur que lo repita",
+            "en": "Ask Sharur to repeat it"
+          },
+          "description": {
+            "es": "Una sola equivocación y eres arcilla.",
+            "en": "One mistake and you are clay."
+          }
+        },
+        {
+          "to": "c6_hablar",
+          "risk": "medium",
+          "text": {
+            "es": "Intentar hablar con Anzu primero",
+            "en": "Try talking to Anzu first"
+          },
+          "description": {
+            "es": "Quizás está tan cansado como tú.",
+            "en": "Perhaps he is as tired as you are."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6_seguir",
+      "chapter": 6,
+      "mood": "epic",
+      "text": {
+        "es": "Levantas a Sharur.\n\n—Vientos —dices—, que no descanse.\n\nLos siete vientos suben la montaña aullando. Anzu abre las alas y se defiende. Grita. Usa la tablilla una vez, y otra, y otra. Las piedras de la montaña se parten. El cielo se pone rojo.\n\nPeleas toda la noche. Y al amanecer, ves lo que Ea dijo que verías: las alas de Anzu empiezan a caer. Ya no las levanta tan alto. Ya no las bate tan rápido.\n\nEs el momento.",
+        "en": "You lift Sharur.\n\n“Winds,” you say, “give him no rest.”\n\nThe seven winds climb the mountain, howling. Anzu opens his wings and fights back. He shrieks. He uses the tablet once, and again, and again. The stones of the mountain split. The sky turns red.\n\nYou fight all night. And at dawn, you see what Ea said you would see: Anzu’s wings begin to droop. He no longer lifts them as high. He no longer beats them as fast.\n\nThis is the moment."
+      },
+      "fact": {
+        "es": "En el templo de Ninurta en Kalhu, la actual Nimrud, un gran relieve asirio muestra a un dios con rayos en las manos persiguiendo a un monstruo alado. Hoy está en el Museo Británico.",
+        "en": "In the temple of Ninurta at Kalhu, present-day Nimrud, a large Assyrian relief shows a god with thunderbolts in his hands pursuing a winged monster. Today it is in the British Museum."
+      },
+      "choices": [
+        {
+          "to": "c7_combate",
+          "text": {
+            "es": "Volver a la batalla",
+            "en": "Return to the battle"
+          },
+          "description": {
+            "es": "Esta vez sabes cómo terminarla.",
+            "en": "This time you know how to end it."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6_dudar",
+      "chapter": 6,
+      "mood": "mysterious",
+      "text": {
+        "es": "—Repítelo, Sharur. Palabra por palabra.\n\nLa maza lo repite: cansarlo, esperar que caigan las alas, cortar las plumas, esperar el grito, disparar al corazón.\n\nLo repites tú también, en voz baja, tres veces. Sabes que, si te equivocas en un solo paso, la tablilla te convertirá en arcilla antes de que entiendas qué pasó.\n\n—Listo —dices.\n\nMandas a los vientos montaña arriba. Peleas toda la noche. Al amanecer, las alas de Anzu empiezan a caer.",
+        "en": "“Repeat it, Sharur. Word for word.”\n\nThe mace repeats it: wear him out, wait for the wings to droop, cut the feathers, wait for the cry, shoot for the heart.\n\nYou repeat it too, under your breath, three times. You know that if you get a single step wrong, the tablet will turn you to clay before you understand what happened.\n\n“Ready,” you say.\n\nYou send the winds up the mountain. You fight all night. At dawn, Anzu’s wings begin to droop."
+      },
+      "fact": {
+        "es": "En el poema, Sharur le lleva a Ea el parte de la batalla y vuelve con su consejo, repitiendo casi palabra por palabra lo ya contado. Esa repetición del mensajero es típica de la poesía mesopotámica.",
+        "en": "In the poem, Sharur carries the report of the battle to Ea and returns with his counsel, repeating almost word for word what has already been told. Such repetition by a messenger is typical of Mesopotamian poetry."
+      },
+      "choices": [
+        {
+          "to": "c7_combate",
+          "text": {
+            "es": "Volver a la batalla",
+            "en": "Return to the battle"
+          },
+          "description": {
+            "es": "Esta vez sabes cómo terminarla.",
+            "en": "This time you know how to end it."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6_hablar",
+      "chapter": 6,
+      "mood": "peaceful",
+      "text": {
+        "es": "Subes unos pasos por la ladera, con el arco bajo.\n\n—Anzu, ¿para qué la quieres? Ya tienes la tablilla. Ya eres más fuerte que todos. ¿Y ahora qué?\n\nEl ave te mira mucho tiempo.\n\n—Ahora nadie me dice dónde pararme —contesta—. Eso es lo que quiero. Toda mi vida cuidé la puerta de otro.\n\nPor un momento, casi lo entiendes. Después ves la tablilla bajo su garra, y piensas en todas las cosas del mundo esperando su destino.\n\nMandas a los vientos montaña arriba. Peleas toda la noche. Al amanecer, sus alas empiezan a caer.",
+        "en": "You climb a few steps up the slope, your bow lowered.\n\n“Anzu, what do you want it for? You already have the tablet. You are already stronger than anyone. What now?”\n\nThe bird looks at you for a long time.\n\n“Now no one tells me where to stand,” he answers. “That is what I want. All my life I guarded another god’s door.”\n\nFor a moment, you almost understand him. Then you see the tablet under his talon, and you think of all the things in the world waiting for their destiny.\n\nYou send the winds up the mountain. You fight all night. At dawn, his wings begin to droop."
+      },
+      "fact": {
+        "es": "En muchos textos mesopotámicos, sobre todo tardíos, los Igigi son los grandes dioses del cielo y los Anunnaki, los de la tierra y el inframundo, aunque el uso cambia según la época. Anzu quería gobernar a los Igigi.",
+        "en": "In many Mesopotamian texts, especially late ones, the Igigi are the great gods of heaven and the Anunnaki those of the earth and the underworld, though the usage varies by period. Anzu wanted to rule the Igigi."
+      },
+      "choices": [
+        {
+          "to": "c7_combate",
+          "text": {
+            "es": "Volver a la batalla",
+            "en": "Return to the battle"
+          },
+          "description": {
+            "es": "Esta vez sabes cómo terminarla.",
+            "en": "This time you know how to end it."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7_combate",
+      "chapter": 7,
+      "mood": "dangerous",
+      "text": {
+        "es": "Te lanzas sobre Anzu. Con la vara arrojadiza que sigue a tus flechas le cortas las plumas de las alas, a derecha y a izquierda.\n\nLas plumas caen, girando.\n\nAnzu las ve caer. Y hace lo que dijo Ea: abre el pico y grita, desesperado:\n\n—¡Ala con ala! ¡Vuelvan, alas mías!\n\nPor un instante, su garra se levanta de la tablilla. La arcilla queda sola sobre la piedra.\n\nTienes una flecha en la cuerda. Tienes un instante.",
+        "en": "You hurl yourself at Anzu. With the throw-stick that follows your arrows you cut the feathers from his wings, right and left.\n\nThe feathers fall, spinning.\n\nAnzu sees them fall. And he does what Ea said he would: he opens his beak and cries out, desperate:\n\n“Wing to wing! Come back, my wings!”\n\nFor an instant, his talon lifts from the tablet. The clay lies alone on the stone.\n\nYou have an arrow on the string. You have an instant."
+      },
+      "fact": {
+        "es": "La escena del grito «¡Ala con ala!» es la clave del poema: mientras Anzu usa su palabra para llamar a sus plumas, la flecha de Ninurta por fin lo alcanza y le atraviesa el corazón.",
+        "en": "The cry “Wing to wing!” is the key to the poem: while Anzu uses his word to call back his feathers, Ninurta’s arrow finally reaches him and pierces his heart."
+      },
+      "choices": [
+        {
+          "to": "c7_flecha",
+          "risk": "low",
+          "text": {
+            "es": "Disparar al corazón",
+            "en": "Shoot for the heart"
+          },
+          "description": {
+            "es": "Como dijo Ea.",
+            "en": "As Ea said."
+          }
+        },
+        {
+          "to": "fin_perdon",
+          "risk": "medium",
+          "text": {
+            "es": "Bajar el arco",
+            "en": "Lower the bow"
+          },
+          "description": {
+            "es": "Ya está vencido; ya no puede volar.",
+            "en": "He is already beaten; he can no longer fly."
+          }
+        },
+        {
+          "to": "c7_tablilla",
+          "risk": "medium",
+          "text": {
+            "es": "Saltar sobre la tablilla",
+            "en": "Leap for the tablet"
+          },
+          "description": {
+            "es": "Primero lo que robó; después el ladrón.",
+            "en": "First what he stole; then the thief."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7_flecha",
+      "chapter": 7,
+      "mood": "triumphant",
+      "text": {
+        "es": "Disparas.\n\nLa flecha atraviesa el pecho de Anzu, entra por un lado y sale por el otro. El ave abre las alas cortadas, como si todavía pudiera volar, y cae de la cima.\n\nBajas detrás de él. Anzu está tendido entre las piedras. Lo matas. Arrasas las montañas, inundas sus praderas, y les das sus plumas a los vientos.\n\nLos vientos se las llevan hacia Nippur, como buena noticia.\n\nRecoges la tablilla del suelo. Es pequeña. Cabe en tu mano. Y pesa más que cualquier cosa que hayas cargado nunca.",
+        "en": "You shoot.\n\nThe arrow goes through Anzu’s chest, in one side and out the other. The bird spreads his clipped wings, as if he could still fly, and falls from the summit.\n\nYou climb down after him. Anzu lies among the stones. You kill him. You lay waste to the mountains, you flood their meadows, and you give his feathers to the winds.\n\nThe winds carry them toward Nippur, as good news.\n\nYou pick the tablet up from the ground. It is small. It fits in your hand. And it weighs more than anything you have ever carried."
+      },
+      "fact": {
+        "es": "En el poema, después de matar a Anzu, Ninurta les da sus plumas a los vientos, que se las llevan como señal de la victoria hasta los dioses.",
+        "en": "In the poem, after killing Anzu, Ninurta gives his feathers to the winds, which carry them to the gods as the sign of his victory."
+      },
+      "choices": [
+        {
+          "to": "c8_vuelta",
+          "text": {
+            "es": "Volver con la tablilla",
+            "en": "Return with the tablet"
+          },
+          "description": {
+            "es": "Los vientos ya llevan la noticia.",
+            "en": "The winds are already carrying the news."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7_tablilla",
+      "chapter": 7,
+      "mood": "epic",
+      "text": {
+        "es": "Saltas, y antes de que Anzu baje la garra, tienes la tablilla en la mano.\n\nEl ave te mira. Sin alas, sin tablilla, de pronto parece mucho más chica.\n\n—Dámela —dice—. Es mía.\n\n—Nunca fue tuya.\n\nAnzu se lanza sobre ti con el pico abierto, y tú le hundes la flecha en el corazón con la mano. Cae de la montaña.\n\nLes das sus plumas a los vientos. Los vientos se las llevan hacia Nippur, como buena noticia. La tablilla, en tu mano, está tibia.",
+        "en": "You leap, and before Anzu can bring his talon down, you have the tablet in your hand.\n\nThe bird looks at you. Without wings, without the tablet, he suddenly seems much smaller.\n\n“Give it to me,” he says. “It is mine.”\n\n“It was never yours.”\n\nAnzu lunges at you with his beak open, and you drive the arrow into his heart with your bare hand. He falls from the mountain.\n\nYou give his feathers to the winds. The winds carry them toward Nippur, as good news. The tablet, in your hand, is warm."
+      },
+      "fact": {
+        "es": "En el poema sumerio «Ninurta y la tortuga», el arma de Ninurta hiere a Anzu, aquí un «polluelo», que suelta los «me», los poderes divinos, y la Tablilla de los Destinos. Todos regresan solos al Apsu de Enki.",
+        "en": "In the Sumerian poem “Ninurta and the Turtle,” Ninurta’s weapon wounds Anzu, here a “chick,” who drops the me, the divine powers, and the Tablet of Destinies. They all return on their own to Enki’s Apsu."
+      },
+      "choices": [
+        {
+          "to": "c8_vuelta",
+          "text": {
+            "es": "Volver con la tablilla",
+            "en": "Return with the tablet"
+          },
+          "description": {
+            "es": "Los vientos ya llevan la noticia.",
+            "en": "The winds are already carrying the news."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_perdon",
+      "chapter": 7,
+      "mood": "peaceful",
+      "text": {
+        "es": "Bajas el arco.\n\nAnzu se queda mirándote, con la boca abierta y el grito a medio terminar. Sin plumas, sin alas, sin poder volar.\n\n—¿Por qué? —pregunta.\n\n—Porque ya perdiste. Dame la tablilla.\n\nAnzu la empuja hacia ti con la garra. No dice nada más.\n\nVuelves a Nippur con la tablilla y con el ave detrás, caminando como un pollo grande. Enlil no lo quiere en la puerta. Pero tú le das un lugar en las montañas, en un árbol alto, y le pides que cuide desde allí a los viajeros. Dicen que, desde entonces, a veces les da a los héroes perdidos el don de la velocidad.",
+        "en": "You lower the bow.\n\nAnzu stares at you, his beak open and the cry half finished. No feathers, no wings, no way to fly.\n\n“Why?” he asks.\n\n“Because you have already lost. Give me the tablet.”\n\nAnzu pushes it toward you with his talon. He says nothing more.\n\nYou return to Nippur with the tablet and with the bird behind you, waddling like an overgrown chicken. Enlil does not want him at the door. But you give him a place in the mountains, in a tall tree, and ask him to watch over travelers from there. They say that, ever since, he sometimes grants lost heroes the gift of speed."
+      },
+      "fact": {
+        "es": "En los poemas sumerios, Anzu no siempre es un enemigo. En «Lugalbanda y el pájaro Anzu», el ave bendice al héroe, y en otro relato su cría vive en la copa del árbol que planta Inanna.",
+        "en": "In the Sumerian poems, Anzu is not always an enemy. In “Lugalbanda and the Anzud Bird,” the bird blesses the hero, and in another tale its chick lives in the crown of the tree that Inanna plants."
+      },
+      "ending": {
+        "type": "alternative",
+        "title": {
+          "es": "El pájaro perdonado",
+          "en": "The Pardoned Bird"
+        }
+      },
+      "choices": []
+    },
+    {
+      "id": "c8_vuelta",
+      "chapter": 8,
+      "mood": "sacred",
+      "text": {
+        "es": "Las plumas llegan a Nippur antes que tú. Los dioses las ven pasar con el viento y entienden. En el Ekur, alguien empieza a cantar.\n\nEnlil manda a su mensajero, Birdu, a buscarte a la montaña.\n\nTú estás sentado sobre una piedra, con la tablilla en las manos. Ves lo que está escrito en ella. Ves el destino de cada río, de cada rey, de cada dios. Ves el tuyo.\n\nPodrías cambiar una línea. Solo una. Nadie lo sabría.\n\nBirdu se para frente a ti, sin aliento.\n\n—Señor, su padre lo espera.",
+        "en": "The feathers reach Nippur before you do. The gods see them go by on the wind and understand. In the Ekur, someone begins to sing.\n\nEnlil sends his messenger, Birdu, to fetch you from the mountain.\n\nYou are sitting on a rock, the tablet in your hands. You see what is written on it. You see the destiny of every river, every king, every god. You see your own.\n\nYou could change one line. Just one. No one would know.\n\nBirdu stands before you, out of breath.\n\n“My lord, your father is waiting for you.”"
+      },
+      "fact": {
+        "es": "En el poema, después de la victoria, Enlil manda a su mensajero Birdu a buscar a Ninurta. El pasaje siguiente está dañado, y no se sabe si Ninurta dudó antes de devolver la tablilla.",
+        "en": "In the poem, after the victory, Enlil sends his messenger Birdu to fetch Ninurta. The passage that follows is damaged, and it is not known whether Ninurta hesitated before returning the tablet."
+      },
+      "choices": [
+        {
+          "to": "fin_nombres",
+          "risk": "low",
+          "text": {
+            "es": "Llevarle la tablilla a tu padre",
+            "en": "Take the tablet to your father"
+          },
+          "description": {
+            "es": "Para eso viniste.",
+            "en": "That is what you came for."
+          }
+        },
+        {
+          "to": "fin_arado",
+          "risk": "medium",
+          "text": {
+            "es": "Devolverla y pedir otra recompensa",
+            "en": "Return it and ask for another reward"
+          },
+          "description": {
+            "es": "No quieres gloria: quieres los campos.",
+            "en": "You do not want glory: you want the fields."
+          }
+        },
+        {
+          "to": "fin_tortuga",
+          "risk": "high",
+          "text": {
+            "es": "Escribir tu propio destino",
+            "en": "Write your own destiny"
+          },
+          "description": {
+            "es": "Una línea. Solo una.",
+            "en": "One line. Just one."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_nombres",
+      "chapter": 8,
+      "mood": "triumphant",
+      "text": {
+        "es": "Te levantas y caminas hacia Nippur, con Birdu a tu lado y la tablilla envuelta en tu manto.\n\nEn el Ekur, todos los dioses te esperan. Tu madre llora. Tu padre se pone de pie.\n\nPones la tablilla en sus manos. Enlil la mira, la pone sobre el trono, y se vuelve a poner la corona.\n\nEntonces los dioses empiezan a darte nombres. Te llaman Ningirsu, el del surco. Te llaman Pabilsag en el Egalmah, y Zababa, e Ishtaran. En Susa te llaman Inshushinak. Te dan templos en cada ciudad, y en cada templo un nombre nuevo.\n\nEsa noche, por primera vez desde el robo, los ritos del Ekur vuelven a empezar.",
+        "en": "You rise and walk toward Nippur, with Birdu at your side and the tablet wrapped in your cloak.\n\nIn the Ekur, all the gods are waiting for you. Your mother weeps. Your father rises to his feet.\n\nYou place the tablet in his hands. Enlil looks at it, sets it on the throne, and puts his crown back on.\n\nThen the gods begin to give you names. They call you Ningirsu, lord of the furrow. They call you Pabilsag in the Egalmah, and Zababa, and Ishtaran. In Susa they call you Inshushinak. They give you temples in every city, and in every temple a new name.\n\nThat night, for the first time since the theft, the rites of the Ekur begin again."
+      },
+      "fact": {
+        "es": "Al final del poema, los dioses celebran a Ninurta y le dan muchos nombres, entre ellos los de otros dioses guerreros como Ningirsu y Zababa. Recuerda los cincuenta nombres de Marduk en el Enuma Elish.",
+        "en": "At the end of the poem, the gods celebrate Ninurta and give him many names, among them those of other warrior gods such as Ningirsu and Zababa. It recalls the fifty names of Marduk in the Enuma Elish."
+      },
+      "ending": {
+        "type": "myth",
+        "title": {
+          "es": "Los nombres de Ninurta",
+          "en": "The Names of Ninurta"
+        }
+      },
+      "choices": []
+    },
+    {
+      "id": "fin_arado",
+      "chapter": 8,
+      "mood": "peaceful",
+      "text": {
+        "es": "Llevas la tablilla a Nippur y la pones en manos de tu padre. Los dioses empiezan a cantar tu nombre.\n\n—Padre —dices, antes de que terminen—, no quiero más nombres. Quiero los campos.\n\nEnlil te mira, sorprendido.\n\n—Viste la tablilla —dices—. Los reyes y los dioses cambian. Pero si el surco no se abre a tiempo, todos pasan hambre. Déjame cuidar eso.\n\nY así, el guerrero que mató a Anzu cambia la maza por el arado. Les enseña a los campesinos cuándo regar, cuándo sembrar, cuándo espantar a los pájaros. Y los pájaros, curiosamente, nunca lo molestan.",
+        "en": "You take the tablet to Nippur and place it in your father’s hands. The gods begin to sing your name.\n\n“Father,” you say, before they finish, “I do not want more names. I want the fields.”\n\nEnlil looks at you, surprised.\n\n“You saw the tablet,” you say. “Kings and gods come and go. But if the furrow is not opened in time, everyone goes hungry. Let me look after that.”\n\nAnd so the warrior who killed Anzu trades the mace for the plow. He teaches the farmers when to water, when to sow, when to scare off the birds. And the birds, curiously, never trouble him."
+      },
+      "fact": {
+        "es": "Las «Instrucciones del agricultor», un texto sumerio que explica cómo cultivar la cebada durante todo el año, terminan diciendo que son las enseñanzas de Ninurta, hijo de Enlil.",
+        "en": "“The Farmer’s Instructions,” a Sumerian text that explains how to grow barley through the whole year, ends by saying that these are the teachings of Ninurta, son of Enlil."
+      },
+      "ending": {
+        "type": "alternative",
+        "title": {
+          "es": "El señor del arado",
+          "en": "The Lord of the Plow"
+        }
+      },
+      "choices": []
+    },
+    {
+      "id": "fin_tortuga",
+      "chapter": 8,
+      "mood": "tragic",
+      "text": {
+        "es": "Tomas el estilete y cambias una línea. La tuya. Donde decía «hijo de Enlil» escribes «señor de los dioses».\n\nTe sientes crecer. La montaña se achica bajo tus pies.\n\nPero en el Apsu, Ea lo siente. Y Ea siempre encuentra otra puerta.\n\nEsa noche, cuando bajas hacia Nippur, una tortuga sale del barro del camino. Pequeña, lenta. Te muerde el tobillo. Tratas de sacártela, y caes en un pozo que no estaba ahí. La tortuga sigue mordiendo. Las paredes del pozo suben.\n\nTu madre te busca durante días. Te encuentra en el fondo, todavía con la tablilla en la mano, sin poder salir.",
+        "en": "You take the stylus and change one line. Yours. Where it said “son of Enlil” you write “lord of the gods.”\n\nYou feel yourself grow. The mountain shrinks beneath your feet.\n\nBut in the Apsu, Ea feels it. And Ea always finds another door.\n\nThat night, as you come down toward Nippur, a turtle crawls out of the mud of the road. Small, slow. It bites your ankle. You try to shake it off, and you fall into a pit that was not there before. The turtle keeps biting. The walls of the pit rise.\n\nYour mother searches for you for days. She finds you at the bottom, the tablet still in your hand, unable to climb out."
+      },
+      "fact": {
+        "es": "En el poema sumerio «Ninurta y la tortuga», Ninurta se vuelve arrogante después de vencer a Anzu. Enki crea una tortuga que lo hace caer en un pozo, y su madre se lamenta por él.",
+        "en": "In the Sumerian poem “Ninurta and the Turtle,” Ninurta grows arrogant after defeating Anzu. Enki creates a turtle that makes him fall into a pit, and his mother laments over him."
+      },
+      "ending": {
+        "type": "tragic",
+        "title": {
+          "es": "El pozo de la tortuga",
+          "en": "The Turtle’s Pit"
+        }
+      },
+      "choices": []
+    }
+  ]
+}
