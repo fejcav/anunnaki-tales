@@ -1,0 +1,1078 @@
+{
+  "formatVersion": 1,
+  "adventureId": "sargon_akkad",
+  "contentVersion": "1.0",
+  "hero": {
+    "name": {
+      "es": "Sargón",
+      "en": "Sargon"
+    },
+    "description": {
+      "es": "Hijo de una sacerdotisa que te puso en una cesta de juncos y te entregó al Éufrates. Akki, el aguatero, te sacó del río y te crio como a un hijo. Eres su jardinero. Todavía nadie conoce tu nombre.",
+      "en": "Son of a priestess who set you in a basket of rushes and gave you to the Euphrates. Akki, the water-drawer, pulled you from the river and raised you as his son. You are his gardener. No one knows your name yet."
+    }
+  },
+  "chapters": [
+    {
+      "number": 1,
+      "title": {
+        "es": "El huerto de Akki",
+        "en": "Akki’s Orchard"
+      }
+    },
+    {
+      "number": 2,
+      "title": {
+        "es": "El copero de Kish",
+        "en": "The Cupbearer of Kish"
+      }
+    },
+    {
+      "number": 3,
+      "title": {
+        "es": "El río de sangre",
+        "en": "The River of Blood"
+      }
+    },
+    {
+      "number": 4,
+      "title": {
+        "es": "La casa pura",
+        "en": "The Pure House"
+      }
+    },
+    {
+      "number": 5,
+      "title": {
+        "es": "La tablilla sin sobre",
+        "en": "The Tablet Without an Envelope"
+      }
+    },
+    {
+      "number": 6,
+      "title": {
+        "es": "Ante Lugalzagesi",
+        "en": "Before Lugalzagesi"
+      }
+    },
+    {
+      "number": 7,
+      "title": {
+        "es": "Treinta y cuatro batallas",
+        "en": "Thirty-Four Battles"
+      }
+    },
+    {
+      "number": 8,
+      "title": {
+        "es": "Agade",
+        "en": "Agade"
+      }
+    }
+  ],
+  "start": "c1_huerto",
+  "scenes": [
+    {
+      "id": "c1_huerto",
+      "chapter": 1,
+      "mood": "peaceful",
+      "text": {
+        "es": "El huerto de Akki está a la orilla del Éufrates, donde el río se abre entre palmeras. Riegas los surcos antes de que apriete el sol, como todos los días desde que tienes memoria.\n\nAkki, el aguatero, te sacó del río cuando eras un recién nacido, dentro de una cesta de juncos sellada con betún. Te crio como a un hijo. Te enseñó a cargar agua y, cuando creciste, te dio el huerto. Nunca te dijo quién te puso en esa cesta.\n\nHoy el agua baja turbia y rápida. Río arriba hubo tormenta. Entre las cañas de la orilla queda enganchado un pedazo de junco trenzado, viejo, negro de betún.\n\nEres Sargón. Todavía ese nombre no significa nada.",
+        "en": "Akki’s orchard lies on the bank of the Euphrates, where the river opens out among the palms. You water the furrows before the sun grows hot, as you have every day for as long as you can remember.\n\nAkki, the water-drawer, pulled you from the river when you were a newborn, inside a basket of rushes sealed with bitumen. He raised you as his son. He taught you to carry water and, when you grew up, he gave you the orchard. He never told you who put you in that basket.\n\nToday the water runs fast and muddy. There was a storm upriver. Caught in the reeds along the bank is a piece of woven rush, old and black with bitumen.\n\nYou are Sargon. For now, that name means nothing."
+      },
+      "fact": {
+        "es": "La Leyenda del nacimiento de Sargón, en tablillas asirias del siglo VII a. C., está en primera persona: «Sargón, rey poderoso, rey de Agade, soy yo. Mi madre fue una gran sacerdotisa; a mi padre no lo conocí».",
+        "en": "The Birth Legend of Sargon, on Assyrian tablets of the seventh century BCE, is told in the first person: “Sargon, the mighty king, king of Agade, am I. My mother was a high priestess; my father I knew not.”"
+      },
+      "choices": [
+        {
+          "to": "c1_akki",
+          "risk": "low",
+          "text": {
+            "es": "Preguntarle a Akki por la cesta",
+            "en": "Ask Akki about the basket"
+          },
+          "description": {
+            "es": "Hoy quieres saber de dónde viniste.",
+            "en": "Today you want to know where you came from."
+          }
+        },
+        {
+          "to": "c1_inanna",
+          "risk": "low",
+          "text": {
+            "es": "Seguir regando hasta el anochecer",
+            "en": "Keep watering until nightfall"
+          },
+          "description": {
+            "es": "El huerto no espera, y hay alguien que te mira desde el agua.",
+            "en": "The orchard will not wait, and someone is watching you from the water."
+          }
+        },
+        {
+          "to": "c1_caravana",
+          "risk": "medium",
+          "text": {
+            "es": "Bajar al embarcadero",
+            "en": "Go down to the landing"
+          },
+          "description": {
+            "es": "Las barcas de Kish buscan hombres jóvenes.",
+            "en": "The boats from Kish are looking for young men."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c1_akki",
+      "chapter": 1,
+      "mood": "mysterious",
+      "text": {
+        "es": "Akki está sentado a la sombra, remendando una red. Cuando le preguntas, se queda un rato en silencio.\n\n—Venía el río crecido —dice al fin—. Metí el cántaro en el agua y el cántaro chocó con algo. Una cesta de juncos, cerrada con betún, flotando como una barquita. Adentro estabas tú, callado, mirándome.\n\n—¿Y mi madre?\n\n—Río arriba hay una ciudad que llaman Azupiranu. Una vez pasó un barquero que hablaba de una sacerdotisa que había tenido un hijo en secreto. No sé si eras tú. Nunca quise saberlo.\n\nTe pone la mano en el hombro.\n\n—El río te trajo a mí. Con eso me alcanzó.\n\nEsa tarde llega al huerto un intendente del palacio de Kish, buscando sirvientes para el rey.",
+        "en": "Akki is sitting in the shade, mending a net. When you ask him, he is silent for a while.\n\n“The river was in flood,” he says at last. “I dipped my jar in the water and the jar knocked against something. A basket of rushes, sealed with bitumen, floating like a little boat. There you were inside, quiet, looking at me.”\n\n“And my mother?”\n\n“Upriver there is a town they call Azupiranu. Once a boatman came by who talked of a priestess who had borne a child in secret. I don’t know if it was you. I never wanted to know.”\n\nHe puts his hand on your shoulder.\n\n“The river brought you to me. That was enough for me.”\n\nThat afternoon a steward from the palace of Kish comes to the orchard, looking for servants for the king."
+      },
+      "fact": {
+        "es": "Según la leyenda, la madre de Sargón lo puso en una cesta de juncos, selló la tapa con betún y lo echó al río, que «no me cubrió». La corriente lo llevó hasta Akki, el aguatero, que lo sacó al hundir su cántaro.",
+        "en": "According to the legend, Sargon’s mother set him in a basket of rushes, sealed the lid with bitumen and cast him into the river, which “did not rise over me.” The current carried him to Akki, the water-drawer, who lifted him out as he dipped his jar."
+      },
+      "choices": [
+        {
+          "to": "c2_copa",
+          "text": {
+            "es": "Ir a Kish",
+            "en": "Go to Kish"
+          },
+          "description": {
+            "es": "Un intendente del palacio busca muchachos para servir al rey.",
+            "en": "A steward from the palace is looking for boys to serve the king."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c1_inanna",
+      "chapter": 1,
+      "mood": "sacred",
+      "text": {
+        "es": "Riegas hasta que el sol se hunde detrás de las palmeras. Cuando vas a lavarte al río, hay una mujer parada en la orilla, con los pies en el agua. No la oíste llegar.\n\nLleva un vestido del color del cielo antes de la tormenta, y en el pecho una estrella de ocho puntas. Te mira como se mira un campo recién sembrado.\n\n—Jardinero —dice—, riegas bien lo que no es tuyo. Algún día regarás lo que sí lo sea.\n\nQuieres preguntarle quién es. Pero ya lo sabes: en los templos la llaman Inanna, y los que hablan acadio, Ishtar.\n\nCuando parpadeas, en la orilla solo queda el agua.\n\nA la mañana siguiente llega al huerto un intendente del palacio de Kish, buscando sirvientes para el rey.",
+        "en": "You water until the sun sinks behind the palms. When you go down to wash in the river, there is a woman standing on the bank, her feet in the water. You did not hear her come.\n\nShe wears a dress the color of the sky before a storm, and on her breast an eight-pointed star. She looks at you the way one looks at a newly sown field.\n\n“Gardener,” she says, “you water well what is not yours. One day you will water what is.”\n\nYou want to ask her who she is. But you already know: in the temples they call her Inanna, and those who speak Akkadian, Ishtar.\n\nWhen you blink, only the water is left on the bank.\n\nThe next morning a steward from the palace of Kish comes to the orchard, looking for servants for the king."
+      },
+      "fact": {
+        "es": "La leyenda dice: «Akki, el aguatero, me hizo su jardinero. Siendo jardinero, Ishtar me amó, y durante cincuenta y cuatro años ejercí la realeza»; el número está roto en la tablilla. La Lista Real Sumeria le da 56 años.",
+        "en": "The legend says: “Akki, the water-drawer, made me his gardener. While I was a gardener, Ishtar granted me her love, and for fifty-four years I exercised kingship”; the number is broken on the tablet. The Sumerian King List gives him 56 years."
+      },
+      "choices": [
+        {
+          "to": "c2_copa",
+          "text": {
+            "es": "Ir a Kish",
+            "en": "Go to Kish"
+          },
+          "description": {
+            "es": "Un intendente del palacio busca muchachos para servir al rey.",
+            "en": "A steward from the palace is looking for boys to serve the king."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c1_caravana",
+      "chapter": 1,
+      "mood": "epic",
+      "text": {
+        "es": "Bajas al embarcadero. Hay barcas de Kish amarradas, cargadas de cebada, y hombres que gritan precios en dos lenguas: la de los templos y la tuya, la de la gente del río.\n\nUn intendente del palacio, con el bastón al hombro, mira a los muchachos que descargan. Busca sirvientes para el rey Ur-Zababa.\n\n—¿Sabes servir? —te pregunta.\n\n—Sé regar un huerto y cargar agua sin derramarla.\n\nSe ríe. —Eso es exactamente lo que hace un copero.\n\nVuelves corriendo al huerto a despedirte de Akki. El viejo no te retiene. Te da un cántaro pequeño, de los que usaba para sacar agua del río, y te dice que no lo rompas.",
+        "en": "You go down to the landing. Boats from Kish are moored there, loaded with barley, and men shout prices in two languages: the language of the temples and your own, the language of the river people.\n\nA steward from the palace, his staff over his shoulder, watches the boys unloading. He is looking for servants for King Ur-Zababa.\n\n“Can you serve?” he asks you.\n\n“I can water an orchard and carry water without spilling it.”\n\nHe laughs. “That is exactly what a cupbearer does.”\n\nYou run back to the orchard to say goodbye to Akki. The old man does not hold you back. He gives you a small jar, one of those he used to draw water from the river, and tells you not to break it."
+      },
+      "fact": {
+        "es": "En tiempos de Sargón se hablaban dos lenguas en Mesopotamia: el sumerio, sobre todo en el sur, y el acadio, una lengua semítica, en el norte. El acadio tomó su nombre de Agade, la ciudad de Sargón.",
+        "en": "In Sargon’s time two languages were spoken in Mesopotamia: Sumerian, mostly in the south, and Akkadian, a Semitic language, in the north. Akkadian took its name from Agade, Sargon’s city."
+      },
+      "choices": [
+        {
+          "to": "c2_copa",
+          "text": {
+            "es": "Ir a Kish",
+            "en": "Go to Kish"
+          },
+          "description": {
+            "es": "Un intendente del palacio busca muchachos para servir al rey.",
+            "en": "A steward from the palace is looking for boys to serve the king."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2_copa",
+      "chapter": 2,
+      "mood": "mysterious",
+      "text": {
+        "es": "Kish es la ciudad de los reyes antiguos: dicen que la realeza bajó aquí del cielo después del diluvio. Hace diez años que vives en su palacio y ya no hueles a río. Eres el copero del rey Ur-Zababa: pruebas su cerveza antes que él y conoces sus silencios.\n\nÚltimamente el rey duerme mal y despierta gritando. Los sacerdotes de Zababa, el dios de la ciudad, entran y salen con las caras largas. En la ciudad se dice en voz baja que el cielo le dio la espalda a Kish.\n\nEsta noche el rey te pide la copa tres veces y no bebe. Te mira como si quisiera decirte algo. O preguntarte algo.\n\n—Copero —dice al fin—, ¿tú sueñas?",
+        "en": "Kish is the city of the ancient kings: they say that after the flood, kingship came down from heaven here. You have lived in its palace for ten years and no longer smell of the river. You are the cupbearer of King Ur-Zababa: you taste his beer before he does and you know his silences.\n\nLately the king sleeps badly and wakes up screaming. The priests of Zababa, the city’s god, come and go with long faces. In the city people whisper that heaven has turned its back on Kish.\n\nTonight the king asks for the cup three times and does not drink. He looks at you as if he wanted to tell you something. Or ask you something.\n\n“Cupbearer,” he says at last, “do you dream?”"
+      },
+      "fact": {
+        "es": "El poema sumerio «Sargón y Ur-Zababa», conservado en copias de hacia 1800 a. C., cuenta que Sargón fue copero de Ur-Zababa, rey de Kish. El copero era un sirviente de confianza, siempre cerca del rey.",
+        "en": "The Sumerian poem “Sargon and Ur-Zababa,” preserved in copies from around 1800 BCE, tells how Sargon was cupbearer to Ur-Zababa, king of Kish. The cupbearer was a trusted servant, always close to the king."
+      },
+      "choices": [
+        {
+          "to": "c2_rey",
+          "risk": "low",
+          "text": {
+            "es": "Decirle que sí, que todos sueñan",
+            "en": "Say yes, everyone dreams"
+          },
+          "description": {
+            "es": "Es la verdad, y al rey se le dice la verdad.",
+            "en": "It is the truth, and a king is told the truth."
+          }
+        },
+        {
+          "to": "c2_silencio",
+          "risk": "medium",
+          "text": {
+            "es": "Responder con cuidado",
+            "en": "Answer carefully"
+          },
+          "description": {
+            "es": "Un copero vive de no decir de más.",
+            "en": "A cupbearer lives by not saying too much."
+          }
+        },
+        {
+          "to": "c2_escriba",
+          "risk": "low",
+          "text": {
+            "es": "Pedirle consejo después al escriba",
+            "en": "Ask the scribe for advice afterward"
+          },
+          "description": {
+            "es": "El viejo escriba del palacio entiende de presagios.",
+            "en": "The old palace scribe understands omens."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2_rey",
+      "chapter": 2,
+      "mood": "peaceful",
+      "text": {
+        "es": "—Todos sueñan, señor —dices—. Yo sueño con el río.\n\nUr-Zababa asiente despacio. Deja la copa.\n\n—Yo soñé algo que no entiendo —dice—. Y los que entienden no quieren explicármelo.\n\nNo te cuenta más. Pero esa noche, al retirarte, ves a los adivinos del templo esperando en el patio con una oveja, para abrirla y leer en el hígado. Eso no se hace por un sueño cualquiera.\n\nEn tu cuarto, junto a la cocina, te acuestas tarde. Afuera, el viento del desierto arrastra arena contra los muros de Kish, y tú tardas en dormirte.\n\nCuando por fin lo haces, sueñas.",
+        "en": "“Everyone dreams, my lord,” you say. “I dream of the river.”\n\nUr-Zababa nods slowly. He sets down the cup.\n\n“I dreamed something I do not understand,” he says. “And those who understand will not explain it to me.”\n\nHe tells you no more. But that night, as you withdraw, you see the temple diviners waiting in the courtyard with a sheep, to open it and read the liver. That is not done for just any dream.\n\nIn your room, next to the kitchen, you go to bed late. Outside, the desert wind drives sand against the walls of Kish, and it is a long time before you fall asleep.\n\nWhen at last you do, you dream."
+      },
+      "fact": {
+        "es": "Los adivinos mesopotámicos leían el futuro en el hígado de las ovejas sacrificadas. Se conservan modelos de hígado en arcilla, con las zonas marcadas y anotadas, que servían para enseñar el oficio.",
+        "en": "Mesopotamian diviners read the future in the livers of sacrificed sheep. Clay models of livers survive, with the zones marked and labeled, which were used to teach the craft."
+      },
+      "choices": [
+        {
+          "to": "c3_sueno",
+          "text": {
+            "es": "Dormir",
+            "en": "Sleep"
+          },
+          "description": {
+            "es": "La noche de Kish es larga.",
+            "en": "The night in Kish is long."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2_silencio",
+      "chapter": 2,
+      "mood": "mysterious",
+      "text": {
+        "es": "—Señor, un copero sirve la copa y calla. Si sueño, lo olvido al despertar.\n\nUr-Zababa sonríe sin ganas.\n\n—Ojalá yo pudiera.\n\nTe hace una seña y te retiras. Pero en el pasillo oyes a dos oficiales de la guardia hablar bajo: el rey tuvo un sueño que lo dejó temblando, y los adivinos no se ponen de acuerdo. Uno dice que es el fin de Kish. El otro, que es el fin del rey.\n\nNadie dice tu nombre. Todavía.\n\nTe acuestas tarde. Y cuando por fin te duermes, sueñas.",
+        "en": "“My lord, a cupbearer serves the cup and keeps quiet. If I dream, I forget it when I wake.”\n\nUr-Zababa smiles without pleasure.\n\n“If only I could.”\n\nHe waves you away and you withdraw. But in the corridor you hear two officers of the guard talking in low voices: the king had a dream that left him trembling, and the diviners cannot agree. One says it means the end of Kish. The other, the end of the king.\n\nNo one says your name. Not yet.\n\nYou go to bed late. And when at last you fall asleep, you dream."
+      },
+      "fact": {
+        "es": "La Lista Real Sumeria dice que, después del diluvio, «la realeza bajó del cielo» en Kish. Ser «rey de Kish» se volvió un título de prestigio que usaron reyes de toda Sumer, entre ellos Sargón.",
+        "en": "The Sumerian King List says that after the flood “kingship came down from heaven” at Kish. “King of Kish” became a title of prestige used by kings from all over Sumer, Sargon among them."
+      },
+      "choices": [
+        {
+          "to": "c3_sueno",
+          "text": {
+            "es": "Dormir",
+            "en": "Sleep"
+          },
+          "description": {
+            "es": "La noche de Kish es larga.",
+            "en": "The night in Kish is long."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2_escriba",
+      "chapter": 2,
+      "mood": "sacred",
+      "text": {
+        "es": "Después de la cena buscas al viejo escriba del palacio, el que enseña a los hijos de los nobles a escribir en la arcilla. Está sentado con una lámpara, copiando una lista de reyes.\n\n—¿Qué significa que un rey despierte gritando? —le preguntas.\n\n—Que los dioses le hablan en sueños y él no quiere oír —contesta sin levantar la vista—. Enlil decide quién reina y por cuánto tiempo. Cuando Enlil decide, no hay oveja que lo arregle.\n\nTe mira por fin.\n\n—Tú tienes cara de haber sido sacado del agua, muchacho. Cuidado con los sueños. A veces los dioses se los mandan al que sirve la copa, no al que la bebe.\n\nVuelves a tu cuarto y te duermes tarde. Y sueñas.",
+        "en": "After dinner you look for the old palace scribe, the one who teaches the sons of the nobles to write on clay. He is sitting by a lamp, copying a list of kings.\n\n“What does it mean when a king wakes up screaming?” you ask him.\n\n“That the gods speak to him in dreams and he does not want to listen,” he answers without looking up. “Enlil decides who reigns and for how long. When Enlil has decided, no sheep can mend it.”\n\nAt last he looks at you.\n\n“You have the face of someone who was pulled from the water, boy. Beware of dreams. Sometimes the gods send them to the one who serves the cup, not to the one who drinks it.”\n\nYou return to your room and fall asleep late. And you dream."
+      },
+      "fact": {
+        "es": "En el poema, An y Enlil deciden «por su santo mandato» cambiar el tiempo de reinado de Ur-Zababa y quitarle la prosperidad al palacio. Así se explicaba en Sumer el fin de una dinastía: lo decidían los dioses.",
+        "en": "In the poem, An and Enlil decide “by their holy command” to alter Ur-Zababa’s term of reign and to remove the prosperity of the palace. That was how the end of a dynasty was explained in Sumer: the gods decided it."
+      },
+      "choices": [
+        {
+          "to": "c3_sueno",
+          "text": {
+            "es": "Dormir",
+            "en": "Sleep"
+          },
+          "description": {
+            "es": "La noche de Kish es larga.",
+            "en": "The night in Kish is long."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3_sueno",
+      "chapter": 3,
+      "mood": "dangerous",
+      "text": {
+        "es": "En el sueño estás parado en la orilla de un río, pero el río es de sangre. Y en el agua roja hay una mujer con una estrella de ocho puntas en el pecho: Inanna. Sostiene bajo la corriente, con una sola mano, la cabeza del rey Ur-Zababa. El rey patalea. La diosa no hace fuerza.\n\nTe despiertas con un grito que no sabes si fue tuyo.\n\nA la mañana, antes de que llegues con la copa, el rey te manda llamar a sus habitaciones. Está pálido.\n\n—Copero —dice—, anoche, en el sueño, ¿se te reveló algo? Cuéntamelo.\n\nSabes lo que viste. Y sabes que contárselo a un rey puede costar la cabeza.",
+        "en": "In the dream you are standing on the bank of a river, but the river is blood. And in the red water there is a woman with an eight-pointed star on her breast: Inanna. With a single hand she holds the head of King Ur-Zababa under the current. The king kicks. The goddess makes no effort.\n\nYou wake with a scream that you are not sure was yours.\n\nIn the morning, before you arrive with the cup, the king summons you to his chambers. He is pale.\n\n“Cupbearer,” he says, “last night, in your dream, was something revealed to you? Tell me.”\n\nYou know what you saw. And you know that telling a king can cost you your head."
+      },
+      "fact": {
+        "es": "En el poema, Sargón sueña que Inanna ahoga a Ur-Zababa en un río de sangre. El rey, atormentado ya por un sueño propio, está «perturbado como un pez en agua salobre»; al oír el de Sargón, se muerde los labios de miedo.",
+        "en": "In the poem, Sargon dreams that Inanna drowns Ur-Zababa in a river of blood. The king, already tormented by a dream of his own, is “disturbed like a fish in brackish water”; when he hears Sargon’s, he bites his lips in fear."
+      },
+      "choices": [
+        {
+          "to": "c3_contar",
+          "risk": "low",
+          "text": {
+            "es": "Contarle el sueño tal como fue",
+            "en": "Tell him the dream as it was"
+          },
+          "description": {
+            "es": "Al rey se le dice la verdad, aunque tiemble.",
+            "en": "A king is told the truth, even if he trembles."
+          }
+        },
+        {
+          "to": "c3_callar",
+          "risk": "medium",
+          "text": {
+            "es": "Decir que soñaste con el río, nada más",
+            "en": "Say you dreamed of the river, nothing more"
+          },
+          "description": {
+            "es": "Una mentira pequeña puede salvarte.",
+            "en": "A small lie can save you."
+          }
+        },
+        {
+          "to": "c3_templo",
+          "risk": "low",
+          "text": {
+            "es": "Pedir ir primero al templo de Inanna",
+            "en": "Ask to go to Inanna’s temple first"
+          },
+          "description": {
+            "es": "Si fue la diosa, que ella diga qué hacer.",
+            "en": "If it was the goddess, let her say what to do."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3_contar",
+      "chapter": 3,
+      "mood": "dangerous",
+      "text": {
+        "es": "Se lo cuentas todo: el río rojo, la diosa, la mano que no hace fuerza.\n\nUr-Zababa te escucha hasta el final. Después se dobla sobre sí mismo, se muerde los labios y empieza a temblar, como un pez en agua salobre. Nadie se le acerca. Nadie se atreve.\n\n—Vete —dice, cuando puede hablar.\n\nTe vas. Pero durante todo el día sientes los ojos del rey en la nuca, y los de los guardias, y los de los sacerdotes. Antes de la noche, un sirviente te trae un encargo del rey: mañana tienes que llevar algo al E-sikil, la casa pura, donde trabaja el herrero mayor.\n\nNo te dicen qué.",
+        "en": "You tell him everything: the red river, the goddess, the hand that makes no effort.\n\nUr-Zababa listens to the end. Then he doubles over, bites his lips and begins to tremble, like a fish in brackish water. No one goes near him. No one dares.\n\n“Go,” he says, when he can speak.\n\nYou go. But all day long you feel the king’s eyes on the back of your neck, and the guards’ eyes, and the priests’. Before nightfall, a servant brings you an errand from the king: tomorrow you must take something to the E-sikil, the pure house, where the chief smith works.\n\nThey do not tell you what."
+      },
+      "fact": {
+        "es": "Zababa era el dios guerrero de Kish, y el nombre del rey Ur-Zababa significa «siervo de Zababa». Las ruinas de Kish están en Tell al-Uhaymir, al este de Babilonia, en Irak.",
+        "en": "Zababa was the warrior god of Kish, and the name of King Ur-Zababa means “servant of Zababa.” The ruins of Kish are at Tell al-Uhaymir, east of Babylon, in Iraq."
+      },
+      "choices": [
+        {
+          "to": "c4_esikil",
+          "text": {
+            "es": "Ir al E-sikil al amanecer",
+            "en": "Go to the E-sikil at dawn"
+          },
+          "description": {
+            "es": "El rey mandó, y eres el copero del rey.",
+            "en": "The king gave the order, and you are the king’s cupbearer."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3_callar",
+      "chapter": 3,
+      "mood": "mysterious",
+      "text": {
+        "es": "—Soñé con el río de mi infancia, señor. Con cañas y agua turbia. Nada más.\n\nUr-Zababa te mira largo rato. Es un hombre que lleva años reinando y sabe cuándo un sirviente le miente.\n\n—El río —repite—. ¿De qué color era el agua?\n\nNo contestas a tiempo. Y en ese silencio el rey entiende todo lo que no dijiste. Se pone de pie, tembloroso, y te despide con la mano.\n\nAntes de la noche, un sirviente te trae un encargo del rey: mañana tienes que llevar algo al E-sikil, la casa pura, donde trabaja el herrero mayor.\n\nNo te dicen qué. Pero el sirviente no te mira a los ojos.",
+        "en": "“I dreamed of the river of my childhood, my lord. Of reeds and muddy water. Nothing more.”\n\nUr-Zababa looks at you for a long time. He is a man who has reigned for years and knows when a servant is lying to him.\n\n“The river,” he repeats. “What color was the water?”\n\nYou do not answer in time. And in that silence the king understands everything you did not say. He rises, trembling, and dismisses you with a wave of his hand.\n\nBefore nightfall, a servant brings you an errand from the king: tomorrow you must take something to the E-sikil, the pure house, where the chief smith works.\n\nThey do not tell you what. But the servant will not meet your eyes."
+      },
+      "fact": {
+        "es": "Para los mesopotámicos los sueños eran mensajes de los dioses. Un tratado asirio, el «Libro de los sueños», interpretaba cientos de ellos, y los reyes tenían intérpretes de sueños en su corte.",
+        "en": "To the Mesopotamians, dreams were messages from the gods. An Assyrian treatise, the “Dream Book,” interpreted hundreds of them, and kings kept dream interpreters at their courts."
+      },
+      "choices": [
+        {
+          "to": "c4_esikil",
+          "text": {
+            "es": "Ir al E-sikil al amanecer",
+            "en": "Go to the E-sikil at dawn"
+          },
+          "description": {
+            "es": "El rey mandó, y eres el copero del rey.",
+            "en": "The king gave the order, and you are the king’s cupbearer."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3_templo",
+      "chapter": 3,
+      "mood": "sacred",
+      "text": {
+        "es": "—Señor, déjame ir antes al templo de Inanna. Si lo que soñé viene de ella, que ella diga qué significa.\n\nEl rey te deja ir. Casi parece aliviado de no oírlo todavía.\n\nEn el templo, la sacerdotisa te escucha sin interrumpir. Cuando terminas, no se sorprende.\n\n—La diosa no manda sueños a los coperos por nada —dice—. Ella eligió. Lo que no eligió es cómo vas a sobrevivir a lo que viene. Eso es tuyo.\n\nVuelves al palacio y le cuentas al rey lo que soñaste. Ur-Zababa se muerde los labios y tiembla como un pez en agua salobre.\n\nAntes de la noche, un sirviente te trae un encargo: mañana tienes que llevar algo al E-sikil, la casa pura, donde trabaja el herrero mayor.",
+        "en": "“My lord, let me go first to the temple of Inanna. If what I dreamed comes from her, let her say what it means.”\n\nThe king lets you go. He almost seems relieved not to hear it yet.\n\nIn the temple, the priestess listens without interrupting. When you finish, she is not surprised.\n\n“The goddess does not send dreams to cupbearers for nothing,” she says. “She has chosen. What she has not chosen is how you will survive what is coming. That is yours.”\n\nYou return to the palace and tell the king what you dreamed. Ur-Zababa bites his lips and trembles like a fish in brackish water.\n\nBefore nightfall, a servant brings you an errand: tomorrow you must take something to the E-sikil, the pure house, where the chief smith works."
+      },
+      "fact": {
+        "es": "Inanna, «la Señora del Cielo», era la diosa del amor y de la guerra. Los acadios la llamaron Ishtar. En Agade, la ciudad de Sargón, se la adoraba como Ishtar-Annunitum, la Ishtar de la batalla.",
+        "en": "Inanna, “the Lady of Heaven,” was the goddess of love and of war. The Akkadians called her Ishtar. In Agade, Sargon’s city, she was worshipped as Ishtar-Annunitum, the Ishtar of battle."
+      },
+      "choices": [
+        {
+          "to": "c4_esikil",
+          "text": {
+            "es": "Ir al E-sikil al amanecer",
+            "en": "Go to the E-sikil at dawn"
+          },
+          "description": {
+            "es": "El rey mandó, y eres el copero del rey.",
+            "en": "The king gave the order, and you are the king’s cupbearer."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c4_esikil",
+      "chapter": 4,
+      "mood": "dangerous",
+      "text": {
+        "es": "Al amanecer, Ur-Zababa te entrega su espejo de bronce, el que usa cada mañana.\n\n—Llévaselo a Belish-tikal, el herrero mayor, en el E-sikil, la casa del destino. Él sabe qué hacer.\n\nEl E-sikil está en el otro extremo de la ciudad. Es la casa pura: ahí los herreros funden el bronce de los dioses y vacían las estatuas en los moldes. Desde la calle se oye el rugido de los hornos.\n\nCuando llegas a la puerta, el aire se enfría de golpe. Una voz que ya conoces te habla al oído, aunque no hay nadie:\n\n—El E-sikil es una casa santa. Nadie manchado de sangre entra en ella.\n\nMiras tus manos. Están limpias. Y entiendes: la sangre no está en ti. Está en lo que te espera adentro.",
+        "en": "At dawn, Ur-Zababa hands you his bronze mirror, the one he uses every morning.\n\n“Take it to Belish-tikal, the chief smith, in the E-sikil, the house of destiny. He knows what to do.”\n\nThe E-sikil is at the far end of the city. It is the pure house: there the smiths melt the bronze of the gods and cast the statues in their molds. From the street you can hear the roar of the furnaces.\n\nWhen you reach the door, the air suddenly turns cold. A voice you already know speaks into your ear, though there is no one there:\n\n“The E-sikil is a holy house. No one polluted with blood may enter it.”\n\nYou look at your hands. They are clean. And you understand: the blood is not on you. It is in what awaits you inside."
+      },
+      "fact": {
+        "es": "En el poema, Ur-Zababa manda a Sargón al E-sikil con su espejo de bronce y le ordena en secreto al herrero mayor, Belish-tikal, que lo arroje al molde «como a las estatuas». Inanna lo detiene en la puerta.",
+        "en": "In the poem, Ur-Zababa sends Sargon to the E-sikil with his bronze mirror and secretly orders the chief smith, Belish-tikal, to throw him into the mold “like statues.” Inanna stops him at the door."
+      },
+      "choices": [
+        {
+          "to": "c4_puerta",
+          "risk": "low",
+          "text": {
+            "es": "Quedarte en la puerta y llamar al herrero",
+            "en": "Stay at the door and call the smith"
+          },
+          "description": {
+            "es": "Si la diosa dice que no entres, no entras.",
+            "en": "If the goddess says not to enter, you do not enter."
+          }
+        },
+        {
+          "to": "c4_herrero",
+          "risk": "medium",
+          "text": {
+            "es": "Hablar con el herrero cara a cara",
+            "en": "Speak to the smith face to face"
+          },
+          "description": {
+            "es": "Quieres ver si Belish-tikal se atreve a mirarte.",
+            "en": "You want to see if Belish-tikal dares to look at you."
+          }
+        },
+        {
+          "to": "fin_molde",
+          "risk": "high",
+          "text": {
+            "es": "Entrar con el espejo",
+            "en": "Go in with the mirror"
+          },
+          "description": {
+            "es": "Es un encargo del rey; los encargos del rey se cumplen.",
+            "en": "It is the king’s errand; the king’s errands are carried out."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c4_puerta",
+      "chapter": 4,
+      "mood": "sacred",
+      "text": {
+        "es": "Te quedas en el umbral y golpeas el marco con el espejo.\n\n—¡Belish-tikal! ¡El rey manda esto!\n\nEl herrero mayor sale secándose las manos, enorme, con el pecho brillante de sudor. Detrás de él ves el molde abierto, el metal líquido, dos aprendices que no te miran.\n\nBelish-tikal mira el espejo. Después te mira a ti, parado del lado de afuera. Y después mira al cielo, como quien busca a alguien.\n\n—Entra —dice—. Adentro te lo recibo.\n\n—La casa es santa —contestas—. Yo la respeto. Toma el espejo aquí.\n\nEl herrero se queda quieto mucho tiempo. Al final estira la mano, toma el espejo y vuelve adentro sin decir palabra. No te arrojó al molde. No pudo.",
+        "en": "You stay on the threshold and knock on the doorframe with the mirror.\n\n“Belish-tikal! The king sends this!”\n\nThe chief smith comes out drying his hands, enormous, his chest shining with sweat. Behind him you see the open mold, the liquid metal, two apprentices who will not look at you.\n\nBelish-tikal looks at the mirror. Then he looks at you, standing outside. And then he looks up at the sky, like a man looking for someone.\n\n“Come in,” he says. “I will take it from you inside.”\n\n“The house is holy,” you answer. “I respect it. Take the mirror here.”\n\nThe smith stands still for a long time. At last he reaches out, takes the mirror and goes back inside without a word. He did not throw you into the mold. He could not."
+      },
+      "fact": {
+        "es": "Las estatuas de bronce se hacían con la técnica de la cera perdida: la figura de cera se cubría de arcilla, la cera se derretía al calor y el molde se llenaba de metal fundido.",
+        "en": "Bronze statues were made by the lost-wax technique: the wax figure was covered with clay, the wax melted in the heat and the mold was filled with molten metal."
+      },
+      "choices": [
+        {
+          "to": "c5_tablilla",
+          "text": {
+            "es": "Volver ante el rey",
+            "en": "Return to the king"
+          },
+          "description": {
+            "es": "Ur-Zababa va a querer saber por qué sigues vivo.",
+            "en": "Ur-Zababa will want to know why you are still alive."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c4_herrero",
+      "chapter": 4,
+      "mood": "dangerous",
+      "text": {
+        "es": "Entras un paso, solo uno, hasta donde la voz lo permite, y llamas al herrero por su nombre.\n\nBelish-tikal se acerca. Es enorme, y tiene en la mano una tenaza larga. Lo miras a los ojos.\n\n—El rey te manda su espejo —dices—. Y algo más que no me dijo. ¿Qué era?\n\nEl herrero no contesta. Pero su mirada va del espejo al molde abierto, y del molde a ti, y vuelve.\n\n—Hazlo —le dices—. Si puedes.\n\nPasa un rato muy largo. Los hornos rugen. Los aprendices se han ido.\n\nBelish-tikal baja la tenaza. Toma el espejo. —Vete, copero —dice en voz baja—. Y no vuelvas a esta casa.",
+        "en": "You take one step inside, only one, as far as the voice allows, and call the smith by his name.\n\nBelish-tikal comes closer. He is enormous, and he holds a long pair of tongs. You look him in the eye.\n\n“The king sends you his mirror,” you say. “And something else he did not tell me. What was it?”\n\nThe smith does not answer. But his gaze goes from the mirror to the open mold, from the mold to you, and back.\n\n“Do it,” you tell him. “If you can.”\n\nA very long moment passes. The furnaces roar. The apprentices have gone.\n\nBelish-tikal lowers the tongs. He takes the mirror. “Go, cupbearer,” he says quietly. “And never come back to this house.”"
+      },
+      "fact": {
+        "es": "El E-sikil, «la casa pura», aparece en el poema como taller de los herreros y «casa del destino». En Mesopotamia, los artesanos del metal solían trabajar dentro de los templos y los palacios.",
+        "en": "The E-sikil, “the pure house,” appears in the poem as the workshop of the smiths and the “house of destiny.” In Mesopotamia, metalworkers usually worked inside the temples and palaces."
+      },
+      "choices": [
+        {
+          "to": "c5_tablilla",
+          "text": {
+            "es": "Volver ante el rey",
+            "en": "Return to the king"
+          },
+          "description": {
+            "es": "Ur-Zababa va a querer saber por qué sigues vivo.",
+            "en": "Ur-Zababa will want to know why you are still alive."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_molde",
+      "chapter": 4,
+      "mood": "tragic",
+      "text": {
+        "es": "Entras con el espejo en alto, como el rey mandó.\n\nAdentro, el calor te golpea la cara. Belish-tikal te espera junto al molde abierto. No dice nada. Toma el espejo con una mano y a ti con la otra.\n\nLo último que ves es el metal: dorado, líquido, hermoso.\n\nSemanas después, en el patio del palacio de Kish, levantan una estatua de bronce de un joven con una copa en la mano. Ur-Zababa la mira cada mañana y duerme mejor. Le dura poco: Enlil ya había decidido que Kish perdiera la realeza, y el rey que la pierde no puede culpar a su copero. Solo que ahora nadie recuerda cómo se llamaba el muchacho de la estatua.",
+        "en": "You go in with the mirror held high, as the king ordered.\n\nInside, the heat strikes your face. Belish-tikal is waiting for you beside the open mold. He says nothing. He takes the mirror with one hand and you with the other.\n\nThe last thing you see is the metal: golden, liquid, beautiful.\n\nWeeks later, in the courtyard of the palace of Kish, they raise a bronze statue of a young man with a cup in his hand. Ur-Zababa looks at it every morning and sleeps better. It does not last long: Enlil had already decided that Kish would lose the kingship, and the king who loses it cannot blame his cupbearer. Except that now no one remembers the name of the boy in the statue."
+      },
+      "fact": {
+        "es": "El poema cuenta que Sargón, obedeciendo a Inanna, se encuentra con el herrero mayor «solo en la puerta» del E-sikil, y por eso no lo arrojan al molde. Al verlo volver vivo, Ur-Zababa se asusta todavía más.",
+        "en": "The poem says that Sargon, obeying Inanna, meets the chief smith “only at the door” of the E-sikil, and so he is not thrown into the mold. When Ur-Zababa sees him come back alive, he is even more afraid."
+      },
+      "ending": {
+        "type": "tragic",
+        "title": {
+          "es": "La estatua de bronce",
+          "en": "The Bronze Statue"
+        }
+      },
+      "choices": []
+    },
+    {
+      "id": "c5_tablilla",
+      "chapter": 5,
+      "mood": "mysterious",
+      "text": {
+        "es": "Cuando el rey te ve entrar vivo, se le va el color de la cara. Esa noche nadie lo oye dormir.\n\nA la mañana te llama. Tiene en las manos una tablilla de arcilla, todavía húmeda, con los signos recién marcados. En aquellos días se escribía en tablillas, pero nadie había inventado todavía el sobre de arcilla que las cubre y las sella: los signos quedaban a la vista de cualquiera que supiera leerlos.\n\n—Lleva esto a Lugalzagesi, rey de Uruk —dice—. Es un mensaje de amistad entre reyes. Ve solo. Ve rápido.\n\nTomas la tablilla. Pesa poco. Los signos están frescos bajo tus dedos.\n\nLugalzagesi es el hombre más poderoso de Sumer. Y tú sabes, desde hace dos días, que tu rey quiere verte muerto.",
+        "en": "When the king sees you walk in alive, the color drains from his face. That night no one hears him sleep.\n\nIn the morning he summons you. In his hands he holds a clay tablet, still damp, the signs freshly pressed. In those days people wrote on tablets, but no one had yet invented the clay envelope that covers and seals them: the signs lay open to anyone who could read them.\n\n“Take this to Lugalzagesi, king of Uruk,” he says. “It is a message of friendship between kings. Go alone. Go quickly.”\n\nYou take the tablet. It weighs little. The signs are fresh under your fingers.\n\nLugalzagesi is the most powerful man in Sumer. And you have known for two days that your king wants you dead."
+      },
+      "fact": {
+        "es": "El poema dice: «En aquellos días existía la escritura en tablillas, pero no existía el sobre de arcilla». Ur-Zababa manda a Sargón a Uruk con una carta que pide matar al portador: la más antigua que se conoce en la literatura.",
+        "en": "The poem says: “In those days, writing on tablets existed, but the clay envelope did not yet exist.” Ur-Zababa sends Sargon to Uruk with a letter asking that the bearer be killed: the oldest such letter known in literature."
+      },
+      "choices": [
+        {
+          "to": "c5_fiel",
+          "risk": "low",
+          "text": {
+            "es": "Llevar la tablilla sin leerla",
+            "en": "Carry the tablet without reading it"
+          },
+          "description": {
+            "es": "Eres el copero del rey. Vas adonde te mandan.",
+            "en": "You are the king’s cupbearer. You go where you are sent."
+          }
+        },
+        {
+          "to": "c5_leer",
+          "risk": "medium",
+          "text": {
+            "es": "Leerla en el camino",
+            "en": "Read it on the way"
+          },
+          "description": {
+            "es": "El escriba te enseñó algunos signos.",
+            "en": "The scribe taught you a few signs."
+          }
+        },
+        {
+          "to": "fin_huerto",
+          "risk": "medium",
+          "text": {
+            "es": "Tirar la tablilla y volver al huerto",
+            "en": "Toss the tablet and return to the orchard"
+          },
+          "description": {
+            "es": "Akki te dijo que no rompieras el cántaro.",
+            "en": "Akki told you not to break the jar."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5_fiel",
+      "chapter": 5,
+      "mood": "peaceful",
+      "text": {
+        "es": "No la lees. Un copero que lee las cartas de su rey no es un copero.\n\nCaminas tres días hacia el sur, siguiendo el Éufrates. La tablilla va envuelta en un trapo, contra el pecho. De noche la sientes como una piedra.\n\nEn el camino te alcanza una caravana que viene de Umma. Los mercaderes hablan de Lugalzagesi: era rey de Umma y ahora lo es de Uruk y de cincuenta ciudades; dice que Enlil le dio la tierra desde el mar de abajo hasta el mar de arriba. Un hombre así no recibe a un copero. Lo manda matar o lo manda a servir.\n\nAl cuarto día ves las murallas de Uruk, las que dicen que levantó Gilgamesh, enormes contra el cielo.",
+        "en": "You do not read it. A cupbearer who reads his king’s letters is no cupbearer.\n\nYou walk south for three days, following the Euphrates. The tablet travels wrapped in a cloth, against your chest. At night it feels like a stone.\n\nOn the road a caravan from Umma catches up with you. The merchants talk of Lugalzagesi: he was king of Umma and is now king of Uruk and of fifty cities; he says Enlil gave him the land from the Lower Sea to the Upper Sea. A man like that does not receive a cupbearer. He has him killed or he puts him to serve.\n\nOn the fourth day you see the walls of Uruk, the ones they say Gilgamesh built, huge against the sky."
+      },
+      "fact": {
+        "es": "Lugalzagesi fue rey de Umma y después de Uruk. En una inscripción sobre vasos dedicados en Nippur afirma que Enlil le entregó las tierras «desde el mar de abajo hasta el mar de arriba»: del golfo Pérsico al Mediterráneo.",
+        "en": "Lugalzagesi was king of Umma and then of Uruk. In an inscription on vessels dedicated at Nippur he claims that Enlil gave him the lands “from the Lower Sea to the Upper Sea”: from the Persian Gulf to the Mediterranean."
+      },
+      "choices": [
+        {
+          "to": "c6_eanna",
+          "text": {
+            "es": "Entrar en Uruk",
+            "en": "Enter Uruk"
+          },
+          "description": {
+            "es": "El Eanna te espera, y en él, Lugalzagesi.",
+            "en": "The Eanna is waiting for you, and in it, Lugalzagesi."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5_leer",
+      "chapter": 5,
+      "mood": "dangerous",
+      "text": {
+        "es": "La primera noche, junto al fuego, desenvuelves la tablilla. El escriba te enseñó algunos signos, los suficientes para leer listas de cebada y nombres.\n\nReconoces tu nombre. Reconoces el signo de «matar». Reconoces el de «portador».\n\nTe quedas mirando el fuego mucho tiempo. Podrías borrar los signos: la arcilla ya está dura, pero una piedra bastaría. Podrías escribir otros. Podrías no llegar nunca a Uruk.\n\nY sin embargo, cuando amanece, vuelves a envolver la tablilla tal como estaba y sigues hacia el sur. Porque la diosa del río de sangre no te sacó de un molde de bronce para que te escondieras de una tablilla.\n\nAl cuarto día ves las murallas de Uruk.",
+        "en": "On the first night, by the fire, you unwrap the tablet. The scribe taught you a few signs, enough to read lists of barley and names.\n\nYou recognize your name. You recognize the sign for “kill.” You recognize the one for “bearer.”\n\nYou sit staring at the fire for a long time. You could erase the signs: the clay is already hard, but a stone would do. You could write others. You could simply never arrive in Uruk.\n\nAnd yet, when dawn comes, you wrap the tablet up again just as it was and go on south. Because the goddess of the river of blood did not pull you out of a bronze mold so that you could hide from a tablet.\n\nOn the fourth day you see the walls of Uruk."
+      },
+      "fact": {
+        "es": "El motivo de la carta que pide matar a quien la lleva vuelve siglos después: en la Ilíada, el rey de Argos manda a Belerofonte con «signos funestos», y en la Biblia, David envía a Urías con su propia sentencia.",
+        "en": "The motif of the letter asking for its bearer to be killed returns centuries later: in the Iliad, the king of Argos sends Bellerophon with “baneful signs,” and in the Bible, David sends Uriah carrying his own death sentence."
+      },
+      "choices": [
+        {
+          "to": "c6_eanna",
+          "text": {
+            "es": "Entrar en Uruk",
+            "en": "Enter Uruk"
+          },
+          "description": {
+            "es": "El Eanna te espera, y en él, Lugalzagesi.",
+            "en": "The Eanna is waiting for you, and in it, Lugalzagesi."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_huerto",
+      "chapter": 5,
+      "mood": "peaceful",
+      "text": {
+        "es": "En la orilla, al tercer día, sacas la tablilla del trapo y la tiras al Éufrates. Se hunde sin ruido.\n\nNo vas a Uruk. No vuelves a Kish. Caminas río arriba durante semanas, hasta que el agua se abre entre palmeras y reconoces el huerto.\n\nAkki está más viejo. No pregunta nada. Te da el cántaro y te señala los surcos.\n\nVives muchos años en ese huerto. Cuando pasan las caravanas, oyes hablar de guerras en el sur: un rey nuevo que levantó una ciudad llamada Agade, que venció a Lugalzagesi, que lavó sus armas en el mar. Nunca dicen su nombre, o dicen uno que no es el tuyo.\n\nAlguna tarde, al lavarte en el río, te parece que una mujer te mira desde la orilla. Cuando parpadeas, solo queda el agua.",
+        "en": "On the bank, on the third day, you take the tablet out of the cloth and throw it into the Euphrates. It sinks without a sound.\n\nYou do not go to Uruk. You do not go back to Kish. You walk upriver for weeks, until the water opens out among the palms and you recognize the orchard.\n\nAkki is older. He asks nothing. He hands you the jar and points to the furrows.\n\nYou live many years in that orchard. When the caravans pass, you hear talk of wars in the south: a new king who built a city called Agade, who defeated Lugalzagesi, who washed his weapons in the sea. They never say his name, or they say one that is not yours.\n\nSome evenings, as you wash in the river, it seems to you that a woman is watching from the bank. When you blink, only the water is left."
+      },
+      "fact": {
+        "es": "La Lista Real Sumeria dice de Sargón: «cuyo padre fue jardinero, copero de Ur-Zababa, rey de Agade, el que construyó Agade; reinó 56 años». El poema sumerio, en cambio, llama a su padre La'ibum.",
+        "en": "The Sumerian King List says of Sargon: “whose father was a gardener, the cupbearer of Ur-Zababa, king of Agade, who built Agade; he ruled for 56 years.” The Sumerian poem, however, names his father La’ibum."
+      },
+      "ending": {
+        "type": "alternative",
+        "title": {
+          "es": "El huerto de Akki",
+          "en": "Akki’s Orchard"
+        }
+      },
+      "choices": []
+    },
+    {
+      "id": "c6_eanna",
+      "chapter": 6,
+      "mood": "dangerous",
+      "text": {
+        "es": "El Eanna, la casa de Inanna en Uruk, es más grande que todo el palacio de Kish. Te hacen esperar en un patio de ladrillo cocido hasta que el sol está alto.\n\nLugalzagesi te recibe sentado, con su esposa a un lado. Es un hombre de barba larga y ojos pequeños, que ya han visto cincuenta ciudades arrodilladas. Toma la tablilla y la lee en silencio.\n\nDespués se ríe.\n\n—Ur-Zababa me manda un regalo —dice—. Me pide que mate al que trae esta carta. ¿Sabes lo que dice, copero?\n\nSu esposa te mira. Hay algo en su cara que no es burla.\n\n—Dame una razón —dice Lugalzagesi— para no darle el gusto a tu rey.",
+        "en": "The Eanna, the house of Inanna in Uruk, is bigger than the whole palace of Kish. They keep you waiting in a courtyard of baked brick until the sun is high.\n\nLugalzagesi receives you seated, his wife at his side. He is a man with a long beard and small eyes that have already seen fifty cities on their knees. He takes the tablet and reads it in silence.\n\nThen he laughs.\n\n“Ur-Zababa sends me a gift,” he says. “He asks me to kill the man who brings this letter. Do you know what it says, cupbearer?”\n\nHis wife looks at you. There is something in her face that is not mockery.\n\n“Give me a reason,” says Lugalzagesi, “not to oblige your king.”"
+      },
+      "fact": {
+        "es": "El poema se interrumpe en este punto. Las últimas líneas conservadas mencionan a la esposa de Lugalzagesi y al rey yendo al Eanna de Uruk, pero no se sabe cómo escapó Sargón de la carta.",
+        "en": "The poem breaks off at this point. The last surviving lines mention Lugalzagesi’s wife and the king going to the Eanna of Uruk, but how Sargon escaped the letter is not known."
+      },
+      "choices": [
+        {
+          "to": "c6_diosa",
+          "risk": "medium",
+          "text": {
+            "es": "Decirle que Inanna te eligió",
+            "en": "Tell him Inanna chose you"
+          },
+          "description": {
+            "es": "En la casa de Inanna, su nombre pesa.",
+            "en": "In the house of Inanna, her name carries weight."
+          }
+        },
+        {
+          "to": "c6_humilde",
+          "risk": "low",
+          "text": {
+            "es": "Ofrecerte como su servidor",
+            "en": "Offer yourself as his servant"
+          },
+          "description": {
+            "es": "Un rey siempre necesita un copero que no mienta.",
+            "en": "A king always needs a cupbearer who does not lie."
+          }
+        },
+        {
+          "to": "fin_eanna",
+          "risk": "high",
+          "text": {
+            "es": "Saltar sobre él",
+            "en": "Leap at him"
+          },
+          "description": {
+            "es": "Si vas a morir, que no sea de rodillas.",
+            "en": "If you are going to die, let it not be on your knees."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6_diosa",
+      "chapter": 6,
+      "mood": "sacred",
+      "text": {
+        "es": "—Porque estás sentado en la casa de Inanna —dices—, y fue Inanna la que me sacó del río y la que me paró en la puerta del molde. Si me matas aquí, la ofendes en su casa. Si me dejas ir, le debes un favor.\n\nLugalzagesi deja de reírse. Mira a su esposa. Ella asiente, apenas.\n\n—Los dioses eligen raro —dice el rey—. Vete, copero. Vuelve a Kish y dile a Ur-Zababa que yo no hago el trabajo de los cobardes.\n\nTe vas. Pero no vuelves a Kish. Al cruzar la puerta del Eanna sabes que el copero se quedó adentro, y que el que sale es otro.\n\nCaminas hacia el norte, hacia un lugar junto al río donde todavía no hay nada. Allí levantarás Agade.",
+        "en": "“Because you are sitting in the house of Inanna,” you say, “and it was Inanna who pulled me from the river and who stopped me at the door of the mold. If you kill me here, you offend her in her own house. If you let me go, she owes you a favor.”\n\nLugalzagesi stops laughing. He looks at his wife. She nods, barely.\n\n“The gods choose strangely,” says the king. “Go, cupbearer. Go back to Kish and tell Ur-Zababa that I do not do the work of cowards.”\n\nYou go. But you do not go back to Kish. As you pass through the gate of the Eanna you know that the cupbearer stayed inside, and that the one who walks out is someone else.\n\nYou walk north, toward a place by the river where there is still nothing. There you will build Agade."
+      },
+      "fact": {
+        "es": "El Eanna, «la casa del cielo», era el templo de Inanna en Uruk, uno de los más antiguos de Mesopotamia. Sargón conquistó Uruk y, según sus inscripciones, destruyó sus murallas.",
+        "en": "The Eanna, “the house of heaven,” was the temple of Inanna in Uruk, one of the oldest in Mesopotamia. Sargon conquered Uruk and, according to his inscriptions, destroyed its walls."
+      },
+      "choices": [
+        {
+          "to": "c7_batalla",
+          "text": {
+            "es": "Levantar Agade y juntar un ejército",
+            "en": "Build Agade and raise an army"
+          },
+          "description": {
+            "es": "Los hombres del río te siguen; los de Kish, pronto.",
+            "en": "The men of the river follow you; the men of Kish soon will."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c6_humilde",
+      "chapter": 6,
+      "mood": "mysterious",
+      "text": {
+        "es": "Te arrodillas.\n\n—Señor, serví diez años una copa sin derramarla. Ur-Zababa me manda a morir porque teme un sueño. Tú no temes nada. Déjame servirte a ti.\n\nLugalzagesi te estudia. Su esposa le dice algo al oído que no alcanzas a oír.\n\n—Un copero que sabe por qué lo mandan a morir y viene igual —dice el rey— es un hombre peligroso o un hombre fiel. Todavía no sé cuál. Vete. No quiero averiguarlo en mi casa.\n\nSales del Eanna con la vida. Y con algo más: Lugalzagesi te ha visto la cara, y no volverá a verla hasta el día de la batalla.\n\nNo vuelves a Kish. Vas al norte, a levantar tu propia ciudad.",
+        "en": "You kneel.\n\n“My lord, for ten years I served a cup without spilling it. Ur-Zababa sends me to die because he fears a dream. You fear nothing. Let me serve you instead.”\n\nLugalzagesi studies you. His wife says something in his ear that you cannot hear.\n\n“A cupbearer who knows why he is sent to die and comes anyway,” says the king, “is either a dangerous man or a faithful one. I do not know which yet. Go. I do not want to find out in my own house.”\n\nYou leave the Eanna with your life. And with something more: Lugalzagesi has seen your face, and he will not see it again until the day of battle.\n\nYou do not go back to Kish. You go north, to build a city of your own."
+      },
+      "fact": {
+        "es": "Agade, la capital de Sargón, nunca fue encontrada. Se cree que estaba en el norte de Babilonia, no lejos de Kish, quizás junto al Tigris. El poema «La maldición de Agade» cuenta su ruina en tiempos de su nieto.",
+        "en": "Agade, Sargon’s capital, has never been found. It is thought to have stood in northern Babylonia, not far from Kish, perhaps on the Tigris. The poem “The Curse of Agade” tells of its ruin in the days of his grandson."
+      },
+      "choices": [
+        {
+          "to": "c7_batalla",
+          "text": {
+            "es": "Levantar Agade y juntar un ejército",
+            "en": "Build Agade and raise an army"
+          },
+          "description": {
+            "es": "Los hombres del río te siguen; los de Kish, pronto.",
+            "en": "The men of the river follow you; the men of Kish soon will."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_eanna",
+      "chapter": 6,
+      "mood": "tragic",
+      "text": {
+        "es": "Saltas. Llegas a tocarle la barba antes de que los guardias te derriben.\n\nLugalzagesi ni se levanta. Te mira desde el trono mientras te sujetan contra el ladrillo.\n\n—Le voy a dar el gusto a Ur-Zababa después de todo —dice.\n\nMueres en el patio del Eanna, bajo los ojos de la diosa que te había elegido. Inanna no interviene: ella detiene moldes y detiene cartas, pero no detiene a un hombre que elige morir.\n\nEn Kish, Ur-Zababa duerme por fin. Pero Enlil ya había decidido, y la realeza se va igual de Kish, a otras manos. Lugalzagesi reina veinticinco años, hasta que otro, uno sin leyenda, lo vence. Y la ciudad de Agade nunca se levanta.",
+        "en": "You leap. You get as far as touching his beard before the guards bring you down.\n\nLugalzagesi does not even stand up. He watches you from the throne while they pin you against the brick.\n\n“I will oblige Ur-Zababa after all,” he says.\n\nYou die in the courtyard of the Eanna, under the eyes of the goddess who had chosen you. Inanna does not intervene: she stops molds and she stops letters, but she does not stop a man who chooses to die.\n\nIn Kish, Ur-Zababa sleeps at last. But Enlil had already decided, and the kingship leaves Kish anyway, for other hands. Lugalzagesi reigns twenty-five years, until another man, one without a legend, defeats him. And the city of Agade is never built."
+      },
+      "fact": {
+        "es": "La Lista Real Sumeria le da a Lugalzagesi un reinado de 25 años en Uruk, y después pasa la realeza a Agade. En realidad las dos dinastías se superpusieron: la lista las ordena una detrás de otra.",
+        "en": "The Sumerian King List gives Lugalzagesi a reign of 25 years at Uruk, and then passes the kingship to Agade. In reality the two dynasties overlapped: the list sets them one after the other."
+      },
+      "ending": {
+        "type": "tragic",
+        "title": {
+          "es": "Sangre en el Eanna",
+          "en": "Blood in the Eanna"
+        }
+      },
+      "choices": []
+    },
+    {
+      "id": "c7_batalla",
+      "chapter": 7,
+      "mood": "epic",
+      "text": {
+        "es": "Pasan los años como pasa el río.\n\nLevantas Agade junto al agua, con hombres del río y del desierto que hablan tu lengua. Tomas Kish, donde Ur-Zababa ya no reina, y la ciudad de los reyes antiguos te abre las puertas. Después, una tras otra, las ciudades del norte. Treinta y tres batallas, y en ninguna te vencieron.\n\nAhora, en la llanura frente a Uruk, Lugalzagesi te espera con los gobernadores de sus cincuenta ciudades. Es la batalla que decide quién manda en Sumer.\n\nTus hombres son menos. Pero comen de tu mesa: cinco mil cuatrocientos, cada día, y ninguno fue soldado de otro rey antes que tuyo.\n\nTu general espera la orden. El sol acaba de salir.",
+        "en": "The years pass as the river passes.\n\nYou build Agade by the water, with men of the river and of the desert who speak your language. You take Kish, where Ur-Zababa no longer reigns, and the city of the ancient kings opens its gates to you. Then, one after another, the cities of the north. Thirty-three battles, and in none of them were you beaten.\n\nNow, on the plain before Uruk, Lugalzagesi awaits you with the governors of his fifty cities. It is the battle that decides who rules Sumer.\n\nYour men are fewer. But they eat at your table: five thousand four hundred, every day, and not one of them was another king’s soldier before he was yours.\n\nYour general awaits the order. The sun has just risen."
+      },
+      "fact": {
+        "es": "Las inscripciones de Sargón, copiadas en Nippur, dicen que venció en 34 batallas, que conquistó Uruk y destruyó sus murallas, y que 5.400 hombres comían pan cada día ante él: quizás el primer ejército permanente.",
+        "en": "Sargon’s inscriptions, copied at Nippur, say that he was victorious in 34 battles, that he conquered Uruk and destroyed its walls, and that 5,400 men ate bread daily before him: perhaps the first standing army."
+      },
+      "choices": [
+        {
+          "to": "c7_campo",
+          "risk": "medium",
+          "text": {
+            "es": "Atacar de frente al amanecer",
+            "en": "Attack head-on at dawn"
+          },
+          "description": {
+            "es": "Los hombres de las cincuenta ciudades no pelean por un solo rey.",
+            "en": "The men of the fifty cities do not fight for a single king."
+          }
+        },
+        {
+          "to": "c7_murallas",
+          "risk": "low",
+          "text": {
+            "es": "Cortar el agua de Uruk y esperar",
+            "en": "Cut off Uruk’s water and wait"
+          },
+          "description": {
+            "es": "Una ciudad sin agua se rinde antes que un ejército.",
+            "en": "A city without water surrenders before an army does."
+          }
+        },
+        {
+          "to": "c7_nombre",
+          "risk": "medium",
+          "text": {
+            "es": "Enviarle a Lugalzagesi tu nombre",
+            "en": "Send Lugalzagesi your name"
+          },
+          "description": {
+            "es": "Que sepa quién volvió del Eanna.",
+            "en": "Let him know who came back from the Eanna."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7_campo",
+      "chapter": 7,
+      "mood": "epic",
+      "text": {
+        "es": "Atacas con el sol a la espalda. Los hombres de Agade avanzan en silencio, con las lanzas bajas, y los de las cincuenta ciudades los ven venir y no saben a qué rey obedecer.\n\nEl choque dura toda la mañana. Al mediodía, la línea de Uruk se quiebra por el centro: los de Umma, la ciudad de Lugalzagesi, pelean; los de las ciudades sometidas, no. Lugalzagesi, en su carro, grita órdenes que nadie oye.\n\nLo alcanzas tú mismo. No lo matas. Le ponen el cepo de madera en el cuello, el de los prisioneros, y lo llevas caminando hasta Nippur, hasta la puerta de Enlil, para que el dios que decide quién reina lo vea de rodillas.\n\nTreinta y cuatro batallas. Ninguna perdida.",
+        "en": "You attack with the sun at your back. The men of Agade advance in silence, spears lowered, and the men of the fifty cities see them coming and do not know which king to obey.\n\nThe clash lasts all morning. At midday, the line of Uruk breaks at the center: the men of Umma, Lugalzagesi’s own city, fight; the men of the subject cities do not. Lugalzagesi, in his chariot, shouts orders that no one hears.\n\nYou reach him yourself. You do not kill him. They put the wooden neck-stock on him, the one for prisoners, and you lead him on foot to Nippur, to the gate of Enlil, so that the god who decides who reigns may see him on his knees.\n\nThirty-four battles. Not one lost."
+      },
+      "fact": {
+        "es": "Sargón cuenta que capturó a Lugalzagesi en batalla y lo llevó «con el cepo al cuello hasta la puerta de Enlil», en Nippur. Nippur era el centro religioso de Sumer: ahí Enlil confirmaba a los reyes.",
+        "en": "Sargon records that he captured Lugalzagesi in battle and led him “in a neck-stock to the gate of Enlil,” at Nippur. Nippur was the religious center of Sumer: there Enlil confirmed the kings."
+      },
+      "choices": [
+        {
+          "to": "c8_agade",
+          "text": {
+            "es": "Volver a Agade",
+            "en": "Return to Agade"
+          },
+          "description": {
+            "es": "La ciudad que levantaste espera a su rey.",
+            "en": "The city you built is waiting for its king."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7_murallas",
+      "chapter": 7,
+      "mood": "mysterious",
+      "text": {
+        "es": "No atacas. Mandas a tus hombres a cavar.\n\nEn diez días desvías el canal que alimenta a Uruk. Los campos de la ciudad se secan primero; después, los pozos. Lugalzagesi manda salir a sus tropas tres veces, y tres veces las rechazas sin perseguirlas.\n\nAl mes, los gobernadores de las cincuenta ciudades empiezan a irse de noche, cada uno a la suya. Al segundo mes, Lugalzagesi sale a pelear con los que le quedan, porque un rey sin agua no puede esperar.\n\nLo vences en la llanura. Le ponen el cepo de madera en el cuello y lo llevas hasta Nippur, hasta la puerta de Enlil. Las murallas de Uruk, las que dicen que levantó Gilgamesh, las derribas tú.",
+        "en": "You do not attack. You send your men to dig.\n\nIn ten days you divert the canal that feeds Uruk. The city’s fields dry up first; then the wells. Lugalzagesi sends his troops out three times, and three times you drive them back without pursuing them.\n\nAfter a month, the governors of the fifty cities begin to slip away at night, each to his own city. In the second month, Lugalzagesi comes out to fight with the men he has left, because a king without water cannot wait.\n\nYou defeat him on the plain. They put the wooden neck-stock on him and you lead him to Nippur, to the gate of Enlil. The walls of Uruk, the ones they say Gilgamesh built, you tear down yourself."
+      },
+      "fact": {
+        "es": "Las ciudades sumerias vivían de los canales que traían el agua de los ríos. Cortar o desviar un canal era un arma de guerra, y la larga disputa entre Lagash y Umma fue, en buena parte, por el agua y los campos de la frontera.",
+        "en": "The Sumerian cities lived by the canals that brought water from the rivers. Cutting or diverting a canal was a weapon of war, and the long quarrel between Lagash and Umma was largely over water and the fields along their border."
+      },
+      "choices": [
+        {
+          "to": "c8_agade",
+          "text": {
+            "es": "Volver a Agade",
+            "en": "Return to Agade"
+          },
+          "description": {
+            "es": "La ciudad que levantaste espera a su rey.",
+            "en": "The city you built is waiting for its king."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7_nombre",
+      "chapter": 7,
+      "mood": "sacred",
+      "text": {
+        "es": "Antes de la batalla mandas un heraldo con una tablilla. Esta vez la escribiste tú, envuelta en cuero y cerrada con tu sello.\n\nDice solo: «Sharru-kin, el rey verdadero, el que salió vivo del Eanna».\n\nLugalzagesi la lee ante sus gobernadores. Dicen que se quedó mirando el sello mucho tiempo. Dicen que su esposa sonrió.\n\nEsa mañana, cuando atacas, la mitad de las cincuenta ciudades no pelea: un rey que escapó de dos muertes tiene a los dioses de su lado, y los gobernadores lo saben. Lo vences antes del mediodía.\n\nLe ponen el cepo de madera en el cuello y lo llevas hasta Nippur, hasta la puerta de Enlil.",
+        "en": "Before the battle you send a herald with a tablet. This time you wrote it yourself, wrapped in leather and closed with your seal.\n\nIt says only: “Sharru-kin, the true king, the one who came out of the Eanna alive.”\n\nLugalzagesi reads it before his governors. They say he stared at the seal for a long time. They say his wife smiled.\n\nThat morning, when you attack, half of the fifty cities do not fight: a king who has escaped two deaths has the gods on his side, and the governors know it. You defeat him before midday.\n\nThey put the wooden neck-stock on him and you lead him to Nippur, to the gate of Enlil."
+      },
+      "fact": {
+        "es": "Sargón es la forma bíblica (por el asirio Sargón II, en Isaías) del acadio Sharru-kin, «el rey es verdadero» o «legítimo». Probablemente fue un nombre que tomó al reinar, no el que recibió al nacer.",
+        "en": "Sargon is the biblical form (from the Assyrian Sargon II, in Isaiah) of the Akkadian Sharru-kin, “the king is true” or “legitimate.” It was probably a name he took on becoming king, not the one he was given at birth."
+      },
+      "choices": [
+        {
+          "to": "c8_agade",
+          "text": {
+            "es": "Volver a Agade",
+            "en": "Return to Agade"
+          },
+          "description": {
+            "es": "La ciudad que levantaste espera a su rey.",
+            "en": "The city you built is waiting for its king."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c8_agade",
+      "chapter": 8,
+      "mood": "triumphant",
+      "text": {
+        "es": "Agade ya no es un lugar junto al río donde no hay nada. Es la ciudad más grande que se ha visto: en su muelle amarran los barcos de Dilmun, de Magan y de Meluhha, y en su palacio comen cada día los cinco mil cuatrocientos.\n\nEres rey de Kish, rey de Agade, señor de la tierra entre los dos ríos. Lavaste tus armas en el mar de abajo. Tu hija Enheduanna escribe himnos en Ur.\n\nPero el rey que lo tiene todo tiene que decidir qué hacer con ello. En la sala del trono te esperan tres hombres: un mensajero de las ciudades del sur, que piden volver a tener sus propios reyes; un constructor, que trae un plan para una ciudad nueva junto a Agade hecha con la tierra sagrada de Babilonia; y tu general, que señala el oeste, hacia los cedros y las montañas de plata.\n\nInanna no aparece en el río desde hace años. Esta vez decides tú.",
+        "en": "Agade is no longer a place by the river where there is nothing. It is the largest city ever seen: at its quay the boats of Dilmun, of Magan and of Meluhha are moored, and in its palace the five thousand four hundred eat every day.\n\nYou are king of Kish, king of Agade, lord of the land between the two rivers. You washed your weapons in the Lower Sea. Your daughter Enheduanna writes hymns in Ur.\n\nBut the king who has everything must decide what to do with it. In the throne room three men are waiting for you: a messenger from the cities of the south, which ask to have their own kings again; a builder, who brings a plan for a new city beside Agade made with the sacred soil of Babylon; and your general, who points west, toward the cedars and the mountains of silver.\n\nInanna has not appeared in the river for years. This time you decide."
+      },
+      "fact": {
+        "es": "Enheduanna, hija de Sargón, fue suma sacerdotisa del dios luna Nanna en Ur y se la considera la primera autora de la historia conocida por su nombre: himnos a Inanna llevan su firma. Un disco de alabastro con su imagen se encontró en Ur.",
+        "en": "Enheduanna, Sargon’s daughter, was high priestess of the moon god Nanna at Ur and is considered the first author in history known by name: hymns to Inanna bear her signature. An alabaster disk with her image was found at Ur."
+      },
+      "choices": [
+        {
+          "to": "fin_verdadero",
+          "risk": "medium",
+          "text": {
+            "es": "Marchar al oeste: Mari, Ebla, los cedros",
+            "en": "March west: Mari, Ebla, the cedars"
+          },
+          "description": {
+            "es": "El imperio no se detiene porque tú estés cansado.",
+            "en": "The empire does not stop because you are tired."
+          }
+        },
+        {
+          "to": "fin_kish",
+          "risk": "low",
+          "text": {
+            "es": "Devolverles sus reyes a las ciudades del sur",
+            "en": "Give the southern cities back their kings"
+          },
+          "description": {
+            "es": "Rey de Kish y de Agade: con eso te alcanza.",
+            "en": "King of Kish and of Agade: that is enough for you."
+          }
+        },
+        {
+          "to": "fin_babilonia",
+          "risk": "high",
+          "text": {
+            "es": "Construir la nueva Babilonia junto a Agade",
+            "en": "Build the new Babylon beside Agade"
+          },
+          "description": {
+            "es": "Una ciudad santa junto a la tuya: nadie la olvidará.",
+            "en": "A holy city beside your own: no one will forget it."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fin_verdadero",
+      "chapter": 8,
+      "mood": "triumphant",
+      "text": {
+        "es": "Marchas al oeste. Mari, Yarmuti, Ebla, hasta el Bosque de los Cedros y las Montañas de Plata: tus inscripciones lo contarán así, y los escribas las copiarán durante siglos.\n\nVuelves viejo. En tu vejez, dirán las crónicas, todas las tierras se rebelaron y te sitiaron en Agade; saliste con los que te quedaban y las venciste una vez más.\n\nReinas más de cincuenta años. Mueres en tu cama, que no es poca cosa para un hombre al que quisieron fundir en bronce. Tus hijos Rimush y Manishtushu heredan el trono; tu nieto Naram-Sin se hará llamar rey de las cuatro regiones, y dios.\n\nY en Nínive, mil quinientos años después, un escriba copiará en una tablilla una historia que empieza así: «Sargón, rey poderoso, rey de Agade, soy yo. Mi madre fue una sacerdotisa; a mi padre no lo conocí. Me concibió en secreto y me dio a luz en secreto. Me puso en una cesta de juncos…».",
+        "en": "You march west. Mari, Yarmuti, Ebla, as far as the Cedar Forest and the Silver Mountains: your inscriptions will tell it so, and the scribes will copy them for centuries.\n\nYou come back old. In your old age, the chronicles will say, all the lands rose against you and besieged you in Agade; you went out with the men you had left and defeated them once more.\n\nYou reign more than fifty years. You die in your bed, which is no small thing for a man they tried to cast in bronze. Your sons Rimush and Manishtushu inherit the throne; your grandson Naram-Sin will call himself king of the four quarters, and a god.\n\nAnd in Nineveh, fifteen hundred years later, a scribe will copy onto a tablet a story that begins like this: “Sargon, the mighty king, king of Agade, am I. My mother was a priestess; my father I knew not. She conceived me in secret and bore me in secret. She set me in a basket of rushes…”"
+      },
+      "fact": {
+        "es": "Sargón reinó hacia 2334–2279 a. C. Lo sucedieron sus hijos Rimush y Manishtushu; su nieto Naram-Sin fue el primero en llamarse «rey de las cuatro regiones» y en hacerse adorar como dios en vida.",
+        "en": "Sargon reigned around 2334–2279 BCE. He was succeeded by his sons Rimush and Manishtushu; his grandson Naram-Sin was the first to call himself “king of the four quarters” and to be worshipped as a god in his lifetime."
+      },
+      "ending": {
+        "type": "myth",
+        "title": {
+          "es": "El rey verdadero",
+          "en": "The True King"
+        }
+      },
+      "choices": []
+    },
+    {
+      "id": "fin_kish",
+      "chapter": 8,
+      "mood": "peaceful",
+      "text": {
+        "es": "Dejas que las ciudades del sur elijan sus reyes, con una condición: que coman de tu mesa una vez al año, en Agade, y que sus escribas aprendan a escribir tu lengua.\n\nNo marchas al oeste. No habrá cedros ni montañas de plata en tus inscripciones; solo Kish, Agade y treinta y cuatro batallas. Los mercaderes se quejan de que nadie los protege tan lejos. Tu general se aburre.\n\nPero Sumer no se rebela en tu vejez. Las ciudades del sur se acostumbran a tener dos lenguas y un solo mercado. Enheduanna escribe en las dos.\n\nCuando mueres no dejas un imperio, sino una costumbre: la de un rey de Agade que no pedía más de lo que las ciudades podían dar. Dura menos que la leyenda. Pero algunos, en Uruk, te recuerdan con cariño, que es más de lo que consiguieron los que vinieron después.",
+        "en": "You let the cities of the south choose their kings, on one condition: that they eat at your table once a year, in Agade, and that their scribes learn to write your language.\n\nYou do not march west. There will be no cedars or silver mountains in your inscriptions; only Kish, Agade and thirty-four battles. The merchants complain that no one protects them so far away. Your general is bored.\n\nBut Sumer does not rise against you in your old age. The cities of the south grow used to having two languages and a single market. Enheduanna writes in both.\n\nWhen you die you leave not an empire but a custom: that of a king of Agade who asked no more than the cities could give. It does not last as long as the legend. But some, in Uruk, remember you with affection, which is more than those who came after you managed."
+      },
+      "fact": {
+        "es": "Sargón dice que en el muelle de Agade amarraban los barcos de Meluhha, Magan y Dilmun: el valle del Indo, Omán y Baréin. Su ciudad comerciaba con tierras a más de dos mil kilómetros de distancia.",
+        "en": "Sargon says that the boats of Meluhha, Magan and Dilmun were moored at the quay of Agade: the Indus valley, Oman and Bahrain. His city traded with lands more than two thousand kilometers away."
+      },
+      "ending": {
+        "type": "alternative",
+        "title": {
+          "es": "Rey de Kish, nada más",
+          "en": "King of Kish, Nothing More"
+        }
+      },
+      "choices": []
+    },
+    {
+      "id": "fin_babilonia",
+      "chapter": 8,
+      "mood": "tragic",
+      "text": {
+        "es": "Mandas cavar la tierra de Babilonia, la ciudad de Marduk, pequeña todavía, y con esa tierra levantas junto a Agade una Babilonia nueva, con sus templos y sus calles, a tu medida.\n\nMarduk, el señor de Babilonia, no lo perdona.\n\nPrimero te quita el sueño: pasas las noches caminando por el palacio. Después te quita las ciudades: de oriente a occidente, todas las tierras se rebelan a la vez. Te sitian en Agade. Sales con los cinco mil cuatrocientos y vences, porque siempre vences, pero ya no queda a quién gobernar: los campos están quemados y los canales, llenos de barro.\n\nMueres despierto, en una ciudad que es la copia de otra. Y las crónicas que te recuerdan empiezan por tu nombre y terminan por tu pecado.",
+        "en": "You order the soil of Babylon, the city of Marduk, still small, to be dug up, and with that soil you build beside Agade a new Babylon, with its temples and its streets, made to your measure.\n\nMarduk, the lord of Babylon, does not forgive it.\n\nFirst he takes away your sleep: you spend the nights walking through the palace. Then he takes away your cities: from east to west, all the lands rise against you at once. They besiege you in Agade. You go out with the five thousand four hundred and you win, because you always win, but there is no one left to rule: the fields are burned and the canals are full of mud.\n\nYou die awake, in a city that is a copy of another. And the chronicles that remember you begin with your name and end with your sin."
+      },
+      "fact": {
+        "es": "Dos crónicas babilónicas tardías cuentan que Sargón sacó tierra de Babilonia para levantar una ciudad igual junto a Agade; Marduk, ofendido, hizo que todas las tierras se rebelaran y le quitó el sueño. Es una leyenda escrita siglos después.",
+        "en": "Two late Babylonian chronicles say that Sargon took soil from Babylon to build a city just like it beside Agade; Marduk, offended, made all the lands rise against him and took away his sleep. It is a legend written centuries later."
+      },
+      "ending": {
+        "type": "tragic",
+        "title": {
+          "es": "La tierra de Babilonia",
+          "en": "The Soil of Babylon"
+        }
+      },
+      "choices": []
+    }
+  ]
+}
