@@ -3,7 +3,7 @@ description: "Anunnaki Tales: mitos interactivos de Mesopotamia."
 publish_to: 'none'
 
 # Antes del + va la versión visible; después, el versionCode de Android.
-# Hay que subirlo en cada build que se mande a Play (el último subido fue 11).
+# Hay que subirlo en cada build que se mande a Play (el último subido fue 13).
 version: 1.1.1+13
 
 environment:
