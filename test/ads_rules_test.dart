@@ -84,6 +84,7 @@ void main() {
           purchased: false,
           loadedAt: now.subtract(const Duration(minutes: 1)),
           now: now,
+          adventureStarts: 1,
         ),
         isTrue,
       );
@@ -95,13 +96,17 @@ void main() {
           purchased: true,
           loadedAt: now.subtract(const Duration(minutes: 1)),
           now: now,
+          adventureStarts: 1,
         ),
         isFalse,
       );
     });
 
     test('si no está cargado, se sigue sin anuncio', () {
-      expect(shouldShowInterstitial(purchased: false, loadedAt: null, now: now), isFalse);
+      expect(
+        shouldShowInterstitial(purchased: false, loadedAt: null, now: now, adventureStarts: 1),
+        isFalse,
+      );
     });
 
     test('cargado hace 55 minutos o más ya caducó', () {
@@ -110,6 +115,7 @@ void main() {
           purchased: false,
           loadedAt: now.subtract(interstitialMaxAge),
           now: now,
+          adventureStarts: 1,
         ),
         isFalse,
       );
@@ -118,9 +124,37 @@ void main() {
           purchased: false,
           loadedAt: now.subtract(const Duration(minutes: 54, seconds: 59)),
           now: now,
+          adventureStarts: 1,
         ),
         isTrue,
       );
+    });
+
+    test('cargado y sin la compra: sale en el 1.º, el 4.º y el 7.º "Empezar"', () {
+      final shown = [
+        for (var starts = 1; starts <= 7; starts++)
+          shouldShowInterstitial(
+            purchased: false,
+            loadedAt: now.subtract(const Duration(minutes: 1)),
+            now: now,
+            adventureStarts: starts,
+          ),
+      ];
+      expect(shown, [true, false, false, true, false, false, true]);
+    });
+
+    test('con la compra hecha, ningún "Empezar" lo muestra', () {
+      for (var starts = 1; starts <= 7; starts++) {
+        expect(
+          shouldShowInterstitial(
+            purchased: true,
+            loadedAt: now.subtract(const Duration(minutes: 1)),
+            now: now,
+            adventureStarts: starts,
+          ),
+          isFalse,
+        );
+      }
     });
   });
 }

@@ -35,13 +35,22 @@ bool shouldRequestConsent({required bool purchased}) => !purchased;
 bool canLoadAds({required bool purchased, required bool canRequestAds}) =>
     !purchased && canRequestAds;
 
-// Al tocar "Empezar": se muestra el intersticial solo sin la compra y si ya
-// está cargado y no caducó. Si no, se sigue sin anuncio (nunca se espera).
+// El intersticial sale una vez cada tantos "Empezar": el 1.º, el 4.º, el
+// 7.º… Si en esa vuelta no estaba cargado, se pierde (no se acumula para el
+// siguiente), así nunca salen dos seguidos.
+const startsPerInterstitial = 3;
+
+// Al tocar "Empezar": se muestra el intersticial solo sin la compra, si ya
+// está cargado y no caducó, y si le toca a este "Empezar" (`adventureStarts`
+// es cuántos van contados, incluido el actual). Si no, se sigue sin anuncio
+// (nunca se espera).
 bool shouldShowInterstitial({
   required bool purchased,
   required DateTime? loadedAt,
   required DateTime now,
+  required int adventureStarts,
 }) {
   if (purchased || loadedAt == null) return false;
-  return now.difference(loadedAt) < interstitialMaxAge;
+  if (now.difference(loadedAt) >= interstitialMaxAge) return false;
+  return (adventureStarts - 1) % startsPerInterstitial == 0;
 }

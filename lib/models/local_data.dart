@@ -6,6 +6,7 @@ class LocalData {
     this.savedGame,
     this.endingsFound = const {},
     this.purchased = false,
+    this.adventureStarts = 0,
   });
 
   static const schemaVersion = 2;
@@ -14,6 +15,7 @@ class LocalData {
   final SavedGame? savedGame;
   final Map<String, List<String>> endingsFound; // aventura → ids de finales
   final bool purchased; // compra única hecha (se guarda para no esperar a la tienda)
+  final int adventureStarts; // veces que se tocó "Empezar" desde la instalación (intersticial)
 
   // Los finales que ya descubrió en una aventura.
   List<String> endingsOf(String adventureId) => endingsFound[adventureId] ?? const [];
@@ -25,6 +27,7 @@ class LocalData {
       savedGame: savedGame,
       endingsFound: endingsFound,
       purchased: purchased,
+      adventureStarts: adventureStarts,
     );
   }
 
@@ -40,6 +43,7 @@ class LocalData {
         adventureId: [...found, endingId],
       },
       purchased: purchased,
+      adventureStarts: adventureStarts,
     );
   }
 
@@ -50,11 +54,25 @@ class LocalData {
       savedGame: savedGame,
       endingsFound: endingsFound,
       purchased: purchased,
+      adventureStarts: adventureStarts,
     );
   }
 
-  // "Borrar progreso": sin partida ni finales; el idioma y la compra quedan.
-  LocalData withoutProgress() => LocalData(language: language, purchased: purchased);
+  // Copia con otro contador de "Empezar".
+  LocalData withAdventureStarts(int adventureStarts) {
+    return LocalData(
+      language: language,
+      savedGame: savedGame,
+      endingsFound: endingsFound,
+      purchased: purchased,
+      adventureStarts: adventureStarts,
+    );
+  }
+
+  // "Borrar progreso": sin partida ni finales; el idioma, la compra y el
+  // contador de "Empezar" quedan.
+  LocalData withoutProgress() =>
+      LocalData(language: language, purchased: purchased, adventureStarts: adventureStarts);
 
   Map<String, dynamic> toJson() => {
     'schemaVersion': schemaVersion,
@@ -62,6 +80,7 @@ class LocalData {
     'savedGame': savedGame?.toJson(),
     'endingsFound': endingsFound,
     'purchased': purchased,
+    'adventureStarts': adventureStarts,
   };
 
   // Un JSON de la versión 1 (partidas del servidor viejo y contador de elecciones)
@@ -78,6 +97,7 @@ class LocalData {
         for (final e in endings.entries) e.key as String: (e.value as List).cast<String>().toList(),
       },
       purchased: json['purchased'] as bool? ?? false,
+      adventureStarts: json['adventureStarts'] as int? ?? 0,
     );
   }
 }

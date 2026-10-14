@@ -21,8 +21,8 @@ bool get _isIOS => defaultTargetPlatform == TargetPlatform.iOS;
 
 // ÚNICA clase que toca `google_mobile_ads` (AdMob y el consentimiento UMP).
 // Pide el consentimiento la primera vez que se abre el Catálogo, inicia el
-// SDK una sola vez, carga el banner de Catálogo y Tu héroe y el intersticial
-// de "Empezar". Qué unidad usar y cuándo hay anuncio lo decide
+// SDK una sola vez, carga el banner de Catálogo y Tu héroe y el intersticial,
+// que sale al tocar "Empezar" una de cada tres veces. Qué unidad usar y cuándo hay anuncio lo decide
 // `logic/ads_rules.dart`. Con la compra hecha no se pide nada. Un error del
 // SDK (o no tener conexión) se anota con `debugPrint` y no rompe nada: sin
 // anuncio, el lugar del banner queda vacío y "Empezar" sigue directo.
@@ -241,6 +241,7 @@ class AdsService extends ChangeNotifier {
       purchased: appState.purchased,
       loadedAt: _interstitialLoadedAt,
       now: DateTime.now(),
+      adventureStarts: appState.adventureStarts,
     );
     if (ad == null || !show) {
       _dropStaleInterstitial();

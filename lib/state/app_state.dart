@@ -65,6 +65,7 @@ class AppState extends ChangeNotifier {
 
   bool get catalogFailed => _catalogFailed;
   bool get purchased => _data.purchased;
+  int get adventureStarts => _data.adventureStarts;
 
   // Todas las aventuras, en el orden del catálogo, con su estado.
   List<AdventureEntry> get adventures => [
@@ -113,6 +114,9 @@ class AppState extends ChangeNotifier {
 
   // La compra única quedó hecha (comprada o restaurada).
   Future<void> setPurchased() => _save(_data.withPurchased(true));
+
+  // Se tocó "Empezar": suma uno al contador que decide el intersticial.
+  Future<void> countAdventureStart() => _save(_data.withAdventureStarts(_data.adventureStarts + 1));
 
   // Cambia los datos en memoria antes de guardarlos, así dos cambios seguidos
   // no se pisan.

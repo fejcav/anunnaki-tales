@@ -15,8 +15,9 @@ import '../gameplay/gameplay_screen.dart';
 
 // "Tu héroe": presenta al protagonista de la aventura (nombre y descripción)
 // y la aventura. "Empezar" guarda una partida nueva (pisa la anterior) y abre
-// la primera escena; antes, sin la compra, pasa el intersticial si está listo
-// (si no, sigue sin anuncio). Al pie, el banner.
+// la primera escena; antes cuenta el "Empezar" y, sin la compra, una de cada
+// tres veces pasa el intersticial si está listo (si no, sigue sin anuncio).
+// Al pie, el banner.
 class HeroIntroScreen extends StatelessWidget {
   const HeroIntroScreen({super.key});
 
@@ -26,6 +27,8 @@ class HeroIntroScreen extends StatelessWidget {
     await context.read<AppState>().saveGame(
       SavedGame(adventureId: adventure.id, sceneId: story.start, path: path),
     );
+    if (!context.mounted) return;
+    await context.read<AppState>().countAdventureStart();
     if (!context.mounted) return;
     await context.read<AdsService>().showInterstitialIfReady();
     // Gameplay queda directamente sobre Inicio: la flecha atrás vuelve ahí.

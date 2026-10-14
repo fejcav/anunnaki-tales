@@ -45,6 +45,24 @@ void main() {
     expect((await store.load()).purchased, isTrue);
   });
 
+  test('guarda y lee el contador de "Empezar"; sin el campo, es 0', () async {
+    SharedPreferences.setMockInitialValues({
+      'localData': jsonEncode({'schemaVersion': 2, 'purchased': false}),
+    });
+    final store = LocalStore();
+    expect((await store.load()).adventureStarts, 0);
+
+    await store.save(const LocalData().withAdventureStarts(4));
+
+    expect((await store.load()).adventureStarts, 4);
+  });
+
+  test('borrar progreso conserva el contador de "Empezar"', () {
+    const before = LocalData(savedGame: game, adventureStarts: 5);
+
+    expect(before.withoutProgress().adventureStarts, 5);
+  });
+
   test('un final se guarda una sola vez y borra la partida', () {
     var data = const LocalData(savedGame: game);
     for (final ending in ['fin_tirano', 'fin_tirano', 'fin_polvo']) {
