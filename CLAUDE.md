@@ -1,6 +1,6 @@
 # Anunnaki Tales — guía para Claude Code
 
-Versión 0.4 · 6 de octubre de 2026 · Iteración 14 (iOS base con Codemagic). Desde la iteración 10 la app no tiene cuenta ni servidor en el código; historias escritas de antemano (decisión del 02/10/2026, en `docs/cambio-de-rumbo.md`). Esta copia (repo) es la oficial; la del Proyecto "Anunnaki Tales" de claude.ai es un espejo. El plan de iteraciones con los pedidos listos para pegar está en `docs/plan-migracion.md` (versión 2).
+Versión 0.5 · 14 de octubre de 2026 · Build 14 (`1.1.2+14`, intersticial cada 3 aventuras); iteración 14 (iOS base con Codemagic). Desde la iteración 10 la app no tiene cuenta ni servidor en el código; historias escritas de antemano (decisión del 02/10/2026, en `docs/cambio-de-rumbo.md`). Esta copia (repo) es la oficial; la del Proyecto "Anunnaki Tales" de claude.ai es un espejo. El plan de iteraciones con los pedidos listos para pegar está en `docs/plan-migracion.md` (versión 2).
 
 Anunnaki Tales es un juego narrativo para Android e iOS ambientado en la mitología mesopotámica: el jugador elige un mito y vive la historia de su protagonista escena por escena; en cada escena hay hasta tres opciones con distinto riesgo y, muchas veces, un dato histórico real. Las historias están escritas de antemano (en `assets/data/stories/`, una por aventura) y cada una tiene varios finales. No hay servidor ni cuenta: todo se guarda en el teléfono. Tres aventuras son gratis con anuncios; una compra única desbloquea todas y quita los anuncios. (Hasta el 02/10/2026 la app dependía de Supabase, de una IA en vivo y de RevenueCat; ver `docs/cambio-de-rumbo.md`.)
 
@@ -14,7 +14,7 @@ El dueño del proyecto (Federico) tiene nivel básico de Dart/Flutter: puede cor
 - Nombre visible: Anunnaki Tales. Subtítulo de pantalla de inicio: "Mitos Interactivos".
 - Política de privacidad: `https://fejcav.github.io/anunnaki-tales-legal/privacy_policy.html`. Fuente en el repo `fejcav/anunnaki-tales-legal` (GitHub Pages).
 - Repo: `fejcav/anunnaki-tales`, rama `main` (proyecto nuevo). La rama `flutterflow` queda como archivo histórico.
-- Versión inicial del proyecto nuevo: **`1.1.0+12`**. Play ya recibió el versionCode 11: el número después del `+` tiene que ser siempre mayor que el último subido.
+- Versión inicial del proyecto nuevo: **`1.1.0+12`**. Versión actual: **`1.1.2+14`** (Build 14). Play ya recibió el versionCode 11: el número después del `+` tiene que ser siempre mayor que el último subido.
 
 ## Entorno
 
@@ -126,13 +126,13 @@ La app publicada es oscura con dorado; se mantiene para que coincida con las cap
 - En debug (`kDebugMode`) las unidades pasan a las de prueba de Google: Android banner `ca-app-pub-3940256099942544/6300978111`, intersticial `ca-app-pub-3940256099942544/1033173712`; iOS banner `ca-app-pub-3940256099942544/2934735716`, intersticial `ca-app-pub-3940256099942544/4411468910`. El ID de app es siempre el real.
 - **Consentimiento**: mensaje UMP "Anunnaki Tales consentimiento UE" (ya publicado en AdMob → Privacidad y mensajería). Se pide con `requestConsentInfoUpdate` + `loadAndShowConsentFormIfRequired` al abrir el Catálogo por primera vez, antes del primer anuncio; nunca durante la lectura. `MobileAds.instance.initialize()` una sola vez, cuando `canRequestAds` es verdadero. En debug, `ConsentDebugSettings` con geografía EEE para probar el formulario.
 - **Banner** (320×50) solo sin la compra hecha, al pie de Catálogo y de Tu héroe. Si no carga, el espacio queda vacío.
-- **Intersticial** solo sin la compra hecha: al tocar "Empezar" (precargado al entrar a Tu héroe; si no está listo, se sigue sin anuncio).
+- **Intersticial** solo sin la compra hecha, al tocar "Empezar" **una vez cada tres** (desde el Build 14): sale en el 1.º, el 4.º, el 7.º… "Empezar" desde la instalación (`startsPerInterstitial = 3` en `logic/ads_rules.dart`, con el contador `adventureStarts` de `localData`). Se precarga al entrar a Tu héroe; si en la vuelta que le toca no está listo, se sigue sin anuncio y esa vuelta se pierde (no se acumula para el siguiente "Empezar").
 - Nunca anuncios en Gameplay, Final, Paywall ni Ajustes.
 - Reglas en `ads_rules.dart` (funciones puras con tests). Sin conexión no hay anuncios y nada se rompe.
 
 ## Datos en shared_preferences
 
-Una sola clave, `localData`: JSON con `schemaVersion` 2, `language` (`null` = el del teléfono), `savedGame` (o `null`: `adventureId`, `sceneId`, `path` = lista de ids de las escenas vistas), `endingsFound` (`{ adventureId: [ids de finales] }`) y `purchased` (booleano, desde la iteración 11). Se guarda entero cada vez que cambia algo. Al leer un `schemaVersion` 1 se descarta la partida guardada vieja y el contador de elecciones. Si no se puede leer, se empieza de cero.
+Una sola clave, `localData`: JSON con `schemaVersion` 2, `language` (`null` = el del teléfono), `savedGame` (o `null`: `adventureId`, `sceneId`, `path` = lista de ids de las escenas vistas), `endingsFound` (`{ adventureId: [ids de finales] }`), `purchased` (booleano, desde la iteración 11) y `adventureStarts` (entero: cuántas veces se tocó "Empezar" desde la instalación; decide el intersticial; desde el Build 14). `adventureStarts` no subió el `schemaVersion` (sigue en 2): los datos de la versión 13, que no lo tienen, lo leen como 0. "Borrar progreso" no lo borra. Se guarda entero cada vez que cambia algo. Al leer un `schemaVersion` 1 se descarta la partida guardada vieja y el contador de elecciones. Si no se puede leer, se empieza de cero.
 
 ## Release
 
