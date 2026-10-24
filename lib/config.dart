@@ -6,6 +6,12 @@ class AppConfig {
   static const privacyPolicyUrl =
       'https://fejcav.github.io/anunnaki-tales-legal/privacy_policy.html';
 
+  // Ficha de la app en Google Play ("Calificar la app"): primero la app de
+  // Play Store; si no está, la página web.
+  static const playStoreMarketUrl = 'market://details?id=com.mycompany.anunnakitales';
+  static const playStoreWebUrl =
+      'https://play.google.com/store/apps/details?id=com.mycompany.anunnakitales';
+
   // Compra única que desbloquea todas las aventuras y quita los anuncios.
   // Producto no consumible; mismo id en Google Play y (más adelante) App Store.
   static const fullUnlockProductId = 'anunnaki_completo';

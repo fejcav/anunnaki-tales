@@ -127,6 +127,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get settingsTitle => 'Settings';
 
   @override
+  String get settingsRateApp => 'Rate the app';
+
+  @override
   String get settingsPrivacyPolicy => 'Privacy policy';
 
   @override

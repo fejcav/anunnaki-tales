@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:provider/provider.dart';
@@ -13,8 +15,8 @@ import '../../state/app_state.dart';
 
 // Ajustes: "Desbloquear todo" (abre el Paywall) o "Todo desbloqueado",
 // "Restaurar compra", "Privacidad de anuncios" (solo si el consentimiento de
-// anuncios lo exige, por ejemplo en el EEE), política de privacidad, "Borrar
-// progreso" y la versión.
+// anuncios lo exige, por ejemplo en el EEE), "Calificar la app" (solo Android),
+// política de privacidad, "Borrar progreso" y la versión.
 // "Borrar progreso" pide confirmación dentro de la misma pantalla (sin
 // diálogos): el botón se cambia por la pregunta con "Cancelar" y "Borrar".
 class SettingsScreen extends StatefulWidget {
@@ -51,6 +53,19 @@ class _SettingsScreenState extends State<SettingsScreen> {
     if (!opened) {
       messenger.showSnackBar(SnackBar(content: Text(l10n.settingsLinkError)));
     }
+  }
+
+  // Abre la ficha de Play. Si no se puede abrir ninguna de las dos direcciones,
+  // no se muestra nada (queda registrado en el log).
+  Future<void> _openStoreListing() async {
+    for (final url in [AppConfig.playStoreMarketUrl, AppConfig.playStoreWebUrl]) {
+      try {
+        if (await launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication)) return;
+      } catch (e) {
+        debugPrint('No se pudo abrir $url: $e');
+      }
+    }
+    debugPrint('No se pudo abrir la ficha de la tienda');
   }
 
   Future<void> _restore() async {
@@ -130,6 +145,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 onPressed: ads.showPrivacyOptions,
                 child: Text(l10n.settingsAdPrivacy),
               ),
+            ],
+            // Solo Android: en iOS todavía no hay ficha en la App Store.
+            if (Platform.isAndroid) ...[
+              const SizedBox(height: 16),
+              OutlinedButton(onPressed: _openStoreListing, child: Text(l10n.settingsRateApp)),
             ],
             const SizedBox(height: 16),
             OutlinedButton(onPressed: _openPrivacyPolicy, child: Text(l10n.settingsPrivacyPolicy)),

@@ -308,6 +308,12 @@ abstract class AppLocalizations {
   /// **'Ajustes'**
   String get settingsTitle;
 
+  /// No description provided for @settingsRateApp.
+  ///
+  /// In es, this message translates to:
+  /// **'Calificar la app'**
+  String get settingsRateApp;
+
   /// No description provided for @settingsPrivacyPolicy.
   ///
   /// In es, this message translates to:
