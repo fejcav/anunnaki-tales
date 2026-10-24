@@ -1,6 +1,6 @@
 # Anunnaki Tales — guía para Claude Code
 
-Versión 0.5 · 14 de octubre de 2026 · Build 14 (`1.1.2+14`, intersticial cada 3 aventuras); iteración 14 (iOS base con Codemagic). Desde la iteración 10 la app no tiene cuenta ni servidor en el código; historias escritas de antemano (decisión del 02/10/2026, en `docs/cambio-de-rumbo.md`). Esta copia (repo) es la oficial; la del Proyecto "Anunnaki Tales" de claude.ai es un espejo. El plan de iteraciones con los pedidos listos para pegar está en `docs/plan-migracion.md` (versión 2).
+Versión 0.5 · 24 de octubre de 2026 · Build 16 (`1.1.4+16`, "Calificar la app" en Ajustes); iteración 14 (iOS base con Codemagic). Desde la iteración 10 la app no tiene cuenta ni servidor en el código; historias escritas de antemano (decisión del 02/10/2026, en `docs/cambio-de-rumbo.md`). Esta copia (repo) es la oficial; la del Proyecto "Anunnaki Tales" de claude.ai es un espejo. El plan de iteraciones con los pedidos listos para pegar está en `docs/plan-migracion.md` (versión 2).
 
 Anunnaki Tales es un juego narrativo para Android e iOS ambientado en la mitología mesopotámica: el jugador elige un mito y vive la historia de su protagonista escena por escena; en cada escena hay hasta tres opciones con distinto riesgo y, muchas veces, un dato histórico real. Las historias están escritas de antemano (en `assets/data/stories/`, una por aventura) y cada una tiene varios finales. No hay servidor ni cuenta: todo se guarda en el teléfono. Tres aventuras son gratis con anuncios; una compra única desbloquea todas y quita los anuncios. (Hasta el 02/10/2026 la app dependía de Supabase, de una IA en vivo y de RevenueCat; ver `docs/cambio-de-rumbo.md`.)
 
@@ -14,7 +14,7 @@ El dueño del proyecto (Federico) tiene nivel básico de Dart/Flutter: puede cor
 - Nombre visible: Anunnaki Tales. Subtítulo de pantalla de inicio: "Mitos Interactivos".
 - Política de privacidad: `https://fejcav.github.io/anunnaki-tales-legal/privacy_policy.html`. Fuente en el repo `fejcav/anunnaki-tales-legal` (GitHub Pages).
 - Repo: `fejcav/anunnaki-tales`, rama `main` (proyecto nuevo). La rama `flutterflow` queda como archivo histórico.
-- Versión inicial del proyecto nuevo: **`1.1.0+12`**. Versión actual: **`1.1.2+14`** (Build 14). Play ya recibió el versionCode 11: el número después del `+` tiene que ser siempre mayor que el último subido.
+- Versión inicial del proyecto nuevo: **`1.1.0+12`**. Versión actual: **`1.1.4+16`** (Build 16). Play ya recibió el versionCode 11: el número después del `+` tiene que ser siempre mayor que el último subido.
 
 ## Entorno
 
@@ -108,7 +108,7 @@ La app publicada es oscura con dorado; se mantiene para que coincida con las cap
 - **Tu héroe**: nombre y descripción del protagonista (`hero` de la historia), descripción de la aventura y "Empezar". Empezar una aventura reemplaza la partida guardada.
 - **Gameplay**: arriba "Capítulo N · Título" y "Turno N" (cantidad de escenas vistas en esta partida); el texto en Lora, separado en párrafos por las líneas en blanco; la tarjeta "Dato histórico" si la escena tiene `fact`; las opciones con `ChoiceButton` (punto de color, texto, descripción y "Riesgo bajo / medio / alto"; una opción sin `risk` va sin punto ni etiqueta). Elegir es instantáneo. La partida se guarda en cada escena. La flecha atrás vuelve a Inicio.
 - **Final**: tipo ("Final del mito", "Final alternativo", "Final trágico"), título en Cinzel, texto, dato histórico, "Finales descubiertos: N de M" y los botones "Volver a jugar", "Otra aventura" y, solo en finales trágicos, "Volver a la última decisión" (vuelve a la última escena del camino con más de una opción). Al llegar a un final se guarda como descubierto y se borra la partida guardada.
-- **Ajustes**: "Desbloquear todo" o "Todo desbloqueado" (iteración 11), "Restaurar compra" (iteración 11), "Privacidad de anuncios" (solo si UMP lo exige, iteración 12), "Política de privacidad", "Borrar progreso" (con confirmación dentro de la pantalla: borra la partida guardada y los finales descubiertos, no la compra, el idioma ni el contador `adventureStarts`, que decide el intersticial) y la versión.
+- **Ajustes**: "Desbloquear todo" o "Todo desbloqueado" (iteración 11), "Restaurar compra" (iteración 11), "Privacidad de anuncios" (solo si UMP lo exige, iteración 12), "Calificar la app" (solo Android, desde el Build 16: abre la ficha de Play con `market://` y, si falla, la página web; si no se puede abrir, no muestra nada), "Política de privacidad", "Borrar progreso" (con confirmación dentro de la pantalla: borra la partida guardada y los finales descubiertos, no la compra, el idioma ni el contador `adventureStarts`, que decide el intersticial) y la versión.
 - No hay límite diario ni cuenta.
 
 ## Compra única
