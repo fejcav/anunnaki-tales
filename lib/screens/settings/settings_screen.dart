@@ -15,7 +15,8 @@ import '../../state/app_state.dart';
 
 // Ajustes: "Desbloquear todo" (abre el Paywall) o "Todo desbloqueado",
 // "Restaurar compra", "Privacidad de anuncios" (solo si el consentimiento de
-// anuncios lo exige, por ejemplo en el EEE), "Calificar la app" (solo Android),
+// anuncios lo exige, por ejemplo en el EEE), "Tema" (claro, oscuro o el del
+// sistema), "Calificar la app" (solo Android),
 // política de privacidad, "Borrar progreso" y la versión.
 // "Borrar progreso" pide confirmación dentro de la misma pantalla (sin
 // diálogos): el botón se cambia por la pregunta con "Cancelar" y "Borrar".
@@ -110,12 +111,12 @@ class _SettingsScreenState extends State<SettingsScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Icon(Icons.check_circle_outline, color: AppColors.softGold),
+                  Icon(Icons.check_circle_outline, color: context.palette.softGold),
                   const SizedBox(width: 8),
                   Text(
                     l10n.settingsAllUnlocked,
-                    style: AppText.body.copyWith(
-                      color: AppColors.softGold,
+                    style: context.appText.body.copyWith(
+                      color: context.palette.softGold,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
@@ -130,7 +131,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               const SizedBox(height: 8),
               Text(
                 l10n.purchasePending,
-                style: AppText.bodySecondary.copyWith(fontSize: 13),
+                style: context.appText.bodySecondary.copyWith(fontSize: 13),
                 textAlign: TextAlign.center,
               ),
             ],
@@ -146,6 +147,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 child: Text(l10n.settingsAdPrivacy),
               ),
             ],
+            const SizedBox(height: 24),
+            const _ThemePicker(),
+            const SizedBox(height: 8),
             // Solo Android: en iOS todavía no hay ficha en la App Store.
             if (Platform.isAndroid) ...[
               const SizedBox(height: 16),
@@ -168,12 +172,55 @@ class _SettingsScreenState extends State<SettingsScreen> {
             if (info != null)
               Text(
                 l10n.settingsVersion(info.version, info.buildNumber),
-                style: AppText.bodySecondary.copyWith(fontSize: 12),
+                style: context.appText.bodySecondary.copyWith(fontSize: 12),
                 textAlign: TextAlign.center,
               ),
           ],
         ),
       ),
+    );
+  }
+}
+
+// "Tema": las tres opciones en una tarjeta; la elegida lleva una tilde.
+class _ThemePicker extends StatelessWidget {
+  const _ThemePicker();
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
+    final current = context.select<AppState, ThemeMode>((s) => s.themeMode);
+    final options = [
+      (ThemeMode.light, Icons.light_mode_outlined, l10n.settingsThemeLight),
+      (ThemeMode.dark, Icons.dark_mode_outlined, l10n.settingsThemeDark),
+      (ThemeMode.system, Icons.brightness_auto_outlined, l10n.settingsThemeSystem),
+    ];
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Text(l10n.settingsTheme, style: context.appText.bodySecondary),
+        const SizedBox(height: 8),
+        Card(
+          margin: EdgeInsets.zero,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+            side: BorderSide(color: context.palette.gold.withValues(alpha: 0.4)),
+          ),
+          clipBehavior: Clip.antiAlias,
+          child: Column(
+            children: [
+              for (final (mode, icon, label) in options)
+                ListTile(
+                  leading: Icon(icon, color: context.palette.gold),
+                  title: Text(label, style: context.appText.body),
+                  trailing: mode == current ? Icon(Icons.check, color: context.palette.gold) : null,
+                  selected: mode == current,
+                  onTap: () => context.read<AppState>().setThemeMode(mode),
+                ),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }
@@ -191,14 +238,14 @@ class _ResetConfirmation extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: AppColors.surface,
+        color: context.palette.surface,
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: AppColors.riskHigh),
+        border: Border.all(color: context.palette.riskHigh),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Text(l10n.settingsResetQuestion, style: AppText.body),
+          Text(l10n.settingsResetQuestion, style: context.appText.body),
           const SizedBox(height: 16),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
@@ -206,7 +253,7 @@ class _ResetConfirmation extends StatelessWidget {
               TextButton(onPressed: onCancel, child: Text(l10n.settingsResetCancel)),
               const SizedBox(width: 8),
               TextButton(
-                style: TextButton.styleFrom(foregroundColor: AppColors.riskHigh),
+                style: TextButton.styleFrom(foregroundColor: context.palette.riskHigh),
                 onPressed: onConfirm,
                 child: Text(l10n.settingsResetConfirm),
               ),

@@ -7,6 +7,7 @@ class LocalData {
     this.endingsFound = const {},
     this.purchased = false,
     this.adventureStarts = 0,
+    this.themeMode = 'dark',
   });
 
   static const schemaVersion = 2;
@@ -16,6 +17,7 @@ class LocalData {
   final Map<String, List<String>> endingsFound; // aventura → ids de finales
   final bool purchased; // compra única hecha (se guarda para no esperar a la tienda)
   final int adventureStarts; // veces que se tocó "Empezar" desde la instalación (intersticial)
+  final String themeMode; // 'dark' (por defecto) | 'light' | 'system'
 
   // Los finales que ya descubrió en una aventura.
   List<String> endingsOf(String adventureId) => endingsFound[adventureId] ?? const [];
@@ -28,6 +30,7 @@ class LocalData {
       endingsFound: endingsFound,
       purchased: purchased,
       adventureStarts: adventureStarts,
+      themeMode: themeMode,
     );
   }
 
@@ -44,6 +47,7 @@ class LocalData {
       },
       purchased: purchased,
       adventureStarts: adventureStarts,
+      themeMode: themeMode,
     );
   }
 
@@ -55,6 +59,7 @@ class LocalData {
       endingsFound: endingsFound,
       purchased: purchased,
       adventureStarts: adventureStarts,
+      themeMode: themeMode,
     );
   }
 
@@ -66,13 +71,30 @@ class LocalData {
       endingsFound: endingsFound,
       purchased: purchased,
       adventureStarts: adventureStarts,
+      themeMode: themeMode,
     );
   }
 
-  // "Borrar progreso": sin partida ni finales; el idioma, la compra y el
-  // contador de "Empezar" quedan.
-  LocalData withoutProgress() =>
-      LocalData(language: language, purchased: purchased, adventureStarts: adventureStarts);
+  // Copia con otro tema ('dark' | 'light' | 'system').
+  LocalData withThemeMode(String themeMode) {
+    return LocalData(
+      language: language,
+      savedGame: savedGame,
+      endingsFound: endingsFound,
+      purchased: purchased,
+      adventureStarts: adventureStarts,
+      themeMode: themeMode,
+    );
+  }
+
+  // "Borrar progreso": sin partida ni finales; el idioma, la compra, el
+  // contador de "Empezar" y el tema quedan.
+  LocalData withoutProgress() => LocalData(
+    language: language,
+    purchased: purchased,
+    adventureStarts: adventureStarts,
+    themeMode: themeMode,
+  );
 
   Map<String, dynamic> toJson() => {
     'schemaVersion': schemaVersion,
@@ -81,6 +103,7 @@ class LocalData {
     'endingsFound': endingsFound,
     'purchased': purchased,
     'adventureStarts': adventureStarts,
+    'themeMode': themeMode,
   };
 
   // Un JSON de la versión 1 (partidas del servidor viejo y contador de elecciones)
@@ -98,6 +121,7 @@ class LocalData {
       },
       purchased: json['purchased'] as bool? ?? false,
       adventureStarts: json['adventureStarts'] as int? ?? 0,
+      themeMode: json['themeMode'] as String? ?? 'dark',
     );
   }
 }

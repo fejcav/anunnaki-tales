@@ -54,7 +54,7 @@ class HeroIntroScreen extends StatelessWidget {
               return Center(
                 child: Padding(
                   padding: const EdgeInsets.all(32),
-                  child: Text(l10n.storyLoadError, style: AppText.body),
+                  child: Text(l10n.storyLoadError, style: context.appText.body),
                 ),
               );
             }
@@ -70,37 +70,37 @@ class HeroIntroScreen extends StatelessWidget {
                         Center(
                           child: CircleAvatar(
                             radius: 44,
-                            backgroundColor: AppColors.lapis,
+                            backgroundColor: context.palette.lapis,
                             child: Text(
                               heroName.isEmpty ? '?' : heroName.characters.first.toUpperCase(),
-                              style: AppText.title.copyWith(fontSize: 36),
+                              style: context.appText.title.copyWith(fontSize: 36),
                             ),
                           ),
                         ),
                         const SizedBox(height: 16),
-                        Text(heroName, style: AppText.title, textAlign: TextAlign.center),
+                        Text(heroName, style: context.appText.title, textAlign: TextAlign.center),
                         const SizedBox(height: 12),
                         Text(
                           story.heroDescription.of(lang),
-                          style: AppText.narrative,
+                          style: context.appText.narrative,
                           textAlign: TextAlign.center,
                         ),
                         const SizedBox(height: 32),
                         Text(
                           l10n.heroIntroAdventure,
-                          style: AppText.bodySecondary.copyWith(fontSize: 12),
+                          style: context.appText.bodySecondary.copyWith(fontSize: 12),
                           textAlign: TextAlign.center,
                         ),
                         const SizedBox(height: 4),
                         Text(
                           adventure.title.of(lang),
-                          style: AppText.title.copyWith(fontSize: 18),
+                          style: context.appText.title.copyWith(fontSize: 18),
                           textAlign: TextAlign.center,
                         ),
                         const SizedBox(height: 12),
                         Text(
                           adventure.description.of(lang),
-                          style: AppText.bodySecondary.copyWith(height: 1.5),
+                          style: context.appText.bodySecondary.copyWith(height: 1.5),
                           textAlign: TextAlign.center,
                         ),
                       ],

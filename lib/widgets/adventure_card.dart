@@ -32,7 +32,7 @@ class AdventureCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
     final lang = Localizations.localeOf(context).languageCode;
-    final color = difficultyColor(adventure.difficulty);
+    final color = context.palette.risk(difficultyLevel(adventure.difficulty));
     final comingSoon = scenes == null;
     return Opacity(
       opacity: comingSoon ? 0.55 : 1,
@@ -40,7 +40,7 @@ class AdventureCard extends StatelessWidget {
         margin: EdgeInsets.zero,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12),
-          side: BorderSide(color: AppColors.gold.withValues(alpha: 0.4)),
+          side: BorderSide(color: context.palette.gold.withValues(alpha: 0.4)),
         ),
         clipBehavior: Clip.antiAlias,
         child: InkWell(
@@ -56,14 +56,14 @@ class AdventureCard extends StatelessWidget {
                     Expanded(
                       child: Text(
                         adventure.title.of(lang),
-                        style: AppText.title.copyWith(fontSize: 18),
+                        style: context.appText.title.copyWith(fontSize: 18),
                       ),
                     ),
                     if (locked && !comingSoon) ...[
                       const SizedBox(width: 8),
                       Icon(
                         Icons.lock_outline,
-                        color: AppColors.gold,
+                        color: context.palette.gold,
                         size: 20,
                         semanticLabel: l10n.catalogLocked,
                       ),
@@ -71,7 +71,7 @@ class AdventureCard extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 6),
-                Text(adventure.subtitle.of(lang), style: AppText.bodySecondary),
+                Text(adventure.subtitle.of(lang), style: context.appText.bodySecondary),
                 const SizedBox(height: 12),
                 Row(
                   children: [
@@ -83,17 +83,20 @@ class AdventureCard extends StatelessWidget {
                     const SizedBox(width: 6),
                     Text(
                       difficultyLabel(l10n, adventure.difficulty),
-                      style: AppText.body.copyWith(color: color, fontWeight: FontWeight.w600),
+                      style: context.appText.body.copyWith(
+                        color: color,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
                     const Spacer(),
                     Text(
                       comingSoon ? l10n.catalogComingSoon : l10n.catalogScenes(scenes!),
                       style: comingSoon
-                          ? AppText.body.copyWith(
-                              color: AppColors.gold,
+                          ? context.appText.body.copyWith(
+                              color: context.palette.gold,
                               fontWeight: FontWeight.w600,
                             )
-                          : AppText.bodySecondary,
+                          : context.appText.bodySecondary,
                     ),
                   ],
                 ),
@@ -101,7 +104,7 @@ class AdventureCard extends StatelessWidget {
                   const SizedBox(height: 8),
                   Text(
                     l10n.catalogEndings(endingsFound, endingsTotal),
-                    style: AppText.body.copyWith(color: AppColors.softGold),
+                    style: context.appText.body.copyWith(color: context.palette.softGold),
                   ),
                 ],
               ],

@@ -84,15 +84,21 @@ class _EndingScreenState extends State<EndingScreen> {
               children: [
                 Text(
                   typeLabel.toUpperCase(),
-                  style: AppText.subtitle.copyWith(
-                    color: ending.type == 'tragic' ? AppColors.riskHigh : AppColors.softGold,
+                  style: context.appText.subtitle.copyWith(
+                    color: ending.type == 'tragic'
+                        ? context.palette.riskHigh
+                        : context.palette.softGold,
                     fontSize: 13,
                     letterSpacing: 2,
                   ),
                   textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: 8),
-                Text(ending.title.of(lang), style: AppText.title, textAlign: TextAlign.center),
+                Text(
+                  ending.title.of(lang),
+                  style: context.appText.title,
+                  textAlign: TextAlign.center,
+                ),
                 const SizedBox(height: 20),
                 StoryText(text: scene.text.of(lang)),
                 if (fact.isNotEmpty) ...[
@@ -102,7 +108,7 @@ class _EndingScreenState extends State<EndingScreen> {
                 const SizedBox(height: 20),
                 Text(
                   l10n.endingFound(found, endingsOf(args.story).length),
-                  style: AppText.body.copyWith(color: AppColors.softGold),
+                  style: context.appText.body.copyWith(color: context.palette.softGold),
                   textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: 24),

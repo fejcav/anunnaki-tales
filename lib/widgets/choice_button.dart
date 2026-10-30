@@ -27,7 +27,7 @@ class ChoiceButton extends StatelessWidget {
       margin: EdgeInsets.zero,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12),
-        side: BorderSide(color: AppColors.gold.withValues(alpha: 0.3)),
+        side: BorderSide(color: context.palette.gold.withValues(alpha: 0.3)),
       ),
       clipBehavior: Clip.antiAlias,
       child: InkWell(
@@ -52,16 +52,25 @@ class ChoiceButton extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(text, style: AppText.body.copyWith(fontWeight: FontWeight.w600, fontSize: 15)),
+                    Text(
+                      text,
+                      style: context.appText.body.copyWith(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 15,
+                      ),
+                    ),
                     if (description.isNotEmpty) ...[
                       const SizedBox(height: 4),
-                      Text(description, style: AppText.bodySecondary.copyWith(fontSize: 13)),
+                      Text(
+                        description,
+                        style: context.appText.bodySecondary.copyWith(fontSize: 13),
+                      ),
                     ],
                     if (riskLabel != null) ...[
                       const SizedBox(height: 6),
                       Text(
                         riskLabel!,
-                        style: AppText.body.copyWith(
+                        style: context.appText.body.copyWith(
                           fontSize: 12,
                           fontWeight: FontWeight.w600,
                           color: riskColor,

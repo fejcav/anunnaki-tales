@@ -1,6 +1,6 @@
 # Anunnaki Tales — guía para Claude Code
 
-Versión 0.5 · 24 de octubre de 2026 · Build 16 (`1.1.4+16`, "Calificar la app" en Ajustes); iteración 14 (iOS base con Codemagic). Desde la iteración 10 la app no tiene cuenta ni servidor en el código; historias escritas de antemano (decisión del 02/10/2026, en `docs/cambio-de-rumbo.md`). Esta copia (repo) es la oficial; la del Proyecto "Anunnaki Tales" de claude.ai es un espejo. El plan de iteraciones con los pedidos listos para pegar está en `docs/plan-migracion.md` (versión 2).
+Versión 0.6 · 30 de octubre de 2026 · Build 17 (`1.1.5+17`, tema claro / oscuro en Ajustes; solo local, sin subir); iteración 14 (iOS base con Codemagic). Desde la iteración 10 la app no tiene cuenta ni servidor en el código; historias escritas de antemano (decisión del 02/10/2026, en `docs/cambio-de-rumbo.md`). Esta copia (repo) es la oficial; la del Proyecto "Anunnaki Tales" de claude.ai es un espejo. El plan de iteraciones con los pedidos listos para pegar está en `docs/plan-migracion.md` (versión 2).
 
 Anunnaki Tales es un juego narrativo para Android e iOS ambientado en la mitología mesopotámica: el jugador elige un mito y vive la historia de su protagonista escena por escena; en cada escena hay hasta tres opciones con distinto riesgo y, muchas veces, un dato histórico real. Las historias están escritas de antemano (en `assets/data/stories/`, una por aventura) y cada una tiene varios finales. No hay servidor ni cuenta: todo se guarda en el teléfono. Tres aventuras son gratis con anuncios; una compra única desbloquea todas y quita los anuncios. (Hasta el 02/10/2026 la app dependía de Supabase, de una IA en vivo y de RevenueCat; ver `docs/cambio-de-rumbo.md`.)
 
@@ -14,7 +14,7 @@ El dueño del proyecto (Federico) tiene nivel básico de Dart/Flutter: puede cor
 - Nombre visible: Anunnaki Tales. Subtítulo de pantalla de inicio: "Mitos Interactivos".
 - Política de privacidad: `https://fejcav.github.io/anunnaki-tales-legal/privacy_policy.html`. Fuente en el repo `fejcav/anunnaki-tales-legal` (GitHub Pages).
 - Repo: `fejcav/anunnaki-tales`, rama `main` (proyecto nuevo). La rama `flutterflow` queda como archivo histórico.
-- Versión inicial del proyecto nuevo: **`1.1.0+12`**. Versión actual: **`1.1.4+16`** (Build 16). Play ya recibió el versionCode 11: el número después del `+` tiene que ser siempre mayor que el último subido.
+- Versión inicial del proyecto nuevo: **`1.1.0+12`**. Versión actual: **`1.1.5+17`** (Build 17). Play ya recibió el versionCode 11: el número después del `+` tiene que ser siempre mayor que el último subido.
 
 ## Entorno
 
@@ -57,7 +57,7 @@ lib/
   models/        Adventure, Story, StoryScene, StoryChoice, StoryEnding, LocalizedText, LocalData
   logic/
     story_rules.dart     funciones puras: validar una historia, escena siguiente, finales, camino más corto al final del mito
-    risk_rules.dart      color y etiqueta de riesgo y de dificultad
+    risk_rules.dart      nivel (enum RiskLevel) y etiqueta de riesgo y de dificultad; el color lo pone la pantalla según el tema
     purchase_rules.dart  (iteración 11) qué hacer con cada evento de compra; qué aventuras están abiertas
     ads_rules.dart       (iteración 12) cuándo se muestra cada anuncio
   data/local_store.dart  ÚNICA clase que toca shared_preferences
@@ -92,13 +92,14 @@ Principio: la lógica vive en funciones puras (`lib/logic/`) que reciben datos y
 
 ## Aspecto
 
-La app publicada es oscura con dorado; se mantiene para que coincida con las capturas de la tienda. Decisión de diseño: títulos con serif (Cinzel) y narrativa en Lora, como las capturas y el kit de marca (la app de FlutterFlow usaba Inter en todo).
+La app publicada es oscura con dorado; se mantiene para que coincida con las capturas de la tienda. Desde el Build 17 hay además un tema claro opcional (Ajustes → Tema); **el oscuro es el predeterminado**, no el del sistema. Los colores viven en `AppPalette` (`lib/app_theme.dart`, una `ThemeExtension` con `dark` y `light`, los mismos roles) y se leen con `context.palette`; los estilos de texto con `context.appText`. Ningún color escrito a mano fuera de `app_theme.dart`. Los colores de abajo son los del tema oscuro. Decisión de diseño: títulos con serif (Cinzel) y narrativa en Lora, como las capturas y el kit de marca (la app de FlutterFlow usaba Inter en todo).
 
 - Fondo `#0A0E1A`, superficie de tarjetas `#141927`, dorado `#D4A843` (títulos, bordes, botón principal), lapislázuli `#1A237E` (avatar de héroe, fondo de la barra de carga), texto `#FFFFFF`, texto secundario blanco al 70 %, dorado suave `#F0D68A` (degradado del Paywall).
 - Riesgo de las opciones: bajo `#4CAF50`, medio `#FF9800`, alto `#E53935`. Dificultad del catálogo: fácil verde, media naranja, difícil rojo (mismos colores).
 - Títulos en Cinzel, narrativa en Lora (16 px, interlineado 1,6), botones y etiquetas en Inter.
 - Fondo con estrellas sutiles en Inicio, Catálogo, Héroe y Gameplay (widget `StarsBackground`, puntos fijos, sin animación costosa).
 - Botón principal: dorado relleno con texto oscuro. Secundario: superficie oscura con texto dorado.
+- Tema claro: fondo arena `#F5EFE3`, tarjetas blancas, dorado oscurecido `#7F5D12` y dorado suave `#8C4F0E` (contraste AA sobre blanco y arena), lapislázuli claro `#DCE0F5`, texto `#1F1B16` (secundario al 70 %), riesgo `#2E7D32` / `#B85C00` / `#C62828`, estrellas doradas muy suaves. Barras del sistema con íconos oscuros.
 - Solo vertical.
 
 ## Reglas de juego
@@ -108,7 +109,7 @@ La app publicada es oscura con dorado; se mantiene para que coincida con las cap
 - **Tu héroe**: nombre y descripción del protagonista (`hero` de la historia), descripción de la aventura y "Empezar". Empezar una aventura reemplaza la partida guardada.
 - **Gameplay**: arriba "Capítulo N · Título" y "Turno N" (cantidad de escenas vistas en esta partida); el texto en Lora, separado en párrafos por las líneas en blanco; la tarjeta "Dato histórico" si la escena tiene `fact`; las opciones con `ChoiceButton` (punto de color, texto, descripción y "Riesgo bajo / medio / alto"; una opción sin `risk` va sin punto ni etiqueta). Elegir es instantáneo. La partida se guarda en cada escena. La flecha atrás vuelve a Inicio.
 - **Final**: tipo ("Final del mito", "Final alternativo", "Final trágico"), título en Cinzel, texto, dato histórico, "Finales descubiertos: N de M" y los botones "Volver a jugar", "Otra aventura" y, solo en finales trágicos, "Volver a la última decisión" (vuelve a la última escena del camino con más de una opción). Al llegar a un final se guarda como descubierto y se borra la partida guardada.
-- **Ajustes**: "Desbloquear todo" o "Todo desbloqueado" (iteración 11), "Restaurar compra" (iteración 11), "Privacidad de anuncios" (solo si UMP lo exige, iteración 12), "Calificar la app" (solo Android, desde el Build 16: abre la ficha de Play con `market://` y, si falla, la página web; si no se puede abrir, no muestra nada), "Política de privacidad", "Borrar progreso" (con confirmación dentro de la pantalla: borra la partida guardada y los finales descubiertos, no la compra, el idioma ni el contador `adventureStarts`, que decide el intersticial) y la versión.
+- **Ajustes**: "Desbloquear todo" o "Todo desbloqueado" (iteración 11), "Restaurar compra" (iteración 11), "Privacidad de anuncios" (solo si UMP lo exige, iteración 12), "Tema" (Claro / Oscuro / Predeterminado del sistema, desde el Build 17), "Calificar la app" (solo Android, desde el Build 16: abre la ficha de Play con `market://` y, si falla, la página web; si no se puede abrir, no muestra nada), "Política de privacidad", "Borrar progreso" (con confirmación dentro de la pantalla: borra la partida guardada y los finales descubiertos, no la compra, el idioma, el tema ni el contador `adventureStarts`, que decide el intersticial) y la versión.
 - No hay límite diario ni cuenta.
 
 ## Compra única
@@ -132,7 +133,7 @@ La app publicada es oscura con dorado; se mantiene para que coincida con las cap
 
 ## Datos en shared_preferences
 
-Una sola clave, `localData`: JSON con `schemaVersion` 2, `language` (`null` = el del teléfono), `savedGame` (o `null`: `adventureId`, `sceneId`, `path` = lista de ids de las escenas vistas), `endingsFound` (`{ adventureId: [ids de finales] }`), `purchased` (booleano, desde la iteración 11) y `adventureStarts` (entero: cuántas veces se tocó "Empezar" desde la instalación; decide el intersticial; desde el Build 14). `adventureStarts` no subió el `schemaVersion` (sigue en 2): los datos de la versión 13, que no lo tienen, lo leen como 0. "Borrar progreso" no lo borra. Se guarda entero cada vez que cambia algo. Al leer un `schemaVersion` 1 se descarta la partida guardada vieja y el contador de elecciones. Si no se puede leer, se empieza de cero.
+Una sola clave, `localData`: JSON con `schemaVersion` 2, `language` (`null` = el del teléfono), `savedGame` (o `null`: `adventureId`, `sceneId`, `path` = lista de ids de las escenas vistas), `endingsFound` (`{ adventureId: [ids de finales] }`), `purchased` (booleano, desde la iteración 11) y `adventureStarts` (entero: cuántas veces se tocó "Empezar" desde la instalación; decide el intersticial; desde el Build 14) y `themeMode` (`"dark"` | `"light"` | `"system"`; desde el Build 17; sin el campo se lee como `"dark"`; "Borrar progreso" no lo borra). Ni `adventureStarts` ni `themeMode` subieron el `schemaVersion`. `adventureStarts` no subió el `schemaVersion` (sigue en 2): los datos de la versión 13, que no lo tienen, lo leen como 0. "Borrar progreso" no lo borra. Se guarda entero cada vez que cambia algo. Al leer un `schemaVersion` 1 se descarta la partida guardada vieja y el contador de elecciones. Si no se puede leer, se empieza de cero.
 
 ## Release
 

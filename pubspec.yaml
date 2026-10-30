@@ -4,7 +4,7 @@ publish_to: 'none'
 
 # Antes del + va la versión visible; después, el versionCode de Android.
 # Hay que subirlo en cada build que se mande a Play (el último subido fue 15).
-version: 1.1.4+16
+version: 1.1.5+17
 
 environment:
   sdk: ^3.13.4

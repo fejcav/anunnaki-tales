@@ -86,9 +86,9 @@ class _PaywallScreenState extends State<PaywallScreen> {
             end: Alignment.bottomCenter,
             // Empieza y termina en el fondo, así se une con la barra de arriba.
             colors: [
-              AppColors.background,
-              AppColors.softGold.withValues(alpha: 0.10),
-              AppColors.background,
+              context.palette.background,
+              context.palette.softGold.withValues(alpha: 0.10),
+              context.palette.background,
             ],
           ),
         ),
@@ -97,9 +97,9 @@ class _PaywallScreenState extends State<PaywallScreen> {
           child: ListView(
             padding: const EdgeInsets.fromLTRB(24, 8, 24, 24),
             children: [
-              const Icon(Icons.auto_stories_outlined, color: AppColors.gold, size: 56),
+              Icon(Icons.auto_stories_outlined, color: context.palette.gold, size: 56),
               const SizedBox(height: 16),
-              Text(l10n.paywallTitle, style: AppText.title, textAlign: TextAlign.center),
+              Text(l10n.paywallTitle, style: context.appText.title, textAlign: TextAlign.center),
               const SizedBox(height: 28),
               if (written > 0) _Benefit(text: l10n.paywallAdventures(written)),
               _Benefit(text: l10n.paywallNoAds),
@@ -108,20 +108,23 @@ class _PaywallScreenState extends State<PaywallScreen> {
               if (price != null)
                 Text(
                   price,
-                  style: AppText.title.copyWith(color: AppColors.softGold, fontSize: 28),
+                  style: context.appText.title.copyWith(
+                    color: context.palette.softGold,
+                    fontSize: 28,
+                  ),
                   textAlign: TextAlign.center,
                 )
               else
                 Text(
                   l10n.paywallUnavailable,
-                  style: AppText.bodySecondary,
+                  style: context.appText.bodySecondary,
                   textAlign: TextAlign.center,
                 ),
               if (purchases.pending) ...[
                 const SizedBox(height: 8),
                 Text(
                   l10n.purchasePending,
-                  style: AppText.bodySecondary.copyWith(fontSize: 13),
+                  style: context.appText.bodySecondary.copyWith(fontSize: 13),
                   textAlign: TextAlign.center,
                 ),
               ],
@@ -161,9 +164,9 @@ class _Benefit extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Icon(Icons.check, color: AppColors.gold, size: 20),
+          Icon(Icons.check, color: context.palette.gold, size: 20),
           const SizedBox(width: 12),
-          Expanded(child: Text(text, style: AppText.body)),
+          Expanded(child: Text(text, style: context.appText.body)),
         ],
       ),
     );

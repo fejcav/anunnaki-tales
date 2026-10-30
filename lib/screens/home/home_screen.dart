@@ -27,7 +27,7 @@ class HomeScreen extends StatelessWidget {
               Align(
                 alignment: Alignment.topRight,
                 child: IconButton(
-                  icon: const Icon(Icons.settings_outlined, color: AppColors.gold),
+                  icon: Icon(Icons.settings_outlined, color: context.palette.gold),
                   tooltip: l10n.settingsTitle,
                   onPressed: () => Navigator.of(context).pushNamed(Routes.settings),
                 ),
@@ -39,9 +39,17 @@ class HomeScreen extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      Text(l10n.homeTitle, style: AppText.logo, textAlign: TextAlign.center),
+                      Text(
+                        l10n.homeTitle,
+                        style: context.appText.logo,
+                        textAlign: TextAlign.center,
+                      ),
                       const SizedBox(height: 8),
-                      Text(l10n.homeSubtitle, style: AppText.subtitle, textAlign: TextAlign.center),
+                      Text(
+                        l10n.homeSubtitle,
+                        style: context.appText.subtitle,
+                        textAlign: TextAlign.center,
+                      ),
                       const SizedBox(height: 48),
                       ElevatedButton(
                         onPressed: () => Navigator.of(context).pushNamed(Routes.catalog),
@@ -63,7 +71,7 @@ class HomeScreen extends StatelessWidget {
                         const SizedBox(height: 8),
                         Text(
                           resume.adventure.title.of(lang),
-                          style: AppText.bodySecondary.copyWith(fontSize: 13),
+                          style: context.appText.bodySecondary.copyWith(fontSize: 13),
                           textAlign: TextAlign.center,
                         ),
                       ],

@@ -76,7 +76,7 @@ class _Message extends StatelessWidget {
     return Center(
       child: Padding(
         padding: const EdgeInsets.all(32),
-        child: Text(text, style: AppText.body, textAlign: TextAlign.center),
+        child: Text(text, style: context.appText.body, textAlign: TextAlign.center),
       ),
     );
   }

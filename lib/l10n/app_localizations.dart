@@ -308,6 +308,30 @@ abstract class AppLocalizations {
   /// **'Ajustes'**
   String get settingsTitle;
 
+  /// No description provided for @settingsTheme.
+  ///
+  /// In es, this message translates to:
+  /// **'Tema'**
+  String get settingsTheme;
+
+  /// No description provided for @settingsThemeLight.
+  ///
+  /// In es, this message translates to:
+  /// **'Claro'**
+  String get settingsThemeLight;
+
+  /// No description provided for @settingsThemeDark.
+  ///
+  /// In es, this message translates to:
+  /// **'Oscuro'**
+  String get settingsThemeDark;
+
+  /// No description provided for @settingsThemeSystem.
+  ///
+  /// In es, this message translates to:
+  /// **'Predeterminado del sistema'**
+  String get settingsThemeSystem;
+
   /// No description provided for @settingsRateApp.
   ///
   /// In es, this message translates to:

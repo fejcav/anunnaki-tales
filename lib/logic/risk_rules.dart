@@ -1,16 +1,17 @@
-import 'dart:ui';
-
-import '../app_theme.dart';
 import '../l10n/app_localizations.dart';
 
-// Color y etiqueta de la dificultad de una aventura (catálogo). Un valor
+// Nivel de riesgo de una opción o de dificultad de una aventura. El color lo
+// pone la pantalla, según el tema (`context.palette.risk(nivel)`).
+enum RiskLevel { low, medium, high }
+
+// Nivel y etiqueta de la dificultad de una aventura (catálogo). Un valor
 // desconocido se trata como dificultad media.
 
-Color difficultyColor(String difficulty) {
+RiskLevel difficultyLevel(String difficulty) {
   return switch (difficulty) {
-    'easy' => AppColors.riskLow,
-    'hard' => AppColors.riskHigh,
-    _ => AppColors.riskMedium,
+    'easy' => RiskLevel.low,
+    'hard' => RiskLevel.high,
+    _ => RiskLevel.medium,
   };
 }
 
@@ -22,14 +23,14 @@ String difficultyLabel(AppLocalizations l10n, String difficulty) {
   };
 }
 
-// Color y etiqueta del riesgo de una opción (Gameplay). Un valor desconocido
+// Nivel y etiqueta del riesgo de una opción (Gameplay). Un valor desconocido
 // se trata como riesgo medio.
 
-Color riskColor(String riskLevel) {
+RiskLevel riskLevelOf(String riskLevel) {
   return switch (riskLevel) {
-    'low' => AppColors.riskLow,
-    'high' => AppColors.riskHigh,
-    _ => AppColors.riskMedium,
+    'low' => RiskLevel.low,
+    'high' => RiskLevel.high,
+    _ => RiskLevel.medium,
   };
 }
 

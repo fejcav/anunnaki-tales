@@ -1,4 +1,4 @@
-import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart' show ChangeNotifier, ThemeMode, debugPrint;
 
 import '../data/local_store.dart';
 import '../logic/purchase_rules.dart';
@@ -67,6 +67,13 @@ class AppState extends ChangeNotifier {
   bool get purchased => _data.purchased;
   int get adventureStarts => _data.adventureStarts;
 
+  // El tema elegido en Ajustes. Un valor desconocido se trata como oscuro.
+  ThemeMode get themeMode => switch (_data.themeMode) {
+    'light' => ThemeMode.light,
+    'system' => ThemeMode.system,
+    _ => ThemeMode.dark,
+  };
+
   // Todas las aventuras, en el orden del catálogo, con su estado.
   List<AdventureEntry> get adventures => [
     for (final a in _catalog)
@@ -108,8 +115,8 @@ class AppState extends ChangeNotifier {
   Future<void> finishGame(String adventureId, String endingId) =>
       _save(_data.withEndingFound(adventureId, endingId).withSavedGame(null));
 
-  // "Borrar progreso" (Ajustes): borra la partida y los finales; la compra y
-  // el idioma quedan.
+  // "Borrar progreso" (Ajustes): borra la partida y los finales; la compra,
+  // el idioma y el tema quedan.
   Future<void> clearProgress() => _save(_data.withoutProgress());
 
   // La compra única quedó hecha (comprada o restaurada).
@@ -117,6 +124,9 @@ class AppState extends ChangeNotifier {
 
   // Se tocó "Empezar": suma uno al contador que decide el intersticial.
   Future<void> countAdventureStart() => _save(_data.withAdventureStarts(_data.adventureStarts + 1));
+
+  // Cambia el tema (Ajustes).
+  Future<void> setThemeMode(ThemeMode mode) => _save(_data.withThemeMode(mode.name));
 
   // Cambia los datos en memoria antes de guardarlos, así dos cambios seguidos
   // no se pisan.

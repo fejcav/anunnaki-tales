@@ -14,8 +14,8 @@ class StarsBackground extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        const Positioned.fill(
-          child: RepaintBoundary(child: CustomPaint(painter: _StarsPainter())),
+        Positioned.fill(
+          child: RepaintBoundary(child: CustomPaint(painter: _StarsPainter(context.palette.stars))),
         ),
         child,
       ],
@@ -24,7 +24,9 @@ class StarsBackground extends StatelessWidget {
 }
 
 class _StarsPainter extends CustomPainter {
-  const _StarsPainter();
+  const _StarsPainter(this.color);
+
+  final Color color; // el de la paleta; cada estrella le aplica su brillo
 
   // Posiciones relativas (0–1), tamaño y brillo de cada estrella. La semilla
   // fija hace que siempre queden en el mismo lugar.
@@ -45,11 +47,11 @@ class _StarsPainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     final paint = Paint();
     for (final (x, y, radius, opacity) in _stars) {
-      paint.color = AppColors.text.withValues(alpha: opacity);
+      paint.color = color.withValues(alpha: color.a * opacity);
       canvas.drawCircle(Offset(x * size.width, y * size.height), radius, paint);
     }
   }
 
   @override
-  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
+  bool shouldRepaint(covariant _StarsPainter oldDelegate) => oldDelegate.color != color;
 }

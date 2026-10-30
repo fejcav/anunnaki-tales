@@ -108,13 +108,13 @@ class _GameplayScreenState extends State<GameplayScreen> {
                   chapterTitle.isEmpty
                       ? l10n.gameplayChapterNumber(scene.chapter)
                       : l10n.gameplayChapter(scene.chapter, chapterTitle),
-                  style: AppText.subtitle.copyWith(color: AppColors.gold),
+                  style: context.appText.subtitle.copyWith(color: context.palette.gold),
                   textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: 4),
                 Text(
                   l10n.gameplayTurn(_path.length),
-                  style: AppText.bodySecondary.copyWith(fontSize: 13),
+                  style: context.appText.bodySecondary.copyWith(fontSize: 13),
                   textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: 16),
@@ -128,7 +128,9 @@ class _GameplayScreenState extends State<GameplayScreen> {
                   ChoiceButton(
                     text: choice.text.of(lang),
                     description: choice.description.of(lang),
-                    riskColor: choice.risk == null ? null : riskColor(choice.risk!),
+                    riskColor: choice.risk == null
+                        ? null
+                        : context.palette.risk(riskLevelOf(choice.risk!)),
                     riskLabel: choice.risk == null ? null : riskLabel(l10n, choice.risk!),
                     onTap: () => _choose(choice),
                   ),
@@ -162,7 +164,7 @@ class StoryText extends StatelessWidget {
       children: [
         for (final (i, p) in paragraphs.indexed) ...[
           if (i > 0) const SizedBox(height: 14),
-          Text(p, style: AppText.narrative),
+          Text(p, style: context.appText.narrative),
         ],
       ],
     );

@@ -57,6 +57,38 @@ void main() {
     expect((await store.load()).adventureStarts, 4);
   });
 
+  test('el tema es oscuro por defecto y sobrevive al guardado', () async {
+    final store = LocalStore();
+    expect((await store.load()).themeMode, 'dark');
+
+    await store.save(const LocalData().withThemeMode('light'));
+    expect((await store.load()).themeMode, 'light');
+
+    await store.save((await store.load()).withThemeMode('system'));
+    expect((await store.load()).themeMode, 'system');
+  });
+
+  test('un localData viejo sin el tema se lee como oscuro', () async {
+    SharedPreferences.setMockInitialValues({
+      'localData': jsonEncode({'schemaVersion': 2, 'purchased': true, 'adventureStarts': 3}),
+    });
+    final data = await LocalStore().load();
+
+    expect(data.themeMode, 'dark');
+    expect(data.purchased, isTrue);
+    expect(data.adventureStarts, 3);
+  });
+
+  test('borrar progreso y los demás cambios conservan el tema', () {
+    const before = LocalData(savedGame: game, themeMode: 'light');
+
+    expect(before.withoutProgress().themeMode, 'light');
+    expect(before.withSavedGame(null).themeMode, 'light');
+    expect(before.withEndingFound('gilgamesh_enkidu', 'fin_paz').themeMode, 'light');
+    expect(before.withPurchased(true).themeMode, 'light');
+    expect(before.withAdventureStarts(2).themeMode, 'light');
+  });
+
   test('borrar progreso conserva el contador de "Empezar"', () {
     const before = LocalData(savedGame: game, adventureStarts: 5);
 

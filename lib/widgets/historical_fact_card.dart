@@ -16,7 +16,7 @@ class HistoricalFactCard extends StatelessWidget {
       margin: EdgeInsets.zero,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12),
-        side: BorderSide(color: AppColors.gold.withValues(alpha: 0.5)),
+        side: BorderSide(color: context.palette.gold.withValues(alpha: 0.5)),
       ),
       child: Padding(
         padding: const EdgeInsets.all(14),
@@ -25,13 +25,13 @@ class HistoricalFactCard extends StatelessWidget {
           children: [
             Row(
               children: [
-                const Icon(Icons.menu_book_outlined, color: AppColors.gold, size: 18),
+                Icon(Icons.menu_book_outlined, color: context.palette.gold, size: 18),
                 const SizedBox(width: 8),
-                Text(title, style: AppText.title.copyWith(fontSize: 15)),
+                Text(title, style: context.appText.title.copyWith(fontSize: 15)),
               ],
             ),
             const SizedBox(height: 8),
-            Text(fact, style: AppText.bodySecondary),
+            Text(fact, style: context.appText.bodySecondary),
           ],
         ),
       ),

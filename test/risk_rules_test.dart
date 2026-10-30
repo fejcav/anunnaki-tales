@@ -1,20 +1,19 @@
-import 'package:anunnakitales/app_theme.dart';
 import 'package:anunnakitales/l10n/app_localizations.dart';
 import 'package:anunnakitales/logic/risk_rules.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  group('difficultyColor', () {
+  group('difficultyLevel', () {
     test('fácil verde, media naranja, difícil rojo', () {
-      expect(difficultyColor('easy'), AppColors.riskLow);
-      expect(difficultyColor('medium'), AppColors.riskMedium);
-      expect(difficultyColor('hard'), AppColors.riskHigh);
+      expect(difficultyLevel('easy'), RiskLevel.low);
+      expect(difficultyLevel('medium'), RiskLevel.medium);
+      expect(difficultyLevel('hard'), RiskLevel.high);
     });
 
     test('un valor desconocido se trata como media', () {
-      expect(difficultyColor(''), AppColors.riskMedium);
-      expect(difficultyColor('legendary'), AppColors.riskMedium);
+      expect(difficultyLevel(''), RiskLevel.medium);
+      expect(difficultyLevel('legendary'), RiskLevel.medium);
     });
   });
 
@@ -39,15 +38,15 @@ void main() {
     });
   });
 
-  group('riskColor', () {
+  group('riskLevelOf', () {
     test('bajo verde, medio naranja, alto rojo', () {
-      expect(riskColor('low'), AppColors.riskLow);
-      expect(riskColor('medium'), AppColors.riskMedium);
-      expect(riskColor('high'), AppColors.riskHigh);
+      expect(riskLevelOf('low'), RiskLevel.low);
+      expect(riskLevelOf('medium'), RiskLevel.medium);
+      expect(riskLevelOf('high'), RiskLevel.high);
     });
 
     test('un valor desconocido se trata como medio', () {
-      expect(riskColor(''), AppColors.riskMedium);
+      expect(riskLevelOf(''), RiskLevel.medium);
     });
   });
 
