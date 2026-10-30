@@ -20,15 +20,15 @@ El dueño del proyecto (Federico) tiene nivel básico de Dart/Flutter: puede cor
 
 - Windows 11, Flutter estable en `C:\dev\flutter` (el mismo de Ovun), Android SDK en `C:\Users\fedec\AppData\Local\Android\Sdk`, Git.
 - Proyecto en `C:\dev\anunnaki-tales`.
-- **Dispositivo de prueba: emulador `Anunnaki_Pixel_8`**, propio de este proyecto (creado el 01/10/2026 como copia del `Pixel_8` de Ovun: mismo dispositivo, misma imagen Android 37.2 con Play Store), para no compartir datos ni emulador con otros proyectos. Se arranca siempre en el puerto 5560, así su nombre es fijo aunque el de Ovun esté abierto:
-  `C:\Users\fedec\AppData\Local\Android\Sdk\emulator\emulator.exe -avd Anunnaki_Pixel_8 -port 5560 -no-snapshot`
-  En `flutter devices` y `adb devices` aparece como `emulator-5560`. Cuando pidas `flutter run`, usá `-d emulator-5560`; con `adb`, `-s emulator-5560`. (También arranca con `flutter emulators --launch Anunnaki_Pixel_8`, pero entonces el número cambia según qué otros emuladores estén abiertos.)
+- **Dispositivo de prueba: emulador `Anunnaki_Pixel_8_std`**, propio de este proyecto, en `D:\AndroidAVD\Anunnaki_Pixel_8_std.avd`, con la imagen estándar `android-37.0/google_apis_playstore/x86_64`, para no compartir datos ni emulador con otros proyectos. (El `Anunnaki_Pixel_8` del puerto 5560, con imagen ps16k, está en desuso desde el 28/10/2026.) Se arranca siempre en el puerto 5562, así su nombre es fijo aunque el de Ovun esté abierto. Ni `emulator` ni `adb` están en el PATH:
+  `C:\Users\fedec\AppData\Local\Android\Sdk\emulator\emulator.exe -avd Anunnaki_Pixel_8_std -port 5562 -no-snapshot`
+  En `flutter devices` y `adb devices` aparece como `emulator-5562`. Cuando pidas `flutter run`, usá `-d emulator-5562`; con `adb`, `-s emulator-5562`. (También arranca con `flutter emulators --launch Anunnaki_Pixel_8_std`, pero entonces el número cambia según qué otros emuladores estén abiertos.)
 - Sin Mac: iOS se compila en Codemagic (misma cuenta que Ovun; los 500 minutos gratis de macOS por mes se comparten entre las dos apps).
 
 ## Emuladores y disco compartidos con Ovun
 - En esta PC también está el proyecto Ovun (C:\dev\ovun). Los dos comparten el disco C: y la system image de Android.
-- Usá solo el emulador Anunnaki_Pixel_8. Nunca uses ni instales nada en el Pixel_8: es de Ovun.
-- Con dos emuladores abiertos, los ids (emulator-5554, emulator-5556, emulator-5560…) dependen del orden de arranque: antes de cualquier comando de adb o de flutter run, confirmá el nombre con `adb -s <id> emu avd name` y usá siempre ese id con -s o -d.
+- Usá solo el emulador Anunnaki_Pixel_8_std. Nunca uses ni instales nada en el Pixel_8: es de Ovun.
+- Con dos emuladores abiertos, los ids (emulator-5554, emulator-5556, emulator-5562…) dependen del orden de arranque: antes de cualquier comando de adb o de flutter run, confirmá el nombre con `adb -s <id> emu avd name` y usá siempre ese id con -s o -d.
 - Antes de compilar o abrir el emulador, fijate que no haya un build de Gradle, un flutter run ni un emulador de Ovun corriendo; si lo hay, pará y avisá.
 - Antes de compilar, mirá el espacio libre en C:. Si hay menos de 15 GB, pará y avisá.
 - El emulador arranca en frío, sin snapshot, para ahorrar ~4 GB de disco: tarda un par de minutos en arrancar. No vuelvas a activar el arranque rápido.
